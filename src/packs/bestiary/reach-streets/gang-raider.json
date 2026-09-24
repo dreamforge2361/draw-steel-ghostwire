@@ -509,6 +509,130 @@
       },
       "_id": "GwWk3rIQkdmxl0kU",
       "_key": "!actors.items!3rIQkdmxl0kUvznF.GwWk3rIQkdmxl0kU"
+    },
+    {
+      "_id": "oD7EQt2gs6A0ZJeD",
+      "name": "GHOSTWIRE.Gear.Items.Boomstick.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/boomstick.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Boomstick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "boomstick",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 300,
+            "modSlots": 1,
+            "tags": [
+              "Two-handed",
+              "Spread"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "ammoFamily": "shotgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3rIQkdmxl0kUvznF.oD7EQt2gs6A0ZJeD",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "c0JFGsZwEGwHcnnd",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 8,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3rIQkdmxl0kUvznF.c0JFGsZwEGwHcnnd",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [

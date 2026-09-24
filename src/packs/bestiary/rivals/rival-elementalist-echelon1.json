@@ -1076,6 +1076,136 @@
       },
       "_id": "GwWkzyAx2YEGPgEt",
       "_key": "!actors.items!zyAx2YEGPgEtLyWF.GwWkzyAx2YEGPgEt"
+    },
+    {
+      "_id": "p46rnWVHQHZVntxw",
+      "name": "GHOSTWIRE.Gear.Items.RitualStormWard.Name",
+      "type": "treasure",
+      "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RitualStormWard.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core — The Veil",
+          "page": "Ritual Workings — Elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ritual-storm-ward",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "restricted",
+            "price": null,
+            "modSlots": 0,
+            "tags": [
+              "RitualFormula"
+            ],
+            "priceText": "Not sold — found (Components ¥280 / ¥1,000)"
+          },
+          "ritual": {
+            "formula": true,
+            "family": "Ward",
+            "magnitude": 2,
+            "magnitudeMax": 3,
+            "magnitudeText": "2–3",
+            "leaders": "Elementalist only",
+            "form": "ritual scroll or chapbook",
+            "componentsTotal": [
+              "¥280",
+              "¥1,000"
+            ],
+            "learned": false
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!zyAx2YEGPgEtLyWF.p46rnWVHQHZVntxw",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "GWu46RpBc7Or4Alb",
+      "name": "GHOSTWIRE.Gear.Items.Commlink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Commlink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "commlink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 501000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 150,
+            "modSlots": 1,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!zyAx2YEGPgEtLyWF.GWu46RpBc7Or4Alb",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

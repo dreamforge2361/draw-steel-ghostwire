@@ -510,6 +510,190 @@
       },
       "_id": "GwWkGjK4iS1jADu5",
       "_key": "!actors.items!GjK4iS1jADu5tPgD.GwWkGjK4iS1jADu5"
+    },
+    {
+      "_id": "FiYR97IUpqYQboZ3",
+      "name": "GHOSTWIRE.Gear.Items.SleeveGun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/sleeve-gun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.SleeveGun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "sleeve-gun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 150,
+            "modSlots": 1,
+            "tags": [
+              "Concealable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 3,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GjK4iS1jADu5tPgD.FiYR97IUpqYQboZ3",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "GoixodKRZacNyXdZ",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 10,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GjK4iS1jADu5tPgD.GoixodKRZacNyXdZ",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "6ahA99J2hZbbgORV",
+      "name": "GHOSTWIRE.Gear.Items.Monoblade.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/monoblade.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Monoblade.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "monoblade",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3000,
+            "modSlots": 3,
+            "tags": [],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 6,
+            "damageType": "AP",
+            "range": "Adjacent",
+            "weaponBand": "medium"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GjK4iS1jADu5tPgD.6ahA99J2hZbbgORV",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [

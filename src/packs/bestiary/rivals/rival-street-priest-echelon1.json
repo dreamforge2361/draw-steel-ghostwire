@@ -927,6 +927,137 @@
       },
       "_id": "GwWkE7IFOGCtQeUf",
       "_key": "!actors.items!E7IFOGCtQeUfwahm.GwWkE7IFOGCtQeUf"
+    },
+    {
+      "_id": "3DFwtOjfp8Z8A01s",
+      "name": "GHOSTWIRE.Gear.Items.RitualWardTheRoom.Name",
+      "type": "treasure",
+      "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RitualWardTheRoom.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core — The Veil",
+          "page": "Ritual Workings — General",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ritual-ward-the-room",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "restricted",
+            "price": null,
+            "modSlots": 0,
+            "tags": [
+              "RitualFormula"
+            ],
+            "priceText": "Not sold — found (Components ¥75 / ¥40)"
+          },
+          "ritual": {
+            "formula": true,
+            "family": "Ward",
+            "magnitude": 1,
+            "magnitudeMax": 1,
+            "magnitudeText": "1",
+            "leaders": "General",
+            "form": "ritual scroll (Veil path) · datachip (Wire-chalk skin)",
+            "componentsTotal": [
+              "¥75",
+              "¥40"
+            ],
+            "learned": false
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!E7IFOGCtQeUfwahm.3DFwtOjfp8Z8A01s",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "PYelbeF3GE2WnWFk",
+      "name": "GHOSTWIRE.Gear.Items.TraumaPatch.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.TraumaPatch.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "trauma-patch",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 501000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 100,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "recoveries": 1,
+              "oncePerCombat": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!E7IFOGCtQeUfwahm.PYelbeF3GE2WnWFk",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

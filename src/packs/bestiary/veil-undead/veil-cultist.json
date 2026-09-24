@@ -949,6 +949,138 @@
       },
       "_id": "GwWk3FW9As2fW7ek",
       "_key": "!actors.items!3FW9As2fW7ekq4mv.GwWk3FW9As2fW7ek"
+    },
+    {
+      "_id": "B1Gd1I78fzKAheHj",
+      "name": "GHOSTWIRE.Gear.Items.RitualTrueNameCollar.Name",
+      "type": "treasure",
+      "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RitualTrueNameCollar.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core — The Veil",
+          "page": "Ritual Workings — General",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ritual-true-name-collar",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 3,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "restricted",
+            "price": null,
+            "modSlots": 0,
+            "tags": [
+              "RitualFormula"
+            ],
+            "priceText": "Not sold — found (Components ¥6,500 / ¥19,000)"
+          },
+          "ritual": {
+            "formula": true,
+            "family": "Calling",
+            "magnitude": 4,
+            "magnitudeMax": 5,
+            "magnitudeText": "4–5",
+            "leaders": "General",
+            "form": "heavy grimoire (bulky) plus a sealed name-folio",
+            "componentsTotal": [
+              "¥6,500",
+              "¥19,000"
+            ],
+            "learned": false
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3FW9As2fW7ekq4mv.B1Gd1I78fzKAheHj",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "dOOIax1I1nOjNhgm",
+      "name": "GHOSTWIRE.Gear.Items.StreetBlade.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/street-blade.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StreetBlade.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "street-blade",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 120,
+            "modSlots": 1,
+            "tags": [
+              "Concealable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "kinetic",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3FW9As2fW7ekq4mv.dOOIax1I1nOjNhgm",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

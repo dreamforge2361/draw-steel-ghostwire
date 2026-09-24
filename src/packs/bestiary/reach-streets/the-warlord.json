@@ -1260,6 +1260,408 @@
       },
       "_id": "GwWk45tzTTjzMxrq",
       "_key": "!actors.items!45tzTTjzMxrqcjPg.GwWk45tzTTjzMxrq"
+    },
+    {
+      "_id": "tnCMMxTorEgPJ6Pq",
+      "name": "GHOSTWIRE.Gear.Items.Autoshotgun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/autoshotgun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Autoshotgun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "autoshotgun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3200,
+            "modSlots": 3,
+            "tags": [
+              "Two-handed",
+              "Spread",
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "ammoFamily": "shotgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!45tzTTjzMxrqcjPg.tnCMMxTorEgPJ6Pq",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "zj4WsYoq9W1rYnEW",
+      "name": "GHOSTWIRE.Gear.Items.ApRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ApRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ap-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 24,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 400,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "ap",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!45tzTTjzMxrqcjPg.zj4WsYoq9W1rYnEW",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "zYOutRdbC3vbnnGr",
+      "name": "GHOSTWIRE.Gear.Items.Frag.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/frag.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Frag.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "frag",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 200,
+            "modSlots": 0,
+            "tags": [
+              "Blast",
+              "Consumable"
+            ],
+            "consumable": true,
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "thrown": {
+              "impact": {
+                "damage": 6,
+                "damageType": null
+              }
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!45tzTTjzMxrqcjPg.zYOutRdbC3vbnnGr",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "MjqdyYwk7kifDANf",
+      "name": "GHOSTWIRE.Gear.Items.PlatedJacket.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/plated-jacket.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.PlatedJacket.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "plated-jacket",
+        "kind": "armor",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 403000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 1100,
+            "modSlots": 2,
+            "tags": [],
+            "modFamily": [
+              "armor"
+            ],
+            "armorClass": "medium",
+            "staminaByEchelon": [
+              8,
+              11,
+              14,
+              18
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!45tzTTjzMxrqcjPg.MjqdyYwk7kifDANf",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "XpYvjwxrnYDfXoJR",
+          "name": "No Kit — Echelon 1 (+8 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/plated-jacket.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.lktcOqo99b762659",
+          "description": "<p>Worn with no Kit at Echelon 1: +8 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 8,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!45tzTTjzMxrqcjPg.MjqdyYwk7kifDANf.XpYvjwxrnYDfXoJR"
+        },
+        {
+          "_id": "ywGHFUrGefl075pM",
+          "name": "No Kit — Echelon 2 (+11 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/plated-jacket.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.lktcOqo99b762659",
+          "description": "<p>Worn with no Kit at Echelon 2: +11 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 11,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!45tzTTjzMxrqcjPg.MjqdyYwk7kifDANf.ywGHFUrGefl075pM"
+        },
+        {
+          "_id": "BuY35pDq2HQQ6mA5",
+          "name": "No Kit — Echelon 3 (+14 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/plated-jacket.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.lktcOqo99b762659",
+          "description": "<p>Worn with no Kit at Echelon 3: +14 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 14,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!45tzTTjzMxrqcjPg.MjqdyYwk7kifDANf.BuY35pDq2HQQ6mA5"
+        },
+        {
+          "_id": "antpo58bgFFGciWU",
+          "name": "No Kit — Echelon 4 (+18 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/plated-jacket.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.lktcOqo99b762659",
+          "description": "<p>Worn with no Kit at Echelon 4: +18 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 18,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!45tzTTjzMxrqcjPg.MjqdyYwk7kifDANf.antpo58bgFFGciWU"
+        }
+      ]
     }
   ],
   "effects": [],

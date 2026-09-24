@@ -125,9 +125,17 @@ ok(/AFT FREIGHT/.test(mapText) && /freight Enforcers/.test(mapText), "map-notes 
 ok(!/\bPASSENGER\b/.test(mapText) && !/5 cars/.test(mapText), "map-notes beat page has no passenger consist");
 
 const mama = readBomFreeJson("src/packs/bestiary/reach-streets/mama-cassavir.json");
-// The 0.3.85 Wire Kit ships a lang-key name on purpose (build-packs resolves it).
-const ghostItemNames = (mama.items ?? []).filter(i => String(i.name).startsWith("GHOSTWIRE.") && i.system?._dsid !== "wire-kit-matrix-verbs");
-ok(ghostItemNames.length === 0, `mama-cassavir has zero item names starting with GHOSTWIRE. (found ${ghostItemNames.map(i => i.name).join(", ") || "none"})`);
+// What this guards is Mama's *hand-built* sheet: her chrome and her stat block were written with
+// literal display names, and a raw GHOSTWIRE.* key leaking into one of those is a bug you only see
+// on the token nameplate. Two families are lang-keyed on purpose and build-packs resolves both:
+//   * the 0.3.85 Wire Kit;
+//   * 0.3.127 (E) loot, which is stamped straight off the gear SKUs, exactly as the pregens embed
+//     theirs — see tools/bestiary-loot.mjs.
+const ghostItemNames = (mama.items ?? []).filter(i =>
+  String(i.name).startsWith("GHOSTWIRE.")
+  && i.system?._dsid !== "wire-kit-matrix-verbs"
+  && i.flags?.["draw-steel-ghostwire"]?.loot !== true);
+ok(ghostItemNames.length === 0, `mama-cassavir has zero hand-built item names starting with GHOSTWIRE. (found ${ghostItemNames.map(i => i.name).join(", ") || "none"})`);
 
 const gearFiles = [
   "src/packs/gear/plot/_folder.json",

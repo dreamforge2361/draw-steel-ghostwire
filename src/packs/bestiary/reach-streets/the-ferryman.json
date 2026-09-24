@@ -990,6 +990,258 @@
       },
       "_id": "GwWkBeNaMrHKtYc0",
       "_key": "!actors.items!BeNaMrHKtYc0BcSE.GwWkBeNaMrHKtYc0"
+    },
+    {
+      "_id": "UyX45vA87rYYEzCY",
+      "name": "GHOSTWIRE.Gear.Items.Boomstick.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/boomstick.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Boomstick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "boomstick",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 300,
+            "modSlots": 1,
+            "tags": [
+              "Two-handed",
+              "Spread"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "ammoFamily": "shotgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!BeNaMrHKtYc0BcSE.UyX45vA87rYYEzCY",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "ZABVTVLdOxA8nNou",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 16,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!BeNaMrHKtYc0BcSE.ZABVTVLdOxA8nNou",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "LPxBN4W0DzGrZhMD",
+      "name": "GHOSTWIRE.Gear.Items.GhostRelay.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GhostRelay.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ghost-relay",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 3,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 9000,
+            "modSlots": 4,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!BeNaMrHKtYc0BcSE.LPxBN4W0DzGrZhMD",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "lZM7dTDPhV6Zjol8",
+      "name": "GHOSTWIRE.Gear.Items.SmokeGrenade.Name",
+      "type": "treasure",
+      "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.SmokeGrenade.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "smoke",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 403000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 200,
+            "modSlots": 0,
+            "tags": [
+              "Blast",
+              "Consumable",
+              "Non-lethal-capable"
+            ],
+            "consumable": true,
+            "damage": null,
+            "damageType": null,
+            "range": "Short",
+            "weaponBand": "light",
+            "thrown": {
+              "save": false,
+              "impact": {}
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!BeNaMrHKtYc0BcSE.lZM7dTDPhV6Zjol8",
+      "folder": null,
+      "effects": []
     }
   ],
   "folder": "gwBestiaryStreet",

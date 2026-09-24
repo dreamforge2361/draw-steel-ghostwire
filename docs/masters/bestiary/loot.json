@@ -1,0 +1,461 @@
+{
+  "_note": "0.3.127 (E) — role-appropriate lootable gear + ammo on bestiary NPCs. Stamped by tools/bestiary-loot.mjs, which is idempotent: it strips every item flagged flags.draw-steel-ghostwire.loot and re-embeds this table, so the file is the source of truth and a re-run is a no-op. Paths are src/packs/** SKU JSON; quantity defaults to the SKU's own. An actor with no row here carries nothing, and that is a decision, not an omission — see _noLoot.",
+
+  "_noLoot": {
+    "beasts": "reach-critters/** and wilds-jungles/** have no pockets. A Scrap-Hound is not carrying a box of rounds.",
+    "ice": "wire-machine ICE (Black ICE, Scrambler, Watchdog) and the Signal entities are Wired constructs with no physical body on the map to loot. The two Chrome Raiders DO get loot: they are chromed bodies with real guns bolted on.",
+    "risen": "veil-undead skeletons, zombies, ghouls and the Ghost rose without their kit. The Veil Cultist is a live person and is looted.",
+    "clubCast": "Most of mama-club is a social scene, not an encounter. A singer, a bartender and three dancing patrons get nothing, because giving a nightclub patron a lockpick set is exactly the filler junk this lock forbids. The five who carry a real object because their own stat block names one are listed."
+  },
+
+  "roles": {
+    "arg-patrol": {
+      "why": "ARG street-level security. Company sidearm, a non-lethal load for crowd work, a stunstick and a company handset.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/workhorse.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 24 },
+        { "path": "src/packs/gear/general/ammunition/gel-stick-n-shock.json", "quantity": 30 },
+        { "path": "src/packs/gear/weapons/melee/shock-stick.json" },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "arg-shield": {
+      "why": "ARG enforcer working a doorway: autoshotgun, shells, and the ballistic board the stat block swings.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/autoshotgun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 16 },
+        { "path": "src/packs/gear/armor/shields/ballistic-board.json" },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "arg-command": {
+      "why": "ARG officer grade. Smartlinked carbine with AP, a frag for the breach, and a corporate blacklink instead of a street handset.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/streetline-carbine.json" },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/weapons/thrown/frag.json" },
+        { "path": "src/packs/gear/general/comms/corp-blacklink.json" },
+        { "path": "src/packs/gear/armor/medium/corp-sec-hardweave.json" }
+      ]
+    },
+    "corp-netrunner": {
+      "why": "A corp decker carries credentials and access, not a rifle. No gun at all — the stat block has none, and handing one out would be filler.",
+      "items": [
+        { "path": "src/packs/gear/general/comms/corp-blacklink.json" },
+        { "path": "src/packs/gear/general/comms/spoof-kit.json" },
+        { "path": "src/packs/gear/general/infiltration/maglock-passkey.json" }
+      ]
+    },
+    "ironclad-line": {
+      "why": "Ironclad conscript: bayonet carbine. Issue rifle, issue rounds, and the blade on the end of it.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/streetline-carbine.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/weapons/melee/machete.json" }
+      ]
+    },
+    "ironclad-commando": {
+      "why": "Suppressed machine pistols, and the suite that keeps them quiet.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/streetsweeper-smg.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/infiltration/silent-suite.json" }
+      ]
+    },
+    "ironclad-sharpshooter": {
+      "why": "A marksman's smartgun is a long gun and AP. The thermal scanner is how they found you.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/longshot.json" },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/sensors/thermal-scanner.json" }
+      ]
+    },
+    "ironclad-subcommand": {
+      "why": "Command sidearm, AP for it, and the handset the kill code came over.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/hand-cannon.json" },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 24 },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "ironclad-warden": {
+      "why": "Shock-shield and riot cannon: a shotgun, shells, a riot shield and the layered armour under it.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/autoshotgun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 24 },
+        { "path": "src/packs/gear/armor/shields/riot-shield.json" },
+        { "path": "src/packs/gear/armor/medium/riot-layer.json" }
+      ]
+    },
+    "ironclad-commander": {
+      "why": "Battle rifle, AP, battledress. The Ground Commander is the one piece of milspec kit in the encounter worth the walk.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/milspec-battle-rifle.json" },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/armor/heavy/milspec-battledress.json" },
+        { "path": "src/packs/gear/general/comms/corp-blacklink.json" }
+      ]
+    },
+    "mandate-trooper": {
+      "why": "Aequitas Mandate walks a beat non-lethal first: gel in the sidearm, a stunstick in the other hand.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/workhorse.json" },
+        { "path": "src/packs/gear/general/ammunition/gel-stick-n-shock.json", "quantity": 24 },
+        { "path": "src/packs/gear/weapons/melee/shock-stick.json" }
+      ]
+    },
+    "mandate-sergeant": {
+      "why": "Same beat, one grade up: both loads for the duty sidearm and the radio.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/workhorse.json" },
+        { "path": "src/packs/gear/general/ammunition/gel-stick-n-shock.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 12 },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "lazarus-medic": {
+      "why": "Lazarus runs extractions, not firefights. A stun sidearm loaded gel, and the consumables that are the whole point of the unit.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/zapper.json" },
+        { "path": "src/packs/gear/general/ammunition/gel-stick-n-shock.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/medical/trauma-patch.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/medical/stim-patch.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/medical/slap-doc-kit.json" }
+      ]
+    },
+    "lazarus-chief": {
+      "why": "The chief carries the kit the medics call for: surgery, antidotes, and more patches than one body needs.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/zapper.json" },
+        { "path": "src/packs/gear/general/ammunition/gel-stick-n-shock.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/medical/field-surgery-kit.json" },
+        { "path": "src/packs/gear/general/medical/trauma-patch.json", "quantity": 3 },
+        { "path": "src/packs/gear/general/medical/antidote-dose.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/medical/slap-doc-kit.json" }
+      ]
+    },
+    "street-ganger": {
+      "why": "A sawed-off and loose shells. Nobody in the colours is carrying a full box.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/boomstick.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 8 }
+      ]
+    },
+    "street-cutter": {
+      "why": "Holdout pistol and mono-knife, exactly as the stat block says.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/sleeve-gun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 10 },
+        { "path": "src/packs/gear/weapons/melee/monoblade.json" }
+      ]
+    },
+    "street-brawler": {
+      "why": "Knuckles and whatever is keeping the arm moving. No gun: the whole stat block is hands.",
+      "items": [
+        { "path": "src/packs/gear/weapons/melee/knuckles.json" },
+        { "path": "src/packs/gear/consumables/chems/red-dust.json" }
+      ]
+    },
+    "street-shield": {
+      "why": "Street Punk: riot shield off a skip and a sawed-off behind it.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/boomstick.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 8 },
+        { "path": "src/packs/gear/armor/shields/riot-shield.json" }
+      ]
+    },
+    "rooftop-shooter": {
+      "why": "Scoped rifle, a working load, and the cheap shades that are the only optics they could afford.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/brush-gun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 20 },
+        { "path": "src/packs/gear/general/sensors/cheap-shades.json" }
+      ]
+    },
+    "trick-shooter": {
+      "why": "Ricochet smartgun: a machine pistol, and both loads, because trick shooting is what you do when you can afford to pick.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/chatter.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 20 },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 10 }
+      ]
+    },
+    "hustler": {
+      "why": "Twin holdouts, a burner and the stick the last mark paid into.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/sleeve-gun.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 12 },
+        { "path": "src/packs/gear/general/comms/burner.json" },
+        { "path": "src/packs/gear/general/lifestyle/certified-credstick.json" }
+      ]
+    },
+    "street-doc": {
+      "why": "Adrenal darts come out of a dart gun, and the patches are the reason anybody calls them.",
+      "items": [
+        { "path": "src/packs/gear/weapons/bows-exotic/dart-gun.json" },
+        { "path": "src/packs/gear/general/medical/trauma-patch.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/medical/stim-patch.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/medical/slap-doc-kit.json" }
+      ]
+    },
+    "chrome-bruiser": {
+      "why": "Auto-shotgun and the servo arm doing the gripping. The implant is salvage, not a pistol somebody dropped.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/autoshotgun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 16 },
+        { "path": "src/packs/chrome/cyberlimb-arm.json" }
+      ]
+    },
+    "razorline-prime": {
+      "why": "Monowire and a smartgun burst, plus the reflexes that make both of them work.",
+      "items": [
+        { "path": "src/packs/gear/weapons/melee/monowhip.json" },
+        { "path": "src/packs/gear/weapons/light-firearms/streetsweeper-smg.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/chrome/wired-reflexes.json" }
+      ]
+    },
+    "gang-boss": {
+      "why": "Hand cannon and an SMG, a hit of kickwire, and the crew's money.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/hand-cannon.json" },
+        { "path": "src/packs/gear/weapons/light-firearms/streetsweeper-smg.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/consumables/chems/kickwire.json" },
+        { "path": "src/packs/gear/general/lifestyle/certified-credstick.json" }
+      ]
+    },
+    "colors-boss": {
+      "why": "Heavy pistol and SMG, and one frag for when the block stops listening.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/hand-cannon.json" },
+        { "path": "src/packs/gear/weapons/light-firearms/buzz-gun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/weapons/thrown/frag.json" }
+      ]
+    },
+    "warlord": {
+      "why": "Trophy shotgun, AP because he can get it, two frags, and a plated jacket. He is the payday.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/autoshotgun.json" },
+        { "path": "src/packs/gear/general/ammunition/ap-rounds.json", "quantity": 24 },
+        { "path": "src/packs/gear/weapons/thrown/frag.json", "quantity": 2 },
+        { "path": "src/packs/gear/armor/medium/plated-jacket.json" }
+      ]
+    },
+    "ferryman": {
+      "why": "Dead-air shotgun, a ghost relay for the crossing, and smoke to close it.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/boomstick.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 16 },
+        { "path": "src/packs/gear/general/comms/ghost-relay.json" },
+        { "path": "src/packs/gear/weapons/thrown/smoke-grenade.json" }
+      ]
+    },
+    "choirmother": {
+      "why": "A priest with no gun in her stat block gets no gun here. A formula, a charm and a patch for her flock.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/ward-the-room.json" },
+        { "path": "src/packs/gear/general/ritual-formulas/street-focus-charm.json" },
+        { "path": "src/packs/gear/general/medical/trauma-patch.json" }
+      ]
+    },
+    "wrench-rigger": {
+      "why": "Her drones drop gas, so she is carrying gas. The torch and the handset are the rest of the trade.",
+      "items": [
+        { "path": "src/packs/gear/weapons/thrown/gasser.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/infiltration/cutting-torch.json" },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "switchboard": {
+      "why": "Mama's stat block says Holdout & Stim Kit. Her chrome was already embedded in an earlier wave; this is the pocket kit, and the burners she hands out.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/sleeve-gun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 10 },
+        { "path": "src/packs/gear/general/medical/stim-patch.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/comms/burner.json", "quantity": 2 }
+      ]
+    },
+    "rival-commander": {
+      "why": "Dual targeting shot is two pistols, and a crew lead runs comms.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/hand-cannon.json", "quantity": 2 },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "rival-hacker": {
+      "why": "Smartlinked machine pistol, and the spoof kit that is the actual threat.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/chatter.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/general/comms/spoof-kit.json" }
+      ]
+    },
+    "rival-operator": {
+      "why": "Breacher shotgun and the cyberarm doing the clinching.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/autoshotgun.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 16 },
+        { "path": "src/packs/chrome/cyberlimb-arm.json" }
+      ]
+    },
+    "rival-scout": {
+      "why": "Suppressed SMG and the toxin load the stat block swaps in — a Gasser is the toxin they had.",
+      "items": [
+        { "path": "src/packs/gear/weapons/light-firearms/streetsweeper-smg.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/gear/weapons/thrown/gasser.json" },
+        { "path": "src/packs/gear/general/infiltration/silent-suite.json" }
+      ]
+    },
+    "rival-elementalist": {
+      "why": "No gun. A storm formula and a handset — the fire is in the caster, not the inventory.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/storm-ward.json" },
+        { "path": "src/packs/gear/general/comms/commlink.json" }
+      ]
+    },
+    "rival-priest": {
+      "why": "A ward and the patches. Rivals are a mirror of the crew, and the crew's priest carries exactly this.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/ward-the-room.json" },
+        { "path": "src/packs/gear/general/medical/trauma-patch.json", "quantity": 2 }
+      ]
+    },
+    "rival-technomancer": {
+      "why": "Two links and nothing that goes bang: a blacklink they should not have, and a ghost relay.",
+      "items": [
+        { "path": "src/packs/gear/general/comms/corp-blacklink.json" },
+        { "path": "src/packs/gear/general/comms/ghost-relay.json" }
+      ]
+    },
+    "lodge-rigger": {
+      "why": "Magical society, working trade. A winch line and the rune that anchors it. No street guns.",
+      "items": [
+        { "path": "src/packs/gear/general/infiltration/grapple-line.json" },
+        { "path": "src/packs/gear/general/ritual-formulas/anchor-rune.json" }
+      ]
+    },
+    "lodge-surveyor": {
+      "why": "Plumb drop and bring-it-to-true: a site-bind formula and a torch, which is what surveying a Reach building actually needs.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/site-bind.json" },
+        { "path": "src/packs/gear/general/infiltration/cutting-torch.json" }
+      ]
+    },
+    "lodge-hand": {
+      "why": "The nearest heavy thing gets moved with a line and a charm.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/street-focus-charm.json" },
+        { "path": "src/packs/gear/general/infiltration/grapple-line.json" }
+      ]
+    },
+    "veil-cultist": {
+      "why": "The one live body in the Veil folder. A collar formula and the blade that does the cutting.",
+      "items": [
+        { "path": "src/packs/gear/general/ritual-formulas/true-name-collar.json" },
+        { "path": "src/packs/gear/weapons/melee/street-blade.json" }
+      ]
+    },
+    "chrome-raider-gun": {
+      "why": "Flechette carbine off a raider chassis, its rounds, and the plating that came with it. Salvage, not a wallet.",
+      "items": [
+        { "path": "src/packs/gear/weapons/longarms/chopper.json" },
+        { "path": "src/packs/gear/general/ammunition/standard-rounds.json", "quantity": 30 },
+        { "path": "src/packs/chrome/dermal-plating.json" }
+      ]
+    },
+    "chrome-raider-wire": {
+      "why": "Monowire lashes and a grapple harpoon, plus the reflex rig driving them.",
+      "items": [
+        { "path": "src/packs/gear/weapons/melee/monowhip.json" },
+        { "path": "src/packs/gear/general/infiltration/grapple-line.json" },
+        { "path": "src/packs/chrome/wired-reflexes.json" }
+      ]
+    },
+    "club-blade": {
+      "why": "Sable Quen's stat block is a holdout blade, so a holdout blade is what is on her.",
+      "items": [{ "path": "src/packs/gear/weapons/melee/street-blade.json" }]
+    },
+    "club-decker": {
+      "why": "Kira runs soft traces out of the booth. One burner.",
+      "items": [{ "path": "src/packs/gear/general/comms/burner.json" }]
+    },
+    "club-wrench": {
+      "why": "Torque keeps the club's plant running. The torch is his.",
+      "items": [{ "path": "src/packs/gear/general/infiltration/cutting-torch.json" }]
+    },
+    "club-door": {
+      "why": "Vexa works the door with a stun baton.",
+      "items": [{ "path": "src/packs/gear/weapons/melee/shock-stick.json" }]
+    },
+    "club-priest": {
+      "why": "Brother Ash swings a censer chain and keeps a ward for the room he is standing in.",
+      "items": [{ "path": "src/packs/gear/general/ritual-formulas/confession-ward.json" }]
+    }
+  },
+
+  "actors": {
+    "aequitas/aeq-trooper": "mandate-trooper",
+    "aequitas/aeq-sergeant": "mandate-sergeant",
+
+    "corp-security/corp-security-officer": "arg-patrol",
+    "corp-security/corp-enforcer": "arg-shield",
+    "corp-security/response-lieutenant": "arg-command",
+    "corp-security/contract-enforcer": "arg-command",
+    "corp-security/warden-krael": "arg-command",
+    "corp-security/corp-netrunner": "corp-netrunner",
+    "corp-security/ironclad-conscript": "ironclad-line",
+    "corp-security/ironclad-commando": "ironclad-commando",
+    "corp-security/ironclad-sharpshooter": "ironclad-sharpshooter",
+    "corp-security/ironclad-subcommander": "ironclad-subcommand",
+    "corp-security/ironclad-warden": "ironclad-warden",
+    "corp-security/ironclad-ground-commander": "ironclad-commander",
+
+    "lazarus/laz-medic": "lazarus-medic",
+    "lazarus/laz-chief-medic": "lazarus-chief",
+
+    "magical-societies/daska-venn": "lodge-rigger",
+    "magical-societies/edda-marr": "lodge-surveyor",
+    "magical-societies/tavi-sorn": "lodge-hand",
+
+    "mama-club/sable-quen": "club-blade",
+    "mama-club/kira-soft-trace-bell": "club-decker",
+    "mama-club/torque-gasket-venn": "club-wrench",
+    "mama-club/vexa-brick-mol": "club-door",
+    "mama-club/brother-ash": "club-priest",
+
+    "reach-streets/gang-raider": "street-ganger",
+    "reach-streets/street-cutter": "street-cutter",
+    "reach-streets/street-brawler": "street-brawler",
+    "reach-streets/street-punk": "street-shield",
+    "reach-streets/rooftop-shooter": "rooftop-shooter",
+    "reach-streets/trick-shooter": "trick-shooter",
+    "reach-streets/hustler": "hustler",
+    "reach-streets/street-doc": "street-doc",
+    "reach-streets/chrome-bruiser": "chrome-bruiser",
+    "reach-streets/razorline-prime": "razorline-prime",
+    "reach-streets/gang-boss": "gang-boss",
+    "reach-streets/colors-boss": "colors-boss",
+    "reach-streets/the-warlord": "warlord",
+    "reach-streets/the-ferryman": "ferryman",
+    "reach-streets/the-choirmother": "choirmother",
+    "reach-streets/wrench-rigger": "wrench-rigger",
+    "reach-streets/mama-cassavir": "switchboard",
+
+    "rivals/rival-commander-echelon1": "rival-commander",
+    "rivals/rival-hacker-echelon1": "rival-hacker",
+    "rivals/rival-operator-echelon1": "rival-operator",
+    "rivals/rival-scout-echelon1": "rival-scout",
+    "rivals/rival-elementalist-echelon1": "rival-elementalist",
+    "rivals/rival-street-priest-echelon1": "rival-priest",
+    "rivals/rival-technomancer-echelon1": "rival-technomancer",
+
+    "veil-undead/veil-cultist": "veil-cultist",
+
+    "wire-machine/chrome-raider-armiger": "chrome-raider-gun",
+    "wire-machine/chrome-raider-hijack": "chrome-raider-wire"
+  }
+}

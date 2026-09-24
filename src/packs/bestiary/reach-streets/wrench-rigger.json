@@ -827,6 +827,190 @@
       },
       "_id": "GwWkuQq1CLYLCo0o",
       "_key": "!actors.items!uQq1CLYLCo0oFVdW.GwWkuQq1CLYLCo0o"
+    },
+    {
+      "_id": "ul7eJ8BEmFjn8sIT",
+      "name": "GHOSTWIRE.Gear.Items.Gasser.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/gasser.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Gasser.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "gasser",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 220,
+            "modSlots": 0,
+            "tags": [
+              "Blast",
+              "Consumable"
+            ],
+            "consumable": true,
+            "damage": 4,
+            "damageType": "toxin",
+            "range": "Short",
+            "weaponBand": "light",
+            "thrown": {
+              "impact": {
+                "damage": 4,
+                "damageType": "poison"
+              }
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!uQq1CLYLCo0oFVdW.ul7eJ8BEmFjn8sIT",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "8t13cJrSrR55KO9X",
+      "name": "GHOSTWIRE.Gear.Items.CuttingTorch.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CuttingTorch.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cutting-torch",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3500,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!uQq1CLYLCo0oFVdW.8t13cJrSrR55KO9X",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "AHYLOc2w9s8FeEWO",
+      "name": "GHOSTWIRE.Gear.Items.Commlink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Commlink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "commlink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 150,
+            "modSlots": 1,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!uQq1CLYLCo0oFVdW.AHYLOc2w9s8FeEWO",
+      "folder": null,
+      "effects": []
     }
   ],
   "folder": "gwBestiaryStreet",

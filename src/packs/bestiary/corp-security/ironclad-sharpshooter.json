@@ -582,6 +582,197 @@
       },
       "_id": "GwWireKit3cspD2W",
       "_key": "!actors.items!3cspD2WHzAjoOrJj.GwWireKit3cspD2W"
+    },
+    {
+      "_id": "31e9rPgwDn3vhuGf",
+      "name": "GHOSTWIRE.Gear.Items.Longshot.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/longshot.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Longshot.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "longshot",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 250000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 4500,
+            "modSlots": 3,
+            "tags": [
+              "Two-handed"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "AP",
+            "range": "Long",
+            "weaponBand": "medium",
+            "ammoFamily": "longarm"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3cspD2WHzAjoOrJj.31e9rPgwDn3vhuGf",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "kPLsQu2QJnxc8Au7",
+      "name": "GHOSTWIRE.Gear.Items.ApRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ApRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ap-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 251000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 400,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "ap",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3cspD2WHzAjoOrJj.kPLsQu2QJnxc8Au7",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "64PFoupJqmAy1ZNh",
+      "name": "GHOSTWIRE.Gear.Items.ThermalScanner.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ThermalScanner.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "thermal-scanner",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 252000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3000,
+            "modSlots": 3,
+            "tags": [],
+            "modFamily": [
+              "sensors"
+            ]
+          },
+          "sightGrant": {
+            "modes": [
+              {
+                "id": "seeAll",
+                "range": 10,
+                "enabled": true
+              }
+            ],
+            "priority": 1,
+            "claims": [
+              "thermal"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3cspD2WHzAjoOrJj.64PFoupJqmAy1ZNh",
+      "folder": null,
+      "effects": []
     }
   ],
   "folder": "gwBestiaryCorp00",

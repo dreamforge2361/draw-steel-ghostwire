@@ -680,6 +680,222 @@
       },
       "_id": "GwWk3vPrvIj1T1qD",
       "_key": "!actors.items!3vPrvIj1T1qDIpJ2.GwWk3vPrvIj1T1qD"
+    },
+    {
+      "_id": "YI6YSy5uVXESGD18",
+      "name": "GHOSTWIRE.Gear.Items.Monowhip.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/monowhip.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Monowhip.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "monowhip",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 4,
+        "keywords": [
+          "medium",
+          "whip"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 4,
+            "availability": "prototype",
+            "price": 20000,
+            "modSlots": 5,
+            "tags": [
+              "Concealable",
+              "Dangerous"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "AP",
+            "range": "Adjacent",
+            "weaponBand": "medium"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3vPrvIj1T1qDIpJ2.YI6YSy5uVXESGD18",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "CQSl89C0ROHcbmDp",
+      "name": "GHOSTWIRE.Gear.Items.GrappleLine.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GrappleLine.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "grapple-line",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 110000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 2000,
+            "modSlots": 3,
+            "tags": [],
+            "modFamily": [
+              "bne-mechanical"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3vPrvIj1T1qDIpJ2.CQSl89C0ROHcbmDp",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "jPRx0atWUuEIKx2E",
+      "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.WiredReflexes.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wired-reflexes",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 111000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "nervous",
+            "integrity": 6,
+            "price": 12000,
+            "availability": "military"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!3vPrvIj1T1qDIpJ2.jPRx0atWUuEIKx2E",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "2OfPdZYgW9wBodxZ",
+          "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+          "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.HC2xvD49OLZMG4Jm",
+          "description": "GHOSTWIRE.Chrome.WiredReflexes.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.movement.disengage",
+                "type": "add",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.movement.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!3vPrvIj1T1qDIpJ2.jPRx0atWUuEIKx2E.2OfPdZYgW9wBodxZ"
+        }
+      ]
     }
   ],
   "folder": "gwBestiaryWire00",

@@ -538,6 +538,190 @@
         "default": 0
       },
       "_key": "!actors.items!GwAeqTrooper0001.vxocmPyA9uKwrgEq"
+    },
+    {
+      "_id": "OJwxCmWzgjtsuUwP",
+      "name": "GHOSTWIRE.Gear.Items.Workhorse.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/workhorse.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Workhorse.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "workhorse",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 500,
+            "modSlots": 2,
+            "tags": [],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwAeqTrooper0001.OJwxCmWzgjtsuUwP",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "rZ9zd9G7SJEHLtLA",
+      "name": "GHOSTWIRE.Gear.Items.GelStickNShock.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GelStickNShock.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "gel-stick-n-shock",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 24,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 350,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "gel",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwAeqTrooper0001.rZ9zd9G7SJEHLtLA",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "M0DNVuzJJZpEvtHL",
+      "name": "GHOSTWIRE.Gear.Items.ShockStick.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/shock-stick.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ShockStick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shock-stick",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 450,
+            "modSlots": 2,
+            "tags": [
+              "Non-lethal-capable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "electrical",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwAeqTrooper0001.M0DNVuzJJZpEvtHL",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [

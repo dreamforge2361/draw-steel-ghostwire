@@ -879,6 +879,185 @@
       },
       "_id": "GwWireKityrjKsb1",
       "_key": "!actors.items!yrjKsb1PxjKnBkqQ.GwWireKityrjKsb1"
+    },
+    {
+      "_id": "s1sH6GIKn8lqFUPV",
+      "name": "GHOSTWIRE.Gear.Items.CorpBlacklink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CorpBlacklink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "corp-blacklink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 4,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 4,
+            "availability": "prototype",
+            "price": 35000,
+            "modSlots": 5,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!yrjKsb1PxjKnBkqQ.s1sH6GIKn8lqFUPV",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "ZxkHuoO3a9T7Q7AU",
+      "name": "GHOSTWIRE.Gear.Items.SpoofKit.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.SpoofKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "spoof-kit",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 2500,
+            "modSlots": 3,
+            "tags": [
+              "Wired",
+              "Concealable"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!yrjKsb1PxjKnBkqQ.ZxkHuoO3a9T7Q7AU",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "NKeaFG9I1ZCpkGqh",
+      "name": "GHOSTWIRE.Gear.Items.MaglockPasskey.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.MaglockPasskey.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "maglock-passkey",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 900,
+            "modSlots": 2,
+            "tags": [
+              "Wired",
+              "Concealable"
+            ],
+            "modFamily": [
+              "bne-electronic",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!yrjKsb1PxjKnBkqQ.NKeaFG9I1ZCpkGqh",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

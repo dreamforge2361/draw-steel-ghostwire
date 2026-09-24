@@ -876,6 +876,257 @@
       },
       "_id": "GwWkTsiUf4jWemtu",
       "_key": "!actors.items!TsiUf4jWemtuZweS.GwWkTsiUf4jWemtu"
+    },
+    {
+      "_id": "c0uszA2EtE3ERvL7",
+      "name": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/streetsweeper-smg.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "streetsweeper-smg",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 3,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 7500,
+            "modSlots": 4,
+            "tags": [
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Medium",
+            "weaponBand": "light",
+            "ammoFamily": "smg"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!TsiUf4jWemtuZweS.c0uszA2EtE3ERvL7",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "kNoLk8AfDBh1ShjL",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 701000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!TsiUf4jWemtuZweS.kNoLk8AfDBh1ShjL",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "CfMwjWmZFSgXFiDt",
+      "name": "GHOSTWIRE.Gear.Items.Gasser.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/gasser.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Gasser.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "gasser",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 702000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 220,
+            "modSlots": 0,
+            "tags": [
+              "Blast",
+              "Consumable"
+            ],
+            "consumable": true,
+            "damage": 4,
+            "damageType": "toxin",
+            "range": "Short",
+            "weaponBand": "light",
+            "thrown": {
+              "impact": {
+                "damage": 4,
+                "damageType": "poison"
+              }
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!TsiUf4jWemtuZweS.CfMwjWmZFSgXFiDt",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "AaHoqtN9WJCqP36n",
+      "name": "GHOSTWIRE.Gear.Items.SilentSuite.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.SilentSuite.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "silent-suite",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 3,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 703000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 11000,
+            "modSlots": 4,
+            "tags": [
+              "Concealable",
+              "Wired"
+            ],
+            "modFamily": [
+              "bne-mechanical",
+              "bne-electronic",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!TsiUf4jWemtuZweS.AaHoqtN9WJCqP36n",
+      "folder": null,
+      "effects": []
     }
   ],
   "folder": "gwBestiaryRivals",

@@ -475,6 +475,129 @@
       },
       "_id": "gwBesTaviSorIt06",
       "_key": "!actors.items!gwBesTaviSorn000.gwBesTaviSorIt06"
+    },
+    {
+      "_id": "MzmrSQuLC5I4jKbT",
+      "name": "GHOSTWIRE.Gear.Items.RitualStreetFocusCharm.Name",
+      "type": "treasure",
+      "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RitualStreetFocusCharm.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core — The Veil",
+          "page": "Ritual Workings — General",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ritual-street-focus-charm",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "restricted",
+            "price": null,
+            "modSlots": 0,
+            "tags": [
+              "RitualFormula"
+            ],
+            "priceText": "Not sold — found (Components ¥250)"
+          },
+          "ritual": {
+            "formula": true,
+            "family": "Artifice",
+            "magnitude": 2,
+            "magnitudeMax": 2,
+            "magnitudeText": "2",
+            "leaders": "General",
+            "form": "ritual scroll or slim chapbook",
+            "componentsTotal": [
+              "¥250"
+            ],
+            "learned": false
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!gwBesTaviSorn000.MzmrSQuLC5I4jKbT",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "ptuuLHapO3ZlzxCy",
+      "name": "GHOSTWIRE.Gear.Items.GrappleLine.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GrappleLine.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "grapple-line",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 110000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 2000,
+            "modSlots": 3,
+            "tags": [],
+            "modFamily": [
+              "bne-mechanical"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!gwBesTaviSorn000.ptuuLHapO3ZlzxCy",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

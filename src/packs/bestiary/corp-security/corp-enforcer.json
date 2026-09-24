@@ -1141,6 +1141,401 @@
       },
       "_id": "GwWireKith3LR6HH",
       "_key": "!actors.items!h3LR6HHADCpyFMsN.GwWireKith3LR6HH"
+    },
+    {
+      "_id": "1C9Uh6QXeXHHkjNW",
+      "name": "GHOSTWIRE.Gear.Items.Autoshotgun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/autoshotgun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Autoshotgun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "autoshotgun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3200,
+            "modSlots": 3,
+            "tags": [
+              "Two-handed",
+              "Spread",
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "ammoFamily": "shotgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!h3LR6HHADCpyFMsN.1C9Uh6QXeXHHkjNW",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "k7BooXfX2YjYaxJ4",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 16,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!h3LR6HHADCpyFMsN.k7BooXfX2YjYaxJ4",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "TAGWBgNuHLtaba4S",
+      "name": "GHOSTWIRE.Gear.Items.BallisticBoard.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/ballistic-board.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.BallisticBoard.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ballistic-board",
+        "kind": "armor",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "shield"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3000,
+            "modSlots": 3,
+            "tags": [],
+            "modFamily": [
+              "shield"
+            ],
+            "armorClass": "shield",
+            "staminaByEchelon": [
+              4,
+              5,
+              6,
+              8
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!h3LR6HHADCpyFMsN.TAGWBgNuHLtaba4S",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "QSNeScG4Jn1rgy6N",
+          "name": "No Kit — Echelon 1 (+4 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/ballistic-board.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.dvPUs4Je0BiZEcJt",
+          "description": "<p>Worn with no Kit at Echelon 1: +4 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 4,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!h3LR6HHADCpyFMsN.TAGWBgNuHLtaba4S.QSNeScG4Jn1rgy6N"
+        },
+        {
+          "_id": "kl0WPzqfPqh3zxCX",
+          "name": "No Kit — Echelon 2 (+5 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/ballistic-board.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.dvPUs4Je0BiZEcJt",
+          "description": "<p>Worn with no Kit at Echelon 2: +5 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 5,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!h3LR6HHADCpyFMsN.TAGWBgNuHLtaba4S.kl0WPzqfPqh3zxCX"
+        },
+        {
+          "_id": "LBrsgyXDMRrmy9ub",
+          "name": "No Kit — Echelon 3 (+6 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/ballistic-board.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.dvPUs4Je0BiZEcJt",
+          "description": "<p>Worn with no Kit at Echelon 3: +6 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 6,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!h3LR6HHADCpyFMsN.TAGWBgNuHLtaba4S.LBrsgyXDMRrmy9ub"
+        },
+        {
+          "_id": "OkmZ1cHyLsfAAsGx",
+          "name": "No Kit — Echelon 4 (+8 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/ballistic-board.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.dvPUs4Je0BiZEcJt",
+          "description": "<p>Worn with no Kit at Echelon 4: +8 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 8,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!h3LR6HHADCpyFMsN.TAGWBgNuHLtaba4S.OkmZ1cHyLsfAAsGx"
+        }
+      ]
+    },
+    {
+      "_id": "JP3jCQVzNHVjDjc0",
+      "name": "GHOSTWIRE.Gear.Items.Commlink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Commlink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "commlink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 403000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 150,
+            "modSlots": 1,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!h3LR6HHADCpyFMsN.JP3jCQVzNHVjDjc0",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],
