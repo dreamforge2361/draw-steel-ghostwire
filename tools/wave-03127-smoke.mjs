@@ -268,7 +268,10 @@ for (const id of Object.values(SWAPS)) {
 console.log("\nD) Hit FX — in the module, and nothing else is required");
 
 const hitFx = read("scripts/hit-fx.mjs");
-note(HIT_FX_KINDS.join(",") === "gun,melee,grenade", "the first slice is gun / melee / grenade");
+// 0.3.128 (A) widened the slice to four. The 0.3.127 lock was "these three, and nothing loose" —
+// what survives it is that the three are still there and still first, not that there are only three.
+note(["gun", "melee", "grenade"].every(kind => HIT_FX_KINDS.includes(kind)),
+  "the 0.3.127 slice — gun / melee / grenade — is still all there");
 note(classifyHit({ thrownBlast: true, range: "Short" }) === "grenade", "a thrown Blast grenade is a grenade, band notwithstanding");
 note(classifyHit({ range: "Adjacent" }) === "melee", "an Adjacent-band weapon is melee");
 note(classifyHit({ range: "Medium", ammoFamily: "handgun" }) === "gun", "a weapon that eats rounds is a gun");
@@ -286,7 +289,7 @@ note(!/autoanimations/i.test(code(hitFx)), "no code path asks for Automated Anim
 note(!readJson("module.json").relationships?.requires?.some?.(r => ["sequencer", "autoanimations", "JB2A_DnD5e"].includes(r.id)),
   "and module.json requires none of them");
 note(/game\.modules\.get\("sequencer"\)\?\.active/.test(hitFx), "Sequencer is probed, never assumed");
-note(/drawBurst\(/.test(hitFx) && /canvas\.app\?\.ticker/.test(hitFx),
+note(/drawHitFx\(/.test(hitFx) && /canvas\.app\?\.ticker/.test(hitFx),
   "and the fallback is a real built-in flash, not a silent no-op");
 note(/abilityResult/.test(hitFx), "it fires on the ability result — where it lands");
 note(/abilityUse/.test(read("scripts/sfx.mjs")), "leaving B40 on the ability use — where it fires");
