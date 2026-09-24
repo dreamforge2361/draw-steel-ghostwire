@@ -67,6 +67,8 @@ import { registerTokenLight } from "./token-light.mjs";
 import { registerCantrip } from "./cantrip.mjs";
 import { registerPactStrike } from "./pact-strike.mjs";
 import { registerReagents } from "./reagents.mjs";
+import { registerAmmo } from "./ammo.mjs";
+import { registerGrenades } from "./grenades.mjs";
 import {
   CHANGER_ART_KEYS,
   CHANGER_FORMS,
@@ -215,6 +217,15 @@ Hooks.once("init", () => {
   // actually hand two back. Registered after registerConsumableUse so both AbilityModel#use patches
   // are in place and each one passes through to the next.
   registerReagents();
+  // 0.3.126 (B) — guns spend rounds. Handgun 12 / SMG 30 / Longarm 20 / Shotgun 8 / Heavy 50, a
+  // Reload maneuver that tops the magazine in one action, and the Stick-n-Shock rider. Like the two
+  // above it this wraps AbilityModel#use: each patch recognises its own ability by flag and hands
+  // everything else down to the one registered before it, so registration order is a chain, not a
+  // priority. A gun with an empty magazine never reaches Draw Steel's roll dialog at all.
+  registerAmmo();
+  // 0.3.126 (C) — and Blast grenades stop being single-target free strikes. One shared Throw, a
+  // 20-foot circle, and a Reflex save per token under it.
+  registerGrenades();
 });
 
 // ---------- Wired connection states ----------
