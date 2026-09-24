@@ -55,7 +55,8 @@
         "damage": 10,
         "damageType": "AP",
         "range": "Extreme",
-        "weaponBand": "heavy"
+        "weaponBand": "heavy",
+        "ammoFamily": "heavy"
       }
     }
   }

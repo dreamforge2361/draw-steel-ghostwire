@@ -3025,7 +3025,8 @@
             "damage": 9,
             "damageType": "kinetic",
             "range": "Medium",
-            "weaponBand": "heavy"
+            "weaponBand": "heavy",
+            "ammoFamily": "heavy"
           }
         }
       },

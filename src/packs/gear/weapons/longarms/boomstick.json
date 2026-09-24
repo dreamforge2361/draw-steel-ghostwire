@@ -56,7 +56,8 @@
         "damage": 6,
         "damageType": "kinetic",
         "range": "Short",
-        "weaponBand": "medium"
+        "weaponBand": "medium",
+        "ammoFamily": "shotgun"
       }
     }
   }

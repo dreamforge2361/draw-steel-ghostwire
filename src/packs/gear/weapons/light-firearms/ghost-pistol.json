@@ -57,7 +57,8 @@
         "damage": 5,
         "damageType": "kinetic",
         "range": "Short",
-        "weaponBand": "light"
+        "weaponBand": "light",
+        "ammoFamily": "handgun"
       }
     }
   }

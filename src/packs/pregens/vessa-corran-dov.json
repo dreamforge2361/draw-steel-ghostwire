@@ -3498,7 +3498,8 @@
             "damage": 4,
             "damageType": "kinetic",
             "range": "Short",
-            "weaponBand": "light"
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
           }
         }
       },
@@ -3810,7 +3811,7 @@
         "category": "trinket",
         "echelon": 1,
         "keywords": [],
-        "quantity": 1,
+        "quantity": 30,
         "project": {
           "prerequisites": "",
           "source": "",
@@ -3837,7 +3838,11 @@
             "tags": [
               "Consumable"
             ],
-            "consumable": true
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
           }
         }
       },

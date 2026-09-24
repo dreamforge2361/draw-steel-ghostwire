@@ -103,11 +103,13 @@ export const WEAPON_SKILLS = {
   // trade skill, and the lock names no skill for them: no bonus rather than a guessed one.
   "shaped-charge": "demolitions",
   "thermite-charge": "demolitions",
+  "emp-grenade": null,
   "firestarter": null,
   "flash-bang-3e": null,
   "frag": null,
   "gasser": null,
   "smart-grenade": null,
+  "smoke": null,
   "throwing-knife": null,
 };
 

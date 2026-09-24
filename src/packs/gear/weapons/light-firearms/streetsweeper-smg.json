@@ -55,7 +55,8 @@
         "damage": 5,
         "damageType": "kinetic",
         "range": "Medium",
-        "weaponBand": "light"
+        "weaponBand": "light",
+        "ammoFamily": "smg"
       }
     }
   }

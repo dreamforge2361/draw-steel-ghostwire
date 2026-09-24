@@ -52,10 +52,18 @@
           "Non-lethal-capable"
         ],
         "consumable": true,
-        "damage": 4,
-        "damageType": "electrical",
+        "damage": null,
+        "damageType": null,
         "range": "Short",
-        "weaponBand": "light"
+        "weaponBand": "light",
+        "thrown": {
+          "feet": 20,
+          "impact": {
+            "conditions": [
+              "dazed"
+            ]
+          }
+        }
       }
     }
   }

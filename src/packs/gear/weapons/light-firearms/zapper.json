@@ -55,7 +55,8 @@
         "damage": 4,
         "damageType": "electrical",
         "range": "Short",
-        "weaponBand": "light"
+        "weaponBand": "light",
+        "ammoFamily": "handgun"
       }
     }
   }

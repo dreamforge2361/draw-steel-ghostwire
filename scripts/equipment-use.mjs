@@ -13,7 +13,15 @@
 //
 // Using it goes through the normal ability pipeline, so it produces the `abilityUse` chat part that
 // B40 listens for and the sound plays with no extra wiring.
+//
+// 0.3.126 (C4): one family of weapon treasure now opts *out* of this file. A thrown Blast grenade
+// is an area, not a single target — it gets Throw + a 20-foot template + a Reflex save per token
+// (scripts/grenades.mjs), and a Frag that also spawned a single-target free strike would be two
+// contradictory ways to use the same grenade sitting next to each other on the sheet. Only *thrown*
+// Blast converts: Thermite and Shaped Charge carry the tag but are placed against a wall at
+// Adjacent, so they keep their strike.
 import { weaponSkillKey } from "./weapon-skills.mjs";
+import { isThrownBlast } from "./grenades.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATES_PATH = `modules/${MODULE_ID}/scripts/data/weapon-use-templates.json`;
@@ -29,6 +37,7 @@ const gearFlags = item => item?.flags?.[MODULE_ID]?.gear ?? null;
 /** Is this a Ghostwire weapon treasure we should arm? */
 export function isWeaponTreasure(item) {
   if (item?.type !== "treasure" || item?.system?.kind !== "weapon") return false;
+  if (isThrownBlast(item)) return false;   // C4 — Throw owns these, not a free strike.
   const gear = gearFlags(item);
   return !!gear && !!gear.range;
 }
@@ -153,9 +162,14 @@ async function disarmWeapon(gearItem) {
 export async function syncActor(actor) {
   if (!isHero(actor) || !actor.isOwner) return { added: 0, removed: 0 };
 
+  // An ability whose weapon is gone, plus (0.3.126 C4) an ability spawned before Blast grenades
+  // stopped being free strikes: the grenade is still in the pouch, so it is not an orphan, but the
+  // single-target strike it spawned is no longer how that grenade is used.
   const orphans = actor.items.filter(i => {
     const gearId = sourceGearId(i);
-    return gearId && !actor.items.get(gearId);
+    if (!gearId) return false;
+    const gearItem = actor.items.get(gearId);
+    return !gearItem || isThrownBlast(gearItem);
   }).map(i => i.id);
   if (orphans.length) await actor.deleteEmbeddedDocuments("Item", orphans);
 

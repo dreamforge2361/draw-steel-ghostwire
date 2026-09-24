@@ -55,7 +55,14 @@
         "damage": 6,
         "damageType": "kinetic",
         "range": "Medium",
-        "weaponBand": "medium"
+        "weaponBand": "medium",
+        "thrown": {
+          "feet": 20,
+          "impact": {
+            "damage": 6,
+            "damageType": null
+          }
+        }
       }
     }
   }

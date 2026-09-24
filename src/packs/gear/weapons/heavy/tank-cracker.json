@@ -55,7 +55,8 @@
         "damage": 14,
         "damageType": "fire",
         "range": "Long",
-        "weaponBand": "anti-veh"
+        "weaponBand": "anti-veh",
+        "ammoFamily": "heavy"
       }
     }
   }
