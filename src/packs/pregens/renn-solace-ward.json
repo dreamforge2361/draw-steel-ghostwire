@@ -1977,7 +1977,7 @@
         ],
         "type": "main",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "melee",
@@ -2105,7 +2105,7 @@
         ],
         "type": "main",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "meleeRanged",
@@ -2192,7 +2192,7 @@
         ],
         "type": "maneuver",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "special",
