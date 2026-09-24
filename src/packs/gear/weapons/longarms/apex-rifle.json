@@ -58,7 +58,8 @@
         "damage": 8,
         "damageType": "AP",
         "range": "Long",
-        "weaponBand": "medium"
+        "weaponBand": "medium",
+        "ammoFamily": "longarm"
       }
     }
   }

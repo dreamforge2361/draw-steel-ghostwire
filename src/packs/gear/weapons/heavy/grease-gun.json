@@ -56,7 +56,8 @@
         "damage": 9,
         "damageType": "fire",
         "range": "Medium",
-        "weaponBand": "heavy"
+        "weaponBand": "heavy",
+        "ammoFamily": "heavy"
       }
     }
   }

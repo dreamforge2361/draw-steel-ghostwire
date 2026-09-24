@@ -55,7 +55,8 @@
         "damage": 6,
         "damageType": "kinetic",
         "range": "Medium",
-        "weaponBand": "medium"
+        "weaponBand": "medium",
+        "ammoFamily": "longarm"
       }
     }
   }

@@ -56,7 +56,8 @@
         "damage": 14,
         "damageType": "AP",
         "range": "Extreme",
-        "weaponBand": "anti-veh"
+        "weaponBand": "anti-veh",
+        "ammoFamily": "heavy"
       }
     }
   }
