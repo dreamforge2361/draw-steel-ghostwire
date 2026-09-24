@@ -62,6 +62,9 @@ import { registerDirectorResource } from "./director-resource.mjs";
 import { registerTraitRepick } from "./trait-repick.mjs";
 import { registerStamina } from "./stamina.mjs";
 import { registerMachineConditions } from "./machine-conditions.mjs";
+import { registerTokenLight } from "./token-light.mjs";
+import { registerCantrip } from "./cantrip.mjs";
+import { registerPactStrike } from "./pact-strike.mjs";
 import {
   CHANGER_ART_KEYS,
   CHANGER_FORMS,
@@ -195,6 +198,12 @@ Hooks.once("init", () => {
   registerStamina();
   // 0.3.122 — On Fire / Leaking, Crippled and Systems Down, read off a machine's Integrity.
   registerMachineConditions();
+  // 0.3.123 — the shared 20-foot glow behind Street Priest Blessed Light and Elementalist Cantrip.
+  // Registered before registerCantrip so the Cantrip dialog can call straight into it.
+  registerTokenLight();
+  registerCantrip();
+  // 0.3.123 — Light Pact gets Rebuke, Dark Pact gets Drain, and nobody ever has both.
+  registerPactStrike();
 });
 
 // ---------- Wired connection states ----------

@@ -54,7 +54,9 @@ const ROSTER = [
     kit: "magic-tech/sanctified", background: "faith-district", profession: "acolyte",
     skills: ["religion", "rituals", "insight", "medicine"],
     bio: "A Corran Street Priest of the Shepherd ministry, holding a lamp-lit corner at Ninth-and-Fold in the Flats. Her Light pact buys mercy and protection, and costs her every time she spends it.",
-    abilities: ["smite-rebuke", "lay-on-hands", "faith-is-our-armor"],
+    // 0.3.123: Smite / Rebuke was consolidated into **Rebuke**, and Vessa is Light pact, so Rebuke is
+    // the free strike her Pact Strike grant lands on. Dark priests get Drain instead (scripts/pact-strike.mjs).
+    abilities: ["rebuke", "lay-on-hands", "faith-is-our-armor"],
   },
   {
     key: "Kaes", slug: "kaes-vahn-estal", name: "Kaïs Vahn-Estal", handle: "the Static Saint",
