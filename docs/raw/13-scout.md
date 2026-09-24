@@ -35,7 +35,21 @@ You lose any remaining Advantage at the end of the encounter.
 
 ## Signature Abilities
 
-Every Scout chooses **one** signature ability at 1st level — your baseline, no-Advantage-cost option, all rolled with Reflex. *(Quick Build: **Teamwork Has Its Place.**)*
+**Conceal is free, and every Scout has it.** *(Class Feature Signature — 0 Advantage, no choice involved, from 1st level, whatever your college.)*
+
+> **Conceal** — **Maneuver, Self.** **Power Roll: 2d10 + Reflex.**
+>
+> | Result | Effect |
+> |---|---|
+> | low (≤11) | Nothing happens. You are still standing right there. |
+> | middle (12–16) | You gain **Cover/Conceal**: ranged attack power rolls against you take a bane, and melee is unaffected. |
+> | high (17+) | You gain **Cover/Conceal** *and* you are **Invisible** — until you move. |
+>
+> The Invisible ends the moment you change square — your own movement, a shift, a teleport, or a forced move. Your **Cover/Conceal stays**: cover is about where you are standing, invisibility is about not having just given yourself away.
+>
+> *In Foundry:* the card applies both statuses for you, and strips the Invisible again the moment your token changes square. The Invisible is a real status, not a note — ordinary sight stops drawing you, and a **see-invisible** optic (Cyber-Eyes and up, `09-chrome-body-integrity.md`) draws you again inside its band.
+
+Beyond Conceal, every Scout chooses **one** signature ability at 1st level — your baseline, no-Advantage-cost option, all rolled with Reflex. *(Quick Build: **Teamwork Has Its Place.**)*
 
 | Signature | Advantage Cost | Type | Target | Damage (low / middle / high) |
 |---|---|---|---|---|
@@ -115,7 +129,7 @@ Grants the **Survival/Tracking** skill. Starter Kit: **Longshot** (long-range ri
 
 | Level | Feature/Ability | Type |
 |---|---|---|
-| 1 | Hard Tag (mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
+| 1 | Hard Tag (**1 Advantage**; mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
 | 1 | Ranged Reflex (edge on ranged strikes vs. Marked targets while you are at Ranged 5+ from them) | 1st-level college feature (2nd feature) |
 | 1 | Survival/Tracking (skill) | Skill grant |
 | 1 | Steady the Scope (triggered: on being detected/interrupted at ranged distance, hold the shot and gain 1 surge) | College triggered action |
@@ -128,7 +142,7 @@ Grants the **Survival/Tracking** skill. Starter Kit: **Longshot** (long-range ri
 
 **Passive Features:**
 
-- **Hard Tag** (1st) — **Maneuver, Self.** Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Hard Tag another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 1, scaling to **+2 / +3 / +4 damage** at Echelons 2 / 3 / 4. **Spend 1+ Advantage:** gain 1 surge per Advantage spent, usable only on your first strike against the Marked target this round.
+- **Hard Tag** (1st) — **Maneuver, Self. Cost: 1 Advantage** — the tag is never free. Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Hard Tag another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 1, scaling to **+2 / +3 / +4 damage** at Echelons 2 / 3 / 4. **Spend additional Advantage:** gain 1 surge per Advantage spent *beyond* the 1 the tag itself costs, usable only on your first strike against the Marked target this round.
 - **Ranged Reflex** (1st) — Your ranged strikes gain an **edge** against any target that is at least Ranged 5 from you AND Marked by you.
 - **Steady the Scope** (1st, triggered) — **Trigger:** you would take a bane on a ranged strike from being observed, dazed, harried, or knocked off a firing position. **Effect:** ignore the bane on this strike, and gain **1 surge** usable only on this strike.
 - **Cold Read** (2nd) — The first Marked target you damage at Ranged 5+ each round becomes visible to all your allies through walls and cover until the start of your next turn.
