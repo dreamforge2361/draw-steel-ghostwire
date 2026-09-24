@@ -26,6 +26,7 @@ import { registerKitGrants } from "./kit-grants.mjs";
 import { registerSprites } from "./sprites.mjs";
 import { registerAgents } from "./agents.mjs";
 import { registerVeilSummons } from "./veil-summons.mjs";
+import { registerSummonArt } from "./summon-art.mjs";
 import { registerDismissAbilities } from "./dismiss-abilities.mjs";
 import { registerElementalist } from "./elementalist.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
@@ -60,6 +61,7 @@ import { registerWireStateToggle } from "./wire-state-toggle.mjs";
 import { registerCritFeedback } from "./crit-feedback.mjs";
 import { registerCoverConceal } from "./cover-conceal.mjs";
 import { registerConceal } from "./conceal.mjs";
+import { registerTakeCover } from "./take-cover.mjs";
 import { registerFlanking } from "./flanking.mjs";
 import { registerWorkshopBenches } from "./workshop-benches.mjs";
 import { registerDirectorResource } from "./director-resource.mjs";
@@ -157,6 +159,9 @@ Hooks.once("init", () => {
   registerSprites();
   registerAgents();
   registerVeilSummons();
+  // 0.3.133 (A) — summon token art, plus the one-per-upgrade world pass that brings Actors and placed
+  // tokens stamped from the old rows onto it. It only ever replaces art the module itself shipped.
+  registerSummonArt();
   // 0.3.132 (D) — the other half of every summon. sprites.mjs, agents.mjs and veil-summons.mjs all
   // shipped a working decompile / dismiss engine reachable only from an item sheet; this puts a
   // one-click ability on the Abilities tab for sprites, elementals and spirits (Hacker Agents
@@ -203,6 +208,10 @@ Hooks.once("init", () => {
   // 0.3.124 (B2) — the free Scout maneuver that *applies* Cover/Conceal, plus the Invisible status
   // its high tier buys. Registered after registerCoverConceal so COVER_CONCEAL_ID already exists.
   registerConceal();
+  // 0.3.133 (B) — Take Cover, the universal Defend swap, now *applies* Cover/Conceal on use and drops
+  // it again when the hero changes square. Registered after registerConceal so both cards write to the
+  // one status through the same source list and neither can end the other's cover.
+  registerTakeCover();
   // F14 — the positional sibling of F13. Same getTargetModifiers seam, opposite sign: Cover/Conceal
   // banes a ranged attacker, Flanking edges a melee one. It never double-counts Draw Steel's own
   // flanking edge — see the guard in scripts/flanking.mjs.

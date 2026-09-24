@@ -1,12 +1,23 @@
 #!/usr/bin/env node
 /**
- * One-shot generator for B120 Hacker Agent pack JSON + placeholder token PNGs.
- * Run: node tools/gen-hacker-agents.mjs
+ * One-shot generator for B120 Hacker Agent pack JSON.
+ *
+ * 0.3.133 (A): the placeholder token PNGs this used to draw are gone. Every tier of an archetype now
+ * wears Michael's family art — `agent-<archetype>.webp` — so a regenerate no longer reverts the art
+ * to a coloured disc. `writePng` / `tokenRgba` were deleted with them; the `color` on each archetype
+ * is kept for the Wired minimap, and `icon` is the core icon each agent's own feature / strike Item
+ * wears (the family art is the *actor and token*, never the Item icon).
+ *
+ * WARNING — this generator is stale against the committed pack rows and re-running it is
+ * DESTRUCTIVE. `stableId` no longer reproduces the `_id`s in src/packs/summons/agents/ (every actor
+ * and every embedded Item would be reassigned a new id, orphaning world copies). It is kept as the
+ * record of how the twelve agents were built and as the place art decisions are recorded; the rows
+ * themselves are hand-maintained. Fix the ids before you run it again.
+ * Run: node tools/gen-hacker-agents.mjs   (DO NOT — see above)
  */
 import { createHash } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { deflateSync } from "node:zlib";
 
 const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-agents-b120:" + seed).digest()].slice(0, 16)
@@ -14,10 +25,10 @@ const stableId = seed => [...createHash("sha256").update("gw-agents-b120:" + see
 
 const FOLDER_ID = "gwSummonsAgents0";
 const ARCHETYPES = {
-  probe: { role: "hexer", img: "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp", color: [0, 196, 210] },
-  spike: { role: "harrier", img: "icons/magic/lightning/bolt-strike-purple.webp", color: [232, 48, 120] },
-  daemon: { role: "support", img: "icons/commodities/tech/cog-steel.webp", color: [232, 168, 32] },
-  watchdog: { role: "defender", img: "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp", color: [48, 196, 96] },
+  probe: { role: "hexer", art: "agent-probe.webp", icon: "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp", color: [0, 196, 210] },
+  spike: { role: "harrier", art: "agent-spike.webp", icon: "icons/magic/lightning/bolt-strike-purple.webp", color: [232, 48, 120] },
+  daemon: { role: "support", art: "agent-daemon.webp", icon: "icons/commodities/tech/cog-steel.webp", color: [232, 168, 32] },
+  watchdog: { role: "defender", art: "agent-watchdog.webp", icon: "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp", color: [48, 196, 96] },
 };
 const BANDS = {
   minor: { level: 1, logic: 2, sortAdd: 0 },
@@ -41,73 +52,8 @@ const FEATURE = {
   watchdog: { nameKey: "Feature", dsid: "watchdog-screen" },
 };
 
-function crc32(buf) {
-  let c = ~0;
-  for (const b of buf) {
-    c ^= b;
-    for (let i = 0; i < 8; i++) c = (c >>> 1) ^ (0xedb88320 & -(c & 1));
-  }
-  return (~c) >>> 0;
-}
-
-function chunk(tag, data) {
-  const t = Buffer.from(tag);
-  const len = Buffer.alloc(4);
-  len.writeUInt32BE(data.length);
-  const crc = Buffer.alloc(4);
-  crc.writeUInt32BE(crc32(Buffer.concat([t, data])));
-  return Buffer.concat([len, t, data, crc]);
-}
-
-function writePng(path, w, h, rgba) {
-  const raw = Buffer.alloc((w * 4 + 1) * h);
-  for (let y = 0; y < h; y++) {
-    raw[y * (w * 4 + 1)] = 0;
-    rgba.copy(raw, y * (w * 4 + 1) + 1, y * w * 4, (y + 1) * w * 4);
-  }
-  const ihdr = Buffer.alloc(13);
-  ihdr.writeUInt32BE(w, 0);
-  ihdr.writeUInt32BE(h, 4);
-  ihdr[8] = 8; ihdr[9] = 6;
-  const png = Buffer.concat([
-    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
-    chunk("IHDR", ihdr),
-    chunk("IDAT", deflateSync(raw, { level: 9 })),
-    chunk("IEND", Buffer.alloc(0)),
-  ]);
-  writeFileSync(path, png);
-}
-
-function tokenRgba(w, h, rgb, band) {
-  const [r, g, b] = rgb;
-  const buf = Buffer.alloc(w * h * 4);
-  const cx = (w - 1) / 2, cy = (h - 1) / 2;
-  const ring = band === "advanced" ? 0.92 : band === "intermediate" ? 0.86 : 0.80;
-  const inner = 0.62;
-  for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w; x++) {
-      const dx = (x - cx) / cx, dy = (y - cy) / cy;
-      const d = Math.sqrt(dx * dx + dy * dy);
-      const i = (y * w + x) * 4;
-      if (d > 1) continue;
-      const glow = Math.max(0, 1 - d);
-      buf[i] = Math.round(r * (0.15 + 0.85 * glow));
-      buf[i + 1] = Math.round(g * (0.15 + 0.85 * glow));
-      buf[i + 2] = Math.round(b * (0.15 + 0.85 * glow));
-      buf[i + 3] = d > ring ? 0 : 255;
-      if (d > inner && d < ring) {
-        buf[i] = Math.min(255, buf[i] + 40);
-        buf[i + 1] = Math.min(255, buf[i + 1] + 40);
-        buf[i + 2] = Math.min(255, buf[i + 2] + 40);
-      }
-      // glyph: a small inner diamond
-      if (Math.abs(dx) + Math.abs(dy) < 0.35) {
-        buf[i] = 240; buf[i + 1] = 250; buf[i + 2] = 255; buf[i + 3] = 255;
-      }
-    }
-  }
-  return buf;
-}
+/** Every tier of an archetype wears the family art (0.3.133 A). */
+const agentArt = archetype => `modules/draw-steel-ghostwire/assets/tokens/summons/${ARCHETYPES[archetype].art}`;
 
 function langKey(archetype, band) {
   return `Agent${archetype[0].toUpperCase()}${archetype.slice(1)}${band[0].toUpperCase()}${band.slice(1)}`;
@@ -179,7 +125,7 @@ function featureItem(actorId, archetype, band) {
     _key: `!actors.items!${actorId}.${itemId}`,
     name: `GHOSTWIRE.Summons.Agents.${key}.${spec.nameKey}.Name`,
     type: "feature",
-    img: ARCHETYPES[archetype].img,
+    img: ARCHETYPES[archetype].icon,
     system: {
       description: { value: `GHOSTWIRE.Summons.Agents.${key}.${spec.nameKey}.Description`, director: "" },
       source: { book: "Ghostwire Core Rulebook", page: "19-hacker", license: "Draw Steel Creator License" },
@@ -201,7 +147,7 @@ function spikeStrike(actorId, band) {
     _key: `!actors.items!${actorId}.${itemId}`,
     name: `GHOSTWIRE.Summons.Agents.${key}.Strike.Name`,
     type: "ability",
-    img: ARCHETYPES.spike.img,
+    img: ARCHETYPES.spike.icon,
     system: {
       type: "main", category: "signature",
       keywords: ["tech", "strike", "wired"],
@@ -245,8 +191,6 @@ function spikeStrike(actorId, band) {
   };
 }
 
-const tokenDir = "assets/tokens/summons";
-mkdirSync(tokenDir, { recursive: true });
 mkdirSync("src/packs/summons/agents", { recursive: true });
 
 writeFileSync(join("src/packs/summons/agents", "_folder.json"), JSON.stringify({
@@ -261,13 +205,10 @@ writeFileSync(join("src/packs/summons/agents", "_folder.json"), JSON.stringify({
   description: "",
 }, null, 2) + "\n");
 
-const SIZE = 256;
 for (const archetype of Object.keys(ARCHETYPES)) {
   for (const band of Object.keys(BANDS)) {
     const dsid = `agent-${archetype}-${band}`;
-    const pngPath = join(tokenDir, `${dsid}.png`);
-    writePng(pngPath, SIZE, SIZE, tokenRgba(SIZE, SIZE, ARCHETYPES[archetype].color, band));
-    const img = `modules/draw-steel-ghostwire/assets/tokens/summons/${dsid}.png`;
+    const img = agentArt(archetype);
     const actorId = stableId(`actor:${dsid}`);
     const stamina = STAMINA_BASE[archetype][band] + BANDS[band].logic * BANDS[band].level;
     const actor = baseActor({ archetype, band, actorId, stamina, img });

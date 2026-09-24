@@ -3,7 +3,7 @@
   "_key": "!actors!YpmFG1UDPV0kahmK",
   "name": "GHOSTWIRE.Summons.Elementals.ElementalRank2.Name",
   "type": "npc",
-  "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/bound-elemental-rank-2.webp",
   "system": {
     "stamina": {
       "value": 25,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/air/wind-tornado-wall-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/bound-elemental-rank-2.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

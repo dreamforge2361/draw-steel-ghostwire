@@ -37,6 +37,9 @@ function registerSettings() {
 
 /* -------------------------------------------- resolution */
 
+/** Foundry's localizer when there is one; identity in a Node smoke. */
+const defaultLocalize = key => globalThis.game?.i18n?.localize?.(key) ?? key;
+
 /** The item's own override, if a Director set one with the FilePicker on its sheet. */
 function overrideSrc(item) {
   const src = item?.getFlag?.(MODULE_ID, FLAG)?.src;
@@ -44,20 +47,91 @@ function overrideSrc(item) {
 }
 
 /**
+ * `"BreachAndClear"` → `"Breach And Clear"`. Also flattens `-` and `_`.
+ * @param {string} text
+ * @returns {string}
+ */
+export function deCamel(text) {
+  return String(text ?? "")
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** A stored `name` that is really a lang key: `GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Name`. */
+const I18N_KEY = /^[A-Z][A-Za-z0-9]*(?:\.[A-Za-z0-9_]+)+$/;
+
+/**
+ * Every string the rules are allowed to match against — 0.3.133 (C).
+ *
+ * Ghostwire pack rows store the **lang key** in `name`, not the printed name, and until 0.3.133 that
+ * key was the only thing `resolveSfx` looked at. Every multi-word pattern in the map was therefore
+ * dead: `breach and clear` cannot match `…Items.BreachAndClear.Name`, so Breach and Clear fell
+ * through to the hacking rule's bare `breach` and fired the tech sound instead of a pistol. Worse,
+ * matching the key meant matching path segments the player never sees — which is how the Scout's
+ * **Breathless Hit** (key `…Items.GaspingInPain.Name`) drew a creature scream.
+ *
+ * So a row whose name is a key never matches on the key itself. It matches on:
+ *   1. the **localized** name — what the card actually prints, when a localizer is available;
+ *   2. the key's **last segment, de-camelized** — `BreachAndClear` → `Breach And Clear`, which is
+ *      what makes this work identically in a Node smoke with no `game.i18n`;
+ *   3. the row's **`_dsid` with dashes as spaces** — `breach-and-clear` → `breach and clear`, the
+ *      most stable handle of the three and the one a renamed card keeps.
+ *
+ * A row whose name is plain text (every Draw Steel core item, every hand-made ability) matches on
+ * the name, exactly as before, plus its `_dsid`.
+ *
+ * @param {object} item
+ * @param {object} [opts]
+ * @param {(key: string) => string} [opts.localize]  Injected so smokes can pass lang/en.json.
+ * @returns {string[]} in priority order, de-duplicated, never empty unless the item has no name.
+ */
+export function sfxNameCandidates(item, { localize = null } = {}) {
+  const raw = String(item?.name ?? "").trim();
+  const out = [];
+  if (I18N_KEY.test(raw)) {
+    const localized = localize ? String(localize(raw) ?? "").trim() : "";
+    if (localized && (localized !== raw)) out.push(localized);
+    const segment = raw.split(".").filter(part => part && (part !== "Name")).pop();
+    if (segment) out.push(deCamel(segment));
+  } else if (raw) {
+    out.push(raw);
+  }
+  const dsid = item?.system?._dsid;
+  if (dsid) out.push(String(dsid).replace(/[-_]+/g, " "));
+  return [...new Set(out.filter(Boolean))];
+}
+
+/**
  * First matching rule wins: an ability keyword match, else a name match.
- * @param {Item} item
+ *
+ * The map is a parameter rather than the module-level `SFX_MAP` so tools/wave-03133-smoke.mjs can run
+ * **this** function over the shipped scripts/data/sfx-map.json in Node. Before 0.3.133 the only way to
+ * check the map outside Foundry was to re-implement resolution in the smoke (tools/wave-03128-smoke.mjs
+ * still does), which is exactly how a resolver bug hides from its own test.
+ *
+ * @param {{default: string, rules: object[]}} map
+ * @param {Item|object} item
+ * @param {object} [opts]
+ * @param {(key: string) => string} [opts.localize]
  * @returns {{src: string, rule: string}}
  */
-export function resolveSfx(item) {
+export function resolveSfxIn(map, item, { localize = defaultLocalize } = {}) {
   const override = overrideSrc(item);
   if (override) return { src: override, rule: "item override" };
 
+  const SFX_MAP = map ?? { rules: [] };
   const keywords = new Set(item?.system?.keywords ?? []);
-  const name = String(item?.name ?? "");
+  const names = sfxNameCandidates(item, { localize });
+  // The rotation hash has to be stable for one card, so it reads the best candidate, not each one.
+  const hashName = names[0] ?? String(item?.name ?? "");
   for (const rule of SFX_MAP.rules ?? []) {
     const needKw = rule.keywords ?? [];
     const byKeyword = needKw.length ? needKw.some(k => keywords.has(k)) : false;
-    const byName = rule.match ? new RegExp(rule.match, "i").test(name) : false;
+    const pattern = rule.match ? new RegExp(rule.match, "i") : null;
+    const byName = pattern ? names.some(name => pattern.test(name)) : false;
     // If the rule has a name pattern, the name MUST match; keywords then only filter.
     // Keyword-only rules (no match) still fire on keyword alone.
     const hit = rule.match ? (byName && (!needKw.length || byKeyword)) : byKeyword;
@@ -68,10 +142,21 @@ export function resolveSfx(item) {
     if (!srcs.length) continue;
     const src = srcs.length === 1
       ? srcs[0]
-      : srcs[Math.abs([...name].reduce((h, c) => ((h << 5) - h) + c.charCodeAt(0), 0)) % srcs.length];
+      : srcs[Math.abs([...hashName].reduce((h, c) => ((h << 5) - h) + c.charCodeAt(0), 0)) % srcs.length];
     return { src, rule: rule.id };
   }
   return { src: SFX_MAP.default, rule: "default" };
+}
+
+/**
+ * First matching rule wins, against the map this module loaded at init.
+ * @param {Item} item
+ * @param {object} [opts]
+ * @param {(key: string) => string} [opts.localize]
+ * @returns {{src: string, rule: string}}
+ */
+export function resolveSfx(item, opts = {}) {
+  return resolveSfxIn(SFX_MAP, item, opts);
 }
 
 /* -------------------------------------------- playback */

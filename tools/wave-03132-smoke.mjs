@@ -13,6 +13,8 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 
+import { atLeast } from "./lib/module-version.mjs";
+
 import {
   NO_HIT_FX_DSIDS, TECH_BOLT_KEYWORD, classifyHit, hasDamageEffect,
 } from "../scripts/hit-fx.mjs";
@@ -356,7 +358,10 @@ note(/if \(!abilityIsMeleeStrike\(this\)\) return modifiers;/.test(flankingCode)
 
 console.log("\nG) Version, docs and wiring");
 
-note(manifest.version === "0.3.132", `module.json is ${manifest.version}`);
+// 0.3.133: this was an exact-equality check, so it went red the moment the module was bumped —
+// exactly the trap tools/lib/module-version.mjs exists to close. Every other wave smoke uses
+// `atLeast`; this one now does too.
+note(atLeast(manifest.version, "0.3.132"), `module.json is ${manifest.version}`);
 note(/`0\.3\.132`/.test(read("README.md")), "README has a 0.3.132 entry");
 note(existsSync("docs/directors/03132-smoke.md"), "the Foundry checklist is written");
 // The per-wave result doc (`_claude-03132-result.md`) is deliberately NOT asserted: `_claude-*` is

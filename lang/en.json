@@ -51,9 +51,19 @@
       },
       "TakeCover": {
         "Name": "Take Cover",
-        "Description": "<p>When a creature takes the [[/apply TYggdI2Kwa302NjW]]{Take Cover main action}, they get low behind whatever the street offers — an engine block, a dumpster, a doorframe — and ability rolls made against them have a double bane until the start of their next turn. Additionally, you have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. A creature gains no benefit from this action while another creature is taunted by them.</p>",
+        "Description": "<p>When a creature takes the Take Cover main action, they get low behind whatever the street offers — an engine block, a dumpster, a doorframe — and gain <strong>Cover/Conceal</strong>: ranged attack power rolls against them take a <strong>bane</strong>, and melee is unaffected.</p><p>It lasts <strong>until they move</strong> — the cover ends the moment they change square, whether they walk out of it, shift, are teleported, or are forced.</p><p><em>In Foundry:</em> using this card applies the Cover/Conceal status for you and takes it back off again the moment your token changes square. If you also have Cover/Conceal from somewhere that does not end on a move — a Scout’s Conceal, or the Director’s own ruling — that one stays.</p>",
         "EffectName": "Taking Cover",
-        "EffectDescription": "<p>Ability rolls made against you have a double bane until the start of your next turn. You have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. You gain no benefit from this while another creature is taunted by you.</p>"
+        "EffectDescription": "<p>Ranged attack power rolls against you take a bane. Melee is unaffected. It ends when you move — the moment you change square.</p>",
+        "Chat": {
+          "Taken": "{actor} takes cover: ranged attacks against them take a bane until they move.",
+          "Moved": "{actor} broke cover."
+        },
+        "Settings": {
+          "Apply": {
+            "Name": "Take Cover applies Cover/Conceal",
+            "Hint": "When a hero uses Take Cover, give them the Cover/Conceal status automatically and drop it again when their token changes square. Turn this off to place cover by hand."
+          }
+        }
       },
       "FieldTriage": {
         "Name": "Field Triage",
@@ -8222,6 +8232,7 @@
             "dark": "{name}'s bind failed: the entity strikes {name} once for {damage} damage before it departs.",
             "none": "{name}'s bind failed: nothing answers."
           },
+          "PactNeutral": "{name} has sworn neither the Light nor the Dark pact, so the spirit arrives on its neutral base. Enable Pact: Light or Pact: Dark on the spirit to tint it.",
           "CompanionUsed": "{name} has already called a companion this encounter (once per encounter). Summoning it anyway.",
           "Released": "{name} released: the bind cap is {cap} elementals at once.",
           "Summoned": "{name} summoned: {stamina} Stamina, {form}, {bind}.",

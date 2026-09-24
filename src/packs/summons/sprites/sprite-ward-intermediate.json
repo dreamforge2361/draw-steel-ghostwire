@@ -3,7 +3,7 @@
   "_key": "!actors!AwICWiHPnQL5mEK5",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteWardIntermediate.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward-intermediate.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward.webp",
   "system": {
     "stamina": {
       "value": 28,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward-intermediate.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

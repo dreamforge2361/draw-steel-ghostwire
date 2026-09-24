@@ -18,8 +18,11 @@
 // dsid, sourceAbility, summonedAtLevel, formula, bind, scaleRank, expires, pact }; caster
 // flags.<module>.veilSummons = { uuids }. The world scan by `summoner` is the truth; the caster flag is a mirror.
 
+import { pactOf } from "./pact-strike.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
+const BESTIARY_PACK_ID = `${MODULE_ID}.bestiary`;
 const UI = "GHOSTWIRE.Summons.Veil.UI";
 
 // §C3 locked: rank base + (Logic × level). Companions are Rank 1.
@@ -49,7 +52,19 @@ export const SPIRIT_ABILITIES = Object.freeze(["invoke-the-pact"]);
 export const VEIL_SUMMON_DSIDS = Object.freeze([...ELEMENTAL_ABILITIES, ...SPIRIT_ABILITIES]);
 const MINISTRY_SPIRIT = { shepherd: "spirit-guardian", templar: "spirit-warrior", exorcist: "spirit-hunter" };
 const SPIRITS = Object.values(MINISTRY_SPIRIT);
-const PACT_TINTS = { light: "#fff1b8", dark: "#c9a0ff" };
+/**
+ * 0.3.133 (A2) — the Light / Dark token tints, and the neutral base a pactless priest leaves behind.
+ *
+ * The pack art for a pact spirit is a grayscale "tint-ready" base and the pack row's
+ * `prototypeToken.texture.tint` stays `#ffffff`; the colour is applied here, at summon time, and by
+ * `syncPactTint` in scripts/module.mjs afterwards. Exported so the smoke can assert the two hexes
+ * rather than re-type them.
+ */
+export const PACT_TINTS = Object.freeze({ light: "#fff1b8", dark: "#c9a0ff" });
+export const NEUTRAL_TINT = "#ffffff";
+
+/** The tint a pact wears. An unknown or absent pact is neutral, never a guess. */
+export const pactTint = pact => PACT_TINTS[pact] ?? NEUTRAL_TINT;
 
 const classDsid = actor => (actor?.type === "hero") ? actor.system.class?.system._dsid : null;
 const isElementalist = actor => classDsid(actor) === "elementalist";
@@ -86,7 +101,39 @@ export const spiritStamina = (form, actor) => (SPIRIT_BASE[form] ?? SPIRIT_BASE.
 
 /** Which spirit answers this priest: their ministry's, or null if they have none yet. */
 const ministrySpirit = actor => subclassDsids(actor).map(d => MINISTRY_SPIRIT[d]).find(Boolean) ?? null;
-const casterPact = actor => hasDsid(actor, "light-pact") ? "light" : hasDsid(actor, "dark-pact") ? "dark" : null;
+/**
+ * Which pact this priest swore: `"light"`, `"dark"`, or `null` when nothing on the sheet says.
+ *
+ * 0.3.133 (A2). Four layers, most authoritative first, because one of them alone kept missing:
+ *
+ *  1. **`flags.draw-steel-ghostwire.pactAlignment` on any Item.** This is the flag the pack rows
+ *     actually carry (`src/packs/classes/street-priest/{light,dark}-pact.json`), it is what
+ *     `patchPactFilter` in scripts/module.mjs filters grants by, and it is what scripts/pact-strike.mjs
+ *     already reads — so `pactOf` is imported rather than re-implemented, and the two can never drift.
+ *  2. **`system._dsid` `light-pact` / `dark-pact`.** The pre-0.3.133 check, kept for a hand-built
+ *     priest whose feature lost its flags.
+ *  3. **`flags.draw-steel-ghostwire.pact` on the Actor.** A Director can set the pact straight on the
+ *     sheet; a priest who has one recorded there is not pactless.
+ *  4. **The feature's name.** Last resort, and English-only on purpose: a sheet that says
+ *     "Light Pact" and nothing machine-readable still summons a Light spirit rather than a grey one.
+ *
+ * @param {Actor} actor
+ * @returns {"light"|"dark"|null}
+ */
+export function casterPact(actor) {
+  const flagged = pactOf(actor);
+  if (flagged === "light" || flagged === "dark") return flagged;
+  if (hasDsid(actor, "light-pact")) return "light";
+  if (hasDsid(actor, "dark-pact")) return "dark";
+  const onActor = flag(actor, "pact");
+  if (onActor === "light" || onActor === "dark") return onActor;
+  for (const item of actor?.items ?? []) {
+    const name = String(item.name ?? "");
+    if (/light[- ]?pact/i.test(name)) return "light";
+    if (/dark[- ]?pact/i.test(name)) return "dark";
+  }
+  return null;
+}
 
 /** Every Veil summon (elemental or spirit) this caster has out. */
 export function veilSummons(actor) {
@@ -123,12 +170,25 @@ function refreshSheets(actor) {
   for (const item of actor?.items ?? []) if (isVeilAbility(item) && item.sheet?.rendered) item.sheet.render();
 }
 
+/**
+ * The Actor a dsid names: Summons & Machines first, the bestiary second.
+ *
+ * 0.3.133 (E): the Calling ritual Formulas now name a `ritual.summonDsid` and `scripts/ritual-seal.mjs`
+ * hands it straight to `summonVeil`, so the lookup has to be able to reach a bestiary row as well as a
+ * summon template — a Director who points a Formula at a named NPC guardian should get that NPC, not
+ * "no template". Summons win ties, because a summon template carries the `kind` / `hybridTier` flags
+ * the stamp reads and a bestiary row does not.
+ */
 async function templateFor(dsid) {
-  const pack = game.packs.get(PACK_ID);
-  if (!pack) return null;
-  const index = await pack.getIndex({ fields: [`flags.${MODULE_ID}.dsid`] });
-  const entry = index.find(e => foundry.utils.getProperty(e, `flags.${MODULE_ID}.dsid`) === dsid);
-  return entry ? pack.getDocument(entry._id) : null;
+  for (const packId of [PACK_ID, BESTIARY_PACK_ID]) {
+    const pack = game.packs.get(packId);
+    if (!pack) continue;
+    const index = await pack.getIndex({ fields: [`flags.${MODULE_ID}.dsid`, "system._dsid"] });
+    const entry = index.find(e => (foundry.utils.getProperty(e, `flags.${MODULE_ID}.dsid`) === dsid)
+      || (foundry.utils.getProperty(e, "system._dsid") === dsid));
+    if (entry) return pack.getDocument(entry._id);
+  }
+  return null;
 }
 
 async function summonFolder() {
@@ -229,19 +289,31 @@ export async function summonVeil(caster, { dsid, sourceAbility, rank = 1, hybrid
   });
   for (const [path, value] of Object.entries(update)) foundry.utils.setProperty(data, path, value);
   // The pact is known at summon time, so the spirit arrives tinted: the matching Pact effect on, the other off.
-  if (pact) {
-    for (const effect of data.effects ?? []) {
-      const tint = effect.flags?.[MODULE_ID]?.pactTint;
-      if (tint) effect.disabled = tint !== pact;
+  //
+  // 0.3.133 (A2): a priest with no detectable pact leaves the spirit on the neutral grayscale base and says so
+  // once, rather than silently shipping a grey spirit nobody can tell apart from a tinted one. Both Pact effects
+  // stay as the pack row left them (both enabled) so the Director can pick one from the sheet.
+  if (kind === "spirit") {
+    if (pact) {
+      for (const effect of data.effects ?? []) {
+        const tint = effect.flags?.[MODULE_ID]?.pactTint;
+        if (tint) effect.disabled = tint !== pact;
+      }
+    } else {
+      ui.notifications.info(game.i18n.format(`${UI}.PactNeutral`, { name: caster.name }));
     }
-    foundry.utils.setProperty(data, "prototypeToken.texture.tint", PACT_TINTS[pact]);
+    foundry.utils.setProperty(data, "prototypeToken.texture.tint", pactTint(pact));
   }
   const actor = await Actor.create(data);
   if (!actor) return null;
 
   const index = veilSummons(caster).length - 1;
   const tokenDocument = await actor.getTokenDocument({ ...(position ?? placement(caster, index)), actorLink: true });
-  await canvas.scene.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
+  const tokenData = tokenDocument.toObject();
+  // getTokenDocument copies the prototype, so the tint is already right — but "already right" is exactly the kind
+  // of thing that quietly stops being true, and the *placed* token is what the table looks at. Say it outright.
+  if (kind === "spirit") foundry.utils.setProperty(tokenData, "texture.tint", pactTint(pact));
+  await canvas.scene.createEmbeddedDocuments("Token", [tokenData]);
   await syncRoster(caster);
   refreshSheets(caster);
   return actor;

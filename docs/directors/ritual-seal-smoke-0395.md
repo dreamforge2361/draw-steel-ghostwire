@@ -84,4 +84,4 @@ A **hung seal (tier 1 / low) makes nothing.** So does an unrolled seal.
 
 - No shipped Ritual Formula prints a duration, so every Ritual Effect reads **"until broken, dispelled or let go"**. When a card gains `ritual.duration`, the text is picked up with no code change.
 - Calling has no summon templates yet (see §4).
-- The marker reuses `assets/tokens/summons/sprite-ward-minor.webp`. Dedicated ward-glyph art is an art-track item, not a blocker.
+- The marker reuses `assets/tokens/summons/sprite-ward.webp` (0.3.133 A: the ward sprite is one art for all three tiers, and the per-tier `sprite-ward-minor.webp` it used to point at is gone). Dedicated ward-glyph art is an art-track item, not a blocker.

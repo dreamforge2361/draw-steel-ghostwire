@@ -18,7 +18,7 @@
     {
       "id": "elemental-shaping",
       "label": "Elemental shaping",
-      "match": "elemental.?shap|\\\\bshaping\\\\b",
+      "match": "elemental.?shap|\\bshaping\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/elemental-shaping.ogg"
     },
     {
@@ -71,14 +71,14 @@
     },
     {
       "id": "firearm-ability-single",
-      "label": "0.3.128 A1 — the remaining hero-gun abilities: one shot from a sidearm or carbine",
-      "match": "breach and clear|hold the line|\\boverwatch\\b(?! lane)|kneecap.?shot|bench.?rigged|neural.?snap|tablet.?crossfire",
+      "label": "0.3.128 A1 / 0.3.133 C — the remaining hero-gun abilities: one shot from a sidearm or carbine",
+      "match": "breach.?and.?clear|hold.?the.?line|\\boverwatch\\b(?! lane)|kneecap.?shot|bench.?rigged|neural.?snap|tablet.?crossfire",
       "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
     },
     {
       "id": "veil-brand",
       "label": "Smite / rebuke / brand",
-      "match": "smite|rebuke|veil.?brand|\\\\bbrand\\\\b",
+      "match": "smite|rebuke|veil.?brand|\\bbrand\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/veil-brand.ogg"
     },
     {
@@ -90,13 +90,13 @@
     {
       "id": "wired-scan",
       "label": "Scan / probe / trace",
-      "match": "\\\\b(scan|probe|trace)\\\\b",
+      "match": "\\b(scan|probe|trace)\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-scan.ogg"
     },
     {
       "id": "wired-compile",
       "label": "Compile / sprite summon",
-      "match": "compile|sprite|recompile|zephyr|summon elemental|summon spirit|invoke the pact|\\\\bagent\\\\b|decompile",
+      "match": "compile|sprite|recompile|zephyr|summon elemental|summon spirit|invoke the pact|\\bagent\\b|decompile",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
     },
     {
@@ -105,7 +105,7 @@
       "keywords": [
         "wired"
       ],
-      "match": "hack|intrusion|matrix|resonance|deck|program|\\\\bice\\\\b|breach|node|signal|jack|weav|seize|ghost.?signal|cascade|backdoor|dual.?boot|deep.?scan|override.?ping|\\\\bzap\\\\b|crash|ghostload|static|blackout|wraith",
+      "match": "hack|intrusion|matrix|resonance|deck|program|\\bice\\b|breach|node|signal|jack|weav|seize|ghost.?signal|cascade|backdoor|dual.?boot|deep.?scan|override.?ping|\\bzap\\b|crash|ghostload|static|blackout|wraith",
       "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-connect.ogg"
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "id": "creature-ork",
-      "match": "\\\\bork\\\\b|\\\\borc\\\\b",
+      "match": "\\bork\\b|\\borc\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-ork-battlecry.ogg"
     },
     {
@@ -140,13 +140,14 @@
     },
     {
       "id": "creature-scream",
-      "match": "scream|shriek|howl|gasping|breathless",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-harsh-scream.ogg"
+      "match": "scream|shriek|howl",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-harsh-scream.ogg",
+      "label": "0.3.133 D — creature screams. `gasping` / `breathless` were removed: they caught the Scout's Breathless Hit (lang key GaspingInPain), the only hero ability either word ever matched."
     },
     {
       "id": "medic",
       "label": "Stim / inject / medical",
-      "match": "stim|inject|patch|transfusion|stabiliz|anesthet|field adrenal|nano-adrenal|reagent|\\\\bmedic\\\\b",
+      "match": "stim|inject|patch|transfusion|stabiliz|anesthet|field adrenal|nano-adrenal|reagent|\\bmedic\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/medic-inject.ogg"
     },
     {
@@ -166,7 +167,7 @@
     },
     {
       "id": "veil-heal",
-      "match": "\\\\bheal\\\\b|bless|(?<!coup de )grace|\\\\bward\\\\b|sanctif|prayer|faith is|blessed light",
+      "match": "\\bheal\\b|bless|(?<!coup de )grace|\\bward\\b|sanctif|prayer|faith is|blessed light",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-holy-heal.ogg"
     },
     {
@@ -176,12 +177,12 @@
     },
     {
       "id": "veil-fire",
-      "match": "fireball|fire.?blast|ember|pyro|flame|\\\\bburn\\\\b",
+      "match": "fireball|fire.?blast|ember|pyro|flame|\\bburn\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-fireball.ogg"
     },
     {
       "id": "veil-element",
-      "match": "lightning|storm|hurl.?element|bolt|elemental|channel|\\\\bessence\\\\b|kinetic",
+      "match": "lightning|storm|hurl.?element|bolt|elemental|channel|\\bessence\\b|kinetic",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-lightning.ogg"
     },
     {
@@ -191,7 +192,7 @@
     },
     {
       "id": "veil",
-      "match": "spell|ritual|\\\\bveil\\\\b",
+      "match": "spell|ritual|\\bveil\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg"
     },
     {
@@ -216,17 +217,17 @@
     },
     {
       "id": "firearm-smg",
-      "match": "\\\\bsmg\\\\b|burst|submachine|streetsweeper",
+      "match": "\\bsmg\\b|burst|submachine|streetsweeper",
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-smg.ogg"
     },
     {
       "id": "firearm",
-      "match": "pistol|revolver|shotgun|\\\\bgun\\\\b|\\\\bshot\\\\b|fire |hand-cannon|sleeve|popper|workhorse|burner",
+      "match": "pistol|revolver|shotgun|\\bgun\\b|\\bshot\\b|fire |hand-cannon|sleeve|popper|workhorse|burner",
       "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
     },
     {
       "id": "arrow",
-      "match": "\\\\bbow\\\\b|arrow|crossbow",
+      "match": "\\bbow\\b|arrow|crossbow",
       "src": "modules/draw-steel-ghostwire/assets/sfx/arrow-shot.ogg"
     },
     {
@@ -235,7 +236,7 @@
         "chrome",
         "optics"
       ],
-      "match": "chrome|implant|cyber|datajack|\\\\blimb\\\\b|servo|plating|\\\\brig\\\\b|harness|override",
+      "match": "chrome|implant|cyber|datajack|\\blimb\\b|servo|plating|\\brig\\b|harness|override",
       "src": "modules/draw-steel-ghostwire/assets/sfx/chrome-servo-a.ogg"
     },
     {
@@ -260,13 +261,14 @@
         "melee",
         "weapon"
       ],
-      "match": "strike|slam|smash|brawl|blade|knuckle|charge|crush|hammer|kick|grapple|sword|punch",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg"
+      "match": "strike|slam|smash|brawl|blade|knuckle|charge|crush|hammer|kick|grapple|sword|punch|\\bhit\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg",
+      "label": "Melee impact. `\\bhit\\b` added 0.3.133 D so Breathless Hit reads as the melee weapon strike it is; the rule is keyword-gated on melee / weapon, so nothing ranged reaches it."
     },
     {
       "id": "command-social",
       "label": "Social / word / room read",
-      "match": "\\\\bright word\\\\b|read the room|\\\\ba word\\\\b|the right word",
+      "match": "\\bright word\\b|read the room|\\ba word\\b|the right word",
       "srcs": [
         "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg",
         "modules/draw-steel-ghostwire/assets/sfx/command-sting-b.ogg",
@@ -283,12 +285,13 @@
       "keywords": [
         "command"
       ],
-      "match": "\\\\bword\\\\b|command|\\\\bcry\\\\b|order|taunt|presence|persona|negotiat|persua|speak|direct|advanced tactics|undercity",
+      "match": "\\bword\\b|command|\\bcry\\b|order|taunt|presence|persona|negotiat|persua|speak|direct|advanced tactics|undercity",
       "srcs": [
         "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg",
         "modules/draw-steel-ghostwire/assets/sfx/command-sting-b.ogg",
         "modules/draw-steel-ghostwire/assets/sfx/command-sting-c.ogg"
       ]
     }
-  ]
+  ],
+  "_comment0.3.133": "C/D: `resolveSfx` no longer matches against the raw lang key stored in `name` (see scripts/sfx.mjs `sfxNameCandidates`) — it matches the localized name, the de-camelized key segment and the `_dsid`. That is what makes every multi-word pattern here (`breach and clear`, `lay on hands`, `read the room`, `invoke the pact`, `one shot, one kill`, `they always line up`, `glass the block`, `steady the scope`, `beat the draw`, `sense the veil`, `read the weave`, `greater heal`, `full heal`, `faith is`, `blessed light`, `called shot`, `coup de grace`, `kill confirm`, `field repair`, `field adrenal`, `nerve agent`, `advanced tactics`, `doctor is`, `summon elemental`, `summon spirit`, `right word`, `the right word`, `a word`) reachable at all — before 0.3.133 a literal space could never match a CamelCase key, so they were dead. Patterns written `x.?y` always worked. In the same pass 17 rules had their word boundaries repaired: they carried a literal `\\\\b` (escaped backslash + b) rather than `\\b`, so those alternatives matched nothing."
 }

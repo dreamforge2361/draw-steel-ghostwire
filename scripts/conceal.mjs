@@ -28,7 +28,7 @@
 // Helpers above the "Foundry registration" divider are Foundry-free so
 // tools/scout-sp-wave-03124-smoke.mjs can run them in Node.
 
-import { COVER_CONCEAL_ID } from "./cover-conceal.mjs";
+import { COVER_CONCEAL_ID, COVER_SOURCE_CONCEAL, addCoverSource } from "./cover-conceal.mjs";
 import { messageCritical } from "./crit-feedback.mjs";
 import { abilityFromMessage } from "./token-light.mjs";
 
@@ -113,8 +113,17 @@ function registerInvisibleStatus() {
   }
 }
 
-/** Switch a status on without disturbing one the token already carries. */
+/**
+ * Switch a status on without disturbing one the token already carries.
+ *
+ * 0.3.133 (B): Cover/Conceal goes through `addCoverSource` instead, which records **why** it is on.
+ * Take Cover's cover ends when the hero moves and the Scout's does not, so the two have to be
+ * distinguishable on the one shared status — see scripts/cover-conceal.mjs. Cover the Scout already
+ * has still has `scout-conceal` added to its source list, so re-rolling Conceal does not make the
+ * cover mortal.
+ */
 async function addStatus(actor, id) {
+  if (id === COVER_CONCEAL_ID) return addCoverSource(actor, COVER_SOURCE_CONCEAL);
   if (actor.statuses?.has(id)) return false;
   await actor.toggleStatusEffect(id, { active: true });
   return true;

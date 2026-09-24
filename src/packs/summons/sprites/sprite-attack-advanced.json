@@ -3,7 +3,7 @@
   "_key": "!actors!P44kKVoPi2UJc42X",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteAttackAdvanced.Name",
   "type": "npc",
-  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack.webp",
   "system": {
     "stamina": {
       "value": 58,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/lightning/bolt-strike-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

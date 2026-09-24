@@ -3,7 +3,7 @@
   "_key": "!actors!npEvN6YNeSbXcSM3",
   "name": "GHOSTWIRE.Summons.Agents.AgentSpikeAdvanced.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike-advanced.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike.webp",
   "system": {
     "stamina": {
       "value": 58,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike-advanced.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

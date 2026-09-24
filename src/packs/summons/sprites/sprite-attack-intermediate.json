@@ -3,7 +3,7 @@
   "_key": "!actors!SLqGgXNEJMSQb4Ev",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteAttackIntermediate.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack-intermediate.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack.webp",
   "system": {
     "stamina": {
       "value": 30,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack-intermediate.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

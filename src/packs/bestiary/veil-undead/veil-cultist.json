@@ -1010,7 +1010,8 @@
               "¥6,500",
               "¥19,000"
             ],
-            "learned": false
+            "learned": false,
+            "summonDsid": "elemental-greater"
           },
           "loot": true
         }

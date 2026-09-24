@@ -61,7 +61,8 @@
           "¥1,200",
           "¥4,200"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "agent-daemon-intermediate"
       }
     }
   }

@@ -3,7 +3,7 @@
   "_key": "!actors!wnDGn4BADnOz7udG",
   "name": "GHOSTWIRE.Summons.Agents.AgentDaemonMinor.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-minor.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
   "system": {
     "stamina": {
       "value": 12,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-minor.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
