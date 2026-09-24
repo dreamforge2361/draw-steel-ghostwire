@@ -3733,11 +3733,61 @@
             "availability": "restricted",
             "price": 2000,
             "modSlots": 0,
-            "tags": []
+            "tags": [],
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": false,
+              "target": "selfOrAlly",
+              "stabilize": true
+            }
           }
         }
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "gwFieldSurgery1E",
+          "name": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.Name",
+          "img": "icons/tools/medical/bandages-gauze.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.eOdJ75uCwUy2n2uT",
+          "description": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": ""
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.medicine.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.skills.modifiers.medicineLore.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!vC7J1m09xg3kbWkP.eOdJ75uCwUy2n2uT.gwFieldSurgery1E"
+        }
+      ],
       "_key": "!actors.items!vC7J1m09xg3kbWkP.eOdJ75uCwUy2n2uT"
     },
     {

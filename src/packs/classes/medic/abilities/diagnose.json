@@ -92,7 +92,7 @@
         "sort": 100000,
         "resource": {
           "value": 2,
-          "multiple": false
+          "multiple": true
         },
         "description": "GHOSTWIRE.Classes.Medic.Items.Diagnose.Effect_spend00000000000",
         "name": "",

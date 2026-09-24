@@ -1,6 +1,24 @@
 // B119 — street consumable chems: spawn a maneuver (B49/B51 pattern) and apply Active Effects
 // + temp Stamina / Taint on a successful AbilityModel#use. Crash AEs land when the buff expires.
 // Foundry-free helpers at the top so tools/kiosk-smoke.mjs can plan doses without a world.
+//
+// 0.3.125 (B) — the two medical kits join the same seam, and each needed one thing this file did
+// not do yet:
+//
+//   * **Somebody else.** Every chem so far was a dose you take yourself, so `applyDose` wrote to
+//     whoever held the item. A Field Surgery Kit is used *on a dying ally*, so the block now carries
+//     a `target` ("self" | "selfOrAlly"), the generated ability is shaped to match, and the write
+//     splits: Stamina, Recoveries, conditions and buff effects land on the **target**, while the
+//     once-per-combat ledger, the Taint and the spent unit stay on the **user**.
+//   * **Refusing before the card posts.** Stabilize only means anything on a dying target, so the
+//     "not dying" no lands in the same place the once-per-combat no already does — in the `use`
+//     patch, before Draw Steel prints a roll that did nothing. `planStabilize` is the pure half.
+//
+// The Field Surgery Kit's *other* half — the edge on First-Aid / Restorative tests — is not here at
+// all. It is a plain `transfer: true` ActiveEffect on the pack row writing
+// `system.skills.modifiers.<skill>.edges`, which is the same shape every Ghostwire chrome implant
+// already uses, and Foundry grants and revokes it with the item for free. Automating a passive
+// through this file would have been a worse version of something the data model does natively.
 
 import { incrementTaint, previewTaintDelta } from "./taint.mjs";
 
@@ -53,6 +71,57 @@ export function planOncePerCombat({ oncePerCombat = false, combatId = null, used
 }
 
 /**
+ * 0.3.125 (B1) — the stabilize gate.
+ *
+ * `04-combat.md` is the whole rule: a runner at **0 Stamina** is dying, and stabilizing stops the
+ * dying strikes and sits them at **1 Stamina**. So this is a two-line function on purpose — the
+ * only judgement in it is that anybody above 0 is not dying and the kit refuses rather than
+ * quietly topping them up, which would turn a reusable trauma kit into an infinite heal.
+ *
+ * Negative Stamina counts as dying: Draw Steel lets Stamina run below zero, and a runner at -4 is
+ * not less dying than one at exactly 0.
+ *
+ * @param {object} opts
+ * @param {number} opts.staminaValue  The **target's** current Stamina.
+ * @param {number} [opts.stabilizeTo] Where a stabilized runner sits. 1 per RAW.
+ * @returns {{ok: boolean, reason: string|null, staminaValue: number}}
+ */
+export function planStabilize({ staminaValue = 0, stabilizeTo = 1 } = {}) {
+  const value = Math.floor(Number(staminaValue) || 0);
+  if (value > 0) return { ok: false, reason: "notDying", staminaValue: value };
+  return { ok: true, reason: null, staminaValue: Math.max(1, Math.floor(Number(stabilizeTo) || 1)) };
+}
+
+/**
+ * 0.3.125 (B2) — which of Draw Steel's ten conditions a Slap-Doc Kit can burn off.
+ *
+ * The canister is nanite med-foam, so it answers to things done to a **body**: blood loss, a rattled
+ * head, being on the floor, being tangled, being slowed down, being weakened.
+ *
+ * Deliberately *not* here:
+ *   * **frightened / taunted / surprised** — those are what a mind is doing, and foam does not argue.
+ *   * **grabbed** — somebody has hold of you. That ends when they let go or you break it, not when
+ *     a medic sprays you.
+ *   * every `ghostwire-*` status (Wire state, Cover/Conceal, Invisible) — not conditions at all.
+ */
+export const PHYSICAL_CONDITIONS = Object.freeze(["bleeding", "dazed", "prone", "restrained", "slowed", "weakened"]);
+
+/**
+ * The physical conditions actually present on a target, in the order above.
+ * @param {Iterable<string>|Set<string>} statuses  `actor.statuses`.
+ * @returns {string[]} Possibly empty — an unhurt ally still gets the Recoveries.
+ */
+export function clearableConditions(statuses) {
+  const present = new Set(statuses ?? []);
+  return PHYSICAL_CONDITIONS.filter(id => present.has(id));
+}
+
+/** "self" unless the block says otherwise; anything unrecognised reads as self. */
+export function useTargetKind(use) {
+  return (use?.target === "selfOrAlly") ? "selfOrAlly" : "self";
+}
+
+/**
  * Preview a dose: spend one unit, grant temp Stamina / heal / spent Recoveries, optional Taint.
  * No Foundry I/O.
  */
@@ -62,13 +131,20 @@ export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax =
   if (q <= 0) return { ok: false, reason: "spent", quantityAfter: 0, deleteItem: false };
   const gate = planOncePerCombat({ oncePerCombat: !!use.oncePerCombat, combatId, usedIn });
   if (!gate.allowed) return { ok: false, reason: "usedThisCombat", quantityAfter: q, deleteItem: false };
+  // B1: stabilize is a gate as well as an effect. A Field Surgery Kit used on somebody who is not
+  // dying does nothing, costs nothing, and says so — it must not read as a heal that rounded to 0.
+  const stabilize = use.stabilize ? planStabilize({ staminaValue }) : null;
+  if (stabilize && !stabilize.ok) return { ok: false, reason: stabilize.reason, quantityAfter: q, deleteItem: false };
   const spend = use.spend !== false;
   const heal = Math.max(0, Math.floor(Number(use.heal) || 0));
   const temp = Math.max(0, Math.floor(Number(use.tempStamina) || 0));
   const taintDelta = Math.trunc(Number(use.taint) || 0);
   const max = Math.max(0, Math.floor(Number(staminaMax) || 0));
   const value = Math.max(0, Math.floor(Number(staminaValue) || 0));
-  const healed = heal ? (max ? Math.min(max, value + heal) : value + heal) : value;
+  // Stabilize sets Stamina outright (RAW: "sit at 1 Stamina"); `heal` adds to it. No kit does both,
+  // and if one ever did, being stabilized first and then healed is the order that reads right.
+  const base = stabilize ? stabilize.staminaValue : value;
+  const healed = heal ? (max ? Math.min(max, base + heal) : base + heal) : base;
   const taintPlan = previewTaintDelta(taint, taintDelta);
   const quantityAfter = spend ? q - 1 : q;
   const recoveries = planRecoveryRestore({ value: recoveriesValue, max: recoveriesMax, restore: use.recoveries });
@@ -76,7 +152,11 @@ export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax =
     ok: true,
     reason: null,
     quantityAfter,
-    deleteItem: spend && quantityAfter <= 0,
+    // B2: a spent canister is rubbish, not inventory. Only kits that ask for it are deleted, so the
+    // chems and the Trauma Patch keep the empty row a player can re-stock against.
+    deleteItem: spend && (quantityAfter <= 0) && !!use.deleteAtZero,
+    stabilized: !!stabilize,
+    clearCondition: !!use.clearCondition,
     staminaValue: healed,
     staminaTemporary: Math.max(0, Math.floor(Number(staminaTemporary) || 0)) + temp,
     tempGranted: temp,
@@ -122,17 +202,40 @@ function isHero(actor) {
   return actor?.type === "hero";
 }
 
+/**
+ * The card's effect text, assembled from what the block actually does.
+ *
+ * Data-driven rather than one authored string per SKU: a kit that stabilizes says so, a kit that
+ * hands back Recoveries says so, a kit that burns off a condition says so, and a plain dose falls
+ * back to the generic line the chems have always used. Adding a fourth medical SKU needs no new
+ * lang key unless it does something none of these three do.
+ */
+function consumableEffectText(gearItem, use) {
+  const lines = [];
+  if (use.stabilize) lines.push(loc("Effects.Stabilize"));
+  const recoveries = Math.max(0, Math.floor(Number(use.recoveries) || 0));
+  if (recoveries) lines.push(loc("Effects.Recoveries", { count: recoveries }));
+  if (use.clearCondition) lines.push(loc("Effects.ClearCondition"));
+  if (!lines.length) lines.push(loc("AbilityEffect", { item: gearItem.name }));
+  if (useTargetKind(use) === "selfOrAlly") lines.push(loc("Effects.TargetHint"));
+  if (use.spend === false) lines.push(loc("Effects.Reusable"));
+  return lines.join("");
+}
+
 export function buildConsumableAbility(gearItem) {
   const use = consumableUseOf(gearItem);
   if (!use) return null;
   const action = use.action === "main" ? "main" : "maneuver";
+  // A kit you use on somebody else is a melee-reach ability targeting one creature; a dose you take
+  // yourself stays self/self, exactly as the chems have been since B119.
+  const reachesOut = useTargetKind(use) === "selfOrAlly";
   return {
     name: loc("AbilityName", { item: gearItem.name }),
     type: "ability",
     img: gearItem.img,
     system: {
       description: {
-        value: loc("AbilityDescription", { item: gearItem.name }),
+        value: loc(reachesOut ? "AbilityDescriptionAlly" : "AbilityDescription", { item: gearItem.name }),
         director: "",
       },
       source: { book: "Ghostwire", page: "08-kits-gear-wealth", license: "Draw Steel Creator License" },
@@ -142,8 +245,12 @@ export function buildConsumableAbility(gearItem) {
       category: "",
       resource: null,
       trigger: "",
-      distance: { type: "self", primary: "1", secondary: "1", tertiary: "1" },
-      target: { type: "self", value: null, custom: "" },
+      distance: reachesOut
+        ? { type: "melee", primary: "1", secondary: "1", tertiary: "1" }
+        : { type: "self", primary: "1", secondary: "1", tertiary: "1" },
+      target: reachesOut
+        ? { type: "selfOrAlly", value: 1, custom: "" }
+        : { type: "self", value: null, custom: "" },
       power: {
         roll: { formula: "@chr", characteristics: [], reactive: false },
         effects: {},
@@ -152,7 +259,7 @@ export function buildConsumableAbility(gearItem) {
         before0000000000: {
           _id: "before0000000000",
           type: "base",
-          description: loc("AbilityEffect", { item: gearItem.name }),
+          description: consumableEffectText(gearItem, use),
           before: true,
           name: "",
           img: null,
@@ -222,10 +329,62 @@ function recoveriesOf(actor) {
   return { value: Number(block.value) || 0, max: Number(block.max) || 0 };
 }
 
+/**
+ * Who this dose lands on.
+ *
+ * `target: "self"` (every chem) is always the holder. `target: "selfOrAlly"` takes the user's single
+ * Foundry target if there is one, and falls back to the holder — a Medic with no token targeted and
+ * a Field Surgery Kit in hand is far more likely to mean "on me" than to want a silent no-op. Two
+ * or more targets is an ambiguity worth surfacing rather than guessing at, so it is refused.
+ *
+ * @returns {{actor: Actor|null, reason: string|null}}
+ */
+function resolveDoseTarget(actor, use) {
+  if (useTargetKind(use) !== "selfOrAlly") return { actor, reason: null };
+  const targets = [...(game.user?.targets ?? [])].map(t => t.actor).filter(Boolean);
+  if (targets.length > 1) return { actor: null, reason: "tooManyTargets" };
+  return { actor: targets[0] ?? actor, reason: null };
+}
+
+/** Localized name for one of Draw Steel's conditions, falling back to the raw id. */
+const conditionLabel = id => game.i18n.localize(CONFIG.statusEffects?.[id]?.name ?? id);
+
+/**
+ * B2 — pick one physical condition to burn off.
+ *
+ * Only ever called when the target actually has at least one, so there is no "none of them" row to
+ * dismiss; cancelling the dialog simply clears nothing, which is a legitimate choice (the foam still
+ * went in, and the Recoveries still landed).
+ */
+async function promptClearCondition(target) {
+  const options = clearableConditions(target?.statuses);
+  if (!options.length) return null;
+  const rows = options
+    .map(id => `<option value="${id}">${foundry.utils.escapeHTML(conditionLabel(id))}</option>`)
+    .join("");
+  const data = await foundry.applications.api.DialogV2.input({
+    window: { title: loc("ClearCondition.Title"), icon: "fa-solid fa-syringe" },
+    content: `<p>${loc("ClearCondition.Hint", { actor: target.name })}</p>`
+      + `<div class="form-group"><label>${loc("ClearCondition.Label")}</label>`
+      + `<select name="condition">${rows}</select></div>`,
+    ok: { label: `${L}.ClearCondition.Confirm`, icon: "fa-solid fa-check" },
+  });
+  const chosen = data?.condition;
+  if (!chosen || !options.includes(chosen)) return null;
+  await target.toggleStatusEffect(chosen, { active: false });
+  return chosen;
+}
+
 async function applyDose(actor, gearItem) {
   const use = consumableUseOf(gearItem);
-  const stamina = staminaOf(actor);
-  const recoveries = recoveriesOf(actor);
+  const resolved = resolveDoseTarget(actor, use);
+  if (!resolved.actor) {
+    ui.notifications.warn(loc("TooManyTargets", { item: gearItem.name }));
+    return { ok: false, reason: resolved.reason };
+  }
+  const target = resolved.actor;
+  const stamina = staminaOf(target);
+  const recoveries = recoveriesOf(target);
   const dsid = gearItem.system?._dsid ?? gearItem.id;
   const plan = planConsumableUse({
     quantity: Number(gearItem.system?.quantity ?? 1),
@@ -234,6 +393,9 @@ async function applyDose(actor, gearItem) {
     staminaTemporary: stamina.temporary,
     recoveriesValue: recoveries.value,
     recoveriesMax: recoveries.max,
+    // Taint is the *user's* — they are the one with the chem in their bloodstream, whoever the
+    // needle went into. Every taint-carrying SKU is self-targeted anyway, so the two are the same
+    // actor in practice; this only matters if one ever is not.
     taint: actor.getFlag?.(MODULE_ID, "taint") ?? actor.flags?.[MODULE_ID]?.taint ?? 0,
     combatId: currentCombatId(),
     usedIn: combatUseRecord(actor, dsid),
@@ -241,6 +403,7 @@ async function applyDose(actor, gearItem) {
   });
   if (!plan.ok) {
     if (plan.reason === "usedThisCombat") ui.notifications.warn(loc("UsedThisCombat", { item: gearItem.name }));
+    if (plan.reason === "notDying") ui.notifications.warn(loc("NotDying", { item: gearItem.name, actor: target.name }));
     return plan;
   }
 
@@ -248,9 +411,11 @@ async function applyDose(actor, gearItem) {
   if (plan.healed) updates["system.stamina.value"] = plan.staminaValue;
   if (plan.tempGranted) updates["system.stamina.temporary"] = plan.staminaTemporary;
   if (plan.recoveriesValue !== null) updates["system.recoveries.value"] = plan.recoveriesValue;
-  if (!foundry.utils.isEmpty(updates)) await actor.update(updates);
+  if (!foundry.utils.isEmpty(updates)) await target.update(updates);
   if (plan.combatRecord) await actor.setFlag(MODULE_ID, `${COMBAT_USE_FLAG}.${dsid}`, plan.combatRecord);
   if (plan.taint.delta) await incrementTaint(actor, plan.taint.delta);
+
+  const cleared = plan.clearCondition ? await promptClearCondition(target) : null;
 
   const buffs = [];
   for (const effect of gearItem.effects ?? []) {
@@ -266,20 +431,26 @@ async function applyDose(actor, gearItem) {
     });
     buffs.push(data);
   }
-  if (buffs.length) await actor.createEmbeddedDocuments("ActiveEffect", buffs);
+  if (buffs.length) await target.createEmbeddedDocuments("ActiveEffect", buffs);
 
+  const onSelf = target === actor;
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
-    content: loc("Chat.Used", {
+    content: loc(onSelf ? "Chat.Used" : "Chat.UsedOn", {
       actor: actor.name,
+      target: target.name,
       item: gearItem.name,
-    }) + (plan.recoveriesGranted
-      ? loc("Chat.Recoveries", { count: plan.recoveriesGranted, value: plan.recoveriesValue })
-      : ""),
+    })
+      + (plan.stabilized ? loc("Chat.Stabilized", { actor: target.name }) : "")
+      + (plan.recoveriesGranted
+        ? loc("Chat.Recoveries", { count: plan.recoveriesGranted, value: plan.recoveriesValue })
+        : "")
+      + (cleared ? loc("Chat.Cleared", { condition: conditionLabel(cleared) }) : ""),
   });
-  ui.notifications.info(loc("Used", { actor: actor.name, item: gearItem.name }));
+  ui.notifications.info(loc(onSelf ? "Used" : "UsedOn", { actor: actor.name, target: target.name, item: gearItem.name }));
 
-  if (plan.quantityAfter !== Number(gearItem.system?.quantity ?? 1)) {
+  if (plan.deleteItem) await gearItem.delete();
+  else if (plan.quantityAfter !== Number(gearItem.system?.quantity ?? 1)) {
     await gearItem.update({ "system.quantity": plan.quantityAfter });
   }
   return plan;
@@ -326,13 +497,25 @@ function patchConsumableUse() {
     }
     // C2: refuse *before* the card posts, so a second Trauma Patch in the same fight never leaves a
     // roll on the log that did nothing. applyDose re-checks; this is only about where the "no" lands.
+    const block = consumableUseOf(gear) ?? {};
     const dsid = gear.system?._dsid ?? gear.id;
     if (!planOncePerCombat({
-      oncePerCombat: !!consumableUseOf(gear)?.oncePerCombat,
+      oncePerCombat: !!block.oncePerCombat,
       combatId: currentCombatId(),
       usedIn: combatUseRecord(this.actor, dsid),
     }).allowed) {
       ui.notifications.warn(loc("UsedThisCombat", { item: gear.name }));
+      return null;
+    }
+    // 0.3.125 (B1): the same rule for "they are not dying". Both refusals land here so the log never
+    // carries a Field Surgery Kit card that was always going to do nothing.
+    const { actor: resolved, reason } = resolveDoseTarget(this.actor, block);
+    if (!resolved) {
+      ui.notifications.warn(loc("TooManyTargets", { item: gear.name }));
+      return null;
+    }
+    if (block.stabilize && !planStabilize({ staminaValue: staminaOf(resolved).value }).ok) {
+      ui.notifications.warn(loc("NotDying", { item: gear.name, actor: resolved.name }));
       return null;
     }
     const message = await use.call(this, config, dialogOptions, messageOptions);
@@ -403,6 +586,9 @@ export function registerConsumableUse() {
       planConsumableUse,
       planRecoveryRestore,
       planOncePerCombat,
+      planStabilize,
+      clearableConditions,
+      PHYSICAL_CONDITIONS,
       isConsumableTreasure,
     };
   }

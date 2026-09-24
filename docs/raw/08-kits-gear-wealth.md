@@ -62,7 +62,7 @@ Weapon/armor “category” is what the purchased item must satisfy; bonus lines
 | **Streetsweeper** | Shotgun/carbine + medium weapon; medium armor | Flexible mid-range hybrid, slow-on-hit signature |
 | **Juggernaut** | Heavy weapon; heavy armor | Tank doctrine, massive high-result hit, punishes attackers |
 | **Breacher** | Medium weapon + ballistic shield; medium armor | Push/prone control, high Stamina, front-line |
-| **Warframe** | Medium weapon + shield; heavy armor | Highest Stamina, taunt/hold-the-line signature |
+| **Warframe** | Medium weapon + shield; heavy armor | Highest Stamina, taunt signature (Frame Lock) |
 | **Bulldozer** | Heavy weapon; no armor | Mobile heavy hitter, charge-for-damage |
 | **Brawler** | Unarmed / cyber-limb strikes; no armor | Durable striker, slide-and-follow |
 | **Mantis** | Unarmed / cyber-limb strikes; no armor | Fast martial artist, swap-places signature |

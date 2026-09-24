@@ -227,12 +227,13 @@
     "why": "Patchwire works out of the bag, so the kit is the class's own Quick Build (Gunslinger: light armor, medium weapon) and the armor is the cheap jacket he can cut off a patient and put back on himself; the Field Surgery Kit and Slap-Doc Kit are the table, the Trauma Patch is what he hands over when the table is not an option, and the Workhorse is a service pistol he would rather keep holstered. A basic fake SIN because an unlicensed doc who files paperwork stops being a doc. No chrome at all: he is Pure Human and the whole point of him is that the block has somewhere to go that is not a ripperdoc."
   },
   "kade-orrin-vex": {
-    "armor": "src/packs/gear/armor/heavy/milspec-battledress.json",
+    "armor": "src/packs/gear/armor/heavy/security-rig.json",
     "weapons": [
-      "src/packs/gear/weapons/longarms/milspec-battle-rifle.json",
-      "src/packs/gear/weapons/light-firearms/hand-cannon.json"
+      "src/packs/gear/weapons/light-firearms/hand-cannon.json",
+      "src/packs/gear/weapons/melee/shock-stick.json"
     ],
     "gear": [
+      "src/packs/gear/armor/shields/riot-shield.json",
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/medical/stim-patch.json",
       "src/packs/gear/general/ammunition/standard-rounds.json",
@@ -282,6 +283,6 @@
       "TradeCant",
       "CorpCant"
     ],
-    "why": "Hardframe is the ADDENDUM's lock written out: a Cyborg has 25 Body Integrity and Michael wants every point of it visible, so all seven Standard-grade implants go on and nothing is left over — Wired Reflexes 6, Cyberlimb Arm 5, Muscle & Bone Lacing 5, Dermal Plating 4, Cyber-Eyes 2, Cyber-Ears 2, Datajack 1, exactly 25 of 25. No Soft-grade substitutions: subtle is the opposite of the brief. The Warframe kit wants heavy armor and a medium weapon, so he keeps the Milspec Battledress and Battle Rifle he was issued, with a Hand Cannon for when the rifle is dry; stims, ammunition, a PocketSec and a basic fake SIN because an ex-corp frame walking around off the books needs a name that is not on the line's manifest."
+    "why": "Hardframe is the ADDENDUM's lock written out: a Cyborg has 25 Body Integrity and Michael wants every point of it visible, so all seven Standard-grade implants go on and nothing is left over — Wired Reflexes 6, Cyberlimb Arm 5, Muscle & Bone Lacing 5, Dermal Plating 4, Cyber-Eyes 2, Cyber-Ears 2, Datajack 1, exactly 25 of 25. No Soft-grade substitutions: subtle is the opposite of the brief. 0.3.125 (C3) re-cuts the *gear* half to Echelon 1, because he is an E1 hero: the Milspec Battledress (E2) and the Milspec Battle Rifle (E3) were both above his band, and the rifle is two-handed, which a Warframe cannot hold alongside the shield its own doctrine asks for. He now carries the Security Rig — E1 heavy armor, and corp-sec issue reads right on an ex-corp frame — a Riot Shield, a Hand-Cannon for range, and a Shock-Stick as the one-handed imposing/stun mace, which is what \"medium weapon plus a shield\" actually looks like at street prices. The chrome, the Body Integrity spend and the fiction behind them are untouched."
   }
 }

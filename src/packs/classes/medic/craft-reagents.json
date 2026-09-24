@@ -1,0 +1,39 @@
+{
+  "_id": "k8zF5ZgphEip5JRq",
+  "_key": "!items!k8zF5ZgphEip5JRq",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Name",
+  "type": "feature",
+  "img": "icons/tools/laboratory/alembic-glass-ball-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "craft-reagents",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "medic": {
+        "craftReagents": true,
+        "goal": 30
+      }
+    }
+  }
+}

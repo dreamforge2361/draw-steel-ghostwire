@@ -290,10 +290,11 @@ note(css.includes(".gw-m-condition"), "CSS for the chip");
 
 /* ------------------------------------------------------------------ 10) Rat Beast token 0.5 */
 
-console.log("\n10) Rat-lineage Beast form is a 0.5 token");
+console.log("\n10) Rat- and Raven-lineage Beast forms are 0.5 tokens");
 note(beastTokenSize("rat") === 0.5, "rat lineage shrinks to 0.5");
 note(beastTokenSize("wolf") === null, "wolf does not resize");
-note(beastTokenSize("raven") === null, "raven does not resize");
+// 0.3.125 (C2): Raven joined Rat. A bird that walks onto the grid as a full square reads as a person.
+note(beastTokenSize("raven") === 0.5, "raven lineage shrinks to 0.5");
 note(beastTokenSize(null) === null, "a hero with no lineage does not resize");
 {
   const rat = form => changerFormTokenSize({ lineage: "rat", form, base: { width: 1, height: 1 } });

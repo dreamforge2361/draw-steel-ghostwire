@@ -512,6 +512,9 @@
               },
               {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0jld4zBFg20cQwXY"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.k8zF5ZgphEip5JRq"
               }
             ],
             "description": "<p>You gain the following features.</p>",
@@ -1918,6 +1921,45 @@
       "_key": "!actors.items!b8QOA54jDDokYEJZ.0jld4zBFg20cQwXY"
     },
     {
+      "_id": "k8zF5ZgphEip5JRq",
+      "name": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Name",
+      "type": "feature",
+      "img": "icons/tools/laboratory/alembic-glass-ball-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "15-medic",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "craft-reagents",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "QgSCvC2Nkvp9mIth",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "medic": {
+            "craftReagents": true,
+            "goal": 30
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!b8QOA54jDDokYEJZ.k8zF5ZgphEip5JRq"
+    },
+    {
       "_id": "5t0v1bHJidHsgFTH",
       "name": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Name",
       "type": "ability",
@@ -2225,7 +2267,7 @@
             "sort": 100000,
             "resource": {
               "value": 2,
-              "multiple": false
+              "multiple": true
             },
             "description": "GHOSTWIRE.Classes.Medic.Items.Diagnose.Effect_spend00000000000",
             "name": "",
@@ -3134,11 +3176,61 @@
             "availability": "restricted",
             "price": 2000,
             "modSlots": 0,
-            "tags": []
+            "tags": [],
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": false,
+              "target": "selfOrAlly",
+              "stabilize": true
+            }
           }
         }
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "gwFieldSurgery1E",
+          "name": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.Name",
+          "img": "icons/tools/medical/bandages-gauze.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.eOdJ75uCwUy2n2uT",
+          "description": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": ""
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.medicine.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.skills.modifiers.medicineLore.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!b8QOA54jDDokYEJZ.eOdJ75uCwUy2n2uT.gwFieldSurgery1E"
+        }
+      ],
       "_key": "!actors.items!b8QOA54jDDokYEJZ.eOdJ75uCwUy2n2uT"
     },
     {
@@ -3188,7 +3280,16 @@
             "tags": [
               "Consumable"
             ],
-            "consumable": true
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "target": "selfOrAlly",
+              "recoveries": 2,
+              "clearCondition": true,
+              "deleteAtZero": true
+            }
           }
         }
       },

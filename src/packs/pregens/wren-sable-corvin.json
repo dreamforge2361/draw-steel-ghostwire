@@ -2432,11 +2432,11 @@
             "reactive": false
           },
           "effects": {
-            "gwConcealTiers0": {
+            "gwConcealTiers00": {
               "name": "",
               "img": null,
               "type": "other",
-              "_id": "gwConcealTiers0",
+              "_id": "gwConcealTiers00",
               "other": {
                 "tier1": {
                   "display": "GHOSTWIRE.Classes.Scout.Items.Conceal.Tier1",
