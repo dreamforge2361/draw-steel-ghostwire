@@ -69,6 +69,30 @@ export const NON_FLANKING_STATUSES = Object.freeze([
 ]);
 
 /**
+ * May the computed marker be on this token at all? (0.3.132 F.)
+ *
+ * Michael's lock, 2026-09-24: **Flanked is an encounter marker.** Shuffling tokens around a map
+ * between scenes was lighting people up and, worse, leaving the marker on them after the shuffle —
+ * the geometry was right and the moment was wrong. The *edge* is untouched and stays exactly where
+ * RAW put it (`patchTargetModifiers` below): if a Director rolls a melee strike out of combat and
+ * two allies really are on opposite sides, that roll still takes its edge. This is only about the
+ * icon.
+ *
+ * Both halves matter. No started combat means no markers anywhere — that is what clears the stale
+ * ones, because {@link syncFlankedMarkers} walks every token and turns off what this refuses. And
+ * inside a combat, a token that is not a combatant is a bystander: the guard at the far end of the
+ * bar is not flanked by two people who happen to be standing either side of him.
+ *
+ * @param {object} opts
+ * @param {boolean} opts.combatStarted   `game.combat?.started` — an encounter is actually running.
+ * @param {boolean} opts.tokenInCombat   This token is a combatant in that encounter.
+ * @returns {boolean}
+ */
+export function flankedMarkerAllowed({ combatStarted = false, tokenInCombat = false } = {}) {
+  return !!combatStarted && !!tokenInCombat;
+}
+
+/**
  * Is this ability a *melee* attack for flanking purposes?
  *
  * Sibling to F13's `isRangedAttack`, and deliberately the same honesty rule. RAW says **melee
@@ -336,14 +360,40 @@ function patchTargetModifiers() {
 
 /* -------------------------------------------- the computed marker */
 
-/** Every token on the scene that is flanked by someone right now. */
+/** The started encounter, or null — the marker's whole lifetime (0.3.132 F). */
+const liveCombat = () => (game.combat?.started ? game.combat : null);
+
+/**
+ * Is this token a combatant in the running encounter?
+ *
+ * `getCombatantByToken` is the system-agnostic native lookup; the `combatants` scan behind it is
+ * there because a Combat that has not finished preparing its token map still has its rows.
+ */
+function inCombat(token, combat) {
+  const id = token?.id ?? token?.document?.id ?? null;
+  if (!combat || !id) return false;
+  if (combat.getCombatantByToken?.(id)) return true;
+  return (combat.combatants ?? []).some(combatant => combatant.tokenId === id);
+}
+
+/**
+ * Every token on the scene that is flanked by someone right now.
+ *
+ * Empty out of combat, by {@link flankedMarkerAllowed} — which is not the same as "skip the sync".
+ * The caller still walks every token with this empty set in hand, and that walk is what takes the
+ * markers back off when the encounter ends.
+ */
 function flankedTokenIds() {
   const ids = new Set();
+  const combat = liveCombat();
+  if (!combat) return ids;
   const tokens = canvas?.tokens?.placeables ?? [];
   for (const target of tokens) {
+    if (!flankedMarkerAllowed({ combatStarted: true, tokenInCombat: inCombat(target, combat) })) continue;
     if (!canBeFlankedToken(target)) continue;
     const attackers = tokens.filter(token => (token !== target)
       && (token.document?.disposition !== target.document?.disposition)
+      && inCombat(token, combat)
       && canFlankToken(token));
     const flanked = attackers.some(attacker => flankedOnCanvas(target, attacker));
     if (flanked) ids.add(target.id);
@@ -412,6 +462,7 @@ export function registerFlanking() {
         flankingEdges,
         onOppositeSides,
         cannotBeFlanked,
+        flankedMarkerAllowed,
         syncFlankedMarkers,
       };
     }
@@ -426,6 +477,11 @@ export function registerFlanking() {
   Hooks.on("deleteToken", scheduleSync);
   Hooks.on("canvasReady", scheduleSync);
   Hooks.on("updateCombat", scheduleSync);
+  // 0.3.132 (F): the marker lives and dies with the encounter, so its boundaries are sync points.
+  Hooks.on("combatStart", scheduleSync);
+  Hooks.on("createCombatant", scheduleSync);
+  Hooks.on("deleteCombatant", scheduleSync);
+  Hooks.on("deleteCombat", scheduleSync);
   // A body that drops (or wakes, or jumps into a drone) changes who is holding a side.
   const statusChanged = effect => [...(effect?.statuses ?? [])].some(id => NON_FLANKING_STATUSES.includes(id));
   Hooks.on("createActiveEffect", effect => { if (statusChanged(effect)) scheduleSync(); });
