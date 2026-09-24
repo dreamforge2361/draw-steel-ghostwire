@@ -62,13 +62,14 @@ Essence is the Elementalist's fuel, and unlike the Operator's biological Adrenal
 
 ### Signature Abilities
 
-Every Elementalist knows all three signature abilities at 1st level -- these are your baseline, no-Essence-cost options, all rolled with Logic:
+Every Elementalist knows all four signature abilities at 1st level -- these are your baseline, no-Essence-cost options; the first three are rolled with Logic and **Cantrip** needs no roll at all:
 
 | Signature | Essence Cost | Type | Target | Damage (low / middle / high) |
 |---|---|---|---|---|
 | **Hurl Element** | 0 (spend 1+ Essence to boost -- see below) | Ranged strike (dist 10) | 1 creature | 3+chr / 6+chr / 9+chr (elemental, typed to attunement) |
 | **Elemental Shaping** | 0 (spend 1+ Essence to enlarge) | Maneuver, self / short range (dist 5) | 1 creature or self | 2/4/6 damage OR forced-Slide 1/2/3 OR self-Shift 1/2/3 (choose one on cast) |
 | **Read the Weave** | 0 | Maneuver, self | -- | Power Roll 2d10 + Logic: ≤11 sense Veil thinness / know magic is present; 12–16 read rank/nature OR identify a working; 17+ as middle + a bound creature's true name |
+| **Cantrip** | 0 (never boostable) | Maneuver, self | -- | **None, ever.** Light, or one small described working |
 
 **Hurl Element** is your bread-and-butter blaster tool -- the every-turn strike that scales cleanly with Logic via the `@chr` damage bonus, and whose damage type flexes to your current attunement (acid/cold/corruption/fire/lightning/poison/sonic). **Spend Essence** on cast (locked 2026-09-16): **+1 damage OR push 1 square per Essence spent**, or spend **2+ Essence** to splash **half damage** onto a second target within 2 squares -- the everyday blaster tool that scales with your bank.
 
@@ -78,6 +79,8 @@ Every Elementalist knows all three signature abilities at 1st level -- these are
 - **low (≤11):** sense the thinness of the Veil, or know that magic is present.
 - **middle (12–16):** read an entity's rank or nature, OR identify a working and what it does.
 - **high (17+):** as middle, plus learn a bound creature's true name (your later Persona-based binds against it gain an edge).
+
+**Cantrip** is the free no-damage utility (locked 2026-09-23). It costs **no Essence, ever**, takes no Power Roll, and can never deal damage or carry a combat rider. On cast, choose one: **Light** -- your token sheds a **20-foot bright light** until you cast Cantrip again to put it out; or **one small helpful working you describe at the table** -- scour a stain out of a coat, flick a switch across the room, warm a cold cup, still the dust in a doorway. Write the description when you cast it; it goes on the ability card and the Director rules on what it accomplishes. This is the mage's equivalent of always having a hand free: it is never the answer to a fight, and it is very often the answer to a room.
 
 Free intel that sets up binds and banishments.
 

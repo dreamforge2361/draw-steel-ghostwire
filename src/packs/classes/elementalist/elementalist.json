@@ -135,9 +135,12 @@
           },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tWzky4yWGWvI9fd4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwCantripEL00001"
           }
         ],
-        "description": "<p>You know all three Elementalist signature abilities: Hurl Element, Elemental Shaping, and Read the Weave. None of them costs Essence; spending Essence boosts them.</p>",
+        "description": "<p>You know all four Elementalist signature abilities: Hurl Element, Elemental Shaping, Read the Weave, and Cantrip. <strong>None of them costs Essence</strong>; spending Essence boosts the first three. <strong>Cantrip never costs Essence and never deals damage</strong> — it is light, or one small useful working you describe when you cast it.</p>",
         "chooseN": null,
         "sort": 5000,
         "additional": {
