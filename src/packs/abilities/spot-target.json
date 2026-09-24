@@ -54,7 +54,47 @@
       "level": null
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "GWSpotTarget0000",
+      "_key": "!items.effects!Lc7LhoqWg9ydP5Jm.GWSpotTarget0000",
+      "name": "Spotted",
+      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.abilities.Item.Lc7LhoqWg9ydP5Jm",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Tagged for the crew. The next ability power roll an ally makes against this creature before the start of the spotter’s next turn has an edge — and spends the tag.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {

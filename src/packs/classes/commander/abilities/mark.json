@@ -89,15 +89,7 @@
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         },
-        "changes": [
-          {
-            "key": "system.combat.targetModifiers.edges",
-            "value": 1,
-            "priority": null,
-            "type": "add",
-            "phase": "initial"
-          }
-        ],
+        "changes": [],
         "project": {
           "prerequisites": "",
           "source": "",
@@ -116,7 +108,7 @@
         "expiry": "combatEnd",
         "expired": false
       },
-      "description": "<p>Marked by a Commander: while this creature is within the Commander’s line of effect, the Commander and allies within their line of effect gain an edge on power rolls made against it.</p>",
+      "description": "<p>Marked by a Commander: while this creature is within the Commander’s line of effect, the Commander and allies within their line of effect gain an edge on power rolls made against it. Ghostwire scopes that edge to the Commander’s own side — it is not an edge for everybody shooting at this creature.</p>",
       "tint": "#ffffff",
       "statuses": [],
       "sort": 0,

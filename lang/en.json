@@ -61,7 +61,7 @@
       },
       "SpotTarget": {
         "Name": "Spot Target",
-        "Description": "<p>Choose an enemy adjacent to you and tag it for your crew — a callout, a laser dot, a ping on the shared feed. The next ability power roll an ally makes against that creature before the start of your next turn has an edge.</p>"
+        "Description": "<p>Choose an enemy adjacent to you and tag it for your crew — a callout, a laser dot, a ping on the shared feed. The target is [[/apply GWSpotTarget0000]]{Spotted}. The next ability power roll an <strong>ally</strong> makes against that creature before the start of your next turn has an edge, and spends the tag. Ghostwire applies the tag for you when you use this card; the link is there for when you want to place it by hand.</p>"
       },
       "Drive": {
         "Name": "Drive",
@@ -2659,7 +2659,7 @@
           },
           "SpotterLock": {
             "Name": "Spotter Lock",
-            "Effect_before0000000000": "<p>A spotter-drone marks the target: the next Rigged Fire or Focus Fire against it this round gains an edge. No damage.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+            "Effect_before0000000000": "<p>A spotter-drone marks the target [[/apply WRSpotterLock000]]{Spotter Lock}: the next Rigged Fire or Focus Fire <strong>you</strong> make against it this round gains an edge, and spends the lock. No damage.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
           },
           "ReconLoop": {
             "Name": "Recon Loop",
@@ -10075,6 +10075,22 @@
       "Chat": {
         "Thrown": "<strong>{actor}</strong> throws <strong>{item}</strong> — {feet} ft circle, tier {tier}.",
         "NobodyCaught": "Nobody is standing in it."
+      }
+    },
+    "Mark": {
+      "Kinds": {
+        "you": "You!",
+        "spot": "Spot Target",
+        "hardTag": "Hard Tag",
+        "commander": "Mark",
+        "spotterLock": "Spotter Lock"
+      },
+      "Notify": {
+        "Placed": "{marker} places {mark} on {count} target(s).",
+        "NoGm": "No Director is connected, so the mark could not be placed on a creature you do not own."
+      },
+      "Rider": {
+        "HardTag": "Hard Tag — first strike this round against {target}: +{damage} damage."
       }
     },
     "NpcLoot": {
