@@ -749,9 +749,12 @@
               },
               {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tcs6UkDCRjU8h6Gn"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwScoutConceal01"
               }
             ],
-            "description": "<p>You gain the following features.</p>",
+            "description": "<p>You gain the following features. <strong>Conceal</strong> is free for every Scout, whatever your subclass.</p>",
             "chooseN": null,
             "sort": 4000,
             "additional": {
@@ -1903,7 +1906,7 @@
         ],
         "type": "maneuver",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "ranged",
@@ -2389,6 +2392,190 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!MJ1qUWNUydfu0E3n.tcs6UkDCRjU8h6Gn"
+    },
+    {
+      "_id": "gwScoutConceal01",
+      "name": "GHOSTWIRE.Classes.Scout.Items.Conceal.Name",
+      "type": "ability",
+      "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "02-scout",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "scout-conceal",
+        "story": "GHOSTWIRE.Classes.Scout.Items.Conceal.Story",
+        "keywords": [],
+        "type": "maneuver",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "self",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "self",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwConcealTiers0": {
+              "name": "",
+              "img": null,
+              "type": "other",
+              "_id": "gwConcealTiers0",
+              "other": {
+                "tier1": {
+                  "display": "GHOSTWIRE.Classes.Scout.Items.Conceal.Tier1",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "GHOSTWIRE.Classes.Scout.Items.Conceal.Tier2",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "none"
+                  }
+                },
+                "tier3": {
+                  "display": "GHOSTWIRE.Classes.Scout.Items.Conceal.Tier3",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "none"
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Scout.Items.Conceal.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "scout"
+          ],
+          "level": null
+        }
+      },
+      "folder": "6bkslOUXu452LnvY",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [
+        {
+          "_id": "gwConcealCover00",
+          "name": "Cover/Conceal",
+          "img": "icons/svg/shield.svg",
+          "type": "base",
+          "origin": "Compendium.draw-steel-ghostwire.classes.Item.gwScoutConceal01",
+          "transfer": false,
+          "system": {
+            "end": {
+              "roll": ""
+            },
+            "changes": [],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>Behind cover, or hidden from sight. Ranged attack power rolls against you take a bane. Melee is unaffected. Clear it the way any Cover/Conceal is cleared — moving does not end it.</p>",
+          "tint": "#ffffff",
+          "statuses": [
+            "ghostwire-cover-conceal"
+          ],
+          "flags": {},
+          "start": null,
+          "showIcon": 1,
+          "_key": "!actors.items.effects!MJ1qUWNUydfu0E3n.gwScoutConceal01.gwConcealCover00"
+        },
+        {
+          "_id": "gwConcealInvis00",
+          "name": "Invisible (Conceal)",
+          "img": "icons/svg/invisible.svg",
+          "type": "base",
+          "origin": "Compendium.draw-steel-ghostwire.classes.Item.gwScoutConceal01",
+          "transfer": false,
+          "system": {
+            "end": {
+              "roll": ""
+            },
+            "changes": [],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>You cannot be seen. This ends the moment you change square — by your own movement, a shift, a teleport or a forced move. Your Cover/Conceal stays.</p>",
+          "tint": "#ffffff",
+          "statuses": [
+            "ghostwire-invisible"
+          ],
+          "flags": {},
+          "start": null,
+          "showIcon": 1,
+          "_key": "!actors.items.effects!MJ1qUWNUydfu0E3n.gwScoutConceal01.gwConcealInvis00"
+        }
+      ],
+      "_key": "!actors.items!MJ1qUWNUydfu0E3n.gwScoutConceal01"
     },
     {
       "_id": "SJV62SN3lF6GYNne",
@@ -2994,7 +3181,7 @@
               "sort": 0,
               "damage": {
                 "tier1": {
-                  "value": "2",
+                  "value": "1",
                   "types": [],
                   "ignoredImmunities": [],
                   "potency": {
@@ -3003,7 +3190,7 @@
                   }
                 },
                 "tier2": {
-                  "value": "5",
+                  "value": "2",
                   "types": [],
                   "ignoredImmunities": [],
                   "potency": {
@@ -3012,7 +3199,7 @@
                   }
                 },
                 "tier3": {
-                  "value": "7",
+                  "value": "3",
                   "types": [],
                   "ignoredImmunities": [],
                   "potency": {

@@ -1406,11 +1406,19 @@
             "Name": "Subterfuge",
             "Description": "<p>You have an epic resource called Subterfuge. Each time you finish a respite, you gain Subterfuge equal to the XP you gain. You can spend Subterfuge on your abilities as if it were Advantage.</p><p>Additionally, you can spend Subterfuge to take additional maneuvers on your turn. You can use one maneuver for each Subterfuge you spend.</p><p>Subterfuge remains until you spend it.</p>"
           },
+          "Conceal": {
+            "Name": "Conceal",
+            "Story": "You stop being a shape. Stillness, a seam of shadow, the one angle nobody checks — and the room goes on looking at where you were.",
+            "Tier1": "Nothing happens. You are still standing right there.",
+            "Tier2": "You gain Cover/Conceal.",
+            "Tier3": "You gain Cover/Conceal, and you are Invisible until you move.",
+            "Effect_before0000000000": "<p><strong>Free maneuver — 0 Advantage.</strong> Every Scout has Conceal from 1st level, whatever their subclass.</p><p>On a middle result you gain Cover/Conceal [[/apply gwConcealCover00]]: ranged attack power rolls against you take a bane, and melee is unaffected. On a high result you also become Invisible [[/apply gwConcealInvis00]].</p><p><strong>Invisible lasts only until you move.</strong> Changing square — your own movement, a shift, a teleport, or a forced move — ends the Invisible and leaves the Cover/Conceal exactly where it is. Ghostwire applies both statuses for you when you use this card, and takes the Invisible off again the moment your token changes square.</p>"
+          },
           "Quarry": {
             "Name": "Hard Tag",
-            "Story": "You mark the target the way an old-line hunter marks a deer, and the mark stays.",
-            "Effect_spend00000000000": "<p>You [[/surge 1]] for each Advantage spent. You can use these surges only on your first strike against the Marked target this round.</p>",
-            "Effect_before0000000000": "<p>The target is Marked by you until the end of the encounter, until it dies, or until you use this ability on another target. [[/apply QR00000000marked]] You always know a Marked target’s direction and general distance from you while it is within the same hive stratum, even through walls or cover.</p><p>The first strike you make against a Marked target each round deals +1 damage at Echelon 1, +2 at Echelon 2, +3 at Echelon 3, and +4 at Echelon 4.</p>"
+            "Story": "You mark the target the way an old-line hunter marks a deer, and the mark stays. The tag costs you 1 Advantage every time — knowing exactly where it is was never free.",
+            "Effect_spend00000000000": "<p><strong>Spend additional Advantage:</strong> you [[/surge 1]] for each Advantage spent beyond the 1 the tag itself costs. You can use these surges only on your first strike against the Marked target this round.</p>",
+            "Effect_before0000000000": "<p><strong>Cost: 1 Advantage.</strong> Hard Tag is never free — every use spends at least one.</p><p>The target is Marked by you until the end of the encounter, until it dies, or until you use this ability on another target. [[/apply QR00000000marked]] You always know a Marked target’s direction and general distance from you while it is within the same hive stratum, even through walls or cover.</p><p>The first strike you make against a Marked target each round deals +1 damage at Echelon 1, +2 at Echelon 2, +3 at Echelon 3, and +4 at Echelon 4.</p>"
           },
           "RangedReflex": {
             "Name": "Ranged Reflex",
@@ -8525,36 +8533,44 @@
     "Pregens": {
       "Actors": {
         "Vessa": {
-          "Name": "Vessa Corran-Dov — “the Preacher of Ninth”",
-          "Description": "A Corran Street Priest of the Shepherd ministry, holding a lamp-lit corner at Ninth-and-Fold in the Flats. Her Light pact buys mercy and protection, and costs her every time she spends it."
+          "Name": "Vessa Corran-Dov",
+          "Description": "Street name: “the Preacher of Ninth.” A Corran Street Priest of the Shepherd ministry, holding a lamp-lit corner at Ninth-and-Fold in the Flats. Her Light pact buys mercy and protection, and costs her every time she spends it."
         },
         "Kaes": {
-          "Name": "Kaïs Vahn-Estal — “the Static Saint”",
-          "Description": "An Elvani Stormcaller who came down off the Glass Tier and stayed down. He runs no chrome — the current he channels will not share a body with metal."
+          "Name": "Kaïs Vahn-Estal",
+          "Description": "Street name: “the Static Saint.” An Elvani Stormcaller who came down off the Glass Tier and stayed down. He runs no chrome — the current he channels will not share a body with metal."
         },
         "Barak": {
-          "Name": "Barak Voss-Hallor — “the Foreman”",
-          "Description": "Nine feet of grey demolition plate and a voice that gets crews paid. The Foreman brokers work in the sprawl and expects the word he gives to be kept."
+          "Name": "Barak Voss-Hallor",
+          "Description": "Street name: “the Foreman.” Nine feet of grey demolition plate and a voice that gets crews paid. The Foreman brokers work in the sprawl and expects the word he gives to be kept."
         },
         "Wren": {
-          "Name": "Wren Sable-Corvin — “the Kite”",
-          "Description": "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it."
+          "Name": "Wren Sable-Corvin",
+          "Description": "Street name: “the Kite.” A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it."
         },
         "Sabbat": {
-          "Name": "Sabbat Vane — “the Dead Frequency”",
-          "Description": "A Revenant who came back wrong and wired, compiling sprites out of a coffin-motel cell. The dead net answers when he calls, which is not the same as obeying."
+          "Name": "Sabbat Vane",
+          "Description": "Street name: “the Dead Frequency.” A Revenant who came back wrong and wired, compiling sprites out of a coffin-motel cell. The dead net answers when he calls, which is not the same as obeying."
         },
         "Vira": {
-          "Name": "Vira Kellis-Nade — “the Warren-Wire”",
-          "Description": "A Changer of the Rat lineage who fights through a fleet she built herself, in warrens she knows nine ways out of. Every drone is a door she left open."
+          "Name": "Vira Kellis-Nade",
+          "Description": "Street name: “the Warren-Wire.” A Changer of the Rat lineage who fights through a fleet she built herself, in warrens she knows nine ways out of. Every drone is a door she left open."
         },
         "Kessic": {
-          "Name": "Kessic Draye — “Null”",
-          "Description": "An Aberrant-strain Mutant deckhead who turns a site's own defences against the people who paid for them. The taint that marks him is also how he reads a system."
+          "Name": "Kessic Draye",
+          "Description": "Street name: “Null.” An Aberrant-strain Mutant deckhead who turns a site's own defences against the people who paid for them. The taint that marks him is also how he reads a system."
+        },
+        "Renn": {
+          "Name": "Renn Solace-Ward",
+          "Description": "Street name: “Patchwire.” A Pure Human Street-Doc who works out of a folding table and whatever the block can spare, stitching runners back together for whatever they have on them. No chrome, no licence, no questions — and a waiting list either way."
+        },
+        "Kade": {
+          "Name": "Kade Orrin-Vex",
+          "Description": "Street name: “Hardframe.” A Cyborg Operator off a corp milspec line that never got the offboarding scrub. Matte plating under the skin, a replacement arm with servo seams, an optic cluster that reads a room in bands his handlers never authorised, an aural suite, a cranial datajack and a nervous system wired faster than the body it came in. Laced bone underneath all of it. He still moves like he is on someone's clock."
         }
       },
       "Journals": {
-        "Fiction": "Dossiers & Fiction — The Seven"
+        "Fiction": "Dossiers & Fiction — The Nine"
       }
     },
     "Encounters": {
@@ -9810,6 +9826,23 @@
       "BadgeHint": "A natural 19 or 20. This roll is read at tier 3 whatever the total came to.",
       "Chat": {
         "ExtraTaken": "<strong>{name}</strong> spends the extra main action their Critical Roll paid out."
+      }
+    },
+    "Conceal": {
+      "Invisible": {
+        "Label": "Invisible"
+      },
+      "Chat": {
+        "Nothing": "{actor} cannot find the angle — nothing happens.",
+        "Concealed": "{actor} breaks the outline — Cover/Conceal is on.",
+        "Vanished": "{actor} is gone — Cover/Conceal and Invisible, until they move.",
+        "Moved": "{actor} moved and can be seen again. Cover/Conceal stays."
+      },
+      "Settings": {
+        "Apply": {
+          "Name": "Conceal applies its result automatically",
+          "Hint": "Using the Conceal card puts Cover/Conceal (middle) or Cover/Conceal and Invisible (high) on the Scout. Turn this off to apply the statuses by hand."
+        }
       }
     },
     "CoverConceal": {
