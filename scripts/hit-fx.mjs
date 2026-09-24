@@ -61,6 +61,7 @@
 // 0.3.131 wave smokes can run it under Node.
 
 import { ammoCostForDsid } from "./ammo.mjs";
+import { VEIL_SUMMON_DSIDS } from "./veil-summons.mjs";
 import {
   addFxSprite, destroyDisplay, fillCircle, fxTexturesReady, layAlong, placeAt,
   preloadFxTextures, strokeArc, strokeCircle, strokePath, strokeQuad,
@@ -80,8 +81,43 @@ export const HIT_FX_KINDS = Object.freeze(["gun", "spell", "melee", "grenade"]);
  * Draw Steel's own two supernatural keywords. `tech` is deliberately **not** here: a Wrench's drone
  * deploy and a Technomancer's construct both carry it, and a tool bag is not a bolt of anything. A
  * Technomancer's damaging workings carry `magic` alongside it and are caught by that.
+ *
+ * 0.3.132 (A1) adds `tech` back on a *much* narrower condition — see {@link TECH_BOLT_KEYWORD}.
  */
 export const SPELL_KEYWORDS = Object.freeze(["magic", "psionic"]);
+
+/**
+ * 0.3.132 (A1) — chrome that throws something.
+ *
+ * A Cyborg's Kinetic Driver reads `tech` / `ranged` / `strike` and nothing else, so 0.3.131 filed it
+ * under "not this file's business" and a graviton slug crossed the table in silence. `tech` on its
+ * own still means nothing: the rule is `tech` **plus a ranged strike**, which leaves the drone
+ * deploy and the tool bag out by construction. Kinetic flavour lands on the `lightning` row of
+ * {@link SPELL_FLAVOURS} by name, which is the teal bolt Michael asked for.
+ */
+export const TECH_BOLT_KEYWORD = "tech";
+
+/**
+ * Abilities that must never draw a beat, whatever their keywords say.
+ *
+ * Every one of these *is* magic and several of them even roll damage, so no keyword rule reaches
+ * them: they are the summons. {@link VEIL_SUMMON_DSIDS} is imported rather than copied so the list
+ * cannot drift from the engine that places the tokens (scripts/veil-summons.mjs). A Zephyr
+ * Companion with a target still under the crosshair threw a beam at that target while it was busy
+ * putting a token on the canvas; the companion's own strike is the companion's, not the summoner's.
+ *
+ * The rest are constructs and sustained utilities whose cards are genuinely not an attack landing.
+ * `elemental-shaping` is here because only one of its three modes is a hit, and that mode calls
+ * {@link playHitFx} for itself from scripts/elementalist.mjs rather than being classified into one.
+ */
+export const NO_HIT_FX_DSIDS = Object.freeze([
+  ...VEIL_SUMMON_DSIDS,
+  "sentinel-spirit",
+  "compile-sprite", "recompile", "sprite-redirect",
+  "compile-agent", "decompile-agent",
+  "gw-decompile-sprite", "gw-dismiss-elemental", "gw-dismiss-spirit",
+  "read-the-weave", "elemental-shaping",
+]);
 
 /**
  * What each kind looks and sounds like.
@@ -209,15 +245,28 @@ export function hitFxProfile(kind, name = "") {
  *
  * The order is the whole rule and each step earns its place:
  *
- *  1. A thrown Blast is a grenade even though its band reads Short.
- *  2. An Adjacent-band weapon is melee even though it may be chrome (a Cyber-Spur).
- *  3. A weapon that eats rounds is a gun.
- *  4. An ability on the 0.3.128 ammo allowlist is a gun even with no gear behind it — that is how
+ *  1. A suppressed `_dsid` — a summon, a construct, a sustained utility — is nothing, first, before
+ *     any keyword gets a vote (0.3.132 A2).
+ *  2. A thrown Blast is a grenade even though its band reads Short.
+ *  3. A `self` working throws nothing at anybody, so it is nothing (0.3.132 A2).
+ *  4. An Adjacent-band weapon is melee even though it may be chrome (a Cyber-Spur).
+ *  5. A weapon that eats rounds is a gun.
+ *  6. An ability on the 0.3.128 ammo allowlist is a gun even with no gear behind it — that is how
  *     Controlled Pair gets a tracer and a bow does not.
- *  5. A `magic` / `psionic` ability is a spell.
- *  6. A melee `strike` with no gear stamp is still a swing.
+ *  7. **Only now**: an ability with no `strike` keyword and no damage power effect is nothing
+ *     (0.3.132 A2). This is the gate Read the Weave, Blessed Light and every buff / heal / ward in
+ *     the Street Priest and Technomancer lists fall through — they all carry `magic`, and 0.3.131
+ *     gave every one of them a bolt at whoever happened to still be targeted.
+ *  8. A `magic` / `psionic` attack is a spell.
+ *  9. A `tech` ranged strike is a spell too — Kinetic Driver (0.3.132 A1).
+ * 10. A melee `strike` with no gear stamp is still a swing.
  *
- * Steps 1–3 are exactly 0.3.127's behaviour, unchanged, so nothing that worked stopped working.
+ * Steps 2, 4, 5 and 6 are exactly 0.3.127's behaviour, unchanged, so every gear path that worked
+ * still works: a gun is classified before the damage gate is ever consulted, because a SKU's stamp
+ * is better evidence about a trigger pull than an ability's power effects are.
+ *
+ * `damaging` is deliberately tri-state. `null` means *unknown* — a caller that cannot see the power
+ * effects (an older smoke, a Director's macro) gets 0.3.131's keyword behaviour rather than silence.
  *
  * @param {object} opts
  * @param {boolean} opts.thrownBlast      The source item carries `gear.thrown` (scripts/grenades.mjs).
@@ -226,20 +275,47 @@ export function hitFxProfile(kind, name = "") {
  * @param {boolean} opts.gunAbility       The ability is on `AMMO_ABILITY_COSTS` (0.3.128 B).
  * @param {Iterable<string>} opts.keywords  The ability's `system.keywords`.
  * @param {string} opts.distanceType      The ability's `system.distance.type`.
+ * @param {string} [opts.dsid]            The ability's `system._dsid`, for the suppression list.
+ * @param {boolean|null} [opts.damaging]  Has a `damage` power effect; `null` when unknown.
  * @returns {"gun"|"spell"|"melee"|"grenade"|null}
  */
 export function classifyHit({
   thrownBlast = false, range = "", ammoFamily = null,
   gunAbility = false, keywords = [], distanceType = "",
+  dsid = "", damaging = null,
 } = {}) {
+  if (NO_HIT_FX_DSIDS.includes(String(dsid ?? ""))) return null;
   if (thrownBlast) return "grenade";
+  if (distanceType === "self") return null;
   if (range === RANGE_MELEE) return "melee";
   if (ammoFamily) return "gun";
   if (gunAbility) return "gun";
   const kw = new Set(keywords ?? []);
+  const strike = kw.has("strike");
+  if (!strike && (damaging === false)) return null;
   if (SPELL_KEYWORDS.some(keyword => kw.has(keyword))) return "spell";
-  if (kw.has("strike") && ((distanceType === "melee") || (kw.has("melee") && !kw.has("ranged")))) return "melee";
+  if (strike && kw.has(TECH_BOLT_KEYWORD) && (kw.has("ranged") || (distanceType === "ranged"))) return "spell";
+  if (strike && ((distanceType === "melee") || (kw.has("melee") && !kw.has("ranged")))) return "melee";
   return null;
+}
+
+/**
+ * Does this ability's power actually roll damage?
+ *
+ * Reads `system.power.effects` in both shapes the system hands it over in — a plain object on a pack
+ * row, a Collection on a live Item — and returns `null` when there is nothing to read at all, which
+ * {@link classifyHit} takes as "unknown" rather than as "no".
+ *
+ * @param {object} system  An ability's `system`.
+ * @returns {boolean|null}
+ */
+export function hasDamageEffect(system) {
+  const effects = system?.power?.effects;
+  if (!effects) return null;
+  const list = Array.isArray(effects)
+    ? effects
+    : ((typeof effects.values === "function") ? [...effects.values()] : Object.values(effects));
+  return list.some(effect => (effect?.type ?? effect?.constructor?.TYPE) === "damage");
 }
 
 /* ============================================ Foundry registration */
@@ -799,6 +875,8 @@ function kindForAbility(ability) {
     gunAbility: ammoCostForDsid(system._dsid) > 0,
     keywords: system.keywords ?? [],
     distanceType: system.distance?.type ?? "",
+    dsid: system._dsid ?? "",
+    damaging: hasDamageEffect(system),
   });
 }
 
@@ -965,6 +1043,7 @@ export function registerHitFx() {
       ...(module.api ?? {}),
       playHitFx,
       classifyHit,
+      hasDamageEffect,
       spellFlavour,
       hitFxProfile,
       hitFxProfiles: () => HIT_FX_PROFILES,

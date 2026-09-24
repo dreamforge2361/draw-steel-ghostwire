@@ -34,9 +34,19 @@ const BIND_CAP = 2;
 const COMPANION_ROUNDS = 3;   // Ember / Zephyr / Boulder Companion: "3 rounds, sustain-free"
 const BROKEN_ROUNDS = 1;      // A low Bind roll: "hostile and free for one round before the Veil pulls it back"
 
-const COMPANIONS = ["ember-companion", "zephyr-companion", "boulder-companion"];
-const ELEMENTAL_ABILITIES = [...COMPANIONS, "summon-elemental", "twin-elemental-summon", "greater-elemental-summon"];
-const SPIRIT_ABILITIES = ["invoke-the-pact"];
+/**
+ * The summon abilities, exported because 0.3.132 (A2) needs them somewhere else.
+ *
+ * scripts/hit-fx.mjs suppresses its bolt on every one of these: a Zephyr Companion that leaves a
+ * target selected used to throw a beam at whoever was still under the crosshair while it was busy
+ * placing a token. The list has to be the *same* list, so it lives here — beside the engine that
+ * reads it — and hit-fx imports it rather than keeping a copy that can drift.
+ */
+export const COMPANIONS = Object.freeze(["ember-companion", "zephyr-companion", "boulder-companion"]);
+export const ELEMENTAL_ABILITIES = Object.freeze([...COMPANIONS, "summon-elemental", "twin-elemental-summon", "greater-elemental-summon"]);
+export const SPIRIT_ABILITIES = Object.freeze(["invoke-the-pact"]);
+/** Every ability that puts something on the canvas instead of hitting someone. */
+export const VEIL_SUMMON_DSIDS = Object.freeze([...ELEMENTAL_ABILITIES, ...SPIRIT_ABILITIES]);
 const MINISTRY_SPIRIT = { shepherd: "spirit-guardian", templar: "spirit-warrior", exorcist: "spirit-hunter" };
 const SPIRITS = Object.values(MINISTRY_SPIRIT);
 const PACT_TINTS = { light: "#fff1b8", dark: "#c9a0ff" };
