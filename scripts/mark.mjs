@@ -46,6 +46,8 @@
 // Helpers above the "Foundry registration" divider are Foundry-free so
 // tools/wave-03128-smoke.mjs can run them under Node.
 
+import { occupiedSquares } from "./flanking.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Mark";
 const SOCKET = `module.${MODULE_ID}`;
@@ -98,6 +100,9 @@ export const MARK_SOURCES = Object.freeze({
     consume: true,
     exclusive: true,
     expire: "markerTurnStart",
+    // 0.3.132 (B). The card reads "choose an enemy **adjacent to you**", and the ability's own
+    // `distance` is `melee` / primary 1, so the reach is the card's, not a number invented here.
+    requires: Object.freeze({ enemy: true, reach: 1 }),
   }),
 
   // Hard Tag — Scout / Hunter. Direction and distance, plus first-strike bonus damage each round.
@@ -175,6 +180,63 @@ export function markEdges({ spec = null, attackerIsSource = false, attackerIsAll
     case "sourceAndAllies": return (attackerIsSource || attackerIsAlly) ? 1 : 0;
     default: return 0;
   }
+}
+
+/**
+ * Squares between two tokens, Chebyshev — 0 when they overlap, 1 when they are adjacent.
+ *
+ * Reuses F14's `occupiedSquares` so a Medium-2 enforcer is measured from its *nearest* square rather
+ * than from a centre point, which is the difference between "adjacent" and "adjacent-ish" for
+ * anything bigger than one square.
+ *
+ * @param {{x?: number, y?: number, width?: number, height?: number}} a
+ * @param {{x?: number, y?: number, width?: number, height?: number}} b
+ * @param {number} [gridSize]
+ * @returns {number}
+ */
+export function squaresApart(a, b, gridSize = 100) {
+  if (!a || !b) return Infinity;
+  let best = Infinity;
+  for (const x of occupiedSquares(a, gridSize)) {
+    for (const y of occupiedSquares(b, gridSize)) {
+      best = Math.min(best, Math.max(Math.abs(x.col - y.col), Math.abs(x.row - y.row)));
+    }
+  }
+  return best;
+}
+
+/**
+ * May this mark be placed at all? (0.3.132 B.)
+ *
+ * **The refusal is the feature.** 0.3.128 shipped Spot Target as "apply to whatever is targeted",
+ * which meant three different silences Michael hit in the same sitting: no target at all was a
+ * no-op with no message, an *ally* under the crosshair took a mark meant for an enemy, and an enemy
+ * across the room took one the card never allowed. All three now come back as a reason string, and
+ * the caller turns that into a toast **before** Draw Steel prints a maneuver that was never legal.
+ *
+ * A spec with no `requires` is unchanged and always passes — Commander Mark, Hard Tag and Spotter
+ * Lock place from range by their own text and none of them are this file's problem today.
+ *
+ * `rows` is deliberately dumb data (`{name, isEnemy, apart}`), so the smoke can drive every branch
+ * without a canvas.
+ *
+ * @param {object} opts
+ * @param {object|null} opts.spec        From {@link markSpecFor}.
+ * @param {Array<{name?: string, isEnemy?: boolean, apart?: number}>} opts.rows
+ * @returns {{ok: boolean, reason: "noTarget"|"notEnemy"|"notAdjacent"|null,
+ *            picked: Array<object>, reach: number}}
+ */
+export function markUseGate({ spec = null, rows = [] } = {}) {
+  const requires = spec?.requires ?? null;
+  const reach = Math.max(0, Math.floor(Number(requires?.reach ?? 0)) || 0);
+  const list = [...(rows ?? [])];
+  if (!requires) return { ok: true, reason: null, picked: list, reach };
+  if (!list.length) return { ok: false, reason: "noTarget", picked: [], reach };
+  const enemies = requires.enemy ? list.filter(row => row.isEnemy) : list;
+  if (!enemies.length) return { ok: false, reason: "notEnemy", picked: [], reach };
+  const near = reach ? enemies.filter(row => Number(row.apart) <= reach) : enemies;
+  if (!near.length) return { ok: false, reason: "notAdjacent", picked: [], reach };
+  return { ok: true, reason: null, picked: near, reach };
 }
 
 /**
@@ -486,12 +548,46 @@ async function settleMarksAfterAttack(attacker, targets, abilityDsid) {
   return { consumed, riders };
 }
 
+/** The marker's own token on this scene, for the reach measurement. */
+function markerToken(actor) {
+  const controlled = canvas?.tokens?.controlled ?? [];
+  const mine = controlled.find(token => token.actor === actor);
+  return (mine ?? actor?.getActiveTokens?.(false, false)?.[0])?.document ?? null;
+}
+
+/**
+ * The live gate rows for one use: who is targeted, whose side they are on, how far away.
+ *
+ * With no token for the marker on this scene there is nothing to measure from, so `apart` is 0 —
+ * the reach check passes and the enemy check still has to. Refusing a Director rolling from the
+ * sidebar would be a worse bug than the one this closes.
+ */
+function gateRows(marker, targetTokens) {
+  const from = markerToken(marker);
+  const grid = canvas?.dimensions?.size ?? canvas?.grid?.size ?? 100;
+  return targetTokens.map(token => ({
+    token,
+    name: token.actor?.name ?? token.name ?? "",
+    isEnemy: !areAllies(marker, token.actor),
+    apart: from ? squaresApart(from, token.document ?? token, grid) : 0,
+  }));
+}
+
 /**
  * Patch `AbilityModel#use` to place marks and settle them.
  *
  * Registered after every other `use` patch in scripts/module.mjs, so the ammo, grenade, reagent and
  * consumable patches have all already had their say and this one only ever runs on a use that
  * actually produced a card.
+ *
+ * 0.3.132 (B) changes two things about that last sentence:
+ *
+ *  * a spec with `requires` is **gated before `use` is called at all**, so an illegal Spot Target
+ *    never becomes a card the table has to walk back; and
+ *  * a legal one no longer depends on `use` returning a message. Spot Target is a maneuver with an
+ *    empty `power`, and an empty power is exactly the case where the system can hand back nothing
+ *    at all — which is how a valid use ended up placing no mark. The mark is the ability; the card
+ *    is the receipt. `message === null` still places it.
  */
 function patchMarkUse() {
   const AbilityModel = CONFIG.Item.dataModels?.ability ?? globalThis.ds?.data?.Item?.AbilityModel;
@@ -507,14 +603,28 @@ function patchMarkUse() {
     const marksAnything = !!spec;
 
     // Read targets before the roll: resolving a card can clear the user's targets.
-    const targets = [...(game.user?.targets ?? [])].map(token => token.actor).filter(Boolean);
+    const targetTokens = [...(game.user?.targets ?? [])].filter(token => token?.actor);
+    let targets = targetTokens.map(token => token.actor);
+
+    if (marksAnything && spec.requires && actor) {
+      const gate = markUseGate({ spec, rows: gateRows(actor, targetTokens) });
+      if (!gate.ok) {
+        ui.notifications.warn(loc(`Notify.Refuse.${gate.reason}`, {
+          ability: this.parent?.name ?? "", actor: actor.name, reach: gate.reach,
+        }));
+        return null;
+      }
+      // Only the legal targets are marked, so one legal pick beside three illegal ones still works.
+      targets = gate.picked.map(row => row.token?.actor).filter(Boolean);
+    }
+
     const message = await use.call(this, config, dialogOptions, messageOptions);
-    if (!message || !actor) return message;
+    if (!actor) return message;
 
     try {
       if (marksAnything) {
         await applyMarks(this.parent, actor, targets);
-      } else if (targets.length) {
+      } else if (message && targets.length) {
         const { riders } = await settleMarksAfterAttack(actor, targets, dsid);
         if (riders.length) await addHardTagRider(message, riders);
       }
@@ -597,6 +707,8 @@ export function registerMark() {
           marksOn,
           markEdges,
           markSpecFor,
+          markUseGate,
+          squaresApart,
           hardTagBonusDamage,
           sweepMarks,
         },

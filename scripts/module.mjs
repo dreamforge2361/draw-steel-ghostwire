@@ -26,6 +26,8 @@ import { registerKitGrants } from "./kit-grants.mjs";
 import { registerSprites } from "./sprites.mjs";
 import { registerAgents } from "./agents.mjs";
 import { registerVeilSummons } from "./veil-summons.mjs";
+import { registerDismissAbilities } from "./dismiss-abilities.mjs";
+import { registerElementalist } from "./elementalist.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerMounts } from "./mounts.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
@@ -155,6 +157,17 @@ Hooks.once("init", () => {
   registerSprites();
   registerAgents();
   registerVeilSummons();
+  // 0.3.132 (D) — the other half of every summon. sprites.mjs, agents.mjs and veil-summons.mjs all
+  // shipped a working decompile / dismiss engine reachable only from an item sheet; this puts a
+  // one-click ability on the Abilities tab for sprites, elementals and spirits (Hacker Agents
+  // already had one) and keeps it in sync with what the hero can actually summon. Registered after
+  // the three engines so their exports are live before the first sync runs.
+  registerDismissAbilities();
+  // 0.3.132 (E) — the Elementalist's printed choices, which until this wave printed and then did
+  // nothing: Elemental Shaping's three modes, an attunement the hero can actually hold (and which
+  // types the nine class abilities whose text says "typed to attunement"), and the companion element
+  // Zephyr and Boulder both ask for as they are summoned.
+  registerElementalist();
   registerMods();
   registerMounts();
   registerAbilitySfx();

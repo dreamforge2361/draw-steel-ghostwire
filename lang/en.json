@@ -3342,6 +3342,11 @@
             "Name": "Cantrip",
             "Story": "The small magic that never costs a thing.",
             "Effect_before0000000000": "<p>No power roll, no Essence, and <strong>no damage, ever</strong>. Choose one:</p><ul><li><p><strong>Light.</strong> Your token sheds a <strong>20-foot bright light</strong> until you use Cantrip again to put it out.</p></li><li><p><strong>Other utility.</strong> Describe one small helpful working — scour a stain out of a coat, flick a switch across the room, warm a cold cup, still the dust in a doorway. Write it when you cast it; it goes on the card and the Director rules on it. No combat rider.</p></li></ul>"
+          },
+          "DismissElemental": {
+            "Name": "Dismiss Elemental",
+            "Story": "You stop holding the bind. What you called stops being here.",
+            "Effect_before0000000000": "<p>Choose one elemental or companion you have bound, or all of them. Each chosen summon is released: its token leaves the encounter and the bind ends.</p>"
           }
         }
       },
@@ -3808,6 +3813,11 @@
           "TheLastRite": {
             "Name": "The Last Rite",
             "Description": "<p>Once per encounter, as a free action, spend any amount of Conviction (minimum 5) to attempt an immediate banishment of a spirit or corrupted creature within range, whatever its rank.</p>"
+          },
+          "DismissSpirit": {
+            "Name": "Dismiss Spirit",
+            "Story": "You close the ledger. The debt that was walking beside you goes back to whoever is owed it.",
+            "Effect_before0000000000": "<p>Choose one spirit you have invoked, or all of them. Each chosen spirit is released: its token leaves the encounter and the pact rests.</p>"
           }
         }
       },
@@ -4390,6 +4400,11 @@
             "Tier3": "The implant is <strong>Destroyed</strong>. Its benefit is gone and its Body Integrity is locked out until the wreck is repaired or replaced. The implant is not removed from the body.",
             "Effect_before0000000000": "<p>Pick one implant the target is carrying. Ghostwire opens the Chrome strike prompt when the use card posts, and never deletes the Item — a Destroyed implant stays in the flesh, benefits dead, Integrity spent.</p><p><strong>Grade matters:</strong> <em>Soft</em> chrome takes one step less; <em>Salvage</em> chrome one step more. At the table, one implant per target may be Destroyed per encounter.</p>",
             "Effect_spend00000000000": "<p><strong>5 Resonance.</strong> You take the Director’s biofeedback for tearing a machine apart from inside a living body: a hard Physique test, and on a failure [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina. <strong>Resonance Mending</strong> is the answer to this ability, including on your own crew.</p>"
+          },
+          "DecompileSprite": {
+            "Name": "Decompile Sprite",
+            "Story": "You let the loop close. The sprite unspools back into the wire it was cut from, and the Bandwidth it was holding comes home.",
+            "Effect_before0000000000": "<p>Choose one sprite you have compiled, or all of them. Each chosen sprite is decompiled: its token leaves the encounter and the Bandwidth it held is yours again.</p>"
           }
         }
       }
@@ -8223,8 +8238,48 @@
           "StatusPact": "Extension {extension} / independent {independent} Stamina (base + Persona × level); {pact}.",
           "NoScene": "View a Scene before summoning.",
           "NoPermission": "Summoning creates an Actor and a token; ask the Director to summon it from the ability sheet (players need Create Actors and Create Tokens permission).",
-          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack."
+          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack.",
+          "Choose": {
+            "Confirm": "Choose"
+          },
+          "Shaping": {
+            "Title": "Elemental Shaping",
+            "Prompt": "What does {name} shape the element into?",
+            "Damage": "Burst — {damage} {type} damage to a creature within 5",
+            "Slide": "Slide — force a creature within 5 {value} square(s)",
+            "Shift": "Shift — you shift {value} square(s)",
+            "Chose": "{name}: {mode}.",
+            "NoTarget": "Elemental Shaping needs a target within 5 for that mode."
+          },
+          "Attunement": {
+            "Title": "Attunement",
+            "Prompt": "What is {name} attuned to? The damage type of every element they hurl follows this.",
+            "Set": "{name} is attuned to {type}.",
+            "Hurl": "{name} hurls {type}.",
+            "Companion": "What element does {name}’s companion strike with?"
+          },
+          "Types": {
+            "acid": "Acid",
+            "cold": "Cold",
+            "corruption": "Corruption",
+            "fire": "Fire",
+            "lightning": "Lightning",
+            "poison": "Poison",
+            "sonic": "Sonic",
+            "elemental": "elemental"
+          }
         }
+      },
+      "Dismiss": {
+        "Pick": {
+          "Title": "Dismiss",
+          "Hint": "Which of {actor}’s does the Veil take back?",
+          "Which": "Target",
+          "Confirm": "Dismiss",
+          "All": "All of them ({count})",
+          "One": "{name} — {stamina} / {max}"
+        },
+        "None": "{actor} has nothing out to dismiss."
       }
     },
     "Bestiary": {
@@ -10056,6 +10111,14 @@
         "Fired": "<strong>{type}</strong> — {remaining}/{capacity} left in the {gun}.",
         "FiredN": "<strong>{spent} × {type}</strong> — {remaining}/{capacity} left in the {gun}.",
         "GelRider": "Stick-n-Shock: {stamina} Stamina and Dazed <strong>instead of</strong> the rolled damage."
+      },
+      "Pick": {
+        "Title": "Which gun?",
+        "Hint": "{ability} spends {cost} round(s). {actor} is carrying more than one loaded gun.",
+        "Gun": "Gun",
+        "Confirm": "Fire",
+        "Option": "{gun} — {count} / {capacity} {type}",
+        "OptionShort": "{gun} — {count} / {capacity} {type} (short {needed})"
       }
     },
     "Throw": {
@@ -10117,7 +10180,12 @@
       },
       "Notify": {
         "Placed": "{marker} places {mark} on {count} target(s).",
-        "NoGm": "No Director is connected, so the mark could not be placed on a creature you do not own."
+        "NoGm": "No Director is connected, so the mark could not be placed on a creature you do not own.",
+        "Refuse": {
+          "noTarget": "{ability}: target the enemy you are calling out first — {actor} marks nobody.",
+          "notEnemy": "{ability} calls out an enemy. Nothing {actor} has targeted is one.",
+          "notAdjacent": "{ability} reaches {reach} square. Nothing {actor} has targeted is that close."
+        }
       },
       "Rider": {
         "HardTag": "Hard Tag — first strike this round against {target}: +{damage} damage."
