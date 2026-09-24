@@ -10000,7 +10000,11 @@
         "gel": "Gel/Stick-n-Shock"
       },
       "Empty": "You are out of ammunition.",
+      "Short": "{gun} has {loaded} left and this takes {needed}. Reload first.",
       "NoGun": "{actor} is not carrying a gun that takes ammunition.",
+      "Ability": {
+        "NoGun": "{ability} fires your own gun, and {actor} is not carrying one that takes ammunition."
+      },
       "NoStackToReturn": "Nowhere to put {count} {type} back — add the stack to the sheet by hand.",
       "Reload": {
         "Name": "Reload",
@@ -10020,6 +10024,7 @@
         "Reloaded": "<strong>{actor}</strong> reloads <strong>{gun}</strong> — {taken} {type} in, <strong>{count}/{capacity}</strong> loaded.",
         "Returned": "{count} {type} go back in the pocket.",
         "Fired": "<strong>{type}</strong> — {remaining}/{capacity} left in the {gun}.",
+        "FiredN": "<strong>{spent} × {type}</strong> — {remaining}/{capacity} left in the {gun}.",
         "GelRider": "Stick-n-Shock: {stamina} Stamina and Dazed <strong>instead of</strong> the rolled damage."
       }
     },
