@@ -8,7 +8,7 @@
   "sort": 300000,
   "system": {
     "stamina": {
-      "value": 24,
+      "value": 21,
       "temporary": 0
     },
     "characteristics": {
@@ -1477,7 +1477,7 @@
             },
             "distance": 7
           },
-          "stamina": 3,
+          "stamina": 0,
           "speed": 1,
           "stability": null,
           "disengage": 1
@@ -2156,15 +2156,7 @@
             "end": {
               "roll": "1d10 + @combat.save.bonus"
             },
-            "changes": [
-              {
-                "key": "system.combat.targetModifiers.edges",
-                "value": 1,
-                "priority": null,
-                "type": "add",
-                "phase": "initial"
-              }
-            ],
+            "changes": [],
             "project": {
               "prerequisites": "",
               "source": "",
@@ -2183,7 +2175,7 @@
             "expiry": "combatEnd",
             "expired": false
           },
-          "description": "<p>Marked by a Commander: while this creature is within the Commander’s line of effect, the Commander and allies within their line of effect gain an edge on power rolls made against it.</p>",
+          "description": "<p>Marked by a Commander: while this creature is within the Commander’s line of effect, the Commander and allies within their line of effect gain an edge on power rolls made against it. Ghostwire scopes that edge to the Commander’s own side — it is not an edge for everybody shooting at this creature.</p>",
           "tint": "#ffffff",
           "statuses": [],
           "sort": 0,
@@ -2848,7 +2840,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 9,
                 "phase": "initial",
                 "priority": null
@@ -2884,7 +2876,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 16,
                 "phase": "initial",
                 "priority": null
@@ -2920,7 +2912,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 21,
                 "phase": "initial",
                 "priority": null
@@ -2956,7 +2948,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 27,
                 "phase": "initial",
                 "priority": null
@@ -4141,7 +4133,47 @@
         "default": 0
       },
       "flags": {},
-      "effects": [],
+      "effects": [
+        {
+          "_id": "GWSpotTarget0000",
+          "name": "Spotted",
+          "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+          "type": "base",
+          "origin": "Compendium.draw-steel-ghostwire.abilities.Item.Lc7LhoqWg9ydP5Jm",
+          "transfer": false,
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>Tagged for the crew. The next ability power roll an ally makes against this creature before the start of the spotter’s next turn has an edge — and spends the tag.</p>",
+          "tint": "#ffffff",
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "start": null,
+          "showIcon": 1,
+          "_key": "!actors.items.effects!GKAY3pyUNmGkb2Yt.Lc7LhoqWg9ydP5Jm.GWSpotTarget0000"
+        }
+      ],
       "_key": "!actors.items!GKAY3pyUNmGkb2Yt.Lc7LhoqWg9ydP5Jm"
     },
     {

@@ -2287,6 +2287,106 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 /* F13 Cover/Conceal chat line */
 .ghostwire-cover-conceal-card { margin: 0; border-left: 3px solid var(--ghostwire-wire-linked); padding-left: 0.5rem; }
 
+/* 0.3.128 (C) sits ABOVE the R0 block on purpose: tools/r0-hero-sheet-skin-smoke.mjs reads "the R0
+   block" as everything from its header to the end of the file, and asserts that block never touches
+   --ghostwire-accent. This panel is an NPC sheet, not the cold-steel Hero sheet, and it does. */
+/* 0.3.128 (C) — the NPC Loot panel. Draw Steel gives an NPC no Equipment tab, so scripts/npc-loot.mjs
+   prepends this to the Features tab. Palette, radii and tracking all come off the :root ladder. */
+.ghostwire-npc-loot {
+  margin: 0 0 0.6rem;
+  padding: 0.4rem 0.5rem 0.5rem;
+  border: 1px solid var(--ghostwire-border);
+  border-radius: var(--ghostwire-radius);
+  background: var(--ghostwire-surface);
+}
+
+.ghostwire-npc-loot .gw-loot-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.ghostwire-npc-loot .gw-loot-head h3 {
+  margin: 0;
+  border: none;
+  font-family: var(--ghostwire-font-display);
+  letter-spacing: var(--ghostwire-track-sm);
+  color: var(--ghostwire-text);
+}
+
+.ghostwire-npc-loot .gw-loot-count {
+  font-family: var(--ghostwire-font-mono);
+  font-size: 0.8em;
+  letter-spacing: var(--ghostwire-track-xs);
+  color: var(--ghostwire-text-muted);
+}
+
+.ghostwire-npc-loot .gw-loot-list {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ghostwire-npc-loot .gw-loot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: var(--ghostwire-radius-sm);
+  cursor: grab;
+}
+
+.ghostwire-npc-loot .gw-loot-row:hover {
+  background: var(--ghostwire-surface-2);
+}
+
+.ghostwire-npc-loot .gw-loot-img {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--ghostwire-border);
+  border-radius: var(--ghostwire-radius-xs);
+  object-fit: cover;
+}
+
+.ghostwire-npc-loot .gw-loot-name {
+  flex: 1 1 auto;
+  color: var(--ghostwire-text);
+}
+
+.ghostwire-npc-loot .gw-loot-stamp {
+  font-size: 0.75em;
+  color: var(--ghostwire-text-dim);
+}
+
+.ghostwire-npc-loot .gw-loot-qty {
+  flex: 0 0 auto;
+  padding: 0 0.35rem;
+  border: 1px solid var(--ghostwire-border);
+  border-radius: var(--ghostwire-radius-pill);
+  font-family: var(--ghostwire-font-mono);
+  font-size: 0.78em;
+  letter-spacing: var(--ghostwire-track-xs);
+  color: var(--ghostwire-accent);
+}
+
+.ghostwire-npc-loot .gw-loot-open {
+  flex: 0 0 auto;
+  color: var(--ghostwire-text-dim);
+}
+
+.ghostwire-npc-loot .gw-loot-open:hover {
+  color: var(--ghostwire-accent);
+}
+
+.ghostwire-npc-loot .gw-loot-hint,
+.ghostwire-npc-loot .gw-loot-empty {
+  margin: 0.35rem 0 0;
+  font-size: 0.8em;
+  color: var(--ghostwire-text-dim);
+}
+
 /* ================================================================
  * R0 (0.3.120) — Hero sheet Ghostwire skin
  *
@@ -2825,101 +2925,4 @@ body.ghostwire-theme .application.ghostwire-hero-sheet :focus-visible {
   color: var(--ghostwire-danger);
   border-color: var(--ghostwire-danger);
   box-shadow: 0 0 6px color-mix(in srgb, var(--ghostwire-danger) 40%, transparent);
-}
-
-/* 0.3.128 (C) — the NPC Loot panel. Draw Steel gives an NPC no Equipment tab, so scripts/npc-loot.mjs
-   prepends this to the Features tab. Palette, radii and tracking all come off the :root ladder. */
-.ghostwire-npc-loot {
-  margin: 0 0 0.6rem;
-  padding: 0.4rem 0.5rem 0.5rem;
-  border: 1px solid var(--ghostwire-border);
-  border-radius: var(--ghostwire-radius);
-  background: var(--ghostwire-surface);
-}
-
-.ghostwire-npc-loot .gw-loot-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.ghostwire-npc-loot .gw-loot-head h3 {
-  margin: 0;
-  border: none;
-  font-family: var(--ghostwire-font-display);
-  letter-spacing: var(--ghostwire-track-sm);
-  color: var(--ghostwire-text);
-}
-
-.ghostwire-npc-loot .gw-loot-count {
-  font-family: var(--ghostwire-font-mono);
-  font-size: 0.8em;
-  letter-spacing: var(--ghostwire-track-xs);
-  color: var(--ghostwire-text-muted);
-}
-
-.ghostwire-npc-loot .gw-loot-list {
-  margin: 0.35rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ghostwire-npc-loot .gw-loot-row {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.15rem 0.25rem;
-  border-radius: var(--ghostwire-radius-sm);
-  cursor: grab;
-}
-
-.ghostwire-npc-loot .gw-loot-row:hover {
-  background: var(--ghostwire-surface-2);
-}
-
-.ghostwire-npc-loot .gw-loot-img {
-  flex: 0 0 auto;
-  width: 22px;
-  height: 22px;
-  border: 1px solid var(--ghostwire-border);
-  border-radius: var(--ghostwire-radius-xs);
-  object-fit: cover;
-}
-
-.ghostwire-npc-loot .gw-loot-name {
-  flex: 1 1 auto;
-  color: var(--ghostwire-text);
-}
-
-.ghostwire-npc-loot .gw-loot-stamp {
-  font-size: 0.75em;
-  color: var(--ghostwire-text-dim);
-}
-
-.ghostwire-npc-loot .gw-loot-qty {
-  flex: 0 0 auto;
-  padding: 0 0.35rem;
-  border: 1px solid var(--ghostwire-border);
-  border-radius: var(--ghostwire-radius-pill);
-  font-family: var(--ghostwire-font-mono);
-  font-size: 0.78em;
-  letter-spacing: var(--ghostwire-track-xs);
-  color: var(--ghostwire-accent);
-}
-
-.ghostwire-npc-loot .gw-loot-open {
-  flex: 0 0 auto;
-  color: var(--ghostwire-text-dim);
-}
-
-.ghostwire-npc-loot .gw-loot-open:hover {
-  color: var(--ghostwire-accent);
-}
-
-.ghostwire-npc-loot .gw-loot-hint,
-.ghostwire-npc-loot .gw-loot-empty {
-  margin: 0.35rem 0 0;
-  font-size: 0.8em;
-  color: var(--ghostwire-text-dim);
 }

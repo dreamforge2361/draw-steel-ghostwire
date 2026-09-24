@@ -1357,7 +1357,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 4,
                 "phase": "initial",
                 "priority": null
@@ -1393,7 +1393,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 5,
                 "phase": "initial",
                 "priority": null
@@ -1429,7 +1429,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 6,
                 "phase": "initial",
                 "priority": null
@@ -1465,7 +1465,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 8,
                 "phase": "initial",
                 "priority": null
