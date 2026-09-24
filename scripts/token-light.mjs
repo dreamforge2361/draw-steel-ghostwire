@@ -32,6 +32,15 @@ export const FEET_PER_SQUARE = 5;
 const FOOT_UNITS = new Set(["ft", "ft.", "feet", "foot"]);
 
 /**
+ * Is this scene already measured in feet, so a printed foot value needs no conversion?
+ *
+ * 0.3.127: exported because scripts/grenades.mjs has to turn a printed 15-foot blast and a printed
+ * 60-foot throw into *pixels* — `lightRadius()` alone rounds to two decimals, which is fine for a
+ * light radius and not fine for a range check the player is refused on.
+ */
+export const isFootScaled = units => FOOT_UNITS.has(String(units).trim().toLowerCase());
+
+/**
  * The `tokenLight` block on an ability, or null. Accepts a live Item or a raw pack row.
  * @returns {{feet: number, toggle: boolean}|null}
  */
@@ -54,7 +63,7 @@ export function tokenLightSpec(item) {
 export function lightRadius(feet, { units = "", distance = 1 } = {}) {
   const printed = Number(feet) || 0;
   if (printed <= 0) return 0;
-  if (FOOT_UNITS.has(String(units).trim().toLowerCase())) return printed;
+  if (isFootScaled(units)) return printed;
   const perSquare = Number(distance) || 1;
   return Math.round((printed / FEET_PER_SQUARE) * perSquare * 100) / 100;
 }

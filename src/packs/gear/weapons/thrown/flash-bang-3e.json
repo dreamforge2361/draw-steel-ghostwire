@@ -57,7 +57,6 @@
         "range": "Short",
         "weaponBand": "light",
         "thrown": {
-          "feet": 20,
           "impact": {
             "conditions": [
               "dazed"
