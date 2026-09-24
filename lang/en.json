@@ -2419,6 +2419,27 @@
             "Name": "Emergency Excision",
             "Story": "One cut, and the implant goes dark.",
             "Effect_before0000000000": "<p>Once per session. The target is an enemy you touch, or a willing ally. You disable one chrome implant of your choice on the target until their next respite. Body Integrity isn’t refunded mid-fight.</p>"
+          },
+          "CraftReagents": {
+            "Name": "Craft Reagents",
+            "Description": "<p>Your kit is something you <em>make</em>. Given a bench, a supplier or a long enough night, you restock it.</p><p><strong>Craft Reagents</strong> is a downtime <strong>Project</strong>, and it lands on your sheet ready to work the moment you take this feature. Put project points into it during respites and downtime the way you would any other project; when it completes, your kit refills to its <strong>full capacity</strong> for your echelon (plus Advanced Chem-Prep, if you have it), and the project resets so you can do it again next downtime.</p><p><strong>Cost.</strong> There is no per-Reagent price list. The <strong>Director quotes</strong> the nuyen or downtime cost of the refill for the job at hand, and the restock discounts you have earned — Scrounger's Eye, Corporate Requisition, Regular Customer, Pharma Supplier — come off that quote. The project itself is never a roll you can fail: a shortfall is a supply problem, not a botched test.</p><p><strong>Reagents never drip.</strong> They do not reset when a fight starts and you gain none per turn. Downtime restocking — this project, or the printed subclass riders — is the only way the bag comes back up.</p>",
+            "ProjectName": "Craft Reagents — Restock Kit",
+            "ProjectDescription": "<p>Raw chemical stock, a bench or a supplier, and the hours to turn one into the other. <strong>Goal {goal}.</strong> On completion your Reagents refill to your full kit capacity and the project resets for next downtime.</p><p>The Director quotes the ¥ or downtime cost; your restock discounts apply to that quote.</p>",
+            "Prerequisites": "Access to a bench, a clinic, a supplier or a well-stocked bin.",
+            "ProjectSource": "Medic — Reagents (15-medic)",
+            "Yield": "Reagents refilled to kit capacity"
+          }
+        },
+        "Reagents": {
+          "Capped": "{actor}'s kit is full — capped at {capacity} Reagents.",
+          "Improvise": {
+            "NotLowEnough": "Improvise! only triggers when {actor}'s kit is down to {threshold} Reagents or fewer.",
+            "UsedThisEncounter": "{actor} has already improvised this encounter."
+          },
+          "Chat": {
+            "Restocked": "<p><strong>{actor}</strong> restocks the kit: <strong>+{granted}</strong> Reagents, now <strong>{value}</strong>.</p>",
+            "RestockedFull": "<p><strong>{actor}</strong> finishes the restock with a full kit already — still <strong>{value}</strong> Reagents.</p>",
+            "Improvised": "<p><strong>{actor}</strong> finds something in the trash: <strong>+{granted}</strong> Reagents, now <strong>{value}</strong>.</p>"
           }
         }
       },

@@ -512,6 +512,9 @@
               },
               {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0jld4zBFg20cQwXY"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.k8zF5ZgphEip5JRq"
               }
             ],
             "description": "<p>You gain the following features.</p>",
@@ -1918,6 +1921,45 @@
       "_key": "!actors.items!b8QOA54jDDokYEJZ.0jld4zBFg20cQwXY"
     },
     {
+      "_id": "k8zF5ZgphEip5JRq",
+      "name": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Name",
+      "type": "feature",
+      "img": "icons/tools/laboratory/alembic-glass-ball-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Medic.Items.CraftReagents.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "15-medic",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "craft-reagents",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "QgSCvC2Nkvp9mIth",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "medic": {
+            "craftReagents": true,
+            "goal": 30
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!b8QOA54jDDokYEJZ.k8zF5ZgphEip5JRq"
+    },
+    {
       "_id": "5t0v1bHJidHsgFTH",
       "name": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Name",
       "type": "ability",
@@ -2225,7 +2267,7 @@
             "sort": 100000,
             "resource": {
               "value": 2,
-              "multiple": false
+              "multiple": true
             },
             "description": "GHOSTWIRE.Classes.Medic.Items.Diagnose.Effect_spend00000000000",
             "name": "",

@@ -66,6 +66,7 @@ import { registerMachineConditions } from "./machine-conditions.mjs";
 import { registerTokenLight } from "./token-light.mjs";
 import { registerCantrip } from "./cantrip.mjs";
 import { registerPactStrike } from "./pact-strike.mjs";
+import { registerReagents } from "./reagents.mjs";
 import {
   CHANGER_ART_KEYS,
   CHANGER_FORMS,
@@ -208,6 +209,12 @@ Hooks.once("init", () => {
   registerCantrip();
   // 0.3.123 — Light Pact gets Rebuke, Dark Pact gets Drain, and nobody ever has both.
   registerPactStrike();
+  // 0.3.125 (E) — the *other* half of Medic Reagents. patchPersistentReagents() above already stops
+  // combat resetting the pool and stops the per-turn drip; this caps every path that grants Reagents
+  // at the echelon kit capacity, ships the Craft Reagents downtime project, and makes Improvise!
+  // actually hand two back. Registered after registerConsumableUse so both AbilityModel#use patches
+  // are in place and each one passes through to the next.
+  registerReagents();
 });
 
 // ---------- Wired connection states ----------

@@ -48,6 +48,8 @@
 
 **Restock in downtime.** Refilling to full kit capacity is a **lifestyle / downtime-project activity** taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is **no per-Reagent price list**: the **Director quotes the cost** of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.
 
+**Craft Reagents — the restock Project.** Every Medic has **Craft Reagents** from 1st level, and it is a downtime **Project** rather than a prose note: it lands on the sheet ready to work, you put project points into it during respites and downtime the way you would any other project, and when it completes the kit refills to **full capacity** for your echelon (plus Advanced Chem-Prep) and the project resets for next time. The Director-quoted ¥ or downtime cost above is what you pay alongside it; the project is the clock, not the invoice, and it is still never a roll you can fail.
+
 **Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. Director quote guidance and Lifestyle eligibility live in **Lifestyle & Downtime** (`26`) (still no per-Reagent price list).
 
 **CRITICAL — Reagents persist across encounters.** This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. **Reagents do not.** The bag empties across a **run**, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.
@@ -450,6 +452,7 @@ This is the **only** self-revive mechanic anywhere in the Medic class. Street-Do
 ## Core Class Features (Non-Subclass)
 
 - **Field Partner** (1st) — At the start of each encounter, bond with one ally. Until the end of the encounter that ally gains an **edge on saving throws** and **+1 to any healing you apply to them**; you regain **1 Reagent** whenever one of your abilities heals that ally.
+- **Craft Reagents** (1st) — The restock **Project**. Points in during downtime; on completion the kit refills to **full capacity** and the project resets. The Director still quotes the ¥ / downtime cost, and your restock discounts still apply to that quote. See the restock marker under **Reagents**, above.
 - **Established Protocols** (1st) — Two rote procedures, usable at will, at no Reagent cost, with no roll: **stabilize a dying ally** who has hit 0 Stamina, and **identify a substance or toxin at a glance.** This is the floor the Medic never falls below, even at 0 Reagents.
 - **Field Synthesis** (2nd, feature) — The free improv valve. See its own Deep Dive section, above, for full mechanics. Street-Doc features that reference it (Make Do at 1st, Trash-Bin Chemistry at 2nd) do nothing until this feature arrives.
 - **Advanced Chem-Prep** (2nd) — Your kit capacity increases by **+2** on top of your echelon's baseline.
