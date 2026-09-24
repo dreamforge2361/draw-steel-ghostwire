@@ -149,6 +149,17 @@ async function compileFolder() {
     ?? Folder.create({ name, type: "Actor", flags: { [MODULE_ID]: { compiledSprites: true } } });
 }
 
+/**
+ * D (0.3.124) — a sprite is half a square.
+ *
+ * The twelve templates under src/packs/summons/sprites/ carry this on `prototypeToken`, so a fresh
+ * compile inherits it from `game.actors.fromCompendium(template)`. It is written again in
+ * {@link compileSprite}'s mergeObject for the world that still holds a pre-0.3.124 copy of a
+ * template: nothing else in this file ever touches token size, and a sprite that placed at 1×1
+ * would sit on the caster's own footprint.
+ */
+export const SPRITE_TOKEN_SIZE = 0.5;
+
 // A ring of squares around the caster, so a congregation of 2–6 doesn't stack on one tile.
 const RING = [[1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1], [0, -1], [1, -1]];
 
@@ -231,6 +242,10 @@ export async function compileSprite(caster, { archetype, position, silent = fals
     "system.monster.level": level,
     "prototypeToken.actorLink": true,
     "prototypeToken.disposition": CONST.TOKEN_DISPOSITIONS.FRIENDLY,
+    // D (0.3.124): sprites place at half a square. Stated here as well as on the template so a
+    // world carrying an older compendium copy still gets the size Michael locked.
+    "prototypeToken.width": SPRITE_TOKEN_SIZE,
+    "prototypeToken.height": SPRITE_TOKEN_SIZE,
     [`flags.${MODULE_ID}`]: {
       kind: "sprite", archetype, hybridTier: band, compiler: caster.uuid,
       dsid: `sprite-${archetype}-${band}`, compiledAtLevel: level, reduced,

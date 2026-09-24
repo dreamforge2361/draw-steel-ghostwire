@@ -56,6 +56,7 @@ import { registerIdentity } from "./identity.mjs";
 import { registerWireStateToggle } from "./wire-state-toggle.mjs";
 import { registerCritFeedback } from "./crit-feedback.mjs";
 import { registerCoverConceal } from "./cover-conceal.mjs";
+import { registerConceal } from "./conceal.mjs";
 import { registerFlanking } from "./flanking.mjs";
 import { registerWorkshopBenches } from "./workshop-benches.mjs";
 import { registerDirectorResource } from "./director-resource.mjs";
@@ -180,6 +181,9 @@ Hooks.once("init", () => {
   registerWireStateToggle({ getWiredState, setWiredState });
   registerCritFeedback();
   registerCoverConceal();
+  // 0.3.124 (B2) — the free Scout maneuver that *applies* Cover/Conceal, plus the Invisible status
+  // its high tier buys. Registered after registerCoverConceal so COVER_CONCEAL_ID already exists.
+  registerConceal();
   // F14 — the positional sibling of F13. Same getTargetModifiers seam, opposite sign: Cover/Conceal
   // banes a ranged attacker, Flanking edges a melee one. It never double-counts Draw Steel's own
   // flanking edge — see the guard in scripts/flanking.mjs.

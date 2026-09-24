@@ -18,15 +18,19 @@ const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-pregen-fiction:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 
 // Story file stem → the pregen whose portrait heads the page.
+// 03 is absent: B44c retired Krow and his origin story went with him. 09 and 10 joined in 0.3.124.
 const PORTRAITS = {
   "01": "vessa-corran-dov", "02": "kaes-vahn-estal", "04": "barak-voss-hallor",
   "05": "wren-sable-corvin", "06": "sabbat-vane", "07": "vira-kellis-nade", "08": "kessic-draye",
+  "09": "renn-solace-ward", "10": "kade-orrin-vex",
 };
+
+/** One story per pregen, and the roster is nine since 0.3.124 (Renn Solace-Ward, Kade Orrin-Vex). */
+const STORY_COUNT = 9;
 
 if (!existsSync(STORIES)) throw new Error(`${STORIES} not found — run the story extraction first`);
 const files = readdirSync(STORIES).filter(f => f.endsWith(".md")).sort();
-// Seven pregens since B44c retired Krow; his origin story went with him.
-if (files.length !== 7) throw new Error(`expected 7 stories, found ${files.length}`);
+if (files.length !== STORY_COUNT) throw new Error(`expected ${STORY_COUNT} stories, found ${files.length}`);
 
 const pages = files.map(file => {
   const md = readFileSync(join(STORIES, file), "utf8").replace(/\r\n/g, "\n");
@@ -39,20 +43,24 @@ const pages = files.map(file => {
   return { name: title, markdown: `${art}${body}`.trim() };
 });
 
+// 0.3.124 (E): street names are fiction, so they stay here — but in their own column, because the
+// Actor's Name field is now the hero's name and nothing else, and the index should agree with it.
 const index = {
-  name: "The Seven",
+  name: "The Nine",
   markdown: [
-    "Seven origin stories, one per Ghostwire pregen. The heroes themselves are in the **Ghostwire Pregens** actor compendium, built at Level 1 — these pages are where they came from.",
+    "Nine origin stories, one per Ghostwire pregen. The heroes themselves are in the **Ghostwire Pregens** actor compendium, built at Level 1 — these pages are where they came from.",
     "",
-    "| Story | Hero | Class · People |",
-    "|---|---|---|",
-    "| The Lamp on Ninth | Vessa Corran-Dov, “the Preacher of Ninth” | Street Priest (Shepherd) · Corran |",
-    "| Rain on the Glass Tier | Kaïs Vahn-Estal, “the Static Saint” | Elementalist (Stormcaller) · Elvani |",
-    "| The Weight of the Word | Barak Voss-Hallor, “the Foreman” | Commander (Street-Fixer) · Goliar |",
-    "| The Long Sight | Wren Sable-Corvin, “the Kite” | Scout (Hunter) · Changer, Raven lineage |",
-    "| The Dead Frequency | Sabbat Vane | Technomancer (Sprite-Weaver) · Revenant |",
-    "| Nine Ways Out | Vira Kellis-Nade, “the Warren-Wire” | Wrench (Drone Jockey) · Changer, Rat lineage |",
-    "| Turn Their Own Guns Around | Kessic Draye, “Null” | Hacker (Disruptor) · Mutant |",
+    "| Story | Hero | Street name | Class · People |",
+    "|---|---|---|---|",
+    "| The Lamp on Ninth | Vessa Corran-Dov | the Preacher of Ninth | Street Priest (Shepherd) · Corran |",
+    "| Rain on the Glass Tier | Kaïs Vahn-Estal | the Static Saint | Elementalist (Stormcaller) · Elvani |",
+    "| The Weight of the Word | Barak Voss-Hallor | the Foreman | Commander (Street-Fixer) · Goliar |",
+    "| The Long Sight | Wren Sable-Corvin | the Kite | Scout (Hunter) · Changer, Raven lineage |",
+    "| The Dead Frequency | Sabbat Vane | the Dead Frequency | Technomancer (Sprite-Weaver) · Revenant |",
+    "| Nine Ways Out | Vira Kellis-Nade | the Warren-Wire | Wrench (Drone Jockey) · Changer, Rat lineage |",
+    "| Turn Their Own Guns Around | Kessic Draye | Null | Hacker (Disruptor) · Mutant |",
+    "| The Folding Table | Renn Solace-Ward | Patchwire | Medic (Street-Doc) · Pure Human |",
+    "| No Offboarding Scrub | Kade Orrin-Vex | Hardframe | Operator (Corp-Milspec) · Cyborg |",
   ].join("\n"),
 };
 
@@ -82,7 +90,7 @@ writeFileSync(join(OUT, "pregen-fiction.json"), JSON.stringify(entry, null, 2) +
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 lang.GHOSTWIRE.COMPENDIUM.pregenFiction = "Ghostwire Pregen Fiction";
-lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Journals: { Fiction: "Dossiers & Fiction — The Seven" } };
+lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Journals: { Fiction: "Dossiers & Fiction — The Nine" } };
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 console.log(`pregen-fiction: 1 journal, ${all.length} pages`);
 console.log(all.map((p, i) => `  ${i + 1}. ${p.name}`).join("\n"));

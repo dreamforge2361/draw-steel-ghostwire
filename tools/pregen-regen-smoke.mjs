@@ -23,6 +23,16 @@ const read = p => JSON.parse(readFileSync(p, "utf8"));
 const loadouts = read("docs/masters/pregens/loadouts.json");
 const postPatches = read("docs/masters/pregens/post-patches.json");
 
+/**
+  * 0.3.124 — Body Integrity is no longer one number. A living hero starts at 20; a Cyborg frame
+  * starts at 25 (CYBORG_INTEGRITY_START in scripts/module.mjs, INTEGRITY_BY_ANCESTRY in the
+  * generator). Read the max off the built actor rather than assuming, and assert the arithmetic.
+  */
+const INTEGRITY_START = 20;
+const INTEGRITY_BY_ANCESTRY = { cyborg: 25 };
+const ancestryOf = actor => actor.items.find(i => i.type === "ancestry")?.system?._dsid ?? null;
+const integrityMaxFor = actor => INTEGRITY_BY_ANCESTRY[ancestryOf(actor)] ?? INTEGRITY_START;
+
 const failures = [];
 const ok = (cond, msg) => { if (cond) console.log(`  ✓ ${msg}`); else { failures.push(msg); console.log(`  ✗ ${msg}`); } };
 
@@ -93,8 +103,12 @@ for (const [slug, l] of Object.entries(loadouts)) {
     ...(l.chrome ?? []).map(c => c.path), ...(l.mods ?? []).map(m => m.path)].filter(Boolean);
   const missing = paths.filter(p => !held.has(read(p).system?._dsid));
   ok(!missing.length, `${slug}: all ${paths.length} loadout items embedded${missing.length ? ` (missing ${missing.join(", ")})` : ""}`);
-  ok(gw(actors[slug]).biSpent === (l.biTotal ?? 0) && gw(actors[slug]).integrity.value === 20 - (l.biTotal ?? 0),
-    `${slug}: Body Integrity ${20 - (l.biTotal ?? 0)}/20 from ${(l.chrome ?? []).length} chrome`);
+  const max = integrityMaxFor(actors[slug]);
+  ok(gw(actors[slug]).biSpent === (l.biTotal ?? 0)
+    && gw(actors[slug]).integrity.value === max - (l.biTotal ?? 0)
+    && gw(actors[slug]).integrity.max === max
+    && gw(actors[slug]).biRemaining === max - (l.biTotal ?? 0),
+    `${slug}: Body Integrity ${max - (l.biTotal ?? 0)}/${max} from ${(l.chrome ?? []).length} chrome`);
 }
 
 console.log("\n7) Installed matrix mods keep their host and magazine count");

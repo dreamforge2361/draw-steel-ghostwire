@@ -72,9 +72,12 @@
           },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tcs6UkDCRjU8h6Gn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwScoutConceal01"
           }
         ],
-        "description": "<p>You gain the following features.</p>",
+        "description": "<p>You gain the following features. <strong>Conceal</strong> is free for every Scout, whatever your subclass.</p>",
         "chooseN": null,
         "sort": 4000,
         "additional": {

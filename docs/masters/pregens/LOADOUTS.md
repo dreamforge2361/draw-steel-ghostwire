@@ -75,3 +75,34 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
 ## Ritual Formulas (0.3.88)
 
 The three Veil/Wire casters — Kaes (Elementalist), Vessa (Street Priest), Sabbat (Technomancer) — start with the **Ward the Room** Formula Item already studied (`rituals` in `loadouts.json`; the embed carries `flags.draw-steel-ghostwire.ritual.learned: true`). It is the teaching Working in The Veil (`docs/raw/22-the-veil.md`, Ritual Workings).
+
+## 0.3.124 — Renn Solace-Ward and Kade Orrin-Vex
+
+**Renn “Patchwire” Solace-Ward** — Medic (Street-Doc) · Pure Human. Kit is **Gunslinger**, which is the
+Medic class's own Quick Build and the lightest thing in the class's kit pool that still allows the
+Armored Jacket a trauma doc can cut off a patient and put back on himself. The bag is the character:
+Field Surgery Kit, Slap-Doc Kit and a Trauma Patch, with a Workhorse service pistol he would rather keep
+holstered, a PocketSec and a basic fake SIN. **No chrome** — Pure Human, and the whole point of him is
+being the block's alternative to a ripperdoc, so Body Integrity stays 20/20.
+
+**Kade “Hardframe” Orrin-Vex** — Operator (Corp-Milspec) · Cyborg. The 0.3.124 brief's ADDENDUM locks the
+chrome exactly, and it spends a Cyborg's whole **25** Body Integrity with nothing left over:
+
+| Chrome | Grade | BI |
+|---|---|---|
+| Wired Reflexes | Standard | 6 |
+| Cyberlimb Arm | Standard | 5 |
+| Muscle & Bone Lacing | Standard | 5 |
+| Dermal Plating | Standard | 4 |
+| Cyber-Eyes | Standard | 2 |
+| Cyber-Ears | Standard | 2 |
+| Datajack | Standard | 1 |
+| **Total** | | **25 / 25** |
+
+No Soft-grade substitutions: subtle is the opposite of the brief. Everything is Standard grade and
+everything is visible. The Warframe kit wants heavy armor and a medium weapon, so he keeps the Milspec
+Battledress and Milspec Battle Rifle he was issued, plus a Hand Cannon for when the rifle is dry, stims,
+ammunition, a PocketSec and a basic fake SIN.
+
+Kade is the first Cyborg pregen, so `tools/pregens-to-actors.mjs` no longer hard-codes Body Integrity at
+20 — see `INTEGRITY_BY_ANCESTRY` there, which mirrors `CYBORG_INTEGRITY_START` in `scripts/module.mjs`.

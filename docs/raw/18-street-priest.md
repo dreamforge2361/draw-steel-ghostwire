@@ -79,13 +79,16 @@ Every Street Priest chooses **two** of the following at 1st level — these are 
 
 Damage and rider values below print in this book’s result order — **low** (≤11) **/ middle** (12–16) **/ high** (17+).
 
+**0.3.124:** **Lightfall is no longer one of the options** — Blessed Light is the class's lamp and the burst-teleport
+signature came out of the pick pool. **Sacrificial Offer is Dark Pact only**: a Light priest is never offered it, and
+a priest who swaps to Light loses it and re-picks.
+
 | Signature | Type | Target | Base Effect | Pact Flavor |
 |---|---|---|---|---|
 | **Blessed Light** | Ranged strike (dist 10) | 1 creature | **3 / 5 / 8 + Persona** holy damage, and one ally within distance gains **1 / 2 / 3 surges** | Light-flavored (always holy) |
 | **Drain** | Melee strike (dist 1) | 1 creature | **2 / 5 / 7 + Persona** corruption damage; on middle or high, you or an ally within 10 squares may **spend a Recovery** | Dark-flavored (always corruption) |
 | **Rebuke** | Ranged strike (dist 10) | 1 creature | **3 / 5 / 8 + Persona** holy or corruption damage + **pull 2 / 3 / 4** (the pull may be vertical) | Follows pact |
-| **Lightfall** | Area burst 2 (dist 10) | Enemies in burst | **2 / 3 / 5** holy damage to enemies, and you and up to 2 allies in the burst may **teleport** to any unoccupied space within the burst | Light-flavored (always holy) |
-| **Sacrificial Offer** | Ranged strike (dist 10) | 1 creature | **2 / 4 / 6 + Persona** corruption damage; you or one ally within distance may impose a **bane on the next power roll made against them** before the end of their next turn | Dark-flavored (always corruption) |
+| **Sacrificial Offer** | Ranged strike (dist 10) | 1 creature | **2 / 4 / 6 + Persona** corruption damage; you or one ally within distance may impose a **bane on the next power roll made against them** before the end of their next turn | **Dark Pact only** (always corruption) |
 | **Word of Rebuke** | Melee strike (dist 1) | 1 creature | **3 / 5 / 8 + Persona** holy or corruption damage + a forced **slide 1 / 2 / 3** | Follows pact |
 | **Warrior's Prayer** | Ranged strike (dist 10) | 1 creature | **3 / 6 / 9 + Persona** holy damage + you or an ally within distance gains **temporary Stamina equal to your Persona score** | Light-leaning (holy by default, may reskin Dark on request) |
 | **Wither** | Ranged strike (dist 10) | 1 creature | **3 / 5 / 8 + Persona** corruption damage, and if the target's Persona is below your **weak / average / strong** potency it takes a **bane** on its next power roll | Dark-flavored (always corruption) |

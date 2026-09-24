@@ -1,0 +1,3862 @@
+{
+  "_id": "iMwX0Eho0uPrQAnk",
+  "_key": "!actors!iMwX0Eho0uPrQAnk",
+  "name": "GHOSTWIRE.Pregens.Actors.Kade.Name",
+  "type": "hero",
+  "img": "modules/draw-steel-ghostwire/assets/pregens/kade-orrin-vex.webp",
+  "folder": null,
+  "sort": 900000,
+  "system": {
+    "stamina": {
+      "value": 33,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 2
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 1
+      },
+      "presence": {
+        "value": 0
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Pregens.Actors.Kade.Description",
+      "director": "",
+      "languages": [
+        "CyborgFrameCant",
+        "OpsDialects",
+        "TradeCant",
+        "CorpCant"
+      ],
+      "height": {
+        "value": 0,
+        "units": "inches"
+      },
+      "weight": {
+        "value": 0,
+        "units": "pounds"
+      },
+      "age": ""
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {},
+      "weaknesses": {}
+    },
+    "source": {
+      "book": "Ghostwire Dossiers & Fiction",
+      "page": "Kade Orrin-Vex",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "recoveries": {
+      "value": 10
+    },
+    "hero": {
+      "primary": {
+        "value": 0
+      },
+      "epic": {
+        "value": 0
+      },
+      "surges": 0,
+      "xp": 0,
+      "victories": 0,
+      "renown": 1,
+      "wealth": 250
+    },
+    "skills": {
+      "value": [
+        "perception",
+        "athletics",
+        "firearms",
+        "command",
+        "corporate",
+        "persuasion",
+        "survival"
+      ]
+    },
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Pregens.Actors.Kade.Name",
+    "displayName": 20,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/pregens/kade-orrin-vex.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "sight": {
+      "enabled": true
+    },
+    "disposition": 1
+  },
+  "items": [
+    {
+      "_id": "l1B7YXk6ESpqGubu",
+      "name": "GHOSTWIRE.Peoples.Cyborg.Name",
+      "type": "ancestry",
+      "img": "icons/creatures/magical/construct-golem-robot-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyborg",
+        "advancements": {
+          "M0sCxSH1EmFEgbgq": {
+            "name": "Signature Trait",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": null
+            },
+            "_id": "M0sCxSH1EmFEgbgq",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.dgBmVGmpoJ8cqmVO"
+              }
+            ],
+            "sort": 0,
+            "description": "",
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "OivTe7bRC3hYc8db": {
+            "name": "GHOSTWIRE.Peoples.Cyborg.PurchasedTraits.Name",
+            "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": null
+            },
+            "_id": "OivTe7bRC3hYc8db",
+            "description": "GHOSTWIRE.Peoples.Cyborg.PurchasedTraits.Description",
+            "additional": {
+              "type": "ancestryTrait",
+              "perkType": []
+            },
+            "chooseN": 3,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.wEQTCGWeWxbrD3Y3"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1AEnOK1gTEHjOLEj"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.hFbUGmW7WZXkc7kp"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.bEJrcH33ekVQ92H6"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.pVsfJpZi2gkskLqr"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx"
+              }
+            ],
+            "sort": 0,
+            "repick": {}
+          }
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.l1B7YXk6ESpqGubu"
+    },
+    {
+      "_id": "1AEnOK1gTEHjOLEj",
+      "name": "GHOSTWIRE.Peoples.Cyborg.PredictiveSensors.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.PredictiveSensors.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "predictive-sensors",
+        "advancements": {},
+        "points": 1,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "sightGrant": {
+            "modes": [
+              {
+                "id": "seeInvisibility",
+                "range": 20,
+                "enabled": true
+              }
+            ],
+            "priority": 1,
+            "claims": [
+              "veilGlimpse"
+            ]
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.1AEnOK1gTEHjOLEj"
+    },
+    {
+      "_id": "bEJrcH33ekVQ92H6",
+      "name": "GHOSTWIRE.Peoples.Cyborg.AuxiliaryLimbsCombat.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/control/debuff-chains-shackles-movement-purple.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.AuxiliaryLimbsCombat.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "auxiliary-limbs-combat",
+        "advancements": {},
+        "points": 2,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.bEJrcH33ekVQ92H6"
+    },
+    {
+      "_id": "pVsfJpZi2gkskLqr",
+      "name": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/perception/third-eye-blue-red.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "installed-suite",
+        "advancements": {
+          "tVKZxxDNAwwjcmmF": {
+            "name": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.AdvancementName",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": null
+            },
+            "_id": "tVKZxxDNAwwjcmmF",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.Peqr7g7HZOH2OscM"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.HVyHEUARAnj2D0f6"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.HYHaUsaTfTMvV8ws"
+              }
+            ],
+            "chooseN": 1,
+            "description": "",
+            "sort": 0,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          }
+        },
+        "points": 2,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.pVsfJpZi2gkskLqr"
+    },
+    {
+      "_id": "AHQuzfWMKQluvMHw",
+      "name": "GHOSTWIRE.Classes.Operator.Items.Class.Name",
+      "type": "class",
+      "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Operator.Items.Class.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "operator",
+        "advancements": {
+          "UkhBvtjA3OxcP4c4": {
+            "name": "Skills",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "UkhBvtjA3OxcP4c4",
+            "chooseN": 2,
+            "skills": {
+              "groups": [
+                "action",
+                "vehicle"
+              ],
+              "choices": []
+            },
+            "description": "<p>Choose any two skills from the Action or Vehicle & Drone skill groups. <em>(Quick Build: Perception, Athletics.)</em></p>",
+            "sort": -47000,
+            "repick": {}
+          },
+          "F1SV8pE24DkIDxtA": {
+            "name": "Operator Origin",
+            "img": "icons/creatures/abilities/wolf-heads-swirl-purple.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "F1SV8pE24DkIDxtA",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ibssXJlEiS4jwG7U"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WbxNDtQJyk3dCnS0"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oQxPB9QvTkJxFfyg"
+              }
+            ],
+            "description": "<p>Choose your Operator Origin: Corp-Milspec, Merc, or Street-vet. Each grants a skill and your Kit choice. <em>(Quick Build: Corp-Milspec.)</em></p>",
+            "sort": 14000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "2gM4VoC4XmaJAxpi": {
+            "name": "Adrenaline",
+            "img": "icons/magic/symbols/runes-star-magenta.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "2gM4VoC4XmaJAxpi",
+            "description": "<p>You gain the following features.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YxnFFEXlk2vy6Eo9"
+              }
+            ],
+            "sort": 3000,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "OCayU87edJQCroxu": {
+            "name": "Signature Abilities",
+            "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "OCayU87edJQCroxu",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.G8yLYKWridHzcaoT"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SbljEOo0Q9J3T2ci"
+              }
+            ],
+            "description": "<p>You know both Operator signature abilities.</p>",
+            "chooseN": null,
+            "sort": 15000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "pHoGNliceTIIehzI": {
+            "name": "Heroic Ability (1–5 Adrenaline)",
+            "img": "icons/weapons/hammers/hammer-double-wood.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "pHoGNliceTIIehzI",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ClXRQ7sq3JDEfLXp"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.u9bCszog9eNxjiZA"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.knNP71xwcAGj7Mno"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.p4PGrWwEpRtN7zyi"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RYQQsbcZDNuIsivX"
+              }
+            ],
+            "description": "<p>Choose one heroic ability from the base band (1–5 Adrenaline).</p>",
+            "sort": 22000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "qpOkC2pqAKsdSFJO": {
+            "name": "Perk",
+            "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 2
+            },
+            "_id": "qpOkC2pqAKsdSFJO",
+            "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+            "chooseN": 1,
+            "additional": {
+              "type": "perk",
+              "perkType": [
+                "crafting",
+                "exploration",
+                "intrigue"
+              ]
+            },
+            "sort": 9000,
+            "repick": {},
+            "pool": []
+          },
+          "Fuep5ltkI9rweisR": {
+            "name": "7 Adrenaline Ability",
+            "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 3
+            },
+            "_id": "Fuep5ltkI9rweisR",
+            "chooseN": 1,
+            "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Adrenaline to use.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ExouaIu067LW2hk7"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.X6h1ygTn3ErOt06u"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5fjNFssowmxRTMKO"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1Ir2tPHmuwV58gpD"
+              }
+            ],
+            "sort": 24000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "x1UyQl0VGl5GZ70H": {
+            "name": "",
+            "img": null,
+            "type": "characteristic",
+            "requirements": {
+              "level": 4
+            },
+            "_id": "x1UyQl0VGl5GZ70H",
+            "description": "<p>Your Physique and Reflex scores each increase to 3.</p>",
+            "characteristics": {
+              "might": 1,
+              "agility": 1
+            },
+            "sort": 0,
+            "repick": {},
+            "max": 3
+          },
+          "jH4R9rt6LyLphEX1": {
+            "name": "",
+            "img": null,
+            "type": "characteristic",
+            "requirements": {
+              "level": 7
+            },
+            "_id": "jH4R9rt6LyLphEX1",
+            "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+            "max": 4,
+            "characteristics": {
+              "might": 1,
+              "agility": 1,
+              "reason": 1,
+              "intuition": 1,
+              "presence": 1
+            },
+            "sort": 1000,
+            "repick": {}
+          },
+          "PFqG7t29d5oz1l6N": {
+            "name": "",
+            "img": null,
+            "type": "characteristic",
+            "requirements": {
+              "level": 10
+            },
+            "_id": "PFqG7t29d5oz1l6N",
+            "description": "<p>Your Physique and Reflex scores each increase to 5.</p>",
+            "max": 5,
+            "characteristics": {
+              "might": 1,
+              "agility": 1
+            },
+            "sort": 2000,
+            "repick": {}
+          },
+          "3PpPkWNV8FKTEqeY": {
+            "name": "Perk",
+            "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 4
+            },
+            "_id": "3PpPkWNV8FKTEqeY",
+            "description": "<p>You gain one perk of your choice.</p>",
+            "chooseN": 1,
+            "additional": {
+              "type": "perk",
+              "perkType": []
+            },
+            "sort": 10000,
+            "repick": {},
+            "pool": []
+          },
+          "O9gmhBM5M2FrpFv1": {
+            "name": "Perk",
+            "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 6
+            },
+            "_id": "O9gmhBM5M2FrpFv1",
+            "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+            "chooseN": 1,
+            "additional": {
+              "type": "perk",
+              "perkType": [
+                "crafting",
+                "exploration",
+                "intrigue"
+              ]
+            },
+            "sort": 11000,
+            "repick": {},
+            "pool": []
+          },
+          "2dvrlOFVLXIk9yTQ": {
+            "name": "Perk",
+            "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 8
+            },
+            "_id": "2dvrlOFVLXIk9yTQ",
+            "description": "<p>You gain one perk of your choice.</p>",
+            "chooseN": 1,
+            "additional": {
+              "type": "perk",
+              "perkType": []
+            },
+            "sort": 12000,
+            "repick": {},
+            "pool": []
+          },
+          "1o8WajVxMEMqNbrs": {
+            "name": "Perk",
+            "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 10
+            },
+            "_id": "1o8WajVxMEMqNbrs",
+            "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+            "chooseN": 1,
+            "additional": {
+              "type": "perk",
+              "perkType": [
+                "crafting",
+                "exploration",
+                "intrigue"
+              ]
+            },
+            "sort": 13000,
+            "repick": {},
+            "pool": []
+          },
+          "HBFnY9ZsEucLUjHT": {
+            "name": "Skill",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": 7
+            },
+            "_id": "HBFnY9ZsEucLUjHT",
+            "skills": {
+              "groups": [],
+              "choices": []
+            },
+            "chooseN": 1,
+            "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+            "sort": 17000,
+            "repick": {}
+          },
+          "zLNTbfLZGyYVEnCX": {
+            "name": "Features",
+            "img": "icons/magic/symbols/runes-star-magenta.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 7
+            },
+            "_id": "zLNTbfLZGyYVEnCX",
+            "description": "<p>You gain the following features.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IhmMnegZdRYiYkGX"
+              }
+            ],
+            "sort": 5000,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "PbAQ5g22NEIqce2Z": {
+            "name": "Skill",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": 4
+            },
+            "_id": "PbAQ5g22NEIqce2Z",
+            "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+            "chooseN": 1,
+            "skills": {
+              "groups": [],
+              "choices": []
+            },
+            "sort": 18000,
+            "repick": {}
+          },
+          "jUB4nTpkEm2PFYUu": {
+            "name": "Features",
+            "img": "icons/magic/symbols/runes-star-magenta.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 4
+            },
+            "_id": "jUB4nTpkEm2PFYUu",
+            "description": "<p>You gain the following features.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7axaM6GghbaBQFKj"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1NrfeXeyVXvXSLYQ"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CltbYTfSgPMn3yvb"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BwbvL7t5nyRxYXf3"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Do51WyTVix9gnNva"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mSnafw2N5cqKNQvc"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WG99zz4NzyeFukL7"
+              }
+            ],
+            "sort": 6000,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "E8M24H2NQdz7hmwH": {
+            "name": "9 Adrenaline Ability",
+            "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 5
+            },
+            "_id": "E8M24H2NQdz7hmwH",
+            "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Adrenaline to use.</p>",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dVdgMRmmxMcmREgE"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zL1TDPnnYOXV8ATh"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dSjewK0pU3OHFt0V"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NPIHqtsSM8Xb4E24"
+              }
+            ],
+            "sort": 25000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "Vnge25ZGYqndHupJ": {
+            "name": "11 Adrenaline Ability",
+            "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 8
+            },
+            "_id": "Vnge25ZGYqndHupJ",
+            "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Adrenaline to use.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iFUY6SLRabsFFiRY"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0vlpwAYu2CllxICo"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7nI2Hy88ILMeo2hu"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pPjxmTI0CvXZ8ecJ"
+              }
+            ],
+            "chooseN": 1,
+            "sort": 21000,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "jvcOhluju0mCwZvf": {
+            "name": "Ghost of the Sprawl",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 9
+            },
+            "_id": "jvcOhluju0mCwZvf",
+            "description": "<p>You gain the following features.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oXZOIaVSJ0WJwpuw"
+              }
+            ],
+            "sort": 8000,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "dQpHpFb39L7C1SKp": {
+            "name": "Skill",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": 10
+            },
+            "_id": "dQpHpFb39L7C1SKp",
+            "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+            "chooseN": 1,
+            "skills": {
+              "groups": [],
+              "choices": []
+            },
+            "sort": 19000,
+            "repick": {}
+          },
+          "UIC80u8IQZlybGHh": {
+            "name": "Features",
+            "img": "icons/magic/symbols/runes-star-magenta.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 10
+            },
+            "_id": "UIC80u8IQZlybGHh",
+            "description": "<p>You gain the following features.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HVbjTydvVYVZeZCm"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7zvBepekFoFB8HzT"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Bcav9cqOQLZNChYJ"
+              }
+            ],
+            "sort": 7000,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          }
+        },
+        "level": 1,
+        "primary": "Adrenaline",
+        "epic": "Combat Legend",
+        "turnGain": "1d3",
+        "minimum": "0",
+        "characteristics": {
+          "core": [
+            "might",
+            "agility"
+          ]
+        },
+        "stamina": {
+          "starting": 21,
+          "level": 9
+        },
+        "recoveries": 10
+      },
+      "folder": "VdeSkot9wwUD1iy4",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.AHQuzfWMKQluvMHw"
+    },
+    {
+      "_id": "ibssXJlEiS4jwG7U",
+      "name": "GHOSTWIRE.Classes.Operator.Items.CorpMilspec.Name",
+      "type": "subclass",
+      "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Operator.Items.CorpMilspec.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "corp-milspec",
+        "advancements": {
+          "qcrRk0Nh1YoLFGR5": {
+            "name": "Breaching Force",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "qcrRk0Nh1YoLFGR5",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LN6Dw39J19TCgafI"
+              }
+            ],
+            "description": "<p>Your Operator Origin grants you the following feature.</p>",
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "iC58F6iBYfJyZ9zR": {
+            "name": "Kinetic Redirect",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "iC58F6iBYfJyZ9zR",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.r12FzR7TabVMKH5k"
+              }
+            ],
+            "description": "<p>Your Operator Origin grants you a triggered action.</p>",
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "DSpkLQm0bsqMoUfP": {
+            "name": "GHOSTWIRE.Skills.List.Command",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "DSpkLQm0bsqMoUfP",
+            "skills": {
+              "choices": [
+                "command"
+              ],
+              "groups": []
+            },
+            "description": "<p>Your Operator Origin grants you the following skill.</p>",
+            "sort": 0,
+            "repick": {},
+            "chooseN": null
+          },
+          "cPTJfFw4ACuLzXQg": {
+            "name": "Kit",
+            "img": "icons/containers/bags/pack-leather-black-brown.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "cPTJfFw4ACuLzXQg",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NI3QWa2kizsYNBM2"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m7DTBTD2zvW0TViV"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XbRoZ9XXytwThX68"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SC8BSZFZ9PQsD2nV"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xcGhoSk8Ht4VKksG"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NIv1KQfV2JBzkeWk"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wBUl1vkVVZYuQX3G"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.uSTe6AiFvh081JSm"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+              }
+            ],
+            "description": "<p>Choose one Kit.</p>",
+            "additional": {
+              "type": "kit",
+              "perkType": []
+            },
+            "sort": 0,
+            "repick": {}
+          },
+          "TGW14CxYsXyXF2XU": {
+            "name": "Breach Charge",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 2
+            },
+            "_id": "TGW14CxYsXyXF2XU",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IdUHNDXUkenUq0f7"
+              }
+            ],
+            "description": "<p>Your Operator Origin grants you the following feature.</p>",
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "yzuWE8Hc3nbYnTZ0": {
+            "name": "2nd-Level Corp-Milspec Ability",
+            "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 2
+            },
+            "_id": "yzuWE8Hc3nbYnTZ0",
+            "description": "<p>Choose one of the following abilities.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.hvGPY6JhT9unBQir"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rBoQ36kCaW7Mt4Mh"
+              }
+            ],
+            "chooseN": 1,
+            "sort": 0,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "CERH6ocqIdA43kOj": {
+            "name": "Anchored Stance",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 6
+            },
+            "_id": "CERH6ocqIdA43kOj",
+            "description": "<p>Your Operator Origin grants you the following feature.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z7jffbS3BHpgDiTy"
+              }
+            ],
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "VBOG0IUIeFONxU2D": {
+            "name": "6th-Level Corp-Milspec Ability",
+            "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 6
+            },
+            "_id": "VBOG0IUIeFONxU2D",
+            "description": "<p>Your Operator Origin grants your choice of one of two heroic abilities.</p>",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.VSWMFvxnVJ0wc79S"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KTEyD1aKFK7GpKdJ"
+              }
+            ],
+            "sort": 0,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "zGkf3qXhd9L3TtkJ": {
+            "name": "Jump Rig",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 5
+            },
+            "_id": "zGkf3qXhd9L3TtkJ",
+            "description": "<p>Your Operator Origin grants you the following feature.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YGRgoE1bJfHbyp8S"
+              }
+            ],
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "vT3wBmoG6ETYq7oP": {
+            "name": "Overpowering Build",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 8
+            },
+            "_id": "vT3wBmoG6ETYq7oP",
+            "description": "<p>Your Operator Origin grants you the following feature.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6oHEximQV2O6VVIc"
+              }
+            ],
+            "sort": 0,
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "lLyosZe5ELlGrn5t": {
+            "name": "9th-Level Corp-Milspec Abilities",
+            "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 9
+            },
+            "_id": "lLyosZe5ELlGrn5t",
+            "description": "<p>Choose one of the following abilities.</p>",
+            "chooseN": 1,
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rXrhO1Ccf8pz6Ii9"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9a8RgKN2yZuJoMzE"
+              }
+            ],
+            "sort": 0,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          }
+        },
+        "classLink": "operator"
+      },
+      "folder": "yy6thXe1W7LlID0F",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.ibssXJlEiS4jwG7U"
+    },
+    {
+      "_id": "SC8BSZFZ9PQsD2nV",
+      "name": "GHOSTWIRE.Kits.Warframe.Name",
+      "type": "kit",
+      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Kits.Warframe.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "10-kits",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "warframe",
+        "advancements": {
+          "WB4jziAOOfyJvhU3": {
+            "type": "itemGrant",
+            "_id": "WB4jziAOOfyJvhU3",
+            "name": "GHOSTWIRE.Kits.Warframe.Signature.Name",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.F2r0lNCpZXl5AbHr"
+              }
+            ],
+            "img": null,
+            "description": "",
+            "requirements": {
+              "level": null
+            },
+            "chooseN": null,
+            "sort": 0,
+            "repick": {},
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          }
+        },
+        "equipment": {
+          "armor": "heavy",
+          "weapon": [
+            "medium"
+          ],
+          "shield": true
+        },
+        "bonuses": {
+          "melee": {
+            "damage": {
+              "tier1": 2,
+              "tier2": 2,
+              "tier3": 2
+            },
+            "distance": null
+          },
+          "ranged": {
+            "damage": {
+              "tier1": 0,
+              "tier2": 0,
+              "tier3": 0
+            },
+            "distance": null
+          },
+          "stamina": 12,
+          "speed": null,
+          "stability": 1,
+          "disengage": null
+        }
+      },
+      "folder": "BE4frWP9fcIOBAoH",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.SC8BSZFZ9PQsD2nV"
+    },
+    {
+      "_id": "Tpd3tB7cJV48FLrU",
+      "name": "GHOSTWIRE.Backgrounds.CorpArcology.Name",
+      "type": "culture",
+      "img": "icons/environment/settlement/city-night-spire.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Backgrounds.CorpArcology.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "13-backgrounds-professions",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "corp-arcology",
+        "advancements": {
+          "pzxiGq8MFZZq8wlU": {
+            "_id": "pzxiGq8MFZZq8wlU",
+            "name": "GHOSTWIRE.Skills.List.Corporate",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": null
+            },
+            "chooseN": null,
+            "skills": {
+              "groups": [],
+              "choices": [
+                "corporate"
+              ]
+            },
+            "sort": 0,
+            "description": "",
+            "repick": {}
+          },
+          "hCN6RcIsglXTs6mc": {
+            "_id": "hCN6RcIsglXTs6mc",
+            "name": "GHOSTWIRE.Backgrounds.PickName",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": null
+            },
+            "chooseN": 1,
+            "skills": {
+              "groups": [],
+              "choices": [
+                "persuasion",
+                "negotiation",
+                "insight",
+                "securitySystems"
+              ]
+            },
+            "sort": 1,
+            "description": "",
+            "repick": {}
+          }
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.Tpd3tB7cJV48FLrU"
+    },
+    {
+      "_id": "tsgrZp2U9cqXZ7FH",
+      "name": "GHOSTWIRE.Professions.MercRecruit.Name",
+      "type": "career",
+      "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Professions.MercRecruit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "13-backgrounds-professions",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "merc-recruit",
+        "advancements": {
+          "ACQFDrF74pAiWr0L": {
+            "_id": "ACQFDrF74pAiWr0L",
+            "name": "GHOSTWIRE.Skills.List.Firearms",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": null
+            },
+            "chooseN": null,
+            "skills": {
+              "groups": [],
+              "choices": [
+                "firearms"
+              ]
+            },
+            "sort": 0,
+            "description": "",
+            "repick": {}
+          },
+          "vKQvmdMdJ6DJsLSf": {
+            "_id": "vKQvmdMdJ6DJsLSf",
+            "name": "GHOSTWIRE.Professions.PickName",
+            "img": null,
+            "type": "skill",
+            "requirements": {
+              "level": null
+            },
+            "chooseN": 2,
+            "skills": {
+              "groups": [],
+              "choices": [
+                "athletics",
+                "survival",
+                "melee",
+                "heavyWeapons"
+              ]
+            },
+            "sort": 1,
+            "description": "",
+            "repick": {}
+          }
+        },
+        "projectPoints": 0,
+        "renown": 0,
+        "wealth": 0
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.tsgrZp2U9cqXZ7FH"
+    },
+    {
+      "_id": "GKKVzsE7uO4HLYDi",
+      "name": "GHOSTWIRE.Peoples.Cyborg.CorticalFirewall.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.CorticalFirewall.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cortical-firewall",
+        "advancements": {},
+        "points": null,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [
+        {
+          "_id": "64dJBFVsLyNnffD1",
+          "name": "GHOSTWIRE.Peoples.Cyborg.CorticalFirewall.Name",
+          "origin": "Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi",
+          "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.damage.immunities.psychic",
+                "value": "@level",
+                "priority": null,
+                "type": "upgrade",
+                "phase": "initial"
+              }
+            ],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "GHOSTWIRE.Peoples.Cyborg.CorticalFirewall.Description",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "flags": {},
+          "start": null,
+          "showIcon": 1,
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.GKKVzsE7uO4HLYDi.64dJBFVsLyNnffD1"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.GKKVzsE7uO4HLYDi"
+    },
+    {
+      "_id": "dgBmVGmpoJ8cqmVO",
+      "name": "GHOSTWIRE.Peoples.Cyborg.ArcaneSeverance.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/symbols/cross-circle-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Cyborg.ArcaneSeverance.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "arcane-severance",
+        "advancements": {},
+        "points": null,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.dgBmVGmpoJ8cqmVO"
+    },
+    {
+      "_id": "Peqr7g7HZOH2OscM",
+      "name": "GHOSTWIRE.Peoples.Cyborg.KineticDriver.Name",
+      "type": "ability",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "kinetic-driver",
+        "story": "GHOSTWIRE.Peoples.Cyborg.KineticDriver.Story",
+        "keywords": [
+          "tech",
+          "ranged",
+          "strike"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason",
+              "intuition",
+              "presence"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "O0oqBRawI1CmWlu5": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "O0oqBRawI1CmWlu5",
+              "damage": {
+                "tier2": {
+                  "value": "5 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "7 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                },
+                "tier1": {
+                  "value": "2 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "vT0GlOzfvjAUxakK": {
+              "name": "",
+              "img": null,
+              "type": "forced",
+              "_id": "vT0GlOzfvjAUxakK",
+              "forced": {
+                "tier1": {
+                  "distance": "",
+                  "movement": [],
+                  "display": "",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier3": {
+                  "distance": "2",
+                  "display": "{{forced}}",
+                  "movement": [
+                    "push"
+                  ],
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                },
+                "tier2": {
+                  "distance": "1",
+                  "display": "{{forced}}",
+                  "movement": [
+                    "push"
+                  ],
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "xZj2sEiKQnyUNAXC": {
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "xZj2sEiKQnyUNAXC",
+              "applied": {
+                "tier3": {
+                  "display": "{{potency}}, prone",
+                  "potency": {
+                    "characteristic": "might",
+                    "value": "@potency.strong"
+                  },
+                  "effects": {
+                    "prone": {
+                      "condition": "failure",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier1": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        },
+        "effects": {}
+      },
+      "folder": "CFXIiUsRsGr8AEqc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.Peqr7g7HZOH2OscM"
+    },
+    {
+      "_id": "YxnFFEXlk2vy6Eo9",
+      "name": "GHOSTWIRE.Classes.Operator.Items.Adrenaline.Name",
+      "type": "feature",
+      "img": "icons/magic/fire/flame-burning-fist-strike.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Operator.Items.Adrenaline.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "adrenaline",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "VdeSkot9wwUD1iy4",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.YxnFFEXlk2vy6Eo9"
+    },
+    {
+      "_id": "G8yLYKWridHzcaoT",
+      "name": "GHOSTWIRE.Classes.Operator.Items.ControlledPair.Name",
+      "type": "ability",
+      "img": "icons/weapons/guns/pistol-automatic.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "controlled-pair",
+        "story": "GHOSTWIRE.Classes.Operator.Items.ControlledPair.Story",
+        "keywords": [
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1",
+          "type": "ranged"
+        },
+        "damageDisplay": "ranged",
+        "target": {
+          "custom": "",
+          "value": 1,
+          "type": "creatureObject"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "oDUBstW2eB09ghOx": {
+              "_id": "oDUBstW2eB09ghOx",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "type": "damage",
+              "damage": {
+                "tier1": {
+                  "value": "3 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "6 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "9 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "operator"
+          ],
+          "level": null
+        }
+      },
+      "folder": "mOA5WmFf5OVsWV2N",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.G8yLYKWridHzcaoT"
+    },
+    {
+      "_id": "SbljEOo0Q9J3T2ci",
+      "name": "GHOSTWIRE.Classes.Operator.Items.SuppressingFire.Name",
+      "type": "ability",
+      "img": "icons/weapons/guns/machine-gun-drum.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "suppressing-fire",
+        "story": "GHOSTWIRE.Classes.Operator.Items.SuppressingFire.Story",
+        "keywords": [
+          "area",
+          "ranged",
+          "weapon"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1",
+          "type": "cube"
+        },
+        "damageDisplay": "ranged",
+        "target": {
+          "custom": "",
+          "value": null,
+          "type": "enemy"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "PqwsIDlfiUsCQnv3": {
+              "_id": "PqwsIDlfiUsCQnv3",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "type": "damage",
+              "damage": {
+                "tier1": {
+                  "value": "1",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "2",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "3",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "operator"
+          ],
+          "level": null
+        }
+      },
+      "folder": "mOA5WmFf5OVsWV2N",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.SbljEOo0Q9J3T2ci"
+    },
+    {
+      "_id": "ClXRQ7sq3JDEfLXp",
+      "name": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Name",
+      "type": "ability",
+      "img": "icons/weapons/guns/shotgun-pump.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "breach-and-clear",
+        "story": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Story",
+        "keywords": [
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "type": "main",
+        "category": "heroic",
+        "resource": 1,
+        "trigger": "",
+        "distance": {
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1",
+          "type": "ranged"
+        },
+        "damageDisplay": "ranged",
+        "target": {
+          "custom": "",
+          "value": 1,
+          "type": "creatureObject"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "3KKZ12OgLj6oAgqB": {
+              "_id": "3KKZ12OgLj6oAgqB",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "type": "damage",
+              "damage": {
+                "tier1": {
+                  "value": "3",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
+            "ef1649EB6orJTnXM": {
+              "_id": "ef1649EB6orJTnXM",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "type": "forced",
+              "forced": {
+                "tier1": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "distance": "2",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "distance": "3",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "distance": "5",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Effect_after00000000000",
+            "before": false,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "operator"
+          ],
+          "level": null
+        }
+      },
+      "folder": "mOA5WmFf5OVsWV2N",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.ClXRQ7sq3JDEfLXp"
+    },
+    {
+      "_id": "LN6Dw39J19TCgafI",
+      "name": "GHOSTWIRE.Classes.Operator.Items.BreachingForce.Name",
+      "type": "feature",
+      "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Operator.Items.BreachingForce.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "breaching-force",
+        "advancements": {
+          "sO1rk9A3x1BWfmjZ": {
+            "name": "Growing Adrenaline",
+            "img": null,
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "_id": "sO1rk9A3x1BWfmjZ",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt"
+              }
+            ],
+            "sort": 0,
+            "description": "",
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "yy6thXe1W7LlID0F",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.LN6Dw39J19TCgafI"
+    },
+    {
+      "_id": "r12FzR7TabVMKH5k",
+      "name": "GHOSTWIRE.Classes.Operator.Items.KineticRedirect.Name",
+      "type": "ability",
+      "img": "icons/skills/movement/arrow-upward-yellow.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "kinetic-redirect",
+        "story": "GHOSTWIRE.Classes.Operator.Items.KineticRedirect.Story",
+        "keywords": [
+          "tech",
+          "melee"
+        ],
+        "type": "triggered",
+        "category": "",
+        "resource": null,
+        "trigger": "GHOSTWIRE.Classes.Operator.Items.KineticRedirect.Trigger",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "selfOrCreature",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "prerequisites": {
+          "dsid": [
+            "corp-milspec"
+          ],
+          "value": "",
+          "level": null
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 1,
+              "multiple": false
+            },
+            "description": "GHOSTWIRE.Classes.Operator.Items.KineticRedirect.Effect_spend00000000000",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Operator.Items.KineticRedirect.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        }
+      },
+      "folder": "yy6thXe1W7LlID0F",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.r12FzR7TabVMKH5k"
+    },
+    {
+      "_id": "F2r0lNCpZXl5AbHr",
+      "name": "GHOSTWIRE.Kits.Warframe.Signature.Name",
+      "type": "ability",
+      "img": "icons/skills/melee/shield-block-gray-orange.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "10-kits",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hold-the-line",
+        "story": "GHOSTWIRE.Kits.Warframe.Signature.Story",
+        "keywords": [
+          "melee",
+          "strike",
+          "weapon"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creature",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might",
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "PYG6jE7eJ6CbbxDI": {
+              "type": "damage",
+              "_id": "PYG6jE7eJ6CbbxDI",
+              "damage": {
+                "tier1": {
+                  "value": "3 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "6 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "9 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "name": "",
+              "img": null,
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Kits.Warframe.Signature.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "BE4frWP9fcIOBAoH",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.F2r0lNCpZXl5AbHr"
+    },
+    {
+      "_id": "3t5oRaCIWuHaazPt",
+      "name": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineCorpMilspec.Name",
+      "type": "feature",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineCorpMilspec.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "01-operator",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "growing-adrenaline-corp-milspec",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "yy6thXe1W7LlID0F",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [
+        {
+          "_id": "vhYHJVHcRjlrR8gJ",
+          "name": "12 Adrenaline",
+          "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+          "type": "abilityModifier",
+          "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+          "disabled": true,
+          "system": {
+            "changes": [
+              {
+                "key": "forced.bonuses.push",
+                "type": "add",
+                "value": "@M",
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "forced.bonuses.pull",
+                "type": "add",
+                "value": "@M",
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "forced.bonuses.slide",
+                "type": "add",
+                "value": "@M",
+                "phase": "initial",
+                "priority": null
+              }
+            ],
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            },
+            "filters": {
+              "keywords": []
+            }
+          },
+          "start": null,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p>",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "showIcon": 1,
+          "flags": {},
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.3t5oRaCIWuHaazPt.vhYHJVHcRjlrR8gJ"
+        },
+        {
+          "_id": "qC9bPoMq9HkAyLBk",
+          "name": "6 Adrenaline",
+          "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+          "type": "base",
+          "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+          "disabled": true,
+          "system": {
+            "changes": [
+              {
+                "key": "system.characteristics.might.edges",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ],
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "start": null,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>You gain an edge on Physique tests.</p>",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "showIcon": 1,
+          "flags": {},
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.3t5oRaCIWuHaazPt.qC9bPoMq9HkAyLBk"
+        },
+        {
+          "_id": "CRhRstiTWzk3pZ42",
+          "name": "10 Adrenaline",
+          "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+          "type": "base",
+          "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+          "disabled": true,
+          "system": {
+            "changes": [
+              {
+                "key": "system.characteristics.might.edges",
+                "type": "add",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              }
+            ],
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "start": null,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>You have a double edge on Physique tests.</p>",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "showIcon": 1,
+          "flags": {},
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.3t5oRaCIWuHaazPt.CRhRstiTWzk3pZ42"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.3t5oRaCIWuHaazPt"
+    },
+    {
+      "_id": "9DCQlsPL3hoRm4D4",
+      "name": "GHOSTWIRE.Gear.Items.MilspecBattledress.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.MilspecBattledress.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "milspec-battledress",
+        "kind": "armor",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "heavy"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "2qZfMaSsil5Kmh4e",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 5000,
+            "modSlots": 4,
+            "tags": [],
+            "modFamily": [
+              "armor"
+            ],
+            "armorClass": "heavy",
+            "staminaByEchelon": [
+              12,
+              16,
+              21,
+              27
+            ]
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "JUVqEH9F0vCRBosx",
+          "name": "No Kit — Echelon 1 (+12 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "description": "<p>Worn with no Kit at Echelon 1: +12 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 12,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.JUVqEH9F0vCRBosx"
+        },
+        {
+          "_id": "fJ7q6SL8knV5CBPY",
+          "name": "No Kit — Echelon 2 (+16 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "description": "<p>Worn with no Kit at Echelon 2: +16 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 16,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.fJ7q6SL8knV5CBPY"
+        },
+        {
+          "_id": "BnAIxvqCvcUf9AV6",
+          "name": "No Kit — Echelon 3 (+21 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "description": "<p>Worn with no Kit at Echelon 3: +21 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 21,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.BnAIxvqCvcUf9AV6"
+        },
+        {
+          "_id": "p8ZLdCi8SMmv1Y2I",
+          "name": "No Kit — Echelon 4 (+27 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "description": "<p>Worn with no Kit at Echelon 4: +27 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 27,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.p8ZLdCi8SMmv1Y2I"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4"
+    },
+    {
+      "_id": "mj0spta0PfZZ8w4e",
+      "name": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/milspec-battle-rifle.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "milspec-battle-rifle",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 3,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "R7lXYyuPF9VB7TDU",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 9000,
+            "modSlots": 4,
+            "tags": [
+              "Two-handed",
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "kinetic",
+            "range": "Medium",
+            "weaponBand": "medium"
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.mj0spta0PfZZ8w4e"
+    },
+    {
+      "_id": "FuMcIxhwJ7WHeq5p",
+      "name": "GHOSTWIRE.Gear.Items.HandCannon.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hand-cannon.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.HandCannon.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hand-cannon",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "KhSKz1lL1eGjku6B",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 900,
+            "modSlots": 2,
+            "tags": [
+              "Loud"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light"
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.FuMcIxhwJ7WHeq5p"
+    },
+    {
+      "_id": "HTYwN7CmLESe47iB",
+      "name": "GHOSTWIRE.Gear.Items.PocketSec.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.PocketSec.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "pocket-sec",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "onsSFZfzViokfkSC",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 500,
+            "modSlots": 2,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.HTYwN7CmLESe47iB"
+    },
+    {
+      "_id": "Rv0BEDaaCZ14x6GV",
+      "name": "GHOSTWIRE.Gear.Items.StimPatch.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StimPatch.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "stim-patch",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "6OQ8YIl853VINDDp",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 350,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.Rv0BEDaaCZ14x6GV"
+    },
+    {
+      "_id": "cTpPZ97zeRzqECqV",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "ahyua5QA62c6lUKF",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.cTpPZ97zeRzqECqV"
+    },
+    {
+      "_id": "CMX7J8BMi2Gs7pvd",
+      "name": "GHOSTWIRE.Gear.Items.FakeSinBasic.Name",
+      "type": "treasure",
+      "img": "icons/commodities/currency/coins-plain-stack-gold.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.FakeSinBasic.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "fake-sin-basic",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "fXBOmsant25Ehz9I",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 1000,
+            "modSlots": 0,
+            "tags": [
+              "Concealable"
+            ]
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.CMX7J8BMi2Gs7pvd"
+    },
+    {
+      "_id": "HC2xvD49OLZMG4Jm",
+      "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.WiredReflexes.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wired-reflexes",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "nervous",
+            "integrity": 6,
+            "price": 12000,
+            "availability": "military"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "2OfPdZYgW9wBodxZ",
+          "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+          "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.HC2xvD49OLZMG4Jm",
+          "description": "GHOSTWIRE.Chrome.WiredReflexes.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.movement.disengage",
+                "type": "add",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.movement.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.HC2xvD49OLZMG4Jm.2OfPdZYgW9wBodxZ"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.HC2xvD49OLZMG4Jm"
+    },
+    {
+      "_id": "em8EMmH1hczBjSl8",
+      "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/metal-pistons.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.CyberlimbArm.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyberlimb-arm",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "arms",
+            "integrity": 5,
+            "price": 7500,
+            "availability": "restricted"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "bkJLDQroTx7kVNpw",
+          "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+          "img": "icons/commodities/tech/metal-pistons.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.em8EMmH1hczBjSl8",
+          "description": "GHOSTWIRE.Chrome.CyberlimbArm.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "abilityModifier",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "filters": {
+              "keywords": [
+                "melee",
+                "weapon"
+              ]
+            },
+            "changes": [
+              {
+                "key": "damage.bonuses.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.em8EMmH1hczBjSl8.bkJLDQroTx7kVNpw"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.em8EMmH1hczBjSl8"
+    },
+    {
+      "_id": "6lJRb7QoHtEEsnAG",
+      "name": "GHOSTWIRE.Chrome.MuscleBoneLacing.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/cable-armored-reticulated.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.MuscleBoneLacing.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "muscle-bone-lacing",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "torso",
+            "integrity": 5,
+            "price": 6000,
+            "availability": "restricted"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "v0YFsYbs7Dsyi2Lu",
+          "name": "GHOSTWIRE.Chrome.MuscleBoneLacing.Name",
+          "img": "icons/commodities/tech/cable-armored-reticulated.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.6lJRb7QoHtEEsnAG",
+          "description": "GHOSTWIRE.Chrome.MuscleBoneLacing.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.combat.stability",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.skills.modifiers.athletics.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.6lJRb7QoHtEEsnAG.v0YFsYbs7Dsyi2Lu"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.6lJRb7QoHtEEsnAG"
+    },
+    {
+      "_id": "hNnidLQ8UJQaJum6",
+      "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.DermalPlating.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "dermal-plating",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "torso",
+            "integrity": 4,
+            "price": 4000,
+            "availability": "restricted"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "QRhVsvzqzUoali2u",
+          "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+          "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.hNnidLQ8UJQaJum6",
+          "description": "GHOSTWIRE.Chrome.DermalPlating.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.damage.immunities.all",
+                "type": "upgrade",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.hNnidLQ8UJQaJum6.QRhVsvzqzUoali2u"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.hNnidLQ8UJQaJum6"
+    },
+    {
+      "_id": "21JwNrMtsLgToOPW",
+      "name": "GHOSTWIRE.Chrome.CyberEyes.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.CyberEyes.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyber-eyes",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "eyes",
+            "integrity": 2,
+            "price": 2000,
+            "availability": "professional"
+          },
+          "sightGrant": {
+            "modes": [
+              {
+                "id": "basicSight",
+                "range": 10,
+                "enabled": true
+              },
+              {
+                "id": "seeAll",
+                "range": 5,
+                "enabled": true
+              }
+            ],
+            "visionMode": "darkvision",
+            "priority": 1,
+            "claims": [
+              "nightOptics",
+              "thermal"
+            ]
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "XFYA8ZbtiPqVQffy",
+          "name": "GHOSTWIRE.Chrome.CyberEyes.Name",
+          "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.21JwNrMtsLgToOPW",
+          "description": "GHOSTWIRE.Chrome.CyberEyes.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.perception.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.21JwNrMtsLgToOPW.XFYA8ZbtiPqVQffy"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.21JwNrMtsLgToOPW"
+    },
+    {
+      "_id": "ff3ZqQ2yJBMoeUSs",
+      "name": "GHOSTWIRE.Chrome.CyberEars.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/communications-dish-tan.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.CyberEars.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyber-ears",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "ears",
+            "integrity": 2,
+            "price": 1800,
+            "availability": "professional"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "2uwY2IayVvHnsoQD",
+          "name": "GHOSTWIRE.Chrome.CyberEars.Name",
+          "img": "icons/commodities/tech/communications-dish-tan.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.ff3ZqQ2yJBMoeUSs",
+          "description": "GHOSTWIRE.Chrome.CyberEars.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.perception.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.ff3ZqQ2yJBMoeUSs.2uwY2IayVvHnsoQD"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.ff3ZqQ2yJBMoeUSs"
+    },
+    {
+      "_id": "cSMtKRqIn2MHv0aV",
+      "name": "GHOSTWIRE.Chrome.Datajack.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/plug.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.Datajack.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "datajack",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "chrome": {
+            "grade": "standard",
+            "location": "head",
+            "integrity": 1,
+            "price": 500,
+            "availability": "street"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "qdPsT3BJeSHFAjAk",
+          "name": "GHOSTWIRE.Chrome.Datajack.Name",
+          "img": "icons/commodities/tech/plug.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.cSMtKRqIn2MHv0aV",
+          "description": "GHOSTWIRE.Chrome.Datajack.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": []
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.cSMtKRqIn2MHv0aV.qdPsT3BJeSHFAjAk"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.cSMtKRqIn2MHv0aV"
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pregen": "kade-orrin-vex",
+      "biSpent": 25,
+      "biRemaining": 0,
+      "integrity": {
+        "value": 0,
+        "max": 25
+      },
+      "taint": 0,
+      "corruptionHistory": ""
+    }
+  }
+}

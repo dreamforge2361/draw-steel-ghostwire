@@ -102,7 +102,9 @@ note(!classSignatures.pool.map(idOf).some(id => [rebuke._id, drain._id].includes
   "no free strike rides in the always-granted pool");
 note(!signatureAbilities.pool.map(idOf).some(id => [rebuke._id, drain._id, blessed._id].includes(id)),
   "and none of the three is still an optional pick");
-note(signatureAbilities.pool.length === 5, `the optional pool is the remaining ${signatureAbilities.pool.length}`);
+// 0.3.124 (A1) took Lightfall out of the pool as well, leaving Sacrificial Offer, Word of Rebuke,
+// Warrior's Prayer and Wither. tools/scout-sp-wave-03124-smoke.mjs owns that lock; this only counts.
+note(signatureAbilities.pool.length === 4, `the optional pool is the remaining ${signatureAbilities.pool.length}`);
 note(!/Blessed Light/.test(signatureAbilities.description), "the Quick Build note no longer pushes Blessed Light");
 note(/Rebuke/.test(pactStrike.description) && /Drain/.test(pactStrike.description),
   "the Pact Strike copy names both halves");

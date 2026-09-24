@@ -179,7 +179,7 @@ Your hardened hide, fur, or feathers grant you **damage immunity equal to your l
 ### Purchased Traits — 3 ancestry points
 
 - **Pack Guard (1):** Whenever you or an adjacent creature takes damage from a strike, you can use a triggered action to guard against the blow, reducing that damage by an amount equal to your level.
-- **Feral Cry (2):** Signature ability — a 1 burst roar/shriek/howl. *Power Roll + Physique or Persona:* **≤11:** 2 damage · **12–16:** 5 damage, push 1 · **17+:** 7 damage, push 2.
+- **Feral Cry (2):** Signature ability — a 1 burst roar/shriek/howl. *Power Roll + Physique or Persona:* **≤11:** 1 damage · **12–16:** 2 damage, push 1 · **17+:** 3 damage, push 2. *(0.3.124: the damage was 2 / 5 / 7; the push riders are unchanged.)*
 - **Savage Burst (2):** Signature ability — a 3 cube within 1. *Power Roll + Physique or Persona:* **≤11:** 2 damage · **12–16:** 4 damage · **17+:** 6 damage. Choose the damage type from acid, cold, corruption, fire, lightning, or poison.
 - **Layered Hide (1):** Select one damage immunity from Beast-Hide; you always have this immunity in addition to Beast-Hide’s current choice.
 - **Beast’s Resolve (1):** As a maneuver, recite your resolve. Until the start of your next turn, whenever you make a saving throw, you succeed on a **4 or higher**.

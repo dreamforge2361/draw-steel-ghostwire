@@ -246,9 +246,6 @@
         },
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.t5QxYEpwOt6QsFli"
-          },
-          {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Cm9nHvx8QfHMGE1g"
           },
           {
@@ -261,7 +258,7 @@
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NJh7nN6m00ZDwC01"
           }
         ],
-        "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Word of Rebuke follows your pact. (<em>Quick Build:</em> Warrior’s Prayer, Lightfall.)</p>",
+        "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Word of Rebuke follows your pact. Sacrificial Offer is Dark Pact only — a Light priest never sees it. (<em>Quick Build:</em> Warrior’s Prayer, Word of Rebuke.)</p>",
         "chooseN": 2,
         "sort": 10000,
         "additional": {

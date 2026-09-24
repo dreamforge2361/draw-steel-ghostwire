@@ -563,9 +563,6 @@
             },
             "pool": [
               {
-                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.t5QxYEpwOt6QsFli"
-              },
-              {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Cm9nHvx8QfHMGE1g"
               },
               {
@@ -578,7 +575,7 @@
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NJh7nN6m00ZDwC01"
               }
             ],
-            "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Word of Rebuke follows your pact. (<em>Quick Build:</em> Warrior’s Prayer, Lightfall.)</p>",
+            "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Word of Rebuke follows your pact. Sacrificial Offer is Dark Pact only — a Light priest never sees it. (<em>Quick Build:</em> Warrior’s Prayer, Word of Rebuke.)</p>",
             "chooseN": 2,
             "sort": 10000,
             "additional": {
@@ -2542,36 +2539,37 @@
       "_key": "!actors.items!vC7J1m09xg3kbWkP.75cOal6Bov8zCIYi"
     },
     {
-      "_id": "t5QxYEpwOt6QsFli",
-      "name": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Name",
+      "_id": "iPKw8vOyQCET4mvv",
+      "name": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Name",
       "type": "ability",
-      "img": "icons/magic/light/explosion-star-large-orange.webp",
+      "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
       "system": {
         "source": {
           "book": "Ghostwire Core Rulebook",
           "page": "07-street-priest",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "priest-lightfall",
-        "story": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Story",
+        "_dsid": "word-of-rebuke",
+        "story": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Story",
         "keywords": [
-          "area",
-          "magic"
+          "magic",
+          "melee",
+          "strike"
         ],
         "type": "main",
         "category": "signature",
         "resource": null,
         "trigger": "",
         "distance": {
-          "type": "burst",
-          "primary": "2",
+          "type": "melee",
+          "primary": "1",
           "secondary": "1",
           "tertiary": "1"
         },
         "damageDisplay": "melee",
         "target": {
-          "type": "enemy",
-          "value": null,
+          "type": "creatureObject",
+          "value": 1,
           "custom": ""
         },
         "power": {
@@ -2583,17 +2581,15 @@
             "reactive": false
           },
           "effects": {
-            "HLnyBz4SoxcAYzYC": {
+            "IbNW9eeV8lLMeRnW": {
               "name": "",
               "img": null,
               "type": "damage",
-              "_id": "HLnyBz4SoxcAYzYC",
+              "_id": "IbNW9eeV8lLMeRnW",
               "damage": {
                 "tier1": {
-                  "value": "2",
-                  "types": [
-                    "holy"
-                  ],
+                  "value": "3 + @chr",
+                  "types": [],
                   "ignoredImmunities": [],
                   "potency": {
                     "value": "@potency.weak",
@@ -2601,10 +2597,8 @@
                   }
                 },
                 "tier2": {
-                  "value": "3",
-                  "types": [
-                    "holy"
-                  ],
+                  "value": "5 + @chr",
+                  "types": [],
                   "ignoredImmunities": [],
                   "potency": {
                     "value": "@potency.average",
@@ -2612,10 +2606,8 @@
                   }
                 },
                 "tier3": {
-                  "value": "5",
-                  "types": [
-                    "holy"
-                  ],
+                  "value": "8 + @chr",
+                  "types": [],
                   "ignoredImmunities": [],
                   "potency": {
                     "value": "@potency.strong",
@@ -2624,6 +2616,36 @@
                 }
               },
               "sort": 0
+            },
+            "9CQVtPvTX384dVHX": {
+              "name": "",
+              "img": null,
+              "type": "other",
+              "_id": "9CQVtPvTX384dVHX",
+              "other": {
+                "tier1": {
+                  "display": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Tier1",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Tier2",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Tier3",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 100
             }
           }
         },
@@ -2635,7 +2657,7 @@
           "before0000000000": {
             "_id": "before0000000000",
             "type": "base",
-            "description": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Effect_before0000000000",
+            "description": "GHOSTWIRE.Classes.StreetPriest.Items.WordOfRebuke.Effect_before0000000000",
             "before": true,
             "name": "",
             "img": null,
@@ -2657,21 +2679,21 @@
       },
       "flags": {},
       "effects": [],
-      "_key": "!actors.items!vC7J1m09xg3kbWkP.t5QxYEpwOt6QsFli"
+      "_key": "!actors.items!vC7J1m09xg3kbWkP.iPKw8vOyQCET4mvv"
     },
     {
-      "_id": "Cm9nHvx8QfHMGE1g",
-      "name": "GHOSTWIRE.Classes.StreetPriest.Items.SacrificialOffer.Name",
+      "_id": "ug7F7bHjRFR32lAU",
+      "name": "GHOSTWIRE.Classes.StreetPriest.Items.WarriorsPrayer.Name",
       "type": "ability",
-      "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+      "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
       "system": {
         "source": {
           "book": "Ghostwire Core Rulebook",
           "page": "07-street-priest",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "sacrificial-offer",
-        "story": "GHOSTWIRE.Classes.StreetPriest.Items.SacrificialOffer.Story",
+        "_dsid": "warriors-prayer",
+        "story": "GHOSTWIRE.Classes.StreetPriest.Items.WarriorsPrayer.Story",
         "keywords": [
           "magic",
           "ranged",
@@ -2702,16 +2724,16 @@
             "reactive": false
           },
           "effects": {
-            "0vfyN0D15e9ydpRk": {
+            "M9v8mf6idBgHWerX": {
               "name": "",
               "img": null,
               "type": "damage",
-              "_id": "0vfyN0D15e9ydpRk",
+              "_id": "M9v8mf6idBgHWerX",
               "damage": {
                 "tier1": {
-                  "value": "2 + @chr",
+                  "value": "3 + @chr",
                   "types": [
-                    "corruption"
+                    "holy"
                   ],
                   "ignoredImmunities": [],
                   "potency": {
@@ -2720,9 +2742,9 @@
                   }
                 },
                 "tier2": {
-                  "value": "4 + @chr",
+                  "value": "6 + @chr",
                   "types": [
-                    "corruption"
+                    "holy"
                   ],
                   "ignoredImmunities": [],
                   "potency": {
@@ -2731,9 +2753,9 @@
                   }
                 },
                 "tier3": {
-                  "value": "6 + @chr",
+                  "value": "9 + @chr",
                   "types": [
-                    "corruption"
+                    "holy"
                   ],
                   "ignoredImmunities": [],
                   "potency": {
@@ -2754,7 +2776,7 @@
           "before0000000000": {
             "_id": "before0000000000",
             "type": "base",
-            "description": "GHOSTWIRE.Classes.StreetPriest.Items.SacrificialOffer.Effect_before0000000000",
+            "description": "GHOSTWIRE.Classes.StreetPriest.Items.WarriorsPrayer.Effect_before0000000000",
             "before": true,
             "name": "",
             "img": null,
@@ -2776,7 +2798,7 @@
       },
       "flags": {},
       "effects": [],
-      "_key": "!actors.items!vC7J1m09xg3kbWkP.Cm9nHvx8QfHMGE1g"
+      "_key": "!actors.items!vC7J1m09xg3kbWkP.ug7F7bHjRFR32lAU"
     },
     {
       "_id": "6mCpAd4O9YwfxZQI",
