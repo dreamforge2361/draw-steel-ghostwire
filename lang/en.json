@@ -55,9 +55,10 @@
         "EffectName": "Taking Cover",
         "EffectDescription": "<p>Ability rolls made against you have a double bane until the start of your next turn. You have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. You gain no benefit from this while another creature is taunted by you.</p>"
       },
-      "PatchUp": {
-        "Name": "Patch Up",
-        "Description": "<p>A creature who uses the Patch Up main action slaps on a trauma patch, jabs a stim, or talks an adjacent creature through the pain to keep them in the fight. The target creature can spend a Recovery to regain Stamina, or can make a saving throw against one effect they are suffering that is ended by a saving throw.</p>"
+      "FieldTriage": {
+        "Name": "Field Triage",
+        "Story": "Rapid triage under fire — mark the wounded, keep them standing.",
+        "Description": "<p><strong>Cost:</strong> 2 Reagents. <strong>Type:</strong> Maneuver. <strong>Distance:</strong> Ranged 2 (10 ft). <strong>Target:</strong> Up to 3 allies.</p><p>You mark up to 3 allies within 10 feet. Each marked ally may spend a <strong>Recovery as a free triggered action</strong> once before the end of your next turn. The Recovery is triggered, not automatic — each ally chooses whether and when to use it.</p>"
       },
       "SpotTarget": {
         "Name": "Spot Target",
