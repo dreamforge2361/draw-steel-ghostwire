@@ -47,7 +47,16 @@
         "tags": [
           "Consumable"
         ],
-        "consumable": true
+        "consumable": true,
+        "consumableUse": {
+          "action": "maneuver",
+          "spend": true,
+          "crash": false,
+          "target": "selfOrAlly",
+          "recoveries": 2,
+          "clearCondition": true,
+          "deleteAtZero": true
+        }
       }
     }
   }

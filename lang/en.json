@@ -4586,7 +4586,8 @@
         },
         "FieldSurgeryKit": {
           "Name": "Field Surgery Kit",
-          "Description": "<p><em>Field Surgery Kit · Trauma Kit · portable surgical suite</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> —</p><p><strong>Profile:</strong> Reusable: stabilize a dying (0-Stamina) ally; edge on First-Aid/Restorative checks.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 3, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
+          "Description": "<p><em>Field Surgery Kit · Trauma Kit · portable surgical suite</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> —</p><p><strong>Profile:</strong> <strong>Maneuver</strong>, touch, one ally (or yourself). <strong>Stabilize</strong> a dying target: the dying strikes stop and they sit at <strong>1 Stamina</strong>. Used on somebody who is not dying it does nothing and costs nothing. <strong>Reusable</strong> — it is never spent.</p><p><strong>While you carry it:</strong> an <strong>edge</strong> on Medicine and Medicine Lore tests (First-Aid / Restorative work). The edge arrives and leaves with the kit.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 3, but no mods fit this item, so it has 0 slots until a mod family exists.</p>",
+          "EffectDescription": "<p>You are carrying a full trauma kit. Medicine and Medicine Lore tests — First Aid, Restorative work, reading a wound — gain an <strong>edge</strong>.</p>"
         },
         "AntidoteDose": {
           "Name": "Antidote Dose",
@@ -4594,7 +4595,7 @@
         },
         "SlapDocKit": {
           "Name": "Slap-Doc Kit",
-          "Description": "<p><em>Slap-Doc Kit · Nanite Med-Foam · autonomous nanosurgical canister</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥8,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Heals 2 Recovery values + clears one physical condition; the crew's emergency button.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Slap-Doc Kit · Nanite Med-Foam · autonomous nanosurgical canister</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥8,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> <strong>Maneuver</strong>, touch, one ally (or yourself). Gives back <strong>2 spent Recoveries</strong> — never above their maximum — and clears <strong>one physical condition</strong> you pick from those the target has: Bleeding, Dazed, Prone, Restrained, Slowed or Weakened. Fear, taunts and surprise are not physical, and neither is being held. The crew's emergency button.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
         },
         "StandardRounds": {
           "Name": "Standard Rounds",
@@ -8649,9 +8650,29 @@
       "Crash": "{actor} comes down off {item}.",
       "Chat": {
         "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>",
-        "Recoveries": " <em>Recovers {count} spent Recovery (now {value}).</em>"
+        "Recoveries": " <em>Recovers {count} spent Recovery (now {value}).</em>",
+        "UsedOn": "<p><strong>{actor}</strong> works <strong>{item}</strong> on <strong>{target}</strong>.</p>",
+        "Stabilized": " <em>{actor} is stabilized at 1 Stamina — no more dying strikes.</em>",
+        "Cleared": " <em>Cleared: {condition}.</em>"
       },
-      "UsedThisCombat": "{item} has already been used this combat."
+      "UsedThisCombat": "{item} has already been used this combat.",
+      "AbilityDescriptionAlly": "<p>Work the kit on a target within reach — yourself, or one ally you have targeted. Target nobody and it resolves on you.</p><p><em>This ability is generated from the kit in your inventory.</em></p>",
+      "Effects": {
+        "Stabilize": "<p><strong>Stabilize.</strong> A dying target stops taking dying strikes and sits at <strong>1 Stamina</strong>. If the target is not dying, nothing happens and nothing is spent.</p>",
+        "Recoveries": "<p><strong>Recoveries.</strong> The target gets <strong>{count}</strong> spent Recoveries back — never above their maximum, and none at all if they have spent none.</p>",
+        "ClearCondition": "<p><strong>Clear a condition.</strong> Pick <strong>one</strong> physical condition on the target — Bleeding, Dazed, Prone, Restrained, Slowed or Weakened — and it ends. Fear, taunts and surprise are not physical; neither is being held.</p>",
+        "TargetHint": "<p><em>Target one token before you use this. With nothing targeted it resolves on you; with more than one it refuses.</em></p>",
+        "Reusable": "<p><em>Reusable — using this does not spend the kit.</em></p>"
+      },
+      "UsedOn": "{actor} works {item} on {target}.",
+      "NotDying": "{actor} is not dying — {item} has nothing to stabilize.",
+      "TooManyTargets": "Target exactly one token (or none, for yourself) before using {item}.",
+      "ClearCondition": {
+        "Title": "Clear a physical condition",
+        "Hint": "The foam can burn off one thing {actor} is suffering from. Which?",
+        "Label": "Condition",
+        "Confirm": "Clear it"
+      }
     },
     "Ritual": {
       "Menu": {
