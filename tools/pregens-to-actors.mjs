@@ -42,6 +42,7 @@ const MODULE_ID = "draw-steel-ghostwire";
 const OUT = "src/packs/pregens";
 const LOADOUTS = "docs/masters/pregens/loadouts.json";
 const POST_PATCHES = "docs/masters/pregens/post-patches.json";
+const DEFAULT_ITEMS = "docs/masters/pregens/default-items.json";
 // Starting yen on every pregen sheet. scripts/kiosk.mjs spends system.hero.wealth against Gear
 // prices, so this is a balance the table can actually shop with, not a Draw Steel wealth tier.
 const START_WEALTH = 250;
@@ -201,6 +202,58 @@ const GRANT_LEVEL_BY_DSID = buildGrantLevelByDsid(INDEX, idFromUuid);
 const DEFAULT_TARGET_LEVEL = 1;
 
 /**
+ * 0.3.127 (C) — the default abilities every hero walks in with.
+ *
+ * Draw Steel grants these through `ds.CONFIG.hero.defaultItems`, a live Set that Foundry copies onto
+ * an Actor at creation time. The pregens are not created in Foundry, so for nine builds they simply
+ * never got any: no Catch Breath, no Stand Up, no Grab. A player handed Vira's dossier could not
+ * spend a Recovery from her own sheet.
+ *
+ * Two halves, both read from disk so a regen stays reproducible with no Foundry and no Draw Steel
+ * system present:
+ *
+ *  * **Kept stock defaults** — Catch Breath, Escape Grab, Grab, Knockback, Stand Up, Advance,
+ *    Disengage — from the committed snapshot in docs/masters/pregens/default-items.json
+ *    (refreshed by tools/ds-default-items.mjs).
+ *  * **Ghostwire's five swaps** — Drive, Rush, Take Cover, Patch Up, Spot Target — the module's own
+ *    Items under src/packs/abilities/, exactly the compendium ids `DEFAULT_ITEM_SWAPS` in
+ *    scripts/module.mjs substitutes for Ride / Charge / Defend / Heal / Aid Attack at `init`. The
+ *    ids are asserted below rather than assumed, so the two files cannot drift apart silently.
+ *
+ * What is **not** here is as deliberate: the two generic Free Strikes (B44c strips them everywhere,
+ * because every Ghostwire weapon spawns its own attack) and the Matrix Verbs (B117 fires those from
+ * the node applet, not from a sheet).
+ */
+const GW_SWAP_ABILITIES = [
+  ["Xc5MebcXHYG1hdQR", "src/packs/abilities/spot-target.json"],
+  ["Od6u2idYoCRmoDYD", "src/packs/abilities/rush.json"],
+  ["1W0HIoL2SAcbTU6W", "src/packs/abilities/take-cover.json"],
+  ["pJY4ybZUtkH9HDxy", "src/packs/abilities/patch-up.json"],
+  ["Lc7LhoqWg9ydP5Jm", "src/packs/abilities/drive.json"],
+];
+
+/** Abilities that must never reach a pregen sheet, whatever else changes. */
+const FORBIDDEN_DEFAULT_DSIDS = new Set(["melee-free-strike", "ranged-free-strike"]);
+
+function defaultAbilities() {
+  if (!existsSync(DEFAULT_ITEMS)) {
+    throw new Error(`${DEFAULT_ITEMS} is missing — run \`node tools/ds-default-items.mjs\` (Foundry closed) first.`);
+  }
+  const stock = read(DEFAULT_ITEMS).items ?? [];
+  const swaps = GW_SWAP_ABILITIES.map(([, path]) => read(path));
+  // The swap ids are the contract between this file and scripts/module.mjs. Sorted, because the
+  // pairing above is by *file*, and a hand-edit that re-pairs them is exactly the mistake to catch.
+  const expected = GW_SWAP_ABILITIES.map(([id]) => id).sort().join(",");
+  const found = swaps.map(item => item._id).sort().join(",");
+  if (expected !== found) throw new Error(`DEFAULT_ITEM_SWAPS drift: expected ${expected}, found ${found}`);
+
+  const items = [...stock, ...swaps];
+  const bad = items.filter(item => FORBIDDEN_DEFAULT_DSIDS.has(item.system?._dsid));
+  if (bad.length) throw new Error(`default abilities must not include ${bad.map(i => i.system._dsid).join(", ")}`);
+  return items;
+}
+
+/**
  * Walk advancements of every item the hero holds (≤ targetLevel) and collect what they grant:
  * items (recursively), skills and languages. Choices (`chooseN`) are taken in pool order and
  * every one is reported so LOADOUTS.md can record it.
@@ -326,6 +379,7 @@ function deepMerge(target, patch) {
   return target;
 }
 
+const DEFAULT_ABILITIES = defaultAbilities();
 const loadouts = existsSync(LOADOUTS) ? read(LOADOUTS) : {};
 if (!existsSync(LOADOUTS)) console.log(`(no ${LOADOUTS} — building without gear, chrome or languages)`);
 // F4: post-build field patches that are not gear and not roster identity (Taint, Corruption History,
@@ -437,7 +491,10 @@ for (const [i, hero] of ROSTER.entries()) {
   };
 
   const languages = [...new Set([...(loadout.languages ?? []), ...granted.languages])];
-  const items = [...granted.items, ...kitItems].map(s => embed(actorId, s, warn)).filter(Boolean);
+  // 0.3.127 (C): the DS/GW default ability set, last so a class grant of the same id wins the slot.
+  const held = new Set([...granted.items, ...kitItems].map(i => i._id));
+  const defaults = DEFAULT_ABILITIES.filter(item => !held.has(item._id));
+  const items = [...granted.items, ...kitItems, ...defaults].map(s => embed(actorId, s, warn)).filter(Boolean);
   // Draw Steel stores the hero's level on the class Item, not the Actor. This used to run *after*
   // writeFileSync, so it never reached disk (0.1.89 patched the built JSON by hand and 0.1.91 lost
   // it again on Kessic) — it has to happen before the Actor is assembled. (F4)
@@ -504,7 +561,7 @@ for (const [i, hero] of ROSTER.entries()) {
 
   writeFileSync(join(OUT, `${hero.slug}.json`), JSON.stringify(actor, null, 2) + "\n");
 
-  report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, integrityMax, warn, log });
+  report.push({ hero: hero.name, stamina, items: items.length, defaults: defaults.length, skills: granted.skills.length, languages: languages.length, biSpent, integrityMax, warn, log });
 }
 
 lang.GHOSTWIRE.COMPENDIUM.pregens = "Ghostwire Pregens";
@@ -512,7 +569,7 @@ lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Actors: actorsLang
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 
 for (const r of report) {
-  console.log(`${r.hero}: Sta ${r.stamina} · ${r.items} items · ${r.skills} skills · ${r.languages} languages · BI spent ${r.biSpent}/${r.integrityMax}`);
+  console.log(`${r.hero}: Sta ${r.stamina} · ${r.items} items (${r.defaults} default abilities) · ${r.skills} skills · ${r.languages} languages · BI spent ${r.biSpent}/${r.integrityMax}`);
   for (const c of r.log.choices) console.log(`    choice: ${c}`);
   for (const o of r.log.open) console.log(`    open:   ${o}`);
   if (r.warn.length) console.log(`    ! ${r.warn.join("; ")}`);
