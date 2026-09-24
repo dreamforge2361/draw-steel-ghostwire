@@ -1,7 +1,7 @@
 ﻿# Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.121** on main (R2 round pregen canvas tokens).  
-**Just shipped:** **R2 round pregen tokens (0.3.121)**; **R0 Hero sheet Ghostwire skin (0.3.120)**; **F20 Foundry sights + F21 psychic Incursion / undead (0.3.119)**; **F14 Flanking + F15 Cyborg System Crisis + F18 workshop benches + Crit = Draw Steel (0.3.117)**; **S9 Wire-state toggle + F11 Critical feedback + F13 Cover/Conceal + F23 Papermill (0.3.116)**; **G5–G10 Chargen wave (0.3.103)**; **G4 B49 skill-on-weapon rolls + G3 lang / style tokens (0.3.102)**; **I2 / B95 Chargen Wizard — Appendix B clickable on the Hero sheet (0.3.101)**; G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
+**Module now:** **0.3.122** on main (next-build wave — twelve locks).  
+**Just shipped:** **the twelve-lock next-build wave (0.3.122)**; **R2 round pregen tokens (0.3.121)**; **R0 Hero sheet Ghostwire skin (0.3.120)**; **F20 Foundry sights + F21 psychic Incursion / undead (0.3.119)**; **F14 Flanking + F15 Cyborg System Crisis + F18 workshop benches + Crit = Draw Steel (0.3.117)**; **S9 Wire-state toggle + F11 Critical feedback + F13 Cover/Conceal + F23 Papermill (0.3.116)**; **G5–G10 Chargen wave (0.3.103)**; **G4 B49 skill-on-weapon rolls + G3 lang / style tokens (0.3.102)**; **I2 / B95 Chargen Wizard — Appendix B clickable on the Hero sheet (0.3.101)**; G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
 **Next picks:** **S1** → **L1** (locked queue; G4 and G3 both shipped 0.3.102) · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked). **R0 shipped 0.3.120** and closed G3's last two token deferrals with it. **R2 shipped 0.3.121** — next Art pick is **R1 inside-cover** or **R3 B103 palette/gender**.  
 **Playtest:** Deadhead Saturday; Quiet Floor after. **PDF reprint DONE 2026-09-22** (N4) — 0.4.0 @ 0.3.100, 316 pages. **Player-facing scrub reprint DONE 2026-09-23** (N5 + N6 + N7 + the F16 print slice) — 0.4.0 @ 0.3.119, 95.4 MB / 316 pages.  
 **Next print queue:** empty — F16's Foundry lang / pack T1–T5 pass is the remaining scrub, and it is not a print job.
@@ -109,7 +109,33 @@
 
 ---
 
+## 0.3.122 next-build wave — DONE
+
+Michael locked these twelve verbally on **2026-09-23** (brief:
+`docs/directors/_claude-03122-next-build-brief.md`). All twelve shipped in **0.3.122**.
+Director note: `docs/directors/next-build-wave-03122.md`. Foundry checklist:
+`docs/directors/next-build-wave-smoke-03122.md`.
+
+| # | Item | Status |
+|---|---|---|
+| W1 | ~~Changer art pickers off the Stats tab~~ | **DONE** 0.3.122 — form buttons stay on Stats; the six R2 art pickers moved to **Biography**, same flags, same `syncChangerFormArt` |
+| W2 | ~~Director macro: +1 heroic primary~~ | **DONE** 0.3.122 — **Director: +1 Heroic Resource**, targeted-beats-selected, through `system.updateResource(+1)`. Not Surges, not Victories |
+| W3 | ~~Beast-Hide immunity re-pick~~ | **DONE** 0.3.122 — right-click → Draw Steel's own `effectGrant` chooser over the stock six-immunity pool. **Layered Hide** came free |
+| W4 | ~~Wire State Disconnect rung~~ | **DONE** 0.3.122 — four rungs; on-ramp still runs the Connect verb's interface check, off-ramp is free, `jumpOut()` still runs first |
+| W5 | ~~Macro: cycle Wire states~~ | **DONE** 0.3.122 — **Cycle Wire State**, Disconnected → Linked → Overlay → Jumped In → Disconnected, per selected token |
+| W6 | ~~Locked-sheet Stamina tooltip~~ | **DONE** 0.3.122 — class / kit / worn armor / traits / effects, with an honest **Other effects** remainder row |
+| W7 | ~~Changer Darksight 30~~ | **DONE** 0.3.122 — People trait auto-granted by the ancestry, F20 `sightGrant` → stock `basicSight` 30 + `darkvision`; audited into the F20 smoke |
+| W8 | ~~Trade Cant free~~ | **DONE** 0.3.122 — stamped on create, one-time flagged grant for existing worlds, never spent from the chargen budget |
+| W9 | ~~Machine conditions from Integrity~~ | **DONE** 0.3.122 — On Fire / Leaking ≤50%, Crippled ≤25%, Systems Down 0%; one band at a time, statuses + sheet chip. **Stalled / Dead-stick out of scope** |
+| W10 | ~~Rat Beast token size 0.5~~ | **DONE** 0.3.122 — Beast shrinks, Human / Hybrid restore the snapshotted footprint; Wolf / Raven untouched |
+| W11 | ~~Advanced Tactics = 1 Influence~~ | **DONE** 0.3.122 — `resource: null` → `1`; Barak regenerated, `pregen-regen-smoke` still a no-op |
+| W12 | ~~Worn armor Stamina~~ | **DONE** 0.3.122 — `flags.<module>.worn` enables exactly one echelon band; one armor, newest wins, shields included; **kit Stamina untouched** |
+
+---
+
 ## Recently shipped
+- **0.3.122** **Next-build wave** — twelve locks: Changer art → Biography, Director +1 heroic resource, Beast-Hide re-pick, Wire-state Disconnect rung + cycle macro, Stamina tooltip, Changer Darksight 30, free Trade Cant, machine Integrity conditions, Rat Beast 0.5 tokens, Advanced Tactics 1 Influence, worn-armor Stamina
+- **0.3.121** **R2 round pregen canvas tokens** — square sheet portraits and round 1024² canvas tokens split for good
 - **0.3.120** **R0 Hero sheet Ghostwire skin** — deep ink + cold steel, GHOSTWIRE watermark, wire frame, corner sigil, ember on Integrity; G3's tracking ladder / panel ramp / wire-state tokens closed
 - **0.3.119** **F20** Foundry sights wired to `detectionModes` + **F21** psychic Incursion / undead for the Cortical Firewall
 - **0.3.117** **F14 Flanking** + **F15 Cyborg System Crisis** + **F18 workshop benches** + Crit = natural 19/20 at tier 3

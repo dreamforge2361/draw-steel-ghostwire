@@ -1,0 +1,50 @@
+{
+  "_id": "GrpBmxkUswQon6x8",
+  "_key": "!items!GrpBmxkUswQon6x8",
+  "name": "GHOSTWIRE.Peoples.Changer.Darksight.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/perception/eye-slit-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.Darksight.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "changer-darksight",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "basicSight",
+            "range": 30,
+            "enabled": true
+          }
+        ],
+        "visionMode": "darkvision",
+        "priority": 1,
+        "claims": [
+          "nightOptics"
+        ]
+      }
+    }
+  }
+}

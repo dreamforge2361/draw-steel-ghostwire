@@ -19,6 +19,7 @@
 
 import { WEALTH_PATH, catalogPrice, formatYen, getWealth, planPurchase } from "./kiosk.mjs";
 import { packageDsids } from "./kit-grants.mjs";
+import { TRADE_CANT_KEY } from "./languages.mjs";
 // VOIDMARK is reached through `module.api.voidmark` rather than imported: scripts/voidmark.mjs destructures
 // `foundry.applications.api` at module scope, and this file has to stay importable in plain Node for the smoke.
 
@@ -344,6 +345,25 @@ export function languagePickBudget(advancements = []) {
     else total += Math.max(1, adv.languages?.choices?.length ?? adv.choices?.length ?? 1);
   }
   return Math.max(total, 1);
+}
+
+/**
+ * Trade Cant is free (0.3.122 lock), so it never counts against the language budget.
+ *
+ * Every hero is handed `caelian` on the create-Actor path in scripts/module.mjs. If the Wizard
+ * counted it like any other entry, every runner would arrive at this step with their one free pick
+ * already spent — which is exactly the bug the lock exists to prevent.
+ */
+export const FREE_LANGUAGES = Object.freeze([TRADE_CANT_KEY]);
+
+/** Is this language granted rather than picked? */
+export function isFreeLanguage(key) {
+  return FREE_LANGUAGES.includes(key);
+}
+
+/** The languages that actually cost a pick. */
+export function spentLanguages(known = []) {
+  return [...known].filter(key => !isFreeLanguage(key));
 }
 
 /** Wrapper over the kiosk's plan, so the wizard and the shop debit ¥ by the same arithmetic. */
@@ -1145,10 +1165,16 @@ function defineChargenWizardApp() {
 
         case "languages": {
           const budget = spineLanguageBudget(actor);
-          const count = facts.languages.length;
+          // Trade Cant is granted, not picked, so it is listed but never counted (0.3.122).
+          const count = spentLanguages(facts.languages).length;
           const atCap = Number.isFinite(budget) && budget > 0 && count >= budget && !game.user.isGM;
           context.known = facts.languages
-            .map(key => ({ key, label: languageLabel(key), disabled: context.readOnly }))
+            .map(key => ({
+              key,
+              label: languageLabel(key),
+              free: isFreeLanguage(key),
+              disabled: context.readOnly || isFreeLanguage(key),
+            }))
             .sort((a, b) => a.label.localeCompare(b.label, game.i18n.lang));
           context.addOptions = atCap ? [] : addableLanguages(facts.languages);
           context.acked = acked("languages");
@@ -1460,7 +1486,7 @@ function defineChargenWizardApp() {
       if (!actor?.isOwner || !key) return;
       const known = new Set(actor.system.biography?.languages ?? []);
       const budget = spineLanguageBudget(actor);
-      if (!game.user.isGM && budget > 0 && known.size >= budget) {
+      if (!game.user.isGM && budget > 0 && spentLanguages(known).length >= budget) {
         ui.notifications.warn(loc("Languages.BudgetSpent", { budget }));
         return;
       }
@@ -1472,8 +1498,13 @@ function defineChargenWizardApp() {
     static async #onRemoveLanguage(event, target) {
       const actor = this.actor;
       if (!actor?.isOwner) return;
+      const key = target.dataset.language;
+      if (isFreeLanguage(key)) {
+        ui.notifications.warn(loc("Languages.FreeLocked", { label: languageLabel(key) }));
+        return;
+      }
       const known = new Set(actor.system.biography?.languages ?? []);
-      known.delete(target.dataset.language);
+      known.delete(key);
       await actor.update({ "system.biography.languages": [...known] });
       this.render();
     }
@@ -1635,7 +1666,8 @@ async function resetChargenStep(actor, step) {
       ));
       break;
     case "languages":
-      await actor.update({ "system.biography.languages": [] });
+      // Reset clears the picks, not the grant — Trade Cant survives a Start Over.
+      await actor.update({ "system.biography.languages": [...FREE_LANGUAGES] });
       acked.delete("languages");
       break;
     case "resources":

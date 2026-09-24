@@ -1,0 +1,20 @@
+{
+  "_id": "gwDirHeroicPlus1",
+  "_key": "!macros!gwDirHeroicPlus1",
+  "name": "GHOSTWIRE.Resources.Director.MacroName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.directorHeroicPlusOne) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Director: +1 Heroic Resource.\");\n} else {\n  api.directorHeroicPlusOne();\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "heroic-plus-one"
+    }
+  }
+}

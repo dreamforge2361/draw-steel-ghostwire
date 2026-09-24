@@ -1,0 +1,20 @@
+{
+  "_id": "gwCycleWireState",
+  "_key": "!macros!gwCycleWireState",
+  "name": "GHOSTWIRE.WireToggle.Cycle.MacroName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/magic/lightning/orb-ball-purple.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.cycleWireStateForSelection) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Cycle Wire State.\");\n} else {\n  api.cycleWireStateForSelection();\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "wire-state-cycle"
+    }
+  }
+}

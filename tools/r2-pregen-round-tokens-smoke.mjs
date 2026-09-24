@@ -108,13 +108,20 @@ console.log("\n6) syncChangerFormArt reads *Token for the canvas and *Art for th
 // indexOf("\n}\n") would slice the function body down to nothing and "pass" on an empty string.
 const readText = p => readFileSync(p, "utf8").replace(/\r\n/g, "\n");
 const module_ = readText("scripts/module.mjs");
+// 0.3.122 moved the two key maps out to scripts/changer-forms.mjs (the Foundry-free half), so the
+// Beast-Form token-size helper could be unit-tested in Node. The maps themselves are unchanged —
+// assert them where they live now, and assert module.mjs imports rather than re-declares them.
+const forms = readText("scripts/changer-forms.mjs");
 const fn = module_.slice(module_.indexOf("async function syncChangerFormArt"));
 const body = fn.slice(0, fn.indexOf("\n}\n") + 2);
 ok(body.length > 400, `syncChangerFormArt body located (${body.length} chars)`);
-ok(/CHANGER_TOKEN_KEYS\s*=\s*\{\s*human:\s*"humanToken",\s*hybrid:\s*"hybridToken",\s*beast:\s*"beastToken"\s*\}/.test(module_),
-  "module.mjs declares the humanToken / hybridToken / beastToken map");
-ok(/CHANGER_ART_KEYS\s*=\s*\{\s*human:\s*"humanArt",\s*hybrid:\s*"hybridArt",\s*beast:\s*"beastArt"\s*\}/.test(module_),
-  "module.mjs declares the humanArt / hybridArt / beastArt map");
+ok(/CHANGER_TOKEN_KEYS\s*=\s*Object\.freeze\(\{\s*human:\s*"humanToken",\s*hybrid:\s*"hybridToken",\s*beast:\s*"beastToken"\s*\}\)/.test(forms),
+  "changer-forms.mjs declares the humanToken / hybridToken / beastToken map");
+ok(/CHANGER_ART_KEYS\s*=\s*Object\.freeze\(\{\s*human:\s*"humanArt",\s*hybrid:\s*"hybridArt",\s*beast:\s*"beastArt"\s*\}\)/.test(forms),
+  "changer-forms.mjs declares the humanArt / hybridArt / beastArt map");
+ok(/import \{[\s\S]*?CHANGER_ART_KEYS[\s\S]*?CHANGER_TOKEN_KEYS[\s\S]*?\} from "\.\/changer-forms\.mjs"/.test(module_),
+  "module.mjs imports both maps instead of re-declaring them");
+ok(!/const CHANGER_(ART|TOKEN)_KEYS\s*=/.test(module_), "and carries no second copy of either");
 ok(/update\.img\s*=\s*portrait/.test(body), "the sheet portrait comes from *Art");
 ok(/update\["prototypeToken\.texture\.src"\]\s*=\s*token/.test(body), "the prototype token comes from *Token");
 ok(/placed\.update\(\{\s*"texture\.src":\s*token\s*\}\)/.test(body), "placed tokens take *Token");

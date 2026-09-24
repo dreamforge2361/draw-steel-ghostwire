@@ -124,6 +124,28 @@
           "type": "",
           "perkType": []
         }
+      },
+      "sQZ3DarksightGw0": {
+        "_id": "sQZ3DarksightGw0",
+        "name": "GHOSTWIRE.Peoples.Changer.Darksight.Name",
+        "img": "icons/magic/perception/eye-slit-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GrpBmxkUswQon6x8"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
       }
     }
   },

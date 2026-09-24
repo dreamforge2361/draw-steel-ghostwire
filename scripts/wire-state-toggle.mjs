@@ -25,6 +25,7 @@
 // switched off in settings; the plan helpers below do not care which one fired.
 
 import { WIRED_STATUS_DEFS, isFullyConnected, isOnNet } from "./wired-state.mjs";
+import { actorHasConnectInterface } from "./wired-console-verbs.mjs";
 import { deployedMachine, isJumpInCapable } from "./machines.mjs";
 import { jumpIn, jumpInCandidates, jumpInDenialKey, jumpInUsePlan, jumpOut, ownedMachineItems } from "./rigger-vertical.mjs";
 
@@ -32,11 +33,27 @@ const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.WireToggle";
 const MEAT_INERT = "ghostwire-meat-inert";
 
-/** The three rungs the player-facing toggle offers, in ladder order. Disconnected is not one. */
-export const WIRE_TOGGLE_OPTIONS = Object.freeze(["linked", "overlay", "jumpedIn"]);
+/**
+ * The four rungs the player-facing toggle offers, in ladder order (0.3.122).
+ *
+ * **Michael lock 2026-09-23 — Disconnect is a rung.** Through 0.3.121 this list was three long and
+ * the file argued hard that Disconnected must stay off it: Connect was the only on-ramp, Jack Out
+ * the only off-ramp. Two locks retired that argument in one ship — Disconnect became a first-class
+ * target, and the cycle macro (`cycleWireState`) walks Disconnected → Linked → Overlay → Jumped In
+ * → Disconnected, which needs Disconnected to be both a source and a destination.
+ *
+ * What did **not** change is the thing the old doctrine was actually protecting. Going **on**-net
+ * still needs a Wired interface — the plan takes `hasInterface` and refuses `noInterface` without
+ * one, exactly as the Connect verb does in scripts/module.mjs. Coming **off**-net needs nothing:
+ * you can always pull the plug.
+ */
+export const WIRE_TOGGLE_OPTIONS = Object.freeze(["disconnected", "linked", "overlay", "jumpedIn"]);
+
+/** The cycle the 0.3.122 macro walks, one rung per use, wrapping at the end. */
+export const WIRE_CYCLE_ORDER = WIRE_TOGGLE_OPTIONS;
 
 /** Reasons a plan can refuse, each with a lang key under `GHOSTWIRE.WireToggle.Refuse`. */
-export const WIRE_TOGGLE_REFUSALS = Object.freeze(["same", "unknown", "notConnected", "noMachine"]);
+export const WIRE_TOGGLE_REFUSALS = Object.freeze(["same", "unknown", "notConnected", "noInterface", "noMachine"]);
 
 /**
  * What the player should see as their current rung.
@@ -69,27 +86,38 @@ export function isWireConnectedDisplay(display) {
  * Plan one toggle. Pure — it performs nothing and touches no Foundry global.
  *
  * Legality, in the order it is checked:
- *  1. The target has to be one of the three rungs.
+ *  1. The target has to be one of the four rungs.
  *  2. Already there is a no-op, not a re-entry (re-running Jump-In would re-stamp meat-inert).
- *  3. The toggle only moves an **on-net** hero. Disconnected → on-net is the Connect verb's job
- *     (it needs an interface and it is the only on-ramp); this door must not route around it, and
- *     Jack Out is still the only off-ramp, which is why Disconnected is not offered as a target.
- *  4. Jumped In needs exactly one Jump-In-capable machine to land on.
+ *  3. **Disconnect is always allowed** from any on-net rung, and from the seat — leaving Jumped In
+ *     runs `jumpOut()` first so the pilot never lands off-net still holding `jumpedInto`.
+ *  4. Going **on**-net from Disconnected needs a Wired interface, the same gate the Connect verb
+ *     applies in scripts/module.mjs. Without one this refuses `noInterface`; the toggle is a shorter
+ *     road to Connect, never a way around it.
+ *  5. Jumped In needs exactly one Jump-In-capable machine to land on.
  *
  * @param {object} opts
- * @param {string} opts.from        wireDisplayState of the actor now.
- * @param {string} opts.to          The rung the player picked.
- * @param {boolean} opts.hasMachine A single capable machine resolved for Jump-In.
+ * @param {string} opts.from          wireDisplayState of the actor now.
+ * @param {string} opts.to            The rung the player picked.
+ * @param {boolean} opts.hasMachine   A single capable machine resolved for Jump-In.
+ * @param {boolean} opts.hasInterface The actor carries a Connect-capable Wired interface.
  * @returns {{ok: boolean, reason?: string, jumpOut: boolean, jumpIn: boolean,
  *            targetState: string|null, meatInert: boolean}}
  */
-export function wireTogglePlan({ from = "disconnected", to = "", hasMachine = false } = {}) {
+export function wireTogglePlan({ from = "disconnected", to = "", hasMachine = false, hasInterface = false } = {}) {
   const refuse = reason => ({ ok: false, reason, jumpOut: false, jumpIn: false, targetState: null, meatInert: false });
   if (!WIRE_TOGGLE_OPTIONS.includes(to)) return refuse("unknown");
   if (from === to) return refuse("same");
-  if (!isOnNet(from) && from !== "jumpedIn") return refuse("notConnected");
 
   const leaving = from === "jumpedIn";
+  // Off-ramp: pulling the plug is free. Nothing is required of the hero to stop being on-net.
+  if (to === "disconnected") {
+    return { ok: true, jumpOut: leaving, jumpIn: false, targetState: "disconnected", meatInert: false };
+  }
+
+  // On-ramp: the hero has to own the hardware Connect would have used.
+  const offNet = !isOnNet(from) && !leaving;
+  if (offNet && !hasInterface) return refuse("noInterface");
+
   if (to === "jumpedIn") {
     if (!hasMachine) return refuse("noMachine");
     // jumpIn() owns the status write (setJackedIn) as well as the seat flags, so the plan asks for
@@ -97,6 +125,20 @@ export function wireTogglePlan({ from = "disconnected", to = "", hasMachine = fa
     return { ok: true, jumpOut: false, jumpIn: true, targetState: "jackedIn", meatInert: true };
   }
   return { ok: true, jumpOut: leaving, jumpIn: false, targetState: to, meatInert: false };
+}
+
+/**
+ * The next rung in the 0.3.122 cycle: Disconnected → Linked → Overlay → Jumped In → Disconnected.
+ *
+ * A deck jockey reading plain **Jacked In** (Matrix Toggle's deepest rung, no seat) is not on this
+ * ladder. They are one step past Overlay, so their next rung is the seat — which then refuses in the
+ * ordinary way if they have no Jump-In-capable machine, rather than being silently rerouted.
+ */
+export function nextWireCycleState(display) {
+  if (display === "jackedIn") return "jumpedIn";
+  const index = WIRE_CYCLE_ORDER.indexOf(display);
+  if (index < 0) return WIRE_CYCLE_ORDER[0];
+  return WIRE_CYCLE_ORDER[(index + 1) % WIRE_CYCLE_ORDER.length];
 }
 
 /** Lang key under `GHOSTWIRE.WireToggle.Refuse` for a refused plan, or null when it may run. */
@@ -177,7 +219,13 @@ export async function applyWireState(actor, to, { getWiredState, setWiredState }
   const from = currentDisplay(actor, getWiredState);
   const seat = to === "jumpedIn" ? jumpInSeatPlan(actor) : null;
   const machine = seat?.proceed ? seat.machine : null;
-  const plan = wireTogglePlan({ from, to, hasMachine: !!machine });
+  const plan = wireTogglePlan({
+    from,
+    to,
+    hasMachine: !!machine,
+    // The same interface check the Connect verb runs (scripts/wired-console-verbs.mjs), not a copy.
+    hasInterface: actorHasConnectInterface(actor),
+  });
 
   if (!plan.ok) {
     const key = wireToggleRefusalKey(plan);
@@ -211,6 +259,52 @@ export async function applyWireState(actor, to, { getWiredState, setWiredState }
 
   await announce(actor, from, to);
   return { ok: true, from, to };
+}
+
+/**
+ * Step one actor one rung along the cycle (0.3.122). Everything it does goes through
+ * `applyWireState`, so the Jump-In seat check, the interface check and the jumpOut() cleanup are the
+ * same code the picker uses — this only decides *which* rung comes next.
+ */
+export async function cycleWireState(actor, api = {}) {
+  if (!(actor instanceof Actor)) return { ok: false, reason: "unknown", from: "", to: "" };
+  const from = currentDisplay(actor, api.getWiredState);
+  return applyWireState(actor, nextWireCycleState(from), api);
+}
+
+/**
+ * The 0.3.122 Director / player macro: every selected token cycles one rung, independently.
+ *
+ * Multi-select is deliberately forgiving — a Rigger with a drone takes the seat while the decker
+ * beside them refuses for want of one, and that refusal (already toasted by `applyWireState`) does
+ * not stop the rest of the selection from moving.
+ */
+export async function cycleWireStateForSelection(api = {}) {
+  const actors = [];
+  const seen = new Set();
+  for (const token of canvas?.tokens?.controlled ?? []) {
+    const actor = token?.actor ?? token?.document?.actor ?? null;
+    if (!actor || seen.has(actor.uuid)) continue;
+    seen.add(actor.uuid);
+    actors.push(actor);
+  }
+  if (!actors.length) {
+    ui.notifications.warn(game.i18n.localize(`${L}.Cycle.NoSelection`));
+    return [];
+  }
+  const results = [];
+  for (const actor of actors) {
+    if (!canToggle(actor)) {
+      ui.notifications.warn(game.i18n.format(`${L}.Cycle.NotHero`, { actor: actor.name }));
+      results.push({ actor: actor.name, ok: false, reason: "unknown" });
+      continue;
+    }
+    // Sequential on purpose: each cycle writes statuses and flags on its own actor, and a refusal
+    // toast that arrives out of order is worse than a few milliseconds of wall clock.
+    const result = await cycleWireState(actor, api);
+    results.push({ actor: actor.name, ...result });
+  }
+  return results;
 }
 
 /* -------------------------------------------- the door */
@@ -353,9 +447,13 @@ export function registerWireStateToggle({ getWiredState, setWiredState } = {}) {
       ...(module.api ?? {}),
       openWireStatePicker: actor => openWireStatePicker(actor, api),
       applyWireState: (actor, to) => applyWireState(actor, to, api),
+      cycleWireState: actor => cycleWireState(actor, api),
+      cycleWireStateForSelection: () => cycleWireStateForSelection(api),
       wireTogglePlan,
       wireDisplayState,
+      nextWireCycleState,
       WIRE_TOGGLE_OPTIONS,
+      WIRE_CYCLE_ORDER,
     };
   }
   console.log(`${MODULE_ID} | Wire-state toggle registered (${WIRE_TOGGLE_OPTIONS.join(" / ")}; statuses ${WIRED_STATUS_DEFS.linked.id} / ${WIRED_STATUS_DEFS.overlay.id} / ${WIRED_STATUS_DEFS.jackedIn.id})`);
