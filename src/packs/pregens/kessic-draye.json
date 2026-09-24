@@ -2956,7 +2956,14 @@
             "tags": [
               "Consumable"
             ],
-            "consumable": true
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "recoveries": 1,
+              "oncePerCombat": true
+            }
           }
         }
       },

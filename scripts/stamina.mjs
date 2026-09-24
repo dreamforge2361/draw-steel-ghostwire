@@ -164,6 +164,32 @@ export function armorStaminaPlan({ armors = [], echelon = 1, hasKit = false } = 
   return { wornId, enable, disable };
 }
 
+/* -------------------------------------------- pure: the pool after an armor change */
+
+/**
+ * C1 (0.3.123) — what the current Stamina pool should read after armor went on or came off.
+ *
+ * **Putting armor on fills you up.** Michael's lock: donning a suit sets current Stamina to the new
+ * maximum. The fiction is that you are strapping into protection out of combat, not healing under fire,
+ * and the alternative — a hero who buys a Hardshell and stays on the old number until a respite — is the
+ * bug this fixes.
+ *
+ * **Taking it off never heals.** Removing armor only ever *clamps*: if the maximum dropped below what you
+ * were carrying, the pool comes down to meet it, and otherwise nothing is written at all.
+ *
+ * @param {object} opts
+ * @param {number} opts.value    Current `system.stamina.value`.
+ * @param {number} opts.max      The *new* `system.stamina.max`, after the band effects were synced.
+ * @param {boolean} opts.donned  True when this change put armor on.
+ * @returns {number|null}        The value to write, or null when nothing should be written.
+ */
+export function planStaminaAfterArmorChange({ value = 0, max = 0, donned = false } = {}) {
+  const ceiling = Math.max(0, Math.floor(Number(max) || 0));
+  const current = Math.floor(Number(value) || 0);
+  if (donned) return (current === ceiling) ? null : ceiling;
+  return (current > ceiling) ? ceiling : null;
+}
+
 /* -------------------------------------------- pure: the tooltip */
 
 /** Stamina change keys and how each one turns into points of max Stamina. */
@@ -262,6 +288,20 @@ export async function syncArmorStamina(actor) {
 }
 
 /**
+ * C1 (0.3.123): settle the current Stamina pool after the band effects have already been synced, so
+ * `system.stamina.max` is the new maximum by the time this reads it.
+ * @returns {Promise<number|null>} the value written, or null when nothing needed writing.
+ */
+export async function syncStaminaPool(actor, { donned = false } = {}) {
+  if (!isHero(actor) || !actor.isOwner) return null;
+  const stamina = actor.system?.stamina ?? {};
+  const next = planStaminaAfterArmorChange({ value: stamina.value, max: stamina.max, donned });
+  if (next === null) return null;
+  await actor.update({ "system.stamina.value": next }, { ghostwireArmorStamina: true });
+  return next;
+}
+
+/**
  * Put one armor on (or take it off). Wearing takes every other armor off first — one armor, and the
  * one you just put on is the one you are wearing.
  */
@@ -276,6 +316,7 @@ export async function setArmorWorn(item, worn = true) {
   }
   if (updates.length) await actor.updateEmbeddedDocuments("Item", updates, { ghostwireArmorStamina: true });
   await syncArmorStamina(actor);
+  await syncStaminaPool(actor, { donned: worn });
   const key = worn ? "Notify.Worn" : "Notify.Removed";
   ui.notifications.info(game.i18n.format(`${L}.${key}`, { name: item.name, actor: actor.name }));
   return true;
@@ -412,6 +453,9 @@ export function registerStamina() {
     const touchedWorn = foundry.utils.hasProperty(changes, `flags.${MODULE_ID}.${WORN_FLAG}`);
     if (!touchedWorn && !isArmorItem(item) && (item.type !== "kit") && (item.type !== "class")) return;
     await syncArmorStamina(actor);
+    // C1: a worn-flag flip is a hero donning or removing a suit — the auto-wear path in createItem
+    // below comes through here too. Level-ups and kit changes are not, so they only ever clamp.
+    await syncStaminaPool(actor, { donned: touchedWorn && isWorn(item) });
   });
 
   Hooks.on("deleteItem", async (item, options, userId) => {
@@ -488,6 +532,7 @@ export function registerStamina() {
         ...(module.api ?? {}),
         setArmorWorn,
         syncArmorStamina,
+        syncStaminaPool,
         wornArmor,
         staminaSources,
       };

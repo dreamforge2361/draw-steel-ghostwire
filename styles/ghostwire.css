@@ -580,6 +580,9 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-roster-row.state-jackedIn { border-left-color: var(--wc-hot); }
 .ghostwire-wired-console .wc-roster-row.state-connected { border-left-color: var(--ghostwire-wire-connected); }
 .ghostwire-wired-console .wc-roster-row.is-node { opacity: 0.92; }
+/* C3 (0.3.123): your own hero is pinned to the top of Connections and says so. */
+.ghostwire-wired-console .wc-roster-row.is-self { background: color-mix(in srgb, var(--wc-cyan) 7%, transparent); }
+.ghostwire-wired-console .wc-self-tag { opacity: 0.7; font-size: 0.72rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track); }
 .ghostwire-wired-console .wc-constructs { min-height: 0; }
 .ghostwire-wired-console .wc-construct-hint { margin: 0 0.6rem 0.15rem; font-size: 0.75rem; }
 .ghostwire-wired-console .wc-construct-row {

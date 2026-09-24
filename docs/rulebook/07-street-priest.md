@@ -70,7 +70,7 @@ Mechanically, you are the crew's **divine switch-hitter**: genuinely competent a
 |---|---|
 | **1–2** | Flat drip only (**+2**, exactly as if you hadn't gambled). No gain, no loss — you reached for more and the patron simply held its answer. |
 | **3–4** | **+4 Conviction.** |
-| **5–6** | **+4 Conviction, AND** you immediately trigger a **free Smite/Rebuke or Lay On Hands at no Conviction cost.** |
+| **5–6** | **+4 Conviction, AND** you immediately trigger a **free pact strike or Lay On Hands at no Conviction cost.** |
 
 **Ruling (per Michael, 2026-07-15, applied 2026-07-22):** the prayer gamble is **resource-only** — its worst result simply yields the ordinary flat drip and nothing more. It never inflicts backlash, Stamina damage, or corruption. The gamble risks only opportunity, never your body or soul: you reached for more, the patron stayed its hand, and you took what you would have taken anyway. This is the deliberate divine mirror of the Elementalist's Channel ramp — both classes have a "reach for more" lever, but the priest's is a **gamble** and the mage's is a **commitment**.
 
@@ -110,18 +110,17 @@ Every Street Priest chooses **two** of the following at 1st level, per the DS Co
 
 | Signature | Type | Target | Base Effect | Pact Flavor |
 |---|---|---|---|---|
-| **Blessed Light** | Ranged strike (dist 10) | 1 creature | Holy damage, and on high (17+) you or an ally within range gains a **surge** | Light-flavored (always holy) |
-| **Drain** | Melee strike (dist 1) | 1 creature | Corruption damage, and you or an ally **spends a Recovery** on middle or high | Dark-flavored (always corruption) |
-| **Rebuke** *(was Holy Lash)* | Ranged strike (dist 10) | 1 creature | Holy or corruption damage + a **vertical pull** rider | Follows pact |
 | **Lightfall** | Area burst 2 (dist 10) | Enemies in burst | Holy damage to enemies, and up to 2 allies in the burst may **teleport** to any open space within the burst | Light-flavored (always holy) |
 | **Sacrificial Offer** | Ranged strike (dist 10) | 1 creature | Corruption damage + a **bane on the next attack made against an ally of your choice** | Dark-flavored (always corruption) |
 | **Word of Rebuke** *(was Staggering Curse)* | Melee strike (dist 1) | 1 creature | Holy or corruption damage + a forced **slide** | Follows pact |
 | **Warrior's Prayer** | Ranged strike (dist 10) | 1 creature | Holy damage + you or an ally gains **temporary Stamina** | Light-leaning (holy by default, may reskin Dark on request) |
 | **Wither** | Ranged strike (dist 10) | 1 creature | Corruption damage, and on a potency-successful hit the target takes a **bane** on its next roll | Dark-flavored (always corruption) |
 
-*Reskin note: the eight signatures above are the DS Conduit's full signature list, ported one-to-one — Blessed Light, Drain, Lightfall, Sacrificial Offer, Warrior's Prayer, and Wither are kept as-is (with pact-flavor notes); Holy Lash is renamed **Rebuke**; Staggering Curse is renamed **Word of Rebuke**. Per Conduit's own rule, a Street Priest chooses 2 of these 8 at 1st level as their personal signature loadout — the other 6 remain available as a future retraining/subclass-swap option, Director's call.*
+*Reskin note: these five come from the DS Conduit's signature list, ported one-to-one — Lightfall, Sacrificial Offer, Warrior's Prayer and Wither are kept as-is (with pact-flavor notes), and Staggering Curse is renamed **Word of Rebuke**. A Street Priest chooses 2 of these 5 at 1st level as their personal signature loadout; the rest remain available as a future retraining/subclass-swap option, Director's call.*
 
-Beyond the 2 chosen signatures above, **every Street Priest also has these two class-wide signatures for free, with no choice involved** — every priest, regardless of subclass or pact, has these from 1st level:
+*Changed 2026-09-23 (0.3.123): **Blessed Light**, **Drain** and **Rebuke** are no longer choices here. Blessed Light became the class-wide light utility, and Rebuke / Drain became the **pact strike** — both are described below.*
+
+Beyond the 2 chosen signatures above, **every Street Priest also has these class-wide signatures for free, with no choice involved** — every priest, regardless of subclass or pact, has these from 1st level, plus exactly **one** free strike decided by their pact:
 
 > **Lay On Hands / Word of Comfort** *(Class Feature Signature)*
 > *Maneuver · Range 10 · Target: self or one ally*
@@ -129,11 +128,16 @@ Beyond the 2 chosen signatures above, **every Street Priest also has these two c
 > **Spend X Conviction:** target an additional ally, end one save-ends/end-of-turn effect on the target, let a prone target stand, or grant a small amount of temporary Stamina.
 > *The class's basic support signature — the divine equivalent of the Elementalist's every-turn shaping, pointed squarely at keeping the crew alive. This is the switch-hitter's every-turn lifeline, and it scales with faith the moment you spend Conviction on top of it.*
 
-> **Smite / Rebuke** *(Class Feature Signature — not to be confused with the chosen signature "Rebuke," above; Director's table should rename one at the table if both are taken to avoid confusion)*
-> *Main Action · Range 10 · Target: 1 creature*
-> **Power Roll:** 2d10 + Persona. Holy or corruption damage (by pact), scaling on Power Roll result (**low** ≤11 / **middle** 12–16 / **high** 17+).
-> **Spend X Conviction:** increase damage and/or add a small rider (push, or a bane on the target's next roll).
-> *The class's basic offensive signature — a bolt of the patron's power, proof the switch-hitter can trade blows even before spending a point of Conviction.*
+> **Blessed Light** *(Class Feature Signature — a lamp, not a weapon)*
+> *Maneuver · Self*
+> No Power Roll and **no damage**. Your token sheds a **20-foot bright light** until you use Blessed Light again to put it out.
+> *Changed 2026-09-23 (0.3.123): Blessed Light used to be a 3/5/8 holy ranged strike, which left the class with two free ranged strikes and no light source. It is now the light source. Nothing about it targets a creature, and it can never deal damage.*
+
+> **Pact Strike — Rebuke (Light) or Drain (Dark)** *(Class Feature Signature; you get exactly one, and your pact decides which)*
+> **Rebuke** — *Main Action · Ranged 10 · Target: 1 creature.* **Power Roll:** 2d10 + Persona. **2 + Persona** holy damage on low, **4 + Persona** on middle, **6 + Persona** on high, plus a **pull** rider (2 / 3 / 4) that may be vertical.
+> **Drain** — *Main Action · Melee 1 · Target: 1 creature.* **Power Roll:** 2d10 + Persona. **2 + Persona** corruption damage on low, **5 + Persona** on middle, **7 + Persona** on high; on middle or high, you or an ally within 10 squares may **spend a Recovery**.
+> **Spend X Conviction** (Rebuke): each point adds 1 damage; instead of the extra damage you may push the target 1 square, or (for 2 Conviction) give it a bane on its next power roll.
+> *This is deliberately a **low**-power free strike — lower than Holy Smite, which costs 1 Conviction and should always be worth the point. Light priests never have Drain, Dark priests never have Rebuke, and no priest ever has two free strikes.*
 
 > **Sense the Veil / Discern Spirits** *(Class Feature Signature)*
 > *Maneuver · Self*
@@ -150,17 +154,17 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 *The DS Conduit SRD has no 1-cost band — these two abilities are GHOSTWIRE-original inventions, written specifically to keep the ladder floor consistent with the Hacker/Elementalist/Operator/Wrench templates, all of which open at cost 1. **Flagged for Michael's sign-off — see Part 2, Known Bugs #1.***
 
-> **Minor Rebuke** *(1 Conviction, GHOSTWIRE-original)*
+> **Holy Smite** *(1 Conviction, GHOSTWIRE-original — renamed from Minor Rebuke on 2026-09-23)*
 > *Main Action · Ranged strike (dist 10) · Target: 1 creature*
 > **Power Roll:** 2d10 + Persona.
 >
 > | Tier | Effect |
 > |---|---|
-> | low (≤11) | No damage. |
-> | middle (12–16) | 2 + Persona holy or corruption damage (by pact). |
-> | high (17+) | 4 + Persona holy or corruption damage (by pact). |
+> | low (≤11) | 3 + Persona holy or corruption damage (by pact). |
+> | middle (12–16) | 5 + Persona holy or corruption damage (by pact). |
+> | high (17+) | 8 + Persona holy or corruption damage (by pact). |
 >
-> *A small strike with no rider — the cheapest possible spend when every other Conviction point is earmarked for a heal or a ward, but you still want to put a dent in something. The class's floor-level offensive option.*
+> *A bigger strike with no rider — the cheapest possible spend when every other Conviction point is earmarked for a heal or a ward, but you still want something to fall over. It now hits **above** your free pact strike at every tier, which is the whole reason to spend the point; the old Minor Rebuke did less damage than the free strike it sat under.*
 
 > **Whisper of Comfort** *(1 Conviction, GHOSTWIRE-original)*
 > *Maneuver · Range 10 · Target: self or one ally*
@@ -388,11 +392,11 @@ The holy warrior. Bonus to **smiting damage and frontline durability** — highe
 
 | Tier | Ability | Effect |
 |---|---|---|
-| 1 | **Zealous Strike** | Smite/Rebuke deals +1 damage per Power Roll result band when the target is under Judgment. |
+| 1 | **Zealous Strike** | Your pact strike (Rebuke or Drain) deals +1 damage per Power Roll result band when the target is under Judgment. |
 | 1 | **Iron Faith** | +1 to Stamina per level while you have at least 1 Conviction banked. |
 | 2 | **Wrathful Momentum** | Judgment's Hammer knocks the target prone on any Power Roll result (not just middle or high). |
 | 2 | **Anathema's Weight** | The marked-by-Judgment target takes a bane on saves against your ongoing effects. |
-| 6 | **Vengeance Unbound** | When the Judgment-marked target damages you, your next Smite/Rebuke against it gains an edge. |
+| 6 | **Vengeance Unbound** | When the Judgment-marked target damages you, your next pact strike against it gains an edge. |
 | 6 | **Consecrated Ground** *(GHOSTWIRE-original)* | Sanctuary Ward, when cast by a Templar, also grants allies inside a +1 bonus to melee damage. |
 | 9 | **Wrath of the Chosen** | Once per encounter, when you drop the Judgment-marked target to 0 Stamina, immediately gain full Conviction (as if from a fresh encounter start) and mark a new target as under Judgment for free. |
 
@@ -419,7 +423,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | Tier | Ability | Effect |
 |---|---|---|
 | 1 | **Ward Against Incursion** | Sanctuary Ward gains a bonus effect: hostile spirits attempting to manifest or cross into the ward take corruption damage equal to your Persona. |
-| 1 | **Marked for Banishment** | Once per round, when you hit a spirit-type or corrupted creature with Smite/Rebuke, mark it — your next hit against the mark gains an edge. |
+| 1 | **Marked for Banishment** | Once per round, when you hit a spirit-type or corrupted creature with your pact strike, mark it — your next hit against the mark gains an edge. |
 | 2 | **Purging Rite** | Corruption's Curse, when cast on a corrupted or possessed creature, also removes 1 stack of corruption/possession from them (an anti-corruption cleanse rather than a curse, Director's fiction call). |
 | 2 | **Hunter's Bind** | Your hunting/binding spirit (Invoke the Pact, extension form) gains an edge on any roll made specifically to track or restrain a spirit-type target. |
 | 6 | **Severing Word** | Fear of the Gods, cast against a spirit-type or corrupted target, also ends one of that target's ongoing summon/bind effects. |
@@ -432,7 +436,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 
 | Level | Class Features | Abilities Known | Subclass |
 |---|---|---|---|
-| **1** | Pact Alignment (Light/Dark) · Subclass choice · Conviction (heroic resource) · Lay On Hands / Word of Comfort · Smite / Rebuke · Sense the Veil / Discern Spirits · Prayer Gamble · Priest's Ward · Choose 2 Signatures | 2 signatures, 1-cost band, 3-cost band, 5-cost band | L1 subclass feature + L1 subclass ability |
+| **1** | Pact Alignment (Light/Dark) · Subclass choice · Conviction (heroic resource) · Lay On Hands / Word of Comfort · Blessed Light · Pact Strike (Rebuke or Drain) · Sense the Veil / Discern Spirits · Prayer Gamble · Priest's Ward · Choose 2 Signatures | 2 signatures, 1-cost band, 3-cost band, 5-cost band | L1 subclass feature + L1 subclass ability |
 | **2** | The Roster of the Saved / The Ledger of the Damned (rename by pact) · Perk | (same) | L2 subclass feature + subclass ability slot |
 | **3** | Minor Miracle · Choose a 7-Cost ability (Invoke the Pact unlocked) | +7-cost band | (same) |
 | **4** | Deepened Subclass · Characteristic Increase · Perk · Skill | (same) | L4 subclass feature |
@@ -452,7 +456,8 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 - **Pact Alignment** (1st) — Choose Light or Dark at character creation. Permanent; cannot be changed later. See Pact Alignment, above, for the full mechanical split.
 - **Conviction** (1st) — Your Heroic Resource. See Conviction, above, for the full earn/spend/cap rules (E4 numeric baseline).
 - **Lay On Hands / Word of Comfort** (1st) — Free class-feature signature. Maneuver; self or one ally spends a Recovery; Spend-X Conviction riders extend the effect. See Signature Abilities, above.
-- **Smite / Rebuke** (1st) — Free class-feature signature. Main action Persona Power Roll; holy or corruption damage by pact. See Signature Abilities, above.
+- **Blessed Light** (1st) — Free class-feature signature. Maneuver; raises a 20-foot bright light on your token and puts it out again. No roll, no damage. See Signature Abilities, above.
+- **Pact Strike — Rebuke or Drain** (1st) — Free class-feature signature, and you get exactly one: **Light Pact grants Rebuke** (ranged 10, holy, pull rider), **Dark Pact grants Drain** (melee 1, corruption, Recovery rider). See Signature Abilities, above.
 - **Sense the Veil / Discern Spirits** (1st) — Free class-feature signature. Maneuver; reads spirit rank/nature and detects corruption. See Signature Abilities, above.
 - **Prayer Gamble** (1st) — The d6 mechanic layered on top of the Conviction drip. See Conviction, above.
 - **Priest's Ward** (1st) — Passive. A small, always-on persistent temporary-Stamina hedge on yourself: at the start of each of your turns, if you have no other persistent working active, you gain a trivial amount of temporary Stamina (Director's table, numeric pass — a "you always have a little cushion" feature, not a big number). This is your baseline safety net, distinct from Sanctuary Ward, which is a spendable heroic ability.

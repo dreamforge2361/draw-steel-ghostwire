@@ -1,17 +1,17 @@
 {
-  "_id": "75cOal6Bov8zCIYi",
-  "_key": "!items!75cOal6Bov8zCIYi",
-  "name": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Name",
+  "_id": "gwCantripEL00001",
+  "_key": "!items!gwCantripEL00001",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Name",
   "type": "ability",
-  "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
+  "img": "icons/magic/light/orb-lightbulb-gray.webp",
   "system": {
     "source": {
       "book": "Ghostwire Core Rulebook",
-      "page": "07-street-priest",
+      "page": "06-elementalist",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "blessed-light",
-    "story": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Story",
+    "_dsid": "cantrip",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Story",
     "keywords": [
       "magic"
     ],
@@ -47,7 +47,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Effect_before0000000000",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Effect_before0000000000",
         "before": true,
         "name": "",
         "img": null,
@@ -57,19 +57,20 @@
     "prerequisites": {
       "value": "",
       "dsid": [
-        "street-priest"
+        "elementalist"
       ],
       "level": null
     }
   },
   "effects": [],
-  "folder": "I2xQFBoN6KxuZH5u",
+  "folder": "k832YWtHQ0twHZFA",
   "sort": 0,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
+      "cantrip": true,
       "tokenLight": {
         "feet": 20,
         "toggle": true

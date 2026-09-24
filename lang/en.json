@@ -3289,6 +3289,11 @@
             "Effect_before0000000000": "<p>Void damage.</p>",
             "Tier2": "The target is knocked prone and can’t move (save ends).",
             "Tier3": "The target is removed from play until the end of your next turn; it returns in the same square and takes [[/damage 2d6]]{2d6} damage."
+          },
+          "Cantrip": {
+            "Name": "Cantrip",
+            "Story": "The small magic that never costs a thing.",
+            "Effect_before0000000000": "<p>No power roll, no Essence, and <strong>no damage, ever</strong>. Choose one:</p><ul><li><p><strong>Light.</strong> Your token sheds a <strong>20-foot bright light</strong> until you use Cantrip again to put it out.</p></li><li><p><strong>Other utility.</strong> Describe one small helpful working — scour a stain out of a coat, flick a switch across the room, warm a cold cup, still the dust in a doorway. Write it when you cast it; it goes on the card and the Director rules on it. No combat rider.</p></li></ul>"
           }
         }
       },
@@ -3388,12 +3393,6 @@
             "Effect_before0000000000": "<p>No roll. The target can spend a Recovery.</p>",
             "Effect_spend00000000000": "<p>For each Conviction spent, choose one: target one additional ally within distance; end one effect on a target that a saving throw ends or that ends at the end of their turn; let a prone target stand; or give a target [[/heal @P temp]]{temporary Stamina equal to your Persona score}.</p>"
           },
-          "SmiteRebuke": {
-            "Name": "Smite / Rebuke",
-            "Story": "A bolt of the patron’s power.",
-            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
-            "Effect_spend00000000000": "<p>For each Conviction spent, the damage increases by 1. Instead of 1 extra damage, you can push the target 1 square, or (for 2 Conviction) the target has a bane on its next power roll.</p>"
-          },
           "SenseTheVeil": {
             "Name": "Sense the Veil / Discern Spirits",
             "Story": "Reading spirits, souls, and corruption.",
@@ -3404,24 +3403,24 @@
           },
           "BlessedLight": {
             "Name": "Blessed Light",
-            "Story": "Light-flavored: always holy.",
-            "Tier1": "One ally within distance [[/surge 1]].",
-            "Tier2": "One ally within distance [[/surge 2]].",
-            "Tier3": "One ally within distance [[/surge 3]]."
+            "Story": "A lamp, not a weapon.",
+            "Effect_before0000000000": "<p>No power roll and <strong>no damage</strong>. Your token sheds a <strong>20-foot bright light</strong> until you use Blessed Light again to put it out. Every Street Priest has this from 1st level.</p>"
           },
           "Drain": {
             "Name": "Drain",
-            "Story": "Dark-flavored: always corruption.",
+            "Story": "The Dark Pact’s free strike: always corruption.",
             "Tier2": "You or one ally within 10 squares can spend a Recovery.",
-            "Tier3": "You or one ally within 10 squares can spend a Recovery."
+            "Tier3": "You or one ally within 10 squares can spend a Recovery.",
+            "Effect_before0000000000": "<p>Your one free signature strike, granted by the <strong>Dark Pact</strong>. Damage is corruption. A Light Pact priest has <strong>Rebuke</strong> instead — never both.</p>"
           },
           "Rebuke": {
             "Name": "Rebuke",
-            "Story": "Follows your pact.",
-            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). The pull can be vertical.</p>",
+            "Story": "The Light Pact’s free strike.",
+            "Effect_before0000000000": "<p>Your one free signature strike, granted by the <strong>Light Pact</strong>. Damage is holy. The pull can be vertical. A Dark Pact priest has <strong>Drain</strong> instead — never both.</p>",
             "Tier1": "Pull 2.",
             "Tier2": "Pull 3.",
-            "Tier3": "Pull 4."
+            "Tier3": "Pull 4.",
+            "Effect_spend00000000000": "<p>For each Conviction spent, the damage increases by 1. Instead of 1 extra damage, you can push the target 1 square, or (for 2 Conviction) the target has a bane on its next power roll.</p>"
           },
           "Lightfall": {
             "Name": "Lightfall",
@@ -3453,13 +3452,10 @@
             "Tier2": "If the target’s Persona is below your average potency, it has a bane on its next power roll.",
             "Tier3": "If the target’s Persona is below your strong potency, it has a bane on its next power roll."
           },
-          "MinorRebuke": {
-            "Name": "Minor Rebuke",
-            "Story": "Put a dent in something.",
-            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
-            "Tier1": "No damage.",
-            "Tier2": "2 + Persona damage.",
-            "Tier3": "4 + Persona damage."
+          "HolySmite": {
+            "Name": "Holy Smite",
+            "Story": "One Conviction, and the patron answers.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). Holy Smite always hits harder than your free pact strike — that is what the Conviction buys.</p>"
           },
           "WhisperOfComfort": {
             "Name": "Whisper of Comfort",
@@ -4128,7 +4124,7 @@
           "Recompile": {
             "Name": "Recompile",
             "Story": "Always the right ghost to hand.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Reshape a compiled sprite into another archetype (Data → Attack, Attack → Ward, and so on), or instantly recompile a sprite destroyed this round at reduced power (half Sprite HP).</p>"
+            "Effect_before0000000000": "<p>No power roll. Choose one:</p><ul><li><p><strong>Reshape</strong> one sprite you command into a different archetype (Data → Attack, Attack → Ward, and so on). It comes back in the same square at full power.</p></li><li><p><strong>Rebuild</strong> a sprite that was <em>just</em> destroyed, in the square it fell in, <strong>at reduced power</strong> — half its Stamina.</p></li></ul><p>Either way a sprite is on the canvas when this resolves.</p>"
           },
           "HarmonicAdjustment": {
             "Name": "Harmonic Adjustment",
@@ -4574,7 +4570,7 @@
         },
         "TraumaPatch": {
           "Name": "Trauma Patch",
-          "Description": "<p><em>Trauma Patch · MediPatch · auto-injecting wound sealant</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥100 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Heals 1 Recovery value OR stops Bleeding. One use.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Trauma Patch — MediPatch — auto-injecting wound sealant</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥100 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Maneuver. Slap it on and <strong>get one spent Recovery back</strong> — not Stamina directly; you still choose when to cash it in. <strong>Once per combat</strong>, and the patch is used up either way.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
         },
         "StimPatch": {
           "Name": "Stim Patch",
@@ -7304,7 +7300,8 @@
       "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
       "VerbUnknown": "Unknown Matrix Verb.",
       "VerbMissing": "Matrix Verb {name} is missing from Ghostwire Abilities.",
-      "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong."
+      "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong.",
+      "RosterYou": "(you)"
     },
     "WiredKit": {
       "Button": "Add Wire Kit",
@@ -7602,7 +7599,21 @@
           "NoPermission": "Compiling creates an Actor and a token; ask the Director to compile it (players need Create Actors and Create Tokens permission).",
           "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack.",
           "CommandHint": "Command {sprite} from {name}'s Compile Sprite sheet — that maneuver, not a new compile.",
-          "CommandMissing": "No Compile Sprite ability on the compiler — Command lives on that sheet handle."
+          "CommandMissing": "No Compile Sprite ability on the compiler — Command lives on that sheet handle.",
+          "Setting": {
+            "Name": "Compile sprites when the card is used",
+            "Hint": "Using Compile Sprite opens the archetype picker and puts the sprite on the canvas; using Recompile reshapes or rebuilds one. Turn this off to go back to a roll-only card and the sheet buttons."
+          },
+          "Recompile": "Recompile",
+          "RecompileTitle": "Recompile a Sprite",
+          "RecompilePrompt": "{name} recompiles. <strong>Reshape</strong> a sprite that is still standing, or <strong>rebuild</strong> the one that was just destroyed — the rebuild comes back at half Stamina.",
+          "RecompileTargetLabel": "Sprite",
+          "RecompileHint": "Reshaping is at full power. Rebuilding a destroyed sprite is at reduced power (half Stamina).",
+          "RecompileReshapeOption": "Reshape {name}",
+          "RecompileRebuildOption": "Rebuild {name} (just destroyed — reduced power)",
+          "RecompileNothing": "{name} has no compiled sprite to reshape and nothing recently destroyed to rebuild. Compile one first.",
+          "Rebuilt": "{sprite} rebuilt at reduced power: {stamina} Stamina.",
+          "Reshaped": "{sprite} reshaped for {name}."
         }
       },
       "Agents": {
@@ -8621,8 +8632,10 @@
       "Spent": "{item} is already spent.",
       "Crash": "{actor} comes down off {item}.",
       "Chat": {
-        "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>"
-      }
+        "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>",
+        "Recoveries": " <em>Recovers {count} spent Recovery (now {value}).</em>"
+      },
+      "UsedThisCombat": "{item} has already been used this combat."
     },
     "Ritual": {
       "Menu": {
@@ -9863,6 +9876,31 @@
         "Worn": "{actor} is wearing {name}.",
         "Removed": "{actor} took off {name}."
       }
+    },
+    "TokenLight": {
+      "On": "{name} raises a {feet}-foot light.",
+      "Off": "{name} puts the light out.",
+      "NoToken": "{name} has no token on this scene, so there is nothing to light."
+    },
+    "Cantrip": {
+      "Title": "Cantrip",
+      "Prompt": "{name} spends no Essence. Cantrip never deals damage — choose what it does.",
+      "Cast": "Cast",
+      "Mode": {
+        "light": "Light",
+        "other": "Other utility"
+      },
+      "ModeHint": {
+        "light": "a 20-foot bright light on your token. Cast it again to put it out.",
+        "other": "describe one small helpful working below; the Director rules on it."
+      },
+      "DescriptionLabel": "Description (Other utility)",
+      "DescriptionPlaceholder": "Scour the blood out of my coat / flick the switch across the room / still the dust…",
+      "ChatLabel": "Cantrip:",
+      "ChatHint": "No damage and no combat rider — Director’s call on what it accomplishes."
+    },
+    "PactStrike": {
+      "Swapped": "{actor}’s pact free strike is now {name}."
     }
   },
   "DRAW_STEEL": {

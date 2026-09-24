@@ -12,12 +12,48 @@
 // Level scaling is the point of the feature: band, Stamina and the sprite's own attack all come from the caster's
 // *current* level, and a level-up while the congregation is out re-compiles it into the right band.
 
+import { abilityFromMessage } from "./token-light.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const UI = "GHOSTWIRE.Summons.Sprites.UI";
 
 const COMPILE_DSID = "compile-sprite";
+const RECOMPILE_DSID = "recompile";
 const ARCHETYPES = ["data", "attack", "machine", "ward"];
+
+/**
+ * C5 (0.3.123) — Recompile's "at reduced power" (docs/raw/20-technomancer.md, 1-cost band).
+ * Rebuilding a sprite that was destroyed a moment ago brings it back on half its Stamina; *reshaping* a
+ * sprite that is still standing is not reduced, because nothing was lost to bring back.
+ */
+export const REDUCED_POWER = 0.5;
+
+/** Where the caster remembers the sprite that just died, so Recompile has something to rebuild. */
+export const DESTROYED_FLAG = "lastDestroyedSprite";
+
+/** Stamina for a sprite rebuilt at reduced power. Never below 1 — a 0-Stamina sprite is just dead again. */
+export function reducedStamina(stamina) {
+  return Math.max(1, Math.ceil((Number(stamina) || 0) * REDUCED_POWER));
+}
+
+/**
+ * What one Recompile can act on right now.
+ *
+ * @param {object} opts
+ * @param {Array<{uuid: string, name: string, archetype: string}>} opts.sprites  Live congregation.
+ * @param {{archetype: string}|null} opts.destroyed  The remembered just-destroyed sprite.
+ * @returns {Array<{value: string, kind: "reshape"|"rebuild", archetype: string, name: string}>}
+ */
+export function recompileTargets({ sprites = [], destroyed = null } = {}) {
+  const rows = sprites
+    .filter(sprite => ARCHETYPES.includes(sprite.archetype))
+    .map(sprite => ({ value: sprite.uuid, kind: "reshape", archetype: sprite.archetype, name: sprite.name }));
+  if (destroyed && ARCHETYPES.includes(destroyed.archetype)) {
+    rows.push({ value: "destroyed", kind: "rebuild", archetype: destroyed.archetype, name: destroyed.name ?? "" });
+  }
+  return rows;
+}
 
 // Sprite Stat Block Reference (20-technomancer.md): Stamina = archetype base + (Logic × level), per band.
 // These must match the shipped templates in src/packs/summons/sprites/.
@@ -156,9 +192,10 @@ async function promptArchetype(caster, band) {
  * @param {string} [options.archetype]    data | attack | machine | ward; prompts when omitted.
  * @param {object} [options.position]     {x, y} to place the token at, instead of the ring beside the caster.
  * @param {boolean} [options.silent]      Skip the "compiled" notification (used by the level refresh).
+ * @param {boolean} [options.reduced]     C5: rebuild at reduced power (half Stamina).
  * @returns {Promise<Actor|null>}
  */
-export async function compileSprite(caster, { archetype, position, silent = false } = {}) {
+export async function compileSprite(caster, { archetype, position, silent = false, reduced = false } = {}) {
   if (!isTechnomancer(caster)) return ui.notifications.warn(game.i18n.localize(`${UI}.NotTechnomancer`));
   if (!canvas.scene) return ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`));
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) return ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`));
@@ -178,7 +215,8 @@ export async function compileSprite(caster, { archetype, position, silent = fals
   const template = await templateFor(archetype, band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { dsid: `sprite-${archetype}-${band}` }));
 
-  const stamina = spriteStamina(archetype, band, caster);
+  const full = spriteStamina(archetype, band, caster);
+  const stamina = reduced ? reducedStamina(full) : full;
   // The Technomancer's players own their sprites, so they can move the tokens and track Stamina themselves.
   const ownership = { default: 0 };
   for (const [userId, ownershipLevel] of Object.entries(caster.ownership ?? {})) {
@@ -195,7 +233,7 @@ export async function compileSprite(caster, { archetype, position, silent = fals
     "prototypeToken.disposition": CONST.TOKEN_DISPOSITIONS.FRIENDLY,
     [`flags.${MODULE_ID}`]: {
       kind: "sprite", archetype, hybridTier: band, compiler: caster.uuid,
-      dsid: `sprite-${archetype}-${band}`, compiledAtLevel: level,
+      dsid: `sprite-${archetype}-${band}`, compiledAtLevel: level, reduced,
     },
   });
   const actor = await Actor.create(data);
@@ -279,7 +317,10 @@ export async function refreshSprites(caster, { silent = false } = {}) {
   for (const sprite of sprites) {
     const archetype = sprite.getFlag(MODULE_ID, "archetype");
     if (!ARCHETYPES.includes(archetype)) continue;
-    const stamina = spriteStamina(archetype, band, caster);
+    // A sprite rebuilt by Recompile stays rebuilt: levelling re-stamps its *reduced* pool, not a full one.
+    const reduced = sprite.getFlag(MODULE_ID, "reduced") === true;
+    const full = spriteStamina(archetype, band, caster);
+    const stamina = reduced ? reducedStamina(full) : full;
     const sameBand = sprite.getFlag(MODULE_ID, "hybridTier") === band;
     if (!sameBand && !canSwap) { deferred++; continue; }
     if (sameBand) {
@@ -297,7 +338,7 @@ export async function refreshSprites(caster, { silent = false } = {}) {
       const token = sprite.getActiveTokens()[0]?.document;
       const position = token ? { x: token.x, y: token.y } : null;
       await decompileSprite(sprite, { silent: true });
-      await compileSprite(caster, { archetype, position, silent: true });
+      await compileSprite(caster, { archetype, position, silent: true, reduced });
     }
     changed++;
   }
@@ -310,7 +351,152 @@ export async function refreshSprites(caster, { silent = false } = {}) {
   return changed;
 }
 
+/* -------------------------------------------- C5: Recompile */
+
+/** The Recompile ability on this hero, if they took it. */
+export const recompileAbility = actor =>
+  actor?.items.find(i => (i.type === "ability") && (i.system._dsid === RECOMPILE_DSID)) ?? null;
+
+const isRecompileAbility = item =>
+  (item?.type === "ability") && (item.system?._dsid === RECOMPILE_DSID) && isTechnomancer(item.parent);
+
+/** The just-destroyed sprite this caster can still rebuild, or null. */
+export function destroyedSprite(caster) {
+  const record = caster?.getFlag?.(MODULE_ID, DESTROYED_FLAG) ?? null;
+  return ARCHETYPES.includes(record?.archetype) ? record : null;
+}
+
+/**
+ * Remember a sprite that just died, so Recompile has something to reach for. Overwrites the previous
+ * record: "just-destroyed" is the last one, not a graveyard.
+ */
+async function rememberDestroyed(sprite) {
+  const caster = spriteCompiler(sprite);
+  if (!caster?.isOwner) return;
+  const token = sprite.getActiveTokens()[0]?.document;
+  await caster.setFlag(MODULE_ID, DESTROYED_FLAG, {
+    archetype: sprite.getFlag(MODULE_ID, "archetype") ?? null,
+    band: sprite.getFlag(MODULE_ID, "hybridTier") ?? null,
+    name: sprite.name,
+    sceneId: token?.parent?.id ?? canvas.scene?.id ?? null,
+    x: token?.x ?? null,
+    y: token?.y ?? null,
+    at: game.time?.worldTime ?? 0,
+  });
+}
+
+/** The Recompile dialog: which sprite, and what to shape it into. */
+async function promptRecompile(caster, targets) {
+  const UIL = key => game.i18n.localize(`${UI}.${key}`);
+  const targetOptions = targets.map((row, index) => {
+    const label = (row.kind === "rebuild")
+      ? game.i18n.format(`${UI}.RecompileRebuildOption`, { name: row.name || UIL(`Archetype.${row.archetype}`) })
+      : game.i18n.format(`${UI}.RecompileReshapeOption`, { name: row.name });
+    return `<option value="${row.value}"${index === 0 ? " selected" : ""}>${label}</option>`;
+  }).join("");
+  const archetypeOptions = ARCHETYPES.map((archetype, index) =>
+    `<option value="${archetype}"${index === 0 ? " selected" : ""}>${UIL(`Archetype.${archetype}`)}</option>`).join("");
+  return foundry.applications.api.DialogV2.prompt({
+    window: { title: UIL("RecompileTitle") },
+    content: `<p>${game.i18n.format(`${UI}.RecompilePrompt`, { name: foundry.utils.escapeHTML(caster.name) })}</p>`
+      + `<div class="form-group"><label>${UIL("RecompileTargetLabel")}</label>`
+      + `<select name="target">${targetOptions}</select></div>`
+      + `<div class="form-group"><label>${UIL("ArchetypeLabel")}</label>`
+      + `<select name="archetype">${archetypeOptions}</select></div>`
+      + `<p class="hint">${UIL("RecompileHint")}</p>`,
+    ok: {
+      label: UIL("Recompile"),
+      callback: (event, button) => ({
+        target: button.form.elements.target.value,
+        archetype: button.form.elements.archetype.value,
+      }),
+    },
+    rejectClose: false,
+  });
+}
+
+/**
+ * Recompile (1 Resonance, maneuver): reshape a compiled sprite into another archetype, **or** rebuild the
+ * one that was just destroyed at reduced power. Both paths end with a real Actor and a real token on the
+ * canvas — the card used to be a roll and nothing else.
+ *
+ * @param {Actor} caster
+ * @param {object} [options]
+ * @param {string} [options.target]     A sprite uuid, or "destroyed".
+ * @param {string} [options.archetype]  What to shape it into; prompts when omitted.
+ * @returns {Promise<Actor|null>}
+ */
+export async function recompileSprite(caster, { target, archetype } = {}) {
+  if (!isTechnomancer(caster)) return ui.notifications.warn(game.i18n.localize(`${UI}.NotTechnomancer`));
+  const destroyed = destroyedSprite(caster);
+  const targets = recompileTargets({
+    sprites: compiledSprites(caster).map(sprite => ({
+      uuid: sprite.uuid, name: sprite.name, archetype: sprite.getFlag(MODULE_ID, "archetype"),
+    })),
+    destroyed,
+  });
+  if (!targets.length) {
+    ui.notifications.warn(game.i18n.format(`${UI}.RecompileNothing`, { name: caster.name }));
+    return null;
+  }
+  if (!target || !archetype) {
+    const choice = await promptRecompile(caster, targets);
+    if (!choice) return null;
+    target = choice.target;
+    archetype = choice.archetype;
+  }
+  if (!ARCHETYPES.includes(archetype)) return null;
+  const row = targets.find(t => t.value === target);
+  if (!row) return null;
+
+  if (row.kind === "rebuild") {
+    // Reduced power, and back where it fell if we still know where that was.
+    const position = (destroyed?.x !== null && destroyed?.y !== null && (destroyed?.sceneId === canvas.scene?.id))
+      ? { x: destroyed.x, y: destroyed.y }
+      : undefined;
+    const actor = await compileSprite(caster, { archetype, position, reduced: true, silent: true });
+    if (!actor) return null;
+    await caster.unsetFlag(MODULE_ID, DESTROYED_FLAG);
+    ui.notifications.info(game.i18n.format(`${UI}.Rebuilt`, {
+      sprite: actor.name, stamina: actor.system.stamina.max, name: caster.name,
+    }));
+    refreshSheets(caster);
+    return actor;
+  }
+
+  // Reshape: the sprite is still standing, so this is a swap at full power in the same square.
+  const sprite = fromUuidSync(row.value);
+  if (!(sprite instanceof Actor)) return null;
+  const token = sprite.getActiveTokens()[0]?.document;
+  const position = token ? { x: token.x, y: token.y } : undefined;
+  const wasReduced = sprite.getFlag(MODULE_ID, "reduced") === true;
+  await decompileSprite(sprite, { silent: true });
+  const actor = await compileSprite(caster, { archetype, position, reduced: wasReduced, silent: true });
+  if (actor) {
+    ui.notifications.info(game.i18n.format(`${UI}.Reshaped`, { sprite: actor.name, name: caster.name }));
+  }
+  refreshSheets(caster);
+  return actor;
+}
+
 export function registerSprites() {
+  // C4 / C5 (0.3.123): using the *card* is what a player actually does at the table, and until this wave
+  // it only rolled. Compile Sprite now opens the archetype picker and puts a sprite on the canvas;
+  // Recompile reshapes or rebuilds one. Same seam scripts/veil-summons.mjs uses, same opt-out setting.
+  game.settings.register(MODULE_ID, "spriteCompileOnUse", {
+    name: `${UI}.Setting.Name`, hint: `${UI}.Setting.Hint`,
+    scope: "world", config: true, type: Boolean, default: true,
+  });
+
+  Hooks.on("createChatMessage", async (message, options, userId) => {
+    if ((userId !== game.user.id) || !game.settings.get(MODULE_ID, "spriteCompileOnUse")) return;
+    const ability = abilityFromMessage(message);
+    const caster = ability?.parent;
+    if (!(caster instanceof Actor) || !caster.isOwner || !isTechnomancer(caster)) return;
+    if (ability.system?._dsid === COMPILE_DSID) await compileSprite(caster);
+    else if (ability.system?._dsid === RECOMPILE_DSID) await recompileSprite(caster);
+  });
+
   // Hero sheet: right-click the Compile Sprite row (or its ⋮ control) → Compile Sprite / Decompile All.
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
     if (typeof app._getEmbeddedDocument !== "function") return;
@@ -328,6 +514,14 @@ export function registerSprites() {
         label: `${UI}.DecompileAll`, icon: "fa-solid fa-xmark",
         visible: target => { const item = ability(target); return !!item && (compiledSprites(item.parent).length > 0); },
         onClick: (event, target) => decompileAll(ability(target)?.parent),
+      },
+      {
+        label: `${UI}.Recompile`, icon: "fa-solid fa-rotate",
+        visible: target => {
+          const item = app._getEmbeddedDocument(target);
+          return isRecompileAbility(item) && item.isOwner;
+        },
+        onClick: (event, target) => recompileSprite(app._getEmbeddedDocument(target)?.parent),
       },
     );
   });
@@ -410,6 +604,8 @@ export function registerSprites() {
     const value = foundry.utils.getProperty(changes, "system.stamina.value");
     if ((value === undefined) || (value > 0)) return;
     ui.notifications.warn(game.i18n.format(`${UI}.Destroyed`, { sprite: actor.name }));
+    // C5: remember it before it goes, so Recompile has a "just-destroyed" sprite to rebuild.
+    await rememberDestroyed(actor);
     await decompileSprite(actor, { silent: true });
   });
 
@@ -429,7 +625,11 @@ export function registerSprites() {
   // End of encounter: the congregation doesn't persist between fights, so the next Compile picks the current band.
   Hooks.on("deleteCombat", async () => {
     if (!game.users.activeGM?.isSelf) return;
-    for (const caster of game.actors.filter(isTechnomancer)) await decompileAll(caster, { silent: true });
+    for (const caster of game.actors.filter(isTechnomancer)) {
+      await decompileAll(caster, { silent: true });
+      // "Just-destroyed" does not survive the fight it died in.
+      if (caster.getFlag(MODULE_ID, DESTROYED_FLAG)) await caster.unsetFlag(MODULE_ID, DESTROYED_FLAG);
+    }
   });
 
   // A level-up mid-session must not leave the old band's math on the table.
@@ -443,8 +643,9 @@ export function registerSprites() {
   if (module) {
     module.api = {
       ...(module.api ?? {}),
-      compileSprite, decompileSprite, decompileAll, refreshSprites, commandSprite,
+      compileSprite, decompileSprite, decompileAll, refreshSprites, commandSprite, recompileSprite,
       compiledSprites, spriteCompiler, spriteCap, spriteBand, spriteStamina, compileAbility,
+      recompileAbility, destroyedSprite, recompileTargets, reducedStamina,
     };
   }
   console.log(`${MODULE_ID} | Sprites: Compile / Decompile registered (hero sheet row menu and Compile Sprite item sheet)`);

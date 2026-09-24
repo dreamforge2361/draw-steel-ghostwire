@@ -457,9 +457,12 @@
               },
               {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tWzky4yWGWvI9fd4"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwCantripEL00001"
               }
             ],
-            "description": "<p>You know all three Elementalist signature abilities: Hurl Element, Elemental Shaping, and Read the Weave. None of them costs Essence; spending Essence boosts them.</p>",
+            "description": "<p>You know all four Elementalist signature abilities: Hurl Element, Elemental Shaping, Read the Weave, and Cantrip. <strong>None of them costs Essence</strong>; spending Essence boosts the first three. <strong>Cantrip never costs Essence and never deals damage</strong> — it is light, or one small useful working you describe when you cast it.</p>",
             "chooseN": null,
             "sort": 5000,
             "additional": {
@@ -2061,6 +2064,86 @@
       "_key": "!actors.items!QCFUb5jVFgHVJx6R.tWzky4yWGWvI9fd4"
     },
     {
+      "_id": "gwCantripEL00001",
+      "name": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Name",
+      "type": "ability",
+      "img": "icons/magic/light/orb-lightbulb-gray.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cantrip",
+        "story": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Story",
+        "keywords": [
+          "magic"
+        ],
+        "type": "maneuver",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Elementalist.Items.Cantrip.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "elementalist"
+          ],
+          "level": null
+        }
+      },
+      "folder": "k832YWtHQ0twHZFA",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "cantrip": true,
+          "tokenLight": {
+            "feet": 20,
+            "toggle": true
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!QCFUb5jVFgHVJx6R.gwCantripEL00001"
+    },
+    {
       "_id": "YUMSisTmwDJ6CkfR",
       "name": "GHOSTWIRE.Classes.Elementalist.Items.KineticEnlargement.Name",
       "type": "feature",
@@ -2661,7 +2744,14 @@
             "tags": [
               "Consumable"
             ],
-            "consumable": true
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "recoveries": 1,
+              "oncePerCombat": true
+            }
           }
         }
       },

@@ -1,7 +1,7 @@
 {
   "_id": "6mCpAd4O9YwfxZQI",
   "_key": "!items!6mCpAd4O9YwfxZQI",
-  "name": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Name",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.HolySmite.Name",
   "type": "ability",
   "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
   "system": {
@@ -10,8 +10,8 @@
       "page": "07-street-priest",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "minor-rebuke",
-    "story": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Story",
+    "_dsid": "holy-smite",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.HolySmite.Story",
     "keywords": [
       "magic",
       "ranged",
@@ -45,32 +45,38 @@
         "OZAlm0XoMPLlvlfC": {
           "name": "",
           "img": null,
-          "type": "other",
+          "type": "damage",
           "_id": "OZAlm0XoMPLlvlfC",
-          "other": {
+          "damage": {
             "tier1": {
-              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier1",
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.weak",
                 "characteristic": "none"
               }
             },
             "tier2": {
-              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier2",
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.average",
                 "characteristic": ""
               }
             },
             "tier3": {
-              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier3",
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.strong",
                 "characteristic": ""
               }
             }
           },
-          "sort": 100
+          "sort": 0
         }
       }
     },
@@ -82,7 +88,7 @@
       "before0000000000": {
         "_id": "before0000000000",
         "type": "base",
-        "description": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Effect_before0000000000",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.HolySmite.Effect_before0000000000",
         "before": true,
         "name": "",
         "img": null,

@@ -49,8 +49,10 @@
           "_id": "vgnCUB7vfiGJV9Q2",
           "damage": {
             "tier1": {
-              "value": "3 + @chr",
-              "types": [],
+              "value": "2 + @chr",
+              "types": [
+                "holy"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.weak",
@@ -58,8 +60,10 @@
               }
             },
             "tier2": {
-              "value": "5 + @chr",
-              "types": [],
+              "value": "4 + @chr",
+              "types": [
+                "holy"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.average",
@@ -67,8 +71,10 @@
               }
             },
             "tier3": {
-              "value": "8 + @chr",
-              "types": [],
+              "value": "6 + @chr",
+              "types": [
+                "holy"
+              ],
               "ignoredImmunities": [],
               "potency": {
                 "value": "@potency.strong",
@@ -123,6 +129,19 @@
         "name": "",
         "img": null,
         "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": true
+        },
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.Rebuke.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
       }
     },
     "prerequisites": {
@@ -139,5 +158,9 @@
   "ownership": {
     "default": 0
   },
-  "flags": {}
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "light"
+    }
+  }
 }
