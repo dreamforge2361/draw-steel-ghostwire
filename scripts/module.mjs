@@ -12,7 +12,7 @@ import {
   PILOT_AND_GUNNER_DSID,
 } from "./wired-state.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
-import { registerGhostwireLanguages } from "./languages.mjs";
+import { registerGhostwireLanguages, TRADE_CANT_KEY } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerWiredMinimap } from "./wired-minimap.mjs";
 import { registerWiredNodeVerbs } from "./wired-node-verbs.mjs";
@@ -58,6 +58,17 @@ import { registerCritFeedback } from "./crit-feedback.mjs";
 import { registerCoverConceal } from "./cover-conceal.mjs";
 import { registerFlanking } from "./flanking.mjs";
 import { registerWorkshopBenches } from "./workshop-benches.mjs";
+import { registerDirectorResource } from "./director-resource.mjs";
+import { registerTraitRepick } from "./trait-repick.mjs";
+import { registerStamina } from "./stamina.mjs";
+import { registerMachineConditions } from "./machine-conditions.mjs";
+import {
+  CHANGER_ART_KEYS,
+  CHANGER_FORMS,
+  CHANGER_TOKEN_KEYS,
+  changerFormTokenSize,
+  shouldSnapshotBeastSize,
+} from "./changer-forms.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -173,6 +184,17 @@ Hooks.once("init", () => {
   // F18 — benches are E1 Base Assets with one extra flag, so placement is already handled by
   // scripts/machines.mjs. This only owns the two benefits: the capped project slot and the edge.
   registerWorkshopBenches();
+  // 0.3.122 — Director: +1 heroic resource (Influence / Adrenaline / whatever the class names it).
+  registerDirectorResource();
+  // 0.3.122 — right-click Beast-Hide (and Layered Hide) to re-pick the damage immunity, because
+  // Take Respite does not open Draw Steel's own effectGrant chooser in practice.
+  registerTraitRepick();
+  // 0.3.122 — worn armor finally enables its Stamina band, and the locked sheet's Stamina pool says
+  // which sources built the max. Registered after the sheet patches above so the context-menu entries
+  // sit alongside them rather than fighting them.
+  registerStamina();
+  // 0.3.122 — On Fire / Leaking, Crippled and Systems Down, read off a machine's Integrity.
+  registerMachineConditions();
 });
 
 // ---------- Wired connection states ----------
@@ -573,7 +595,46 @@ async function setChangerForm(effects, form, actor) {
   for (const [parent, changes] of updates) {
     await parent.updateEmbeddedDocuments("ActiveEffect", changes, { ghostwireChangerForm: true });
   }
-  if (actor) await syncChangerFormArt(actor, form);
+  if (!actor) return;
+  await syncChangerFormArt(actor, form);
+  await syncChangerFormTokenSize(actor, form);
+}
+
+// 0.3.122 — the canvas footprint half of a form swap. A Rat-lineage Changer in Beast Form is a rat:
+// `rat-lineage-trait.json` already overrides the *rules* size to 1S, and this is the same fact on the
+// grid. Human and Hybrid restore the footprint the token had before the first Beast swap, so a
+// Director's own 2×2 frame is never silently rewritten to 1×1.
+//
+// Lineage is read from `flags.<module>.changerLineage` on the lineage trait Item — the flag the
+// chargen warning in this file and the lineage pack rows already use. No parallel flag.
+const changerLineageOf = actor => [...(actor?.items ?? [])]
+  .map(item => item.getFlag?.(MODULE_ID, "changerLineage"))
+  .find(Boolean) ?? null;
+
+async function syncChangerFormTokenSize(actor, form) {
+  const lineage = changerLineageOf(actor);
+  const proto = actor.isToken ? null : actor.prototypeToken;
+  const reference = proto ?? actor.token;
+  const changer = actor.getFlag(MODULE_ID, "changer") ?? {};
+  if (shouldSnapshotBeastSize({ lineage, form, stored: changer.baseTokenSize, current: reference })) {
+    await actor.setFlag(MODULE_ID, "changer.baseTokenSize", {
+      width: Number(reference?.width) || 1,
+      height: Number(reference?.height) || 1,
+    });
+  }
+  const base = actor.getFlag(MODULE_ID, "changer")?.baseTokenSize ?? null;
+  const size = changerFormTokenSize({ lineage, form, base });
+  if (!size) return;
+
+  if (proto && ((proto.width !== size.width) || (proto.height !== size.height))) {
+    await actor.update({ "prototypeToken.width": size.width, "prototypeToken.height": size.height });
+  }
+  const tokens = actor.isToken ? [actor.token] : actor.getActiveTokens(false, true);
+  for (const placed of tokens) {
+    if (placed && ((placed.width !== size.width) || (placed.height !== size.height))) {
+      await placed.update({ width: size.width, height: size.height });
+    }
+  }
 }
 
 // Changer form art: swap the sheet portrait and the canvas token to the form's images from flags.changer.
@@ -586,9 +647,6 @@ async function setChangerForm(effects, form, actor) {
 // A Changer with no `*Token` for a form falls back to that form's `*Art`, so hand-built Changers (and anyone who
 // only filled the sheet's art pickers) keep working. Changers without beastArt or humanArt keep their art entirely;
 // the forms still work mechanically.
-const CHANGER_ART_KEYS = { human: "humanArt", hybrid: "hybridArt", beast: "beastArt" };
-const CHANGER_TOKEN_KEYS = { human: "humanToken", hybrid: "hybridToken", beast: "beastToken" };
-
 async function syncChangerFormArt(actor, form) {
   const art = actor.getFlag(MODULE_ID, "changer") ?? {};
   if (!art.beastArt && !art.humanArt) return;
@@ -749,7 +807,34 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
     [`flags.${MODULE_ID}.wired`]: { connected: false, immersed: false, state: "disconnected" },
   };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;
+  // 0.3.122 — Trade Cant is free for every hero. Additive: whatever the create data already carries
+  // (a drag from a compendium hero, a duplicate with a full language list) keeps every entry it had.
+  const languages = new Set(foundry.utils.getProperty(data, "system.biography.languages") ?? []);
+  if (!languages.has(TRADE_CANT_KEY)) {
+    languages.add(TRADE_CANT_KEY);
+    updates["system.biography.languages"] = [...languages];
+  }
   actor.updateSource(updates);
+});
+
+// Existing worlds: give every hero Trade Cant once. Flagged so a player who deliberately drops it
+// is not handed it back every load — the lock is "free at creation", not "impossible to remove".
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  let granted = 0;
+  for (const actor of game.actors) {
+    if ((actor.type !== "hero") || !actor.isOwner) continue;
+    if (actor.getFlag(MODULE_ID, "tradeCantGranted")) continue;
+    const languages = new Set(actor.system.biography?.languages ?? []);
+    const update = { [`flags.${MODULE_ID}.tradeCantGranted`]: true };
+    if (!languages.has(TRADE_CANT_KEY)) {
+      languages.add(TRADE_CANT_KEY);
+      update["system.biography.languages"] = [...languages];
+      granted += 1;
+    }
+    await actor.update(update);
+  }
+  if (granted) console.log(`${MODULE_ID} | granted free Trade Cant to ${granted} hero(es)`);
 });
 
 
@@ -993,18 +1078,28 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
 
 // Hero sheet: Changer form control (B50b) under the Wired fieldset. Clicking a form runs setChangerForm: all of that
 // form's Forms-trait effects on, the other forms' off, then the art swap.
-const CHANGER_FORMS = ["human", "hybrid", "beast"];
+//
+// 0.3.122 splits the box in two. The three **form buttons** stay here, on the Stats tab, because
+// swapping form is a maneuver a player takes mid-fight and the first page is where they are looking.
+// The **art pickers** moved to the Biography tab: R2 (0.3.121) doubled them — a portrait picker and a
+// round-token picker for each of three forms — and six thumbnails pushed Stamina and the
+// characteristics below the fold. Art is a once-per-character job, so Biography is where it belongs.
+// Both halves read the same `flags.<module>.changer` keys and both end in syncChangerFormArt.
+
+/** Every Changer form effect on this hero, flat and grouped. Empty groups mean "not a Changer". */
+function changerFormEffects(actor) {
+  const formEffects = [...actor.allApplicableEffects()].filter(e => CHANGER_FORMS.includes(e.getFlag(MODULE_ID, "changerForm")));
+  return { formEffects, effects: Object.groupBy(formEffects, e => e.getFlag(MODULE_ID, "changerForm")) };
+}
 
 Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   const stats = element.querySelector("section.tab[data-tab='stats']");
   if (!stats || stats.querySelector(".ghostwire-changer-forms")) return;
   const actor = app.document;
-  const formEffects = [...actor.allApplicableEffects()].filter(e => CHANGER_FORMS.includes(e.getFlag(MODULE_ID, "changerForm")));
-  const effects = Object.groupBy(formEffects, e => e.getFlag(MODULE_ID, "changerForm"));
+  const { formEffects, effects } = changerFormEffects(actor);
   if (foundry.utils.isEmpty(effects)) return;
   const isActive = form => effects[form]?.some(e => !e.disabled);
   const active = CHANGER_FORMS.find(isActive);
-  const art = actor.getFlag(MODULE_ID, "changer") ?? {};
 
   const fieldset = document.createElement("fieldset");
   fieldset.className = "ghostwire-changer-forms";
@@ -1031,6 +1126,35 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
     buttons.append(button);
   }
   fieldset.append(buttons);
+
+  // One line so nobody hunts for the pickers that used to sit right here.
+  const pointer = document.createElement("p");
+  pointer.className = "hint ghostwire-changer-art-pointer";
+  pointer.textContent = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.MovedHint");
+  fieldset.append(pointer);
+
+  const anchor = stats.querySelector(".ghostwire-wired") ?? stats.querySelector(".ghostwire-integrity")
+    ?? stats.querySelector("fieldset.resources");
+  if (anchor) anchor.after(fieldset);
+  else stats.prepend(fieldset);
+});
+
+// Hero sheet, Biography tab: the per-form portrait and round-token pickers (0.3.122 — moved off Stats).
+Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
+  const biography = element.querySelector("section.tab[data-tab='biography']");
+  if (!biography || biography.querySelector(".ghostwire-changer-form-art")) return;
+  const actor = app.document;
+  const { effects } = changerFormEffects(actor);
+  if (foundry.utils.isEmpty(effects)) return;
+  const isActive = form => effects[form]?.some(e => !e.disabled);
+  const art = actor.getFlag(MODULE_ID, "changer") ?? {};
+
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = "ghostwire-changer-forms ghostwire-changer-art";
+  const legend = document.createElement("legend");
+  legend.textContent = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Name");
+  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Hint");
+  fieldset.append(legend);
 
   const artRow = document.createElement("div");
   artRow.className = "ghostwire-changer-form-art";
@@ -1099,9 +1223,5 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
     artRow.append(cell);
   }
   fieldset.append(artRow);
-
-  const anchor = stats.querySelector(".ghostwire-wired") ?? stats.querySelector(".ghostwire-integrity")
-    ?? stats.querySelector("fieldset.resources");
-  if (anchor) anchor.after(fieldset);
-  else stats.prepend(fieldset);
+  biography.append(fieldset);
 });

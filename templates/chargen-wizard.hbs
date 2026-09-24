@@ -293,8 +293,8 @@
       {{#if atCap}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Languages.AtCap"}}</p>{{/if}}
       <ul class="gw-cg-tags">
         {{#each known}}
-        <li class="gw-cg-tag">
-          {{label}}
+        <li class="gw-cg-tag{{#if free}} is-free{{/if}}">
+          {{label}}{{#if free}} <span class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Languages.Free"}}</span>{{/if}}
           <button type="button" class="gw-cg-link" data-action="removeLanguage" data-language="{{key}}"
             data-tooltip="{{localize "GHOSTWIRE.Chargen.Languages.Remove"}}" {{disabled disabled}}>
             <i class="fa-solid fa-xmark"></i>

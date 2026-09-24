@@ -202,6 +202,8 @@ const EXPECTED = {
   "sensor-pod": [10, 5, null],
   "taint-sight": [10, null, null],
   "predictive-sensors": [null, null, 20],
+  // 0.3.122: Darksight 30 is a Changer People trait, wired through the same nightOptics mapping.
+  "changer-darksight": [30, null, null],
 };
 // Sight-adjacent SKUs that must NOT carry a grant, and why.
 const NO_GRANT = ["cheap-shades", "thermoptic-skin", "penetration-optics", "detect-the-supernatural", "cold-read"];
@@ -260,6 +262,7 @@ const CARDS = {
   "GHOSTWIRE.Mods.Items.SensorPod.Description": ["Darkvision 10 squares", "Thermal 5 squares", "Has Vision"],
   "GHOSTWIRE.Peoples.Mutant.TaintSight.Description": ["Darkvision 10 squares"],
   "GHOSTWIRE.Peoples.Cyborg.PredictiveSensors.Description": ["See invisible 20 squares"],
+  "GHOSTWIRE.Peoples.Changer.Darksight.Description": ["Darkvision 30 squares"],
 };
 for (const [key, phrases] of Object.entries(CARDS)) {
   const card = langAt(key);

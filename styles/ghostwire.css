@@ -2700,3 +2700,116 @@ body.ghostwire-theme .application.ghostwire-hero-sheet :focus-visible {
   scrollbar-width: thin;
   scrollbar-color: var(--ghostwire-sheet-steel-dim) transparent;
 }
+
+/* ============================================================
+ * 0.3.122 — next-build wave
+ * ============================================================ */
+
+/* Lock 1 — the Changer art pickers moved to Biography; the Stats box keeps a pointer line. */
+.ghostwire-changer-art {
+  margin-top: 0.75rem;
+}
+
+.ghostwire-changer-art-pointer {
+  margin: 0;
+  font-size: 0.8em;
+  color: var(--ghostwire-text-dim);
+}
+
+.ghostwire-hero-sheet .ghostwire-changer-art > legend {
+  color: var(--ghostwire-sheet-steel);
+}
+
+.ghostwire-hero-sheet .ghostwire-changer-art-pointer {
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+/* Lock 2 — Director: +1 heroic resource chat card. Same shape as the Taint card. */
+.ghostwire-resource-chat header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ghostwire-resource-chat .gw-resource-kicker {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: var(--ghostwire-track-xl);
+  color: var(--ghostwire-text-dim);
+}
+
+.ghostwire-resource-chat p {
+  margin: 0.25rem 0 0;
+}
+
+/* Lock 6 — the locked-sheet Stamina tooltip: one row per contributor, value hard right. */
+.ghostwire-stamina-tooltip {
+  min-width: 15rem;
+  text-align: left;
+}
+
+.ghostwire-stamina-tooltip .gw-stamina-total {
+  margin: 0 0 0.25rem;
+}
+
+.ghostwire-stamina-sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.ghostwire-stamina-sources li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.ghostwire-stamina-sources .gw-stamina-val {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--ghostwire-font-mono);
+}
+
+.resource.stamina.ghostwire-stamina-hover {
+  cursor: help;
+}
+
+/* Lock 8 — a granted language reads as granted, and its remove button is dead. */
+.gw-cg-tag.is-free .gw-cg-link {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Lock 9 — the Machine sheet Condition chip. One band at a time, coloured by how bad it is. */
+.ghostwire-machine-sheet .gw-m-condition {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--ghostwire-border);
+  border-radius: var(--ghostwire-radius-pill);
+  font-size: 0.85em;
+  letter-spacing: var(--ghostwire-track-xs);
+  color: var(--ghostwire-text-muted);
+}
+
+.ghostwire-machine-sheet .gw-m-condition.condition-healthy {
+  color: var(--ghostwire-ok);
+  border-color: color-mix(in srgb, var(--ghostwire-ok) 50%, transparent);
+}
+
+.ghostwire-machine-sheet .gw-m-condition.condition-onFire {
+  color: var(--ghostwire-warn);
+  border-color: color-mix(in srgb, var(--ghostwire-warn) 55%, transparent);
+}
+
+.ghostwire-machine-sheet .gw-m-condition.condition-crippled {
+  color: var(--ghostwire-accent-hot);
+  border-color: color-mix(in srgb, var(--ghostwire-accent-hot) 55%, transparent);
+}
+
+.ghostwire-machine-sheet .gw-m-condition.condition-systemsDown {
+  color: var(--ghostwire-danger);
+  border-color: var(--ghostwire-danger);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--ghostwire-danger) 40%, transparent);
+}

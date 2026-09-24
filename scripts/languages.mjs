@@ -1,6 +1,16 @@
 // Ghostwire languages (docs/masters/GHOSTWIRE_LANGUAGES.md): relabel every Draw Steel language, keeping its key,
 // so ancestry and culture language grants still resolve. Draw Steel localizes ds.CONFIG.languages labels at i18nInit.
 
+/**
+ * Trade Cant — the street lingua franca (Draw Steel's `caelian`).
+ *
+ * Michael lock 2026-09-23: **every hero speaks it, free.** It is not a pick, it is not spent from a
+ * culture's language budget, and it is not removed by any of the remaps above — those only change
+ * what Draw Steel's existing keys are *called*. Stamped on the create-Actor path in
+ * scripts/module.mjs and excluded from the Chargen Wizard's budget in scripts/chargen-wizard.mjs.
+ */
+export const TRADE_CANT_KEY = "caelian";
+
 /** Draw Steel language key -> GHOSTWIRE.Languages.<suffix> */
 export const LANGUAGES = {
   // Common urban

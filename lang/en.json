@@ -6674,14 +6674,20 @@
           "Art": {
             "Pick": "Choose Art",
             "Clear": "Clear",
-            "Hint": "Square sheet portrait used when this form is active.",
+            "Hint": "The square portrait the Hero sheet shows for this form. Picking one swaps the sheet portrait the moment that form is active.",
             "Portrait": "Portrait",
             "Token": "Token",
-            "TokenHint": "Round canvas token used when this form is active (assets/tokens/pregens/ style)."
+            "TokenHint": "The round canvas token for this form. Kept separate from the portrait on purpose — a rectangular photo on the grid is what R2 removed.",
+            "Name": "Changer form art",
+            "MovedHint": "Portrait and token art for each form live on the Biography tab."
           }
         },
         "Warnings": {
           "MissingLineage": "{name} is a Changer without a Lineage. Open the Changer ancestry, find the Lineage advancement, and reconfigure it to choose Raven, Rat, or Wolf."
+        },
+        "Darksight": {
+          "Name": "Darksight",
+          "Description": "<p>Your beast eyes gather light no baseline eye can use. Every Changer has <strong>Darksight 30</strong>: within 30 squares, darkness reads to you as dim light. Walls still stop you — this is better eyes, not x-ray.</p><p><strong>On the canvas (automated):</strong> <strong>Darkvision 30 squares</strong> (Foundry <code>basicSight</code> plus the darkvision vision mode): unlit squares inside 30 read as lit for you.</p>"
         }
       },
       "Mutant": {
@@ -7990,7 +7996,9 @@
           "DeleteItem": "Delete Item",
           "DeleteItemConfirm": "Delete {name} from this machine?",
           "DropItemHint": "Director: drop Items from the sidebar or a pack onto this sheet to embed them (Wire Kit, mods, gear).",
-          "InventoryNotes": "Cargo / Mounts / Sensors (notes)"
+          "InventoryNotes": "Cargo / Mounts / Sensors (notes)",
+          "Condition": "Condition",
+          "ConditionHint": "Read from Integrity: On Fire / Leaking at 50% or less, Crippled at 25% or less, Systems Down at 0%. One band at a time — the worst one wins."
         },
         "SealCruiser": {
           "Name": "Seal Cruiser",
@@ -8059,6 +8067,27 @@
         "RitualSanctumTools": {
           "Name": "Ritual Sanctum Tools",
           "Description": "<p>Workshop bench — Ritual Working Projects. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "Conditions": {
+          "onFire": {
+            "Label": "On Fire / Leaking",
+            "Chip": "{label} ({percent}% Integrity)"
+          },
+          "crippled": {
+            "Label": "Crippled",
+            "Chip": "{label} ({percent}% Integrity)"
+          },
+          "systemsDown": {
+            "Label": "Systems Down",
+            "Chip": "{label} (0% Integrity)"
+          },
+          "healthy": {
+            "Label": "Operational",
+            "Chip": "Operational ({percent}% Integrity)"
+          },
+          "unrated": {
+            "Label": "Unrated"
+          }
         }
       },
       "Nodes": {
@@ -9306,7 +9335,9 @@
         "Ack": "That is the list",
         "Budget": "Languages on sheet: {count} / budget {budget}",
         "BudgetSpent": "Language budget spent ({budget}).",
-        "AtCap": "Language budget spent. Remove a language or Start over to pick again."
+        "AtCap": "Language budget spent. Remove a language or Start over to pick again.",
+        "Free": "(free)",
+        "FreeLocked": "{label} is free for every hero and cannot be given up here."
       },
       "Resources": {
         "Primary": "Heroic resource",
@@ -9639,7 +9670,7 @@
     "WireToggle": {
       "Label": "Wire state",
       "Title": "Wire state",
-      "Hint": "Switch between Jumped In, Linked and Overlay. Connect is what puts you on-net; Jack Out is what takes you off.",
+      "Hint": "Switch between Disconnected, Linked, Overlay and Jumped In. Going on-net still needs a Wired interface; pulling the plug never does.",
       "Hud": "Wire state: {state}. Click to switch.",
       "Current": "current",
       "Prompt": "{actor} is <strong>{state}</strong>. Pick a rung.",
@@ -9656,7 +9687,8 @@
         "same": "{actor} is already {state}.",
         "unknown": "That is not a Wire state this toggle offers.",
         "notConnected": "{actor} is {state}. Use Connect to get on-net first — this toggle moves between rungs, it is not an on-ramp.",
-        "noMachine": "No machine to jump into. Target or control one Jump-In-capable frame, or field one, first."
+        "noMachine": "No machine to jump into. Target or control one Jump-In-capable frame, or field one, first.",
+        "noInterface": "{actor} is {state} and carries no Wired interface. Get a deck, a jack or a rig before trying to go on-net."
       },
       "Chat": {
         "Changed": "{actor}: {from} → {to}."
@@ -9664,7 +9696,7 @@
       "Settings": {
         "Hud": {
           "Name": "Wire state toggle on the token HUD",
-          "Hint": "Show the Wire state button on a hero token’s HUD. It opens the Jumped In / Linked / Overlay picker."
+          "Hint": "Show the Wire state button on a hero token’s HUD. It opens the Disconnected / Linked / Overlay / Jumped In picker."
         },
         "Sheet": {
           "Name": "Wire state chip on the hero sheet",
@@ -9672,8 +9704,15 @@
         },
         "Chat": {
           "Name": "Announce Wire state changes in chat",
-          "Hint": "Post a short card when a hero switches between Jumped In, Linked and Overlay. The toast always fires."
+          "Hint": "Post a short card when a hero changes Wire state. The toast always fires."
         }
+      },
+      "Cycle": {
+        "MacroName": "Cycle Wire State",
+        "Title": "Cycle Wire State",
+        "NoSelection": "Select one or more tokens to cycle their Wire state.",
+        "NotHero": "{actor} has no Wire state to cycle.",
+        "Hint": "Each use steps one rung: Disconnected → Linked → Overlay → Jumped In → Disconnected."
       }
     },
     "WorkshopBench": {
@@ -9772,6 +9811,57 @@
           "Name": "Announce Cover/Conceal in chat",
           "Hint": "Post a short card when a token takes or drops Cover/Conceal. The toast always fires."
         }
+      }
+    },
+    "Resources": {
+      "Director": {
+        "MacroName": "Director: +1 Heroic Resource",
+        "Title": "Director: +1 Heroic Resource",
+        "Keybinding": "Director: +1 Heroic Resource",
+        "Hud": "+1 heroic resource",
+        "Speaker": "Director",
+        "ChatTitle": "Heroic resource",
+        "ChatLine": "{actor} gains {amount} {resource} (now {value}).",
+        "Notify": "{actor}: +{amount} {resource} — now {value}.",
+        "GMOnly": "Only the Director can hand out heroic resources.",
+        "NoTarget": "Target or select a hero token first.",
+        "NotHero": "{actor} is not a hero — no heroic resource to add to.",
+        "NoPrimary": "{actor} has no class yet, so there is no heroic resource to add to."
+      }
+    },
+    "Repick": {
+      "MenuLabel": "Re-pick this choice",
+      "Title": "Re-pick",
+      "Open": "Re-pick",
+      "Prompt": "{name} has more than one re-pickable choice. Which one?",
+      "Warnings": {
+        "NotRepickable": "{name} has nothing to re-pick.",
+        "CannotReconfigure": "{name} cannot be re-picked at this level.",
+        "Failed": "Could not open the chooser for {name}. See the console for details."
+      }
+    },
+    "Stamina": {
+      "Tooltip": {
+        "Total": "Max Stamina {total}",
+        "Row": "{kind}: {name}",
+        "Empty": "No tracked contributors."
+      },
+      "Kinds": {
+        "class": "Class",
+        "kit": "Kit",
+        "armor": "Worn armor",
+        "armorOff": "Armor (not worn)",
+        "trait": "Trait",
+        "effect": "Effect",
+        "other": "Other effects"
+      },
+      "Menu": {
+        "Wear": "Wear this armor",
+        "Remove": "Take off this armor"
+      },
+      "Notify": {
+        "Worn": "{actor} is wearing {name}.",
+        "Removed": "{actor} took off {name}."
       }
     }
   },

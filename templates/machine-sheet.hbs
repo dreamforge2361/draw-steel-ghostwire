@@ -52,6 +52,10 @@
             <input type="number" name="system.stamina.max" value="{{stamina.max}}" />
           </div>
         </label>
+        {{!-- 0.3.122: the damage band Integrity puts this frame in. One band at a time, worst wins. --}}
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Condition"}}
+          <span class="gw-m-condition condition-{{conditionId}}" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.ConditionHint'}}">{{conditionLabel}}</span>
+        </label>
         <label>{{localize "GHOSTWIRE.Summons.Machines.UI.SizeScale"}}
           <input type="text" name="flags.draw-steel-ghostwire.machine.sizeScale" value="{{machine.sizeScale}}" />
         </label>

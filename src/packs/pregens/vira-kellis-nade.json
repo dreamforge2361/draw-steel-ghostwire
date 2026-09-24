@@ -255,6 +255,28 @@
               "type": "",
               "perkType": []
             }
+          },
+          "sQZ3DarksightGw0": {
+            "_id": "sQZ3DarksightGw0",
+            "name": "GHOSTWIRE.Peoples.Changer.Darksight.Name",
+            "img": "icons/magic/perception/eye-slit-orange.webp",
+            "type": "itemGrant",
+            "requirements": {
+              "level": null
+            },
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GrpBmxkUswQon6x8"
+              }
+            ],
+            "sort": 0,
+            "description": "",
+            "repick": {},
+            "chooseN": null,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
           }
         }
       },
@@ -2319,6 +2341,56 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!8jyyJ1eq3XQnJ95X.SZT2y1ndFs2vR5IG"
+    },
+    {
+      "_id": "GrpBmxkUswQon6x8",
+      "name": "GHOSTWIRE.Peoples.Changer.Darksight.Name",
+      "type": "ancestryTrait",
+      "img": "icons/magic/perception/eye-slit-orange.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Peoples.Changer.Darksight.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "09-species",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "changer-darksight",
+        "advancements": {},
+        "points": null,
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": "v9M12QKDwPuznTOY",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "sightGrant": {
+            "modes": [
+              {
+                "id": "basicSight",
+                "range": 30,
+                "enabled": true
+              }
+            ],
+            "visionMode": "darkvision",
+            "priority": 1,
+            "claims": [
+              "nightOptics"
+            ]
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.GrpBmxkUswQon6x8"
     },
     {
       "_id": "W36HrzG4jIM1777Y",

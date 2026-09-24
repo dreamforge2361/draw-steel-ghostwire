@@ -13,6 +13,7 @@
 
 import { jumpIn, jumpOut, isJumpedInto } from "./rigger-vertical.mjs";
 import { isJumpInCapable, machineKindOf } from "./machines.mjs";
+import { machineCondition, machineConditionLabel } from "./machine-conditions.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const SHEET_CLASS_NAME = "GhostwireMachineSheet";
@@ -112,6 +113,9 @@ export function defineMachineSheet() {
         gearItemUuid: actor.getFlag(MODULE_ID, "gearItemUuid") ?? "",
         tags: Array.isArray(machine.tags) ? machine.tags.join(", ") : (machine.tags ?? ""),
         stamina: actor.system.stamina ?? { value: 0, max: 0 },
+        // 0.3.122 — the damage band Integrity puts this frame in (scripts/machine-conditions.mjs).
+        conditionId: machineCondition(actor) ?? "healthy",
+        conditionLabel: machineConditionLabel(actor),
         movement: actor.system.movement ?? { value: 0 },
         biography: actor.system.biography?.value ?? "",
         notes: actor.system.biography?.director ?? "",
