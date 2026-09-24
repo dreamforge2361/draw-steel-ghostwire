@@ -60,7 +60,11 @@ note(WIRE_TOGGLE_OPTIONS.join(",") === "disconnected,linked,overlay,jumpedIn",
   "Disconnected / Linked / Overlay / Jumped In, in ladder order");
 note(WIRE_TOGGLE_OPTIONS.includes("disconnected"), "Disconnect is a first-class target");
 note(!WIRE_TOGGLE_OPTIONS.includes("jackedIn"), "plain Jacked In is not offered — Jumped In is the seat, and Toggle Connection State still owns the deck ladder");
-note(WIRE_CYCLE_ORDER.join(",") === WIRE_TOGGLE_OPTIONS.join(","), "the cycle walks the same ladder the picker shows");
+// 0.3.127 (B): the cycle and the picker are two ladders now. The dialog still offers the seat.
+note(WIRE_CYCLE_ORDER.join(",") === "disconnected,linked,overlay",
+  `the cycle is Disconnected → Linked → Overlay → Disconnected (got ${WIRE_CYCLE_ORDER.join(" → ")})`);
+note(!WIRE_CYCLE_ORDER.includes("jumpedIn"), "Jumped In is NOT a cycle rung — one press must never seat a Rigger");
+note(WIRE_TOGGLE_OPTIONS.includes("jumpedIn"), "but the picker dialog still offers it");
 
 console.log("\n3) Display state");
 note(wireDisplayState({ state: "jackedIn", jumpedIn: true }) === "jumpedIn", "a pilot in a seat reads Jumped In");
@@ -150,20 +154,22 @@ for (const bad of [null, undefined, "", 0]) {
   note(!wireTogglePlan({ from: "linked", to: bad }).ok, `a ${JSON.stringify(bad)} target is refused`);
 }
 
-console.log("\n8b) The cycle (0.3.122 macro)");
+console.log("\n8b) The cycle (0.3.127 B — three rungs, and the seat is not one of them)");
 note(nextWireCycleState("disconnected") === "linked", "Disconnected → Linked");
 note(nextWireCycleState("linked") === "overlay", "Linked → Overlay");
-note(nextWireCycleState("overlay") === "jumpedIn", "Overlay → Jumped In");
-note(nextWireCycleState("jumpedIn") === "disconnected", "Jumped In → Disconnected wraps the ladder");
-note(nextWireCycleState("jackedIn") === "jumpedIn",
-  "a seatless deck jockey reading Jacked In is one step past Overlay, so the seat is next");
+note(nextWireCycleState("overlay") === "disconnected", "Overlay → Disconnected — the last step is off, not deeper");
+note(nextWireCycleState("jumpedIn") === "disconnected",
+  "a pilot already in a seat cycles all the way out; applyWireState runs jumpOut() on the way");
+note(nextWireCycleState("jackedIn") === "disconnected",
+  "and a seatless deck jockey reading Jacked In is past the end of the ladder, so it wraps — 0.3.122 used to send them to the seat");
 note(nextWireCycleState("nonsense") === "disconnected", "an unknown rung falls back to the top of the ladder");
 {
-  // Four steps from Disconnected returns to Disconnected, visiting each rung exactly once.
+  // Three steps from Disconnected returns to Disconnected, and the seat never appears.
   const walk = [];
   let at = "disconnected";
-  for (let i = 0; i < 4; i += 1) { at = nextWireCycleState(at); walk.push(at); }
-  note(walk.join(",") === "linked,overlay,jumpedIn,disconnected", `the cycle closes: ${walk.join(" → ")}`);
+  for (let i = 0; i < 3; i += 1) { at = nextWireCycleState(at); walk.push(at); }
+  note(walk.join(",") === "linked,overlay,disconnected", `the cycle closes: ${walk.join(" → ")}`);
+  note(!walk.includes("jumpedIn"), "and no amount of pressing lands on Jumped In");
 }
 note(typeof cycleWireState === "function" && typeof cycleWireStateForSelection === "function",
   "both cycle entry points are exported");
@@ -212,8 +218,10 @@ note(/Disconnected/.test(strings.Hint), "the toggle hint names Disconnected as a
 note(typeof strings.Cycle?.MacroName === "string", "the cycle macro has a name");
 note(typeof strings.Cycle?.NoSelection === "string", "and a nothing-selected warning");
 note(typeof strings.Cycle?.NotHero === "string", "and a not-a-hero warning");
-note(/Disconnected/.test(strings.Cycle.Hint) && /Jumped In/.test(strings.Cycle.Hint),
-  "and a hint that spells the ladder out");
+note(/Disconnected → Linked → Overlay → Disconnected/.test(strings.Cycle.Hint),
+  "and a hint that spells the three-rung ladder out");
+note(/not on the cycle/i.test(strings.Cycle.Hint),
+  "and says out loud that Jumped In is not one of them");
 note(lang.GHOSTWIRE.Wired.States.disconnected === "Disconnected", "the Disconnected label comes from the existing Wired block");
 for (const key of ["Hud", "Sheet", "Chat"]) {
   note(typeof strings.Settings[key]?.Name === "string" && typeof strings.Settings[key]?.Hint === "string",
