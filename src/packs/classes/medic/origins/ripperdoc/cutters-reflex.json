@@ -17,7 +17,7 @@
     ],
     "type": "freeTriggered",
     "category": "",
-    "resource": null,
+    "resource": 1,
     "trigger": "GHOSTWIRE.Classes.Medic.Items.CuttersReflex.Trigger",
     "distance": {
       "type": "ranged",

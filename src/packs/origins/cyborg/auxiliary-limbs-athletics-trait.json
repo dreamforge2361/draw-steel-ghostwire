@@ -35,14 +35,14 @@
         "changes": [
           {
             "key": "system.skills.modifiers.athletics.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null
           },
           {
             "key": "system.skills.modifiers.acrobatics.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

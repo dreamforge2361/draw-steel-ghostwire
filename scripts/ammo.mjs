@@ -46,9 +46,12 @@
 // tools/wave-03126-smoke.mjs and tools/wave-03128-smoke.mjs can run it under Node.
 
 import { isMountedWeapon, isMachineActor } from "./weapon-skills.mjs";
+import { isDeployedMachineActor } from "./machines.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Ammo";
+
+const RIGGED_FIRE_DSID = "rigged-fire";
 
 /** Loaded state on the gun: `{ count, type }`. Deliberately outside `gear`, which is the catalog row. */
 export const AMMO_FLAG = "ammo";
@@ -372,6 +375,74 @@ export function spendsAmmo(gearItem) {
   return true;
 }
 
+/* -------------------------------------------- platform helpers (Rigged Fire / Reload) */
+
+/**
+ * 0.3.130 (C) — every deployed machine Actor this hero owns.
+ *
+ * A "connected drone" or "vehicle with turret" is a deployed machine Actor whose
+ * `ownerUuid` resolves to the hero. The machine carries its own guns as Items, and
+ * Rigged Fire debits those guns — not the hero's belt.
+ */
+export function deployedPlatformsOf(hero) {
+  if (!hero?.uuid) return [];
+  const platforms = [];
+  for (const actor of game.actors ?? []) {
+    if (!isDeployedMachineActor(actor)) continue;
+    if (actor.getFlag?.(MODULE_ID, "ownerUuid") !== hero.uuid) continue;
+    platforms.push(actor);
+  }
+  return platforms;
+}
+
+/** Ammo-bearing guns on a platform (drone or vehicle). */
+export function platformGunsOf(platform) {
+  return [...(platform?.items ?? [])].filter(item => isAmmoWeapon(item));
+}
+
+/** Is this actor a vehicle (not a drone)? */
+function isVehicle(actor) {
+  return actor?.getFlag?.(MODULE_ID, "kind") === "vehicle";
+}
+
+/** Does this vehicle have a turret? Check its weaponry mods for turret-ring. */
+function vehicleHasTurret(actor) {
+  if (!isVehicle(actor)) return false;
+  for (const item of actor?.items ?? []) {
+    const mod = item.getFlag?.(MODULE_ID, "machineMod");
+    if (!mod) continue;
+    if (mod.profile?.turret || mod.turret) return true;
+  }
+  return platformGunsOf(actor).length > 0;
+}
+
+/**
+ * 0.3.130 (C) — pick a fire platform for Rigged Fire.
+ *
+ * Returns the first connected drone with a gun, or a vehicle with turret/gun, or null.
+ * When multiple platforms have guns, the one with the fullest magazine wins.
+ */
+export function pickFirePlatform(hero) {
+  const platforms = deployedPlatformsOf(hero);
+  let best = null;
+  let bestLoaded = -1;
+  for (const platform of platforms) {
+    const kind = platform.getFlag?.(MODULE_ID, "kind");
+    const isDrone = kind === "drone";
+    const isVeh = kind === "vehicle";
+    if (!isDrone && !isVeh) continue;
+    if (isVeh && !vehicleHasTurret(platform)) continue;
+    const guns = platformGunsOf(platform);
+    if (!guns.length) continue;
+    const maxLoaded = Math.max(...guns.map(g => loadedAmmo(g).count));
+    if (maxLoaded > bestLoaded) {
+      bestLoaded = maxLoaded;
+      best = platform;
+    }
+  }
+  return best;
+}
+
 /* ============================================ Foundry registration */
 
 const loc = (key, data) => (data ? game.i18n.format(`${L}.${key}`, data) : game.i18n.localize(`${L}.${key}`));
@@ -490,24 +561,43 @@ export async function syncActor(actor) {
   return { added: 0, removed: 0 };
 }
 
-/** Pick a gun and an ammo type. Returns null when the player backs out. */
+/**
+ * Pick a gun and an ammo type. Returns null when the player backs out.
+ *
+ * 0.3.130 (C2): the chooser now also lists drone guns and vehicle turret guns so the hero can
+ * reload any platform they have access to. Inventory rounds always come from the hero's belt.
+ */
 async function promptReload(actor) {
-  const guns = ammoWeaponsOf(actor);
-  if (!guns.length) {
+  // Hero's own guns
+  const heroGuns = ammoWeaponsOf(actor).map(gun => ({ gun, owner: actor, label: gun.name }));
+
+  // 0.3.130 (C2): platform guns (drones + vehicles with turrets)
+  const platformGuns = [];
+  if (isHero(actor)) {
+    for (const platform of deployedPlatformsOf(actor)) {
+      for (const gun of platformGunsOf(platform)) {
+        platformGuns.push({ gun, owner: platform, label: `${platform.name} — ${gun.name}` });
+      }
+    }
+  }
+
+  const allGuns = [...heroGuns, ...platformGuns];
+  if (!allGuns.length) {
     ui.notifications.warn(loc("NoGun", { actor: actor.name }));
     return null;
   }
-  const gunRows = guns.map(gun => {
-    const family = ammoFamilyOf(gun);
-    const state = loadedAmmo(gun);
+
+  const gunRows = allGuns.map((entry, idx) => {
+    const family = ammoFamilyOf(entry.gun);
+    const state = loadedAmmo(entry.gun);
     const label = loc("Reload.GunOption", {
-      gun: gun.name,
+      gun: entry.label,
       family: familyLabel(family),
       count: state.count,
       capacity: capacityForFamily(family),
       type: typeLabel(state.type),
     });
-    return `<option value="${gun.id}">${esc(label)}</option>`;
+    return `<option value="${idx}">${esc(label)}</option>`;
   }).join("");
   const typeRows = AMMO_TYPE_KEYS.map(key => {
     const label = loc("Reload.TypeOption", { type: typeLabel(key), stock: ammoStock(actor, key) });
@@ -520,10 +610,10 @@ async function promptReload(actor) {
       + `<div class="form-group"><label>${loc("Reload.Type")}</label><select name="type">${typeRows}</select></div>`,
     ok: { label: `${L}.Reload.Confirm`, icon: "fa-solid fa-rotate" },
   });
-  if (!data?.gun) return null;
-  const gun = actor.items.get(data.gun);
-  if (!gun) return null;
-  return { gun, type: AMMO_TYPE_KEYS.includes(data.type) ? data.type : DEFAULT_AMMO_TYPE };
+  if (data?.gun === undefined || data?.gun === null) return null;
+  const entry = allGuns[Number(data.gun)];
+  if (!entry) return null;
+  return { gun: entry.gun, type: AMMO_TYPE_KEYS.includes(data.type) ? data.type : DEFAULT_AMMO_TYPE, owner: entry.owner };
 }
 
 /** Do the reload the dialog described. */
@@ -626,6 +716,47 @@ function patchFireUse() {
       return null;
     }
 
+    // 0.3.130 (C) — Rigged Fire: platform gate + platform ammo.
+    // Require a connected drone or vehicle with turret. Debit the platform's gun, not the hero's.
+    const dsid = this.parent?.system?._dsid;
+    if (dsid === RIGGED_FIRE_DSID && isHero(actor)) {
+      const platform = pickFirePlatform(actor);
+      if (!platform) {
+        ui.notifications.warn(loc("RiggedFire.NoPlatform", { actor: actor?.name ?? "" }));
+        return null;
+      }
+      const platformGuns = platformGunsOf(platform);
+      const pick = pickAmmoGunPlan({
+        guns: platformGuns.map(g => ({ id: g.id, name: g.name, loaded: loadedAmmo(g).count })),
+        cost: 1,
+      });
+      const gun = pick.gunId ? platform.items.get(pick.gunId) : null;
+      if (!gun || pick.reason) {
+        ui.notifications.warn(pick.reason === "noGun"
+          ? loc("RiggedFire.NoPlatformGun", { platform: platform.name })
+          : loc("RiggedFire.PlatformEmpty", { platform: platform.name, gun: gun?.name ?? "" }));
+        return null;
+      }
+      const state = loadedAmmo(gun);
+      const plan = planFireN({ loadedCount: state.count, count: 1 });
+      if (!plan.ok) {
+        ui.notifications.warn(loc("RiggedFire.PlatformEmpty", { platform: platform.name, gun: gun.name }));
+        return null;
+      }
+      const targets = [...(game.user?.targets ?? [])].map(token => token.actor).filter(Boolean);
+      const message = await use.call(this, config, dialogOptions, messageOptions);
+      if (!message) return message;
+      await gun.setFlag(MODULE_ID, AMMO_FLAG, { count: plan.count, type: state.type });
+      const rider = gelRider({ loadedType: state.type });
+      await message.setFlag?.(MODULE_ID, "ammoShot", {
+        type: state.type, remaining: plan.count,
+        capacity: capacityForFamily(ammoFamilyOf(gun)),
+        gun: `${platform.name} — ${gun.name}`, spent: plan.spent, gel: !!rider,
+      });
+      if (rider && targets.length) await applyGelRider(targets);
+      return message;
+    }
+
     // A spawned Fire `<gun>` ability names its own gun and always costs exactly 1.
     // A class / kit / origin ability on the 0.3.128 allowlist costs what the table says, and the gun
     // has to be resolved. Everything else is none of this file's business.
@@ -644,13 +775,11 @@ function patchFireUse() {
     const state = loadedAmmo(gun);
     const plan = planFireN({ loadedCount: state.count, count: spend.cost });
     if (!plan.ok) {
-      // The refusal lands here, before Draw Steel prints a power roll that was never going to fire.
       ui.notifications.warn(plan.reason === "empty"
         ? loc("Empty", { gun: gun.name })
         : loc("Short", { gun: gun.name, needed: plan.needed, loaded: plan.count }));
       return null;
     }
-    // Read the targets before the roll dialog runs: resolving a card can clear the user's targets.
     const targets = [...(game.user?.targets ?? [])].map(token => token.actor).filter(Boolean);
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (!message) return message;
@@ -712,9 +841,19 @@ export function registerAmmo() {
     if (item?.type === "treasure" && (item.parent instanceof Actor)) syncActor(item.parent);
   });
 
-  Hooks.on("createActor", (actor, options, userId) => {
+  Hooks.on("createActor", async (actor, options, userId) => {
     if (userId !== game.user.id) return;
     syncActor(actor);
+    // 0.3.130 (C): deployed drones/vehicles ship with full Standard Rounds in every gun.
+    if (isDeployedMachineActor(actor)) {
+      for (const gun of platformGunsOf(actor)) {
+        const state = loadedAmmo(gun);
+        if (state.count > 0) continue;
+        const family = ammoFamilyOf(gun);
+        const cap = capacityForFamily(family);
+        if (cap > 0) await gun.setFlag(MODULE_ID, AMMO_FLAG, { count: cap, type: DEFAULT_AMMO_TYPE });
+      }
+    }
   });
 
   Hooks.on("renderChatMessageHTML", (message, html) => injectAmmoLine(message, html));
@@ -736,6 +875,9 @@ export function registerAmmo() {
       ammoStock,
       reloadWeapon: reload,
       syncReloadAbility: syncActor,
+      deployedPlatformsOf,
+      platformGunsOf,
+      pickFirePlatform,
     };
   }
   console.log(`${MODULE_ID} | gun ammunition registered (${AMMO_FAMILIES.map(f => `${f} ${FAMILY_CAPACITY[f]}`).join(" · ")}`

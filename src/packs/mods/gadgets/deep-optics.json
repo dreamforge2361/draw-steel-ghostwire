@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a53,700 in a multi-spectral stage, a cooled sensor die, and an alignment jig; a military-grade bench and a calibration target",
-      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "prerequisites": "¥3,700 in a multi-spectral stage, a cooled sensor die, and an alignment jig; a military-grade bench and a calibration target",
+      "source": "Ghostwire Gear master §1H / Cat 1 — electronics bench, shop bench, or a deck nest",
       "rollCharacteristic": [
         "reason",
         "intuition"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Deep Optics \u00b7 installs on one sensor or optic (1 mod slot)."
+        "display": "one Deep Optics · installs on one sensor or optic (1 mod slot)."
       },
       "goal": 450
     }
@@ -38,7 +38,7 @@
     {
       "_id": "gwAeDeepOptics00",
       "_key": "!items.effects!gwModDeepOptics0.gwAeDeepOptics00",
-      "name": "Installed \u2014 Perception edge",
+      "name": "Installed — Perception edge",
       "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
       "origin": "Compendium.draw-steel-ghostwire.mods.Item.gwModDeepOptics0",
       "description": "<p>Edge on Perception tests to spot hidden, cloaked, or living targets while the stage is installed and on. On the canvas it grants <strong>thermal 5 squares</strong> (Foundry <code>seeAll</code>) and <strong>see invisible 5 squares</strong> (<code>seeInvisibility</code>) to whoever carries the host optic. Switch the mod off and both come straight back off the token.</p>",
@@ -63,7 +63,7 @@
         "changes": [
           {
             "key": "system.skills.modifiers.perception.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

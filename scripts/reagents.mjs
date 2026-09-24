@@ -377,6 +377,8 @@ export function registerReagents() {
   });
 
   patchImproviseUse();
+  patchAdministerDosePrompt();
+  patchNanoAdrenalSpend();
 
   const module = game.modules.get(MODULE_ID);
   if (module) {
@@ -390,7 +392,7 @@ export function registerReagents() {
       syncCraftProject,
     };
   }
-  console.log(`${MODULE_ID} | Medic Reagents registered (kit capacity cap · Craft Reagents project · Improvise!)`);
+  console.log(`${MODULE_ID} | Medic Reagents registered (kit capacity cap · Craft Reagents project · Improvise! · Administer Dose prompt · Nano-Adrenal spend)`);
 }
 
 /** Using the Improvise! card does the grant. */
@@ -422,6 +424,101 @@ function patchImproviseUse() {
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (!message) return message;
     await applyImprovise(actor);
+    return message;
+  };
+}
+
+/* -------------------------------------------- Administer Dose — Stimulant vs Toxin prompt */
+
+const ADMINISTER_DOSE_DSID = "administer-dose";
+
+function patchAdministerDosePrompt() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) return;
+  const use = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    if (this.parent?.system?._dsid !== ADMINISTER_DOSE_DSID) return use.call(this, config, dialogOptions, messageOptions);
+    const actor = this.actor;
+    if (!isMedic(actor)) return use.call(this, config, dialogOptions, messageOptions);
+
+    const esc = foundry.utils.escapeHTML;
+    const data = await foundry.applications.api.DialogV2.input({
+      window: { title: loc("Reagents.AdministerDose.Title"), icon: "fa-solid fa-syringe" },
+      content: `<p>${esc(loc("Reagents.AdministerDose.Hint"))}</p>`
+        + `<div class="form-group"><label>${loc("Reagents.AdministerDose.Title")}</label>`
+        + `<select name="compound">`
+        + `<option value="stimulant">${esc(loc("Reagents.AdministerDose.Stimulant"))}</option>`
+        + `<option value="toxin">${esc(loc("Reagents.AdministerDose.Toxin"))}</option>`
+        + `</select></div>`,
+      ok: { label: `${L}.Reagents.AdministerDose.Confirm`, icon: "fa-solid fa-syringe" },
+    });
+    if (!data?.compound) return null;
+
+    const message = await use.call(this, config, dialogOptions, messageOptions);
+    if (message) {
+      await message.setFlag?.(MODULE_ID, "administerDoseCompound", data.compound);
+    }
+    return message;
+  };
+}
+
+/* -------------------------------------------- Nano-Adrenal Auto-Injector — 30 Reagents or -1 BI */
+
+const NANO_ADRENAL_DSID = "nano-adrenal-auto-injector";
+
+function patchNanoAdrenalSpend() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) return;
+  const use = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    if (this.parent?.system?._dsid !== NANO_ADRENAL_DSID) return use.call(this, config, dialogOptions, messageOptions);
+    const actor = this.actor;
+    if (!actor) return use.call(this, config, dialogOptions, messageOptions);
+
+    const current = reagentsOf(actor);
+    const integrity = actor.getFlag?.(MODULE_ID, "integrity") ?? {};
+    const biValue = Number(integrity.value ?? 0);
+    const biMax = Number(integrity.max ?? 0);
+    const canReagents = current >= 30;
+    const canBI = biValue > 0;
+
+    if (!canReagents && !canBI) {
+      ui.notifications.warn(loc("Reagents.NanoAdrenal.NotEnough", { actor: actor.name }));
+      return null;
+    }
+
+    const esc = foundry.utils.escapeHTML;
+    const options = [];
+    if (canReagents) options.push(`<option value="reagents">${esc(loc("Reagents.NanoAdrenal.Reagents"))} (${current} available)</option>`);
+    if (canBI) options.push(`<option value="bi">${esc(loc("Reagents.NanoAdrenal.BI"))} (${biValue}/${biMax})</option>`);
+
+    const data = await foundry.applications.api.DialogV2.input({
+      window: { title: loc("Reagents.NanoAdrenal.Title"), icon: "fa-solid fa-heart-pulse" },
+      content: `<p>${esc(loc("Reagents.NanoAdrenal.Hint"))}</p>`
+        + `<div class="form-group"><label>${loc("Reagents.NanoAdrenal.Title")}</label>`
+        + `<select name="payment">${options.join("")}</select></div>`,
+      ok: { label: `${L}.Reagents.NanoAdrenal.Confirm`, icon: "fa-solid fa-heart-pulse" },
+    });
+    if (!data?.payment) return null;
+
+    const message = await use.call(this, config, dialogOptions, messageOptions);
+    if (!message) return message;
+
+    if (data.payment === "reagents") {
+      const next = Math.max(0, current - 30);
+      await actor.update({ "system.hero.primary.value": next });
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: loc("Reagents.Chat.NanoAdrenalReagents", { actor: actor.name, value: next }),
+      });
+    } else {
+      const nextBI = Math.max(0, biValue - 1);
+      await actor.update({ [`flags.${MODULE_ID}.integrity.value`]: nextBI });
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: loc("Reagents.Chat.NanoAdrenalBI", { actor: actor.name, value: nextBI, max: biMax }),
+      });
+    }
     return message;
   };
 }

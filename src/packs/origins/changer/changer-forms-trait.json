@@ -71,7 +71,7 @@
         "changes": [
           {
             "key": "system.skills.modifiers.intimidation.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null
@@ -157,14 +157,14 @@
         "changes": [
           {
             "key": "system.skills.modifiers.stealth.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null
           },
           {
             "key": "system.skills.modifiers.perception.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

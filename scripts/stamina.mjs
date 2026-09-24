@@ -485,7 +485,7 @@ export function staminaSources(actor) {
       const value = staminaChangeValue(change, { echelon, level });
       if (!value) continue;
       const row = { kind: sourceKind(item), name: item?.name ?? effect.name, value };
-      if (change.type === "upgrade" || change.mode === "upgrade") {
+      if (change.type === "upgrade") {
         const best = upgrades.get(change.key);
         if (!best || (value > best.value)) upgrades.set(change.key, row);
       } else additive.push(row);

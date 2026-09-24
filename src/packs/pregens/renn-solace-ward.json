@@ -323,7 +323,7 @@
               },
               {
                 "key": "system.skills.modifiers.athletics.edges",
-                "type": "add",
+                "type": "upgrade",
                 "value": 1,
                 "phase": "initial",
                 "priority": null
@@ -1977,7 +1977,7 @@
         ],
         "type": "main",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "melee",
@@ -2105,7 +2105,7 @@
         ],
         "type": "main",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "meleeRanged",
@@ -2192,7 +2192,7 @@
         ],
         "type": "maneuver",
         "category": "signature",
-        "resource": null,
+        "resource": 1,
         "trigger": "",
         "distance": {
           "type": "special",
@@ -4395,34 +4395,34 @@
     },
     {
       "_id": "pJY4ybZUtkH9HDxy",
-      "name": "GHOSTWIRE.Abilities.PatchUp.Name",
+      "name": "GHOSTWIRE.Abilities.FieldTriage.Name",
       "type": "ability",
       "img": "icons/tools/medical/bandages-adhesive.webp",
       "system": {
         "source": {
           "book": "Ghostwire Core Rulebook",
-          "page": "",
+          "page": "04-medic",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "heal",
+        "_dsid": "field-triage",
         "keywords": [],
-        "type": "main",
+        "type": "maneuver",
         "category": "",
-        "resource": null,
+        "resource": 2,
         "trigger": "",
         "distance": {
-          "type": "melee",
-          "primary": "1",
+          "type": "ranged",
+          "primary": "2",
           "secondary": "1",
           "tertiary": "1"
         },
         "damageDisplay": "melee",
         "target": {
-          "type": "creature",
-          "value": 1,
+          "type": "ally",
+          "value": 3,
           "custom": ""
         },
-        "story": "",
+        "story": "GHOSTWIRE.Abilities.FieldTriage.Story",
         "power": {
           "roll": {
             "formula": "@chr",
@@ -4435,7 +4435,7 @@
           "before0000000000": {
             "_id": "before0000000000",
             "type": "base",
-            "description": "GHOSTWIRE.Abilities.PatchUp.Description",
+            "description": "GHOSTWIRE.Abilities.FieldTriage.Description",
             "before": true,
             "name": "",
             "img": null,

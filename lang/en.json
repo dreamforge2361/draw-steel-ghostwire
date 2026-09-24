@@ -55,9 +55,10 @@
         "EffectName": "Taking Cover",
         "EffectDescription": "<p>Ability rolls made against you have a double bane until the start of your next turn. You have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. You gain no benefit from this while another creature is taunted by you.</p>"
       },
-      "PatchUp": {
-        "Name": "Patch Up",
-        "Description": "<p>A creature who uses the Patch Up main action slaps on a trauma patch, jabs a stim, or talks an adjacent creature through the pain to keep them in the fight. The target creature can spend a Recovery to regain Stamina, or can make a saving throw against one effect they are suffering that is ended by a saving throw.</p>"
+      "FieldTriage": {
+        "Name": "Field Triage",
+        "Story": "Rapid triage under fire — mark the wounded, keep them standing.",
+        "Description": "<p><strong>Cost:</strong> 2 Reagents. <strong>Type:</strong> Maneuver. <strong>Distance:</strong> Ranged 2 (10 ft). <strong>Target:</strong> Up to 3 allies.</p><p>You mark up to 3 allies within 10 feet. Each marked ally may spend a <strong>Recovery as a free triggered action</strong> once before the end of your next turn. The Recovery is triggered, not automatic — each ally chooses whether and when to use it.</p>"
       },
       "SpotTarget": {
         "Name": "Spot Target",
@@ -2062,7 +2063,7 @@
           },
           "Reagents": {
             "Name": "Reagents",
-            "Description": "<p>Reagents are your kit, literally: trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more. Every heroic ability and every signature enhancement spends Reagents.</p><h4>Kit Capacity</h4><table><thead><tr><th>Echelon</th><th>Kit capacity</th></tr></thead><tbody><tr><td>1</td><td>10</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>20</td></tr><tr><td>4</td><td>38</td></tr></tbody></table><p>Advanced Chem-Prep (2nd level) adds 2 to your capacity. You can never hold more Reagents than your capacity.</p><h4>Reagents Persist</h4><p>Unlike every other class’s heroic resource, Reagents <strong>don’t reset at the start or end of an encounter</strong>, and you gain none at the start of your turns. The bag you bring is the bag you have: unspent Reagents carry from fight to fight across a run.</p><p>A basic compound or a signature enhancement usually costs <strong>2 Reagents</strong>, one dose. At Echelon 1 that is five doses before the bag runs dry. When it’s empty, you still have Established Protocols and (from 2nd level) Field Synthesis.</p><h4>Restocking</h4><p>At a respite, or during downtime, you restock up to your kit capacity. Restocking is a project or lifestyle activity paid in nuyen (buying raw stock, calling a supplier, or synthesizing from scratch). Money buys <strong>supply</strong>, never <strong>capability</strong>: nuyen refills the bag, but never unlocks a compound or a feature.</p><h4>Outside of Combat</h4><p>Reagents are a physical kit, so they <strong>still spend outside combat</strong>. Unlike other classes’ heroic resources, you get no free out-of-combat uses of Reagent abilities or signature enhancements: every dose comes out of the same bag.</p><ul><li><p><strong>Established Protocols</strong> stay free at all times.</p></li><li><p><strong>Field Synthesis</strong> is encounter-only: it isn’t a free compound between encounters or in downtime.</p></li></ul><h4>Compound Families</h4><ul><li><p><strong>Restoratives</strong> heal [[lookup @recoveries.recoveryValue]]{your Recovery value} in Stamina (enhanced, +50% rounded up), stabilize the dying, and revive the downed.</p></li><li><p><strong>Antidotes &amp; Cures</strong> remove 1 step of poison, disease, or the Exposure clock (enhanced, 2 steps).</p></li><li><p><strong>Stimulants &amp; Combat Drugs</strong> grant an edge or let the target ignore 1 condition for 1 round (enhanced, +1 round or +1 ally). Every Stimulant carries the crash rider: −1 on the recipient’s next power roll after the buff ends (−2 if enhanced), automatic, no save.</p></li><li><p><strong>Toxins &amp; Gas</strong> deal <strong>2 + Instinct</strong> damage over 2 rounds (half each round, rounding up on the first tick), and the target is weakened until the end of its next turn after the last tick. Enhanced: <strong>4 + Instinct</strong> over 2 rounds, and the target is weakened and slowed.</p></li></ul><p><em>In Foundry, Reagents are your heroic resource pool: Draw Steel doesn’t reset them when combat starts and adds nothing at the start of your turns. Capacity isn’t enforced; set your pool when you restock. You can’t use an ability that costs more Reagents than you have, in or out of combat.</em></p>"
+            "Description": "<p>Reagents are your kit, literally: trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more. Every heroic ability, every signature ability, and every signature enhancement spends Reagents (Field Synthesis is the one exception — it costs 0).</p><h4>Kit Capacity</h4><table><thead><tr><th>Echelon</th><th>Kit capacity</th></tr></thead><tbody><tr><td>1</td><td>10</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>20</td></tr><tr><td>4</td><td>38</td></tr></tbody></table><p>Advanced Chem-Prep (2nd level) adds 2 to your capacity. You can never hold more Reagents than your capacity.</p><h4>Reagents Persist</h4><p>Unlike every other class’s heroic resource, Reagents <strong>don’t reset at the start or end of an encounter</strong>, and you gain none at the start of your turns. The bag you bring is the bag you have: unspent Reagents carry from fight to fight across a run.</p><p>A basic compound or a signature enhancement usually costs <strong>2 Reagents</strong>, one dose. At Echelon 1 that is five doses before the bag runs dry. When it’s empty, you still have Established Protocols and (from 2nd level) Field Synthesis.</p><h4>Restocking</h4><p>At a respite, or during downtime, you restock up to your kit capacity. Restocking is a project or lifestyle activity paid in nuyen (buying raw stock, calling a supplier, or synthesizing from scratch). Money buys <strong>supply</strong>, never <strong>capability</strong>: nuyen refills the bag, but never unlocks a compound or a feature.</p><h4>Outside of Combat</h4><p>Reagents are a physical kit, so they <strong>still spend outside combat</strong>. Unlike other classes’ heroic resources, you get no free out-of-combat uses of Reagent abilities or signature enhancements: every dose comes out of the same bag.</p><ul><li><p><strong>Established Protocols</strong> stay free at all times.</p></li><li><p><strong>Field Synthesis</strong> is encounter-only: it isn’t a free compound between encounters or in downtime.</p></li></ul><h4>Compound Families</h4><ul><li><p><strong>Restoratives</strong> heal [[lookup @recoveries.recoveryValue]]{your Recovery value} in Stamina (enhanced, +50% rounded up), stabilize the dying, and revive the downed.</p></li><li><p><strong>Antidotes &amp; Cures</strong> remove 1 step of poison, disease, or the Exposure clock (enhanced, 2 steps).</p></li><li><p><strong>Stimulants &amp; Combat Drugs</strong> grant an edge or let the target ignore 1 condition for 1 round (enhanced, +1 round or +1 ally). Every Stimulant carries the crash rider: −1 on the recipient’s next power roll after the buff ends (−2 if enhanced), automatic, no save.</p></li><li><p><strong>Toxins &amp; Gas</strong> deal <strong>2 + Instinct</strong> damage over 2 rounds (half each round, rounding up on the first tick), and the target is weakened until the end of its next turn after the last tick. Enhanced: <strong>4 + Instinct</strong> over 2 rounds, and the target is weakened and slowed.</p></li></ul><p><em>In Foundry, Reagents are your heroic resource pool: Draw Steel doesn’t reset them when combat starts and adds nothing at the start of your turns. Capacity isn’t enforced; set your pool when you restock. You can’t use an ability that costs more Reagents than you have, in or out of combat.</em></p>"
           },
           "FieldPartner": {
             "Name": "Field Partner",
@@ -2439,7 +2440,25 @@
           "Chat": {
             "Restocked": "<p><strong>{actor}</strong> restocks the kit: <strong>+{granted}</strong> Reagents, now <strong>{value}</strong>.</p>",
             "RestockedFull": "<p><strong>{actor}</strong> finishes the restock with a full kit already — still <strong>{value}</strong> Reagents.</p>",
-            "Improvised": "<p><strong>{actor}</strong> finds something in the trash: <strong>+{granted}</strong> Reagents, now <strong>{value}</strong>.</p>"
+            "Improvised": "<p><strong>{actor}</strong> finds something in the trash: <strong>+{granted}</strong> Reagents, now <strong>{value}</strong>.</p>",
+            "NanoAdrenalReagents": "<p><strong>{actor}</strong> triggers Nano-Adrenal Auto-Injector — spending <strong>30 Reagents</strong> (now {value}).</p>",
+            "NanoAdrenalBI": "<p><strong>{actor}</strong> triggers Nano-Adrenal Auto-Injector — permanently losing <strong>1 Body Integrity</strong> (now {value}/{max}).</p>"
+          },
+          "AdministerDose": {
+            "Title": "Administer Dose — Compound Type",
+            "Hint": "Choose the compound you are loading into the injector.",
+            "Stimulant": "Stimulant (ally buff — edge / ignore condition; crash rider)",
+            "Toxin": "Toxin (enemy debuff — damage over time, weakened)",
+            "Confirm": "Load & Inject"
+          },
+          "NanoAdrenal": {
+            "Title": "Nano-Adrenal Auto-Injector — Payment",
+            "Hint": "Choose how to pay for the auto-injector. You need at least 30 Reagents for the first option.",
+            "Reagents": "Spend 30 Reagents",
+            "BI": "Permanently lose 1 Body Integrity",
+            "Confirm": "Trigger Injector",
+            "NotEnough": "{actor} does not have 30 Reagents and cannot trigger Nano-Adrenal via the kit path.",
+            "NoBI": "{actor} has no Body Integrity left to spend."
           }
         }
       },
@@ -10010,6 +10029,11 @@
       "NoGun": "{actor} is not carrying a gun that takes ammunition.",
       "Ability": {
         "NoGun": "{ability} fires your own gun, and {actor} is not carrying one that takes ammunition."
+      },
+      "RiggedFire": {
+        "NoPlatform": "{actor} has no connected drone or vehicle with turret — Rigged Fire requires a fire platform.",
+        "NoPlatformGun": "{platform} has no gun loaded with ammunition.",
+        "PlatformEmpty": "{platform}'s gun ({gun}) is out of ammunition. Reload the platform first."
       },
       "NoStackToReturn": "Nowhere to put {count} {type} back — add the stack to the sheet by hand.",
       "Reload": {

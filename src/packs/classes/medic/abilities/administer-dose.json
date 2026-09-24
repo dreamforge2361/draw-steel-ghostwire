@@ -18,7 +18,7 @@
     ],
     "type": "main",
     "category": "signature",
-    "resource": null,
+    "resource": 1,
     "trigger": "",
     "distance": {
       "type": "meleeRanged",
