@@ -10152,6 +10152,10 @@
         "Sequencer": {
           "Name": "Use Sequencer / JB2A when installed",
           "Hint": "If Sequencer and a JB2A library are active, play their video effects instead of Ghostwire’s built-in flash. Turn this off to keep the built-in look everywhere. Automated Animations is never required."
+        },
+        "Broadcast": {
+          "Name": "Show hit effects to everyone",
+          "Hint": "Draw the tracer, swing or blast on every player’s canvas, not only on the canvas of whoever rolled. The impact sound is already heard by the whole table; this makes the picture match it. Turn it off to keep hit effects private to the roller."
         }
       }
     }
