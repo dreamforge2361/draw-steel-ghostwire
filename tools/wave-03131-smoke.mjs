@@ -17,6 +17,8 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
+
+import { atLeast } from "./lib/module-version.mjs";
 import {
   HIT_FX_KINDS, HIT_FX_PROFILES, SPELL_FLAVOURS,
   classifyHit, hitFxProfile, spellFlavour,
@@ -216,7 +218,10 @@ note(/preloadFxTextures\(\)/.test(hitFxCode),
 
 console.log("\nE) Version and docs");
 
-note(manifest.version === "0.3.131", `module.json is ${manifest.version}`);
+// 0.3.132: `=== "0.3.131"` here (and only here) made this smoke go red the moment the module was
+// bumped, which is the opposite of what a wave smoke is for — every other wave smoke from 0.3.125
+// on uses `atLeast`, so this one now does too.
+note(atLeast(manifest.version, "0.3.131"), `module.json is ${manifest.version}`);
 note(/`0\.3\.131`/.test(read("README.md")), "README has a 0.3.131 entry");
 note(existsSync("docs/directors/03131-smoke.md"), "the Foundry checklist is written");
 note(/Double Tap/.test(existsSync("docs/directors/03131-smoke.md") ? read("docs/directors/03131-smoke.md") : ""),
