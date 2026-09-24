@@ -1,12 +1,12 @@
 {
-  "_id": "mWMH8c409PUWf3MD",
-  "_key": "!items!mWMH8c409PUWf3MD",
-  "name": "GHOSTWIRE.Gear.Items.FragGrenade.Name",
+  "_id": "C4YQ2iFV8Tc5DSVL",
+  "_key": "!items!C4YQ2iFV8Tc5DSVL",
+  "name": "GHOSTWIRE.Gear.Items.RawReagent.Name",
   "type": "treasure",
-  "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Gear.Items.FragGrenade.Description",
+      "value": "GHOSTWIRE.Gear.Items.RawReagent.Description",
       "director": ""
     },
     "source": {
@@ -14,7 +14,7 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "frag-grenade",
+    "_dsid": "raw-reagent",
     "kind": "other",
     "category": "trinket",
     "echelon": 2,
@@ -32,7 +32,7 @@
     }
   },
   "effects": [],
-  "folder": "ahyua5QA62c6lUKF",
+  "folder": "6OQ8YIl853VINDDp",
   "sort": 0,
   "ownership": {
     "default": 0
@@ -42,13 +42,18 @@
       "gear": {
         "echelon": 2,
         "availability": "restricted",
-        "price": 1300,
+        "price": 2000,
         "modSlots": 0,
         "tags": [
-          "Consumable",
-          "Heavy"
+          "Consumable"
         ],
-        "consumable": true
+        "consumable": true,
+        "consumableUse": {
+          "action": "maneuver",
+          "spend": true,
+          "crash": false,
+          "reagentGrant": 1
+        }
       }
     }
   }

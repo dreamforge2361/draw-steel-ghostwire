@@ -20,7 +20,20 @@
 // already uses, and Foundry grants and revokes it with the item for free. Automating a passive
 // through this file would have been a worse version of something the data model does natively.
 
+// 0.3.126 (A) — the Raw Reagent joins the shelf, and it is the first dose whose effect is a *class
+// resource* rather than Stamina, Recoveries or a condition. Two things follow from that:
+//
+//   * **Only a Medic can use it.** Everybody else is holding an unstable ampoule of precursor with
+//     nothing to do with it, so the refusal lands in the same place every other refusal does — in
+//     the `use` patch, before the card posts — rather than as prose nobody reads.
+//   * **The ceiling is not this file's to invent.** The grant goes through `planReagentGrant` and
+//     `capacityOf` from scripts/reagents.mjs, so a Medic at 9 of 10 gains 1 and the card says so.
+//     `preUpdateActor` would clamp it anyway; going through the planner is what lets the chat line
+//     be honest about it. There is deliberately **no second dose currency** — Reagents live in
+//     `system.hero.primary.value` and nowhere else.
+
 import { incrementTaint, previewTaintDelta } from "./taint.mjs";
+import { planReagentGrant, capacityOf, isMedic } from "./reagents.mjs";
 
 export const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.ConsumableUse";
@@ -116,6 +129,30 @@ export function clearableConditions(statuses) {
   return PHYSICAL_CONDITIONS.filter(id => present.has(id));
 }
 
+/**
+ * 0.3.126 (A1) — the Raw Reagent gate.
+ *
+ * Emergency restock, priced against Craft Reagents rather than competing with it: a dose is one
+ * Reagent for ¥2,000, where a downtime project refills the whole kit for a Director's quote. The
+ * only judgement in here is that a non-Medic is refused outright instead of quietly wasting ¥2,000
+ * on nothing, and that a Medic whose kit is already full is refused too — the ampoule is not spent
+ * to add zero.
+ *
+ * @param {object} opts
+ * @param {boolean} opts.medic     Is the user a Medic?
+ * @param {number} opts.current    `system.hero.primary.value`.
+ * @param {number} opts.capacity   `capacityOf(actor)` — the echelon kit ceiling.
+ * @param {number} opts.grant      Reagents this dose is worth. 1.
+ * @returns {{ok: boolean, reason: string|null, value: number, granted: number, capped: boolean}}
+ */
+export function planReagentDose({ medic = false, current = 0, capacity = 0, grant = 1 } = {}) {
+  const now = Math.max(0, Math.floor(Number(current) || 0));
+  if (!medic) return { ok: false, reason: "notMedic", value: now, granted: 0, capped: false };
+  const plan = planReagentGrant({ current: now, capacity, grant });
+  if (!plan.granted) return { ok: false, reason: "reagentsFull", value: plan.value, granted: 0, capped: true };
+  return { ok: true, reason: null, ...plan };
+}
+
 /** "self" unless the block says otherwise; anything unrecognised reads as self. */
 export function useTargetKind(use) {
   return (use?.target === "selfOrAlly") ? "selfOrAlly" : "self";
@@ -126,11 +163,18 @@ export function useTargetKind(use) {
  * No Foundry I/O.
  */
 export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax = 0, staminaTemporary = 0,
-  recoveriesValue = 0, recoveriesMax = 0, taint = 0, combatId = null, usedIn = null, use = {} } = {}) {
+  recoveriesValue = 0, recoveriesMax = 0, taint = 0, combatId = null, usedIn = null,
+  medic = false, reagents = 0, reagentCapacity = 0, use = {} } = {}) {
   const q = Math.max(0, Math.floor(Number(quantity) || 0));
   if (q <= 0) return { ok: false, reason: "spent", quantityAfter: 0, deleteItem: false };
   const gate = planOncePerCombat({ oncePerCombat: !!use.oncePerCombat, combatId, usedIn });
   if (!gate.allowed) return { ok: false, reason: "usedThisCombat", quantityAfter: q, deleteItem: false };
+  // A1: the Raw Reagent is Medic-only and never spent for nothing. Same shape as the stabilize gate
+  // below — a refusal that costs nothing, not a dose that quietly did zero.
+  const reagentDose = use.reagentGrant
+    ? planReagentDose({ medic, current: reagents, capacity: reagentCapacity, grant: use.reagentGrant })
+    : null;
+  if (reagentDose && !reagentDose.ok) return { ok: false, reason: reagentDose.reason, quantityAfter: q, deleteItem: false };
   // B1: stabilize is a gate as well as an effect. A Field Surgery Kit used on somebody who is not
   // dying does nothing, costs nothing, and says so — it must not read as a heal that rounded to 0.
   const stabilize = use.stabilize ? planStabilize({ staminaValue }) : null;
@@ -163,6 +207,9 @@ export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax =
     healed: healed - value,
     recoveriesValue: recoveries,
     recoveriesGranted: (recoveries === null) ? 0 : recoveries - Math.max(0, Math.floor(Number(recoveriesValue) || 0)),
+    reagentValue: reagentDose ? reagentDose.value : null,
+    reagentsGranted: reagentDose ? reagentDose.granted : 0,
+    reagentsCapped: reagentDose ? reagentDose.capped : false,
     combatRecord: gate.record,
     taint: taintPlan,
     applyBuff: true,
@@ -216,6 +263,8 @@ function consumableEffectText(gearItem, use) {
   const recoveries = Math.max(0, Math.floor(Number(use.recoveries) || 0));
   if (recoveries) lines.push(loc("Effects.Recoveries", { count: recoveries }));
   if (use.clearCondition) lines.push(loc("Effects.ClearCondition"));
+  const reagentGrant = Math.max(0, Math.floor(Number(use.reagentGrant) || 0));
+  if (reagentGrant) lines.push(loc("Effects.Reagents", { count: reagentGrant }));
   if (!lines.length) lines.push(loc("AbilityEffect", { item: gearItem.name }));
   if (useTargetKind(use) === "selfOrAlly") lines.push(loc("Effects.TargetHint"));
   if (use.spend === false) lines.push(loc("Effects.Reusable"));
@@ -399,11 +448,17 @@ async function applyDose(actor, gearItem) {
     taint: actor.getFlag?.(MODULE_ID, "taint") ?? actor.flags?.[MODULE_ID]?.taint ?? 0,
     combatId: currentCombatId(),
     usedIn: combatUseRecord(actor, dsid),
+    // A1: Reagents are the *user's* kit, never the target's — a Medic is restocking their own bag.
+    medic: isMedic(actor),
+    reagents: Number(foundry.utils.getProperty(actor ?? {}, "system.hero.primary.value")) || 0,
+    reagentCapacity: capacityOf(actor),
     use,
   });
   if (!plan.ok) {
     if (plan.reason === "usedThisCombat") ui.notifications.warn(loc("UsedThisCombat", { item: gearItem.name }));
     if (plan.reason === "notDying") ui.notifications.warn(loc("NotDying", { item: gearItem.name, actor: target.name }));
+    if (plan.reason === "notMedic") ui.notifications.warn(loc("NotMedic", { item: gearItem.name, actor: actor.name }));
+    if (plan.reason === "reagentsFull") ui.notifications.warn(loc("ReagentsFull", { item: gearItem.name, actor: actor.name }));
     return plan;
   }
 
@@ -412,6 +467,7 @@ async function applyDose(actor, gearItem) {
   if (plan.tempGranted) updates["system.stamina.temporary"] = plan.staminaTemporary;
   if (plan.recoveriesValue !== null) updates["system.recoveries.value"] = plan.recoveriesValue;
   if (!foundry.utils.isEmpty(updates)) await target.update(updates);
+  if (plan.reagentsGranted) await actor.update({ "system.hero.primary.value": plan.reagentValue });
   if (plan.combatRecord) await actor.setFlag(MODULE_ID, `${COMBAT_USE_FLAG}.${dsid}`, plan.combatRecord);
   if (plan.taint.delta) await incrementTaint(actor, plan.taint.delta);
 
@@ -445,7 +501,11 @@ async function applyDose(actor, gearItem) {
       + (plan.recoveriesGranted
         ? loc("Chat.Recoveries", { count: plan.recoveriesGranted, value: plan.recoveriesValue })
         : "")
-      + (cleared ? loc("Chat.Cleared", { condition: conditionLabel(cleared) }) : ""),
+      + (cleared ? loc("Chat.Cleared", { condition: conditionLabel(cleared) }) : "")
+      + (plan.reagentsGranted
+        ? loc(plan.reagentsCapped ? "Chat.ReagentsCapped" : "Chat.Reagents",
+          { count: plan.reagentsGranted, value: plan.reagentValue })
+        : ""),
   });
   ui.notifications.info(loc(onSelf ? "Used" : "UsedOn", { actor: actor.name, target: target.name, item: gearItem.name }));
 
@@ -518,6 +578,20 @@ function patchConsumableUse() {
       ui.notifications.warn(loc("NotDying", { item: gear.name, actor: resolved.name }));
       return null;
     }
+    // 0.3.126 (A1): and the same for a Raw Reagent in the wrong hands, or a kit already full.
+    if (block.reagentGrant) {
+      const dose = planReagentDose({
+        medic: isMedic(this.actor),
+        current: Number(foundry.utils.getProperty(this.actor ?? {}, "system.hero.primary.value")) || 0,
+        capacity: capacityOf(this.actor),
+        grant: block.reagentGrant,
+      });
+      if (!dose.ok) {
+        ui.notifications.warn(loc(dose.reason === "notMedic" ? "NotMedic" : "ReagentsFull",
+          { item: gear.name, actor: this.actor.name }));
+        return null;
+      }
+    }
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (!message) return message;
     await applyDose(this.actor, gear);
@@ -587,6 +661,7 @@ export function registerConsumableUse() {
       planRecoveryRestore,
       planOncePerCombat,
       planStabilize,
+      planReagentDose,
       clearableConditions,
       PHYSICAL_CONDITIONS,
       isConsumableTreasure,
