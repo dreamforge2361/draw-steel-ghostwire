@@ -221,13 +221,13 @@
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GcJ8b0kw4DLqfUnN"
           },
           {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zuGo5iTGool1tN4u"
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z0RGg4tujQiE1wO9"
           },
           {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z0RGg4tujQiE1wO9"
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.75cOal6Bov8zCIYi"
           }
         ],
-        "description": "<p>Every Street Priest has these three signatures: Lay On Hands / Word of Comfort, Smite / Rebuke, and Sense the Veil / Discern Spirits.</p>",
+        "description": "<p>Every Street Priest has these three signatures: Lay On Hands / Word of Comfort, Sense the Veil / Discern Spirits, and Blessed Light. <strong>Blessed Light is a light, not a weapon</strong> — a free maneuver that raises a 20-foot glow around you and puts it out again.</p>",
         "chooseN": null,
         "sort": 9000,
         "additional": {
@@ -246,15 +246,6 @@
         },
         "pool": [
           {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.75cOal6Bov8zCIYi"
-          },
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QugJ5UZHgyW5UM4i"
-          },
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JXCLBRELJP9ryI3s"
-          },
-          {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.t5QxYEpwOt6QsFli"
           },
           {
@@ -270,7 +261,7 @@
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NJh7nN6m00ZDwC01"
           }
         ],
-        "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Rebuke and Word of Rebuke follow your pact. (<em>Quick Build:</em> Blessed Light, Warrior’s Prayer.)</p>",
+        "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Word of Rebuke follows your pact. (<em>Quick Build:</em> Warrior’s Prayer, Lightfall.)</p>",
         "chooseN": 2,
         "sort": 10000,
         "additional": {
@@ -891,6 +882,31 @@
         },
         "chooseN": 1,
         "sort": 36000
+      },
+      "gwPactStrike0001": {
+        "_id": "gwPactStrike0001",
+        "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+        "repick": {},
+        "name": "Pact Strike",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JXCLBRELJP9ryI3s"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QugJ5UZHgyW5UM4i"
+          }
+        ],
+        "description": "<p>Your pact gives you one free signature strike, and only one. <strong>Light Pact: Rebuke</strong> (ranged 10, holy). <strong>Dark Pact: Drain</strong> (melee 1, corruption). You never have both.</p>",
+        "chooseN": 1,
+        "sort": 9500,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
       }
     },
     "level": 0,

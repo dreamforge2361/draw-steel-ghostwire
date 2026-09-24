@@ -135,5 +135,9 @@
   "ownership": {
     "default": 0
   },
-  "flags": {}
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "dark"
+    }
+  }
 }
