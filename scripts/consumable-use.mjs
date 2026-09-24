@@ -23,12 +23,45 @@ export function consumableUseOf(item) {
 }
 
 /**
- * Preview a dose: spend one unit, grant temp Stamina / heal, optional Taint.
+ * C2 (0.3.123) — how many spent Recoveries a dose gives back.
+ *
+ * A Recovery is not Stamina: restoring one hands the hero a resource they choose when to cash in, which is
+ * why Michael's lock supersedes the Trauma Patch's older "heal Recovery value" master text. You can never
+ * end up above your own maximum, and a hero who has spent none gains nothing.
+ */
+export function planRecoveryRestore({ value = 0, max = 0, restore = 0 } = {}) {
+  const give = Math.max(0, Math.floor(Number(restore) || 0));
+  if (!give) return null;
+  const ceiling = Math.max(0, Math.floor(Number(max) || 0));
+  const current = Math.max(0, Math.floor(Number(value) || 0));
+  const next = Math.min(ceiling, current + give);
+  return (next === current) ? null : next;
+}
+
+/**
+ * C2 (0.3.123) — the once-per-combat gate.
+ *
+ * The lock is *per combat*, not per scene and not per day, so the key is the Combat's own id: a new fight
+ * is a new allowance with no bookkeeping to reset, and `deleteCombat` clears the record so the flag never
+ * accumulates. **Outside combat there is no gate at all** — "once per combat" says nothing about the walk
+ * between fights, and a patch used in the corridor should not eat the next fight's use.
+ */
+export function planOncePerCombat({ oncePerCombat = false, combatId = null, usedIn = null } = {}) {
+  if (!oncePerCombat || !combatId) return { allowed: true, record: null };
+  if (usedIn === combatId) return { allowed: false, record: null };
+  return { allowed: true, record: combatId };
+}
+
+/**
+ * Preview a dose: spend one unit, grant temp Stamina / heal / spent Recoveries, optional Taint.
  * No Foundry I/O.
  */
-export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax = 0, staminaTemporary = 0, taint = 0, use = {} } = {}) {
+export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax = 0, staminaTemporary = 0,
+  recoveriesValue = 0, recoveriesMax = 0, taint = 0, combatId = null, usedIn = null, use = {} } = {}) {
   const q = Math.max(0, Math.floor(Number(quantity) || 0));
   if (q <= 0) return { ok: false, reason: "spent", quantityAfter: 0, deleteItem: false };
+  const gate = planOncePerCombat({ oncePerCombat: !!use.oncePerCombat, combatId, usedIn });
+  if (!gate.allowed) return { ok: false, reason: "usedThisCombat", quantityAfter: q, deleteItem: false };
   const spend = use.spend !== false;
   const heal = Math.max(0, Math.floor(Number(use.heal) || 0));
   const temp = Math.max(0, Math.floor(Number(use.tempStamina) || 0));
@@ -38,6 +71,7 @@ export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax =
   const healed = heal ? (max ? Math.min(max, value + heal) : value + heal) : value;
   const taintPlan = previewTaintDelta(taint, taintDelta);
   const quantityAfter = spend ? q - 1 : q;
+  const recoveries = planRecoveryRestore({ value: recoveriesValue, max: recoveriesMax, restore: use.recoveries });
   return {
     ok: true,
     reason: null,
@@ -47,6 +81,9 @@ export function planConsumableUse({ quantity = 1, staminaValue = 0, staminaMax =
     staminaTemporary: Math.max(0, Math.floor(Number(staminaTemporary) || 0)) + temp,
     tempGranted: temp,
     healed: healed - value,
+    recoveriesValue: recoveries,
+    recoveriesGranted: (recoveries === null) ? 0 : recoveries - Math.max(0, Math.floor(Number(recoveriesValue) || 0)),
+    combatRecord: gate.record,
     taint: taintPlan,
     applyBuff: true,
     applyCrashOnBuffEnd: !!use.crash,
@@ -170,23 +207,49 @@ function staminaOf(actor) {
   };
 }
 
+/** Flag path for the once-per-combat ledger on the hero: `{ [dsid]: combatId }`. */
+export const COMBAT_USE_FLAG = "consumableCombatUse";
+
+/** The Combat this dose is being taken in, or null out of combat. */
+const currentCombatId = () => game.combat?.id ?? null;
+
+/** Which Combat this actor last used `dsid` in, per the once-per-combat ledger. */
+const combatUseRecord = (actor, dsid) =>
+  actor?.getFlag?.(MODULE_ID, COMBAT_USE_FLAG)?.[dsid] ?? null;
+
+function recoveriesOf(actor) {
+  const block = actor?.system?.recoveries ?? {};
+  return { value: Number(block.value) || 0, max: Number(block.max) || 0 };
+}
+
 async function applyDose(actor, gearItem) {
   const use = consumableUseOf(gearItem);
   const stamina = staminaOf(actor);
+  const recoveries = recoveriesOf(actor);
+  const dsid = gearItem.system?._dsid ?? gearItem.id;
   const plan = planConsumableUse({
     quantity: Number(gearItem.system?.quantity ?? 1),
     staminaValue: stamina.value,
     staminaMax: stamina.max,
     staminaTemporary: stamina.temporary,
+    recoveriesValue: recoveries.value,
+    recoveriesMax: recoveries.max,
     taint: actor.getFlag?.(MODULE_ID, "taint") ?? actor.flags?.[MODULE_ID]?.taint ?? 0,
+    combatId: currentCombatId(),
+    usedIn: combatUseRecord(actor, dsid),
     use,
   });
-  if (!plan.ok) return plan;
+  if (!plan.ok) {
+    if (plan.reason === "usedThisCombat") ui.notifications.warn(loc("UsedThisCombat", { item: gearItem.name }));
+    return plan;
+  }
 
   const updates = {};
   if (plan.healed) updates["system.stamina.value"] = plan.staminaValue;
   if (plan.tempGranted) updates["system.stamina.temporary"] = plan.staminaTemporary;
+  if (plan.recoveriesValue !== null) updates["system.recoveries.value"] = plan.recoveriesValue;
   if (!foundry.utils.isEmpty(updates)) await actor.update(updates);
+  if (plan.combatRecord) await actor.setFlag(MODULE_ID, `${COMBAT_USE_FLAG}.${dsid}`, plan.combatRecord);
   if (plan.taint.delta) await incrementTaint(actor, plan.taint.delta);
 
   const buffs = [];
@@ -210,7 +273,9 @@ async function applyDose(actor, gearItem) {
     content: loc("Chat.Used", {
       actor: actor.name,
       item: gearItem.name,
-    }),
+    }) + (plan.recoveriesGranted
+      ? loc("Chat.Recoveries", { count: plan.recoveriesGranted, value: plan.recoveriesValue })
+      : ""),
   });
   ui.notifications.info(loc("Used", { actor: actor.name, item: gearItem.name }));
 
@@ -259,6 +324,17 @@ function patchConsumableUse() {
       ui.notifications.warn(loc("Spent", { item: gear.name }));
       return null;
     }
+    // C2: refuse *before* the card posts, so a second Trauma Patch in the same fight never leaves a
+    // roll on the log that did nothing. applyDose re-checks; this is only about where the "no" lands.
+    const dsid = gear.system?._dsid ?? gear.id;
+    if (!planOncePerCombat({
+      oncePerCombat: !!consumableUseOf(gear)?.oncePerCombat,
+      combatId: currentCombatId(),
+      usedIn: combatUseRecord(this.actor, dsid),
+    }).allowed) {
+      ui.notifications.warn(loc("UsedThisCombat", { item: gear.name }));
+      return null;
+    }
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (!message) return message;
     await applyDose(this.actor, gear);
@@ -296,6 +372,20 @@ export function registerConsumableUse() {
     syncActor(actor);
   });
 
+  // C2: the fight is over, so the once-per-combat allowance is too. Keying the ledger by Combat id
+  // already makes a stale entry harmless; clearing it keeps the flag from growing forever.
+  Hooks.on("deleteCombat", async (combat, options, userId) => {
+    if (userId !== game.user.id) return;
+    for (const actor of game.actors) {
+      if (!actor.isOwner) continue;
+      const ledger = actor.getFlag(MODULE_ID, COMBAT_USE_FLAG);
+      if (!ledger || !Object.values(ledger).includes(combat.id)) continue;
+      const kept = Object.fromEntries(Object.entries(ledger).filter(([, id]) => id !== combat.id));
+      await actor.update({ [`flags.${MODULE_ID}.${COMBAT_USE_FLAG}`]: null });
+      if (!foundry.utils.isEmpty(kept)) await actor.setFlag(MODULE_ID, COMBAT_USE_FLAG, kept);
+    }
+  });
+
   Hooks.on("deleteActiveEffect", (effect, options, userId) => {
     if (userId !== game.user.id) return;
     const actor = effect.parent;
@@ -311,6 +401,8 @@ export function registerConsumableUse() {
       ...(module.api ?? {}),
       syncConsumableAbilities: syncActor,
       planConsumableUse,
+      planRecoveryRestore,
+      planOncePerCombat,
       isConsumableTreasure,
     };
   }

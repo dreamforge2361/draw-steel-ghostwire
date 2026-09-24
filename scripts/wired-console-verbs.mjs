@@ -179,9 +179,16 @@ export function compareConsoleNames(a, b, lang) {
   return String(a ?? "").localeCompare(String(b ?? ""), lang, { sensitivity: "base" });
 }
 
-/** Revealed node Actors (or board nodes) sort above everyone else, then A–Z by name. */
+/**
+ * Your own hero pins to the very top, then revealed node Actors (or board nodes), then everyone else A–Z.
+ *
+ * C3 (0.3.123): a player opening Connections is looking for *themselves* first — that row is the one they
+ * click to change their own Wire state — and on a busy board they were hunting for it alphabetically among
+ * the whole crew. `isSelf` is only ever set for the viewing user's own hero (scripts/wired-console.mjs), so
+ * every other list this comparator serves, including the node list, is unaffected.
+ */
 export function compareConsoleListRows(a = {}, b = {}, { lang } = {}) {
-  const rank = row => (row.isNode && row.revealed) ? 0 : 1;
+  const rank = row => row.isSelf ? -1 : ((row.isNode && row.revealed) ? 0 : 1);
   const delta = rank(a) - rank(b);
   if (delta) return delta;
   return compareConsoleNames(a.name, b.name, lang);

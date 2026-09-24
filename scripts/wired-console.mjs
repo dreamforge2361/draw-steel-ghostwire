@@ -107,6 +107,21 @@ export function setLink(nodes, a, b, linked) {
   }
 }
 
+/**
+ * The uuid of the viewing user's own hero, or null.
+ *
+ * C3 (0.3.123): "their own hero" means the Actor assigned to their User first — that is the one Foundry
+ * itself treats as *them*. A user with no assigned character but exactly one owned hero gets that one;
+ * ambiguity (two owned heroes, no assignment) pins nothing rather than guessing wrong. The GM is
+ * deliberately included: a GM running a hero sees it pinned too, and a GM with no character pins nothing.
+ */
+export function ownHeroUuid(user = game.user) {
+  const assigned = user?.character;
+  if (assigned?.type === "hero") return assigned.uuid;
+  const owned = game.actors?.filter(actor => (actor.type === "hero") && (actor.ownership?.[user?.id] >= 3)) ?? [];
+  return (owned.length === 1) ? owned[0].uuid : null;
+}
+
 export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @param {{ getWiredState: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} options */
   constructor(options = {}) {
@@ -218,8 +233,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
 
     // Roster: one row per actor with a token on the scene. Players only see actors they own.
     // Sprites/Agents are Constructs (Lock A) — keep them off Connections and the node graph.
+    // C3 (0.3.123): the viewing user's own hero pins to the top of the list — see ownHeroUuid().
     const roster = [];
     const seen = new Set();
+    const selfUuid = ownHeroUuid();
     for (const token of this.viewedScene?.tokens ?? []) {
       const actor = token.actor;
       if (!actor || seen.has(actor.uuid) || (!isGM && !actor.isOwner)) continue;
@@ -245,6 +262,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         revealed: isNode ? !!boardNode?.revealed : false,
         owned: isGM || actor.isOwner,
         hasInterface: !isNode && actorHasConnectInterface(actor),
+        isSelf: !!selfUuid && (actor.uuid === selfUuid),
       });
     }
     sortConsoleRoster(roster, { lang });
