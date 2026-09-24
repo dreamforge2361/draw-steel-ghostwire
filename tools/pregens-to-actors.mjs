@@ -442,9 +442,18 @@ for (const [i, hero] of ROSTER.entries()) {
     ...(loadout.armor ? [loadout.armor] : []),
     ...(loadout.weapons ?? []), ...(loadout.gear ?? []),
     ...(loadout.chrome ?? []).map(c => c.path),
-  ].map(p => {
-    if (!existsSync(p)) { warn.push(`loadout item ${p} missing`); return null; }
-    return read(p);
+  ].map(entry => {
+    // 0.3.129: an armor / weapon / gear line may be a bare path string (unchanged) or
+    // `{ path, quantity }`. The object form overrides the pack SKU's own `system.quantity`, which
+    // is the *shop* stack — Standard Rounds ship as the street box of 30 the kiosk and the black
+    // market sell, and a hero who starts play carries 150. Changing the SKU default would change
+    // the price of a box, so the override lives on the loadout line instead.
+    const p = typeof entry === "string" ? entry : entry?.path;
+    if (!p || !existsSync(p)) { warn.push(`loadout item ${p ?? JSON.stringify(entry)} missing`); return null; }
+    const item = read(p);
+    const quantity = typeof entry === "string" ? null : entry.quantity;
+    if (quantity != null) item.system.quantity = quantity;
+    return item;
   }).filter(Boolean);
   // 0.3.88: Ritual Formula Items the caster has already studied (flagged learned).
   for (const p of loadout.rituals ?? []) {

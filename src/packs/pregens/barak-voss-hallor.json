@@ -3310,6 +3310,64 @@
       "_key": "!actors.items!GKAY3pyUNmGkb2Yt.Rv0BEDaaCZ14x6GV"
     },
     {
+      "_id": "cTpPZ97zeRzqECqV",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 150,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "ahyua5QA62c6lUKF",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!GKAY3pyUNmGkb2Yt.cTpPZ97zeRzqECqV"
+    },
+    {
       "_id": "em8EMmH1hczBjSl8",
       "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
       "type": "treasure",

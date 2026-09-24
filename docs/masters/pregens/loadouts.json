@@ -9,7 +9,10 @@
       "src/packs/gear/general/comms/burner.json",
       "src/packs/gear/general/medical/trauma-patch.json",
       "src/packs/gear/general/medical/field-surgery-kit.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json"
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "rituals": [
       "src/packs/gear/general/ritual-formulas/ward-the-room.json"
@@ -34,7 +37,10 @@
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
       "src/packs/gear/general/medical/trauma-patch.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json"
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "rituals": [
       "src/packs/gear/general/ritual-formulas/ward-the-room.json"
@@ -59,7 +65,11 @@
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/lifestyle/certified-credstick.json",
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
-      "src/packs/gear/general/medical/stim-patch.json"
+      "src/packs/gear/general/medical/stim-patch.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "chrome": [
       {
@@ -91,7 +101,10 @@
     "gear": [
       "src/packs/gear/general/comms/burner.json",
       "src/packs/gear/general/sensors/cheap-shades.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      },
       "src/packs/gear/general/medical/trauma-patch.json"
     ],
     "chrome": [],
@@ -112,7 +125,10 @@
     "gear": [
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      },
       "src/packs/matrix/support/faraday-bag.json"
     ],
     "rituals": [
@@ -152,7 +168,11 @@
       "src/packs/matrix/rccs/fleet-deck.json",
       "src/packs/matrix/autosofts/targeting-autosoft.json",
       "src/packs/gear/general/comms/burner.json",
-      "src/packs/gear/general/infiltration/lockpick-set.json"
+      "src/packs/gear/general/infiltration/lockpick-set.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "chrome": [
       {
@@ -180,7 +200,11 @@
       "src/packs/matrix/programs/sneak.json",
       "src/packs/matrix/payloads/crash.json",
       "src/packs/matrix/payloads/whiteout.json",
-      "src/packs/gear/general/medical/trauma-patch.json"
+      "src/packs/gear/general/medical/trauma-patch.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "chrome": [
       {
@@ -214,7 +238,10 @@
       "src/packs/gear/general/medical/trauma-patch.json",
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json"
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      }
     ],
     "chrome": [],
     "biTotal": 0,
@@ -236,7 +263,10 @@
       "src/packs/gear/armor/shields/riot-shield.json",
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/gear/general/medical/stim-patch.json",
-      "src/packs/gear/general/ammunition/standard-rounds.json",
+      {
+        "path": "src/packs/gear/general/ammunition/standard-rounds.json",
+        "quantity": 150
+      },
       "src/packs/gear/general/lifestyle/fake-sin-basic.json"
     ],
     "chrome": [

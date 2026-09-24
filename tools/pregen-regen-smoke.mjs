@@ -96,11 +96,19 @@ for (const slug of ["kaes-vahn-estal", "vessa-corran-dov", "sabbat-vane"]) {
 for (const slug of Object.keys(actors).filter(s => !(loadouts[s]?.rituals ?? []).length))
   ok(!actors[slug].items.some(i => i.flags?.[MODULE_ID]?.ritual), `${slug}: no ritual Formula (none in the loadout)`);
 
+/**
+ * 0.3.129: armor / weapon / gear lines may now be `{ path, quantity }` as well as a bare path
+ * string — the object form overrides the SKU's shop stack size (150 Standard Rounds, not the
+ * kiosk's box of 30). Everything here wants the path, so normalise before reading.
+ */
+const pathOf = entry => (typeof entry === "string" ? entry : entry?.path);
+const qtyOf = entry => (typeof entry === "string" ? null : entry?.quantity ?? null);
+
 console.log("\n6) Every loadout line is on the sheet");
 for (const [slug, l] of Object.entries(loadouts)) {
   const held = new Set(actors[slug].items.map(i => i.system?._dsid));
   const paths = [l.armor, ...(l.weapons ?? []), ...(l.gear ?? []), ...(l.rituals ?? []),
-    ...(l.chrome ?? []).map(c => c.path), ...(l.mods ?? []).map(m => m.path)].filter(Boolean);
+    ...(l.chrome ?? []).map(c => c.path), ...(l.mods ?? []).map(m => m.path)].map(pathOf).filter(Boolean);
   const missing = paths.filter(p => !held.has(read(p).system?._dsid));
   ok(!missing.length, `${slug}: all ${paths.length} loadout items embedded${missing.length ? ` (missing ${missing.join(", ")})` : ""}`);
   const max = integrityMaxFor(actors[slug]);
@@ -109,6 +117,14 @@ for (const [slug, l] of Object.entries(loadouts)) {
     && gw(actors[slug]).integrity.max === max
     && gw(actors[slug]).biRemaining === max - (l.biTotal ?? 0),
     `${slug}: Body Integrity ${max - (l.biTotal ?? 0)}/${max} from ${(l.chrome ?? []).length} chrome`);
+  // 0.3.129: and a line that asks for a stack size gets it, rather than the SKU's shop default.
+  for (const entry of [l.armor, ...(l.weapons ?? []), ...(l.gear ?? [])].filter(Boolean)) {
+    const want = qtyOf(entry);
+    if (want == null) continue;
+    const dsid = read(pathOf(entry)).system?._dsid;
+    const item = actors[slug].items.find(i => i.system?._dsid === dsid);
+    ok(item?.system?.quantity === want, `${slug}: ${dsid} ×${item?.system?.quantity} (loadout asks for ${want})`);
+  }
 }
 
 console.log("\n7) Installed matrix mods keep their host and magazine count");
