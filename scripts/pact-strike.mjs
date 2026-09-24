@@ -16,8 +16,13 @@
 //    Only the two pact strikes are ever touched — a hand-added copy of any other ability is not this
 //    module's business.
 //
+// 0.3.124 (A2) adds the other half of the same idea: **Sacrificial Offer is Dark Pact only.** It is
+// an *optional* signature, not a free strike, so the pack row carries the same `pact` flag (chargen
+// filtering comes free) and `planPactOptionals()` strips it from a live Light priest without ever
+// handing anybody a replacement — an optional pick is the player's to make again.
+//
 // Helpers above the "Foundry registration" divider are Foundry-free so
-// tools/sp-el-foundry-wave-03123-smoke.mjs can run them in Node.
+// tools/sp-el-foundry-wave-03123-smoke.mjs and tools/scout-sp-wave-03124-smoke.mjs can run them in Node.
 
 export const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.PactStrike";
@@ -27,6 +32,16 @@ export const PACT_STRIKES = Object.freeze({ light: "rebuke", dark: "priest-drain
 
 /** Every dsid this module owns. Nothing outside this set is ever added or removed. */
 export const PACT_STRIKE_DSIDS = Object.freeze(Object.values(PACT_STRIKES));
+
+/**
+ * 0.3.124 (A2) — pact-gated **optional** signatures. These are not free strikes: nobody is ever
+ * granted one automatically, so this table only ever *removes*. Sacrificial Offer is Dark Pact
+ * only (Michael's lock), and the same `flags.draw-steel-ghostwire.pact` row that keeps it out of a
+ * Light priest's chargen pool via `patchPactFilter()` is what names it here.
+ *
+ * @type {Readonly<Record<string, "light"|"dark">>}
+ */
+export const PACT_OPTIONAL_DSIDS = Object.freeze({ "sacrificial-offer": "dark" });
 
 /**
  * Free strikes 0.3.123 retired. `smite-rebuke` was the class-signature bolt that competed with Rebuke;
@@ -58,6 +73,27 @@ export function planPactStrike({ pact = null, held = [] } = {}) {
   };
 }
 
+/**
+ * Pact-gated optional signatures this priest must not be holding.
+ *
+ * Unlike {@link planPactStrike} this never grants: an optional signature is a *choice*, and a
+ * priest who swaps pact does not silently acquire the other side's pick — they lose the one their
+ * new pact forbids and re-pick at the table.
+ *
+ * @param {object} opts
+ * @param {"light"|"dark"|null} opts.pact
+ * @param {string[]} opts.held  `_dsid`s already on the sheet.
+ * @returns {string[]} `_dsid`s to remove.
+ */
+export function planPactOptionals({ pact = null, held = [] } = {}) {
+  // No pact sworn yet: chargen has not answered the question, so nothing is forbidden.
+  if (!pact) return [];
+  return held.filter(dsid => {
+    const wants = PACT_OPTIONAL_DSIDS[dsid];
+    return !!wants && (wants !== pact);
+  });
+}
+
 /* ============================================ Foundry registration */
 
 const isStreetPriest = actor => (actor?.type === "hero") && (actor.system?.class?.system?._dsid === "street-priest");
@@ -71,7 +107,7 @@ export function pactOf(actor) {
   return null;
 }
 
-const OWNED_DSIDS = new Set([...PACT_STRIKE_DSIDS, ...RETIRED_STRIKE_DSIDS]);
+const OWNED_DSIDS = new Set([...PACT_STRIKE_DSIDS, ...RETIRED_STRIKE_DSIDS, ...Object.keys(PACT_OPTIONAL_DSIDS)]);
 
 const strikesOn = actor => [...(actor?.items ?? [])]
   .filter(item => (item.type === "ability") && OWNED_DSIDS.has(item.system?._dsid));
@@ -89,12 +125,17 @@ async function strikeSource(dsid) {
  */
 export async function syncPactStrike(actor, { silent = false } = {}) {
   if (!isStreetPriest(actor) || !actor.isOwner) return false;
+  const pact = pactOf(actor);
   const held = strikesOn(actor);
-  const plan = planPactStrike({ pact: pactOf(actor), held: held.map(item => item.system._dsid) });
-  if (!plan.grant && !plan.remove.length) return false;
+  const dsids = held.map(item => item.system._dsid);
+  const plan = planPactStrike({ pact, held: dsids });
+  // 0.3.124 (A2) — the same pass drops a pact-gated *optional* the pact forbids (Sacrificial Offer
+  // on a Light priest). Removal only: the priest re-picks their second signature at the table.
+  const remove = [...new Set([...plan.remove, ...planPactOptionals({ pact, held: dsids })])];
+  if (!plan.grant && !remove.length) return false;
 
-  if (plan.remove.length) {
-    const ids = held.filter(item => plan.remove.includes(item.system._dsid)).map(item => item.id);
+  if (remove.length) {
+    const ids = held.filter(item => remove.includes(item.system._dsid)).map(item => item.id);
     if (ids.length) await actor.deleteEmbeddedDocuments("Item", ids);
   }
   let granted = null;
@@ -138,6 +179,6 @@ export function registerPactStrike() {
   });
 
   const module = game.modules.get(MODULE_ID);
-  if (module) module.api = { ...(module.api ?? {}), syncPactStrike, pactOf, planPactStrike };
+  if (module) module.api = { ...(module.api ?? {}), syncPactStrike, pactOf, planPactStrike, planPactOptionals };
   console.log(`${MODULE_ID} | Street Priest pact strike registered (Light → Rebuke, Dark → Drain)`);
 }
