@@ -21,6 +21,13 @@
 // both halves (`humanArt`/`hybridArt`/`beastArt` vs `humanToken`/`hybridToken`/`beastToken`).
 // Smoke: node tools/r2-pregen-round-tokens-smoke.mjs
 //
+// 0.3.124: three changes live here. (E) the display Name is the hero's full name and nothing else —
+// the street handle moved into the Biography, where it belongs. (F) Renn Solace-Ward (Medic /
+// Pure Human) and Kade Orrin-Vex (Operator / Cyborg) joined the roster, and Kade is the first
+// Cyborg pregen, so Body Integrity is no longer hard-coded at 20 (see INTEGRITY_BY_ANCESTRY).
+// (A2) a choice pool now honours `flags.draw-steel-ghostwire.pact`, the same gate
+// `patchPactFilter()` applies in chargen, so a Light priest is never handed Sacrificial Offer.
+//
 // Run:  node tools/pregens-to-actors.mjs   then   node tools/build-packs.mjs   (Foundry closed)
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
@@ -38,6 +45,14 @@ const POST_PATCHES = "docs/masters/pregens/post-patches.json";
 // Starting yen on every pregen sheet. scripts/kiosk.mjs spends system.hero.wealth against Gear
 // prices, so this is a balance the table can actually shop with, not a Draw Steel wealth tier.
 const START_WEALTH = 250;
+/**
+ * Body Integrity a hero walks in with, by People. Living bodies get 20; a Cyborg frame gets 25,
+ * the same CYBORG_INTEGRITY_START scripts/module.mjs stamps when the ancestry lands on a sheet.
+ * Anything not listed is living.
+ */
+const INTEGRITY_START = 20;
+const INTEGRITY_BY_ANCESTRY = { cyborg: 25 };
+const integrityMaxFor = ancestry => INTEGRITY_BY_ANCESTRY[ancestry] ?? INTEGRITY_START;
 const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-pregens:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 const read = p => JSON.parse(readFileSync(p, "utf8"));
@@ -123,6 +138,33 @@ const ROSTER = [
     abilities: ["deep-scan"], // dual-boot L6 / backdoor-override L8 gated out at L1 (B59)
     extras: ["src/packs/matrix/decks/street-deck.json"],
   },
+  {
+    // F1 (0.3.124). Michael locked Medic = Pure Human and left the rest to match the siblings:
+    // Gunslinger is the class's own Quick Build kit and the only light kit a trauma doc would
+    // carry a bag alongside, and Street Doc is a profession the pack already ships.
+    key: "Renn", slug: "renn-solace-ward", name: "Renn Solace-Ward", handle: "Patchwire",
+    cls: "medic", subclass: "street-doc", ancestry: "pure-human",
+    traits: ["determination-trait", "perseverance-trait", "staying-power-trait"],
+    kit: "finesse/gunslinger", background: "sprawl-district", profession: "street-doc",
+    skills: ["medicine", "medicineLore", "insight", "contacts"],
+    bio: "A Pure Human Street-Doc who works out of a folding table and whatever the block can spare, stitching runners back together for whatever they have on them. No chrome, no licence, no questions — and a waiting list either way.",
+    // Signatures (First Aid / Administer Dose / Diagnose) and the three Reagent bands all come
+    // from the class's own L1 grants; the pools' first entries are already the Quick Build.
+    abilities: [],
+  },
+  {
+    // F2 (0.3.124) + the brief's ADDENDUM: the first Cyborg pregen, and Michael wants him read as
+    // mostly chrome. Body Integrity 25, all 25 spent — see docs/masters/pregens/loadouts.json.
+    key: "Kade", slug: "kade-orrin-vex", name: "Kade Orrin-Vex", handle: "Hardframe",
+    cls: "operator", subclass: "corp-milspec", ancestry: "cyborg",
+    // Cortical Firewall and Arcane Severance are the Cyborg signature traits and land automatically;
+    // these three are the purchased picks a milspec frame would have been issued.
+    traits: ["predictive-sensors-trait", "auxiliary-limbs-combat-trait", "installed-suite-trait"],
+    kit: "heavy/warframe", background: "corp-arcology", profession: "merc-recruit",
+    skills: ["perception", "athletics", "firearms", "command"],
+    bio: "A Cyborg Operator off a corp milspec line that never got the offboarding scrub. Matte plating under the skin, a replacement arm with servo seams, an optic cluster that reads a room in bands his handlers never authorised, an aural suite, a cranial datajack and a nervous system wired faster than the body it came in. Laced bone underneath all of it. He still moves like he is on someone's clock.",
+    abilities: [],
+  },
 ];
 
 // ---- Index every shipped item by _id so grant UUIDs resolve to source JSON.
@@ -173,6 +215,19 @@ function resolveGrants(seed, hero, log, targetLevel = DEFAULT_TARGET_LEVEL) {
   const queue = [...seed];
   log.levelWarnings ??= [];
 
+  /**
+   * 0.3.124 (A2) — the pact this hero has sworn, read off whatever Pact Alignment feature is
+   * already in hand. The class lists Pact Alignment (sort 6000) before Signature Abilities
+   * (sort 10000), so by the time a pact-gated pool is walked the answer exists.
+   */
+  const pactSworn = () => {
+    for (const item of items.values()) {
+      const alignment = item.flags?.[MODULE_ID]?.pactAlignment;
+      if (alignment) return alignment;
+    }
+    return null;
+  };
+
   while (queue.length) {
     const item = queue.shift();
     for (const adv of Object.values(item.system?.advancements ?? {})) {
@@ -180,7 +235,15 @@ function resolveGrants(seed, hero, log, targetLevel = DEFAULT_TARGET_LEVEL) {
       if (!advancementMeetsLevel(adv, targetLevel, { warnings: log.levelWarnings, label })) continue;
 
       if (adv.type === "itemGrant") {
-        const pool = (adv.pool ?? []).map(p => idFromUuid(p.uuid));
+        const alignment = pactSworn();
+        // Same rule as patchPactFilter() in scripts/module.mjs: a row flagged for the other pact is
+        // not an option. Unflagged rows, and heroes with no pact, are unaffected.
+        const pool = (adv.pool ?? []).map(p => idFromUuid(p.uuid)).filter(id => {
+          const pact = INDEX.get(id)?.json?.flags?.[MODULE_ID]?.pact;
+          if (!pact || !alignment || (pact === alignment)) return true;
+          log.choices.push(`${label}: skipped ${INDEX.get(id)?.json?.system?._dsid ?? id} (${pact} pact only)`);
+          return false;
+        });
         // A choice pool must land on the roster's own kit / subclass / lineage / traits / abilities
         // before it falls back to pool order, or Krow ends up a Gunslinger Corp-Milspec.
         const preferred = pool.filter(id => hero.prefer.has(INDEX.get(id)?.json?.system?._dsid));
@@ -366,9 +429,11 @@ for (const [i, hero] of ROSTER.entries()) {
 
   const nameKey = `GHOSTWIRE.Pregens.Actors.${hero.key}.Name`;
   actorsLang[hero.key] = {
-    // A street name already in quotes (KRV-9 “Krow”) reads badly with a second quoted handle.
-    Name: hero.name.includes("“") ? `${hero.name}, ${hero.handle}` : `${hero.name} — “${hero.handle}”`,
-    Description: hero.bio,
+    // E (0.3.124): the Name field is the hero's name. It used to read
+    // `Barak Voss-Hallor — “the Foreman”`, which put a street handle in every actor list, every
+    // token nameplate and every chat speaker. The handle is fiction, so it opens the Biography.
+    Name: hero.name,
+    Description: `Street name: “${hero.handle}.” ${hero.bio}`,
   };
 
   const languages = [...new Set([...(loadout.languages ?? []), ...granted.languages])];
@@ -378,7 +443,8 @@ for (const [i, hero] of ROSTER.entries()) {
   // it again on Kessic) — it has to happen before the Actor is assembled. (F4)
   for (const it of items) if (it.type === "class") it.system = { ...(it.system ?? {}), level: targetLevel };
   const biSpent = (loadout.chrome ?? []).reduce((n, c) => n + Number(c.bi ?? 0), 0);
-  if (biSpent > 20) warn.push(`chrome spends ${biSpent} Body Integrity — over the 20 cap`);
+  const integrityMax = integrityMaxFor(hero.ancestry);
+  if (biSpent > integrityMax) warn.push(`chrome spends ${biSpent} Body Integrity — over the ${integrityMax} cap`);
 
   const actor = {
     _id: actorId, _key: `!actors!${actorId}`,
@@ -413,9 +479,9 @@ for (const [i, hero] of ROSTER.entries()) {
       [MODULE_ID]: {
         pregen: hero.slug,
           biSpent,
-          biRemaining: 20 - biSpent,
+          biRemaining: integrityMax - biSpent,
           // Sheet reads integrity.value/max (not biRemaining alone) — keep both in sync.
-          integrity: { value: 20 - biSpent, max: 20 },
+          integrity: { value: integrityMax - biSpent, max: integrityMax },
         // Changer form art: the sheet portrait and the canvas token are two different files per
         // form (R2, 0.3.121). `*Art` is the square dossier plate the Hero sheet shows; `*Token` is
         // the round WebP the canvas uses. syncChangerFormArt (B50) reads both and never forces one
@@ -438,7 +504,7 @@ for (const [i, hero] of ROSTER.entries()) {
 
   writeFileSync(join(OUT, `${hero.slug}.json`), JSON.stringify(actor, null, 2) + "\n");
 
-  report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, warn, log });
+  report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, integrityMax, warn, log });
 }
 
 lang.GHOSTWIRE.COMPENDIUM.pregens = "Ghostwire Pregens";
@@ -446,7 +512,7 @@ lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Actors: actorsLang
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 
 for (const r of report) {
-  console.log(`${r.hero}: Sta ${r.stamina} · ${r.items} items · ${r.skills} skills · ${r.languages} languages · BI spent ${r.biSpent}`);
+  console.log(`${r.hero}: Sta ${r.stamina} · ${r.items} items · ${r.skills} skills · ${r.languages} languages · BI spent ${r.biSpent}/${r.integrityMax}`);
   for (const c of r.log.choices) console.log(`    choice: ${c}`);
   for (const o of r.log.open) console.log(`    open:   ${o}`);
   if (r.warn.length) console.log(`    ! ${r.warn.join("; ")}`);

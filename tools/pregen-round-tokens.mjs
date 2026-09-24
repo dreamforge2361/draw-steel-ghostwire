@@ -51,6 +51,11 @@ export const SOURCES = [
   { stem: "kessic-draye", circle: `${PRINT}/null_circle.png` },
   { stem: "sabbat-vane", circle: `${PRINT}/sabbat_circle.png` },
   { stem: "vessa-corran-dov", circle: `${PRINT}/vessa_circle.png` },
+  // 0.3.124: Michael cut Renn's and Kade's circles himself alongside their dossier plates, at 512²
+  // argb. Same case as the five above — his framing, wrong resolution — so they come through the
+  // `circle` path: upscaled to 1024² and re-masked with the module's feathered rim.
+  { stem: "renn-solace-ward", circle: `${PRINT}/renn_circle.webp` },
+  { stem: "kade-orrin-vex", circle: `${PRINT}/kade_circle.webp` },
 
   // --- cut from square plates --------------------------------------------------------------
   // Vira's human form is cut from her own human master, not from vira_circle: that print circle is
