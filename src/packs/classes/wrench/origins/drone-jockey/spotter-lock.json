@@ -62,7 +62,47 @@
       "level": null
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "WRSpotterLock000",
+      "_key": "!items.effects!6tZpUxJkqGO4iQSS.WRSpotterLock000",
+      "name": "Spotter Lock",
+      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6tZpUxJkqGO4iQSS",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>A spotter drone is holding this creature. The next Rigged Fire or Focus Fire the rigger makes against it this round has an edge — and spends the lock.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
   "folder": "CZWHE36BIXdwErX5",
   "sort": 0,
   "ownership": {

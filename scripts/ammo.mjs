@@ -25,8 +25,25 @@
 //     the chassis, and 0.3.112's Mounted fire path must keep working untouched this pass.
 //     `spendsAmmo()` is where that exemption lives, in one place, so turning it off later is one line.
 //
+// 0.3.128 (B) adds the half B never had: **class, subclass and kit abilities that fire the hero's own
+// gun now spend rounds too.** Before this wave only a spawned Fire `<weapon>` ability debited the
+// magazine, because only that ability carries `fromGearId`; Controlled Pair, Suppressing Fire and
+// seventeen more emptied nothing. Three more decisions:
+//
+//  5. **An allowlist keyed on `_dsid`, not a keyword sweep.** `AMMO_ABILITY_COSTS` is the whole
+//     policy, and `docs/directors/_ammo-ability-candidates.md` is where each row was argued. A
+//     keyword sweep over `ranged` + `weapon` would have taxed Hex Round (a dart gun), every
+//     meleeRanged blade in the Scout list and the Wrench's drone guns; the borderline column of that
+//     note is deliberately **not** wired.
+//  6. **The gun is resolved, not asked for.** A class ability has no `fromGearId`, so
+//     `pickAmmoGunPlan` picks the fullest gun that can pay and names it on the card. A dialog per
+//     shot is friction on a signature ability the Operator uses every round.
+//  7. **Short refuses before the roll**, exactly where the empty refusal already lived. A Controlled
+//     Pair with one round left is not a Controlled Pair, and printing a power roll first and taking
+//     it back afterwards is worse than saying no.
+//
 // Everything above the "Foundry registration" divider is Foundry-free so
-// tools/wave-03126-smoke.mjs can run it under Node.
+// tools/wave-03126-smoke.mjs and tools/wave-03128-smoke.mjs can run it under Node.
 
 import { isMountedWeapon, isMachineActor } from "./weapon-skills.mjs";
 
@@ -104,6 +121,57 @@ export const AMMO_FAMILY_BY_DSID = Object.freeze({
   "wallbreaker": "heavy",
 });
 
+/**
+ * 0.3.128 (B) — `_dsid` -> rounds spent, for abilities that fire the hero's **own** gun.
+ *
+ * Michael's locked four (Controlled Pair 2 · Suppressing Fire 5 · Breach and Clear 1 · normal Fire 1)
+ * plus every row in the "Clear candidates" table of `docs/directors/_ammo-ability-candidates.md` at
+ * its suggested cost. Nothing in that note's *Borderline* or *Explicitly excluded* columns is here,
+ * and that is the lock rather than an oversight:
+ *
+ *   * **meleeRanged dual-mode** abilities (Ghost Out, Kill Confirm, You Talk Too Much) are absent —
+ *     nothing in the use pipeline says whether the player rolled the blade or the barrel.
+ *   * **Hex Round** is absent because the Hexshot kit's gear is a bow / crossbow / dartgun, none of
+ *     which carry an `ammoFamily`; a round with no magazine behind it cannot be debited.
+ *   * **Overwatch Lane** and **Vantage Trap** are absent because the stance fires nothing. The free
+ *     ranged strike each one triggers is a spawned Fire `<gun>` and already costs 1 via `fromGearId`,
+ *     so listing the stance too would tax the same shot twice.
+ *   * **Drone, sentry and vehicle guns** are absent: `spendsAmmo()` already exempts a mounted weapon,
+ *     and a Wrench's autogun is not the Wrench's magazine.
+ *
+ * `saturation-fire` is a flat 5 rather than a "dump the magazine" special, to match Suppressing Fire.
+ */
+export const AMMO_ABILITY_COSTS = Object.freeze({
+  // Operator — signatures and heroics
+  "controlled-pair": 2,
+  "suppressing-fire": 5,
+  "breach-and-clear": 1,
+  "hold-the-line": 1,
+  "overwatch": 1,
+  "adrenaline-dump": 3,
+  "saturation-fire": 5,                            // Street Vet origin
+
+  // Scout — class and Hunter origin
+  "pinning-shot": 1,
+  "night-watch-strike": 1,
+  "they-always-line-up": 1,
+  "called-shot-vitals": 1,
+  "called-shot-commlink": 1,
+  "ghost-round": 1,
+  "one-shot-one-kill": 1,
+
+  // Kit signature abilities
+  "double-tap": 2,                                 // Saturation
+  "kneecap-shot": 1,                               // Streetsweeper
+  "held-breath": 1,                                // Longshot
+  "bench-rigged-shot": 1,                          // Fabricator's Bench
+  "neural-snap-shot": 1,                           // Rigger's Harness
+  "tablet-crossfire": 1,                           // Field Chassis
+});
+
+/** Every `_dsid` the ability allowlist covers. */
+export const AMMO_ABILITY_DSIDS = Object.freeze(Object.keys(AMMO_ABILITY_COSTS));
+
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
 
 /* -------------------------------------------- reading */
@@ -160,13 +228,77 @@ export function loadedAmmo(gearItem) {
 /* -------------------------------------------- planning */
 
 /**
- * Firing one round.
+ * 0.3.128 (B) — firing `count` rounds in one trigger pull.
+ *
+ * **A short magazine refuses; it does not fire what it has.** Controlled Pair with one round left is
+ * not a Controlled Pair, and a partial spend would leave the card claiming an effect the fiction did
+ * not pay for. `reason` distinguishes the two refusals so the toast can say which one happened:
+ * `empty` (nothing in the gun at all) and `short` (something, but not enough).
+ *
+ * @param {object} opts
+ * @param {number} opts.loadedCount  What is in the magazine now.
+ * @param {number} opts.count        Rounds this trigger pull wants.
+ * @returns {{ok: boolean, reason: "empty"|"short"|null, count: number, spent: number, needed: number}}
+ *          `count` is what is left afterwards; `spent` is 0 on a refusal.
+ */
+export function planFireN({ loadedCount = 0, count = 1 } = {}) {
+  const have = Math.max(0, Math.floor(Number(loadedCount) || 0));
+  const needed = Math.max(1, Math.floor(Number(count) || 1));
+  if (have < needed) return { ok: false, reason: have ? "short" : "empty", count: have, spent: 0, needed };
+  return { ok: true, reason: null, count: have - needed, spent: needed, needed };
+}
+
+/**
+ * Firing one round — the 0.3.126 shape, kept because the Fire path and its smoke both read it.
  * @returns {{ok: boolean, reason: string|null, count: number}} `count` is what is left afterwards.
  */
 export function planFire({ loadedCount = 0 } = {}) {
-  const count = Math.max(0, Math.floor(Number(loadedCount) || 0));
-  if (count <= 0) return { ok: false, reason: "empty", count: 0 };
-  return { ok: true, reason: null, count: count - 1 };
+  const { ok, reason, count } = planFireN({ loadedCount, count: 1 });
+  return { ok, reason, count };
+}
+
+/** Rounds this ability `_dsid` spends out of the hero's magazine; 0 for everything not on the list. */
+export function ammoCostForDsid(dsid) {
+  return AMMO_ABILITY_COSTS[String(dsid ?? "")] ?? 0;
+}
+
+/**
+ * Which gun a class or kit ability fires, when the ability itself does not say.
+ *
+ * A spawned Fire `<weapon>` ability carries `fromGearId` and needs none of this. Controlled Pair
+ * does not: it is an Operator's ability, not a gun's, so something has to choose. **The fullest gun
+ * that can pay**, ties broken by name so two identical Workhorses resolve the same way every time —
+ * a player who wants the other one reloads it, and the card always names the gun that fired.
+ *
+ * On a refusal the pick still comes back (the fullest gun overall) so the toast can say *which* gun
+ * is short and by how much.
+ *
+ * @param {object} opts
+ * @param {Array<{id: string, name?: string, loaded?: number}>} opts.guns
+ * @param {number} opts.cost
+ * @returns {{gunId: string|null, name: string|null, loaded: number, cost: number,
+ *            reason: "noGun"|"empty"|"short"|null}}
+ */
+export function pickAmmoGunPlan({ guns = [], cost = 1 } = {}) {
+  const needed = Math.max(1, Math.floor(Number(cost) || 1));
+  const rows = (guns ?? [])
+    .filter(gun => gun?.id)
+    .map(gun => ({
+      id: String(gun.id),
+      name: String(gun.name ?? ""),
+      loaded: Math.max(0, Math.floor(Number(gun.loaded) || 0)),
+    }))
+    .sort((a, b) => (b.loaded - a.loaded) || a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
+  if (!rows.length) return { gunId: null, name: null, loaded: 0, cost: needed, reason: "noGun" };
+  const able = rows.find(row => row.loaded >= needed);
+  const pick = able ?? rows[0];
+  return {
+    gunId: pick.id,
+    name: pick.name,
+    loaded: pick.loaded,
+    cost: needed,
+    reason: able ? null : (pick.loaded ? "short" : "empty"),
+  };
 }
 
 /**
@@ -437,6 +569,28 @@ function gunForAbility(ability, actor) {
   return (gun && spendsAmmo(gun)) ? gun : null;
 }
 
+/**
+ * 0.3.128 (B) — the ability allowlist half: what this ability costs, and which gun pays for it.
+ *
+ * Returns null for everything that is not on `AMMO_ABILITY_COSTS` (which is nearly everything), so
+ * the caller's fast path is one object lookup. A spawned Fire ability never reaches here — it has
+ * `fromGearId` and is handled a few lines earlier — which is what keeps a free triggered Fire from
+ * being taxed twice.
+ *
+ * @returns {{cost: number, gun: Item|null, pick: object}|null}
+ */
+function abilityAmmoSpend(ability, actor) {
+  const cost = ammoCostForDsid(ability?.system?._dsid);
+  if (!cost) return null;
+  if (!isHero(actor)) return null;                 // an NPC stat block is not spending a hero magazine
+  const guns = ammoWeaponsOf(actor);
+  const pick = pickAmmoGunPlan({
+    guns: guns.map(gun => ({ id: gun.id, name: gun.name, loaded: loadedAmmo(gun).count })),
+    cost,
+  });
+  return { cost, gun: pick.gunId ? (actor.items.get(pick.gunId) ?? null) : null, pick };
+}
+
 /** Apply the Gel rider to everyone this shot was aimed at. */
 async function applyGelRider(targets) {
   for (const target of targets) {
@@ -472,13 +626,28 @@ function patchFireUse() {
       return null;
     }
 
-    const gun = gunForAbility(this.parent, actor);
-    if (!gun) return use.call(this, config, dialogOptions, messageOptions);
+    // A spawned Fire `<gun>` ability names its own gun and always costs exactly 1.
+    // A class / kit / origin ability on the 0.3.128 allowlist costs what the table says, and the gun
+    // has to be resolved. Everything else is none of this file's business.
+    const fireGun = gunForAbility(this.parent, actor);
+    const spend = fireGun
+      ? { cost: 1, gun: fireGun, pick: null }
+      : abilityAmmoSpend(this.parent, actor);
+    if (!spend) return use.call(this, config, dialogOptions, messageOptions);
+
+    const gun = spend.gun;
+    if (!gun) {
+      ui.notifications.warn(loc("Ability.NoGun", { ability: this.parent?.name ?? "", actor: actor?.name ?? "" }));
+      return null;
+    }
 
     const state = loadedAmmo(gun);
-    const plan = planFire({ loadedCount: state.count });
+    const plan = planFireN({ loadedCount: state.count, count: spend.cost });
     if (!plan.ok) {
-      ui.notifications.warn(loc("Empty", { gun: gun.name }));
+      // The refusal lands here, before Draw Steel prints a power roll that was never going to fire.
+      ui.notifications.warn(plan.reason === "empty"
+        ? loc("Empty", { gun: gun.name })
+        : loc("Short", { gun: gun.name, needed: plan.needed, loaded: plan.count }));
       return null;
     }
     // Read the targets before the roll dialog runs: resolving a card can clear the user's targets.
@@ -493,6 +662,7 @@ function patchFireUse() {
       remaining: plan.count,
       capacity: capacityForFamily(ammoFamilyOf(gun)),
       gun: gun.name,
+      spent: plan.spent,
       gel: !!rider,
     });
     if (rider && targets.length) await applyGelRider(targets);
@@ -507,8 +677,10 @@ function injectAmmoLine(message, html) {
   const host = html.querySelector(".message-content") ?? html;
   const line = document.createElement("p");
   line.className = "ghostwire-ammo-line";
-  line.innerHTML = loc("Chat.Fired", {
+  const spent = Math.max(1, Math.floor(Number(shot.spent) || 1));
+  line.innerHTML = loc(spent > 1 ? "Chat.FiredN" : "Chat.Fired", {
     gun: esc(shot.gun), type: typeLabel(shot.type), remaining: shot.remaining, capacity: shot.capacity,
+    spent,
   }) + (shot.gel ? ` <em>${loc("Chat.GelRider", { stamina: GEL_STAMINA })}</em>` : "");
   host.append(line);
 }
@@ -555,12 +727,17 @@ export function registerAmmo() {
       capacityForFamily,
       loadedAmmo,
       planFire,
+      planFireN,
       planReload,
+      ammoCostForDsid,
+      pickAmmoGunPlan,
+      ammoAbilityCosts: () => AMMO_ABILITY_COSTS,
       gelRider,
       ammoStock,
       reloadWeapon: reload,
       syncReloadAbility: syncActor,
     };
   }
-  console.log(`${MODULE_ID} | gun ammunition registered (${AMMO_FAMILIES.map(f => `${f} ${FAMILY_CAPACITY[f]}`).join(" · ")})`);
+  console.log(`${MODULE_ID} | gun ammunition registered (${AMMO_FAMILIES.map(f => `${f} ${FAMILY_CAPACITY[f]}`).join(" · ")}`
+    + ` · ${AMMO_ABILITY_DSIDS.length} ability spends)`);
 }

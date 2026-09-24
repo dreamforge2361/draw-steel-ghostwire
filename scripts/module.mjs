@@ -70,6 +70,8 @@ import { registerPactStrike } from "./pact-strike.mjs";
 import { registerReagents } from "./reagents.mjs";
 import { registerAmmo } from "./ammo.mjs";
 import { registerGrenades } from "./grenades.mjs";
+import { registerNpcLoot } from "./npc-loot.mjs";
+import { registerMark } from "./mark.mjs";
 import {
   CHANGER_ART_KEYS,
   CHANGER_FORMS,
@@ -232,6 +234,15 @@ Hooks.once("init", () => {
   // it prettier, their absence makes it a built-in PIXI burst, and Automated Animations is not
   // involved either way.
   registerHitFx();
+  // 0.3.128 (C) — the loot 0.3.127 (E) embedded on 51 bestiary NPCs, on the sheet where a Director
+  // can see it and drag it. Draw Steel gives an NPC no Equipment tab, so this is a Ghostwire panel on
+  // the Features tab rather than a fight with the system's own sheet parts.
+  registerNpcLoot();
+  // 0.3.128 (D) — one Mark, four sources. You! / Spot Target / Hard Tag / Commander Mark all apply a
+  // real Active Effect on use, show an icon on the token, and grant their edge to the creatures the
+  // ability's own text names — not to everyone who happens to be shooting at the marked target.
+  // Registered last of the AbilityModel#use chain so every other patch above has already seen the use.
+  registerMark();
 });
 
 // ---------- Wired connection states ----------

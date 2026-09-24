@@ -476,7 +476,7 @@
           "before0000000000": {
             "_id": "before0000000000",
             "type": "base",
-            "description": "<p>The enforcer paints the target with a laser designator. The target is marked until the start of the enforcer’s next turn. The enforcer and each of their allies gain an edge on abilities used against targets marked by the enforcer.</p>",
+            "description": "<p>The enforcer paints the target with a laser designator. The target is [[/apply AWkopDFw00pvxBSD]]{marked} until the start of the enforcer’s next turn. The enforcer and each of their allies gain an edge on abilities used against targets marked by the enforcer.</p>",
             "before": true,
             "name": "",
             "img": null,
@@ -494,7 +494,7 @@
       "effects": [
         {
           "name": "You!",
-          "img": "icons/skills/ranged/projectile-spiral-gray.webp",
+          "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
           "type": "base",
           "origin": "Compendium.draw-steel.monsters.Actor.h0iw7LTM1djcBzn9.Item.OkIKCTGLrHgrBw0v",
           "transfer": false,
@@ -522,7 +522,7 @@
             "expiry": null,
             "expired": false
           },
-          "description": "<p>The target is marked until the start of the enforcer’s next turn. The enforcer and each of their allies gain an edge on abilities used against targets marked by the enforcer.</p>",
+          "description": "<p>Painted by the enforcer’s laser designator. The enforcer and each of their allies gain an edge on abilities used against this creature, until the start of the enforcer’s next turn.</p>",
           "tint": "#ffffff",
           "statuses": [],
           "sort": 0,
@@ -1357,7 +1357,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 4,
                 "phase": "initial",
                 "priority": null
@@ -1393,7 +1393,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 5,
                 "phase": "initial",
                 "priority": null
@@ -1429,7 +1429,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 6,
                 "phase": "initial",
                 "priority": null
@@ -1465,7 +1465,7 @@
             "changes": [
               {
                 "key": "system.stamina.bonuses.treasure",
-                "type": "upgrade",
+                "type": "add",
                 "value": 8,
                 "phase": "initial",
                 "priority": null

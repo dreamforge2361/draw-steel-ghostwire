@@ -26,7 +26,7 @@ The fix **splits what Draw Steel fuses**: a Kit governs trained **technique** (m
 
 A **Kit** is a **loadout doctrine** — a package of trained fighting technique that turns a category of gear into a personal combat style. It represents *how you were trained to fight*, not *what you happen to be carrying*.
 
-- A Kit grants a bundle of combat bonuses (Stamina, damage, speed, stability, distance, disengage) and one **signature ability** — a repeatable weapon attack keyed to the Kit.
+- A Kit grants a bundle of combat bonuses (damage, speed, stability, distance, disengage) and one **signature ability** — a repeatable weapon attack keyed to the Kit.
 - A Kit is **flexible and never locked**: a hero may swap Kits during a respite (a respite activity), exactly as Draw Steel allows. Training can be re-focused between runs; it is not a permanent build choice.
 - **A Kit is training, so it lives on the character-power side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
 - **Not every hero leans on a Kit equally.** Kits are the martial identity layer — the **Operator, Scout, Commander**, and any gun/blade/fist-forward build live here. A pure caster (Elementalist, Street-Priest) or a deck-bound Hacker may take a light Kit or none, fighting instead through the Veil or the Wired resource systems.
@@ -36,8 +36,8 @@ A **Kit** is a **loadout doctrine** — a package of trained fighting technique 
 This is the rule that keeps Kits and the Economy/gadgets system intact and interlocked. Draw Steel's "if you don't wield your kit's gear you lose its bonuses" clause becomes the load-bearing bridge here:
 
 1. **A Kit names a category, not a specific item.** A Kit calls for, e.g., "a light firearm + light armor," "a heavy weapon + heavy armor," "a precision rifle, no armor," or "unarmed / cyber-limb strikes." Categories are broad; the specifics are yours.
-2. **You must OWN a qualifying item — bought through the Economy — to get the Kit's bonuses.** The gun, blade, bow-equivalent, or armor that satisfies the Kit's category is nuyen-purchased, Availability-gated (echelon-appropriate) gear like everything else. No qualifying weapon in hand means no weapon bonuses from the Kit (you're using an improvised weapon, below). No qualifying armor worn means no Stamina/stability bonus from the Kit. **The Kit is inert without the gear the Economy supplies.**
-   - *Armor reconciliation (§Armor-3, Gear Catalog Category 2):* when a Kitted class wears qualifying armor, the Kit's Stamina bonus **is** that armor's Stamina — you do not also add the §Armor-1 armor value on top; the two are the same contribution and never double-count. A class with no Kit gains the armor's Stamina directly from §Armor-1. Encumbrance, tags, typed Immunity, and gear mods apply in both cases.
+2. **You must OWN a qualifying item — bought through the Economy — to get the Kit's bonuses.** The gun, blade, bow-equivalent, or armor that satisfies the Kit's category is nuyen-purchased, Availability-gated (echelon-appropriate) gear like everything else. No qualifying weapon in hand means no weapon bonuses from the Kit (you're using an improvised weapon, below). No qualifying armor worn means no stability bonus from the Kit. **The Kit is inert without the gear the Economy supplies.**
+   - *Armor and Kit Stamina (Michael lock 2026-09-24):* **Kits grant no Stamina at all.** Maximum Stamina is your class plus the gear you are actually wearing — armor, and a raised shield on top of it. That replaces the old "the Kit's Stamina bonus **is** that armor's Stamina" reconciliation, which was never implementable: it required deciding whether a Warframe's +12 or a Hardshell's +9 was "the same contribution" when the two numbers disagreed. A Kit still supplies stability, damage, speed, distance, disengage and its signature ability, and still needs its qualifying gear to supply them. Encumbrance, tags, typed Immunity, and gear mods are unchanged, and every class now reads its armor's Stamina directly from §Armor-1.
 3. **Kit doctrine and gear mods stack, because they touch different numbers.** The Kit adds doctrine bonuses (damage by Power Roll result band, distance, speed, stability, the signature ability). Nuyen-bought mods (smartlink, silencer, recoil comp, armor weave, drone hardpoint) add situational traits and effects via the mod-slot crafting subsystem. They never overwrite each other — a smartlinked, silenced pistol in the hands of a **Ghost**-Kit runner gets both the Kit's ranged doctrine *and* the mods' effects. A gear-focused hero therefore benefits twice (Kit + deep mods).
 4. **Gear quality still matters underneath the Kit.** The Kit's bonuses are constant, but the item satisfying it climbs Availability / echelon gear lists (street-grade → milspec / prototype). A Longshot Kit is deadlier with a high-Availability rifle than a cheap zip-gun even though the Kit line is unchanged — the Economy remains the axis of material progression, the Kit the axis of trained skill.
 
@@ -47,7 +47,7 @@ This is the rule that keeps Kits and the Economy/gadgets system intact and inter
 
 Each Kit provides some subset of the following, drawn from the Draw Steel benchmark and re-expressed for this system:
 
-- **Stamina bonus** — added to Stamina maximum; scales by **echelon** (Draw Steel). Requires the Kit's armor to be worn.
+- **Stamina bonus** — **none.** Kits granted `Stamina × echelon` until 0.3.128; they now grant zero, and Stamina comes from your class plus worn armor and a raised shield (§Armor-1).
 - **Speed bonus** — added to movement.
 - **Stability bonus** — added to stability (resisting forced movement). Requires the Kit's armor.
 - **Melee / Ranged damage bonus** — added to the rolled damage of the matching weapon attacks, expressed as **+X / +Y / +Z across the three Draw Steel Power Roll result bands** (low / middle / high, matching DS print order). Requires the qualifying weapon.
@@ -79,8 +79,8 @@ Weapon/armor "category" is what the Economy item must satisfy; bonus lines are i
 | **Gunslinger** | Swashbuckler | Medium sidearm/blade; light armor | High speed, push-and-shift finesse |
 | **Streetsweeper** | Ranger | Shotgun/carbine + medium weapon; medium armor | Flexible mid-range hybrid, slow-on-hit signature |
 | **Juggernaut** | Mountain | Heavy weapon; heavy armor | Tank doctrine, massive high-result hit, punishes attackers |
-| **Breacher** | Sword and Board | Medium weapon + ballistic shield; medium armor | Push/prone control, high Stamina, front-line |
-| **Warframe** | Shining Armor | Medium weapon + shield; heavy armor | Highest Stamina, taunt signature (Frame Lock) |
+| **Breacher** | Sword and Board | Medium weapon + ballistic shield; medium armor | Push/prone control, front-line; medium armor plus a raised shield is the Stamina |
+| **Warframe** | Shining Armor | Medium weapon + shield; heavy armor | Taunt signature (Frame Lock); heavy armor plus a raised shield is the Stamina |
 | **Bulldozer** | Panther | Heavy weapon; no armor | Mobile heavy hitter, charge-for-damage |
 | **Brawler** | Pugilist | Unarmed / cyber-limb strikes; no armor | Durable striker, slide-and-follow |
 | **Mantis** | Martial Artist | Unarmed / cyber-limb strikes; no armor | Fast martial artist, swap-places signature |
@@ -114,11 +114,11 @@ Three light Kits built for the Wrench's subclasses (any class with light-Kit acc
 
 | Kit | Gear category | Doctrine bonuses | Signature ability | Rigging bonus | Starter Kit for |
 |---|---|---|---|---|---|
-| **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Stamina +3 · Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |
-| **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Stamina +3 · Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |
+| **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |
+| **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |
 
 **Connect.** **Rigger’s Harness** is a Wire interface (≡ deck). Fabricator’s Bench and Field Chassis are not. Full list: `docs/raw/21-the-wire.md`.
-| **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Stamina +3 · Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |
+| **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |
 
 ---
 

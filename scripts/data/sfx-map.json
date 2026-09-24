@@ -1,11 +1,12 @@
 {
   "_comment": "B40/B54/B58 SFX map (2026-09-18 rematch). Rules in order; first match wins. If a rule has match, NAME must match; keywords only filter. Keyword-only rules (no match) fire on keyword alone. Optional srcs[] rotates by name hash. New P1/P2 ElevenLabs packs wired.",
+  "_comment0.3.128": "A1: every ability on scripts/ammo.mjs AMMO_ABILITY_COSTS — the 20 class / origin / kit abilities that fire the hero's own gun — now resolves to a firearm sound. They used to fall all the way through to the default (scan-electronic.ogg), so Controlled Pair sounded like a drone scanning a door. The gun-ability rules sit ABOVE the spell block on purpose: 'Adrenaline Dump' would otherwise be caught by veil-dark's 'drain'-adjacent siblings and 'Saturation Fire' by veil-fire's 'fire'. Rule order is the whole fix; nothing below moved.",
   "default": "modules/draw-steel-ghostwire/assets/sfx/scan-electronic.ogg",
   "rules": [
     {
       "id": "scout-mark",
       "label": "Scout mark / hard tag / glass the block",
-      "match": "quarry|hard.?tag|careful.?observ|glass the block|hesitation|beat the draw|steady the scope|scout.?mark|\\bmark\\b",
+      "match": "quarry|hard.?tag|spot.?target|careful.?observ|glass the block|hesitation|beat the draw|steady the scope|scout.?mark|\\bmark\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/scout-mark.ogg"
     },
     {
@@ -49,6 +50,30 @@
       "label": "Hex round / hexshot",
       "match": "hex.?round|hexshot",
       "src": "modules/draw-steel-ghostwire/assets/sfx/hex-round.ogg"
+    },
+    {
+      "id": "firearm-ability-pair",
+      "label": "0.3.128 A1 — Controlled Pair / Double Tap: two aimed rounds, one trigger squeeze",
+      "match": "controlled.?pair|double.?tap",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-double-tap.ogg"
+    },
+    {
+      "id": "firearm-ability-precision",
+      "label": "0.3.128 A1 — the aimed single round: Scout / Hunter shots and the two rifle kits",
+      "match": "pinning.?shot|night.?watch|they always line up|called.?shot|ghost.?round|one shot,? one kill|held.?breath",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
+    },
+    {
+      "id": "firearm-ability-volume",
+      "label": "0.3.128 A1 — the abilities that empty a magazine into an area",
+      "match": "suppressing.?fire|saturation.?fire|adrenaline.?dump",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-machinegun.ogg"
+    },
+    {
+      "id": "firearm-ability-single",
+      "label": "0.3.128 A1 — the remaining hero-gun abilities: one shot from a sidearm or carbine",
+      "match": "breach and clear|hold the line|\\boverwatch\\b(?! lane)|kneecap.?shot|bench.?rigged|neural.?snap|tablet.?crossfire",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
     },
     {
       "id": "veil-brand",
