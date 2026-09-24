@@ -280,6 +280,21 @@ function sequencerFile(files) {
  */
 const IMPACT_MS = 420;
 
+/**
+ * 0.3.130 (F) — live ticker callbacks. A Set so `canvasTearDown` and `deactivateCanvas` can
+ * force-remove every in-flight effect in one pass, preventing a leaked ticker from painting
+ * against a dead canvas after a scene change, hot-reload, or module disable.
+ */
+const liveFrames = new Set();
+
+function teardownAllFrames() {
+  for (const entry of liveFrames) {
+    try { canvas?.app?.ticker?.remove(entry.frame); } catch { /* already gone */ }
+    try { if (!entry.graphics.destroyed) entry.graphics.destroy(); } catch { /* already gone */ }
+  }
+  liveFrames.clear();
+}
+
 const lerp = (from, to, t) => ({ x: from.x + ((to.x - from.x) * t), y: from.y + ((to.y - from.y) * t) });
 
 /** The origin→target beat: what leaves the shooter. */
@@ -358,8 +373,14 @@ function drawHitFx({ travel = null, travelMs = 0, style = "burst", color = 0xfff
   const total = flight + (impact ? IMPACT_MS : 0);
   if (!total) return null;
   const start = performance.now();
+  const entry = { graphics, frame: null };
 
   const frame = () => {
+    if (graphics.destroyed || !canvas?.app?.ticker) {
+      liveFrames.delete(entry);
+      try { canvas?.app?.ticker?.remove(frame); } catch { /* already gone */ }
+      return;
+    }
     const elapsed = performance.now() - start;
     graphics.clear();
     if (flight && (elapsed < flight)) {
@@ -372,10 +393,13 @@ function drawHitFx({ travel = null, travelMs = 0, style = "burst", color = 0xfff
     }
     if (elapsed >= total) {
       canvas.app?.ticker?.remove(frame);
-      graphics.destroy();
+      if (!graphics.destroyed) graphics.destroy();
+      liveFrames.delete(entry);
     }
   };
 
+  entry.frame = frame;
+  liveFrames.add(entry);
   canvas.app?.ticker?.add(frame);
   return graphics;
 }
@@ -504,6 +528,12 @@ function speakerPoint(message) {
 
 export function registerHitFx() {
   registerSettings();
+
+  // 0.3.130 (F) — harden canvas / ticker teardown. Force-remove every in-flight PIXI effect on
+  // scene change, canvas teardown, or combat end so leaked tickers never paint against a dead canvas.
+  Hooks.on("canvasTearDown", teardownAllFrames);
+  Hooks.on("canvasReady", teardownAllFrames);
+  Hooks.on("deleteCombat", teardownAllFrames);
 
   // One client fires it: the one whose action created the message, exactly as B40 does. Every other
   // client hears the sound through AudioHelper's broadcast and draws nothing, which is correct —
