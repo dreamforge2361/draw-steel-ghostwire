@@ -1,12 +1,12 @@
 {
-  "_id": "ZNRmCaCOSU5137UE",
-  "_key": "!items!ZNRmCaCOSU5137UE",
-  "name": "GHOSTWIRE.Gear.Items.SmartGrenade.Name",
+  "_id": "C1gsCS49FhslBAes",
+  "_key": "!items!C1gsCS49FhslBAes",
+  "name": "GHOSTWIRE.Gear.Items.EmpGrenade.Name",
   "type": "treasure",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/smart-grenade.webp",
+  "img": "icons/weapons/thrown/bomb-detonator.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Gear.Items.SmartGrenade.Description",
+      "value": "GHOSTWIRE.Gear.Items.EmpGrenade.Description",
       "director": ""
     },
     "source": {
@@ -14,10 +14,10 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "smart-grenade",
+    "_dsid": "emp-grenade",
     "kind": "weapon",
     "category": "",
-    "echelon": 4,
+    "echelon": 3,
     "keywords": [
       "medium"
     ],
@@ -42,25 +42,25 @@
   "flags": {
     "draw-steel-ghostwire": {
       "gear": {
-        "echelon": 4,
-        "availability": "prototype",
-        "price": 6000,
+        "echelon": 3,
+        "availability": "military",
+        "price": 5000,
         "modSlots": 0,
         "tags": [
           "Blast",
           "Consumable",
-          "Smart-ready"
+          "Non-lethal-capable"
         ],
         "consumable": true,
-        "damage": 6,
-        "damageType": "kinetic",
-        "range": "Medium",
+        "damage": null,
+        "damageType": null,
+        "range": "Short",
         "weaponBand": "medium",
         "thrown": {
           "feet": 20,
           "impact": {
-            "damage": 6,
-            "damageType": null
+            "chromeSuppress": 1,
+            "highChromeSuppress": 2
           }
         }
       }

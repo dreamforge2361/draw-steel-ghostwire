@@ -243,7 +243,12 @@ note(ammo.length >= 1, `ammo stocks ≥1 magazine SKU (got ${ammo.length})`);
 note(vehicles.length >= 30, `vehicles stocks ground/air/water/space minus plot (got ${vehicles.length})`);
 note(decks.length >= 5, `decks stocks Cat 4A cyberdecks (got ${decks.length})`);
 note(programs.length >= 10, `programs stocks 4B suites + 4C payloads (got ${programs.length})`);
-note(ammo.length >= 6, `ammo stocks Cat 1F magazines / thrown (got ${ammo.length})`);
+// 0.3.126 (C): the Ammo Counter used to carry six rows — three round types plus inert Frag /
+// Flash-Bang / Smoke copies that had no Use and no way to get one. The two duplicates are gone
+// (the thrown originals are the usable ones) and Smoke moved to the thrown shelf, so the shelf
+// is now exactly the ammunition it is named for. Asserted as == 3, not >= 3: a fourth row here
+// is a regression, not growth.
+note(ammo.length === 3, `ammo stocks exactly the three round types (got ${ammo.length})`);
 const foodIds = new Set(food.map(r => r.uuid.split(".").pop()));
 note(foodIds.has("GwBuzzCan0000001") && foodIds.has("GwStallRamen0001"), "food includes Buzz-Can + Stall Ramen");
 const medIds = new Set(medical.map(r => r.uuid.split(".").pop()));

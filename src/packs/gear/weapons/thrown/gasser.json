@@ -54,7 +54,14 @@
         "damage": 4,
         "damageType": "toxin",
         "range": "Short",
-        "weaponBand": "light"
+        "weaponBand": "light",
+        "thrown": {
+          "feet": 20,
+          "impact": {
+            "damage": 4,
+            "damageType": "poison"
+          }
+        }
       }
     }
   }

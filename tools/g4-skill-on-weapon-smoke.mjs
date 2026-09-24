@@ -73,7 +73,9 @@ function scanWeapons() {
 }
 
 const weapons = scanWeapons();
-const EXPECTED_SKUS = 66;   // 57 through 0.3.111 + the nine 0.3.112 mounted/ SKUs
+const EXPECTED_SKUS = 68;   // 57 through 0.3.111 + the nine 0.3.112 mounted/ SKUs
+                            // + 0.3.126's two thrown arrivals: the new EMP Grenade, and Smoke,
+                            // which moved off the Ammo Counter onto the thrown shelf.
 note(weapons.length === EXPECTED_SKUS, `read ${weapons.length} weapon SKUs out of src/packs/gear/weapons (expected ${EXPECTED_SKUS})`);
 
 const expected = Object.fromEntries(weapons.map(w =>
