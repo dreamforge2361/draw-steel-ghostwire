@@ -305,6 +305,50 @@ export function pickAmmoGunPlan({ guns = [], cost = 1 } = {}) {
 }
 
 /**
+ * Does this use have to ask the player which gun? (0.3.132 C.)
+ *
+ * {@link pickAmmoGunPlan} answers "the fullest one" and that is a fine *default*, but it is a
+ * terrible *decision*: an Operator carrying a Workhorse and a Streetsweeper had Controlled Pair
+ * quietly empty whichever happened to be fuller, and the only way to fire the other one was to
+ * unload the first. One gun is still no question. Two is always a question.
+ *
+ * Kept separate from the picker itself so the smoke can assert the rule without a dialog, and so
+ * the Rigged Fire path (a drone's guns, not the hero's) can ask it the same way.
+ *
+ * @param {object} opts
+ * @param {Array<object>} opts.guns
+ * @returns {boolean}
+ */
+export function needsGunPick({ guns = [] } = {}) {
+  return (guns ?? []).filter(gun => gun?.id).length > 1;
+}
+
+/**
+ * The picker's rows: every gun, fullest first, each flagged for whether it can actually pay.
+ *
+ * A gun that cannot pay is **listed, not hidden**. Hiding it turns "my Streetsweeper is empty" into
+ * "my Streetsweeper has vanished", and the player who wants to know why reloads blind. Picking it
+ * is refused by {@link planFireN} a moment later with the toast that names the shortfall.
+ *
+ * @param {object} opts
+ * @param {Array<{id: string, name?: string, loaded?: number}>} opts.guns
+ * @param {number} opts.cost
+ * @returns {Array<{id: string, name: string, loaded: number, able: boolean, needed: number}>}
+ */
+export function ammoGunOptions({ guns = [], cost = 1 } = {}) {
+  const needed = Math.max(1, Math.floor(Number(cost) || 1));
+  return (guns ?? [])
+    .filter(gun => gun?.id)
+    .map(gun => ({
+      id: String(gun.id),
+      name: String(gun.name ?? ""),
+      loaded: Math.max(0, Math.floor(Number(gun.loaded) || 0)),
+    }))
+    .sort((a, b) => (b.loaded - a.loaded) || a.name.localeCompare(b.name) || a.id.localeCompare(b.id))
+    .map(row => ({ ...row, able: row.loaded >= needed, needed }));
+}
+
+/**
  * Reloading. **Tops to capacity in one action** — this is not a round-at-a-time pump.
  *
  * Switching type returns whatever is still in the gun to inventory as the *old* type, which is why
@@ -616,6 +660,40 @@ async function promptReload(actor) {
   return { gun: entry.gun, type: AMMO_TYPE_KEYS.includes(data.type) ? data.type : DEFAULT_AMMO_TYPE, owner: entry.owner };
 }
 
+/**
+ * Ask which gun pays for this shot. Returns the chosen Item, or null when the player backs out.
+ *
+ * `owner` is whoever's items the guns live on: the hero for a class ability, the drone or the
+ * vehicle for Rigged Fire. The dialog is the same either way, which is the point — 0.3.130 taught
+ * the reload chooser to list platform guns and this is the firing half of the same idea.
+ */
+async function promptAmmoGun(actor, ability, owner, guns, cost) {
+  const rows = ammoGunOptions({
+    guns: guns.map(gun => ({ id: gun.id, name: gun.name, loaded: loadedAmmo(gun).count })),
+    cost,
+  });
+  const options = rows.map(row => {
+    const gun = owner.items.get(row.id);
+    const state = loadedAmmo(gun);
+    const label = loc(row.able ? "Pick.Option" : "Pick.OptionShort", {
+      gun: row.name,
+      count: row.loaded,
+      capacity: capacityForFamily(ammoFamilyOf(gun)),
+      type: typeLabel(state.type),
+      needed: Math.max(0, row.needed - row.loaded),
+    });
+    return `<option value="${row.id}">${esc(label)}</option>`;
+  }).join("");
+  const data = await foundry.applications.api.DialogV2.input({
+    window: { title: loc("Pick.Title"), icon: "fa-solid fa-crosshairs" },
+    content: `<p>${esc(loc("Pick.Hint", { ability: ability?.name ?? "", actor: actor?.name ?? "", cost }))}</p>`
+      + `<div class="form-group"><label>${loc("Pick.Gun")}</label><select name="gun">${options}</select></div>`,
+    ok: { label: `${L}.Pick.Confirm`, icon: "fa-solid fa-crosshairs" },
+  });
+  if (!data?.gun) return null;
+  return owner.items.get(String(data.gun)) ?? null;
+}
+
 /** Do the reload the dialog described. */
 export async function reload(actor, gun, ammoType) {
   const family = ammoFamilyOf(gun);
@@ -678,7 +756,8 @@ function abilityAmmoSpend(ability, actor) {
     guns: guns.map(gun => ({ id: gun.id, name: gun.name, loaded: loadedAmmo(gun).count })),
     cost,
   });
-  return { cost, gun: pick.gunId ? (actor.items.get(pick.gunId) ?? null) : null, pick };
+  // 0.3.132 (C): `guns` rides along so the caller can ask rather than assume when there are two.
+  return { cost, guns, gun: pick.gunId ? (actor.items.get(pick.gunId) ?? null) : null, pick };
 }
 
 /** Apply the Gel rider to everyone this shot was aimed at. */
@@ -730,12 +809,18 @@ function patchFireUse() {
         guns: platformGuns.map(g => ({ id: g.id, name: g.name, loaded: loadedAmmo(g).count })),
         cost: 1,
       });
-      const gun = pick.gunId ? platform.items.get(pick.gunId) : null;
+      let gun = pick.gunId ? platform.items.get(pick.gunId) : null;
       if (!gun || pick.reason) {
         ui.notifications.warn(pick.reason === "noGun"
           ? loc("RiggedFire.NoPlatformGun", { platform: platform.name })
           : loc("RiggedFire.PlatformEmpty", { platform: platform.name, gun: gun?.name ?? "" }));
         return null;
+      }
+      // 0.3.132 (C): a platform carrying two guns asks, exactly as the hero's own two guns do. The
+      // refusal above has already run, so this dialog only opens on a shot that can be paid for.
+      if (needsGunPick({ guns: platformGuns })) {
+        gun = await promptAmmoGun(actor, this.parent, platform, platformGuns, 1);
+        if (!gun) return null;
       }
       const state = loadedAmmo(gun);
       const plan = planFireN({ loadedCount: state.count, count: 1 });
@@ -766,10 +851,18 @@ function patchFireUse() {
       : abilityAmmoSpend(this.parent, actor);
     if (!spend) return use.call(this, config, dialogOptions, messageOptions);
 
-    const gun = spend.gun;
+    let gun = spend.gun;
     if (!gun) {
       ui.notifications.warn(loc("Ability.NoGun", { ability: this.parent?.name ?? "", actor: actor?.name ?? "" }));
       return null;
+    }
+
+    // 0.3.132 (C) — two guns is a question, not a guess. Asked **before** the spend and before the
+    // roll, so backing out of the dialog costs nothing: no card, no rounds, no resource.
+    // A spawned Fire `<gun>` ability names its own gun (`fromGearId`) and never reaches this.
+    if (spend.guns && !spend.pick?.reason && needsGunPick({ guns: spend.guns })) {
+      gun = await promptAmmoGun(actor, this.parent, actor, spend.guns, spend.cost);
+      if (!gun) return null;
     }
 
     const state = loadedAmmo(gun);
@@ -870,6 +963,8 @@ export function registerAmmo() {
       planReload,
       ammoCostForDsid,
       pickAmmoGunPlan,
+      needsGunPick,
+      ammoGunOptions,
       ammoAbilityCosts: () => AMMO_ABILITY_COSTS,
       gelRider,
       ammoStock,
