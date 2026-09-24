@@ -10077,6 +10077,22 @@
         "NobodyCaught": "Nobody is standing in it."
       }
     },
+    "NpcLoot": {
+      "Title": "Loot",
+      "Count": "{items} items · {pieces} pieces",
+      "None": "nothing on the body",
+      "Quantity": "×{quantity}",
+      "Stamped": "Placed by the bestiary loot table.",
+      "Open": "Open this item’s sheet",
+      "DragHint": "Drag a row onto a hero sheet, the Locker or the Items directory to loot it.",
+      "EmptyHint": "This one is carrying nothing. Beasts, ICE and the risen have no pockets, and the loot table says so on purpose — see docs/masters/bestiary/loot.json.",
+      "Settings": {
+        "Enabled": {
+          "Name": "NPC loot panel",
+          "Hint": "Show a Loot panel on NPC sheets. Draw Steel gives NPCs no Equipment tab, so without this the gear 0.3.127 embedded on the bestiary is invisible and cannot be dragged."
+        }
+      }
+    },
     "HitFx": {
       "Settings": {
         "Enabled": {
