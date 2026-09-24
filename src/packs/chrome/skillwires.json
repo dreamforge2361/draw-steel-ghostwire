@@ -60,7 +60,7 @@
         "changes": [
           {
             "key": "system.skills.modifiers.repair.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

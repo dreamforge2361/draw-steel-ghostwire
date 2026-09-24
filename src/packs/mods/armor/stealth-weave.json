@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a5600 in adaptive low-profile fabric and matte thread; a tailor's table and a dark room",
-      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "prerequisites": "¥600 in adaptive low-profile fabric and matte thread; a tailor's table and a dark room",
+      "source": "Ghostwire Gear master §2F / Cat 2 — armorer's bench, tailor's table, or a safehouse workbench",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Stealth Weave \u00b7 installs on one suit of armor (1 mod slot)."
+        "display": "one Stealth Weave · installs on one suit of armor (1 mod slot)."
       },
       "goal": 150
     }
@@ -63,7 +63,7 @@
         "changes": [
           {
             "key": "system.skills.modifiers.stealth.edges",
-            "type": "add",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null
