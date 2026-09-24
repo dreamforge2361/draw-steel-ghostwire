@@ -1049,6 +1049,190 @@
       },
       "_id": "GwWkR8kahM5QvAAP",
       "_key": "!actors.items!R8kahM5QvAAPB15X.GwWkR8kahM5QvAAP"
+    },
+    {
+      "_id": "gJay0dnpfOU7rNQ9",
+      "name": "GHOSTWIRE.Gear.Items.HandCannon.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hand-cannon.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.HandCannon.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hand-cannon",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 900,
+            "modSlots": 2,
+            "tags": [
+              "Loud"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!R8kahM5QvAAPB15X.gJay0dnpfOU7rNQ9",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "tlMbTriWkobRZbDe",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 501000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!R8kahM5QvAAPB15X.tlMbTriWkobRZbDe",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "hfVvlSyqQ0Twcb8C",
+      "name": "GHOSTWIRE.Gear.Items.Commlink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Commlink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "commlink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 502000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 150,
+            "modSlots": 1,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!R8kahM5QvAAPB15X.hfVvlSyqQ0Twcb8C",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

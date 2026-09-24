@@ -847,6 +847,412 @@
         "default": 0
       },
       "_key": "!actors.items!GwLazChiefMed001.vxocmPyA9uKwrgEq"
+    },
+    {
+      "_id": "ytX4QEJna1kSeMV0",
+      "name": "GHOSTWIRE.Gear.Items.Zapper.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/zapper.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Zapper.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "zapper",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 800,
+            "modSlots": 2,
+            "tags": [
+              "Non-lethal-capable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "electrical",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.ytX4QEJna1kSeMV0",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "jmNhQBkD9017NKvA",
+      "name": "GHOSTWIRE.Gear.Items.GelStickNShock.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GelStickNShock.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "gel-stick-n-shock",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 350,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "gel",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.jmNhQBkD9017NKvA",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "e8mli9DlH5IbaKGw",
+      "name": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "field-surgery-kit",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 2000,
+            "modSlots": 0,
+            "tags": [],
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": false,
+              "target": "selfOrAlly",
+              "stabilize": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.e8mli9DlH5IbaKGw",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "gwFieldSurgery1E",
+          "name": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.Name",
+          "img": "icons/tools/medical/bandages-gauze.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.eOdJ75uCwUy2n2uT",
+          "description": "GHOSTWIRE.Gear.Items.FieldSurgeryKit.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": ""
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.medicine.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.skills.modifiers.medicineLore.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!GwLazChiefMed001.e8mli9DlH5IbaKGw.gwFieldSurgery1E"
+        }
+      ]
+    },
+    {
+      "_id": "3MR9vnDv3jVa2Rv4",
+      "name": "GHOSTWIRE.Gear.Items.TraumaPatch.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.TraumaPatch.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "trauma-patch",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 3,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 403000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 100,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "recoveries": 1,
+              "oncePerCombat": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.3MR9vnDv3jVa2Rv4",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "3U8o9SckjAQS0ZJb",
+      "name": "GHOSTWIRE.Gear.Items.AntidoteDose.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.AntidoteDose.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "antidote-dose",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 404000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 1500,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.3U8o9SckjAQS0ZJb",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "N9ZaV4OoACcqHxNn",
+      "name": "GHOSTWIRE.Gear.Items.SlapDocKit.Name",
+      "type": "treasure",
+      "img": "icons/tools/medical/bandages-gauze.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.SlapDocKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "slap-doc-kit",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 3,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 405000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 8000,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "consumableUse": {
+              "action": "maneuver",
+              "spend": true,
+              "crash": false,
+              "target": "selfOrAlly",
+              "recoveries": 2,
+              "clearCondition": true,
+              "deleteAtZero": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwLazChiefMed001.N9ZaV4OoACcqHxNn",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

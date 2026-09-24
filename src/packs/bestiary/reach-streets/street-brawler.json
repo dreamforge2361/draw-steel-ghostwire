@@ -838,6 +838,240 @@
       },
       "_id": "GwWk0bGZHyvyH39m",
       "_key": "!actors.items!0bGZHyvyH39mIURD.GwWk0bGZHyvyH39m"
+    },
+    {
+      "_id": "Ef0Z3RWGomfGcakY",
+      "name": "GHOSTWIRE.Gear.Items.Knuckles.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/knuckles.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Knuckles.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "knuckles",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 80,
+            "modSlots": 1,
+            "tags": [
+              "Concealable",
+              "Non-lethal-capable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 3,
+            "damageType": "kinetic",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.Ef0Z3RWGomfGcakY",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "h36f7PC3MBG3htuw",
+      "name": "GHOSTWIRE.Gear.Items.RedDust.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/icons/consumables/red-dust.svg",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RedDust.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "red-dust",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 600,
+            "modSlots": 0,
+            "tags": [
+              "Consumable",
+              "Chem"
+            ],
+            "consumable": true,
+            "kioskShelf": "chem",
+            "consumableUse": {
+              "action": "maneuver",
+              "tempStamina": 10,
+              "taint": 1,
+              "spend": true,
+              "crash": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.h36f7PC3MBG3htuw",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "GwRedDustBuff001",
+          "name": "GHOSTWIRE.Gear.Items.RedDust.BuffName",
+          "img": "icons/magic/control/energy-stream-link-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwRedDust0000001",
+          "description": "GHOSTWIRE.Gear.Items.RedDust.BuffDescription",
+          "disabled": true,
+          "transfer": false,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "draw-steel-ghostwire": {
+              "consumablePhase": "buff",
+              "consumableDsid": "red-dust"
+            }
+          },
+          "duration": {
+            "value": 2,
+            "units": "rounds",
+            "expiry": "roundEnd",
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.movement.value",
+                "type": "add",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.characteristics.might.edges",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.characteristics.agility.edges",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!0bGZHyvyH39mIURD.h36f7PC3MBG3htuw.GwRedDustBuff001"
+        },
+        {
+          "_id": "GwRedDustCrash01",
+          "name": "GHOSTWIRE.Gear.Items.RedDust.CrashName",
+          "img": "icons/magic/control/energy-stream-link-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwRedDust0000001",
+          "description": "GHOSTWIRE.Gear.Items.RedDust.CrashDescription",
+          "disabled": true,
+          "transfer": false,
+          "statuses": [
+            "weakened"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "draw-steel-ghostwire": {
+              "consumablePhase": "crash",
+              "consumableDsid": "red-dust"
+            }
+          },
+          "duration": {
+            "value": 2,
+            "units": "rounds",
+            "expiry": "roundEnd",
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.characteristics.might.banes",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.characteristics.agility.banes",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!0bGZHyvyH39mIURD.h36f7PC3MBG3htuw.GwRedDustCrash01"
+        }
+      ]
     }
   ],
   "effects": [],

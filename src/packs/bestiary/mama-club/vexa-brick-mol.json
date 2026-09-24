@@ -459,6 +459,69 @@
       },
       "_id": "GwMamaVexa00It04",
       "_key": "!actors.items!GwMamaVexa000000.GwMamaVexa00It04"
+    },
+    {
+      "_id": "HsrPCn0BmDjWLEm8",
+      "name": "GHOSTWIRE.Gear.Items.ShockStick.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/shock-stick.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ShockStick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shock-stick",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 450,
+            "modSlots": 2,
+            "tags": [
+              "Non-lethal-capable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "electrical",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwMamaVexa000000.HsrPCn0BmDjWLEm8",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

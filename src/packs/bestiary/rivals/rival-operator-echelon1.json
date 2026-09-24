@@ -1098,6 +1098,226 @@
       },
       "_id": "GwWkLhN5ujHMuC4O",
       "_key": "!actors.items!LhN5ujHMuC4Oq0vB.GwWkLhN5ujHMuC4O"
+    },
+    {
+      "_id": "RDwhCg87tIwsfgSY",
+      "name": "GHOSTWIRE.Gear.Items.Autoshotgun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/autoshotgun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Autoshotgun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "autoshotgun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3200,
+            "modSlots": 3,
+            "tags": [
+              "Two-handed",
+              "Spread",
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 7,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "ammoFamily": "shotgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!LhN5ujHMuC4Oq0vB.RDwhCg87tIwsfgSY",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "lvLplGwSpY4oEOf9",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 16,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 501000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!LhN5ujHMuC4Oq0vB.lvLplGwSpY4oEOf9",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "CkIVhAPOyQpmoDKG",
+      "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/metal-pistons.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.CyberlimbArm.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyberlimb-arm",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 502000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "arms",
+            "integrity": 5,
+            "price": 7500,
+            "availability": "restricted"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!LhN5ujHMuC4Oq0vB.CkIVhAPOyQpmoDKG",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "bkJLDQroTx7kVNpw",
+          "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+          "img": "icons/commodities/tech/metal-pistons.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.em8EMmH1hczBjSl8",
+          "description": "GHOSTWIRE.Chrome.CyberlimbArm.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "abilityModifier",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "filters": {
+              "keywords": [
+                "melee",
+                "weapon"
+              ]
+            },
+            "changes": [
+              {
+                "key": "damage.bonuses.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!LhN5ujHMuC4Oq0vB.CkIVhAPOyQpmoDKG.bkJLDQroTx7kVNpw"
+        }
+      ]
     }
   ],
   "effects": [],

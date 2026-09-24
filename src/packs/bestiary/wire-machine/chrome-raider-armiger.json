@@ -796,6 +796,219 @@
       },
       "_id": "GwWkAzxZDtV1audK",
       "_key": "!actors.items!AzxZDtV1audKfRVv.GwWkAzxZDtV1audK"
+    },
+    {
+      "_id": "vxed2Yq1ODNUW180",
+      "name": "GHOSTWIRE.Gear.Items.Chopper.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/chopper.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Chopper.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "chopper",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 1100,
+            "modSlots": 2,
+            "tags": [
+              "Two-handed",
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Medium",
+            "weaponBand": "medium",
+            "ammoFamily": "longarm"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!AzxZDtV1audKfRVv.vxed2Yq1ODNUW180",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "gLiZIzDf65pJL51D",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 110000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!AzxZDtV1audKfRVv.gLiZIzDf65pJL51D",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "HUKTeOxhnJEub2jY",
+      "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.DermalPlating.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "dermal-plating",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 111000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "torso",
+            "integrity": 4,
+            "price": 4000,
+            "availability": "restricted"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!AzxZDtV1audKfRVv.HUKTeOxhnJEub2jY",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "QRhVsvzqzUoali2u",
+          "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+          "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.hNnidLQ8UJQaJum6",
+          "description": "GHOSTWIRE.Chrome.DermalPlating.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.damage.immunities.all",
+                "type": "upgrade",
+                "value": 2,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!AzxZDtV1audKfRVv.HUKTeOxhnJEub2jY.QRhVsvzqzUoali2u"
+        }
+      ]
     }
   ],
   "folder": "gwBestiaryWire00",

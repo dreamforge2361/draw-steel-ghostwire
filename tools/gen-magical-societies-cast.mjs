@@ -28,6 +28,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { keepLoot } from "./lib/keep-loot.mjs";
 import { NO_DAMAGE_MOD, itemId, makeNpcKit } from "./lib/npc-kit.mjs";
 
 const MODULE = "draw-steel-ghostwire";
@@ -51,7 +52,9 @@ const plate = slug => `modules/${MODULE}/assets/tokens/bestiary/magical-societie
 const read = p => JSON.parse(readFileSync(p, "utf8"));
 const write = (p, doc) => {
   mkdirSync(dirname(p), { recursive: true });
-  writeFileSync(p, `${JSON.stringify(doc, null, 2)}\n`);
+  // 0.3.127 (E): a regen owns identity, tools/bestiary-loot.mjs owns the pockets. keepLoot() is
+  // how the second survives the first — see tools/lib/keep-loot.mjs.
+  writeFileSync(p, `${JSON.stringify(keepLoot(p, doc), null, 2)}\n`);
 };
 const clone = v => structuredClone(v);
 

@@ -39,8 +39,7 @@ const MEAT_INERT = "ghostwire-meat-inert";
  * **Michael lock 2026-09-23 — Disconnect is a rung.** Through 0.3.121 this list was three long and
  * the file argued hard that Disconnected must stay off it: Connect was the only on-ramp, Jack Out
  * the only off-ramp. Two locks retired that argument in one ship — Disconnect became a first-class
- * target, and the cycle macro (`cycleWireState`) walks Disconnected → Linked → Overlay → Jumped In
- * → Disconnected, which needs Disconnected to be both a source and a destination.
+ * target, and the cycle macro needs Disconnected to be both a source and a destination.
  *
  * What did **not** change is the thing the old doctrine was actually protecting. Going **on**-net
  * still needs a Wired interface — the plan takes `hasInterface` and refuses `noInterface` without
@@ -49,8 +48,23 @@ const MEAT_INERT = "ghostwire-meat-inert";
  */
 export const WIRE_TOGGLE_OPTIONS = Object.freeze(["disconnected", "linked", "overlay", "jumpedIn"]);
 
-/** The cycle the 0.3.122 macro walks, one rung per use, wrapping at the end. */
-export const WIRE_CYCLE_ORDER = WIRE_TOGGLE_OPTIONS;
+/**
+ * The cycle the macro walks, one rung per use, wrapping at the end.
+ *
+ * **Michael lock 2026-09-24 (0.3.127 B) — Jumped In is off the cycle.** Through 0.3.126 this was
+ * the same array as {@link WIRE_TOGGLE_OPTIONS}, so one extra press of a macro put a Rigger in a
+ * machine: it stamped meat-inert on their body, moved their guns, and did it from a button whose
+ * whole promise is "this is reversible in one more press". Taking a seat is a decision, not a rung.
+ *
+ * So the cycle is now **Disconnected → Linked → Overlay → Disconnected**, and the last step is
+ * genuinely *off* rather than deeper in. Jumped In did not go away — it is still a first-class
+ * option in the picker dialog and still the landing state of `jumpIn()`. It simply is not something
+ * you can arrive at by pressing the same key three times.
+ *
+ * This is why the cycle and the picker are two arrays now: the dialog offers four rungs, the macro
+ * walks three.
+ */
+export const WIRE_CYCLE_ORDER = Object.freeze(["disconnected", "linked", "overlay"]);
 
 /** Reasons a plan can refuse, each with a lang key under `GHOSTWIRE.WireToggle.Refuse`. */
 export const WIRE_TOGGLE_REFUSALS = Object.freeze(["same", "unknown", "notConnected", "noInterface", "noMachine"]);
@@ -128,14 +142,19 @@ export function wireTogglePlan({ from = "disconnected", to = "", hasMachine = fa
 }
 
 /**
- * The next rung in the 0.3.122 cycle: Disconnected → Linked → Overlay → Jumped In → Disconnected.
+ * The next rung in the cycle: Disconnected → Linked → Overlay → Disconnected.
  *
- * A deck jockey reading plain **Jacked In** (Matrix Toggle's deepest rung, no seat) is not on this
- * ladder. They are one step past Overlay, so their next rung is the seat — which then refuses in the
- * ordinary way if they have no Jump-In-capable machine, rather than being silently rerouted.
+ * Two rungs are *sources* without being destinations, and both land on Disconnected:
+ *
+ *  * **Jumped In.** A pilot already in a seat presses the macro to get out, and out means all the
+ *    way out — `applyWireState` runs `jumpOut()` for them on the way. Routing them to Linked would
+ *    have been a second guess about what "the next rung" means to someone who is in a drone.
+ *  * **Jacked In.** A seatless deck jockey at the Matrix Toggle's deepest rung used to be sent to
+ *    the seat from here (0.3.122), which is exactly the arrival this lock removes. They are past
+ *    the end of the ladder, so the ladder wraps.
  */
 export function nextWireCycleState(display) {
-  if (display === "jackedIn") return "jumpedIn";
+  if (display === "jumpedIn" || display === "jackedIn") return WIRE_CYCLE_ORDER[0];
   const index = WIRE_CYCLE_ORDER.indexOf(display);
   if (index < 0) return WIRE_CYCLE_ORDER[0];
   return WIRE_CYCLE_ORDER[(index + 1) % WIRE_CYCLE_ORDER.length];

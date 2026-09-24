@@ -57,7 +57,6 @@
         "range": "Short",
         "weaponBand": "medium",
         "thrown": {
-          "feet": 20,
           "impact": {
             "chromeSuppress": 1,
             "highChromeSuppress": 2

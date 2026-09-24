@@ -367,6 +367,69 @@
       },
       "_id": "GwMamaSable0It03",
       "_key": "!actors.items!GwMamaSable00000.GwMamaSable0It03"
+    },
+    {
+      "_id": "6yasiHGjz8GYelu4",
+      "name": "GHOSTWIRE.Gear.Items.StreetBlade.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/street-blade.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StreetBlade.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "street-blade",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 120,
+            "modSlots": 1,
+            "tags": [
+              "Concealable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "kinetic",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwMamaSable00000.6yasiHGjz8GYelu4",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [

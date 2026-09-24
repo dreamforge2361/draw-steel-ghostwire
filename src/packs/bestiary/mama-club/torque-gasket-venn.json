@@ -459,6 +459,61 @@
       },
       "_id": "GwMamaTorqueIt04",
       "_key": "!actors.items!GwMamaTorque0000.GwMamaTorqueIt04"
+    },
+    {
+      "_id": "Lu10t3Xu36u7hvcx",
+      "name": "GHOSTWIRE.Gear.Items.CuttingTorch.Name",
+      "type": "treasure",
+      "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CuttingTorch.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cutting-torch",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 109000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 3500,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!GwMamaTorque0000.Lu10t3Xu36u7hvcx",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

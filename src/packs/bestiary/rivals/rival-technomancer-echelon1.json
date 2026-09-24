@@ -1037,6 +1037,128 @@
       },
       "_id": "GwWkH2zAHJG0sPSL",
       "_key": "!actors.items!H2zAHJG0sPSLNayu.GwWkH2zAHJG0sPSL"
+    },
+    {
+      "_id": "6fMTAKpBF8USsE3K",
+      "name": "GHOSTWIRE.Gear.Items.CorpBlacklink.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CorpBlacklink.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "corp-blacklink",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 4,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 4,
+            "availability": "prototype",
+            "price": 35000,
+            "modSlots": 5,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!H2zAHJG0sPSLNayu.6fMTAKpBF8USsE3K",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "KQHkWmyLUUlOCWVY",
+      "name": "GHOSTWIRE.Gear.Items.GhostRelay.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/phone-smart-tablet.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.GhostRelay.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ghost-relay",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 3,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 501000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 9000,
+            "modSlots": 4,
+            "tags": [
+              "Wired"
+            ],
+            "modFamily": [
+              "comms",
+              "wired"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!H2zAHJG0sPSLNayu.KQHkWmyLUUlOCWVY",
+      "folder": null,
+      "effects": []
     }
   ],
   "folder": "gwBestiaryRivals",

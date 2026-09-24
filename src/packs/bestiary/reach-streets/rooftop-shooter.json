@@ -532,6 +532,186 @@
       },
       "_id": "GwWkAg7KCE88370e",
       "_key": "!actors.items!Ag7KCE88370eXXNR.GwWkAg7KCE88370e"
+    },
+    {
+      "_id": "yaRbyG6i9nR1E0Sx",
+      "name": "GHOSTWIRE.Gear.Items.BrushGun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/brush-gun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.BrushGun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "brush-gun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 700,
+            "modSlots": 2,
+            "tags": [
+              "Two-handed"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Medium",
+            "weaponBand": "medium",
+            "ammoFamily": "longarm"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!Ag7KCE88370eXXNR.yaRbyG6i9nR1E0Sx",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "lj1fHALCILqilpBM",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 20,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!Ag7KCE88370eXXNR.lj1fHALCILqilpBM",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "tVwJhWIWIyYFo2s9",
+      "name": "GHOSTWIRE.Gear.Items.CheapShades.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CheapShades.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cheap-shades",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 120,
+            "modSlots": 1,
+            "tags": [
+              "Concealable"
+            ],
+            "modFamily": [
+              "sensors"
+            ]
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!Ag7KCE88370eXXNR.tVwJhWIWIyYFo2s9",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [

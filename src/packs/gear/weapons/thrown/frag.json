@@ -56,7 +56,6 @@
         "range": "Short",
         "weaponBand": "medium",
         "thrown": {
-          "feet": 20,
           "impact": {
             "damage": 6,
             "damageType": null

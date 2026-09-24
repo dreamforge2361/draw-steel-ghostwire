@@ -9,10 +9,14 @@
  *      with the folder rule; the five capacities are the locked ones; firing spends one and refuses
  *      at zero; Reload tops to capacity in one action and hands leftovers of the old type back; Gel
  *      is 1 Stamina + Dazed.
- *   C  Thrown Blast grenades stop being B49 free strikes and gain a 20 ft circle + Reflex save; the
- *      save table is fail / success / critical-success / HIGH exactly as locked; Flash-Bang's
- *      impact is Dazed with no damage; EMP is ¥5,000 and suppresses chrome 1 round (2 on HIGH); the
- *      inert Ammo Counter duplicates are gone.
+ *   C  Thrown Blast grenades stop being B49 free strikes and gain a circle + Reflex save;
+ *      Flash-Bang's impact is Dazed with no damage; EMP is ¥5,000 and suppresses chrome 1 round
+ *      (2 on HIGH); the inert Ammo Counter duplicates are gone.
+ *
+ *      **The save table moved.** 0.3.127 (A) replaced fail / success / critical-success with
+ *      Low / Mid / High and put the circle at 15 ft, so those assertions live in
+ *      tools/wave-03127-smoke.mjs now. What stays here is the part 0.3.127 did not touch: which
+ *      SKUs convert, which stay Adjacent demolition, and what each impact block holds.
  *
  * Run: node tools/wave-03126-smoke.mjs
  * Does not need live Foundry.
@@ -27,8 +31,8 @@ import {
   planFire, planReload,
 } from "../scripts/ammo.mjs";
 import {
-  BLAST_FEET, CRIT_SUCCESS_TIER, REFLEX_CHARACTERISTIC, SAVE_CRIT_THRESHOLD,
-  blastDamageTiers, impactFor, isThrownBlast, planBlastImpact, saveOutcome, thrownSpec,
+  BLAST_FEET, REFLEX_CHARACTERISTIC,
+  blastDamageTiers, impactFor, isThrownBlast, planBlastImpact, thrownSpec,
 } from "../scripts/grenades.mjs";
 import { planReagentDose, planConsumableUse, isConsumableTreasure, consumableUseOf } from "../scripts/consumable-use.mjs";
 import { reagentCapacity } from "../scripts/reagents.mjs";
@@ -252,7 +256,7 @@ const ADJACENT_DEMO = ["thermite-charge", "shaped-charge"];
 for (const key of BLAST_LINE) {
   note(!!thrown[key], `${key}.json is on the thrown shelf`);
   note(isThrownBlast(thrown[key]), `${key} converts to Throw + template + save`);
-  note(thrownSpec(thrown[key]).feet === BLAST_FEET, `${key} lands as a ${BLAST_FEET} ft circle`);
+  note(thrownSpec(thrown[key]).feet === BLAST_FEET, `${key} follows BLAST_FEET — a ${BLAST_FEET} ft circle`);
 }
 for (const key of ADJACENT_DEMO) {
   note(!isThrownBlast(thrown[key]), `${key} stays Adjacent demolition — it is placed, not lobbed`);
@@ -260,23 +264,8 @@ for (const key of ADJACENT_DEMO) {
 }
 note(!isThrownBlast(thrown["throwing-knife"]), "the throwing knife is not a grenade and is untouched");
 
-// C2 — the save table, exactly as locked. The third row is the one that looks wrong and is not.
-note(saveOutcome({ natural: 19, tier: 1 }) === "critical", "a natural 19 is a critical success even on a tier-1 total");
-note(saveOutcome({ natural: 20, tier: 3 }) === "critical", `and so is a natural 20 (threshold ${SAVE_CRIT_THRESHOLD})`);
-note(saveOutcome({ natural: 12, tier: 1 }) === "fail", "a tier-1 total is a fail");
-note(saveOutcome({ natural: 12, tier: 2 }) === "success" && saveOutcome({ natural: 14, tier: 3 }) === "success",
-  "tiers 2 and 3 are a normal success");
+// C2 — the Reflex characteristic. The save *table* is 0.3.127's; see tools/wave-03127-smoke.mjs.
 note(REFLEX_CHARACTERISTIC === "agility", "Ghostwire's Reflex is Draw Steel's agility key");
-
-note(planBlastImpact({ outcome: "fail", throwerTier: 2 }).impactTier === 2, "fail takes the thrower's tier in full");
-note(planBlastImpact({ outcome: "success", throwerTier: 3 }).impactTier === 0, "a normal success takes nothing");
-note(planBlastImpact({ outcome: "critical", throwerTier: 3 }).impactTier === CRIT_SUCCESS_TIER,
-  "a critical success still eats the middle impact — not a clean shrug");
-note(planBlastImpact({ outcome: "critical", throwerTier: 3 }).high === false,
-  "and a critical success never earns the HIGH rider");
-note(planBlastImpact({ outcome: "fail", throwerTier: 3 }).high === true,
-  "thrower tier 3 (which a natural 19-20 always is) plus a failed save fires the HIGH rider");
-note(planBlastImpact({ outcome: "fail", throwerTier: 2 }).high === false, "tier 2 does not");
 
 // C3 — impacts.
 note(blastDamageTiers(6).join("/") === "4/6/8", "a printed 6 reads 4 / 6 / 8, the B49 ranged spread");
@@ -284,13 +273,14 @@ note(blastDamageTiers(1).join("/") === "1/1/3", "and a connecting hit never floo
 {
   const frag = thrownSpec(thrown.frag);
   note(frag.impact.damage === 6, "Frag keeps its printed tier impacts");
-  note(impactFor(frag.impact, 3, true).damage === 8, "a HIGH Frag against a failed save is its tier-3 8");
+  const low3 = planBlastImpact({ outcome: "low", throwerTier: 3 });
+  note(impactFor(frag.impact, low3).damage === 8, "a tier-3 Frag against a Low save is its tier-3 8");
 }
 {
   const flash = thrown["flash-bang-3e"];
   note(gearFlags(flash).damage === null && gearFlags(flash).damageType === null,
     "Flash-Bang's misleading 4 electrical is stripped");
-  const impact = impactFor(thrownSpec(flash).impact, 2, false);
+  const impact = impactFor(thrownSpec(flash).impact, planBlastImpact({ outcome: "low", throwerTier: 2 }));
   note(impact.damage === 0 && impact.conditions.join() === "dazed", "its impact is Dazed and nothing else");
   note(/Dazed/.test(lang.Gear.Items.FlashBang3e.Description) && !/4 electrical/.test(lang.Gear.Items.FlashBang3e.Description),
     "and the catalog copy agrees");
@@ -299,10 +289,13 @@ note(blastDamageTiers(1).join("/") === "1/1/3", "and a connecting hit never floo
   const emp = thrown["emp-grenade"];
   note(emp.system._dsid === "emp-grenade" && gearFlags(emp).price === 5000, "the EMP Grenade is ¥5,000");
   const spec = thrownSpec(emp);
-  note(impactFor(spec.impact, 2, false).chromeSuppress === 1, "a failed save suppresses chrome for 1 round");
-  note(impactFor(spec.impact, 3, true).chromeSuppress === 2, "HIGH plus a failed save makes it 2");
-  note(impactFor(spec.impact, 0, false).chromeSuppress === 0, "a normal success suppresses nothing");
-  note(impactFor(spec.impact, 2, false).damage === 0, "and an EMP never damages a body");
+  const low2 = planBlastImpact({ outcome: "low", throwerTier: 2 });
+  const low3 = planBlastImpact({ outcome: "low", throwerTier: 3 });
+  const high = planBlastImpact({ outcome: "high", throwerTier: 3 });
+  note(impactFor(spec.impact, low2).chromeSuppress === 1, "a Low save suppresses chrome for 1 round");
+  note(impactFor(spec.impact, low3).chromeSuppress === 2, "a HIGH throw plus a Low save makes it 2");
+  note(impactFor(spec.impact, high).chromeSuppress === 0, "a High save suppresses nothing");
+  note(impactFor(spec.impact, low2).damage === 0, "and an EMP never damages a body");
   note(!!lang.Gear.Items.EmpGrenade?.Name, "it has a lang name");
 }
 {

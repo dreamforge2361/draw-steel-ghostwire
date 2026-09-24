@@ -4904,7 +4904,7 @@
         },
         "FlashBang3e": {
           "Name": "Flash-Bang",
-          "Description": "<p><em>Flash-Bang · Lone Star Dazzle · stun grenade</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥180 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> [Light], Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> <strong>Dazed</strong>. No damage at all — this is a photoacoustic charge, not a fragmentation one. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> place a <strong>20 ft circle</strong>. Everyone under it makes a <strong>Reflex</strong> save. Fail and they take your power-roll tier in full; a normal success shrugs it off; a <strong>critical</strong> success still eats the middle impact.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Flash-Bang · Lone Star Dazzle · stun grenade</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥180 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> [Light], Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> <strong>Dazed</strong>. No damage at all — this is a photoacoustic charge, not a fragmentation one. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> you place a <strong>15 ft circle</strong> within <strong>60 ft</strong>, before the roll. Everyone under it makes a <strong>Reflex</strong> save: <strong>Low</strong> takes your power-roll tier in full <em>and</em> is <strong>Dazed</strong>; <strong>Mid</strong> takes half damage and is not Dazed; <strong>High</strong> takes nothing.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
         },
         "ThermiteCharge": {
           "Name": "Thermite Charge",
@@ -5298,11 +5298,11 @@
         },
         "EmpGrenade": {
           "Name": "EMP Grenade",
-          "Description": "<p><em>EMP Grenade · Renraku Nullfield · directed electromagnetic charge</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥5,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> <strong>chrome suppressed for 1 round</strong> — every implant on the target goes dark and its benefits go with it. No damage: a body does not notice an EMP, and the thing bolted into it does. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> place a <strong>20 ft circle</strong>. Everyone under it makes a <strong>Reflex</strong> save. Fail and the chrome goes down; a normal success shrugs it off; a <strong>critical</strong> success still eats the middle impact. Throw it on a <strong>HIGH</strong> result (tier 3, or a natural 19-20) and a failed save is <strong>2 rounds</strong>, not one.</p><p><em>Soft (bioware) chrome is one step harder to knock down; salvage-grade is one step easier. That is the standing chrome rule, not an EMP rule.</em></p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+          "Description": "<p><em>EMP Grenade · Renraku Nullfield · directed electromagnetic charge</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥5,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> <strong>chrome suppressed for 1 round</strong> on a Low save (2 on a HIGH throw) — every implant on the target goes dark and its benefits go with it. No damage: a body does not notice an EMP, and the thing bolted into it does. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> you place a <strong>15 ft circle</strong> within <strong>60 ft</strong>, before the roll. Everyone under it makes a <strong>Reflex</strong> save: only a <strong>Low</strong> save puts the chrome down. <strong>Mid</strong> and <strong>High</strong> walk away with their implants lit — an EMP has nothing to half. Throw it on a <strong>HIGH</strong> result (tier 3, or a natural 19-20) and a Low save is <strong>2 rounds</strong>, not one.</p><p><em>Soft (bioware) chrome is one step harder to knock down; salvage-grade is one step easier. That is the standing chrome rule, not an EMP rule.</em></p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
         },
         "SmokeGrenade": {
           "Name": "Smoke",
-          "Description": "<p><em>Smoke · Screening Canister · aerosol obscurant</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥200 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> none — nothing in here hurts anybody. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> place a <strong>20 ft circle</strong>. <strong>No save:</strong> everyone under it is <strong>Cover/Conceal</strong>ed, so ranged attacks against them take a bane. Thermal optics see straight through it.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Smoke · Screening Canister · aerosol obscurant</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥200 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Blast, Consumable, Non-lethal-capable</p><p><strong>Impact:</strong> none — nothing in here hurts anybody. · <strong>Range:</strong> Short</p><p><strong>Throw:</strong> you place a <strong>15 ft circle</strong> within <strong>60 ft</strong>, before the roll. <strong>No save:</strong> everyone under it is <strong>Cover/Conceal</strong>ed, so ranged attacks against them take a bane. Thermal optics see straight through it. The circle comes off the map once the throw resolves; the Conceal does not.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
         }
       },
       "Availability": {
@@ -9750,7 +9750,7 @@
     "WireToggle": {
       "Label": "Wire state",
       "Title": "Wire state",
-      "Hint": "Switch between Disconnected, Linked, Overlay and Jumped In. Going on-net still needs a Wired interface; pulling the plug never does.",
+      "Hint": "Switch between Disconnected, Linked, Overlay and Jumped In. Going on-net still needs a Wired interface; pulling the plug never does. The one-press cycle macro walks only the first three — taking a seat happens here, not there.",
       "Hud": "Wire state: {state}. Click to switch.",
       "Current": "current",
       "Prompt": "{actor} is <strong>{state}</strong>. Pick a rung.",
@@ -9792,7 +9792,7 @@
         "Title": "Cycle Wire State",
         "NoSelection": "Select one or more tokens to cycle their Wire state.",
         "NotHero": "{actor} has no Wire state to cycle.",
-        "Hint": "Each use steps one rung: Disconnected → Linked → Overlay → Jumped In → Disconnected."
+        "Hint": "Each use steps one rung: Disconnected → Linked → Overlay → Disconnected. Jumped In is not on the cycle — take a seat from the Wire state picker or the Jump-In flow."
       }
     },
     "WorkshopBench": {
@@ -10025,22 +10025,25 @@
     },
     "Throw": {
       "Name": "Throw Grenade",
-      "Description": "<p>Lob a Blast grenade from your pouch. <strong>Main action.</strong> Target a token (or click a point on the map) and a <strong>{feet} ft circle</strong> goes down there.</p><p>Everyone under the circle makes a <strong>Reflex</strong> save:</p><ul><li><strong>Fail</strong> — the grenade's impact at <em>your</em> power-roll tier, in full.</li><li><strong>Success</strong> — nothing.</li><li><strong>Critical success</strong> — the <strong>middle</strong> impact anyway. A crit is not a clean shrug; it is getting most of the way clear.</li></ul><p>Throw on a <strong>HIGH</strong> result — tier 3, or a natural 19-20 — and a failed save takes the grenade's high rider on top.</p><p><em>This ability is generated from the grenades in your inventory. Throwing one spends it.</em></p>",
-      "Effect": "<p><strong>Blast.</strong> A {feet} ft circle. Reflex save: fail takes your tier in full, a normal success takes nothing, a critical success still takes the middle impact.</p>",
+      "Description": "<p>Lob a Blast grenade from your pouch. <strong>Main action.</strong> You place the <strong>{feet} ft circle</strong> yourself, anywhere within <strong>{range} ft</strong> of your token — before any dice are rolled. Nothing snaps to a target; a grenade lands on a <em>point</em>.</p><p>Everyone under the circle makes a <strong>Reflex</strong> save, read on the usual tier ladder:</p><ul><li><strong>Low</strong> — the grenade's impact at <em>your</em> power-roll tier, in full, plus whatever rider it carries (Dazed, chrome suppression, and the rest).</li><li><strong>Mid</strong> — <strong>half</strong> that damage, rounded down. No rider.</li><li><strong>High</strong> — nothing at all.</li></ul><p>Throw on a <strong>HIGH</strong> result — tier 3, or a natural 19-20 — and an EMP that lands on a <strong>Low</strong> save suppresses chrome for twice as long.</p><p><em>This ability is generated from the grenades in your inventory. Throwing one spends it. The circle is removed from the map as soon as the throw resolves.</em></p>",
+      "Effect": "<p><strong>Blast.</strong> A {feet} ft circle, placed by you within {range} ft before the roll. Reflex save: <strong>Low</strong> takes your tier in full plus any rider, <strong>Mid</strong> takes half damage and no rider, <strong>High</strong> takes nothing.</p>",
       "Tiers": {
-        "Tier1": "Low impact to everyone under the circle who fails their Reflex save.",
-        "Tier2": "Middle impact to everyone under the circle who fails their Reflex save — and to anyone who criticals it.",
-        "Tier3": "High impact, plus the grenade's HIGH rider, to everyone under the circle who fails their Reflex save."
+        "Tier1": "Low impact under the circle — full to anyone whose Reflex save comes in Low, half to a Mid save.",
+        "Tier2": "Middle impact under the circle — full to a Low save, half to a Mid save, nothing to a High one.",
+        "Tier3": "High impact under the circle, and an EMP's long suppression against any save that comes in Low."
       },
       "Outcomes": {
-        "critical": "critical success",
-        "success": "success",
-        "fail": "fail"
+        "low": "Low",
+        "mid": "Mid",
+        "high": "High"
       },
       "NoGrenade": "{actor} has no grenades left to throw.",
+      "NoThrowerToken": "{actor} has no token on this scene — the {range} ft reach cannot be measured, so the placement is unchecked.",
       "GrenadeOption": "{item} (×{count})",
-      "ClickToPlace": "Click where the grenade lands. Right-click to call it off.",
-      "NoScene": "There is no scene to put a blast template on.",
+      "ClickToPlace": "Click where the {feet} ft circle lands — within {range} ft of your token. Right-click or Esc to call it off.",
+      "OutOfRange": "That point is {feet} ft away. A grenade goes {range} ft. Pick a closer one.",
+      "NoScene": "There is no scene to put a blast circle on.",
+      "RegionName": "{item} — {feet} ft blast",
       "SaveFlavor": "Reflex save — {actor}",
       "Pick": {
         "Title": "Throw which grenade?",
@@ -10052,11 +10055,14 @@
         "Suppressed": "{actor}: {count} implants suppressed for {rounds} round(s)."
       },
       "Row": {
-        "Line": "<strong>{name}</strong> — Reflex {total}, {outcome}: {impact}",
+        "Line": "<strong>{name}</strong> — Reflex {total}, <strong>{outcome}</strong>: {impact}",
         "Damage": "{damage} damage",
+        "Half": "{damage} damage (half, rounded down)",
+        "HalvedToNothing": "halved to nothing",
         "Condition": "{condition}",
         "Chrome": "chrome suppressed {rounds} round(s)",
         "Nothing": "nothing",
+        "Clear": "clear of it",
         "Join": ", ",
         "High": "HIGH",
         "Concealed": "<strong>{name}</strong> — in the cloud: Cover/Conceal."
@@ -10064,6 +10070,22 @@
       "Chat": {
         "Thrown": "<strong>{actor}</strong> throws <strong>{item}</strong> — {feet} ft circle, tier {tier}.",
         "NobodyCaught": "Nobody is standing in it."
+      }
+    },
+    "HitFx": {
+      "Settings": {
+        "Enabled": {
+          "Name": "Hit effects",
+          "Hint": "Play a short flash and impact sound when a gun hit, a melee hit or a grenade resolves. Ghostwire ships its own sounds and draws its own flash — no other module is required."
+        },
+        "Volume": {
+          "Name": "Hit effect volume",
+          "Hint": "How loud the impact sounds are for you. Separate from the ability-use sounds, which have their own slider."
+        },
+        "Sequencer": {
+          "Name": "Use Sequencer / JB2A when installed",
+          "Hint": "If Sequencer and a JB2A library are active, play their video effects instead of Ghostwire’s built-in flash. Turn this off to keep the built-in look everywhere. Automated Animations is never required."
+        }
       }
     }
   },

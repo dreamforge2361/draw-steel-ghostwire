@@ -1036,6 +1036,261 @@
       },
       "_id": "GwWkIWyNcFqSvBiv",
       "_key": "!actors.items!IWyNcFqSvBivyTGP.GwWkIWyNcFqSvBiv"
+    },
+    {
+      "_id": "jXz6HLdaFTv8qzs6",
+      "name": "GHOSTWIRE.Gear.Items.HandCannon.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hand-cannon.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.HandCannon.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hand-cannon",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 900,
+            "modSlots": 2,
+            "tags": [
+              "Loud"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!IWyNcFqSvBivyTGP.jXz6HLdaFTv8qzs6",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "gjZLpJXc0i3CVA5q",
+      "name": "GHOSTWIRE.Gear.Items.BuzzGun.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/buzz-gun.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.BuzzGun.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "buzz-gun",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 2,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 401000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": 1800,
+            "modSlots": 3,
+            "tags": [
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "smg"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!IWyNcFqSvBivyTGP.gjZLpJXc0i3CVA5q",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "27zkcMyqTmKghux3",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 402000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!IWyNcFqSvBivyTGP.27zkcMyqTmKghux3",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "akwolkKyFE5F4MBt",
+      "name": "GHOSTWIRE.Gear.Items.Frag.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/frag.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Frag.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "frag",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "medium"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 403000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 200,
+            "modSlots": 0,
+            "tags": [
+              "Blast",
+              "Consumable"
+            ],
+            "consumable": true,
+            "damage": 6,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "medium",
+            "thrown": {
+              "impact": {
+                "damage": 6,
+                "damageType": null
+              }
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!IWyNcFqSvBivyTGP.akwolkKyFE5F4MBt",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],

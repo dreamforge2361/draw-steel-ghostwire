@@ -1130,6 +1130,404 @@
       },
       "_id": "GwWk0ZGKRFSw3t8q",
       "_key": "!actors.items!0ZGKRFSw3t8qQXNq.GwWk0ZGKRFSw3t8q"
+    },
+    {
+      "_id": "Oz3kAMXe0qoRRCdd",
+      "name": "GHOSTWIRE.Gear.Items.HandCannon.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hand-cannon.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.HandCannon.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hand-cannon",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 900,
+            "modSlots": 2,
+            "tags": [
+              "Loud"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Short",
+            "weaponBand": "light",
+            "ammoFamily": "handgun"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.Oz3kAMXe0qoRRCdd",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "y8gFv0hw2wgjQRbY",
+      "name": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/streetsweeper-smg.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "streetsweeper-smg",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 3,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 301000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 3,
+            "availability": "military",
+            "price": 7500,
+            "modSlots": 4,
+            "tags": [
+              "Auto"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 5,
+            "damageType": "kinetic",
+            "range": "Medium",
+            "weaponBand": "light",
+            "ammoFamily": "smg"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.y8gFv0hw2wgjQRbY",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "effAzHthbysd9Hw1",
+      "name": "GHOSTWIRE.Gear.Items.StandardRounds.Name",
+      "type": "treasure",
+      "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.StandardRounds.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "standard-rounds",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 30,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 302000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 50,
+            "modSlots": 0,
+            "tags": [
+              "Consumable"
+            ],
+            "consumable": true,
+            "ammo": {
+              "type": "standard",
+              "box": 30
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.effAzHthbysd9Hw1",
+      "folder": null,
+      "effects": []
+    },
+    {
+      "_id": "I57woC8ByrR8Z4WS",
+      "name": "GHOSTWIRE.Gear.Items.Kickwire.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/icons/consumables/kickwire.svg",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.Kickwire.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "kickwire",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 303000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 400,
+            "modSlots": 0,
+            "tags": [
+              "Consumable",
+              "Chem"
+            ],
+            "consumable": true,
+            "kioskShelf": "chem",
+            "consumableUse": {
+              "action": "maneuver",
+              "tempStamina": 5,
+              "taint": 0,
+              "spend": true,
+              "crash": true
+            }
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.I57woC8ByrR8Z4WS",
+      "folder": null,
+      "effects": [
+        {
+          "_id": "GwKickwireBuff01",
+          "name": "GHOSTWIRE.Gear.Items.Kickwire.BuffName",
+          "img": "icons/magic/control/energy-stream-link-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwKickwire000001",
+          "description": "GHOSTWIRE.Gear.Items.Kickwire.BuffDescription",
+          "disabled": true,
+          "transfer": false,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "draw-steel-ghostwire": {
+              "consumablePhase": "buff",
+              "consumableDsid": "kickwire"
+            }
+          },
+          "duration": {
+            "value": 2,
+            "units": "rounds",
+            "expiry": "roundEnd",
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.movement.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.characteristics.might.edges",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!0ZGKRFSw3t8qQXNq.I57woC8ByrR8Z4WS.GwKickwireBuff01"
+        },
+        {
+          "_id": "GwKickwireCrash1",
+          "name": "GHOSTWIRE.Gear.Items.Kickwire.CrashName",
+          "img": "icons/magic/control/energy-stream-link-blue.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwKickwire000001",
+          "description": "GHOSTWIRE.Gear.Items.Kickwire.CrashDescription",
+          "disabled": true,
+          "transfer": false,
+          "statuses": [
+            "weakened"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "draw-steel-ghostwire": {
+              "consumablePhase": "crash",
+              "consumableDsid": "kickwire"
+            }
+          },
+          "duration": {
+            "value": 1,
+            "units": "rounds",
+            "expiry": "roundEnd",
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.characteristics.might.banes",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!0ZGKRFSw3t8qQXNq.I57woC8ByrR8Z4WS.GwKickwireCrash1"
+        }
+      ]
+    },
+    {
+      "_id": "qA7cNGN1suKesx72",
+      "name": "GHOSTWIRE.Gear.Items.CertifiedCredstick.Name",
+      "type": "treasure",
+      "img": "icons/commodities/currency/coins-plain-stack-gold.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.CertifiedCredstick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "certified-credstick",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 2,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "sort": 304000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 2,
+            "availability": "restricted",
+            "price": null,
+            "modSlots": 0,
+            "tags": [
+              "Wired"
+            ],
+            "priceText": "(holds value)"
+          },
+          "loot": true
+        }
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.qA7cNGN1suKesx72",
+      "folder": null,
+      "effects": []
     }
   ],
   "effects": [],
