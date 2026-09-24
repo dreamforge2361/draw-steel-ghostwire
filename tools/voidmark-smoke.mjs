@@ -101,6 +101,21 @@ ok(peerQ.some(h => /without Scan/i.test(h.text) && /Overlay/i.test(h.text)), "Co
 const statesQ = retrieve(index, "What are the Wire connection states?");
 ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
 
+// 0.3.125 (A) — Disengage had no RAW chunk at all, so VOIDMARK answered "not on this channel".
+// The procedure now lives in 04-combat under its own heading; the retrieve has to find it.
+const disengageQ = retrieve(index, "What are the disengage rules?");
+ok(disengageQ.some(h => h.file.includes("04-combat")), `disengage query files: ${disengageQ.map(h => h.file).join(", ")}`);
+ok(
+  disengageQ.some(h => /[Dd]isengage/.test(h.text) && /shift/i.test(h.text) && /opportunity pressure/i.test(h.text)),
+  "Disengage query retrieves shift + no opportunity pressure",
+);
+const disengageValueQ = retrieve(index, "What is my Disengage value?");
+ok(
+  disengageValueQ.some(h => h.file.includes("04-combat")
+    && /Baseline 1/i.test(h.text) && /Kit Disengage bonus/i.test(h.text)),
+  "Disengage-value query retrieves the baseline-1 + bonuses stack",
+);
+
 const pingQ = retrieve(index, "What does Ping do on the Wire? maglock camera ICE");
 ok(pingQ.some(h => h.file.includes("21-the-wire")), `Ping query files: ${pingQ.map(h => h.file).join(", ")}`);
 ok(

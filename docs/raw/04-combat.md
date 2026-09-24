@@ -28,10 +28,29 @@ On **your turn**, you normally get:
 |---|---|
 | **Main action** | The big beat — a strike, a heroic ability, Deploy, a Matrix Verb, Catch Breath, most kit signatures |
 | **Maneuver** | Setup, utility, secondary pressure — Mark, Reload flavor, short tech tricks, many support abilities |
-| **Move action** | Spend your Speed in squares (or the Wire’s movement rules when Jacked In) |
+| **Move action** | **Move** (spend your Speed in squares, or the Wire’s movement rules when Jacked In) **or Disengage** (shift your Disengage value) — see below |
 | **Free / triggered** | Only when an ability or the situation hands them to you — opportunity pressure, free triggered riders, some chrome reflexes |
 
 You can take your main, maneuver, and move in any order. Triggered actions interrupt when their trigger fires, even off your turn.
+
+### Move actions — Move vs Disengage
+
+Your turn’s **move action** is **one** of the following, not both, unless an ability hands you a second one.
+
+- **Move.** Spend your **Speed** in squares (or the Wire’s movement rules when Jacked In). Leaving a square adjacent to an enemy who can apply **opportunity pressure** can invite that pressure — a free strike or the printed rider on that enemy’s sheet. The Director applies printed opportunity pressure; Ghostwire does not add an unprinted one.
+- **Disengage.** **Shift** a number of squares equal to your **Disengage** value. That shift does **not** invite opportunity pressure for leaving an enemy’s reach. It is still a shift: it ignores the reach penalty, not walls, hazards, or difficult ground.
+
+**Your Disengage value** starts at **1** and adds up from your sheet:
+
+- **Baseline 1** for every runner.
+- **+ Kit Disengage bonus** — the extra squares printed on your Kit row (`08`).
+- **+ Chrome and feature riders** — Reaction Enhancer (+1), Wired Reflexes (+2), and similar installs (`09`), plus ancestry and class lines such as Graceful Retreat (`05`) or Mask Rig (`13`).
+
+Print the **total** on the hero sheet and the kit card when you can, so nobody re-adds it mid-fight.
+
+Disengage **is** the move action when you choose it. You do not also spend your full Speed on that same move action — unless an ability grants a **free** Disengage, a free move, or an extra move action, in which case each one is spent separately.
+
+Forced movement and **Stability** are unchanged by this choice: being pushed, pulled, or slid is not your move action, and Stability still reduces forced movement as written under Distance and ranges below.
 
 **Ghostwire table language:** say “I Fire Chatterbox,” “I Deploy the swarm,” “I Overlay and glass the node,” not “I use my free strike.” The sheet should match that language (see Weapon use below).
 
