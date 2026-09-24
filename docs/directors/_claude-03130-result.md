@@ -1,6 +1,6 @@
 # 0.3.130 — Result
 
-**PR:** _(URL added below after creation)_
+**PR:** https://github.com/dreamforge2361/draw-steel-ghostwire/pull/117
 **Branch:** `cursor/feat-03130-medic-drone-fx-ae-687e`
 **Base:** `main` @ `9af4e12` (0.3.129)
 **Version:** `0.3.130` (`module.json`, README Status)
