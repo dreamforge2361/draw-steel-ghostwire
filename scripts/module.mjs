@@ -30,6 +30,7 @@ import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerMounts } from "./mounts.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
+import { registerHitFx } from "./hit-fx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
 import { isMountedWeapon, weaponSkillBonus } from "./weapon-skills.mjs";
 import { registerPayloadUse } from "./payload-use.mjs";
@@ -223,9 +224,14 @@ Hooks.once("init", () => {
   // everything else down to the one registered before it, so registration order is a chain, not a
   // priority. A gun with an empty magazine never reaches Draw Steel's roll dialog at all.
   registerAmmo();
-  // 0.3.126 (C) — and Blast grenades stop being single-target free strikes. One shared Throw, a
-  // 20-foot circle, and a Reflex save per token under it.
+  // 0.3.127 (A) — and Blast grenades stop being single-target free strikes. One shared Throw, a
+  // 15-foot circle the player places before the roll, and a Reflex save read Low / Mid / High.
   registerGrenades();
+  // 0.3.127 (D) — Ghostwire's own gun / melee / grenade hit FX. Fires on the ability *result*,
+  // where B40 fires on the ability *use*, and depends on no other module: Sequencer and JB2A make
+  // it prettier, their absence makes it a built-in PIXI burst, and Automated Animations is not
+  // involved either way.
+  registerHitFx();
 });
 
 // ---------- Wired connection states ----------
