@@ -13,15 +13,19 @@ export const CHANGER_ART_KEYS = Object.freeze({ human: "humanArt", hybrid: "hybr
 export const CHANGER_TOKEN_KEYS = Object.freeze({ human: "humanToken", hybrid: "hybridToken", beast: "beastToken" });
 
 /**
- * Beast-Form canvas footprint by lineage (0.3.122).
+ * Beast-Form canvas footprint by lineage (0.3.122; Raven added 0.3.125).
  *
  * Rat lineage already overrides `system.combat.size.letter` to **1S** on its own trait
  * (src/packs/origins/changer/rat-lineage-trait.json), which is the *rules* size. This is the canvas
- * half of the same fact: a rat that walks onto a 100px grid as a full square reads as a person. Wolf
- * and Raven print no size override, so they are deliberately absent — a lineage with no entry keeps
+ * half of the same fact: a rat that walks onto a 100px grid as a full square reads as a person.
+ *
+ * 0.3.125 (C2): a **raven** has the same problem and the same answer. A bird on a full square is a
+ * person-sized bird; half a square is what the Rat Beast and the compiled sprites
+ * (scripts/sprites.mjs) already use for "small thing on the canvas". Wolf is deliberately still
+ * absent — a wolf really is roughly a person's footprint — and a lineage with no entry keeps
  * whatever footprint the Director gave the token.
  */
-export const BEAST_TOKEN_SIZES = Object.freeze({ rat: 0.5 });
+export const BEAST_TOKEN_SIZES = Object.freeze({ rat: 0.5, raven: 0.5 });
 
 /** The Beast-Form footprint for a lineage, or null when that lineage does not resize. */
 export function beastTokenSize(lineage) {

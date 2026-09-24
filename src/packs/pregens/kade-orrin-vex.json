@@ -2354,7 +2354,7 @@
           "page": "10-kits",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "hold-the-line",
+        "_dsid": "frame-lock",
         "story": "GHOSTWIRE.Kits.Warframe.Signature.Story",
         "keywords": [
           "melee",
@@ -2640,13 +2640,13 @@
       "_key": "!actors.items!iMwX0Eho0uPrQAnk.3t5oRaCIWuHaazPt"
     },
     {
-      "_id": "9DCQlsPL3hoRm4D4",
-      "name": "GHOSTWIRE.Gear.Items.MilspecBattledress.Name",
+      "_id": "J4JJaDmAh9xRL2UF",
+      "name": "GHOSTWIRE.Gear.Items.SecurityRig.Name",
       "type": "treasure",
-      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/security-rig.webp",
       "system": {
         "description": {
-          "value": "GHOSTWIRE.Gear.Items.MilspecBattledress.Description",
+          "value": "GHOSTWIRE.Gear.Items.SecurityRig.Description",
           "director": ""
         },
         "source": {
@@ -2654,10 +2654,10 @@
           "page": "Master Gear List",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "milspec-battledress",
+        "_dsid": "security-rig",
         "kind": "armor",
         "category": "",
-        "echelon": 2,
+        "echelon": 1,
         "keywords": [
           "heavy"
         ],
@@ -2681,10 +2681,10 @@
       "flags": {
         "draw-steel-ghostwire": {
           "gear": {
-            "echelon": 2,
-            "availability": "restricted",
-            "price": 5000,
-            "modSlots": 4,
+            "echelon": 1,
+            "availability": "professional",
+            "price": 1200,
+            "modSlots": 3,
             "tags": [],
             "modFamily": [
               "armor"
@@ -2701,10 +2701,10 @@
       },
       "effects": [
         {
-          "_id": "JUVqEH9F0vCRBosx",
+          "_id": "uaajyqW04UyC6mrI",
           "name": "No Kit — Echelon 1 (+12 Stamina)",
-          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
-          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/security-rig.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.J4JJaDmAh9xRL2UF",
           "description": "<p>Worn with no Kit at Echelon 1: +12 Stamina.</p>",
           "disabled": true,
           "transfer": true,
@@ -2734,13 +2734,13 @@
               }
             ]
           },
-          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.JUVqEH9F0vCRBosx"
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.J4JJaDmAh9xRL2UF.uaajyqW04UyC6mrI"
         },
         {
-          "_id": "fJ7q6SL8knV5CBPY",
+          "_id": "IhanNryaLzm3dv19",
           "name": "No Kit — Echelon 2 (+16 Stamina)",
-          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
-          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/security-rig.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.J4JJaDmAh9xRL2UF",
           "description": "<p>Worn with no Kit at Echelon 2: +16 Stamina.</p>",
           "disabled": true,
           "transfer": true,
@@ -2770,13 +2770,13 @@
               }
             ]
           },
-          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.fJ7q6SL8knV5CBPY"
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.J4JJaDmAh9xRL2UF.IhanNryaLzm3dv19"
         },
         {
-          "_id": "BnAIxvqCvcUf9AV6",
+          "_id": "wlQ9UCJz5nsgwXGx",
           "name": "No Kit — Echelon 3 (+21 Stamina)",
-          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
-          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/security-rig.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.J4JJaDmAh9xRL2UF",
           "description": "<p>Worn with no Kit at Echelon 3: +21 Stamina.</p>",
           "disabled": true,
           "transfer": true,
@@ -2806,13 +2806,13 @@
               }
             ]
           },
-          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.BnAIxvqCvcUf9AV6"
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.J4JJaDmAh9xRL2UF.wlQ9UCJz5nsgwXGx"
         },
         {
-          "_id": "p8ZLdCi8SMmv1Y2I",
+          "_id": "lpGMlETP0Hd9wPht",
           "name": "No Kit — Echelon 4 (+27 Stamina)",
-          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/milspec-battledress.webp",
-          "origin": "Compendium.draw-steel-ghostwire.gear.Item.9DCQlsPL3hoRm4D4",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/security-rig.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.J4JJaDmAh9xRL2UF",
           "description": "<p>Worn with no Kit at Echelon 4: +27 Stamina.</p>",
           "disabled": true,
           "transfer": true,
@@ -2842,73 +2842,10 @@
               }
             ]
           },
-          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4.p8ZLdCi8SMmv1Y2I"
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.J4JJaDmAh9xRL2UF.lpGMlETP0Hd9wPht"
         }
       ],
-      "_key": "!actors.items!iMwX0Eho0uPrQAnk.9DCQlsPL3hoRm4D4"
-    },
-    {
-      "_id": "mj0spta0PfZZ8w4e",
-      "name": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Name",
-      "type": "treasure",
-      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/milspec-battle-rifle.webp",
-      "system": {
-        "description": {
-          "value": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Description",
-          "director": ""
-        },
-        "source": {
-          "book": "Ghostwire Core Rulebook",
-          "page": "Master Gear List",
-          "license": "Draw Steel Creator License"
-        },
-        "_dsid": "milspec-battle-rifle",
-        "kind": "weapon",
-        "category": "",
-        "echelon": 3,
-        "keywords": [
-          "medium"
-        ],
-        "quantity": 1,
-        "project": {
-          "prerequisites": "",
-          "source": "",
-          "rollCharacteristic": [],
-          "yield": {
-            "amount": "1",
-            "display": ""
-          },
-          "goal": null
-        }
-      },
-      "folder": "R7lXYyuPF9VB7TDU",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {
-        "draw-steel-ghostwire": {
-          "gear": {
-            "echelon": 3,
-            "availability": "military",
-            "price": 9000,
-            "modSlots": 4,
-            "tags": [
-              "Two-handed",
-              "Auto"
-            ],
-            "modFamily": [
-              "weapon"
-            ],
-            "damage": 7,
-            "damageType": "kinetic",
-            "range": "Medium",
-            "weaponBand": "medium"
-          }
-        }
-      },
-      "effects": [],
-      "_key": "!actors.items!iMwX0Eho0uPrQAnk.mj0spta0PfZZ8w4e"
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.J4JJaDmAh9xRL2UF"
     },
     {
       "_id": "FuMcIxhwJ7WHeq5p",
@@ -2971,6 +2908,276 @@
       },
       "effects": [],
       "_key": "!actors.items!iMwX0Eho0uPrQAnk.FuMcIxhwJ7WHeq5p"
+    },
+    {
+      "_id": "J1oECeWurQU298eI",
+      "name": "GHOSTWIRE.Gear.Items.ShockStick.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/shock-stick.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.ShockStick.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shock-stick",
+        "kind": "weapon",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "light"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "11xwXjBw1kFPjKuK",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "professional",
+            "price": 450,
+            "modSlots": 2,
+            "tags": [
+              "Non-lethal-capable"
+            ],
+            "modFamily": [
+              "weapon"
+            ],
+            "damage": 4,
+            "damageType": "electrical",
+            "range": "Adjacent",
+            "weaponBand": "light"
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.J1oECeWurQU298eI"
+    },
+    {
+      "_id": "zP8W48RxEyMBOTQn",
+      "name": "GHOSTWIRE.Gear.Items.RiotShield.Name",
+      "type": "treasure",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/riot-shield.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Gear.Items.RiotShield.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "riot-shield",
+        "kind": "armor",
+        "category": "",
+        "echelon": 1,
+        "keywords": [
+          "shield"
+        ],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "BsEL4tzcFqyONELl",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "gear": {
+            "echelon": 1,
+            "availability": "street",
+            "price": 200,
+            "modSlots": 1,
+            "tags": [],
+            "modFamily": [
+              "shield"
+            ],
+            "armorClass": "shield",
+            "staminaByEchelon": [
+              3,
+              5,
+              6,
+              8
+            ]
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "GYrnywhlIGH6c0ac",
+          "name": "No Kit — Echelon 1 (+3 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/riot-shield.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.zP8W48RxEyMBOTQn",
+          "description": "<p>Worn with no Kit at Echelon 1: +3 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 3,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.zP8W48RxEyMBOTQn.GYrnywhlIGH6c0ac"
+        },
+        {
+          "_id": "tDYj8sEWKtgues60",
+          "name": "No Kit — Echelon 2 (+5 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/riot-shield.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.zP8W48RxEyMBOTQn",
+          "description": "<p>Worn with no Kit at Echelon 2: +5 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 5,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.zP8W48RxEyMBOTQn.tDYj8sEWKtgues60"
+        },
+        {
+          "_id": "Q4bawP3BhCKuRzkR",
+          "name": "No Kit — Echelon 3 (+6 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/riot-shield.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.zP8W48RxEyMBOTQn",
+          "description": "<p>Worn with no Kit at Echelon 3: +6 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 6,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.zP8W48RxEyMBOTQn.Q4bawP3BhCKuRzkR"
+        },
+        {
+          "_id": "Ga2tj4L3z0XLnAiI",
+          "name": "No Kit — Echelon 4 (+8 Stamina)",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/riot-shield.webp",
+          "origin": "Compendium.draw-steel-ghostwire.gear.Item.zP8W48RxEyMBOTQn",
+          "description": "<p>Worn with no Kit at Echelon 4: +8 Stamina.</p>",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.stamina.bonuses.treasure",
+                "type": "upgrade",
+                "value": 8,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!iMwX0Eho0uPrQAnk.zP8W48RxEyMBOTQn.Ga2tj4L3z0XLnAiI"
+        }
+      ],
+      "_key": "!actors.items!iMwX0Eho0uPrQAnk.zP8W48RxEyMBOTQn"
     },
     {
       "_id": "HTYwN7CmLESe47iB",

@@ -100,9 +100,22 @@ chrome exactly, and it spends a Cyborg's whole **25** Body Integrity with nothin
 | **Total** | | **25 / 25** |
 
 No Soft-grade substitutions: subtle is the opposite of the brief. Everything is Standard grade and
-everything is visible. The Warframe kit wants heavy armor and a medium weapon, so he keeps the Milspec
-Battledress and Milspec Battle Rifle he was issued, plus a Hand Cannon for when the rifle is dry, stims,
-ammunition, a PocketSec and a basic fake SIN.
+everything is visible.
+
+**0.3.125 (C3) — the gear half is re-cut to Echelon 1.** Kade shipped with the Milspec Battledress
+(E2) and the Milspec Battle Rifle (E3), both above an E1 hero's band; the rifle is also two-handed,
+which a Warframe cannot hold alongside the shield its own doctrine calls for. The Warframe category
+is *medium weapon plus a shield; heavy armor*, so at street prices that is:
+
+| Slot | Item | Echelon |
+|---|---|---|
+| Heavy armor | **Security Rig** — corp-sec issue, which reads right on an ex-corp frame | 1 |
+| Shield | **Riot Shield** | 1 |
+| Melee | **Shock-Stick** — the one-handed imposing / stun mace | 1 |
+| Ranged | **Hand-Cannon** | 1 |
+
+Plus the carry he already had: stims, ammunition, a PocketSec and a basic fake SIN. The chrome, the
+Body Integrity spend and the fiction behind them are untouched — this lock is gear only.
 
 Kade is the first Cyborg pregen, so `tools/pregens-to-actors.mjs` no longer hard-codes Body Integrity at
 20 — see `INTEGRITY_BY_ANCESTRY` there, which mirrors `CYBORG_INTEGRITY_START` in `scripts/module.mjs`.

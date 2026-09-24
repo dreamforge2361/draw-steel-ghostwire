@@ -66,7 +66,7 @@ Weapon/armor "category" is what the Economy item must satisfy; bonus lines are i
 | **Streetsweeper** | Ranger | Shotgun/carbine + medium weapon; medium armor | Flexible mid-range hybrid, slow-on-hit signature |
 | **Juggernaut** | Mountain | Heavy weapon; heavy armor | Tank doctrine, massive high-result hit, punishes attackers |
 | **Breacher** | Sword and Board | Medium weapon + ballistic shield; medium armor | Push/prone control, high Stamina, front-line |
-| **Warframe** | Shining Armor | Medium weapon + shield; heavy armor | Highest Stamina, taunt/hold-the-line signature |
+| **Warframe** | Shining Armor | Medium weapon + shield; heavy armor | Highest Stamina, taunt signature (Frame Lock) |
 | **Bulldozer** | Panther | Heavy weapon; no armor | Mobile heavy hitter, charge-for-damage |
 | **Brawler** | Pugilist | Unarmed / cyber-limb strikes; no armor | Durable striker, slide-and-follow |
 | **Mantis** | Martial Artist | Unarmed / cyber-limb strikes; no armor | Fast martial artist, swap-places signature |

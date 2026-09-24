@@ -639,10 +639,10 @@
       },
       "Warframe": {
         "Name": "Warframe",
-        "Description": "<p>The highest-Stamina doctrine. Warframes hold the line and force enemies to deal with them first.</p><p><strong>Gear category:</strong> Medium weapon plus a shield; heavy armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Shining Armor benchmark):</strong> Stamina +12 per echelon · Stability +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.F2r0lNCpZXl5AbHr]{Hold the Line}</p>",
+        "Description": "<p>The highest-Stamina doctrine. Warframes lock down a lane and force enemies to deal with them first.</p><p><strong>Gear category:</strong> Medium weapon plus a shield; heavy armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Shining Armor benchmark):</strong> Stamina +12 per echelon · Stability +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.F2r0lNCpZXl5AbHr]{Frame Lock}</p>",
         "Signature": {
-          "Name": "Hold the Line",
-          "Story": "Your assault is impossible to ignore.",
+          "Name": "Frame Lock",
+          "Story": "The frame plants, the servos lock, and the only way past you is through you.",
           "Effect": "<p>The target is taunted until the end of their next turn.</p>"
         }
       },
