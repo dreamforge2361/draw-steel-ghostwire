@@ -22,6 +22,41 @@ const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const rulebookId = seed => [...createHash("sha256").update("gw-rulebook:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 const VEIL_UUID = `Compendium.${MODULE_ID}.rulebook.JournalEntry.${rulebookId("22-the-veil")}`;
 
+/**
+ * 0.3.133 (E) — every Calling Formula names the summon it calls.
+ *
+ * `scripts/ritual-seal.mjs` routes the Calling family to `summonVeil` (veil-summons.mjs) the moment the
+ * Formula card carries `flags.<module>.ritual.summonDsid`; with no dsid it fell back to a chat line and
+ * the Director placed the called thing by hand, which is what the TODO in that file said. No shipped
+ * card named one, so the whole branch was dead.
+ *
+ * The dsids are chosen by what the card's own Payoff text calls — a watcher gets a watchdog, a
+ * greater-shape elemental gets the Greater Living Mountain, a Wire-entity gets an agent or a sprite —
+ * and every one of them resolves in the Summons & Machines pack. Keyed by the card **title**, because
+ * that is the key the generator already parses out of docs/raw/22-the-veil.md; the raw prose is
+ * untouched, so a re-run of tools/raw-to-journals.mjs is not needed for this.
+ *
+ * A Calling card with no entry here is a hard error — a new Calling Formula must choose.
+ */
+const CALLING_SUMMON = {
+  // General
+  "Watcher": "agent-watchdog-minor",
+  "Site Bind": "spirit-guardian",
+  "Long Leash": "elemental-rank-2",
+  "Vessel Dressing": "spirit-hunter",
+  "True-Name Collar (Deep Bind)": "elemental-greater",
+  // Elementalist only
+  "Nest Claim": "elemental-rank-1",
+  "Invoke Greater Shape": "elemental-greater",
+  // Street Priest only
+  "Ally Heart": "spirit-warrior",
+  "Ally Reforge": "spirit-warrior",
+  // Technomancer only
+  "Daemon Long Leash": "agent-daemon-intermediate",
+  "Chassis Dressing": "sprite-machine-intermediate",
+  "True-Handle Collar": "agent-daemon-advanced",
+};
+
 const ICONS = {
   datachip: "icons/commodities/tech/electronics-chip-data.webp",
   scroll: "icons/sundries/scrolls/scroll-bound-red-tan.webp",
@@ -65,6 +100,13 @@ for (const section of sections) {
     const body = lines.slice(1).join("\n").trim();
     cards.push({ title, family, magnitudeText: magnitudeText.trim(), minMag, maxMag, leaders, leaderGroup, form, icon, totals, body });
   }
+}
+
+// 0.3.133 (E): a Calling card without a summon is a card whose seal does nothing. Fail loudly.
+for (const c of cards) {
+  if (c.family.trim().toLowerCase() !== "calling") continue;
+  c.summonDsid = CALLING_SUMMON[c.title];
+  if (!c.summonDsid) throw new Error(`${c.title}: Calling Formula has no CALLING_SUMMON entry`);
 }
 
 const ids = new Map();
@@ -117,6 +159,7 @@ cards.forEach((c, i) => {
         ritual: {
           formula: true, family: c.family, magnitude: c.minMag, magnitudeMax: c.maxMag, magnitudeText: c.magnitudeText,
           leaders: c.leaders, form: c.form, componentsTotal: c.totals, learned: false,
+          ...(c.summonDsid ? { summonDsid: c.summonDsid } : {}),
         },
       },
     },
@@ -126,4 +169,4 @@ cards.forEach((c, i) => {
 
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 console.log(`ritual formulas: ${cards.length} Items → ${OUT}`);
-for (const c of cards) console.log(`  ${c.id}  ${c.title} (${c.family}, Magnitude ${c.magnitudeText}, ${c.leaders}, ${c.icon}) ${c.totals.join(" / ")}`);
+for (const c of cards) console.log(`  ${c.id}  ${c.title} (${c.family}, Magnitude ${c.magnitudeText}, ${c.leaders}, ${c.icon}) ${c.totals.join(" / ")}${c.summonDsid ? ` -> ${c.summonDsid}` : ""}`);

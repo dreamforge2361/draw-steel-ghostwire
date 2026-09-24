@@ -4343,54 +4343,7 @@
         "default": 0
       },
       "flags": {},
-      "effects": [
-        {
-          "_id": "TYggdI2Kwa302NjW",
-          "name": "GHOSTWIRE.Abilities.TakeCover.EffectName",
-          "img": "icons/containers/boxes/crate-heavy-brown.webp",
-          "type": "base",
-          "origin": "Compendium.draw-steel-ghostwire.abilities.Item.1W0HIoL2SAcbTU6W",
-          "system": {
-            "end": {
-              "roll": "1d10 + @combat.save.bonus"
-            },
-            "changes": [
-              {
-                "key": "system.combat.targetModifiers.banes",
-                "value": 2,
-                "priority": null,
-                "type": "add",
-                "phase": "initial"
-              }
-            ],
-            "project": {
-              "prerequisites": "",
-              "source": "",
-              "rollCharacteristic": [],
-              "yield": {
-                "kind": "weapon",
-                "amount": "1",
-                "display": ""
-              }
-            }
-          },
-          "disabled": false,
-          "duration": {
-            "value": 1,
-            "units": "rounds",
-            "expiry": null,
-            "expired": false
-          },
-          "description": "GHOSTWIRE.Abilities.TakeCover.EffectDescription",
-          "tint": "#ffffff",
-          "transfer": false,
-          "statuses": [],
-          "flags": {},
-          "start": null,
-          "showIcon": 1,
-          "_key": "!actors.items.effects!b8QOA54jDDokYEJZ.1W0HIoL2SAcbTU6W.TYggdI2Kwa302NjW"
-        }
-      ],
+      "effects": [],
       "_key": "!actors.items!b8QOA54jDDokYEJZ.1W0HIoL2SAcbTU6W"
     },
     {

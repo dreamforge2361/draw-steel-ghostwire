@@ -3,7 +3,7 @@
   "_key": "!actors!7GchgKrl88t3AtOh",
   "name": "GHOSTWIRE.Summons.Agents.AgentDaemonAdvanced.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-advanced.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
   "system": {
     "stamina": {
       "value": 54,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-advanced.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

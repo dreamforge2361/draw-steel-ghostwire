@@ -3,7 +3,7 @@
   "_key": "!actors!VUtUsdLeaXs8Cfbh",
   "name": "GHOSTWIRE.Summons.Agents.AgentProbeMinor.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe-minor.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe.webp",
   "system": {
     "stamina": {
       "value": 10,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe-minor.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -3,7 +3,7 @@
   "_key": "!actors!9EWDHe1lwfgz6spF",
   "name": "GHOSTWIRE.Summons.Agents.AgentSpikeIntermediate.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike-intermediate.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike.webp",
   "system": {
     "stamina": {
       "value": 30,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike-intermediate.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-spike.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

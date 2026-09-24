@@ -42,7 +42,7 @@ export const FAMILY_ARTIFACT = Object.freeze({
   other: "chat",
 });
 
-export const MARKER_ART = `modules/${MODULE_ID}/assets/tokens/summons/sprite-ward-minor.webp`;
+export const MARKER_ART = `modules/${MODULE_ID}/assets/tokens/summons/sprite-ward.webp`;
 export const ARTIFICE_ART = "icons/svg/aura.svg";
 export const REACH_ART = "icons/svg/daze.svg";
 
@@ -260,8 +260,12 @@ async function placeSceneMarker(leader, payload) {
 
 /**
  * Calling: the existing summons path, when the card names a template.
- * No shipped Calling Formula does yet, so the usual result is `pending` — the Ritual Effect rides the Leader and
- * the Director places the called thing by hand. TODO (F2 / S1): wire `ritual.summonDsid` onto the Calling cards.
+ *
+ * 0.3.133 (E): **every** shipped Calling Formula now names one. `ritual.summonDsid` is set at the source —
+ * `CALLING_SUMMON` in tools/ritual-formulas-to-items.mjs — so regenerating the Formula Items from
+ * docs/raw/22-the-veil.md keeps it, and `templateFor` in veil-summons.mjs resolves it against the Summons &
+ * Machines pack and then the bestiary. The `no-template` fallback below is what a hand-made or third-party
+ * Formula gets, not what the shipped cards get.
  */
 async function callSummon(leader, payload, ritual) {
   const dsid = callingTemplateDsid(ritual);

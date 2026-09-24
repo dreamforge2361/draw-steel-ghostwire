@@ -60,7 +60,8 @@
         "componentsTotal": [
           "¥5,000"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "spirit-guardian"
       }
     }
   }

@@ -3,7 +3,7 @@
   "_key": "!actors!cnB3CwvFp2wEg0YA",
   "name": "GHOSTWIRE.Summons.Elementals.ElementalRank3.Name",
   "type": "npc",
-  "img": "icons/magic/earth/projectile-stone-landslide.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/bound-elemental-rank-3.webp",
   "system": {
     "stamina": {
       "value": 35,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/earth/projectile-stone-landslide.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/bound-elemental-rank-3.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

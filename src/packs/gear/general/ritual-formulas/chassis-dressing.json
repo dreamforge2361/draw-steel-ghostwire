@@ -60,7 +60,8 @@
         "componentsTotal": [
           "¥900"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "sprite-machine-intermediate"
       }
     }
   }

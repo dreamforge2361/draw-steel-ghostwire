@@ -60,7 +60,8 @@
         "componentsTotal": [
           "¥1,100"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "elemental-rank-1"
       }
     }
   }

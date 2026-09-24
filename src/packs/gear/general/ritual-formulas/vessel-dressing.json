@@ -60,7 +60,8 @@
         "componentsTotal": [
           "¥1,000"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "spirit-hunter"
       }
     }
   }

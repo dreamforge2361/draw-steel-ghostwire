@@ -61,7 +61,8 @@
           "¥1,000",
           "¥3,500"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "spirit-warrior"
       }
     }
   }

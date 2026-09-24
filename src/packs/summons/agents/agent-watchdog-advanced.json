@@ -3,7 +3,7 @@
   "_key": "!actors!OkTtXO5xCx1GjdXh",
   "name": "GHOSTWIRE.Summons.Agents.AgentWatchdogAdvanced.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-watchdog-advanced.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-watchdog.webp",
   "system": {
     "stamina": {
       "value": 54,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-watchdog-advanced.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-watchdog.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

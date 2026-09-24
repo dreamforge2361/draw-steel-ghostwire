@@ -124,7 +124,12 @@ for (const arch of ARCHETYPES) {
     ok(!spriteDsids.has(dsid) && !String(flags.dsid).startsWith("sprite-"), `${dsid} is not a sprite SKU`);
     ok(json.type === "npc" && json.folder === "gwSummonsAgents0", `${dsid} npc in Agents folder`);
     ok(json.prototypeToken?.sight?.enabled === true, `${dsid} Has Vision on`);
-    ok(existsSync(`assets/tokens/summons/${dsid}.png`), `${dsid} placeholder token`);
+    // 0.3.133 (A): the per-tier placeholder PNG is gone. Every tier of an archetype wears the family
+    // art, and the row's own `img` / token src are what has to resolve — not a filename convention.
+    const art = `modules/draw-steel-ghostwire/assets/tokens/summons/agent-${arch}.webp`;
+    ok(json.img === art && json.prototypeToken?.texture?.src === art, `${dsid} wears agent-${arch}.webp`);
+    ok(existsSync(art.replace("modules/draw-steel-ghostwire/", "")), `${dsid} token art ships`);
+    ok(json.prototypeToken?.texture?.tint === "#ffffff", `${dsid} token tint is neutral`);
     agentDsids.push(dsid);
     const key = json.name;
     ok(typeof lang.GHOSTWIRE.Summons.Agents?.[key.split(".").pop()]?.Name === "string" || key.startsWith("GHOSTWIRE.Summons.Agents."), `${dsid} lang name key`);

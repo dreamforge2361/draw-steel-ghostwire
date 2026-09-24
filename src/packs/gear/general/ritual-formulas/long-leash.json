@@ -61,7 +61,8 @@
           "¥1,300",
           "¥4,500"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "elemental-rank-2"
       }
     }
   }

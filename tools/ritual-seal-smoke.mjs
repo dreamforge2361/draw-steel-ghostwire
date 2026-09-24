@@ -38,6 +38,23 @@ import {
 
 const MODULE_ID = "draw-steel-ghostwire";
 const DIR = "src/packs/gear/general/ritual-formulas";
+
+/** Every `flags.<module>.dsid` / `system._dsid` on an Actor JSON under a pack source tree. */
+function actorDsids(root) {
+  const out = [];
+  const walk = dir => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = join(dir, entry.name);
+      if (entry.isDirectory()) { walk(path); continue; }
+      if (!entry.name.endsWith(".json") || entry.name.startsWith("_")) continue;
+      const doc = read(path);
+      const dsid = doc.flags?.[MODULE_ID]?.dsid ?? doc.system?._dsid;
+      if (dsid) out.push(dsid);
+    }
+  };
+  if (existsSync(root)) walk(root);
+  return out;
+}
 const failures = [];
 const ok = (cond, msg) => { if (!cond) failures.push(msg); else console.log(`  ✓ ${msg}`); };
 const read = p => JSON.parse(readFileSync(p, "utf8").replace(/^﻿/, ""));
@@ -142,8 +159,29 @@ ok([...families.keys()].every(family => familyKey(family) !== "other" || family 
 const ward = formulas.find(item => item.flags?.[MODULE_ID]?.ritual?.family === "Ward");
 ok(!!ward && artifactForFamily(ward.flags[MODULE_ID].ritual.family) === "marker",
   "Ward the Room's family stands a marker — the rite the design names first");
-ok(formulas.every(item => !item.flags?.[MODULE_ID]?.ritual?.summonDsid),
-  "TODO: no Calling card names a summon template yet, so every Calling seal rides the Leader and the Director places what answered");
+
+// 0.3.133 (E) — the branch that used to be dead. Every Calling Formula names a summon, and every dsid
+// it names is a real Actor in the Summons & Machines pack or the bestiary, so `templateFor` in
+// veil-summons.mjs can resolve it. A Calling card with no dsid puts the Director back to placing the
+// called thing by hand, which is the thing this wave removed.
+const summonDsids = new Set([
+  ...actorDsids("src/packs/summons"),
+  ...actorDsids("src/packs/bestiary"),
+]);
+ok(summonDsids.size > 0, `${summonDsids.size} summonable Actors indexed from the summons and bestiary packs`);
+const callings = formulas.filter(item => familyKey(item.flags[MODULE_ID].ritual.family) === "calling");
+ok(callings.length > 0, `${callings.length} Calling Formulas on the shelf`);
+const unnamed = callings.filter(item => !callingTemplateDsid(item.flags[MODULE_ID].ritual))
+  .map(item => item.system._dsid);
+ok(unnamed.length === 0, `every Calling Formula names a summon${unnamed.length ? ` (missing: ${unnamed.join(", ")})` : ""}`);
+const unresolved = callings
+  .map(item => [item.system._dsid, callingTemplateDsid(item.flags[MODULE_ID].ritual)])
+  .filter(([, dsid]) => dsid && !summonDsids.has(dsid));
+ok(unresolved.length === 0,
+  `and every one of them resolves to a real Actor${unresolved.length ? ` (dangling: ${unresolved.map(([f, d]) => `${f}->${d}`).join(", ")})` : ""}`);
+ok(formulas.filter(item => familyKey(item.flags[MODULE_ID].ritual.family) !== "calling")
+  .every(item => !item.flags?.[MODULE_ID]?.ritual?.summonDsid),
+  "…and no non-Calling family carries one, which would summon on a Ward");
 
 /* ---------- 6. lang ---------- */
 console.log("\n6) Lang keys");

@@ -3,7 +3,7 @@
   "_key": "!actors!G1RFA4naSS9NmuPg",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteWardAdvanced.Name",
   "type": "npc",
-  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward.webp",
   "system": {
     "stamina": {
       "value": 54,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-ward.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

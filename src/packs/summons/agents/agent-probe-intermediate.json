@@ -3,7 +3,7 @@
   "_key": "!actors!oDlVGKGfnCuDt5qy",
   "name": "GHOSTWIRE.Summons.Agents.AgentProbeIntermediate.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe-intermediate.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe.webp",
   "system": {
     "stamina": {
       "value": 26,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe-intermediate.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-probe.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

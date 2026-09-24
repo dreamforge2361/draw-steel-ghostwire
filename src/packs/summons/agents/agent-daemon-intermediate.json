@@ -3,7 +3,7 @@
   "_key": "!actors!DUMewanhVwxJWQke",
   "name": "GHOSTWIRE.Summons.Agents.AgentDaemonIntermediate.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-intermediate.png",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
   "system": {
     "stamina": {
       "value": 28,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon-intermediate.png",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/agent-daemon.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

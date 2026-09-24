@@ -60,7 +60,8 @@
         "componentsTotal": [
           "¥220"
         ],
-        "learned": false
+        "learned": false,
+        "summonDsid": "agent-watchdog-minor"
       }
     }
   }

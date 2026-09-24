@@ -3,7 +3,7 @@
   "_key": "!actors!ITCZAWDd9YvX7NPE",
   "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Name",
   "type": "npc",
-  "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/greater-living-mountain.webp",
   "system": {
     "stamina": {
       "value": 50,
@@ -186,7 +186,7 @@
     "height": 2,
     "depth": 2,
     "texture": {
-      "src": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/greater-living-mountain.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

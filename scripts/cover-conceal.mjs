@@ -83,6 +83,104 @@ export function hasCoverConceal(actor) {
   return !!actor?.statuses?.has?.(COVER_CONCEAL_ID);
 }
 
+/* -------------------------------------------- 0.3.133 (B) — who put this cover here */
+
+/**
+ * Flag key on the Cover/Conceal ActiveEffect holding the list of *reasons* it is switched on.
+ *
+ * There is exactly one Cover/Conceal effect — it is a status, Cover and Conceal are the same effect,
+ * and it never stacks with itself (F13 lock). But two different cards can now switch it on for two
+ * different reasons, and they end differently: Take Cover's cover ends the moment the hero moves,
+ * while the Scout's Conceal cover deliberately survives movement ("cover is about where you are
+ * standing"). So the effect carries a small **set of sources**, and each card only ever takes its
+ * own back out. The status goes away when the last source does.
+ */
+export const COVER_SOURCES_FLAG = "coverSources";
+export const COVER_SOURCE_TAKE_COVER = "take-cover";
+export const COVER_SOURCE_CONCEAL = "scout-conceal";
+
+/**
+ * The next source list after adding and removing.
+ * Pure, order-stable and duplicate-free so tools/wave-03133-smoke.mjs can walk the collision cases.
+ *
+ * @param {Iterable<string>|null} current
+ * @param {object} [opts]
+ * @param {string|string[]} [opts.add]
+ * @param {string|string[]} [opts.remove]
+ * @returns {string[]}
+ */
+export function nextCoverSources(current, { add = [], remove = [] } = {}) {
+  const list = [...(current ?? [])].map(String);
+  const removals = new Set([remove].flat().map(String));
+  const out = list.filter(s => !removals.has(s));
+  for (const source of [add].flat().map(String)) if (source && !out.includes(source)) out.push(source);
+  return out;
+}
+
+/**
+ * Does removing `source` end the cover?
+ *
+ * `null` sources — a Director who toggled the status by hand, or a pre-0.3.133 effect — mean "not
+ * ours": nothing is removed and the cover stays. That is the safe direction; a hand-placed cover
+ * surviving one step is a Director's call to undo, a hand-placed cover vanishing is a bug.
+ *
+ * @param {Iterable<string>|null} current
+ * @param {string} source
+ * @returns {{owned: boolean, remaining: string[], ends: boolean}}
+ */
+export function coverDropPlan(current, source) {
+  const list = [...(current ?? [])].map(String);
+  const owned = list.includes(String(source));
+  const remaining = owned ? nextCoverSources(list, { remove: source }) : list;
+  return { owned, remaining, ends: owned && (remaining.length === 0) };
+}
+
+/* -------------------------------------------- runtime (Foundry) */
+
+/** The one Cover/Conceal effect on an Actor, or null. */
+export const coverConcealEffect = actor =>
+  [...(actor?.effects ?? [])].find(e => e.statuses?.has?.(COVER_CONCEAL_ID)) ?? null;
+
+/** The sources currently recorded on an Actor's cover. */
+export const coverSources = actor =>
+  coverConcealEffect(actor)?.getFlag?.(MODULE_ID, COVER_SOURCES_FLAG) ?? null;
+
+/**
+ * Switch Cover/Conceal on for `source`, or record `source` on cover that is already up.
+ * @returns {Promise<boolean>} whether the status was newly applied.
+ */
+export async function addCoverSource(actor, source) {
+  if (!actor) return false;
+  let effect = coverConcealEffect(actor);
+  const fresh = !effect;
+  if (fresh) {
+    await actor.toggleStatusEffect(COVER_CONCEAL_ID, { active: true });
+    effect = coverConcealEffect(actor);
+  }
+  if (!effect) return false;
+  const current = effect.getFlag(MODULE_ID, COVER_SOURCES_FLAG);
+  const next = nextCoverSources(current, { add: source });
+  if (next.join("|") !== [...(current ?? [])].join("|")) await effect.setFlag(MODULE_ID, COVER_SOURCES_FLAG, next);
+  return fresh;
+}
+
+/**
+ * Take `source` back out. The status only goes away when it was the last one.
+ * @returns {Promise<boolean>} whether the status was removed.
+ */
+export async function dropCoverSource(actor, source) {
+  const effect = coverConcealEffect(actor);
+  if (!effect) return false;
+  const plan = coverDropPlan(effect.getFlag(MODULE_ID, COVER_SOURCES_FLAG), source);
+  if (!plan.owned) return false;
+  if (!plan.ends) {
+    await effect.setFlag(MODULE_ID, COVER_SOURCES_FLAG, plan.remaining);
+    return false;
+  }
+  await actor.toggleStatusEffect(COVER_CONCEAL_ID, { active: false });
+  return true;
+}
+
 /* -------------------------------------------- runtime */
 
 function abilityIsRanged(model) {
@@ -153,7 +251,12 @@ export function registerCoverConceal() {
     module.api = {
       ...(module.api ?? {}),
       COVER_CONCEAL_ID,
+      COVER_SOURCE_CONCEAL,
+      COVER_SOURCE_TAKE_COVER,
+      addCoverSource,
       coverConcealBanes,
+      coverSources,
+      dropCoverSource,
       hasCoverConceal,
       isRangedAttack,
     };
