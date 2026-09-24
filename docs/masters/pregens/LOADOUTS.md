@@ -21,19 +21,28 @@ Two kinds of grant are deliberately left to Foundry at runtime:
 ## Per hero
 
 Item counts are what the built pack holds (class + subclass + ancestry + traits + kit + background + profession +
-granted abilities/features + gear). "BI" is Body Integrity spent of 20.
+granted abilities/features + gear + the seven Draw Steel and five Ghostwire default abilities embedded in
+0.3.127). "BI" is Body Integrity spent — of 20 for a living hero, of 25 for a Cyborg frame.
 
 | Hero | Items | Skills | Armor | Weapons | Street kit | Chrome (BI) | Languages |
 |---|---|---|---|---|---|---|---|
-| **Vessa** | 32 | 5 | Hardshell | Workhorse, Street-Blade | Burner, Trauma Patch, Field Surgery Kit, Standard Rounds | none (0) | FlatsCant, CorranWorkCant, SaintCant, RiteSpeech |
-| **Kaïs** | 25 | 7 | none (kit says none) | Zapper, Sleeve-Gun | Pocket Sec, Fake SIN, Trauma Patch, Standard Rounds | none (0) | ElvaniHighCant, ElvaniSoftspeech, CorpCant, ReachMetro |
-| **Barak** | 33 | 5 | Hardshell | Chatterbox, Knuckles | Pocket Sec, Certified Credstick, Fake SIN, Stim Patch | Cyberlimb (Arm) 5 + Dermal Plating 4 (**9**) | GoliarBattleCant, SprawlArgot, TradeCant, CorpCant |
-| **Wren** | 30 | 7 | Armored Jacket | Longshot rifle, Popper | Burner, Cheap Shades, Standard Rounds, Trauma Patch | none (0) | ChangerPackTongue, ReachMetro, TradeCant, SprawlArgot |
-| **Sabbat** | 31 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds, Faraday Bag | Cyber-Ears (Soft) 1 (**1**) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
-| **Vira** | 32 | 6 | Secure Threads | Popper | Fleet Deck (RCC), Targeting Autosoft, Burner, Lockpick Set | Datajack 1 (**1**) | ChangerPackTongue, WireSpeak, MachineMarkup, SprawlArgot |
-| **Kessic** | 29 | 6 | Secure Threads | Sleeve-Gun | Street Deck, Sneak program, Crash payload, Whiteout magazine (2 fires, compiled), Pocket Sec, Trauma Patch | Datajack 1 + Cyber-Eyes 2 (**3**) | MutantEnclaveCant, WireSpeak, OldCode, SprawlArgot |
+| **Vessa** | 46 | 5 | Hardshell | Workhorse, Street-Blade | Burner, Trauma Patch, Field Surgery Kit, Standard Rounds ×150 | none (0) | FlatsCant, CorranWorkCant, SaintCant, RiteSpeech |
+| **Kaïs** | 39 | 7 | none (kit says none) | Zapper, Sleeve-Gun | Pocket Sec, Fake SIN, Trauma Patch, Standard Rounds ×150 | none (0) | ElvaniHighCant, ElvaniSoftspeech, CorpCant, ReachMetro |
+| **Barak** | 45 | 5 | Hardshell | Chatterbox, Knuckles | Pocket Sec, Certified Credstick, Fake SIN, Stim Patch, Standard Rounds ×150 | Cyberlimb (Arm) 5 + Dermal Plating 4 (**9**) | GoliarBattleCant, SprawlArgot, TradeCant, CorpCant |
+| **Wren** | 43 | 7 | Armored Jacket | Longshot rifle, Popper | Burner, Cheap Shades, Standard Rounds ×150, Trauma Patch | none (0) | ChangerPackTongue, ReachMetro, TradeCant, SprawlArgot |
+| **Sabbat** | 45 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds ×150, Faraday Bag | Cyber-Ears (Soft) 1 (**1**) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
+| **Vira** | 46 | 6 | Secure Threads | Popper | Fleet Deck (RCC), Targeting Autosoft, Burner, Lockpick Set, Standard Rounds ×150 | Datajack 1 (**1**) | ChangerPackTongue, WireSpeak, MachineMarkup, SprawlArgot |
+| **Kessic** | 42 | 6 | Secure Threads | Sleeve-Gun | Street Deck, Sneak program, Crash payload, Whiteout magazine (2 fires, compiled), Pocket Sec, Trauma Patch, Standard Rounds ×150 | Datajack 1 + Cyber-Eyes 2 (**3**) | MutantEnclaveCant, WireSpeak, OldCode, SprawlArgot |
+| **Renn** | 46 | 7 | Armored Jacket | Workhorse | Field Surgery Kit, Slap-Doc Kit, Trauma Patch, Pocket Sec, Fake SIN, Standard Rounds ×150 | none (0) | PureLineHomily, FlatsCant, TradeCant, SprawlArgot |
+| **Kade** | 47 | 7 | Security Rig | Hand-Cannon, Shock-Stick | Riot Shield, Pocket Sec, Stim Patch, Fake SIN, Standard Rounds ×150 | Wired Reflexes 6 + Cyberlimb (Arm) 5 + Muscle/Bone Lacing 5 + Dermal Plating 4 + Cyber-Eyes 2 + Cyber-Ears 2 + Datajack 1 (**25**) | CyborgFrameCant, OpsDialects, TradeCant, CorpCant |
 
-Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
+Every hero's Body Integrity is legal. The most spent is Kade's **25 of 25** — a Cyborg frame starts
+at 25, not 20, and his is full; among the living heroes it is Barak's 9 of 20.
+
+**0.3.129 — every hero carries 150 Standard Rounds.** Barak, Vira and Kessic had none at all and
+the other six had the kiosk's box of 30. The count is an override on the loadout line
+(`{ "path": "…/standard-rounds.json", "quantity": 150 }`), not a change to the SKU — a box on
+a shelf is still 30 rounds for ¥50.
 
 ## Choices worth knowing
 
