@@ -96,10 +96,13 @@ for (const key of ["ScrapWeld", "PlateUp", "CombatPlate", "AegisKit", "GunRack",
 }
 ok(!/Raises the machine's Armor \(damage reduction\)/.test(items.PlateUp.Description), "Plate-Up lang has no DR wording");
 ok(!/costs Handling/.test(items.PlateUp.Description) || /Does not cost Handling/.test(items.PlateUp.Description), "Plate-Up lang does not cost Handling");
-ok(/\+12 Stamina/.test(items.PlateUp.Description), "Plate-Up lang grants +12 Stamina");
-ok(/\+6 Stamina/.test(items.ScrapWeld.Description), "Scrap-Weld lang grants +6 Stamina");
-ok(/\+18 Stamina/.test(items.CombatPlate.Description), "Combat Plate lang grants +18 Stamina");
-ok(/\+27 Stamina/.test(items.AegisKit.Description), "Aegis Kit lang grants +27 Stamina");
+// 0.3.138: machine-facing copy says **Integrity**, not Stamina. Heroes keep Stamina.
+ok(/\+12 Integrity/.test(items.PlateUp.Description), "Plate-Up lang grants +12 Integrity");
+ok(/\+6 Integrity/.test(items.ScrapWeld.Description), "Scrap-Weld lang grants +6 Integrity");
+ok(/\+18 Integrity/.test(items.CombatPlate.Description), "Combat Plate lang grants +18 Integrity");
+ok(/\+27 Integrity/.test(items.AegisKit.Description), "Aegis Kit lang grants +27 Integrity");
+ok(![items.PlateUp, items.ScrapWeld, items.CombatPlate, items.AegisKit].some(m => /\+\d+ Stamina/.test(m.Description)),
+  "no armor kit still promises \"+N Stamina\" on a machine card");
 ok(/Gunnery/.test(items.GunRack.Description) && /Gunnery/.test(items.TwinMount.Description)
   && /Gunnery/.test(items.TurretRing.Description) && /Gunnery/.test(items.HeavyHardpoint.Description),
   "all four Weaponry kits fire with Gunnery");
