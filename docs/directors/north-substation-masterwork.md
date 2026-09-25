@@ -94,7 +94,10 @@ Everything in the cue sheet has a control. Nothing in it needs a house rule.
 |---|---|
 | The host card | Wired Console → node templates, Rating 1–5. Exposes **Integrity**, **Biofeedback Value**, **ICE layers** and **Trace Alert** on the node |
 | Connect / Toggle / Jack Out | Node applet, or the **Cycle Wire State** macro. Connect lands in **Linked**; Toggle steps Linked → Overlay → Jacked In → Linked |
-| Verb refusals | **Broadcast** works at Linked. **Scan / Ping / Navigate / Search / Read-Write / Programs / payload Runs / Compile Agent** refuse until Overlay or Jacked In, with a notification naming the state |
+| Verb refusals | **Broadcast** works at Linked. **Scan / Ping / Navigate / Search / Read-Write / Programs / payload Runs / Compile Agent** refuse until Overlay or Jacked In. Since 0.3.143 every refuse is a **soft refuse**: the rule in one sentence plus the verb to press instead, on the greyed-out button and whispered to chat. **Ping on a Track 2 host** refuses too — Ping is a Track 1 nudge |
+| The four triggers, live | 0.3.143 — the node applet watches for all four and raises a **Director confirm card** with the math prefilled. **Cancel leaves Stamina untouched**; Apply runs the same pipeline as the macro. A **Linked** runner is never even asked |
+| The Alert strip | The node applet marks **5 / 9 / 12** on the twelve-step bar and announces each upward crossing in chat. The **Malice ICE surge** button is on the node; it does **not** spend your Malice |
+| The Wire run checklist | A collapsible panel on the node applet walking this page's spine, per user, blocking nothing |
 | Deep Scan, Seize Control | The Hacker's own ability cards (Programs) |
 | Compile Agent → Special Agent | Last entry in the Compile Agent picker. Rolls, tier buys 1 / 2 / 3 Actions, then prompts for the purpose and stamps `Actions (N): …` onto the summoned Actor |
 | Decompile | **Decompile Agent**, the Constructs roster ✕, 0 Stamina, or end of encounter |
@@ -148,4 +151,6 @@ asserts them):
 - *"north substation"* → this worked run
 - *"can my agent pull a downed runner out"* → Wire-only, and the answer is no
 
-Smoke: `node tools/wave-03142-smoke.mjs`. Foundry checklist: `docs/directors/03142-smoke.md`.
+Smoke: `node tools/wave-03142-smoke.mjs` and `node tools/wave-03143-smoke.mjs`. Foundry checklists:
+`docs/directors/03142-smoke.md`, `docs/directors/03143-smoke.md`, and the combined one-pass
+`docs/directors/03142-03143-smoke.md`.

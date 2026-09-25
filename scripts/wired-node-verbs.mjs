@@ -6,13 +6,48 @@ import { RATING } from "./wired-node-templates.mjs";
 import { getBoard, useConsoleVerb, verbStripView } from "./wired-console.mjs";
 import { actorHasConnectInterface, consoleVerbGate, hintVerbDsid, pickPlayerVerbActor } from "./wired-console-verbs.mjs";
 import { boardScene, isNodeActor, nodeRefFromToken, placedNodeActor } from "./wired-node-tokens.mjs";
+import {
+  ALERT_ANNOUNCE_STEPS, alertAnnounceKey, checklistView, currentMalice, exposedToBite,
+  huntBiteFires, maliceIceSurge, toggleChecklistStep,
+} from "./wired-ice.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.WiredNode";
+const ICE_L = "GHOSTWIRE.WiredIce";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
 const ALERT_MAX = 12;
 const alertBand = alert => (alert >= 12) ? "lockout" : (alert >= 9) ? "hunting" : (alert >= 5) ? "malice" : (alert >= 1) ? "stir" : "quiet";
+
+/** Per-user, per-node ticks on the Wire run checklist. Guidance state, so it never leaves this client. */
+const CHECKLIST_SETTING = "wireRunChecklist";
+const checklistKey = (sceneId, nodeId) => `${sceneId ?? "-"}~${nodeId ?? "-"}`;
+
+function checklistStore() {
+  const stored = game.settings.get(MODULE_ID, CHECKLIST_SETTING);
+  return (stored && (typeof stored === "object")) ? foundry.utils.deepClone(stored) : {};
+}
+
+function checklistDone(sceneId, nodeId) {
+  const row = checklistStore()[checklistKey(sceneId, nodeId)];
+  return Array.isArray(row?.done) ? row.done : [];
+}
+
+async function setChecklistDone(sceneId, nodeId, done) {
+  const store = checklistStore();
+  const key = checklistKey(sceneId, nodeId);
+  store[key] = { ...(store[key] ?? {}), done };
+  return game.settings.set(MODULE_ID, CHECKLIST_SETTING, store);
+}
+
+/** Collapsed / expanded is one flag for the whole applet, not one per node. */
+function checklistOpen() {
+  return checklistStore().open === true;
+}
+
+async function setChecklistOpen(open) {
+  return game.settings.set(MODULE_ID, CHECKLIST_SETTING, { ...checklistStore(), open: !!open });
+}
 
 let getWiredStateFn = null;
 
@@ -58,6 +93,9 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
     actions: {
       fireVerb: WiredNodePanel.#onFireVerb,
       openSheet: WiredNodePanel.#onOpenSheet,
+      maliceSurge: WiredNodePanel.#onMaliceSurge,
+      toggleChecklist: WiredNodePanel.#onToggleChecklist,
+      checkStep: WiredNodePanel.#onCheckStep,
     },
   };
 
@@ -112,10 +150,12 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       revealed: !!node.revealed,
       isGM,
       hasInterface: !!runner?.hasInterface,
+      track: node.track,
     };
     const gate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.state) });
     const card = RATING[node.rating] ?? RATING[1];
     const actor = this.nodeActor;
+    const malice = isGM ? currentMalice() : null;
     return {
       missing: false,
       isGM,
@@ -131,8 +171,26 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       down: (node.track === 2) && (node.integrity <= 0),
       alert: node.alert,
       alertBand: alertBand(node.alert),
-      alertSteps: Array.from({ length: ALERT_MAX }, (_, i) => ({ step: i + 1, lit: i < node.alert, band: alertBand(i + 1) })),
+      // 0.3.143 — the strip now shows *where the three announced steps are*, not just how far the
+      // track has climbed. 5 banks Malice, 9 wakes the hunt, 12 is lockout and counter-trace.
+      alertSteps: Array.from({ length: ALERT_MAX }, (_, i) => ({
+        step: i + 1,
+        lit: i < node.alert,
+        band: alertBand(i + 1),
+        mark: ALERT_ANNOUNCE_STEPS.includes(i + 1),
+      })),
       alertLabel: game.i18n.localize(`GHOSTWIRE.WiredConsole.AlertBands.${alertBand(node.alert)}`),
+      alertMarks: ALERT_ANNOUNCE_STEPS.map(step => ({
+        step,
+        reached: node.alert >= step,
+        label: game.i18n.format(`${ICE_L}.Strip.${alertAnnounceKey(step)}`, { step }),
+      })),
+      // The hunt bite is the one Alert band that costs Stamina, so the applet says so out loud while
+      // the runner is standing in it. It still never applies anything on its own.
+      hunting: huntBiteFires({ alert: node.alert, state: verbCtx.state }),
+      huntNotice: game.i18n.format(`${ICE_L}.Strip.HuntNotice`, {
+        actor: runner?.name ?? "", node: node.name, alert: node.alert,
+      }),
       description: node.description ?? "",
       revealed: !!node.revealed,
       runner,
@@ -143,6 +201,21 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       hasSheet: isGM && !!actor,
       ice: (node.track === 2) ? card.ice : game.i18n.localize("GHOSTWIRE.WiredConsole.NoIce"),
       breachDC: card.breachDC,
+      // Trigger 4. Director-only, and only where a host actually has ICE to surge with.
+      canSurge: isGM && (node.track === 2),
+      surgeLabel: game.i18n.localize(`${ICE_L}.Surge.Button`),
+      surgeTooltip: (malice === null)
+        ? game.i18n.localize(`${ICE_L}.Surge.Tooltip`)
+        : game.i18n.format(`${ICE_L}.Surge.TooltipMalice`, { malice }),
+      // The Wire run checklist: read-only cues plus a tick box, following the North Substation spine.
+      checklistOpen: checklistOpen(),
+      checklistTitle: game.i18n.localize(`${ICE_L}.Checklist.Title`),
+      checklistHint: game.i18n.localize(`${ICE_L}.Checklist.Hint`),
+      checklist: checklistView(checklistDone(scene?.id, node.id)).map(step => ({
+        ...step,
+        labelText: game.i18n.localize(step.label),
+        hintText: game.i18n.localize(step.hint),
+      })),
     };
   }
 
@@ -159,6 +232,73 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
     if (!game.user.isGM || !actor) return;
     return actor.sheet.render({ force: true, ghostwireAllowNodeSheet: true });
   }
+
+  /**
+   * Trigger 4 — the Director spends Malice to have this host's ICE strike now.
+   *
+   * Two steps on purpose: pick the target (defaulting to the compiler, which is what host ICE bites),
+   * then the same confirm card every other trigger raises, with the same Apply and the same Cancel.
+   */
+  static async #onMaliceSurge() {
+    if (!game.user.isGM) return;
+    const scene = this.board;
+    const node = getBoard(scene).nodes.find(n => n.id === this.nodeId) ?? null;
+    if (!node) return;
+    const actor = await pickSurgeTarget(this.runnerUuid);
+    if (!actor) return;
+    return maliceIceSurge({ actor, node });
+  }
+
+  static async #onToggleChecklist() {
+    await setChecklistOpen(!checklistOpen());
+    return this.render();
+  }
+
+  static async #onCheckStep(event, target) {
+    const scene = this.board;
+    const done = toggleChecklistStep(checklistDone(scene?.id, this.nodeId), target.dataset.step);
+    await setChecklistDone(scene?.id, this.nodeId, done);
+    return this.render();
+  }
+}
+
+/**
+ * The Malice surge target picker.
+ *
+ * The default is the compiler — the runner the applet already has selected — because that is who
+ * host ICE bites. Everyone else on the scene who is Overlay or Jacked In is offered too, since a
+ * Director surging at the *other* decker in the room is a legitimate call. Linked and Disconnected
+ * are not on the list at all: they take nothing, and offering them a card would be offering a 0.
+ */
+async function pickSurgeTarget(defaultUuid) {
+  const rows = playerVerbCandidates().filter(row => exposedToBite(row.state));
+  if (!rows.length) {
+    ui.notifications.warn(game.i18n.localize(`${ICE_L}.Surge.NoExposed`));
+    return null;
+  }
+  if (rows.length === 1) return fromUuid(rows[0].uuid);
+
+  const selected = rows.some(row => row.uuid === defaultUuid) ? defaultUuid : rows[0].uuid;
+  const esc = value => foundry.utils.escapeHTML(String(value ?? ""));
+  const options = rows
+    .map(row => `<option value="${esc(row.uuid)}"${row.uuid === selected ? " selected" : ""}>${esc(`${row.name} — ${row.stateLabel}`)}</option>`)
+    .join("");
+  const uuid = await foundry.applications.api.DialogV2.prompt({
+    window: { title: game.i18n.localize(`${ICE_L}.Surge.PickTitle`), icon: "fa-solid fa-skull" },
+    content: `
+      <p class="hint">${esc(game.i18n.localize(`${ICE_L}.Surge.PickHint`))}</p>
+      <div class="form-group">
+        <label>${esc(game.i18n.localize(`${ICE_L}.Surge.PickLabel`))}</label>
+        <select name="target">${options}</select>
+      </div>`,
+    ok: {
+      label: game.i18n.localize(`${ICE_L}.Surge.PickSubmit`),
+      icon: "fa-solid fa-skull",
+      callback: (event, button) => button.form.elements.target.value,
+    },
+    rejectClose: false,
+  });
+  return uuid ? fromUuid(uuid) : null;
 }
 
 const instance = () => foundry.applications.instances.get(WiredNodePanel.DEFAULT_OPTIONS.id);
@@ -249,6 +389,17 @@ function injectNodeHud(hud, html) {
  */
 export function registerWiredNodeVerbs({ getWiredState }) {
   getWiredStateFn = getWiredState;
+
+  // 0.3.143 — the Wire run checklist is guidance, and one player ticking "Toggle Overlay" is not a
+  // fact about the world. Client scope keeps it out of the Scene, off the Director's board, and out
+  // of every other runner's applet, and means a player with no world-write rights can still tick it.
+  game.settings.register(MODULE_ID, CHECKLIST_SETTING, {
+    name: `${ICE_L}.Checklist.Title`,
+    scope: "client",
+    config: false,
+    type: Object,
+    default: {},
+  });
 
   Hooks.once("ready", () => {
     patchTokenDoubleClick();
