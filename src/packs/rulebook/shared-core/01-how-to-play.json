@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "**Terminology:** Heroes are **Runners** (short for **Ghost Runner**); jobs are **Ghost Runs**. See Appendix A.\n\n**RAW status:** draft (Stage 3 fill 2026-09-18)  \n**Sources:** `docs/rulebook/00-STAGE1-skeleton.md` (Chapter 1 scope), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED)  \n**Engine:** Ghostwire procedures in this book.",
-        "content": "<p><strong>Terminology:</strong> Heroes are <strong>Runners</strong> (short for <strong>Ghost Runner</strong>); jobs are <strong>Ghost Runs</strong>. See Appendix A.</p>\n<p><strong>RAW status:</strong> draft (Stage 3 fill 2026-09-18)<br />\n<strong>Sources:</strong> <code>docs/rulebook/00-STAGE1-skeleton.md</code> (Chapter 1 scope), <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/TOC-PROPOSAL.md</code> (LOCKED)<br />\n<strong>Engine:</strong> Ghostwire procedures in this book.</p>"
+        "markdown": "**Terminology:** Heroes are **Runners** (short for **Ghost Runner**); jobs are **Ghost Runs**. See Appendix A.\n\n**Engine:** Ghostwire procedures in this book.",
+        "content": "<p><strong>Terminology:</strong> Heroes are <strong>Runners</strong> (short for <strong>Ghost Runner</strong>); jobs are <strong>Ghost Runs</strong>. See Appendix A.</p>\n<p><strong>Engine:</strong> Ghostwire procedures in this book.</p>"
       },
       "category": null,
       "ownership": {

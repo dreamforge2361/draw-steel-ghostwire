@@ -42,6 +42,8 @@
 
 **Prep on respite.** At a respite, you bank a reserve up to your kit's Echelon capacity. The bag you bring into the field is the bag you have — there is no mid-run resupply short of downtime access (a resupply run, a black-market contact, a corp requisition).
 
+**Field Triage is yours alone (0.3.134).** The 2-Reagent Field Triage maneuver — mark up to three allies within 10 feet, each may spend a Recovery as a free triggered action before the end of your next turn — is a **Medic class ability**. There is no universal First Aid in Ghostwire: everyone else stabilises with Trauma Patches and medkits, or spends their own Recovery with Catch Breath. You are the reason the crew stands up.
+
 **Expend in the field.** Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.
 
 **Field Synthesis — the free improv valve.** From **2nd level**, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a **half-strength compound for 0 Reagents.** This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.

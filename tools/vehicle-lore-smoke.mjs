@@ -141,7 +141,10 @@ ok(/not the rifle named Chopper/.test(lang.GHOSTWIRE.Vehicles.Items.StarChopper.
 ok(/street cargo van/.test(lang.GHOSTWIRE.Vehicles.Items.Bulldog.Description), "Bulldog lang is cargo van");
 ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.LaneHopper.Description), "Lane-Hopper Actor notes future Rideable");
 ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.StarChopper.Description), "Star-Chopper Actor notes future Rideable");
-ok(lang.GHOSTWIRE.Gear.Items.Chopper.Name === "Chopper", "rifle Chopper lang key still exists");
+// 0.3.134 (B): the rifle keeps its lang KEY (`Chopper`) and its `_dsid`; only the printed name moved.
+// The point of this assertion is that the two SKUs are still separate rows, which is still true.
+ok(lang.GHOSTWIRE.Gear.Items.Chopper.Name === "Nyx Rattletrap", "rifle Chopper lang key still exists (renamed to Nyx Rattletrap, 0.3.134)");
+ok(/street still calls it a <strong>Chopper<\/strong>/.test(lang.GHOSTWIRE.Gear.Items.Chopper.Description), "…and the rifle still answers to Chopper on the street");
 ok(/Ground-hauler/.test(lang.GHOSTWIRE.Vehicles.Items.Flatbed.Description), "Flatbed lang tagged Ground-hauler");
 ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang tagged VTOL");
 

@@ -52,7 +52,7 @@ Disengage **is** the move action when you choose it. You do not also spend your 
 
 Forced movement and **Stability** are unchanged by this choice: being pushed, pulled, or slid is not your move action, and Stability still reduces forced movement as written under Distance and ranges below.
 
-**Ghostwire table language:** say “I Fire Chatterbox,” “I Deploy the swarm,” “I Overlay and glass the node,” not “I use my free strike.” The sheet should match that language (see Weapon use below).
+**Ghostwire table language:** say “I Fire IW Barrage-12,” “I Deploy the swarm,” “I Overlay and glass the node,” not “I use my free strike.” The sheet should match that language (see Weapon use below).
 
 If an ability costs a **heroic resource**, check the cost before you commit. You cannot spend what you do not have.
 
@@ -113,7 +113,7 @@ Ghostwire heroes do **not** lean on generic Melee Free Strike / Ranged Free Stri
 ### What you use instead
 
 1. **Class and kit abilities** — signatures, heroics, and doctrine strikes printed in `12`–`20` and kit text (`08`).
-2. **Weapon use-abilities** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire Chatterbox** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.
+2. **Weapon use-abilities** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire IW Barrage-12** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.
 3. **Improvised fallback** — no qualifying kit weapon in hand means class weapon abilities still work, but **kit bonuses and kit signature weapon riders do not** (`08`). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.
 
 > **In Foundry**
@@ -235,6 +235,8 @@ When Stamina hits **0**, a **named** runner or threat is **dying**. They fall pr
 
 - **Success (6+):** they stay dying but do not slide further.
 - **Failure:** they take one **dying strike**. After **three** dying strikes, they **die**.
+
+**No universal first aid (0.3.134).** Ghostwire has no maneuver that lets just anyone patch somebody up. **Catch Breath** spends *your own* Recovery on *yourself*; healing somebody else means a **Trauma Patch**, a **medkit**, a Medicine test the Director allows, or a class ability that prints it. The Medic's **Field Triage** (2 Reagents) is a Medic class ability and nobody else has it.
 
 Allies can **stabilize** them (a Medicine test, a printed heal, or Catch Breath if the fiction allows). Stabilized: they stop accumulating dying strikes and sit at **1 Stamina** (or stay at 0 unconscious if the ability says so) until they take damage again. Medics and several class apexes interact with that line explicitly (`15` and others).
 

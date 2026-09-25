@@ -778,6 +778,24 @@
           "type": "",
           "perkType": []
         }
+      },
+      "gwMedicFieldTri0": {
+        "_id": "gwMedicFieldTri0",
+        "img": null,
+        "repick": {},
+        "name": "Field Triage",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain <strong>Field Triage</strong> (2 Reagents). It is a Medic ability: nobody else in the crew has it, and there is no universal First Aid. Everyone else stabilises with Trauma Patches and medkits.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.abilities.Item.pJY4ybZUtkH9HDxy"
+          }
+        ],
+        "chooseN": null,
+        "sort": 1500
       }
     },
     "level": 0,

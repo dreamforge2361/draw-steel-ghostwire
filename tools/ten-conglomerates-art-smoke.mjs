@@ -95,7 +95,16 @@ for (const corp of MEGACORPS) {
   ok(doc.folder === "gwLorePackMega00", `${corp.ticker} in megacorps folder`);
   const blob = `${doc.pages[0].text.markdown}\n${doc.pages[0].text.content}`;
   ok(blob.includes(corp.domain) && blob.includes(`**${corp.ticker}**`), `${corp.ticker} domain-only prose`);
-  ok(!/First Chair|solar arrays|Blacklight/i.test(blob), `${corp.ticker} does not invent deep lore`);
+  // 0.3.134 (C): the arms-division block is locked lore from tools/lib/megacorps-journals.mjs, so it
+  // is checked against that table and then cut out of the blob before the no-deep-lore guard runs —
+  // otherwise Meridian's own arms house ("Meridian Blacklight") trips the Blacklight ban.
+  if (corp.arms) {
+    ok(blob.includes(corp.arms.replace(/\*\*/g, "")) || blob.includes(corp.arms),
+      `${corp.ticker} carries its locked arms-division line`);
+    ok(/Arms Makers of the Reach/.test(blob), `${corp.ticker} points at the Arms Makers journal`);
+  }
+  const tickerBlob = blob.replace(/Arms division:[\s\S]*?Arms Makers of the Reach\}\.?/g, "");
+  ok(!/First Chair|solar arrays|Blacklight/i.test(tickerBlob), `${corp.ticker} does not invent deep lore`);
   if (corp.artPending) ok(/brand plate pending/i.test(blob), `${corp.ticker} notes pending plate`);
 }
 

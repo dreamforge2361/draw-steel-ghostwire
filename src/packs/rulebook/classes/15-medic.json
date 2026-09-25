@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "pDVbOHoBpIwF8ZMi",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.pDVbOHoBpIwF8ZMi",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/04-medic.md`*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/04-medic.md</code></em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "ZnDusgEtKctKRpCb",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.ZnDusgEtKctKRpCb",
+      "_id": "YL6mDH3gSH8ipQqY",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.YL6mDH3gSH8ipQqY",
       "name": "Class Chassis",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "hS4zARjrRRLSQOh9",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.hS4zARjrRRLSQOh9",
+      "_id": "wpbHcB2bbitRboND",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.wpbHcB2bbitRboND",
       "name": "Reagents — Your Heroic Resource",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -81,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "**Reagents** are your kit — literally. Trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more of all of it. Unlike every other GHOSTWIRE class's Heroic Resource, Reagents do **not** reset at the end of an encounter. You **prep the kit before a run**, **spend it down across the run**, and **restock only in downtime.** The bag you bring is the bag you have, for as many fights as the run throws at you before you get a chance to resupply.\n\n**Kit capacity by Echelon:**\n\n| Echelon | Kit Capacity (Reagents) |\n|---|---|\n| **E1** (lowest) | 10 |\n| **E2** | 14 |\n| **E3** | 20 |\n| **E4** (highest) | 38 |\n\n**Per-dose cost.** Producing a basic compound or enhancing a signature ability costs **2 Reagents** — one \"unit\" of the kit. At E1 (10 capacity), that's five doses total before the bag runs dry.\n\n**Prep on respite.** At a respite, you bank a reserve up to your kit's Echelon capacity. The bag you bring into the field is the bag you have — there is no mid-run resupply short of downtime access (a resupply run, a black-market contact, a corp requisition).\n\n**Expend in the field.** Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.\n\n**Field Synthesis — the free improv valve.** From **2nd level**, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a **half-strength compound for 0 Reagents.** This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.\n\n**Restock in downtime.** Refilling to full kit capacity is a **lifestyle / downtime-project activity** taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is **no per-Reagent price list**: the **Director quotes the cost** of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.\n\n**Craft Reagents — the restock Project.** Every Medic has **Craft Reagents** from 1st level, and it is a downtime **Project** rather than a prose note: it lands on the sheet ready to work, you put project points into it during respites and downtime the way you would any other project, and when it completes the kit refills to **full capacity** for your echelon (plus Advanced Chem-Prep) and the project resets for next time. The Director-quoted ¥ or downtime cost above is what you pay alongside it; the project is the clock, not the invoice, and it is still never a roll you can fail.\n\n**Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. Director quote guidance and Lifestyle eligibility live in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle & Downtime} (still no per-Reagent price list).\n\n**CRITICAL — Reagents persist across encounters.** This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. **Reagents do not.** The bag empties across a **run**, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.\n\n**Cap & carry-over.** Unspent Reagents persist indefinitely between encounters within the same run; the stock is capped at your echelon's kit capacity (you cannot bank more than the cap even by refusing to spend for several fights in a row); only a downtime refill restores you to full.\n\n**Reagents outside combat.** Reagents are a physical kit, so they **still spend outside combat**. Unlike the per-encounter Heroic Resources of other classes, a Medic does **not** get free out-of-combat uses of Reagent-costing abilities or signature enhancements: every dose used in a negotiation, an infiltration, or a quiet moment between fights comes out of the same bag.\n- **Established Protocols stay free** at all times — stabilizing a dying ally and identifying a substance never cost Reagents.\n- **Field Synthesis is encounter-only.** It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.\n\n**Firewall note.** Reagents is class power on the character-power side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned through advancement, never bought with money. **Nuyen (¥)** pays for *restocking* Reagents at respite and for *buying* better gear, foci, or tools — money buys **supply**, never **capability**. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.\n\n> **What are Reagents?** Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does **not** refill between encounters — only downtime restocking brings it back up.",
-        "content": "<p><strong>Reagents</strong> are your kit — literally. Trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more of all of it. Unlike every other GHOSTWIRE class's Heroic Resource, Reagents do <strong>not</strong> reset at the end of an encounter. You <strong>prep the kit before a run</strong>, <strong>spend it down across the run</strong>, and <strong>restock only in downtime.</strong> The bag you bring is the bag you have, for as many fights as the run throws at you before you get a chance to resupply.</p>\n<p><strong>Kit capacity by Echelon:</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"kit_capacity_(reagents)\">Kit Capacity (Reagents)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>E1</strong> (lowest)</td>\n<td>10</td>\n</tr>\n<tr>\n<td><strong>E2</strong></td>\n<td>14</td>\n</tr>\n<tr>\n<td><strong>E3</strong></td>\n<td>20</td>\n</tr>\n<tr>\n<td><strong>E4</strong> (highest)</td>\n<td>38</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Per-dose cost.</strong> Producing a basic compound or enhancing a signature ability costs <strong>2 Reagents</strong> — one \"unit\" of the kit. At E1 (10 capacity), that's five doses total before the bag runs dry.</p>\n<p><strong>Prep on respite.</strong> At a respite, you bank a reserve up to your kit's Echelon capacity. The bag you bring into the field is the bag you have — there is no mid-run resupply short of downtime access (a resupply run, a black-market contact, a corp requisition).</p>\n<p><strong>Expend in the field.</strong> Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.</p>\n<p><strong>Field Synthesis — the free improv valve.</strong> From <strong>2nd level</strong>, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a <strong>half-strength compound for 0 Reagents.</strong> This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.</p>\n<p><strong>Restock in downtime.</strong> Refilling to full kit capacity is a <strong>lifestyle / downtime-project activity</strong> taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is <strong>no per-Reagent price list</strong>: the <strong>Director quotes the cost</strong> of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.</p>\n<p><strong>Craft Reagents — the restock Project.</strong> Every Medic has <strong>Craft Reagents</strong> from 1st level, and it is a downtime <strong>Project</strong> rather than a prose note: it lands on the sheet ready to work, you put project points into it during respites and downtime the way you would any other project, and when it completes the kit refills to <strong>full capacity</strong> for your echelon (plus Advanced Chem-Prep) and the project resets for next time. The Director-quoted ¥ or downtime cost above is what you pay alongside it; the project is the clock, not the invoice, and it is still never a roll you can fail.</p>\n<p><strong>Restock discounts</strong> (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to <strong>that quoted cost</strong>. Director quote guidance and Lifestyle eligibility live in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle &amp; Downtime} (still no per-Reagent price list).</p>\n<p><strong>CRITICAL — Reagents persist across encounters.</strong> This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. <strong>Reagents do not.</strong> The bag empties across a <strong>run</strong>, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.</p>\n<p><strong>Cap & carry-over.</strong> Unspent Reagents persist indefinitely between encounters within the same run; the stock is capped at your echelon's kit capacity (you cannot bank more than the cap even by refusing to spend for several fights in a row); only a downtime refill restores you to full.</p>\n<p><strong>Reagents outside combat.</strong> Reagents are a physical kit, so they <strong>still spend outside combat</strong>. Unlike the per-encounter Heroic Resources of other classes, a Medic does <strong>not</strong> get free out-of-combat uses of Reagent-costing abilities or signature enhancements: every dose used in a negotiation, an infiltration, or a quiet moment between fights comes out of the same bag.</p>\n<ul>\n<li><strong>Established Protocols stay free</strong> at all times — stabilizing a dying ally and identifying a substance never cost Reagents.</li>\n<li><strong>Field Synthesis is encounter-only.</strong> It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.</li>\n</ul>\n<p><strong>Firewall note.</strong> Reagents is class power on the character-power side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned through advancement, never bought with money. <strong>Nuyen (¥)</strong> pays for <em>restocking</em> Reagents at respite and for <em>buying</em> better gear, foci, or tools — money buys <strong>supply</strong>, never <strong>capability</strong>. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.</p>\n<blockquote>\n  <p><strong>What are Reagents?</strong> Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does <strong>not</strong> refill between encounters — only downtime restocking brings it back up.</p>\n</blockquote>"
+        "markdown": "**Reagents** are your kit — literally. Trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more of all of it. Unlike every other GHOSTWIRE class's Heroic Resource, Reagents do **not** reset at the end of an encounter. You **prep the kit before a run**, **spend it down across the run**, and **restock only in downtime.** The bag you bring is the bag you have, for as many fights as the run throws at you before you get a chance to resupply.\n\n**Kit capacity by Echelon:**\n\n| Echelon | Kit Capacity (Reagents) |\n|---|---|\n| **E1** (lowest) | 10 |\n| **E2** | 14 |\n| **E3** | 20 |\n| **E4** (highest) | 38 |\n\n**Per-dose cost.** Producing a basic compound or enhancing a signature ability costs **2 Reagents** — one \"unit\" of the kit. At E1 (10 capacity), that's five doses total before the bag runs dry.\n\n**Prep on respite.** At a respite, you bank a reserve up to your kit's Echelon capacity. The bag you bring into the field is the bag you have — there is no mid-run resupply short of downtime access (a resupply run, a black-market contact, a corp requisition).\n\n**Field Triage is yours alone (0.3.134).** The 2-Reagent Field Triage maneuver — mark up to three allies within 10 feet, each may spend a Recovery as a free triggered action before the end of your next turn — is a **Medic class ability**. There is no universal First Aid in Ghostwire: everyone else stabilises with Trauma Patches and medkits, or spends their own Recovery with Catch Breath. You are the reason the crew stands up.\n\n**Expend in the field.** Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.\n\n**Field Synthesis — the free improv valve.** From **2nd level**, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a **half-strength compound for 0 Reagents.** This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.\n\n**Restock in downtime.** Refilling to full kit capacity is a **lifestyle / downtime-project activity** taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is **no per-Reagent price list**: the **Director quotes the cost** of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.\n\n**Craft Reagents — the restock Project.** Every Medic has **Craft Reagents** from 1st level, and it is a downtime **Project** rather than a prose note: it lands on the sheet ready to work, you put project points into it during respites and downtime the way you would any other project, and when it completes the kit refills to **full capacity** for your echelon (plus Advanced Chem-Prep) and the project resets for next time. The Director-quoted ¥ or downtime cost above is what you pay alongside it; the project is the clock, not the invoice, and it is still never a roll you can fail.\n\n**Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. Director quote guidance and Lifestyle eligibility live in **Lifestyle & Downtime** (`26`) (still no per-Reagent price list).\n\n**CRITICAL — Reagents persist across encounters.** This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. **Reagents do not.** The bag empties across a **run**, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.\n\n**Cap & carry-over.** Unspent Reagents persist indefinitely between encounters within the same run; the stock is capped at your echelon's kit capacity (you cannot bank more than the cap even by refusing to spend for several fights in a row); only a downtime refill restores you to full.\n\n**Reagents outside combat.** Reagents are a physical kit, so they **still spend outside combat**. Unlike the per-encounter Heroic Resources of other classes, a Medic does **not** get free out-of-combat uses of Reagent-costing abilities or signature enhancements: every dose used in a negotiation, an infiltration, or a quiet moment between fights comes out of the same bag.\n- **Established Protocols stay free** at all times — stabilizing a dying ally and identifying a substance never cost Reagents.\n- **Field Synthesis is encounter-only.** It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.\n\n**Firewall note.** Reagents is class power on the character-power side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned through advancement, never bought with money. **Nuyen (¥)** pays for *restocking* Reagents at respite and for *buying* better gear, foci, or tools — money buys **supply**, never **capability**. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.\n\n> **What are Reagents?** Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does **not** refill between encounters — only downtime restocking brings it back up.",
+        "content": "<p><strong>Reagents</strong> are your kit — literally. Trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more of all of it. Unlike every other GHOSTWIRE class's Heroic Resource, Reagents do <strong>not</strong> reset at the end of an encounter. You <strong>prep the kit before a run</strong>, <strong>spend it down across the run</strong>, and <strong>restock only in downtime.</strong> The bag you bring is the bag you have, for as many fights as the run throws at you before you get a chance to resupply.</p>\n<p><strong>Kit capacity by Echelon:</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"kit_capacity_(reagents)\">Kit Capacity (Reagents)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>E1</strong> (lowest)</td>\n<td>10</td>\n</tr>\n<tr>\n<td><strong>E2</strong></td>\n<td>14</td>\n</tr>\n<tr>\n<td><strong>E3</strong></td>\n<td>20</td>\n</tr>\n<tr>\n<td><strong>E4</strong> (highest)</td>\n<td>38</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Per-dose cost.</strong> Producing a basic compound or enhancing a signature ability costs <strong>2 Reagents</strong> — one \"unit\" of the kit. At E1 (10 capacity), that's five doses total before the bag runs dry.</p>\n<p><strong>Prep on respite.</strong> At a respite, you bank a reserve up to your kit's Echelon capacity. The bag you bring into the field is the bag you have — there is no mid-run resupply short of downtime access (a resupply run, a black-market contact, a corp requisition).</p>\n<p><strong>Field Triage is yours alone (0.3.134).</strong> The 2-Reagent Field Triage maneuver — mark up to three allies within 10 feet, each may spend a Recovery as a free triggered action before the end of your next turn — is a <strong>Medic class ability</strong>. There is no universal First Aid in Ghostwire: everyone else stabilises with Trauma Patches and medkits, or spends their own Recovery with Catch Breath. You are the reason the crew stands up.</p>\n<p><strong>Expend in the field.</strong> Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.</p>\n<p><strong>Field Synthesis — the free improv valve.</strong> From <strong>2nd level</strong>, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a <strong>half-strength compound for 0 Reagents.</strong> This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.</p>\n<p><strong>Restock in downtime.</strong> Refilling to full kit capacity is a <strong>lifestyle / downtime-project activity</strong> taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is <strong>no per-Reagent price list</strong>: the <strong>Director quotes the cost</strong> of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.</p>\n<p><strong>Craft Reagents — the restock Project.</strong> Every Medic has <strong>Craft Reagents</strong> from 1st level, and it is a downtime <strong>Project</strong> rather than a prose note: it lands on the sheet ready to work, you put project points into it during respites and downtime the way you would any other project, and when it completes the kit refills to <strong>full capacity</strong> for your echelon (plus Advanced Chem-Prep) and the project resets for next time. The Director-quoted ¥ or downtime cost above is what you pay alongside it; the project is the clock, not the invoice, and it is still never a roll you can fail.</p>\n<p><strong>Restock discounts</strong> (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to <strong>that quoted cost</strong>. Director quote guidance and Lifestyle eligibility live in <strong>Lifestyle & Downtime</strong> (<code>26</code>) (still no per-Reagent price list).</p>\n<p><strong>CRITICAL — Reagents persist across encounters.</strong> This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. <strong>Reagents do not.</strong> The bag empties across a <strong>run</strong>, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.</p>\n<p><strong>Cap & carry-over.</strong> Unspent Reagents persist indefinitely between encounters within the same run; the stock is capped at your echelon's kit capacity (you cannot bank more than the cap even by refusing to spend for several fights in a row); only a downtime refill restores you to full.</p>\n<p><strong>Reagents outside combat.</strong> Reagents are a physical kit, so they <strong>still spend outside combat</strong>. Unlike the per-encounter Heroic Resources of other classes, a Medic does <strong>not</strong> get free out-of-combat uses of Reagent-costing abilities or signature enhancements: every dose used in a negotiation, an infiltration, or a quiet moment between fights comes out of the same bag.</p>\n<ul>\n<li><strong>Established Protocols stay free</strong> at all times — stabilizing a dying ally and identifying a substance never cost Reagents.</li>\n<li><strong>Field Synthesis is encounter-only.</strong> It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.</li>\n</ul>\n<p><strong>Firewall note.</strong> Reagents is class power on the character-power side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned through advancement, never bought with money. <strong>Nuyen (¥)</strong> pays for <em>restocking</em> Reagents at respite and for <em>buying</em> better gear, foci, or tools — money buys <strong>supply</strong>, never <strong>capability</strong>. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.</p>\n<blockquote>\n  <p><strong>What are Reagents?</strong> Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does <strong>not</strong> refill between encounters — only downtime restocking brings it back up.</p>\n</blockquote>"
       },
       "category": null,
       "ownership": {
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "SXb8uAN6x5t6KuxU",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.SXb8uAN6x5t6KuxU",
+      "_id": "NDjWEByuBPZYC0c8",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.NDjWEByuBPZYC0c8",
       "name": "Compounds — What Reagents Become (the four families)",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "xBcjf5F7aUMwalyC",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.xBcjf5F7aUMwalyC",
+      "_id": "tAP3DnDkQIvukOn0",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.tAP3DnDkQIvukOn0",
       "name": "Signature Abilities (No Reagent Cost)",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "pHOkllH1WoDgEn9H",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.pHOkllH1WoDgEn9H",
+      "_id": "2wzyMeYDxBp8mkql",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.2wzyMeYDxBp8mkql",
       "name": "Heroic Abilities — Cost Bands 1 Through 11",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "h44MXNxhopMHwqPC",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.h44MXNxhopMHwqPC",
+      "_id": "P57fXu8ADx9xjnTZ",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.P57fXu8ADx9xjnTZ",
       "name": "Miracle Worker — Deep Dive",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "LcBRdLZQexI8xlrF",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.LcBRdLZQexI8xlrF",
+      "_id": "sY0gMgSgtLAemQF2",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.sY0gMgSgtLAemQF2",
       "name": "Field Synthesis — The Improv Valve",
       "type": "text",
-      "sort": 800000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "zclP5NSBGZBkJjgR",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.zclP5NSBGZBkJjgR",
+      "_id": "Usu6BrY4FMiwmrbD",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.Usu6BrY4FMiwmrbD",
       "name": "Combat Drug Crash Rider — Deep Dive",
       "type": "text",
-      "sort": 900000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "WkEzOxyYI3OfS5hm",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.WkEzOxyYI3OfS5hm",
+      "_id": "9wh9TuCR9e06Lbtm",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.9wh9TuCR9e06Lbtm",
       "name": "Medic Subclasses (with per-Level tables)",
       "type": "text",
-      "sort": 1000000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -287,11 +259,11 @@
       "flags": {}
     },
     {
-      "_id": "5OPNbEkKdZpvHlxN",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.5OPNbEkKdZpvHlxN",
+      "_id": "Hzyx5rXY3IaxBS0B",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.Hzyx5rXY3IaxBS0B",
       "name": "Level 1-10 Progression Table",
       "type": "text",
-      "sort": 1100000,
+      "sort": 1000000,
       "title": {
         "show": true,
         "level": 1
@@ -315,11 +287,11 @@
       "flags": {}
     },
     {
-      "_id": "Hu1wiYz16pTVRKqu",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.Hu1wiYz16pTVRKqu",
+      "_id": "fCERFCn5imEU4YKz",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.fCERFCn5imEU4YKz",
       "name": "Core Class Features (Non-Subclass)",
       "type": "text",
-      "sort": 1200000,
+      "sort": 1100000,
       "title": {
         "show": true,
         "level": 1
@@ -343,11 +315,11 @@
       "flags": {}
     },
     {
-      "_id": "n2UTad7sDnCsv1AY",
-      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.n2UTad7sDnCsv1AY",
+      "_id": "5fqbpANJRE7ho6Sw",
+      "_key": "!journal.pages!M90LO5Rf6xGMAJOs.5fqbpANJRE7ho6Sw",
       "name": "Kits & Chrome interaction (Medical Consumables shelf integration, chrome-positive rule)",
       "type": "text",
-      "sort": 1300000,
+      "sort": 1200000,
       "title": {
         "show": true,
         "level": 1

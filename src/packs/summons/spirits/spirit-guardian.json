@@ -226,6 +226,179 @@
       "ownership": {
         "default": 0
       }
+    },
+    {
+      "_id": "OxG4XX9OptRL1qYm",
+      "_key": "!actors.items!TehG5h5EWmGfMNN6.OxG4XX9OptRL1qYm",
+      "name": "GHOSTWIRE.Summons.Command.Name",
+      "type": "ability",
+      "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "07-street-priest",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "spirit-guardian-command",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "summonCommand000": {
+            "_id": "summonCommand000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Command.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "AkIFA0xllCao4igI",
+      "_key": "!actors.items!TehG5h5EWmGfMNN6.AkIFA0xllCao4igI",
+      "name": "GHOSTWIRE.Summons.Spirits.SpiritGuardian.Strike.Name",
+      "type": "ability",
+      "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "magic",
+          "melee",
+          "strike"
+        ],
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "presence"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "x8J7RmeSSOt5B8Hg": {
+              "_id": "x8J7RmeSSOt5B8Hg",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "2 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "4 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "6 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              }
+            }
+          }
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "07-street-priest",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "spirit-guardian-warding-strike",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Spirits.SpiritGuardian.Strike.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
     }
   ],
   "effects": [

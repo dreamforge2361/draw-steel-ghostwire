@@ -40,9 +40,9 @@ One armor SKU when the Kit wants armor, **Riot Shield** when it wants a shield, 
 
 | Kit | `_dsid` | Category asked | Street package | List ¥ | Note |
 |---|---|---|---|---|---|
-| **Gunslinger** | `gunslinger` | light armor + medium | **Secure Threads** (¥250) · **Slugger** (¥300) | ¥550 | |
+| **Gunslinger** | `gunslinger` | light armor + medium | **Secure Threads** (¥250) · **Seal Warden Gavel** (¥300) | ¥550 | |
 | **Raider** | `raider` | light armor + shield + light | **Secure Threads** (¥250) · **Riot Shield** (¥200) · **Street-Blade** (¥120) | ¥570 | |
-| **Streetsweeper** | `streetsweeper` | medium armor + medium | **Armor Vest** (¥300) · **Boomstick** (¥300) | ¥600 | |
+| **Streetsweeper** | `streetsweeper` | medium armor + medium | **Armor Vest** (¥300) · **Nyx Doorknocker** (¥300) | ¥600 | |
 
 ### Heavy
 
@@ -58,7 +58,7 @@ One armor SKU when the Kit wants armor, **Riot Shield** when it wants a shield, 
 | Kit | `_dsid` | Category asked | Street package | List ¥ | Note |
 |---|---|---|---|---|---|
 | **No Kit (Pure Caster)** | `no-kit` | no armor | — | — | The caster no-Kit placeholder. Nothing to make live. |
-| **Sanctified** | `sanctified` | heavy armor + light | **Hardshell** (¥300) · **Popper** (¥250) | ¥550 | |
+| **Sanctified** | `sanctified` | heavy armor + light | **Hardshell** (¥300) · **Ferrum Rivet** (¥250) | ¥550 | |
 | **Spellblade** | `spellblade` | light armor + shield + medium | **Secure Threads** (¥250) · **Riot Shield** (¥200) · **Scrap Cleaver** (¥280) | ¥730 | |
 
 ### Melee
@@ -78,21 +78,21 @@ One armor SKU when the Kit wants armor, **Riot Shield** when it wants a shield, 
 
 | Kit | `_dsid` | Category asked | Street package | List ¥ | Note |
 |---|---|---|---|---|---|
-| **Ghost** | `ghost` | light armor + light | **Secure Threads** (¥250) · **Sleeve-Gun** (¥150) | ¥400 | The holdout is the quiet one — Ghost is an infiltration doctrine. |
+| **Ghost** | `ghost` | light armor + light | **Secure Threads** (¥250) · **Velvet Cufflink** (¥150) | ¥400 | The holdout is the quiet one — Ghost is an infiltration doctrine. |
 | **Hexshot** | `hexshot` | no armor + light + medium | **Street-Bow** (¥200) · **Scrap-Bow** (¥300) | ¥500 | Both slots live since **G2 / 0.3.100** — the Scrap-Bow is the Street-band medium bow the catalog was missing. |
-| **Longshot** | `longshot` | no armor + medium | **Pipe Rifle** (¥300) | ¥300 | A precision rifle, not the Boomstick — Longshot's whole doctrine is holding still at range. |
-| **Saturation** | `saturation` | light armor + light + medium | **Secure Threads** (¥250) · **Popper** (¥250) · **Boomstick** (¥300) | ¥800 | |
+| **Longshot** | `longshot` | no armor + medium | **Nyx Gutterline** (¥300) | ¥300 | A precision rifle, not the Nyx Doorknocker — Longshot's whole doctrine is holding still at range. |
+| **Saturation** | `saturation` | light armor + light + medium | **Secure Threads** (¥250) · **Ferrum Rivet** (¥250) · **Nyx Doorknocker** (¥300) | ¥800 | |
 
 ### Tech
 
 | Kit | `_dsid` | Category asked | Street package | List ¥ | Note |
 |---|---|---|---|---|---|
-| **Fabricator's Bench** | `fabricators-bench` | light armor + light | **Secure Threads** (¥250) · **Popper** (¥250) | ¥500 | |
+| **Fabricator's Bench** | `fabricators-bench` | light armor + light | **Secure Threads** (¥250) · **Ferrum Rivet** (¥250) | ¥500 | |
 | **Ferrum "Padlock-6"** | `ferrum-padlock-6` | no armor | — | — | The Kit **is** the cyberdeck (`19-hacker.md`). No separate host, and never chrome. |
-| **Field Chassis** | `field-chassis` | light armor + light | **Secure Threads** (¥250) · **Popper** (¥250) | ¥500 | |
+| **Field Chassis** | `field-chassis` | light armor + light | **Secure Threads** (¥250) · **Ferrum Rivet** (¥250) | ¥500 | |
 | **Meridian "Lookout"** | `meridian-lookout` | no armor | — | — | Deck-Kit, as Padlock-6. |
 | **Nyx Cartel "Switchblade"** | `nyx-switchblade` | no armor | — | — | Deck-Kit, as Padlock-6. |
-| **Rigger's Harness** | `riggers-harness` | light armor + light | **Secure Threads** (¥250) · **Popper** (¥250) | ¥500 | The Harness **is** the Wire interface (≡ deck, `21-the-wire.md`) — no RCC is granted on top of it. |
+| **Rigger's Harness** | `riggers-harness` | light armor + light | **Secure Threads** (¥250) · **Ferrum Rivet** (¥250) | ¥500 | The Harness **is** the Wire interface (≡ deck, `21-the-wire.md`) — no RCC is granted on top of it. |
 
 **No tech Kit is handed a host.** That was the open question going in; reading `19-hacker.md` and `21-the-wire.md` settles it — the three Hacker deck-Kits *are* cyberdecks, and the Rigger's Harness *is* a control interface. Granting a Scrapdeck or Remote Box beside them would be a second host the Kit never asked for.
 
@@ -102,17 +102,17 @@ One armor SKU when the Kit wants armor, **Riot Shield** when it wants a shield, 
 
 The grant needs a **street-band object per category**, and the published Street column did not have one for six of them. Six Kits (Bulldozer, Juggernaut, Reach, Staff Adept, Snarehunter, Monowhip) had **no purchasable object at any Availability** — `polearm` did not exist in the whole catalog, and `whip` existed only as the ¥20,000 prototype Monowhip.
 
-So 0.3.99 adds seven **Echelon 1 / Street / 1 mod slot** weapons to Gear master §3A / §3B / §3D / §3F. Damage sits at the band floor per the Damage-Bridge, and the firewall holds — a T5 street piece can share a band with a pricier item, because what ¥ buys is mod slots, quiet, and not being **Loud**. (Boomstick already worked exactly this way: T5 ¥300 at the Medium band, ahead of the T4 ¥900 Hand-Cannon.)
+So 0.3.99 adds seven **Echelon 1 / Street / 1 mod slot** weapons to Gear master §3A / §3B / §3D / §3F. Damage sits at the band floor per the Damage-Bridge, and the firewall holds — a T5 street piece can share a band with a pricier item, because what ¥ buys is mod slots, quiet, and not being **Loud**. (Nyx Doorknocker already worked exactly this way: T5 ¥300 at the Medium band, ahead of the T4 ¥900 Argent Sovereign .50.)
 
 | New SKU | `_dsid` | Fills | Band / damage | ¥ | Serves |
 |---|---|---|---|---|---|
-| **Slugger** *(Ares Bulldog / heavy revolver)* | `slugger` | medium **sidearm** | Medium · 6 kinetic · Short | 300 | Gunslinger |
-| **Pipe Rifle** *(Streek Longpipe / single-shot marksman rifle)* | `pipe-rifle` | medium **precision rifle** | Medium · 6 kinetic · Long | 300 | Longshot |
-| **Scrap Cleaver** *(Cavalier Warblade / forged broad blade)* | `scrap-cleaver` | medium **melee** | Medium · 5 kinetic · Adjacent | 280 | Duelist, Chromeblade, Spellblade, Breacher, Warframe |
-| **Slab-Hammer** *(Ares Roughneck / demolition maul)* | `slab-hammer` | **heavy** | Heavy · 8 kinetic · Adjacent | 300 | Juggernaut, Bulldozer |
-| **Scaffold Pike** *(Cavalier Longstaff / rebar pike-staff)* | `scaffold-pike` | **polearm** | Medium · 6 kinetic · Adjacent | 250 | Reach, Staff Adept, Snarehunter |
-| **Chain Lash** *(Fichetti Coilwork / weighted chain whip)* | `chain-lash` | **whip** | Medium · 5 kinetic · Adjacent | 200 | Monowhip |
-| **Weighted Net** *(Lone Star Snarecast / hand-thrown capture net)* | `weighted-net` | **ensnaring** | Light · no damage · Short | 120 | Snarehunter |
+| **Seal Warden Gavel** *(Seal Warden Armory / heavy revolver)* | `slugger` | medium **sidearm** | Medium · 6 kinetic · Short | 300 | Gunslinger |
+| **Nyx Gutterline** *(Nyx Undermarket / single-shot marksman rifle)* | `pipe-rifle` | medium **precision rifle** | Medium · 6 kinetic · Long | 300 | Longshot |
+| **Scrap Cleaver** *(Nyx Warblade / forged broad blade)* | `scrap-cleaver` | medium **melee** | Medium · 5 kinetic · Adjacent | 280 | Duelist, Chromeblade, Spellblade, Breacher, Warframe |
+| **Slab-Hammer** *(Deepworks Roughneck / demolition maul)* | `slab-hammer` | **heavy** | Heavy · 8 kinetic · Adjacent | 300 | Juggernaut, Bulldozer |
+| **Scaffold Pike** *(Nyx Longstaff / rebar pike-staff)* | `scaffold-pike` | **polearm** | Medium · 6 kinetic · Adjacent | 250 | Reach, Staff Adept, Snarehunter |
+| **Chain Lash** *(Nyx Coilwork / weighted chain whip)* | `chain-lash` | **whip** | Medium · 5 kinetic · Adjacent | 200 | Monowhip |
+| **Weighted Net** *(Grey Ledger Snarecast / hand-thrown capture net)* | `weighted-net` | **ensnaring** | Light · no damage · Short | 120 | Snarehunter |
 
 **Art gap (open).** All seven ship with core Foundry icons. Drop `‹dsid›.webp` plates into `_incoming-art/` and run `node tools/apply-gear-token-art.mjs --from _incoming-art` to swap them in.
 

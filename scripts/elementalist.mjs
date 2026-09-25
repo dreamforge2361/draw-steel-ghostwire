@@ -39,6 +39,7 @@
 // tools/wave-03132-smoke.mjs can run it under Node.
 
 import { playHitFx } from "./hit-fx.mjs";
+import { elementAdjective } from "./elements.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Summons.Veil.UI";
@@ -83,6 +84,30 @@ export const COMPANION_ELEMENTS = Object.freeze({
 /** Does this companion ask the player, or does its card name one element? */
 export function companionNeedsChoice(dsid) {
   return (COMPANION_ELEMENTS[String(dsid ?? "")]?.length ?? 0) > 1;
+}
+
+/**
+ * 0.3.134 (D) — the summon abilities that pick an element, and the flag the pick is recorded in.
+ *
+ * `COMPANION_ELEMENTS` above is the per-companion list the card prints. The three *bound* summons
+ * (Summon Elemental, Twin Elemental Summon, Greater Elemental Summon) print no list at all: RAW ties
+ * a bound elemental to the caster's attunement, so they take whatever the hero is attuned to and ask
+ * for one if the hero has never picked.
+ *
+ * The pick is written to `flags.draw-steel-ghostwire.summonElement` on the **ability**, because that
+ * is the only object both halves of the summon can see: scripts/elementalist.mjs patches `use()` and
+ * writes it *before* the roll, and scripts/veil-summons.mjs reads it off the same ability when the
+ * resulting chat message fires its `createChatMessage` hook a moment later.
+ */
+export const SUMMON_ELEMENT_FLAG = "summonElement";
+export const BOUND_SUMMON_DSIDS = Object.freeze([
+  "summon-elemental", "twin-elemental-summon", "greater-elemental-summon",
+]);
+
+/** Does this ability place something on the canvas that should wear an element in its name? */
+export function summonPicksElement(dsid) {
+  const key = String(dsid ?? "");
+  return !!COMPANION_ELEMENTS[key] || BOUND_SUMMON_DSIDS.includes(key);
 }
 
 /** Elemental Shaping's three modes, in the order the card prints them. */
@@ -163,6 +188,24 @@ async function applyDamageType(item, type) {
   await item.update(update);
   return true;
 }
+
+/**
+ * Remember which element this summon was called with, on the ability that called it.
+ *
+ * Written even when it has not changed is a pointless database write on every use, so it is skipped
+ * when the flag already says the same thing — a player re-summoning the same Zephyr should not
+ * touch the sheet.
+ */
+export async function recordSummonElement(ability, element) {
+  if (!ability?.setFlag) return false;
+  if (ability.getFlag(MODULE_ID, SUMMON_ELEMENT_FLAG) === element) return false;
+  await ability.setFlag(MODULE_ID, SUMMON_ELEMENT_FLAG, element);
+  return true;
+}
+
+/** The element an ability last summoned with, or `""`. */
+export const summonElementOf = ability =>
+  (elementAdjective(ability?.getFlag?.(MODULE_ID, SUMMON_ELEMENT_FLAG)) ? ability.getFlag(MODULE_ID, SUMMON_ELEMENT_FLAG) : "");
 
 /**
  * Set (or change) a hero's attunement and re-type every class ability that follows it.
@@ -337,6 +380,9 @@ async function useShaping(model, use, config, dialogOptions, messageOptions) {
       from: fxPoint(actor?.getActiveTokens?.()?.[0]),
       at: tokens.map(fxPoint).filter(Boolean),
       name: model.parent?.name ?? "",
+      // 0.3.134 (E): Elemental Shaping is suppressed in hit-fx.mjs and calls playHitFx itself, so it
+      // is also the one caller that has to hand over its own element. It has it in `type`.
+      element: type || null,
     });
   }
   ui.notifications.info(loc("Shaping.Chose", { name: actor?.name ?? "", mode: label }));
@@ -370,12 +416,26 @@ function patchElementalistUse() {
 
     // A companion picks its element as it is summoned, and the pick has to be on the item *before*
     // the roll, because the roll is the companion's strike.
-    if (companionNeedsChoice(dsid)) {
+    if (COMPANION_ELEMENTS[dsid]) {
+      // Ember prints one element and is not asked; Zephyr and Boulder are.
       const types = COMPANION_ELEMENTS[dsid];
-      const picked = await chooseType(this.parent.name, loc("Attunement.Companion", { name: actor.name }), types);
+      const picked = companionNeedsChoice(dsid)
+        ? await chooseType(this.parent.name, loc("Attunement.Companion", { name: actor.name }), types)
+        : types[0];
       if (!picked) return null;
       await applyDamageType(this.parent, picked);
+      await recordSummonElement(this.parent, picked);
       ui.notifications.info(loc("Attunement.Hurl", { name: this.parent.name, type: typeLabel(picked) }));
+      return use.call(this, config, dialogOptions, messageOptions);
+    }
+
+    // 0.3.134 (D) — a bound elemental wears the caster's attunement, and the placed token is named
+    // for it ("Electrical Zephyr", "Fire Elemental"). The pick has to land on the ability before the
+    // roll, because veil-summons.mjs reads it off the ability when the roll's message arrives.
+    if (BOUND_SUMMON_DSIDS.includes(dsid)) {
+      const type = await ensureAttunement(actor);
+      if (!type) return null;
+      await recordSummonElement(this.parent, type);
       return use.call(this, config, dialogOptions, messageOptions);
     }
 
@@ -434,6 +494,9 @@ export function registerElementalist() {
       shapingValue,
       damageTypeUpdate,
       companionNeedsChoice,
+      summonPicksElement,
+      summonElementOf,
+      SUMMON_ELEMENT_FLAG,
     };
   }
   console.log(`${MODULE_ID} | Elementalist choices registered`

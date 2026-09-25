@@ -119,11 +119,11 @@ For players who don't want to itemize. A **Chrome Package** is a pre-vetted, fac
 
 | Package (brand) | Role | Bundled loadout (representative) | Fantasy |
 |---|---|---|---|
-| **"Roadrunner" Kinetic Suite** *(Shiawase Mobility)* | Mobility | Running gear + reaction enhancer + balance augmentation | Get there first, never fall, move like water. The courier's/scout's bundle. |
-| **"Argus" Perception Array** *(Renraku Sensory)* | Sensory & Comms | Cyber-eyes (optical suite) + cyber-ears (audio suite) + datajack/comm link | See in the dark, hear a pin drop, stay wired in. The recon/decker on-ramp. |
-| **"Bulwark" Hardframe** *(Ares Defensive)* | Durability | Dermal plating + bone lacing + internal filtration | Walk into fire and walk out. The front-liner's shell. |
+| **"Roadrunner" Kinetic Suite** *(Grafthouse Mobility)* | Mobility | Running gear + reaction enhancer + balance augmentation | Get there first, never fall, move like water. The courier's/scout's bundle. |
+| **"Argus" Perception Array** *(Meridian Blacklight Sensory)* | Sensory & Comms | Cyber-eyes (optical suite) + cyber-ears (audio suite) + datajack/comm link | See in the dark, hear a pin drop, stay wired in. The recon/decker on-ramp. |
+| **"Bulwark" Hardframe** *(Ferrum Forgeworks Defensive)* | Durability | Dermal plating + bone lacing + internal filtration | Walk into fire and walk out. The front-liner's shell. |
 | **"Lazarus" Trauma Package** *(DocWagon Bioware)* | Health & Recovery | Secondary heart/trauma damper + toxin scrubber + wound-seal weave | Refuse to die; shrug off poison and blood loss. Soft/bioware-leaning by design. |
-| **"Warhound" Combat Rig** *(Ares Military — restricted)* | Combat | Wired reflexes + implant weapon + targeting link | The street-samurai starter. High Integrity, brutal on magic, high Availability. |
+| **"Warhound" Combat Rig** *(Iron Writ Arms — restricted)* | Combat | Wired reflexes + implant weapon + targeting link | The street-samurai starter. High Integrity, brutal on magic, high Availability. |
 | **"Silvertongue" Social Suite** *(Horizon Persona — soft only)* | Influence | Vocal modulator + empathy processor + tailored pheromone gland | The Face's chrome — soft-grade only, to spare Persona and (barely) magic. |
 
 Roles are the mechanical keys (one package per role, no location overlap). Brands and loadouts are illustrative; concrete bundle contents, the exact convenience premium, and final per-grade values are set in the gear/costs pass.

@@ -26,6 +26,7 @@ import {
 } from "../scripts/take-cover.mjs";
 import { deCamel, resolveSfxIn, sfxNameCandidates } from "../scripts/sfx.mjs";
 import { MARKER_ART, callingTemplateDsid, familyKey } from "../scripts/ritual-seal.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const fail = [];
@@ -480,7 +481,9 @@ console.log("\nE) Every Calling Formula calls something that exists");
 
 console.log("\nF) Version, docs and wiring");
 
-note(manifest.version === "0.3.133", `module.json is ${manifest.version}`);
+// 0.3.134: a wave smoke pins the floor its locks landed on, never the exact current version,
+// or every later wave turns this file red for no reason.
+note(atLeast(manifest.version, "0.3.133"), `module.json is ${manifest.version} (>= 0.3.133)`);
 note(/`0\.3\.133`/.test(read("README.md")), "README has a 0.3.133 entry");
 note(existsSync("docs/directors/03133-smoke.md"), "the Foundry checklist is written");
 // The per-wave result doc (`_claude-03133-result.md`) is deliberately NOT asserted: `_claude-*` is

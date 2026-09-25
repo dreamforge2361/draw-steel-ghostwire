@@ -218,7 +218,12 @@ note(/export async function jumpIn/.test(read("scripts/rigger-vertical.mjs")), "
 console.log("\nC) Pregens carry the default abilities they never had");
 
 const KEPT = ["catch-breath", "escape-grab", "grab", "knockback", "stand-up", "advance", "disengage"];
-const SWAPS = { "aid-attack": "Xc5MebcXHYG1hdQR", charge: "Od6u2idYoCRmoDYD", defend: "1W0HIoL2SAcbTU6W", heal: "pJY4ybZUtkH9HDxy", drive: "Lc7LhoqWg9ydP5Jm" };
+// 0.3.134 (H): the fifth swap is gone. Draw Steel’s **Heal** is now *deleted* from the hero
+// defaults and replaced by nothing — Field Triage is a Medic class grant, and there is no universal
+// First Aid in Ghostwire. The other four swaps are untouched, and this wave’s lock still holds for them.
+const SWAPS = { "aid-attack": "Xc5MebcXHYG1hdQR", charge: "Od6u2idYoCRmoDYD", defend: "1W0HIoL2SAcbTU6W", drive: "Lc7LhoqWg9ydP5Jm" };
+/** 0.3.134 (H): Field Triage, which only the Medic pregen may hold. */
+const MEDIC_ONLY = { "field-triage": "pJY4ybZUtkH9HDxy" };
 const FORBIDDEN = ["melee-free-strike", "ranged-free-strike"];
 
 const defaults = readJson("docs/masters/pregens/default-items.json");
@@ -243,7 +248,11 @@ for (const file of pregens) {
   const missing = KEPT.filter(d => !held.has(d));
   note(!missing.length, `${slug}: all seven stock defaults${missing.length ? ` — missing ${missing.join(", ")}` : ""}`);
   const noSwap = Object.entries(SWAPS).filter(([dsid, id]) => !held.has(dsid) || !ids.has(id));
-  note(!noSwap.length, `${slug}: all five Ghostwire swaps${noSwap.length ? ` — missing ${noSwap.map(s => s[0]).join(", ")}` : ""}`);
+  note(!noSwap.length, `${slug}: all four Ghostwire swaps${noSwap.length ? ` — missing ${noSwap.map(s => s[0]).join(", ")}` : ""}`);
+  // 0.3.134 (H): exactly one pregen — Renn, the Medic — may hold Field Triage.
+  const isMedicPregen = slug === "renn-solace-ward";
+  const hasTriage = held.has("field-triage");
+  note(hasTriage === isMedicPregen, `${slug}: Field Triage is ${isMedicPregen ? "present (Medic)" : "absent (not a Medic)"}`);
   const strikes = FORBIDDEN.filter(d => held.has(d));
   note(!strikes.length, `${slug}: no generic Free Strike${strikes.length ? ` — ${strikes.join(", ")}` : ""}`);
   const verbs = matrixVerbs.filter(d => held.has(d));
@@ -262,6 +271,10 @@ note(/DEFAULT_ITEM_SWAPS drift/.test(read("tools/pregens-to-actors.mjs")),
 for (const id of Object.values(SWAPS)) {
   note(read("scripts/module.mjs").includes(id), `module.mjs still swaps to ${id}`);
 }
+// 0.3.134 (H): and the one that is no longer a swap is no longer in the swap table.
+note(!new RegExp(`2qWHDVB7SBS9anLB[^]*?${MEDIC_ONLY["field-triage"]}`).test(read("scripts/module.mjs")),
+  "module.mjs no longer swaps Heal for Field Triage");
+note(/DEFAULT_ITEM_DELETES/.test(read("scripts/module.mjs")), "…it deletes the stock Heal outright instead");
 
 /* ------------------------------------------------------------------ D: hit FX */
 

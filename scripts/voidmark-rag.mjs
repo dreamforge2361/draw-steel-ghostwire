@@ -45,6 +45,26 @@ const SYNONYMS = {
   ice: ["ice", "wired", "node", "biofeedback"],
   ping: ["ping", "nudge", "verb"],
   agent: ["agent", "agents", "compile", "hacker", "daemon", "probe", "spike", "watchdog", "bandwidth"],
+  // 0.3.134 (G7) — the three synonym families the summon questions kept missing.
+  // Ghostwire calls `lightning` damage **electrical** on every gear card, so a player asking about
+  // their "electrical zephyr" was using the word the game taught them and hitting nothing.
+  electrical: ["electrical", "electric", "shock", "lightning", "storm", "arc"],
+  electric: ["electric", "electrical", "shock", "lightning"],
+  shock: ["shock", "electrical", "lightning", "taser"],
+  lightning: ["lightning", "electrical", "electric", "shock", "storm"],
+  // "Attack" is the word every player uses; "strike" is the word the rules use.
+  attack: ["attack", "strike", "hit", "damage"],
+  strike: ["strike", "attack", "signature", "damage"],
+  // Summons, by every name a table calls them.
+  summon: ["summon", "companion", "pet", "elemental", "spirit", "sprite", "conjure", "bind", "command"],
+  companion: ["companion", "summon", "pet", "elemental", "zephyr", "ember", "boulder"],
+  pet: ["pet", "companion", "summon", "construct", "drone"],
+  elemental: ["elemental", "summon", "companion", "element", "rank", "bound"],
+  spirit: ["spirit", "summon", "pact", "guardian", "warrior", "hunter", "companion"],
+  zephyr: ["zephyr", "companion", "summon", "elemental", "stormcaller"],
+  ember: ["ember", "companion", "summon", "elemental", "pyromancer"],
+  boulder: ["boulder", "companion", "summon", "elemental", "geomancer"],
+  command: ["command", "order", "maneuver", "summon", "companion"],
   probe: ["probe", "agent", "recon", "hacker", "scan"],
   spike: ["spike", "agent", "integrity", "hacker"],
   daemon: ["daemon", "agent", "puppet", "hacker"],
@@ -67,47 +87,58 @@ const SYNONYMS = {
   interchange: ["interchange"],
 };
 
+/**
+ * Chapter hints: a query that *mentions* a chapter's subject gets that chapter's chunks boosted.
+ *
+ * 0.3.134 (G7) — **every pattern is word-bounded now.** The first rule's bare `ice` matched "price",
+ * "device", "service", "notice" and "voice", so "what's the price of a device" cited The Wire; the
+ * combat rule's bare `round` matched "background" and "surrounding"; the mods rule's bare `mod`
+ * matched "model", "modern" and "module"; and the Veil rule's bare `pact` matched "impact". Every
+ * one of those was a hint firing on a word the asker never typed.
+ */
 const FILE_HINTS = [
-  { re: /wire|wired|matrix|overlay|jack|linked|connect|node|ice|trace|biofeedback|deck|persona|payload|suite|\bping\b/, file: "21-the-wire" },
-  { re: /combat|fight|round|stamina|recovery|crisis|strike|fire|maneuver/, file: "04-combat" },
-  { re: /power.?roll|test|edge|bane|fortune|characteristic/, file: "03-tests-power-rolls" },
-  { re: /chrome|implant|body integrity|weave/, file: "09-chrome-body-integrity" },
-  { re: /kit|gear|nuyen|wealth|armor|weapon/, file: "08-kits-gear-wealth" },
-  { re: /machine|drone|vehicle|rigger|jump-in|rcc/, file: "23-machines" },
-  { re: /hovercraft|altitude limiter|street.?pov|\bpov\b|lane-hopper|star-chopper|hover bike|hover.?car|limiter band/, file: "L1-setting-primer" },
-  { re: /hovercraft|altitude limiter|street.?pov|lane-hopper|star-chopper|how the flats move/, file: "03-life-on-the-flats" },
-  { re: /bulldog|heavy hauler|cargo van|ground-hauler/, file: "L1-setting-primer" },
+  { re: /\bwired?\b|\bmatrix\b|\boverlay\b|\bjacke?d?\b|\blinked\b|\bconnect(?:ion|ed)?\b|\bnodes?\b|\bice\b|\btraces?\b|\bbiofeedback\b|\bdecks?\b|\bpersonas?\b|\bpayloads?\b|\bsuites?\b|\bping\b/, file: "21-the-wire" },
+  { re: /\bcombat\b|\bfights?\b|\brounds?\b|\bstamina\b|\brecover(?:y|ies)\b|\bcrisis\b|\bstrikes?\b|\bfire\b|\bmaneuvers?\b/, file: "04-combat" },
+  { re: /power.?roll|\btests?\b|\bedges?\b|\bbanes?\b|\bfortune\b|\bcharacteristics?\b/, file: "03-tests-power-rolls" },
+  { re: /\bchrome\b|\bimplants?\b|\bbody integrity\b|\bweave\b/, file: "09-chrome-body-integrity" },
+  { re: /\bkits?\b|\bgear\b|\bnuyen\b|\bwealth\b|\barmou?r\b|\bweapons?\b/, file: "08-kits-gear-wealth" },
+  { re: /\bmachines?\b|\bdrones?\b|\bvehicles?\b|\briggers?\b|\bjump-?in\b|\brcc\b/, file: "23-machines" },
+  { re: /\bhovercraft\b|\baltitude limiter\b|street.?pov|\bpov\b|\blane-hopper\b|\bstar-chopper\b|hover bike|hover.?car|limiter band/, file: "L1-setting-primer" },
+  { re: /\bhovercraft\b|\baltitude limiter\b|street.?pov|\blane-hopper\b|\bstar-chopper\b|how the flats move/, file: "03-life-on-the-flats" },
+  { re: /\bbulldog\b|heavy hauler|cargo van|ground-hauler/, file: "L1-setting-primer" },
   { re: /hover \/ pov|ground-hauler|\bvtol\b|limiter band/, file: "28-glossary-slang" },
-  { re: /mod|autosoft|install/, file: "10-mods" },
-  { re: /hacker|bandwidth|program|compile agent|decompile agent|\bagents?\b|probe agent|spike agent|daemon agent|watchdog agent|integrity spike/, file: "19-hacker" },
-  { re: /voidmark|the mark|blacklight/, file: "L4-voidmark" },
-  { re: /hands off|accord|actuator/, file: "L5-hands-off-accords" },
-  { re: /lifestyle|downtime|respite|upkeep/, file: "26-lifestyle-downtime" },
-  { re: /veil|essence|pact|sprite/, file: "22-the-veil" },
-  { re: /switchboard|cassavir/, file: "04-switchboard" },
+  { re: /\bmods?\b|\bautosofts?\b|\binstall(?:ing|ed)?\b/, file: "10-mods" },
+  { re: /\bhackers?\b|\bbandwidth\b|\bprograms?\b|compile agent|decompile agent|\bagents?\b|probe agent|spike agent|daemon agent|watchdog agent|integrity spike/, file: "19-hacker" },
+  { re: /\bvoidmark\b|\bthe mark\b|\bblacklight\b/, file: "L4-voidmark" },
+  { re: /hands off|\baccords?\b|\bactuators?\b/, file: "L5-hands-off-accords" },
+  { re: /\blifestyle\b|\bdowntime\b|\brespite\b|\bupkeep\b/, file: "26-lifestyle-downtime" },
+  { re: /\bveil\b|\bessence\b|\bpacts?\b|\bsprites?\b|\brituals?\b|\bmagnitude\b|\bsealing\b/, file: "22-the-veil" },
+  // 0.3.134 (G7): the summons pack, rendered into docs/raw by tools/gen-summon-statblocks.mjs. Without
+  // this, "how do I make my electrical zephyr attack?" had no chapter to land in at all.
+  { re: /\bsummons?\b|\bcompanions?\b|\bzephyrs?\b|\bembers?\b|\bboulders?\b|\belementals?\b|\bspirits?\b|stat.?blocks?|\bwarding aegis\b|\bguardian\b/, file: "29-summon-stat-blocks" },
+  { re: /\belementalist\b|\battunement\b|hurl element|elemental shaping/, file: "17-elementalist" },
+  { re: /street.?priest|\bconviction\b|invoke the pact|lay on hands/, file: "18-street-priest" },
+  { re: /\bconstructs?\b|\bpets?\b|action economy|\bextension\b|\bindependent\b/, file: "28-constructs-pets-faq" },
+  { re: /\bswitchboard\b|\bcassavir\b/, file: "04-switchboard" },
   { re: /neon shambles|\bshambles\b/, file: "05-the-neon-shambles" },
   { re: /\bstacks\b/, file: "06-the-stacks" },
-  { re: /slackwater/, file: "07-slackwater" },
-  { re: /interchange/, file: "08-the-interchange" },
+  { re: /\bslackwater\b/, file: "07-slackwater" },
+  { re: /\binterchange\b/, file: "08-the-interchange" },
   { re: /cinder market/, file: "09-cinder-market" },
-  { re: /spillway/, file: "10-the-spillway" },
-  { re: /glasshook/, file: "11-glasshook" },
-  { re: /wireside/, file: "12-wireside" },
+  { re: /\bspillway\b/, file: "10-the-spillway" },
+  { re: /\bglasshook\b/, file: "11-glasshook" },
+  { re: /\bwireside\b/, file: "12-wireside" },
   { re: /gallows end|\bgallows\b/, file: "13-gallows-end" },
-  { re: /cinderhold|outer gate|cael marrow/, file: "14-cinderhold-and-the-outer-gate" },
+  { re: /\bcinderhold\b|outer gate|cael marrow/, file: "14-cinderhold-and-the-outer-gate" },
   { re: /night roster/, file: "15-the-night-roster" },
   { re: /what the flats are|(?:^|\b)the flats\b|ossian reach/, file: "01-what-the-flats-are" },
   { re: /ossian reach|reach color|street color|(?:^|\b)the flats\b/, file: "L3-ossian-reach-color" },
   { re: /wired flats|matrix gazetteer|master node/, file: "wired-flats-gazetteer" },
   { re: /running ossian|session loop|home hive/, file: "27-running-ossian-reach" },
-  { re: /peoples|elvani|corran|goliar|founding/, file: "L2-peoples-and-world" },
-  { re: /cosmology|the light|dark one|megacorp|the ten/, file: "L1-setting-primer" },
+  { re: /\bpeoples?\b|\belvani\b|\bcorran\b|\bgoliar\b|\bfounding\b/, file: "L2-peoples-and-world" },
+  { re: /\bcosmology\b|the light\b|dark one\b|\bmegacorps?\b|the ten\b/, file: "L1-setting-primer" },
 ];
 
-/**
- * Multi-word / proper-noun place names. Longer phrases first so
- * "mama cassavir" wins over "cassavir".
- */
 const PLACE_PHRASES = [
   "mama cassavir",
   "neon shambles",
@@ -263,6 +294,37 @@ export function scoreChunk(chunk, query) {
 
   score *= 1 + (hits / tokens.length);
   return score;
+}
+
+/**
+ * 0.3.134 (G7) — the string retrieval actually searches on.
+ *
+ * Three problems, one fix:
+ *
+ *  * **Follow-ups retrieved nothing useful.** "how do I make my electrical zephyr attack?" followed by
+ *    "and how much damage?" searched for *damage* alone, which matches every chapter in the book. The
+ *    **previous user turn** is folded in, at lower weight (it is appended once, so it contributes
+ *    tokens without out-voting the actual question).
+ *  * **The selected token was invisible to retrieve.** A player with an Electrical Zephyr selected and
+ *    a question about "it" gave retrieve the word "it". The selected token's **name, actor type and
+ *    dsid** are folded in too.
+ *  * The *prompt* the model sees is unchanged — this only widens what gets fetched for it.
+ *
+ * @param {object} spec
+ * @param {string} spec.query                 The current message.
+ * @param {Array<{role: string, content: string}>} [spec.history]  Oldest-first; the last **user**
+ *                                            turn before this one is the one that carries context.
+ * @param {{name?: string, type?: string, dsid?: string}|null} [spec.token]  The selected token.
+ * @returns {string}
+ */
+export function retrievalQuery({ query, history = [], token = null } = {}) {
+  const parts = [String(query ?? "").trim()];
+  const priorUser = [...(history ?? [])].reverse().find(turn => turn?.role === "user" && String(turn.content ?? "").trim());
+  if (priorUser) parts.push(String(priorUser.content).trim().slice(0, 400));
+  if (token) {
+    parts.push([token.name, token.type, token.dsid].filter(Boolean).join(" "));
+  }
+  return parts.filter(Boolean).join(" ").trim();
 }
 
 /**

@@ -20,7 +20,7 @@ The whole chain lives on the **hero's sheet**. Nothing is bought or built on the
 1. Buy / own the **chassis** (a drone or vehicle Item from Ghostwire Vehicles & Drones).
 2. Buy a **Weaponry kit** (§5F) and **Install onto…** the chassis. One weaponry kit at a time —
    `exclusiveKit: "weaponry"` still refuses a second, and swapping means uninstalling the first.
-3. Buy the **gun** (§3H, or a Mounted-tagged heavy like Wallbreaker).
+3. Buy the **gun** (§3H, or a Mounted-tagged heavy like Ferrum Mason .60).
 4. Right-click the gun's row on the hero sheet (or its ⋮) → **Mount on…**, pick the kit, confirm.
    The prompt lists every kit the hero owns; ones that cannot take this gun are listed disabled with
    the reason ("hardpoints full", "needs a medium mount", "kit not installed").
@@ -36,7 +36,7 @@ which fielded machine it reached, matching the 0.3.111 *Install onto…* card.
 
 ## 2 · Firing it — Gunnery, not Heavy Weapons
 
-**B49 lock:** a gun on a hardpoint answers to **Gunnery**. Mounting a Wallbreaker swings its use-ability's
+**B49 lock:** a gun on a hardpoint answers to **Gunnery**. Mounting a Ferrum Mason .60 swings its use-ability's
 +2 from Heavy Weapons to Gunnery *without moving the Item*; unmounting swings it back. The §3H SKUs are
 Gunnery always — they have no hand-held mode.
 
@@ -61,12 +61,12 @@ Two requirements run the other way:
 - A gun tagged **Integrated** (Hailstorm, God's-Finger, Quiverframe) needs the battery mount —
   **Heavy Hardpoint only**.
 
-Which hand-held weapons are mount hardware: **Heavy band → category-3** (Chatterbox, Wallbreaker,
-Grease-Gun, Hand-of-God, Dragon's Breath), **Anti-veh band → heavy** (Siege Missile, Tank-Cracker).
+Which hand-held weapons are mount hardware: **Heavy band → category-3** (IW Barrage-12, Ferrum Mason .60,
+Nyx Grinder, IW Absolution, Lancet Cauterizer), **Anti-veh band → heavy** (Kestrel Talon, Ferrum Keystone).
 Light and Medium sidearms are not; the prompt says so rather than silently allowing it. Homebrew can
 override either way with `flags.draw-steel-ghostwire.gear.mountScale` or `gear.mountable: false`.
 
-**Scale sanity stays yours.** Nothing stops a micro-drone with a Gun Rack from carrying a Wallbreaker —
+**Scale sanity stays yours.** Nothing stops a micro-drone with a Gun Rack from carrying a Ferrum Mason .60 —
 the kit's cost and echelon are the gate the rules print, not a frame-size check. If it reads absurd at
 your table, say no; that is a Director call, not a bug.
 
@@ -120,7 +120,7 @@ because a mount vendor sells both. The Weapons Cage still carries everything, as
     installs alongside the weaponry kit, a **Rigger Cocoon** still enables **Jump-In**, and Jump-In /
     Jump-Out still work with a gun mounted.
 12. Kiosk: drop a kiosk, type **Vehicle weapons** → *Hardpoint Bay*, **Restock from preset** → the nine
-    SKUs plus Wallbreaker and Siege Missile, priced from the catalog.
+    SKUs plus Ferrum Mason .60 and Kestrel Talon, priced from the catalog.
 
 ## 6 · Notes and limits
 

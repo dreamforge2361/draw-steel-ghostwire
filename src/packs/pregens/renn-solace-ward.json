@@ -1197,6 +1197,24 @@
               "type": "",
               "perkType": []
             }
+          },
+          "gwMedicFieldTri0": {
+            "_id": "gwMedicFieldTri0",
+            "img": null,
+            "repick": {},
+            "name": "Field Triage",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "description": "<p>You gain <strong>Field Triage</strong> (2 Reagents). It is a Medic ability: nobody else in the crew has it, and there is no universal First Aid. Everyone else stabilises with Trauma Patches and medkits.</p>",
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.abilities.Item.pJY4ybZUtkH9HDxy"
+              }
+            ],
+            "chooseN": null,
+            "sort": 1500
           }
         },
         "level": 1,
@@ -2508,6 +2526,70 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!b8QOA54jDDokYEJZ.U0Z4x0W8jTaLKDqG"
+    },
+    {
+      "_id": "pJY4ybZUtkH9HDxy",
+      "name": "GHOSTWIRE.Abilities.FieldTriage.Name",
+      "type": "ability",
+      "img": "icons/tools/medical/bandages-adhesive.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "04-medic",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "field-triage",
+        "keywords": [],
+        "type": "maneuver",
+        "category": "",
+        "resource": 2,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "2",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "ally",
+          "value": 3,
+          "custom": ""
+        },
+        "story": "GHOSTWIRE.Abilities.FieldTriage.Story",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Abilities.FieldTriage.Description",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!b8QOA54jDDokYEJZ.pJY4ybZUtkH9HDxy"
     },
     {
       "_id": "pHGl6HKhCu71uoNq",
@@ -4345,70 +4427,6 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!b8QOA54jDDokYEJZ.1W0HIoL2SAcbTU6W"
-    },
-    {
-      "_id": "pJY4ybZUtkH9HDxy",
-      "name": "GHOSTWIRE.Abilities.FieldTriage.Name",
-      "type": "ability",
-      "img": "icons/tools/medical/bandages-adhesive.webp",
-      "system": {
-        "source": {
-          "book": "Ghostwire Core Rulebook",
-          "page": "04-medic",
-          "license": "Draw Steel Creator License"
-        },
-        "_dsid": "field-triage",
-        "keywords": [],
-        "type": "maneuver",
-        "category": "",
-        "resource": 2,
-        "trigger": "",
-        "distance": {
-          "type": "ranged",
-          "primary": "2",
-          "secondary": "1",
-          "tertiary": "1"
-        },
-        "damageDisplay": "melee",
-        "target": {
-          "type": "ally",
-          "value": 3,
-          "custom": ""
-        },
-        "story": "GHOSTWIRE.Abilities.FieldTriage.Story",
-        "power": {
-          "roll": {
-            "formula": "@chr",
-            "characteristics": [],
-            "reactive": false
-          },
-          "effects": {}
-        },
-        "effects": {
-          "before0000000000": {
-            "_id": "before0000000000",
-            "type": "base",
-            "description": "GHOSTWIRE.Abilities.FieldTriage.Description",
-            "before": true,
-            "name": "",
-            "img": null,
-            "sort": 0
-          }
-        },
-        "prerequisites": {
-          "value": "",
-          "dsid": [],
-          "level": null
-        }
-      },
-      "folder": null,
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {},
-      "effects": [],
-      "_key": "!actors.items!b8QOA54jDDokYEJZ.pJY4ybZUtkH9HDxy"
     },
     {
       "_id": "Xc5MebcXHYG1hdQR",

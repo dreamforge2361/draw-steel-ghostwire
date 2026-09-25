@@ -36,7 +36,7 @@
         "value": 1,
         "letter": "S"
       },
-      "stability": 0,
+      "stability": 1,
       "turns": 1
     },
     "movement": {
@@ -322,6 +322,72 @@
         },
         "_dsid": "elemental-rank-1-twin-elemental-summon",
         "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "RVaocxaxP6hAInUe",
+      "_key": "!actors.items!OIbwnjvyiRDmSkkC.RVaocxaxP6hAInUe",
+      "name": "GHOSTWIRE.Summons.Command.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-rank-1-command",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "summonCommand000": {
+            "_id": "summonCommand000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Command.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
         "prerequisites": {
           "value": "",
           "dsid": [],

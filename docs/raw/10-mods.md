@@ -212,14 +212,14 @@ Bench skill: **Repair** for physical weapon mods, **Electronics** for Wired / sm
 
 | Mod *(slang / corp / sci)* | Slot | ¥ | Effect | Skill | Tags |
 |---|---|---|---|---|---|
-| Smartlink / Ares SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Electronics | Wired Smart |
-| Suppressor / SternMeyer Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Repair | Quiet |
-| Recoil Comp / Ares Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Repair | — |
-| Extended Mag / Ares Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Repair | — |
+| Smartlink / Meridian Blacklight SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Electronics | Wired Smart |
+| Suppressor / Grey Ledger Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Repair | Quiet |
+| Recoil Comp / IW Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Repair | — |
+| Extended Mag / IW Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Repair | — |
 | Smart-Scope / Zeiss Hawkeye / optical smart-sight | 1 | 600 | Improves optimal range band by one step; enables Smart on non-datajack users. | Electronics | Smart |
-| Gas-Seal Kit / Shiawase Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Repair | Sealed |
-| Underbarrel Mount / Ares Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Repair | — |
-| Personalized Grip / Fichetti Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Electronics | Wired |
+| Gas-Seal Kit / Deepworks Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Repair | Sealed |
+| Underbarrel Mount / IW Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Repair | — |
+| Personalized Grip / Velvet Arms Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Electronics | Wired |
 
 ### Wearable armor + shield mods — Gear master §2F
 
@@ -293,7 +293,7 @@ Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repa
 
 #### Weaponry kits (one at a time)
 
-**The kit is the mount, not the gun.** A weaponry kit adds hardpoints; a concrete Category-3 weapon goes into them. Buy that gun from Gear master **§3H** (the dedicated vehicle-mount SKUs) or use a Mounted-tagged heavy from **§3C** (Wallbreaker, Siege Missile). Scale ladder: **category-3 < medium < heavy** — a mount takes any gun at its own scale or below. A **turret** gun needs a Turret Ring; an **integrated** package needs a Heavy Hardpoint. However it got there, a gun on a hardpoint is fired with **Gunnery**, never its hand-held weapon skill. In Foundry: *Mount on…* / *Unmount weapon* on the weapon’s row; Deploy mirrors the mounted gun onto the machine Actor.
+**The kit is the mount, not the gun.** A weaponry kit adds hardpoints; a concrete Category-3 weapon goes into them. Buy that gun from Gear master **§3H** (the dedicated vehicle-mount SKUs) or use a Mounted-tagged heavy from **§3C** (Ferrum Mason .60, Kestrel Talon). Scale ladder: **category-3 < medium < heavy** — a mount takes any gun at its own scale or below. A **turret** gun needs a Turret Ring; an **integrated** package needs a Heavy Hardpoint. However it got there, a gun on a hardpoint is fired with **Gunnery**, never its hand-held weapon skill. In Foundry: *Mount on…* / *Unmount weapon* on the weapon’s row; Deploy mirrors the mounted gun onto the machine Actor.
 
 | Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
 |---|---|---|---|---|

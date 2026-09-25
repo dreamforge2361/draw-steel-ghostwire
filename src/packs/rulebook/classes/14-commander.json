@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "NPoo32qBYgtY5zHO",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.NPoo32qBYgtY5zHO",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/03-commander-face.md`*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/03-commander-face.md</code></em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "g5lJXH3fcN4HigAA",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.g5lJXH3fcN4HigAA",
+      "_id": "dPxKA1L9GBzLyWJz",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.dPxKA1L9GBzLyWJz",
       "name": "Class Chassis",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "vnC7q1tZoTQa5YZG",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.vnC7q1tZoTQa5YZG",
+      "_id": "xfDw9cq81rqqZqHB",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.xfDw9cq81rqqZqHB",
       "name": "Influence — Your Heroic Resource",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "RLvZUJxGVaC3APDG",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.RLvZUJxGVaC3APDG",
+      "_id": "s9nyPZeX1QnBHxNX",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.s9nyPZeX1QnBHxNX",
       "name": "The Mark Mechanic (Combat + Social — Dual-Mode)",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "nGS48SiSYEctcnhE",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.nGS48SiSYEctcnhE",
+      "_id": "DJGeN2oaEFZKNLSE",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.DJGeN2oaEFZKNLSE",
       "name": "Signature Abilities (No Influence Cost)",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "Qm0Tymi79QEeoLB6",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.Qm0Tymi79QEeoLB6",
+      "_id": "NMqZigK34WfBF0ez",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.NMqZigK34WfBF0ez",
       "name": "Heroic Abilities — Cost Bands 1 Through 11",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "2ar30TACx7MWl6Si",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.2ar30TACx7MWl6Si",
+      "_id": "7W4XZ3jr9EPV1Kkl",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.7W4XZ3jr9EPV1Kkl",
       "name": "Turn the Tide — Deep Dive",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "UHABgQcGSqBzFsFG",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.UHABgQcGSqBzFsFG",
+      "_id": "UKiqjbTaKsJyDNNZ",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.UKiqjbTaKsJyDNNZ",
       "name": "The Right Word — Deep Dive (Flex Hinge)",
       "type": "text",
-      "sort": 800000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "C0FpOwxEwuaPT8jQ",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.C0FpOwxEwuaPT8jQ",
+      "_id": "wtHycV6GsBThpe3a",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.wtHycV6GsBThpe3a",
       "name": "Command Doctrines (Subclasses)",
       "type": "text",
-      "sort": 900000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "fpVa6i0GfH39tfae",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.fpVa6i0GfH39tfae",
+      "_id": "Be3HzLfQ3jFXEjNK",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.Be3HzLfQ3jFXEjNK",
       "name": "Level 1-10 Progression Table",
       "type": "text",
-      "sort": 1000000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -287,11 +259,11 @@
       "flags": {}
     },
     {
-      "_id": "MClSLlniLRHr5QJ7",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.MClSLlniLRHr5QJ7",
+      "_id": "qQ8hl2LjebIPf4pi",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.qQ8hl2LjebIPf4pi",
       "name": "Core Class Features (Non-Doctrine)",
       "type": "text",
-      "sort": 1100000,
+      "sort": 1000000,
       "title": {
         "show": true,
         "level": 1
@@ -315,11 +287,11 @@
       "flags": {}
     },
     {
-      "_id": "cA0MsqcomyOymNj2",
-      "_key": "!journal.pages!u2BWL9brmSsJGtx0.cA0MsqcomyOymNj2",
+      "_id": "a36lc3rgtWFPQjbh",
+      "_key": "!journal.pages!u2BWL9brmSsJGtx0.a36lc3rgtWFPQjbh",
       "name": "Kit & Chrome interaction (Social Chrome, Chrome-positive rule)",
       "type": "text",
-      "sort": 1200000,
+      "sort": 1100000,
       "title": {
         "show": true,
         "level": 1

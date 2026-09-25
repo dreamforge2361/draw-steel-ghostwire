@@ -19,6 +19,7 @@
 // flags.<module>.veilSummons = { uuids }. The world scan by `summoner` is the truth; the caster flag is a mirror.
 
 import { pactOf } from "./pact-strike.mjs";
+import { elementAdjective, elementalName } from "./elements.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
@@ -232,6 +233,50 @@ function stamp(pet, caster) {
   };
 }
 
+/* -------------------------------------------- 0.3.134 (D / G7) — the element a summon wears */
+
+/** A pack row stores a lang key in `name`; a world copy stores the printed name. Handle both. */
+const printedName = name => ((name && game.i18n.has(name)) ? game.i18n.localize(name) : String(name ?? ""));
+
+/** The element flag scripts/elementalist.mjs wrote on the summoning ability, or null. */
+export const abilityElement = ability => {
+  const element = ability?.getFlag?.(MODULE_ID, "summonElement");
+  return elementAdjective(element) ? element : null;
+};
+
+/**
+ * Type a summon's strikes to the element it was called with — 0.3.134 (G7).
+ *
+ * A Rank 2 elemental's strike ships untyped in the pack, because the pack row cannot know whether
+ * this one is a fire elemental or an acid one; that is decided at the moment it is summoned. Every
+ * damage tier of every damage effect on every ability the template carries is stamped, in place, on
+ * the creation data — before `Actor.create`, so there is no second write and no flicker.
+ *
+ * @param {object[]} items  `data.items` from `game.actors.fromCompendium`.
+ * @param {string} element
+ * @returns {number} how many tiers were typed.
+ */
+export function typeSummonStrikes(items, element) {
+  if (!elementAdjective(element)) return 0;
+  let typed = 0;
+  for (const item of items ?? []) {
+    if (item?.type !== "ability") continue;
+    const effects = item.system?.power?.effects ?? {};
+    for (const effect of Object.values(effects)) {
+      if ((effect?.type ?? "") !== "damage") continue;
+      for (const tier of ["tier1", "tier2", "tier3"]) {
+        const row = effect.damage?.[tier];
+        if (!row) continue;
+        // Never overwrite a type the card chose for itself (a Greater's Ancient Flame is fire).
+        if (Array.isArray(row.types) && row.types.length) continue;
+        row.types = [element];
+        typed += 1;
+      }
+    }
+  }
+  return typed;
+}
+
 /**
  * Stamp one Veil summon from its template beside the caster.
  * @param {Actor} caster
@@ -244,9 +289,11 @@ function stamp(pet, caster) {
  * @param {number|null} [spec.rounds]    Combat rounds it lasts; null = until dismissed / encounter rule.
  * @param {boolean} [spec.scaleRank]     Re-bind at the new cap rank on level-up (Summon Elemental at its cap).
  * @param {object} [spec.position]      {x, y} instead of the ring beside the caster.
+ * @param {string|null} [spec.element]   The element it was called with: names the token
+ *                                       ("Electrical Zephyr") and types its strikes (0.3.134 D / G7).
  * @returns {Promise<Actor|null>}
  */
-export async function summonVeil(caster, { dsid, sourceAbility, rank = 1, hybridTier, bind = null, rounds = null, scaleRank = false, position } = {}) {
+export async function summonVeil(caster, { dsid, sourceAbility, rank = 1, hybridTier, bind = null, rounds = null, scaleRank = false, position, element = null } = {}) {
   if (!canvas.scene) { ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`)); return null; }
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) { ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`)); return null; }
   const template = await templateFor(dsid);
@@ -267,6 +314,9 @@ export async function summonVeil(caster, { dsid, sourceAbility, rank = 1, hybrid
   };
   if (kind === "elemental") flags.rank = rank;
   if (kind === "spirit") flags.pact = pact;
+  // 0.3.134 (D): recorded even for a spirit, because a Street Priest's Guardian can be called with an
+  // element too and a re-summon has to be able to read back what this one was.
+  if (element) flags.element = element;
   const probe = { getFlag: (scope, key) => flags[key] };
   const { stamina, update } = stamp(probe, caster);
   flags.formula = (kind === "spirit") ? `spirit-${hybridTier}` : `elemental-rank-${rank}`;
@@ -280,6 +330,24 @@ export async function summonVeil(caster, { dsid, sourceAbility, rank = 1, hybrid
   }
 
   const data = game.actors.fromCompendium(template);
+  // 0.3.134 (D / G7) — "<Element> <Name>" on the Actor and on the token it stamps, and the element
+  // written onto every untyped strike tier the template carries. `elementalName` strips any element
+  // adjective already on the front, so a re-summon or a rank swap never produces
+  // "Electrical Electrical Zephyr".
+  if (element) {
+    const named = elementalName(printedName(data.name), element, key => game.i18n.localize(key));
+    data.name = named;
+    foundry.utils.setProperty(data, "prototypeToken.name", named);
+    typeSummonStrikes(data.items, element);
+    // Rule 7 of the eight: an elemental resists its own element at rank × 2. Applied here rather than
+    // in the pack row because the pack row does not know which element this one is. A spirit gets no
+    // such resistance — only elementals are made of their element.
+    if (kind === "elemental") {
+      const value = Math.max(0, (Number(rank) || 1) * 2);
+      const current = Number(foundry.utils.getProperty(data, `system.damage.immunities.${element}`) ?? 0);
+      foundry.utils.setProperty(data, `system.damage.immunities.${element}`, Math.max(current, value));
+    }
+  }
   foundry.utils.mergeObject(data, {
     folder: (await summonFolder())?.id ?? null, ownership,
     "system.stamina": { value: stamina, max: stamina, temporary: 0 },
@@ -386,6 +454,8 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
   if (!isVeilAbility(ability)) return [];
   const manual = tier === null;
   const bind = manual ? "clean" : BIND_BY_TIER[tier];
+  // 0.3.134 (D): scripts/elementalist.mjs wrote the pick onto this ability before the roll.
+  const element = abilityElement(ability);
   const summoned = [];
   const name = foundry.utils.escapeHTML(caster.name);
 
@@ -398,7 +468,7 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
     for (const old of veilSummons(caster).filter(isCompanion)) await dismissVeil(old, { silent: true });
     const pet = await summonVeil(caster, {
       dsid: `companion-${dsid.replace("-companion", "")}`, sourceAbility: dsid, rank: 1,
-      hybridTier: "extension", rounds: COMPANION_ROUNDS,
+      hybridTier: "extension", rounds: COMPANION_ROUNDS, element,
     });
     if (pet) {
       summoned.push(pet);
@@ -416,7 +486,7 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
     await makeRoom(caster, 1);
     const pet = await summonVeil(caster, {
       dsid: `elemental-rank-${rank}`, sourceAbility: dsid, rank, bind,
-      rounds: (bind === "broken") ? BROKEN_ROUNDS : null, scaleRank: rank === cap,
+      rounds: (bind === "broken") ? BROKEN_ROUNDS : null, scaleRank: rank === cap, element,
     });
     if (pet) summoned.push(pet);
   } else if (dsid === "twin-elemental-summon") {
@@ -435,7 +505,7 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
     for (const rank of ranks) {
       const pet = await summonVeil(caster, {
         dsid: `elemental-rank-${rank}`, sourceAbility: dsid, rank, bind,
-        rounds: (bind === "broken") ? BROKEN_ROUNDS : null,
+        rounds: (bind === "broken") ? BROKEN_ROUNDS : null, element,
       });
       if (pet) summoned.push(pet);
     }
@@ -443,7 +513,7 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
     await makeRoom(caster, 1);
     const pet = await summonVeil(caster, {
       dsid: "elemental-greater", sourceAbility: dsid, rank: greaterRank(caster), hybridTier: "independent", bind,
-      rounds: (bind === "broken") ? BROKEN_ROUNDS : null,
+      rounds: (bind === "broken") ? BROKEN_ROUNDS : null, element,
     });
     if (pet) summoned.push(pet);
   } else if (dsid === "invoke-the-pact") {
@@ -469,7 +539,7 @@ export async function summonFromAbility(ability, { tier = null } = {}) {
     }
     // One invoked entity at a time: a new invocation replaces the last.
     for (const old of veilSummons(caster).filter(p => flag(p, "kind") === "spirit")) await dismissVeil(old, { silent: true });
-    const pet = await summonVeil(caster, { dsid: spirit, sourceAbility: dsid, hybridTier: form, bind: manual ? null : BIND_BY_TIER[tier] });
+    const pet = await summonVeil(caster, { dsid: spirit, sourceAbility: dsid, hybridTier: form, bind: manual ? null : BIND_BY_TIER[tier], element });
     if (pet) summoned.push(pet);
   }
 
@@ -507,6 +577,9 @@ export async function refreshVeilSummons(caster, { silent = false } = {}) {
       const spec = {
         dsid: `elemental-rank-${cap}`, sourceAbility: flag(pet, "sourceAbility"), rank: cap,
         bind: flag(pet, "bind"), scaleRank: true, position,
+        // 0.3.134 (D): a rank swap on level-up re-summons from the template, so the element has to
+        // ride along or an Electrical Elemental would come back untyped and unnamed.
+        element: flag(pet, "element") ?? null,
       };
       await dismissVeil(pet, { silent: true });
       await summonVeil(caster, spec);
@@ -707,6 +780,7 @@ export function registerVeilSummons() {
       ...(module.api ?? {}),
       summonVeil, summonFromAbility, dismissVeil, dismissAllVeil, refreshVeilSummons,
       veilSummons, veilSummoner, bindCapRank, greaterRank, elementalStamina, spiritStamina,
+      abilityElement, typeSummonStrikes,
     };
   }
   console.log(`${MODULE_ID} | Veil summons: elementals and pact spirits registered (ability use + summon ability item sheets)`);

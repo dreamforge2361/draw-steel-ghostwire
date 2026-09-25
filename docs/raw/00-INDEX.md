@@ -47,8 +47,11 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67; Contacts pointer B75; B92 standalone) | Print Ch 10; upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual; Contacts/hireling pointer |
 | `27-corruption-taint.md` | Corruption & Taint | GW draft (B80 lock 2026-09-19) | Shared hero Taint 0–12; Clean/Marked/Stained/Claimed/Hollowed; +1/scene except pact; rest never cleanses; chrome does not raise Taint; Mutant Load stays retired |
 | `28-constructs-pets-faq.md` | Constructs & Pets — Action Economy FAQ | GW player FAQ (S7 2026-09-22) | Restates the Agent / sprite hybrid bands (`19`, `20`), Veil §C3 extension vs. independent (`22`), elementals (`17`), Invoke the Pact (`18`), and Lock A (`21`). Adds no new numbers. |
+| `29-summon-stat-blocks.md` | Summon Stat Blocks | GW generated (0.3.134) | Every companion, elemental, spirit, sprite and agent rendered from `src/packs/summons/**` by `tools/gen-summon-statblocks.mjs`, plus the eight locked summon-command rules. Edit the pack rows, not this file. |
 
 Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17 Elementalist, 18 Street Priest, 19 Hacker, 20 Technomancer.
+
+**0.3.134:** the eight locked summon-command rules are printed in `17`, `18`, `22`, `28` and `29`, and are generated into all five from `tools/data/summon-command-rules.md` by `tools/summon-rules-to-raw.mjs` — edit that file, not the chapters.
 
 ## Assembly rules
 1. **One concern per chapter** — procedures, numbers, lists, examples that teach the rule. Cut “in the Reach…” fiction unless it is a mechanical example.

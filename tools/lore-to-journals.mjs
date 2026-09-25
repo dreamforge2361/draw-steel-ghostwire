@@ -32,6 +32,10 @@ const FOLDERS = [
   { key: "Reach", id: "gwLorePackReach0", dir: "reach", label: "Ossian Reach", files: ["L3-ossian-reach-color"] },
   { key: "Factions", id: "gwLorePackFact00", dir: "factions", label: "VOIDMARK & Accords", files: ["L4-voidmark", "L5-hands-off-accords"] },
   { key: "MagicalSocieties", id: "gwLorePackSoc000", dir: "magical-societies", label: "Magical Societies", files: ["L6-measure-collegium", "L7-wickkeepers", "L8-ash-survey"] },
+  // 0.3.134 (C) — who builds the guns. Its own folder rather than a page under Setting, because
+  // tools/ten-conglomerates-art-smoke.mjs counts the megacorps folder and the Setting folder is
+  // one entry per L-file; a new L-file therefore needs a new folder row, not a new file in an old one.
+  { key: "ArmsMakers", id: "gwLorePackArms00", dir: "arms-makers", label: "Arms Makers", files: ["L9-arms-makers"] },
 ];
 
 const FILE_CHAPTER = {
@@ -43,6 +47,7 @@ const FILE_CHAPTER = {
   "L6-measure-collegium": "L6",
   "L7-wickkeepers": "L7",
   "L8-ash-survey": "L8",
+  "L9-arms-makers": "L9",
 };
 
 const langKey = file => file.replace(/^L\d+-/, "").split("-").map(w => w[0].toUpperCase() + w.slice(1)).join("");

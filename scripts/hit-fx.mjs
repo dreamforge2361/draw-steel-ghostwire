@@ -67,6 +67,8 @@ import {
   preloadFxTextures, strokeArc, strokeCircle, strokePath, strokeQuad,
 } from "./fx-canvas.mjs";
 
+import { elementFx, elementOfAbility } from "./elements.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.HitFx";
 const SFX = `modules/${MODULE_ID}/assets/sfx`;
@@ -232,9 +234,16 @@ export function spellFlavour(name = "") {
  * @param {string} [name]  The ability's name, for the spell flavour.
  * @returns {object|null}
  */
-export function hitFxProfile(kind, name = "") {
+export function hitFxProfile(kind, name = "", { element = null } = {}) {
   const profile = HIT_FX_PROFILES[kind];
   if (!profile) return null;
+  // 0.3.134 (E): an element the caller actually knows beats any guess made from the card's name.
+  // Hurl Element's name says nothing about fire; the damage type on the card does, and that is what
+  // scripts/elementalist.mjs writes there before the roll. The override applies to every kind, not
+  // just `spell`, because an elemental summon's strike is classified as a melee hit and still has
+  // a colour: an Electrical Zephyr's swipe should not be white.
+  const elemental = elementFx(element);
+  if (elemental) return { ...profile, ...elemental, flavour: String(element).toLowerCase() };
   if (kind !== "spell") return { ...profile, flavour: null };
   const flavour = spellFlavour(name);
   return { ...profile, sound: flavour.sound, color: flavour.color, core: flavour.core, flavour: flavour.key };
@@ -761,6 +770,7 @@ function onHitFxSocket(payload) {
     from,
     at,
     name: payload.name ?? "",
+    element: payload.element ?? null,             // 0.3.134 (E): the table sees the same colour
     silent: true,                                  // AudioHelper already broadcast the impact
     relay: false,                                  // and this client must not relay it onward
     mode: "builtin",                               // Sequencer broadcasts its own video
@@ -776,6 +786,7 @@ function onHitFxSocket(payload) {
  * @param {{x: number, y: number}|null} [opts.from]  The attacker's token centre (travel origin).
  * @param {Array<{x: number, y: number}>} [opts.at]  Where it lands. Empty falls back to a muzzle flash.
  * @param {string} [opts.name]  The ability's name, so a spell picks its flavour.
+ * @param {string|null} [opts.element]  A damage type ("fire", "cold", …). Beats the name-based flavour.
  * @param {boolean} [opts.silent]  Draw only — the sound already reached this client.
  * @param {boolean} [opts.relay]   Broadcast the resolved points to the rest of the table.
  * @param {"auto"|"builtin"} [opts.mode]  `builtin` never touches Sequencer.
@@ -783,10 +794,10 @@ function onHitFxSocket(payload) {
  * @returns {{kind: string, sound: string, flavour: string|null, via: "sequencer"|"builtin"|"origin"|"none"}|null}
  */
 export function playHitFx(kind, {
-  from = null, at = [], name = "",
+  from = null, at = [], name = "", element = null,
   silent = false, relay = true, mode = "auto", impact = true,
 } = {}) {
-  const profile = hitFxProfile(kind, name);
+  const profile = hitFxProfile(kind, name, { element });
   if (!profile || !enabled()) return null;
 
   if (!silent) playSound(profile.sound);
@@ -815,7 +826,7 @@ export function playHitFx(kind, {
       impactSize: Math.min(1.2, profile.impactSize), sparks: 0,
       from: null, to: origin, impact: true,
     });
-    if (relay) emitHitFx({ kind, name, from: origin, at: [], beats: "both" });
+    if (relay) emitHitFx({ kind, name, element, from: origin, at: [], beats: "both" });
     return { ...result, via: "origin" };
   }
 
@@ -835,7 +846,7 @@ export function playHitFx(kind, {
       sequence.play();
       if (!travelFile && profile.travel && origin) {
         for (const point of points) builtin({ to: point, impact: false });
-        if (relay) emitHitFx({ kind, name, from: origin, at: points, beats: "travel" });
+        if (relay) emitHitFx({ kind, name, element, from: origin, at: points, beats: "travel" });
       }
       return { ...result, via: "sequencer" };
     } catch (error) {
@@ -844,7 +855,7 @@ export function playHitFx(kind, {
   }
 
   for (const point of points) builtin({ to: point, impact });
-  if (relay) emitHitFx({ kind, name, from: origin, at: points, beats: impact ? "both" : "travel" });
+  if (relay) emitHitFx({ kind, name, element, from: origin, at: points, beats: impact ? "both" : "travel" });
   return { ...result, via: "builtin" };
 }
 
@@ -1031,8 +1042,12 @@ export function registerHitFx() {
       }
       const at = targetPoints(message, userId);
       const from = speakerPoint(message, ability);
-      trace(`${ability?.name ?? kind} -> ${kind}`, { from, targets: at.length });
-      playHitFx(kind, { from, at, name: ability?.name ?? "" });
+      // 0.3.134 (E) — the element, when the card carries one. Hurl Element and its eight siblings are
+      // typed to the hero's attunement before the roll, and a summon's strike is typed to the element
+      // it was called with, so the damage type on the card is the truth about what colour this is.
+      const element = elementOfAbility(ability);
+      trace(`${ability?.name ?? kind} -> ${kind}${element ? ` (${element})` : ""}`, { from, targets: at.length });
+      playHitFx(kind, { from, at, name: ability?.name ?? "", element });
       return;                                      // one attack, one bang
     }
   });

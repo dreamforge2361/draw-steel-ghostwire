@@ -4,6 +4,54 @@
   "default": "modules/draw-steel-ghostwire/assets/sfx/scan-electronic.ogg",
   "rules": [
     {
+      "id": "gear-weapon-heavy",
+      "label": "0.3.134 B — Weapon SKUs whose free strike is a machine gun. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:chatterbox)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-machinegun.ogg"
+    },
+    {
+      "id": "gear-weapon-smg",
+      "label": "0.3.134 B — Weapon SKUs whose free strike is a submachine gun. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:streetsweeper smg)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-smg.ogg"
+    },
+    {
+      "id": "gear-weapon-rifle",
+      "label": "0.3.134 B — Weapon SKUs whose free strike is a rifle. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:apex rifle|longshot|milspec battle rifle|pipe rifle|streetline carbine|whisper rifle)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
+    },
+    {
+      "id": "gear-weapon-energy",
+      "label": "0.3.134 B — Weapon SKUs whose free strike is an energy weapon. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:zapper)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/laser-gun-4.ogg"
+    },
+    {
+      "id": "gear-weapon-arc",
+      "label": "0.3.134 B — Weapon SKUs whose free strike is an arc battery. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:hailstorm)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-lightning.ogg"
+    },
+    {
+      "id": "gear-weapon-scrap",
+      "label": "0.3.134 B — Shop-built weapon SKUs — scrap, not a factory. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:scrap bow|scrap cleaver)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/salvage-clank.ogg"
+    },
+    {
+      "id": "gear-weapon-melee",
+      "label": "0.3.134 B — Weapon SKUs whose free strike lands in somebody's hands. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:chain lash|cyber spur|knuckles|machete|monoblade|monowhip|powered greatsword|scaffold pike|shaped charge|shock stick|slab hammer|street blade|thermite charge|warhammer)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg"
+    },
+    {
+      "id": "gear-weapon-gun",
+      "label": "0.3.134 B — Every other weapon SKU: one shot from a gun-shaped object. Keyed to the weapon's `_dsid` through the `gear-use-<dsid>` ability scripts/equipment-use.mjs builds, so a SKU keeps its sound through any rename. Anchored on the dsid candidate alone: it can never match a printed name.",
+      "match": "\\bgear use (?:ashwalker|autoshotgun|boomstick|brush gun|buzz gun|chatter|chopper|crownfire|dart gun|dragons breath|emp grenade|firestarter|flash bang 3e|frag|gasser|gauss needler|ghost pistol|godsfinger|grease gun|hand cannon|hand crossbow|hand of god|heavy crossbow|hornet pod|hunting bow|lanternhead|net gun|popper|quiverframe|roadspike|siege missile|sleeve gun|slugger|smart grenade|smoke|street bow|streetlash|tank cracker|throwing knife|wallbreaker|weighted net|workhorse)$",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
+    },
+    {
       "id": "scout-mark",
       "label": "Scout mark / hard tag / glass the block",
       "match": "quarry|hard.?tag|spot.?target|careful.?observ|glass the block|hesitation|beat the draw|steady the scope|scout.?mark|\\bmark\\b",
@@ -17,9 +65,15 @@
     },
     {
       "id": "elemental-shaping",
-      "label": "Elemental shaping",
+      "label": "Elemental shaping — 0.3.134 F: routed to the generic cast sound. elemental-shaping.ogg reads as a chemical hiss, which is the toxin sound wearing a different filename.",
       "match": "elemental.?shap|\\bshaping\\b",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/elemental-shaping.ogg"
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg"
+    },
+    {
+      "id": "elementalist-summon",
+      "label": "0.3.134 F — Summon Elemental / Twin Elemental Summon / Greater Elemental Summon. Twin and Greater used to be caught by veil-element and played a lightning strike; all three place a creature, so all three sound like a summoning.",
+      "match": "summon elemental|elemental summon|twin.?elemental|greater.?elemental",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
     },
     {
       "id": "thunder-crash",
@@ -172,17 +226,17 @@
     },
     {
       "id": "veil-dark",
-      "match": "dark|pact|drain|penance|judg|curse|corruption",
+      "match": "dark|pact|drain|penance|judg|curse|corruption|\\bvoid\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-blast.ogg"
     },
     {
       "id": "veil-fire",
-      "match": "fireball|fire.?blast|ember|pyro|flame|\\bburn\\b",
+      "match": "fireball|fire.?blast|ember|pyro|flame|\\bburn|conflagration",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-fireball.ogg"
     },
     {
       "id": "veil-element",
-      "match": "lightning|storm|hurl.?element|bolt|elemental|channel|\\bessence\\b|kinetic",
+      "match": "lightning|storm|hurl.?element|bolt|elemental|channel|\\bessence\\b|kinetic|cataclysm|world.?fissure|world.?sundering|difficult ground",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-lightning.ogg"
     },
     {
@@ -192,8 +246,9 @@
     },
     {
       "id": "veil",
-      "match": "spell|ritual|\\bveil\\b",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg"
+      "match": "spell|ritual|\\bveil\\b|attunement|\\bramp\\b|cantrip|sanctum|veilbreaker",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg",
+      "label": "Generic spell / ritual / Veil. 0.3.134 F: attunement / ramp / cantrip / sanctum / veilbreaker added — the Elementalist's utility cards all fell to the default scan-electronic.ogg, which is a drone reading a door."
     },
     {
       "id": "laser",
@@ -293,5 +348,6 @@
       ]
     }
   ],
-  "_comment0.3.133": "C/D: `resolveSfx` no longer matches against the raw lang key stored in `name` (see scripts/sfx.mjs `sfxNameCandidates`) — it matches the localized name, the de-camelized key segment and the `_dsid`. That is what makes every multi-word pattern here (`breach and clear`, `lay on hands`, `read the room`, `invoke the pact`, `one shot, one kill`, `they always line up`, `glass the block`, `steady the scope`, `beat the draw`, `sense the veil`, `read the weave`, `greater heal`, `full heal`, `faith is`, `blessed light`, `called shot`, `coup de grace`, `kill confirm`, `field repair`, `field adrenal`, `nerve agent`, `advanced tactics`, `doctor is`, `summon elemental`, `summon spirit`, `right word`, `the right word`, `a word`) reachable at all — before 0.3.133 a literal space could never match a CamelCase key, so they were dead. Patterns written `x.?y` always worked. In the same pass 17 rules had their word boundaries repaired: they carried a literal `\\\\b` (escaped backslash + b) rather than `\\b`, so those alternatives matched nothing."
+  "_comment0.3.133": "C/D: `resolveSfx` no longer matches against the raw lang key stored in `name` (see scripts/sfx.mjs `sfxNameCandidates`) — it matches the localized name, the de-camelized key segment and the `_dsid`. That is what makes every multi-word pattern here (`breach and clear`, `lay on hands`, `read the room`, `invoke the pact`, `one shot, one kill`, `they always line up`, `glass the block`, `steady the scope`, `beat the draw`, `sense the veil`, `read the weave`, `greater heal`, `full heal`, `faith is`, `blessed light`, `called shot`, `coup de grace`, `kill confirm`, `field repair`, `field adrenal`, `nerve agent`, `advanced tactics`, `doctor is`, `summon elemental`, `summon spirit`, `right word`, `the right word`, `a word`) reachable at all — before 0.3.133 a literal space could never match a CamelCase key, so they were dead. Patterns written `x.?y` always worked. In the same pass 17 rules had their word boundaries repaired: they carried a literal `\\\\b` (escaped backslash + b) rather than `\\b`, so those alternatives matched nothing.",
+  "_comment0.3.134": "B: the eight `gear-weapon-*` rules at the top are keyed to each weapon SKU's `_dsid` (through the `gear-use-<dsid>` ability scripts/equipment-use.mjs generates), not to its printed name, so the 30 firearms renamed in 0.3.134 keep exactly the sound they had in 0.3.133 — and so does every SKU a Director renames next. They are anchored with `$` on the dsid candidate, so they can never fire on a name. F: Elemental Shaping now uses the generic cast sound instead of elemental-shaping.ogg, which is a chemical hiss."
 }
