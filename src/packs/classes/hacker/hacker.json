@@ -173,9 +173,12 @@
           },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bwJwQXSsAdo6de3U"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwSpecialAgent00"
           }
         ],
-        "description": "<p>You gain Compile Agent and Decompile Agent. Agents are deck software — not Resonance sprites. Compiling costs 3 Bandwidth and requires Overlay or Jacked In (Linked refuses).</p>",
+        "description": "<p>You gain Compile Agent, Special Agent and Decompile Agent. Agents are deck software — not Resonance sprites. Compiling costs 3 Bandwidth in combat (nothing out of combat) and requires Overlay or Jacked In (Linked refuses). <strong>Special Agent</strong> rolls first: the tier buys 1, 2 or 3 Actions, and only then do you say what the Agent is for.</p>",
         "chooseN": null,
         "sort": 6500,
         "additional": {

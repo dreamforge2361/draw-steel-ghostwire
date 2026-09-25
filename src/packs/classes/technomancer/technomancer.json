@@ -191,9 +191,12 @@
           },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LFCiX6KD1lFXj7Ey"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwSpecialSprite0"
           }
         ],
-        "description": "<p>You know all three Technomancer signature abilities: Compile Sprite, Resonance Strike, and Resonance Mending. None of them costs Resonance; spending Resonance boosts them.</p>",
+        "description": "<p>You know all three Technomancer signature abilities: Compile Sprite, Resonance Strike, and Resonance Mending. None of them costs Resonance; spending Resonance boosts them. You also gain <strong>Special Sprite</strong>, which rolls first — the tier buys 1, 2 or 3 Actions, and only then do you say what the sprite is for. It costs 3 Resonance in combat and nothing out of combat.</p>",
         "chooseN": null,
         "sort": 7000,
         "additional": {

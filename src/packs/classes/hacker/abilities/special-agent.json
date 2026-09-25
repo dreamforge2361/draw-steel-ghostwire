@@ -1,0 +1,106 @@
+{
+  "_id": "gwSpecialAgent00",
+  "_key": "!items!gwSpecialAgent00",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Name",
+  "type": "ability",
+  "img": "modules/draw-steel-ghostwire/assets/icons/abilities/compile-agent.svg",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "19-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "special-agent",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Story",
+    "keywords": [
+      "tech",
+      "wired"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "The net (one purpose-built Agent)"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "sAgtSpcFx0000001": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "sAgtSpcFx0000001",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.SpecialAgent.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 550,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

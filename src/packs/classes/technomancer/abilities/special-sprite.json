@@ -1,0 +1,106 @@
+{
+  "_id": "gwSpecialSprite0",
+  "_key": "!items!gwSpecialSprite0",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Name",
+  "type": "ability",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "special-sprite",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "The net (one purpose-built sprite)"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "sSprSpcFx0000001": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "sSprSpcFx0000001",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 50,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
