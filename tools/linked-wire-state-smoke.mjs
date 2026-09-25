@@ -31,6 +31,7 @@ import {
   wiredPowerRollModifier,
 } from "../scripts/wired-state.mjs";
 import { canvasFocusPlan, tokenCenter } from "../scripts/wired-canvas-focus.mjs";
+import { verbRefusalCopy } from "../scripts/wired-console-verbs.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -145,7 +146,9 @@ const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.Wired.States.linked === "Linked", "lang Linked state");
 ok(lang.GHOSTWIRE.Wired.StateHints.linked.toLowerCase().includes("broadcast"), "lang Linked hint names Broadcast");
 ok(lang.GHOSTWIRE.Wired.Warnings.NeedImmersion.includes("Linked"), "lang NeedImmersion");
-ok(lang.GHOSTWIRE.WiredConsole.VerbNeedImmersion.includes("Toggle"), "lang VerbNeedImmersion");
+ok(lang.GHOSTWIRE.WiredConsole.VerbNeedImmersion.includes("Overlay or Jacked In"), "lang VerbNeedImmersion");
+// 0.3.143: the "press Toggle" half of that refuse now lives in the hint beside it.
+ok(verbRefusalCopy("Immersion")?.hintVerb === "matrix-toggle-connection-state", "lang VerbHintImmersion points at Toggle");
 ok(lang.GHOSTWIRE.Abilities.MatrixVerbs.Connect.Effect.includes("Linked"), "Connect card enters Linked");
 ok(lang.GHOSTWIRE.Abilities.MatrixVerbs.ToggleConnectionState.Effect.includes("Linked → Overlay → Jacked In → Linked"), "Toggle card documents the ladder");
 ok(lang.GHOSTWIRE.Abilities.MatrixVerbs.Broadcast.Effect.includes("Linked"), "Broadcast card allows Linked");

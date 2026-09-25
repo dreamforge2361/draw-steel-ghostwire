@@ -46,6 +46,7 @@ import {
   sortConsoleNodes,
   sortConsoleRoster,
   splitReusableTemporaryVerbs,
+  verbRefusalCopy,
   verbUseMessageOptions,
 } from "../scripts/wired-console-verbs.mjs";
 import { isNodeActor } from "../scripts/wired-node-tokens.mjs";
@@ -302,7 +303,10 @@ const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.Verbs === "Matrix Verbs", "lang Verbs");
 ok(lang.GHOSTWIRE.Wired.States.connected === "Connected", "lang node chip reads Connected");
 ok(/always Connected/.test(lang.GHOSTWIRE.WiredConsole.RosterNodeHint), "lang node row hint");
-ok(lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("Connect"), "lang Disconnected points at Connect on the node");
+// 0.3.143 split every refuse into WHY + a next-verb hint, so the verb name moved out of the
+// sentence and into `hintVerb`. Asserting the dsid is the same lock, one indirection stronger.
+ok(verbRefusalCopy("Disconnected")?.hintVerb === "matrix-connect", "lang Disconnected points at Connect on the node");
+ok(lang.GHOSTWIRE.WiredConsole.VerbHintDisconnected.includes("{next}"), "...through the hint line, which names it");
 ok(!lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("sheet"), "lang Disconnected does not send players to the sheet");
 ok(/connected|on-net/.test(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected), "lang AlreadyConnected");
 ok(lang.GHOSTWIRE.WiredConsole.VerbTooltipAuto.includes("no roll"), "lang auto tooltip");

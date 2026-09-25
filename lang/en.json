@@ -7436,7 +7436,7 @@
         "quiet": "Quiet. Nothing is watching yet.",
         "stir": "Steps 1–4: passive ICE stirs. No mechanical effect.",
         "malice": "Steps 5–8: +1 Malice to the Director for each step crossed.",
-        "hunting": "Steps 9–11: +1 Malice per step, and a bane on the next Wired power roll. Active ICE is hunting.",
+        "hunting": "Steps 9–11: +1 Malice per step, and the hunt bite — one Biofeedback hit at the end of each of the runner's turns while they stay Overlay or Jacked In. Active ICE is hunting.",
         "lockout": "Step 12: full lockout and a hard counter-trace to the runner’s physical location. Then the track resets to 6."
       },
       "LockoutWarning": "{name}: Trace Alert 12 — full lockout and counter-trace to the runner’s physical location. Resolve it, then reset the track to 6.",
@@ -7498,19 +7498,30 @@
       "VerbTooltip": "{name} · {chr} power roll (Hacking / Jacked In edges apply)",
       "VerbTooltipAuto": "{name} · no roll",
       "VerbReady": "{actor} → {node}",
-      "VerbNeedActor": "Select a runner in the roster.",
-      "VerbNeedNode": "Select a node, then fire a Matrix Verb.",
-      "VerbNeedOwner": "You don't control that runner.",
-      "VerbNeedDisconnected": "Disconnected — use Connect on this node first.",
-      "VerbNeedAlreadyConnected": "Already on-net — Jack Out or Toggle, or pick another verb.",
-      "VerbNeedInterface": "Need a comlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.",
-      "VerbNeedImmersion": "Linked only — Toggle to Overlay or Jacked In for Scan / Navigate / Ping / Search / Read-Write.",
-      "VerbNeedHidden": "That node is hidden from runners.",
+      "VerbNeedActor": "No runner is selected, so there is nobody to fire that verb.",
+      "VerbNeedNode": "No node is selected, and that verb has to be pointed at something.",
+      "VerbNeedOwner": "You don't control that runner, so you can't act for them.",
+      "VerbNeedDisconnected": "You're Disconnected. Nothing on the Wire can hear you off-net.",
+      "VerbNeedAlreadyConnected": "You're already on-net, so there is nothing to Connect to.",
+      "VerbNeedInterface": "You're carrying nothing that can reach the Wire — no commlink, deck, datajack, trodes, Wire Kit or rigger interface — and you aren't a Technomancer.",
+      "VerbNeedImmersion": "Linked is soft presence, not immersion: it carries comms and packets, and that is all. Scan / Navigate / Ping / Search / Read-Write need Overlay or Jacked In.",
+      "VerbNeedHidden": "That node is hidden from runners — it isn't on your board yet.",
       "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
       "VerbUnknown": "Unknown Matrix Verb.",
       "VerbMissing": "Matrix Verb {name} is missing from Ghostwire Abilities.",
       "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong.",
-      "RosterYou": "(you)"
+      "RosterYou": "(you)",
+      "VerbRefused": "Refused",
+      "VerbHintActor": "Pick your runner in the roster (or select their token), then try {verb} again.",
+      "VerbHintNode": "Click a node on the board — or open the node token in front of you — then fire {verb}.",
+      "VerbHintOwner": "Select a character you own, or ask the Director to run it for you.",
+      "VerbHintHidden": "Scan or Deep Scan to find it first; the Director reveals what you turn up.",
+      "VerbHintDisconnected": "Use {next} on this node first — it lands you in Linked.",
+      "VerbHintAlreadyConnected": "Use {next} to step deeper, or Jack Out to leave.",
+      "VerbHintInterface": "Put a commlink or deck on the sheet (the Director can add a Wire Kit), then Connect.",
+      "VerbHintImmersion": "{verb} requires Overlay or Jacked In — {next} first.",
+      "VerbNeedTrack": "Ping is a nudge at a simple Track 1 object. This is a Track 2 host, which is where the ICE lives, and Ping never opens or defeats ICE.",
+      "VerbHintTrack": "Use {next} to change the system, or a Program / payload Run for a real breach. Ping a Track 1 object instead — a door, a light, a camera."
     },
     "WiredKit": {
       "Button": "Add Wire Kit",
@@ -10910,6 +10921,99 @@
         "Repair": "Repair",
         "Amount": "Amount",
         "ClearQueue": "Clear this vehicle's queued hits"
+      }
+    },
+    "WiredIce": {
+      "Speaker": "The Wire",
+      "Trigger": {
+        "low-roll": "ICE reactive bite on {actor}?",
+        "failed-breach": "Failed breach — ICE bites {actor}?",
+        "hunt-bite": "Hunt bite on {actor}?",
+        "malice-surge": "Malice ICE surge on {actor}?"
+      },
+      "Detail": {
+        "low-roll": "{node} has active ICE and the Wired Power Roll came in at {total} — a low roll, 11 or under.",
+        "failed-breach": "{node} is Rating {rating}, Breach DC {dc}. The roll came in at {total}, so the breach failed.",
+        "hunt-bite": "{node} is at Trace Alert {alert} and hunting. {actor} ended their turn still immersed."
+      },
+      "Card": {
+        "Title": "ICE bite — {actor}",
+        "Base": "1. Base: Rating {rating} host, Biofeedback Value {base}",
+        "Scale": "2. {state} → {scaled}",
+        "Resist": "3. Less Biofeedback Resistance {resistance} → {damage} damage",
+        "Stamina": "4. Stamina {before} → {after}",
+        "Floor": "Winded floor: this stops at 1 Stamina. {actor} is Winded, not Dying — but a bullet still kills.",
+        "NoBite": "No Biofeedback lands: the scale or the resistance took it to zero.",
+        "CancelHint": "Apply writes this Stamina. Cancel leaves it exactly where it is, and says nothing in chat.",
+        "Apply": "Apply {damage}",
+        "Cancel": "Cancel"
+      },
+      "Alert": {
+        "Title": "Trace Alert",
+        "Notify": "{node}: Trace Alert crossed {step} (now {alert} / 12).",
+        "Malice": "{node} crossed Trace Alert 5. The Director banks +1 Malice for that step, and for every step after it.",
+        "Hunt": "{node} crossed Trace Alert 9. Active ICE is hunting: one Biofeedback bite at the end of each turn a runner stays Overlay or Jacked In.",
+        "CounterTrace": "{node} hit Trace Alert 12. Full lockout and a hard counter-trace to the runner's physical location. The track then resets to 6."
+      },
+      "Strip": {
+        "Malice": "Malice — the Director banks +1 per step from here.",
+        "Hunt": "Hunt — ICE bites at the end of each immersed turn.",
+        "CounterTrace": "Lockout — counter-trace to your body, then reset to 6.",
+        "HuntNotice": "{node} is hunting at Alert {alert}. While {actor} stays Overlay or Jacked In, expect one Biofeedback bite at the end of each of their turns."
+      },
+      "Surge": {
+        "Button": "Malice ICE surge",
+        "Tooltip": "Spend Malice to have this host's ICE strike now. Ghostwire does not touch your Malice count — adjust it yourself.",
+        "TooltipMalice": "Spend Malice to have this host's ICE strike now. Malice is {malice}; Ghostwire does not spend it for you.",
+        "PickTitle": "Malice ICE surge — pick a target",
+        "PickHint": "Host ICE bites the compiler by default. Only runners who are Overlay or Jacked In can be bitten.",
+        "PickLabel": "Target",
+        "PickSubmit": "Continue",
+        "NoTarget": "No target for the surge.",
+        "NoExposed": "Nobody on this scene is Overlay or Jacked In, so there is nothing for the ICE to bite.",
+        "NotExposed": "{actor} is {state}. Linked and Disconnected take no Biofeedback, so the surge has nothing to land on.",
+        "Detail": "The Director spends Malice to have {node}'s ICE strike now.",
+        "DetailMalice": "The Director spends Malice to have {node}'s ICE strike now. Malice is currently {malice}.",
+        "ChatTitle": "Director: Malice ICE surge",
+        "ChatLine": "{node} spends the Director's Malice and its ICE strikes {actor}.",
+        "ChatTrackHint": "Adjust your Malice yourself — Ghostwire does not spend it for you.",
+        "ChatTrackHintMalice": "Malice was {malice} before this surge. Adjust it yourself — Ghostwire does not spend it for you."
+      },
+      "Checklist": {
+        "Title": "Wire run checklist",
+        "Hint": "The North Substation spine, in order. Guidance only — ticking a step changes nothing and blocks nothing.",
+        "connect": {
+          "Label": "Connect → Linked → Broadcast",
+          "Hint": "Connect lands you in Linked: comms, ID and packets. Broadcast works here. Nothing else does — and Linked takes no Biofeedback at all."
+        },
+        "toggle": {
+          "Label": "Toggle to Overlay",
+          "Hint": "Toggle Connection State steps Linked → Overlay → Jacked In → Linked. Overlay is where the other verbs open up, at a bane on meat rolls and half Biofeedback."
+        },
+        "scan": {
+          "Label": "Scan / Deep Scan",
+          "Hint": "Scan is observation and raises no Trace. Deep Scan is the Hacker's own Program card, and it names what is hanging off the host."
+        },
+        "tracks": {
+          "Label": "Track 1 vs Track 2",
+          "Hint": "Track 1 is objects — doors, lights, cameras — one roll against a Breach DC, no ICE. Track 2 is a host with Integrity and ICE. Ping is Track 1 only."
+        },
+        "lows": {
+          "Label": "Watch lows against ICE",
+          "Hint": "A Wired Power Roll of 11 or under against a host with active ICE (Rating 3+) is +1 Trace Alert and one Biofeedback bite. At Rating 4+, a failed breach bites too."
+        },
+        "integrity": {
+          "Label": "Integrity",
+          "Hint": "Track 2 hosts have an Integrity pool. Programs and payload Runs grind it down; at 0 the host is down and its Track 1 children go quiet."
+        },
+        "alert": {
+          "Label": "Alert bands 1–4 / 5–8 / 9–11 / 12",
+          "Hint": "1–4 is atmosphere. 5–8 banks the Director +1 Malice a step. 9–11 is the hunt bite at the end of each immersed turn. 12 is lockout and a counter-trace, then reset to 6."
+        },
+        "out": {
+          "Label": "Decompile / Jack Out",
+          "Hint": "Decompile your constructs, then Jack Out to Disconnected. The bites stop — the Trace Alert does not. It is still sitting where you left it next week."
+        }
       }
     }
   },

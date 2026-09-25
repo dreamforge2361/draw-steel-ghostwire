@@ -49,6 +49,7 @@ import {
   pickConsoleActor,
   pickPlayerVerbActor,
   softTraceDelta,
+  verbRefusalCopy,
   verbUseMessageOptions,
 } from "./wired-console-verbs.mjs";
 
@@ -343,6 +344,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       revealed: selected ? !!selected.revealed : true,
       isGM,
       hasInterface: !!verbActor?.hasInterface,
+      track: selected?.track ?? null,
     };
     const verbs = verbStripView(verbCtx);
     const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.state) });
@@ -860,13 +862,29 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
 
 /* ---------- Matrix Verbs from Console / node panel (B117) ---------- */
 
-/** Shared Matrix Verb button specs for the Console strip and the node panel (all nine). */
+/**
+ * Shared Matrix Verb button specs for the Console strip and the node panel (all nine).
+ *
+ * 0.3.143 — a greyed-out button's tooltip now carries the soft refuse in full: the rule, then the
+ * verb to press instead. The button is the first place a player asks "why not?", so it is the first
+ * place that answers.
+ */
 export function verbStripView(ctx = {}) {
   return CONSOLE_SLICE.map(verb => {
     const gate = consoleVerbGate({ ...ctx, dsid: verb.dsid });
     const name = game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`);
     let tooltip;
-    if (!gate.ok) tooltip = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
+    if (!gate.ok) {
+      const copy = verbRefusalCopy(gate.reason);
+      const why = game.i18n.localize(`GHOSTWIRE.WiredConsole.${copy?.why ?? `VerbNeed${gate.reason}`}`);
+      const next = copy?.hintVerb
+        ? game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${CONSOLE_SLICE.find(v => v.dsid === copy.hintVerb)?.lang ?? ""}.Name`)
+        : "";
+      const hint = copy
+        ? game.i18n.format(`GHOSTWIRE.WiredConsole.${copy.hint}`, { verb: name, next, node: "", actor: "" })
+        : "";
+      tooltip = hint ? `${why} ${hint}` : why;
+    }
     else if (verb.characteristicLabel) {
       tooltip = game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", { name, chr: verb.characteristicLabel });
     } else {
@@ -987,6 +1005,46 @@ function patchSheetHideMatrixVerbs() {
 }
 
 /**
+ * 0.3.143 — a **soft refuse**: the verb does not fire, and the player is told *why* and *what next*.
+ *
+ * The old refuse was a one-line `ui.notifications.warn` that named the state and stopped there, which
+ * left a player at Linked reading "Linked only" with no idea that Toggle Connection State is the door.
+ * Every refuse now posts the same two sentences — the rule, then the next verb — to chat as well as
+ * to the toast, whispered to the person who pressed the button and the Director, so a table of five
+ * does not watch one runner learn the state ladder.
+ *
+ * Nothing about the gate changed: a refused verb still costs nothing and still rolls nothing.
+ */
+export async function softRefuseVerb({ actor = null, node = null, dsid = null, reason = null } = {}) {
+  const copy = verbRefusalCopy(reason);
+  const why = game.i18n.localize(`GHOSTWIRE.WiredConsole.${copy?.why ?? `VerbNeed${reason}`}`);
+  ui.notifications.warn(why);
+  if (!copy) return null;
+
+  const verbName = dsid
+    ? game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${CONSOLE_SLICE.find(v => v.dsid === dsid)?.lang ?? ""}.Name`)
+    : "";
+  const nextName = copy.hintVerb
+    ? game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${CONSOLE_SLICE.find(v => v.dsid === copy.hintVerb)?.lang ?? ""}.Name`)
+    : "";
+  const hint = game.i18n.format(`GHOSTWIRE.WiredConsole.${copy.hint}`, {
+    verb: verbName, next: nextName, node: node?.name ?? "", actor: actor?.name ?? "",
+  });
+  const escape = value => foundry.utils.escapeHTML(String(value ?? ""));
+  const whisper = [...new Set([game.user.id, ...(game.users?.filter(u => u.isGM && u.active).map(u => u.id) ?? [])])];
+  await ChatMessage.implementation.create({
+    speaker: ChatMessage.implementation.getSpeaker({ actor }),
+    whisper,
+    content: `<div class="ghostwire-verb-refuse" data-refuse="${escape(reason)}">
+        <header><i class="fa-solid fa-hand"></i><span class="gw-refuse-kicker">${escape(game.i18n.localize("GHOSTWIRE.WiredConsole.VerbRefused"))}</span></header>
+        <p class="gw-refuse-why">${escape(why)}</p>
+        <p class="gw-refuse-hint">${escape(hint)}</p>
+      </div>`,
+  });
+  return { reason, why, hint };
+}
+
+/**
  * Fire a Matrix Verb through Draw Steel AbilityModel#use on the selected actor.
  * Edges (Hacking, Jacked In, Reader) come from the existing AbilityModel#use patch.
  */
@@ -1007,16 +1065,10 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     isGM: !!game.user.isGM,
     dsid,
     hasInterface: actorHasConnectInterface(actor),
+    track: node?.track ?? null,
   });
   if (!gate.ok) {
-    const warn = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
-    ui.notifications.warn(warn);
-    if (gate.reason === "Interface") {
-      await ChatMessage.implementation.create({
-        speaker: ChatMessage.implementation.getSpeaker({ actor }),
-        content: `<p>${warn}</p>`,
-      });
-    }
+    await softRefuseVerb({ actor, node, dsid, reason: gate.reason });
     return null;
   }
   const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);

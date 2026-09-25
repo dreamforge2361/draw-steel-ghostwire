@@ -437,7 +437,7 @@ export function actorHasConnectInterface(actor) {
  * Pass `state` (preferred). Legacy `connected: true` without state = Overlay (full Connected).
  * hasInterface defaults true so older callers stay permissive; production always passes the live actor check.
  */
-export function consoleVerbGate({ actorUuid, connected, state, nodeId, owned, revealed = true, isGM = true, dsid = null, hasInterface = true } = {}) {
+export function consoleVerbGate({ actorUuid, connected, state, nodeId, owned, revealed = true, isGM = true, dsid = null, hasInterface = true, track = null } = {}) {
   if (!actorUuid) return { ok: false, reason: "Actor" };
   if (!owned) return { ok: false, reason: "Owner" };
   const spec = dsid ? consoleSliceByDsid(dsid) : null;
@@ -452,8 +452,54 @@ export function consoleVerbGate({ actorUuid, connected, state, nodeId, owned, re
   }
   if (!isOnNet(resolved)) return { ok: false, reason: "Disconnected" };
   if (dsid && !verbAllowedAtState(dsid, resolved)) return { ok: false, reason: "Immersion" };
+  // 0.3.143 — Ping is Track 1 only. It is a nudge, and a Track 2 host is where the ICE lives, so the
+  // verb refuses rather than letting a player spend an action learning the doctrine the hard way.
+  if (pingRefusedOnTrack(dsid, track)) return { ok: false, reason: "Track" };
   return { ok: true, reason: null };
 }
+
+/**
+ * Ping's Track doctrine, as a predicate (`docs/raw/21-the-wire.md` — *Ping vs ICE*).
+ *
+ * Ping targets simple **Track 1** only. It does not bypass or defeat ICE, and ICE is Track 2. A node
+ * whose Track we do not know (`null`) is not refused: the Director Console fires verbs from a roster
+ * where the node may not be selected yet, and a refuse on a guess is worse than no refuse.
+ */
+export function pingRefusedOnTrack(dsid, track) {
+  return (dsid === "matrix-ping") && (Number(track) === 2);
+}
+
+/**
+ * 0.3.143 — the soft-refuse copy for one gate reason: **why** it refused, and **what to press next**.
+ *
+ * Every refuse the applet raises now answers both questions. `why` is the rule in one plain sentence;
+ * `hint` names the verb (or the thing) that gets the player unstuck; `hintVerb` is that verb's dsid
+ * when there is one, so a caller can highlight the button rather than only printing its name.
+ *
+ * Returned values are **lang key suffixes** under `GHOSTWIRE.WiredConsole`, not strings, so this stays
+ * Foundry-free and the Node smoke can assert the mapping.
+ *
+ * @param {string} reason  Actor | Node | Owner | Hidden | Disconnected | AlreadyConnected | Interface | Immersion | Track
+ * @returns {{ why: string, hint: string, hintVerb: string|null }|null}
+ */
+export function verbRefusalCopy(reason) {
+  return VERB_REFUSALS[reason] ?? null;
+}
+
+const VERB_REFUSALS = Object.freeze({
+  Actor: { why: "VerbNeedActor", hint: "VerbHintActor", hintVerb: null },
+  Node: { why: "VerbNeedNode", hint: "VerbHintNode", hintVerb: null },
+  Owner: { why: "VerbNeedOwner", hint: "VerbHintOwner", hintVerb: null },
+  Hidden: { why: "VerbNeedHidden", hint: "VerbHintHidden", hintVerb: null },
+  Disconnected: { why: "VerbNeedDisconnected", hint: "VerbHintDisconnected", hintVerb: "matrix-connect" },
+  AlreadyConnected: { why: "VerbNeedAlreadyConnected", hint: "VerbHintAlreadyConnected", hintVerb: "matrix-toggle-connection-state" },
+  Interface: { why: "VerbNeedInterface", hint: "VerbHintInterface", hintVerb: null },
+  Immersion: { why: "VerbNeedImmersion", hint: "VerbHintImmersion", hintVerb: "matrix-toggle-connection-state" },
+  Track: { why: "VerbNeedTrack", hint: "VerbHintTrack", hintVerb: "matrix-read-write" },
+});
+
+/** Every gate reason the applet can refuse with. The smoke asserts each one has WHY + hint copy. */
+export const VERB_REFUSAL_REASONS = Object.freeze(Object.keys(VERB_REFUSALS));
 
 /**
  * Hint dsid: Connect when disconnected; Toggle when Linked (step deeper to Scan);
@@ -499,6 +545,41 @@ export function abilityTierFromMessage(message) {
   const flagged = Number(message?.flags?.[MODULE_ID]?.consoleVerb?.tier);
   if (flagged >= 1 && flagged <= 3) return flagged;
   return null;
+}
+
+/** A DamageRoll is not a Power Roll. Draw Steel's PowerRoll is the 2d10 one, and only it has a tier. */
+function isPowerRoll(roll) {
+  if (!roll) return false;
+  if (roll.product !== undefined) return true;
+  if (typeof roll.tier === "string" && roll.tier.startsWith("tier")) return true;
+  return /\b2d10\b/.test(String(roll.formula ?? ""));
+}
+
+/**
+ * The Wired Power Roll **total** off a resolved Matrix Verb card.
+ *
+ * 0.3.143 needs the number, not just the tier: trigger 1 is "≤ 11" and trigger 2 is "under the host's
+ * Breach DC", and a double edge or double bane moves the *tier* without moving the roll
+ * (`PowerRoll#product` adds `netBoon - sign(netBoon)`), so tier 1 and ≤11 are not the same question.
+ * Reads the abilityResult part's own rolls first, then the message's, and takes the **lowest** total
+ * when a card carries several — the same "worst result wins" rule `abilityTierFromMessage` uses.
+ *
+ * @returns {number|null} null when the card has not resolved a power roll yet.
+ */
+export function powerRollTotalFromMessage(message) {
+  const totals = [];
+  const collect = rolls => {
+    for (const roll of (Array.isArray(rolls) ? rolls : (rolls?.contents ?? []))) {
+      if (!isPowerRoll(roll)) continue;
+      const total = Number(roll.total);
+      if (Number.isFinite(total)) totals.push(total);
+    }
+  };
+  for (const part of partsOf(message)) {
+    if (partType(part) === "abilityResult") collect(part.rolls);
+  }
+  if (!totals.length) collect(message?.rolls);
+  return totals.length ? Math.min(...totals) : null;
 }
 
 export function consoleVerbMetaFromMessage(message) {

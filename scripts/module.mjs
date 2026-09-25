@@ -1,5 +1,5 @@
 import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
-import { actorHasConnectInterface, abilityUuidsFromMessages, hasHideInSheetFlag, isTemporaryConsoleVerb, orphanTemporaryVerbs, DS_HIDE_IN_SHEET, DS_SYSTEM_ID } from "./wired-console-verbs.mjs";
+import { actorHasConnectInterface, abilityUuidsFromMessages, hasHideInSheetFlag, isTemporaryConsoleVerb, orphanTemporaryVerbs, powerRollTotalFromMessage, DS_HIDE_IN_SHEET, DS_SYSTEM_ID } from "./wired-console-verbs.mjs";
 import {
   WIRED_STATUS_DEFS,
   abilityPowerRollModifiers,
@@ -54,6 +54,7 @@ import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerDirectorWealth } from "./director-wealth.mjs";
 import { registerDirectorBiofeedback } from "./director-biofeedback.mjs";
+import { registerWiredIce } from "./wired-ice.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerBlackMarket } from "./black-market.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
@@ -228,6 +229,10 @@ Hooks.once("init", () => {
   // 0.3.142 (D) — Director: Apply Biofeedback. Takes getWiredState so the macro reads the same
   // connection state the Wired Console and the Matrix Verbs already do, rather than a second copy.
   registerDirectorBiofeedback({ getWiredState });
+  // 0.3.143 — the node applet's ICE package. It notices the four triggers, announces the Alert strip
+  // and raises the Director confirm card; every apply it makes goes back through the 0.3.142
+  // Biofeedback pipeline above, so there is still exactly one place that writes Stamina.
+  registerWiredIce({ getWiredState, rollTotalFromMessage: powerRollTotalFromMessage });
   registerBlackMarket();
   registerConsumableUse();
   registerRituals();

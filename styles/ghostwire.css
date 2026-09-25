@@ -552,6 +552,105 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-node-panel .wn-foot { display: flex; justify-content: flex-end; padding-top: 0.35rem; }
 .ghostwire-wired-node-panel .wc-verbs { grid-column: auto; }
 
+/* 0.3.143 — the node applet's ICE package: the announced Alert steps, the hunt notice, the Director's
+   surge button, and the collapsible Wire run checklist. All of it reads; none of it writes. */
+.ghostwire-wired-console .wc-alert span.mark { outline: 1px dashed color-mix(in srgb, var(--wc-warn) 70%, transparent); }
+.ghostwire-wired-node-panel .wn-alert-marks {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.1rem;
+  font-size: 0.78rem;
+  color: var(--wc-muted);
+}
+.ghostwire-wired-node-panel .wn-alert-marks li b { color: var(--wc-warn); margin-right: 0.3rem; }
+.ghostwire-wired-node-panel .wn-alert-marks li.reached { color: var(--ghostwire-text); }
+.ghostwire-wired-node-panel .wn-hunt-notice {
+  margin: 0.35rem 0 0;
+  padding: 0.3rem 0.45rem;
+  border-left: 3px solid var(--wc-hot);
+  background: color-mix(in srgb, var(--wc-hot) 12%, transparent);
+  border-radius: var(--ghostwire-radius-sm);
+  font-size: 0.82rem;
+}
+.ghostwire-wired-node-panel .wn-surge { margin-top: 0.45rem; }
+
+.ghostwire-wired-node-panel .wn-checklist-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--wc-cyan);
+  font-size: 0.78rem;
+  letter-spacing: var(--ghostwire-track);
+  text-transform: uppercase;
+}
+.ghostwire-wired-node-panel .wn-checklist-hint { margin: 0.3rem 0 0.4rem; font-size: 0.78rem; }
+.ghostwire-wired-node-panel .wn-checklist-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+.ghostwire-wired-node-panel .wn-checklist-steps li { border-left: 2px solid var(--wc-border); padding-left: 0.45rem; }
+.ghostwire-wired-node-panel .wn-checklist-steps li.done { border-left-color: var(--ghostwire-success); }
+.ghostwire-wired-node-panel .wn-checklist-step {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+.ghostwire-wired-node-panel .wn-checklist-steps li.done .wn-checklist-label { color: var(--ghostwire-success); }
+.ghostwire-wired-node-panel .wn-checklist-cue {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.76rem;
+  color: var(--wc-muted);
+}
+
+/* The Director confirm card and the Alert / refuse chat cards. */
+.ghostwire-ice-confirm .gw-ice-trigger { margin: 0 0 0.35rem; font-weight: 600; }
+.ghostwire-ice-confirm .gw-ice-math { margin: 0.35rem 0; padding-left: 1.2rem; }
+.ghostwire-ice-confirm .gw-ice-math li { margin: 0.1rem 0; }
+.ghostwire-ice-confirm.winded-floor .gw-ice-math { border-left: 3px solid var(--color-level-error, #d33); padding-left: 1.4rem; }
+.ghostwire-ice-confirm .hint { opacity: 0.8; font-size: var(--font-size-12, 12px); }
+
+.ghostwire-ice-alert {
+  border-left: 3px solid var(--color-level-warning, #c90);
+  padding: 0.35rem 0.6rem;
+}
+.ghostwire-ice-alert.band-hunting,
+.ghostwire-ice-alert.band-lockout { border-left-color: var(--color-level-error, #d33); }
+.ghostwire-ice-alert header,
+.ghostwire-verb-refuse header {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: var(--ghostwire-track);
+  text-transform: uppercase;
+}
+.ghostwire-ice-alert p { margin: 0.25rem 0 0; }
+
+.ghostwire-verb-refuse {
+  border-left: 3px solid var(--color-level-info, #58a);
+  padding: 0.35rem 0.6rem;
+}
+.ghostwire-verb-refuse .gw-refuse-why { margin: 0.25rem 0 0; }
+.ghostwire-verb-refuse .gw-refuse-hint { margin: 0.25rem 0 0; opacity: 0.85; font-size: var(--font-size-12, 12px); }
+
 .ghostwire-wired-console .wc-panel {
   min-height: 0;
   display: flex;
