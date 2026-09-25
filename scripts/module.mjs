@@ -75,6 +75,7 @@ import { registerDirectorResource } from "./director-resource.mjs";
 import { registerTraitRepick } from "./trait-repick.mjs";
 import { registerStamina } from "./stamina.mjs";
 import { registerMachineConditions } from "./machine-conditions.mjs";
+import { registerChaseHud } from "./chase-hud.mjs";
 import { registerTokenLight } from "./token-light.mjs";
 import { registerCantrip } from "./cantrip.mjs";
 import { registerPactStrike } from "./pact-strike.mjs";
@@ -265,6 +266,10 @@ Hooks.once("init", () => {
   registerStamina();
   // 0.3.122 — On Fire / Leaking, Crippled and Systems Down, read off a machine's Integrity.
   registerMachineConditions();
+  // 0.3.141 — the Chase HUD: the 0.3.138 chase round as an applet with its own phase clock. It never
+  // touches Foundry Combat. Registered after registerMachineConditions: the HUD writes Integrity to
+  // `system.stamina.value` and the condition statuses follow that write on their own.
+  registerChaseHud();
   // 0.3.123 — the shared 20-foot glow behind Street Priest Blessed Light and Elementalist Cantrip.
   // Registered before registerCantrip so the Cantrip dialog can call straight into it.
   registerTokenLight();

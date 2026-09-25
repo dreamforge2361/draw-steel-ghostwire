@@ -10603,6 +10603,264 @@
         "AlreadyActive": "{soft} is already loaded.",
         "NotActive": "{soft} is not loaded."
       }
+    },
+    "ChaseHud": {
+      "Title": "Chase HUD",
+      "Control": "Chase HUD (vehicle combat)",
+      "Keybinding": "Open the Chase HUD",
+      "Settings": {
+        "Muted": {
+          "Name": "Mute Chase HUD sounds",
+          "Hint": "Silences the Chase HUD's own sounds on this computer only. Foundry's volume and every other Ghostwire sound are left alone. The speaker button in the Chase HUD flips this too."
+        }
+      },
+      "NoScene": "Open a scene first. The Chase HUD runs on the scene you are looking at.",
+      "NoChase": "No chase is running on {scene}. Start one, then add the vehicles.",
+      "NoChasePlayer": "No chase is running on this scene. The Director starts one.",
+      "NoVehicles": "No vehicles yet. Add the deployed vehicles and drones on this scene below.",
+      "Start": "Start a chase",
+      "Started": "Chase started on {scene}. Add the vehicles and seat the crew.",
+      "End": "End chase",
+      "EndConfirm": "End the chase on {scene}? The roster, bands, locks and queued hits are cleared. Integrity already written to the vehicles stays on them.",
+      "Round": "Round {round}",
+      "Prev": "Back one phase",
+      "Next": "Next phase",
+      "Mute": "Sound on",
+      "Unmute": "Muted",
+      "MuteHint": "Mute or unmute the Chase HUD's sounds for you only. It does not touch Foundry's own volume.",
+      "Track": "Range band track",
+      "Lead": "Lead",
+      "LeadHint": "Every other vehicle's band is its distance to the lead.",
+      "MakeLead": "Make lead",
+      "Remove": "Take this vehicle out of the chase (the Actor is not touched)",
+      "Missing": "Actor not found",
+      "SideLabel": "Side",
+      "Side": {
+        "crew": "Crew",
+        "opposition": "Opposition"
+      },
+      "BandFiat": "Director: set this vehicle's band. This wins over any roll.",
+      "BandOpen": "Open one band (farther)",
+      "BandClose": "Close one band (nearer)",
+      "AddVehicle": "Add vehicle",
+      "AddPick": "Pick a vehicle or drone on this scene…",
+      "AddSelected": "Add selected tokens",
+      "NoneToAdd": "No deployed vehicles or drones on this scene",
+      "NoSelection": "Select one or more tokens on the canvas first.",
+      "Seat": "Seat someone…",
+      "SeatSingle": "Seat (replaces)…",
+      "Unseat": "Remove from this seat",
+      "Empty": "empty — skipped",
+      "AdjustIntegrity": "Integrity",
+      "GmOnly": "Only the Director can change the chase.",
+      "NotOwner": "You can only roll for crew you own.",
+      "NoGm": "No Director is connected. The roll is in chat, and it waits there until a Director reviews it.",
+      "Pending": "Waiting for the Director ({count})",
+      "PendingNotify": "{user} rolled in the Chase HUD: {summary}. Review it there.",
+      "Over": {
+        "oneLeft": "The chase is over — only one vehicle is still in it."
+      },
+      "Phase": {
+        "setup": {
+          "Label": "Setup",
+          "Hint": "Once, no roll. Add every vehicle, pick sides and the lead, seat the crew. Check each vehicle's Handling, Speed band, Integrity and mods."
+        },
+        "pilots": {
+          "Label": "Pilots",
+          "Hint": "Opposed 2d10 + Reflex + Driving, Piloting or Rigging. Higher Handling takes an edge; an untrained pilot takes a bane. The winner closes, opens or holds the band. At Ramming / Boarding a ram is the same roll."
+        },
+        "sensorLock": {
+          "Label": "Sensor lock",
+          "Hint": "2d10 + Logic + Electronics. A Sensor Pod or Storm Lattice gives an edge; a target in a Ghost Coat gives a bane. A Storm Lattice shares its lock with its whole side."
+        },
+        "jam": {
+          "Label": "Jam / spoof",
+          "Hint": "The jammer rolls 2d10 + Logic + Security Systems (untrained: Electronics at a bane) against the lock-holder's 2d10 + Logic + Electronics. A Signal Mule gives the defender an edge. A win breaks that vehicle's locks and stops it locking again this round. Jamming drains no Uptime."
+        },
+        "terrain": {
+          "Label": "Terrain read",
+          "Hint": "Optional. 2d10 + Logic or Instinct + Navigation. A success hands an edge to the Pilot or the Gunners."
+        },
+        "gunners": {
+          "Label": "Gunners",
+          "Hint": "Mounted weapons: 2d10 + Reflex + Gunnery, or Logic + Gunnery sensor-fed. With a lock on a moving target: bane. Without a lock: double bane. Passengers fire their own weapons at a speed bane. Hits are queued for phase 4."
+        },
+        "integrity": {
+          "Label": "Integrity",
+          "Hint": "Damage comes off Integrity. Apply the queued hits; the new Integrity is written onto each vehicle's own Actor. 0 Integrity means wrecked."
+        },
+        "end": {
+          "Label": "End of round",
+          "Hint": "Broken off or wrecked ends the chase for that vehicle. Bands and live locks carry into the next round. Next phase starts round two at Pilots."
+        }
+      },
+      "Band": {
+        "brokenOff": "Broken off",
+        "extreme": "Extreme",
+        "long": "Long",
+        "medium": "Medium",
+        "close": "Close",
+        "ramming": "Ramming / Boarding"
+      },
+      "SpeedBand": {
+        "slow": "Slow",
+        "standard": "Standard",
+        "fast": "Fast",
+        "extreme": "Extreme"
+      },
+      "Station": {
+        "pilot": "Pilot",
+        "systems": "Systems",
+        "turrets": "Turrets",
+        "ports": "Ports"
+      },
+      "StationHint": {
+        "pilot": "Drives or flies it. One seat. Rolls the Pilot contest.",
+        "systems": "Sensors and EW: sensor lock, jam / spoof, terrain read. One seat.",
+        "turrets": "Gunners on the mounted weapons.",
+        "ports": "Passengers riding along. They fire their own weapons at a speed bane."
+      },
+      "Stat": {
+        "Integrity": "Integrity",
+        "Handling": "Handling",
+        "Speed": "Speed",
+        "Scale": "Scale",
+        "Band": "Band"
+      },
+      "Tag": {
+        "Locked": "Lock on {targets}",
+        "Jammed": "Jammed this round",
+        "TerrainPilot": "Terrain edge: Pilot",
+        "TerrainGunner": "Terrain edge: Gunners",
+        "Queued": "{damage} damage queued",
+        "Wrecked": "Wrecked",
+        "BrokenOff": "Broken off"
+      },
+      "Kit": {
+        "sensor-pod": "Sensor Pod: edge to lock",
+        "storm-lattice": "Storm Lattice: edge, shares lock",
+        "ghost-coat": "Ghost Coat: bane to lock it",
+        "signal-mule": "Signal Mule: edge against jams",
+        "tune-kit": "Tune Kit: +1 Handling",
+        "lane-skirt": "Lane Skirt: edge in the lanes only"
+      },
+      "Intent": {
+        "close": "Close",
+        "open": "Open",
+        "hold": "Hold",
+        "ram": "Ram"
+      },
+      "Action": {
+        "Contest": "Pilot contest against {lead}",
+        "IntentOf": "{name} wants to",
+        "LeadNoContest": "The lead is contested by every other vehicle's Pilot this phase.",
+        "NoPilot": "no pilot seated",
+        "EmptySeat": "{station}: empty — skipped this phase.",
+        "sensorLock": "Sensor lock",
+        "jam": "Jam / spoof",
+        "terrain": "Terrain read",
+        "Fire": "Fire",
+        "PassengerFire": "Fire (passenger)",
+        "Roll": "Roll",
+        "Pass": "Pass",
+        "Acted": "Done",
+        "Target": "Target",
+        "Weapon": "Weapon",
+        "EdgeTo": "Edge to",
+        "NoWeapon": "No weapon — Director sets damage",
+        "NoTargets": "There is no other vehicle in the chase to target."
+      },
+      "Note": {
+        "Handling": "higher Handling {own} vs {other}: edge",
+        "TerrainEdge": "terrain read: edge",
+        "Untrained": "untrained: bane",
+        "StormLattice": "Storm Lattice: edge",
+        "SensorPod": "Sensor Pod: edge",
+        "GhostCoat": "target's Ghost Coat: bane",
+        "SignalMule": "Signal Mule: edge",
+        "JamUntrained": "no Security Systems: Electronics at a bane",
+        "SensorFed": "sensor-fed: Logic + Gunnery",
+        "HandsOn": "hands-on: Reflex + Gunnery",
+        "WithLock": "moving target with a lock: bane",
+        "NoLock": "no lock: double bane",
+        "SpeedBane": "passenger: speed bane"
+      },
+      "Card": {
+        "PendingHint": "Rolled in the Chase HUD. Nothing changes until the Director confirms or adjusts the result.",
+        "RollLine": "{name} rolls {total} (tier {tier})",
+        "Pilot": "Pilot contest — {a} against {b}",
+        "PilotFlavor": "Pilot contest — {name} ({vehicle})",
+        "PilotNoPilot": "{vehicle}: no pilot seated, so it loses the contest.",
+        "PilotWinner": "{name} wins and wants to {intent}. Suggested band: {band}.",
+        "PilotTie": "A tie. The band holds.",
+        "Lock": "Sensor lock — {vehicle} on {target}",
+        "LockFlavor": "Sensor lock — {name}",
+        "LockYes": "Lock acquired, unless the Director says otherwise.",
+        "LockNo": "No lock.",
+        "Jam": "Jam / spoof — {vehicle} against {target}",
+        "JamFlavor": "Jam / spoof — {name}",
+        "JamDefenseFlavor": "Holds the lock — {name}",
+        "JamYes": "The jam lands: {target} loses its locks for this round.",
+        "JamNo": "{target} holds its locks.",
+        "Terrain": "Terrain read — {vehicle}",
+        "TerrainFlavor": "Terrain read — {name}",
+        "TerrainYes": "Success: edge to the {to}.",
+        "TerrainNo": "No edge this round.",
+        "Gunnery": "Gunnery — {vehicle} fires on {target}",
+        "GunneryFlavor": "Gunnery — {name}",
+        "Passenger": "Passenger fire — {name} from {vehicle} at {target}",
+        "PassengerFlavor": "Passenger fire — {name}",
+        "WeaponLine": "{weapon}: {damage} Integrity damage to {target} if it hits.",
+        "NoWeapon": "No weapon with a damage number. The Director sets the damage.",
+        "Pass": "{name} passes ({station}, {vehicle})",
+        "IntegrityTitle": "Chase HUD — Integrity",
+        "Integrity": "{name} takes {amount} Integrity damage — now {value} / {max}.",
+        "Repaired": "{name} repairs {amount} Integrity — now {value} / {max}.",
+        "Wrecked": "{name} is wrecked at 0 Integrity."
+      },
+      "Review": {
+        "Open": "Review",
+        "Title": "Director review — {summary}",
+        "Hint": "Nothing changes until you confirm. Change anything that is wrong first.",
+        "Confirm": "Confirm",
+        "Later": "Keep for later",
+        "Discard": "Discard",
+        "Tier": "Tier",
+        "TierN": "Tier {tier}",
+        "Winner": "Winner",
+        "Tie": "Tie — the band holds",
+        "NewBand": "{name}'s band after this",
+        "Rammed": "Rammed vehicle",
+        "RamDamage": "Ram damage",
+        "RamHint": "Only for a ram at Ramming / Boarding. Weigh Scale and Speed band. It is queued for phase 4.",
+        "Lock": "Lock acquired on {target}",
+        "JamLands": "Jam lands on {target}",
+        "JamTotals": "Jammer {jammer} against lock-holder {defender}. A tie keeps the lock.",
+        "Success": "Success",
+        "EdgeTo": "Edge to",
+        "Hit": "Hit",
+        "Damage": "Integrity damage to {target}",
+        "DamageHint": "Weapon damage by tier: {t1} / {t2} / {t3}. Changing the tier fills this in.",
+        "DamageManual": "No weapon damage number. Set the damage yourself."
+      },
+      "Queued": {
+        "Total": "Queued hits waiting for this phase: {damage} Integrity.",
+        "Open": "Apply queued damage",
+        "Title": "Phase 4 — apply damage",
+        "Hint": "Change any amount before it lands. Each vehicle's own Actor gets the new Integrity.",
+        "Row": "{name} (now {value} / {max})",
+        "Apply": "Apply to the vehicles",
+        "None": "No hits are queued."
+      },
+      "IntegrityDialog": {
+        "Title": "Integrity — {name}",
+        "Now": "Now {value} / {max}. The change is written onto the vehicle's Actor.",
+        "Mode": "Change",
+        "Damage": "Damage",
+        "Repair": "Repair",
+        "Amount": "Amount",
+        "ClearQueue": "Clear this vehicle's queued hits"
+      }
     }
   },
   "DRAW_STEEL": {
