@@ -3,7 +3,7 @@
   "_key": "!actors!6M0ZcDf8LCU7tPfa",
   "name": "GHOSTWIRE.Summons.Machines.DroneSmall.Name",
   "type": "npc",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/guard-dog.webp",
   "system": {
     "stamina": {
       "value": 12,
@@ -190,7 +190,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/drones/guard-dog.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

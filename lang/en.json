@@ -10356,6 +10356,30 @@
         "Description": "<p>You have an <strong>edge</strong> on your next power roll &mdash; ability rolls and tests alike. It clears the moment you use it.</p>",
         "Spent": "{name}'s rally edge is spent."
       }
+    },
+    "Ride": {
+      "Mount": "Mount",
+      "Dismount": "Dismount",
+      "DismountAll": "Dismount All",
+      "HudMount": "Mount the selected tokens on this machine ({capacity} seats)",
+      "HudDismount": "Dismount — step off and move on your own again",
+      "HudDismountAll": "Dismount every rider on this machine",
+      "Mounted": "{riders} climbs aboard {mount} ({used} of {capacity} seats).",
+      "Dismounted": "{riders} steps down and moves on their own again.",
+      "Freed": "{mount} is gone; {count} rider(s) are back on their own feet.",
+      "Refused": "No seat left for {rider} — {mount} carries {capacity}.",
+      "Full": "{name} is full: all {capacity} seats are taken.",
+      "NoSeats": "{name} has no room for a passenger. Micro drones carry nobody.",
+      "NotMachine": "Only a drone or vehicle token can carry riders. Select the machine, then Mount.",
+      "NoRiders": "Select the tokens you want aboard first, then press Mount on the machine.",
+      "AlreadyRiding": "{rider} is already riding {mount}. Dismount first.",
+      "NotRiding": "{rider} is not riding anything.",
+      "NoPassengers": "Nobody is riding {name}.",
+      "DragBlocked": "{rider} is riding {mount} and moves with it. Press Dismount to move on foot.",
+      "TheMount": "the machine",
+      "ToolMount": "Mount — put the selected tokens aboard the targeted machine",
+      "ToolDismount": "Dismount — take the selected riders off whatever they are riding",
+      "NoMount": "Target the drone or vehicle you want to ride, then press Mount."
     }
   },
   "DRAW_STEEL": {
