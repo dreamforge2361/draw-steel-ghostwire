@@ -96,9 +96,9 @@
     "ritual": 46,
     "summon": 68
   },
-  "chunkCount": 2246,
+  "chunkCount": 2256,
   "audienceCounts": {
-    "player": 2218,
+    "player": 2228,
     "director": 28
   },
   "chunks": [
@@ -990,7 +990,7 @@
       "heading": "Machines in combat",
       "kind": "rules",
       "audience": "player",
-      "text": "Drones and vehicles fight on the same meatspace grid as runners.\n\n- Anyone can run **one** drone within ordinary limits.\n- **Wrenches** field fleets, spend **Uptime**, and can Jump In (`16`, `23`).\n- Machine Stamina / Integrity and what “destroyed” means for a hull are in `23`.\n- Vehicle chases use a **range track**; boarding actions can dump people back onto a normal grid mid-scene.\n\nA drone’s attack is still an ability use — often a Wrench command — not a generic free strike.\n\n---"
+      "text": "Drones and vehicles fight on the same meatspace grid as runners.\n\n- Anyone can run **one** drone within ordinary limits.\n- **Wrenches** field fleets, spend **Uptime**, and can Jump In (`16`, `23`).\n- A machine's damage track is **Integrity** (0 = wrecked); what “destroyed” means for a hull is in `23`. Heroes and other creatures keep **Stamina**.\n- Every machine also has **Handling**, an integer **1–4**, higher is better. Beat the other machine's Handling in a chase and you take an **edge** on maneuvers and on Piloting / Driving / Rigging.\n- **Chases are anyone versus anyone** — Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the same round, and none of it needs a Wrench. The canonical **chase round checklist** (setup → pilots → systems/EW → gunners → damage → end) is in `23`; the Wrench's Jump-In, Uptime, Override Ping and Command are overlays on it.\n- Firing in a chase turns on the **sensor lock**: at a **moving** vehicle **with** a lock is a **bane**; **from** a moving vehicle **without** a lock is a **double bane**.\n- Vehicle chases use a **range track** by default; boarding actions can dump people back onto a normal grid mid-scene.\n\nA drone’s attack is still an ability use — often a Wrench command — not a generic free strike.\n\n---"
     },
     {
       "id": "04-combat#ending-combat#27",
@@ -4010,7 +4010,7 @@
       "heading": "Heroic Resource: Uptime",
       "kind": "rules",
       "audience": "player",
-      "text": "**Drained.** Uptime is drained, not just capped, by four conditions:\n- **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged with the fleet bleeds Uptime (see Jump-In plumbing, below) — the feedback spike breaking your focus. **The amount is the Director's call**, scaled to how hard the hit landed; there is no fixed figure.\n- **Damage to fielded assets** — every time a machine you control takes a hit, you lose **1 Uptime**, on top of whatever the machine's own Integrity track absorbs. Your attention is a finite resource and every hit on your hardware is a hit on your bandwidth.\n- **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains **2–4 Uptime per jam pulse** (Director's call within that range, by the strength of the pulse) rather than (or in addition to) imposing the usual EW penalty.\n- **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** — the shock of losing hardware outright, distinct from the smaller per-hit drain above.\n\n**Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 cost-band ladder used by every other GHOSTWIRE Heroic Resource."
+      "text": "**Drained.** Uptime is drained, not just capped, by three conditions. **Jamming is not one of them:** an enemy Electronic Warfare pulse that jams or spoofs your link takes your **sensor lock** away for the round (see the chase round in **Machines**, `23`) and costs you **no Uptime at all**.\n- **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged with the fleet bleeds Uptime (see Jump-In plumbing, below) — the feedback spike breaking your focus. **The amount is the Director's call**, scaled to how hard the hit landed; there is no fixed figure.\n- **Damage to fielded assets** — every time a machine you control takes a hit, you lose **1 Uptime**, on top of whatever the machine's own Integrity track absorbs. Your attention is a finite resource and every hit on your hardware is a hit on your bandwidth.\n- **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** — the shock of losing hardware outright, distinct from the smaller per-hit drain above.\n\n**Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 cost-band ladder used by every other GHOSTWIRE Heroic Resource."
     },
     {
       "id": "16-wrench#heroic-resource-uptime#7",
@@ -4110,7 +4110,7 @@
       "heading": "Drone Stat Card",
       "kind": "rules",
       "audience": "player",
-      "text": "Every drone is a **device** with a compact stat block. Drones sit at **Scale: Personal or Light** (see Vehicle Scale bands, below, for the full ladder) — small enough that a Wrench can carry several and deploy them as a swarm.\n\n**Drone Stat Card fields:**\n\n| Field | Description |\n|---|---|\n| **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |\n| **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |\n| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. An armor kit (§5F) adds Stamina. |\n| **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |\n| **Speed** | Movement in squares or Speed bands. |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |\n| **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |\n| **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |\n| **Upgrade Slots** | See below. |\n| **Uptime Upkeep** | 1 Uptime/turn while active, contributing to your fielded-fleet drip (see Heroic Resource: Uptime, above). |"
+      "text": "Every drone is a **device** with a compact stat block. Drones sit at **Scale: Personal or Light** (see Vehicle Scale bands, below, for the full ladder) — small enough that a Wrench can carry several and deploy them as a swarm.\n\n**Drone Stat Card fields:**\n\n| Field | Description |\n|---|---|\n| **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |\n| **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |\n| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. An armor kit (§5F) adds Stamina. |\n| **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |\n| **Speed** | Movement in squares or Speed bands. |\n| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. One kit at a time, and **Plate-Up does not cost Handling**. |\n| **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |\n| **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |\n| **Upgrade Slots** | See below. |\n| **Uptime Upkeep** | 1 Uptime/turn while active, contributing to your fielded-fleet drip (see Heroic Resource: Uptime, above). |"
     },
     {
       "id": "16-wrench#drone-stat-card#17",
@@ -4140,7 +4140,7 @@
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
       "audience": "player",
-      "text": "| Field | Description |\n|---|---|\n| **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |\n| **Scale** | Light / Vehicle / Heavy / Capital (see above) |\n| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Stamina. |\n| **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |\n| **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |\n| **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |\n| **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |\n| **Domain** | Ground / Air / Space / Water. |\n| **Upgrade Slots** | See below. |\n| **Jump-In Capable** | Yes/No — whether this frame supports a Wrench Jumping directly into its control systems (see Jump-In Plumbing, below). |\n\n**Vehicle Upgrade Slots — doctrine.** Vehicle hardpoints scale with Scale band, not with level:\n\n| Scale band | Upgrade Slots (mounts + mods combined) |\n|---|---|\n| **Light** | 2 slots |\n| **Vehicle** | 4 slots |\n| **Heavy** | 6 slots |\n| **Capital** | 8+ slots (Director's call, campaign-scale asset) |"
+      "text": "| Field | Description |\n|---|---|\n| **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |\n| **Scale** | Light / Vehicle / Heavy / Capital (see above) |\n| **Integrity** | The machine's damage track, and the name players use for it (Foundry stores it as Draw Steel Stamina under the hood; heroes keep **Stamina**). 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Integrity: Scrap-Weld **+6**, Plate-Up **+12**, Combat Plate **+18**, Aegis Kit **+27**. |\n| **Handling** | Integer **1–4**, higher is better; chase and vehicle combat only. Beat the other machine's Handling and you take an **edge** on maneuvers and on Piloting / Driving / Rigging; a tie or a lower number gives you nothing from this rule. Scale base (Light / Personal / Micro / Small **3**, Vehicle **2**, Heavy **1**, Capital **1**) plus speed band (extreme or fast **+1**, standard **0**, slow **−1**), clamped 1–4. A **Tune Kit** adds +1 up to the cap of 4; a **Lane Skirt** does not. |\n| **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |\n| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. One kit at a time, and **Plate-Up does not cost Handling**. |\n| **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |\n| **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |\n| **Domain** | Ground / Air / Space / Water. |"
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#20",
@@ -4150,7 +4150,7 @@
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
       "audience": "player",
-      "text": "A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utility mod, or a passenger conversion. As with drones, slots are bought and installed with nuyen (see Nuyen Economy Doctrine, below, for cost-band language shared across all three stat cards).\n\n**Crew Stations.** A vehicle's Crew field lists how many of each station it has:\n- **Pilot/Driver** — moves the vehicle (Rigging or Reflex + Handling); only the pilot moves the vehicle. Pilot-actions include evasive driving (defensive edge) and stunts.\n- **Gunner** — fires mounted weapons with **Gunnery** on their own turn (vehicle mounts scale-translate as normal). A vehicle may have multiple gunner stations.\n- **Systems/Sensors/EW** — runs sensors, electronic warfare, and comms; feeds the pilot or gunner an edge (a lock, a terrain read) or imposes a bane on an enemy (a jam).\n- **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.\n- **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform."
+      "text": "| Field | Description |\n|---|---|\n| **Upgrade Slots** | See below. |\n| **Jump-In Capable** | Yes/No — whether this frame supports a Wrench Jumping directly into its control systems (see Jump-In Plumbing, below). |"
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#21",
@@ -4160,7 +4160,7 @@
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
       "audience": "player",
-      "text": "Linked while driving vs Linked remote vs Jump-In. A Wrench who is Linked and seated as Pilot drives with normal Piloting/Rigging Power Rolls (Handling applies); meat stays active; they fill only the Pilot station unless another crew member takes Gunner/Systems. A Wrench who is Linked and commanding a fielded vehicle remotely (not in the seat) still uses Piloting/Rigging + Handling for chase and stunts, but does not gain Jump-In benefits (no dual Pilot+Gunner, no Jump-In Integrity buffer, no weapon-lock edge, no meat-inert, no hull biofeedback). Jump-In (Jump-In Capable frame or Rigger Cocoon) is the only path to Jacked In: meat inert, Pilot+Gunner through the control rig, buffer and Jump-In edges per Wrench. Linked never equals Jacked In."
+      "text": "**Vehicle Upgrade Slots — doctrine.** Vehicle hardpoints scale with Scale band, not with level:\n\n| Scale band | Upgrade Slots (mounts + mods combined) |\n|---|---|\n| **Light** | 2 slots |\n| **Vehicle** | 4 slots |\n| **Heavy** | 6 slots |\n| **Capital** | 8+ slots (Director's call, campaign-scale asset) |\n\nA slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utility mod, or a passenger conversion. As with drones, slots are bought and installed with nuyen (see Nuyen Economy Doctrine, below, for cost-band language shared across all three stat cards)."
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#22",
@@ -4170,7 +4170,7 @@
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
       "audience": "player",
-      "text": "**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (easy / medium / hard: `03`), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard \"damage to fielded assets\" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked."
+      "text": "**Crew Stations.** A vehicle's Crew field lists how many of each station it has:\n- **Pilot/Driver** — moves the vehicle (Rigging or Reflex + Handling); only the pilot moves the vehicle. Pilot-actions include evasive driving (defensive edge) and stunts.\n- **Gunner** — fires mounted weapons with **Gunnery** on their own turn (vehicle mounts scale-translate as normal). A vehicle may have multiple gunner stations.\n- **Systems/Sensors/EW** — a real station with a real action: **sensor lock** (2d10 + Logic + Electronics), **jam / spoof** (opposed against the lock-holder; success breaks or denies their lock for the round, and drains **no** Uptime from anyone), and an optional **terrain read** (2d10 + Logic or Instinct + Navigation) that hands an edge to the Pilot or the Gunner.\n- **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.\n- **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform."
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#23",
@@ -4180,10 +4180,60 @@
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
       "audience": "player",
-      "text": "**Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:\n- **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.\n- **Abstract range-state track (optional, cinematic pursuits):** `Broken off ← Extreme → Long → Medium → Close → Ramming/Boarding`, advanced by opposed Rigging/Piloting Power Rolls each round. Weapons work at their effective range-state band; Close/Ramming enables boarding and ramming; Broken off ends the chase.\n\nBoth modes use the Wrench's same Rigged Fire and Command actions — nothing about the class chassis changes between modes.\n\n**Vehicle Damage & Conditions (reference).** Vehicle conditions reskin the standard vocabulary: **Crippled** (Handling/Speed penalty), **Systems Down** (a station offline), **On Fire/Leaking** (ongoing damage), **Stalled/Dead-stick** (immobilized). Called shots are how a Wrench or an enemy inflicts a specific condition rather than raw Integrity loss. At 0 Integrity the vehicle is wrecked and occupants take a crash hit (Personal scale) and must escape."
+      "text": "Linked while driving vs Linked remote vs Jump-In. A Wrench who is Linked and seated as Pilot drives with normal Piloting/Rigging Power Rolls (Handling applies); meat stays active; they fill only the Pilot station unless another crew member takes Gunner/Systems. A Wrench who is Linked and commanding a fielded vehicle remotely (not in the seat) still uses Piloting/Rigging + Handling for chase and stunts, but does not gain Jump-In benefits (no dual Pilot+Gunner, no Jump-In Integrity buffer, no weapon-lock edge, no meat-inert, no hull biofeedback). Jump-In (Jump-In Capable frame or Rigger Cocoon) is the only path to Jacked In: meat inert, Pilot+Gunner through the control rig, buffer and Jump-In edges per Wrench. Linked never equals Jacked In."
     },
     {
-      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#24",
+      "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#24",
+      "file": "16-wrench.md",
+      "source": "docs/raw/16-wrench.md",
+      "chapter": "The Wrench",
+      "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (easy / medium / hard: `03`), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard \"damage to fielded assets\" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.\n\n**The chase round (canonical).** This is the same round every crew runs — it is printed in full in **Machines** (`23`) and repeated here so a Wrench never has to leave the class chapter. Jump-In, Uptime, Override Ping and Command are the Wrench's **overlays** on it, not a replacement for it.\n\n#### Vehicle combat / chase"
+    },
+    {
+      "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#25",
+      "file": "16-wrench.md",
+      "source": "docs/raw/16-wrench.md",
+      "chapter": "The Wrench",
+      "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Chase and vehicle combat are **anyone versus anyone**. Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the rules below, whatever class they are and whether or not a Wrench is at the table. The Wrench's **Jump-In**, **Uptime**, **Override Ping** and fleet **Command** are **overlays only**: they change who can hold two stations at once and what a hit costs the Wrench. They change nothing in the round below.\n\n**Default chase mode for this ship: the abstract track.** Positional mode stays an optional Director call for the rounds when the vehicles and a foot fight share one map — same skills, same wreck language.\n\n##### Chase round checklist — two machines in contest\n\n**0. Setup — once, no roll.** Put on the table for each machine: **Handling** (1–4), **Speed band**, **Integrity**, installed **mods**, and who is sitting in which **crew seat**.\n\n**1. Pilots — range and maneuvers**\n\n- Opposed Power Roll: **2d10 + Reflex + (Driving | Piloting | Rigging**, whichever the machine calls for**)**.\n- **Higher Handling takes an edge.** A tie, or the lower number, gets nothing from this rule.\n- Untrained in the skill, on a risky or combat maneuver: **bane**.\n- **Lane Skirt** is a situational edge in the limiter lanes and tight street-deck traffic only — it is **not** +Handling.\n- The winner closes, opens, or holds the chase band: `Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding`.\n- At **Ramming / Boarding**, a ram is the same opposed roll; damage feel is **Scale + Speed band**.\n\n**2. Systems / Sensors / EW — locks before jams**"
+    },
+    {
+      "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#26",
+      "file": "16-wrench.md",
+      "source": "docs/raw/16-wrench.md",
+      "chapter": "The Wrench",
+      "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Systems is a real station with a real action: locks, jam and spoof, terrain read.\n\n- **2a Sensor lock.** **2d10 + Logic + Electronics**. A **Sensor Pod** grants an edge. A **Storm Lattice** is the apex — edge, pierces smoke, dark and spoof, and **shares its lock** with the crew and the rest of the fleet. A target wearing a **Ghost Coat** imposes a bane on the attempt. The published sensor ladder for this ship is **Sensor Pod → Storm Lattice**; nothing sits between them.\n- **2b Jam / spoof.** Opposed: the jammer rolls **2d10 + Logic + Security Systems** (untrained in Security Systems: Electronics at a bane) against the lock-holder's **2d10 + Logic + Electronics**. A **Signal Mule** gives the defender an edge. Success **breaks or denies that sensor lock for the round**. It **drains no Uptime** — jamming a Wrench costs the Wrench nothing from the pool. A **Spoof Cowl** is transit and ID only and is never a combat jam. **Buzz**, **Choir-Box** and **Choir-King** keep their published jam bubbles.\n- **2c Terrain read — optional.** **2d10 + Logic (or Instinct) + Navigation** hands an edge to the Pilot or the Gunner for this round.\n\n**3. Gunners and passengers — fire**"
+    },
+    {
+      "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#27",
+      "file": "16-wrench.md",
+      "source": "docs/raw/16-wrench.md",
+      "chapter": "The Wrench",
+      "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
+      "kind": "rules",
+      "audience": "player",
+      "text": "- Mounted weapons: **2d10 + Reflex + Gunnery** hands-on, **or** **2d10 + Logic + Gunnery** sensor-fed (a Jumped-In Wrench fires this way).\n- **Lock state changes the roll:**\n  - Firing at a **moving** vehicle **with** a sensor lock: **bane**.\n  - Firing **from** a moving vehicle **without** a sensor lock: **double bane**.\n- Passengers make an ordinary personal strike Power Roll at a speed bane, and use the hull as cover.\n\n**4. Damage and wrecks.** Damage comes off **Integrity**. **0 Integrity = wrecked** — the domain catastrophe (ground crash, air downing, hull flood, decompress).\n\n**5. End of round.** Broken off or wrecked ends the chase. Otherwise the band and every live sensor lock carry into the next round.\n\n**Wrench overlay.** A Jumped-In Wrench may cover Pilot **and** Gunner from one seat. **Override Ping** and fleet **Command** exist only if a Wrench is present. No step above needs a Wrench.\n\n##### Weapons at range\n\n```\nBroken off ← Extreme → Long → Medium → Close → Ramming / Boarding\n```\n\n- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).\n- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.\n- **Broken off:** chase ends (escape or lost contact).\n- **Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`)."
+    },
+    {
+      "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#28",
+      "file": "16-wrench.md",
+      "source": "docs/raw/16-wrench.md",
+      "chapter": "The Wrench",
+      "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Chase Modes (reference).** Vehicle combat runs in one of two modes:\n- **Abstract range-state track (default):** `Broken off ← Extreme → Long → Medium → Close → Ramming/Boarding`, advanced by the opposed pilot roll each round. Weapons work at their effective range-state band; Close/Ramming enables boarding and ramming; Broken off ends the chase. This is the default for Ghostwire — see **Machines** (`23`).\n- **Positional (optional, Director's call):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot. Use it when the vehicles and a foot fight share one map.\n\nBoth modes use the Wrench's same Rigged Fire and Command actions — nothing about the class chassis changes between modes.\n\n**Vehicle Damage & Conditions (reference).** Vehicle conditions reskin the standard vocabulary: **Crippled** (Handling/Speed penalty), **Systems Down** (a station offline), **On Fire/Leaking** (ongoing damage), **Stalled/Dead-stick** (immobilized). Called shots are how a Wrench or an enemy inflicts a specific condition rather than raw Integrity loss. At 0 Integrity the vehicle is wrecked and occupants take a crash hit (Personal scale) and must escape."
+    },
+    {
+      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#29",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4193,7 +4243,7 @@
       "text": "The Facility Rigger's signature system — but any Wrench who sets up a safehouse, workshop, or killbox uses this card.\n\n**Building Stat Card fields:**\n\n| Field | Description |\n|---|---|\n| **Name / Site** | e.g. \"the Warrens sub-level squat,\" \"the chop-shop on Fourth Tier\" |\n| **Base-of-Operations Designation** | Headquarters / Safehouse / Workshop / Killbox — see below |\n| **Structural Integrity** | The building's own damage track (separate from any single defender's Stamina); 0 = the structure is breached/collapsing. |\n| **Physical Upgrade Slots** | See below — turrets, workshops, drone bays, med-bays, breaching-charge caches |\n| **Node** | The building's presence on the Mesh — see Node Reference, below |\n| **Wired Upgrade Slots** | Node-side upgrades — see below |\n| **Nuyen Cost Band** | Buy / Lease / Squat / Build — see Nuyen Cost Bands, below |\n| **Upkeep** | Recurring ¥ cost per downtime cycle — see below |\n| **Lifestyle Hook** | See below |\n\n**Base-of-Operations Designations.**\n- **Headquarters** — the crew's primary base; highest slot counts, highest upkeep, usually the most defensible.\n- **Safehouse** — a lower-profile fallback site; fewer slots, low upkeep, prioritizes not being found over being a fortress.\n- **Workshop** — a Fabricator/crafting-forward site; extra Physical Upgrade Slots dedicated to bench/crafting infrastructure, at the cost of defensive slots.\n- **Killbox** — the Facility Rigger's specialty; a site built to fight from, maximizing turret/sentry/breaching-charge Physical Upgrade Slots at the cost of comfort and Lifestyle quality."
     },
     {
-      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#25",
+      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#30",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4203,7 +4253,7 @@
       "text": "**Physical Upgrade Slots — doctrine.** Physical slots hold turrets, workshops, drone bays, med-bays, reinforced doors, breaching-charge caches, and similar hardware. Slot count scales with designation and Nuyen cost band:\n\n| Designation | Physical Upgrade Slots |\n|---|---|\n| Safehouse | 2 |\n| Workshop | 3 (bench-weighted; Director may reflavor 1 slot as \"bench capacity\" rather than a defensive mod) |\n| Headquarters | 4 |\n| Killbox | 5 (defense-weighted; Facility Rigger subclass raises this further, see below) |\n\nA Physical Upgrade Slot spent on **bench capacity** is where a purchased **workshop bench** lives — Armorer's, Weaponeer's, Chrome Bay, Matrix / Deck Lab, Vehicle Depot, or Ritual Sanctum Tools. The bench is bought with ¥ like any other base asset; what it gives the crew (**+1 Lifestyle project slot, capped once**, plus an edge on matching-family Project rolls) is printed in `26`, not here. Designation sets how many benches the site can hold; it does not grant one.\n\n**Node Reference (Wired engagement).** Every building's Node is itself a slot-bearing asset — the building's Node is not a separate line item but **takes upgrades directly**, the way a drone or vehicle chassis takes Upgrade Slots. The Node is how hackers, Elementalists working Wired-adjacent effects, or any Wired-side actor reaches (or is kept out of) the building through the Mesh. A building's Node has its own **Wired Upgrade Slots**:\n\n| Designation | Wired Upgrade Slots |\n|---|---|\n| Safehouse | 1 |\n| Workshop | 2 |\n| Headquarters | 3 |\n| Killbox | 2 (defense-weighted toward Physical, per its role) |"
     },
     {
-      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#26",
+      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#31",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4213,7 +4263,7 @@
       "text": "Wired Upgrade Slots hold Node-side upgrades — firewall hardening, intrusion countermeasures, a dedicated Hacker's nest, mesh-web tripwires (a Facility Rigger favorite — see below), sensor-fusion feeds for the building's own turrets. A building with an unhardened Node (0 Wired Upgrade Slots filled) is trivially easy for a hostile Hacker to breach; this is the building-scale version of the same Wired-exposure risk a Jumped-In Wrench runs personally.\n\n**Nuyen Cost Bands.** Nuyen (¥) is the currency. A building is acquired and upgraded on one of five cost tracks:\n\n| Acquisition | Cost band | Notes |\n|---|---|---|\n| **Buy (clean title)** | ¥¥¥¥ (highest) | Rare for a street Wrench; usually a front-company purchase |\n| **Buy (black-market/grey title)** | ¥¥¥ | No clean paperwork; risk of a corp reclaim plot hook |\n| **Lease** | ¥ per downtime cycle, ongoing | Lowest entry cost, highest long-term spend, evictable |\n| **Squat-and-fortify** | ¥ (low upfront, mostly labor/time) | The classic Facility Rigger origin — cheap to start, expensive to defend legally (none) |\n| **Salvage-and-rebuild** | ¥¥ (upfront) + downtime time | Buy a wreck of a building cheap, Fabricate it up over multiple downtime cycles |\n\n**Upkeep.** Every base-of-operations designation carries a recurring **Upkeep** cost per downtime cycle, scaling with Physical + Wired Upgrade Slot count filled (more hardware, more power/bandwidth/maintenance draw). *(Base Upkeep = 1¥-band per 2 filled slots, rounded up.)* Failing to pay Upkeep risks a slot going offline (Director's call) until payment resumes."
     },
     {
-      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#27",
+      "id": "16-wrench#building-stat-card-upgrade-slots-node-reference-and-downtime#32",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4223,7 +4273,7 @@
       "text": "**Lifestyle Hook.** Building cost band will feed into the Lifestyle system when authored. This is the plug point; final Lifestyle numbers pending.\n\n**Downtime Fabrication.** The Facility Rigger's signature use of downtime: spend downtime cycles and ¥ to add Physical or Wired Upgrade Slots to a building, upgrade an existing slot's mod, or pre-place defenses (turrets armed and ready before a session starts, breaching charges wired into doorframes, a mesh-web strung across a corridor). **One Downtime Fabrication project per downtime cycle per Wrench**, costing ¥ per the Nuyen Cost Bands above, taking 1 cycle per slot added (2 cycles for a Wired slot, reflecting the harder Node-hardening work), with the Facility Rigger subclass reducing both cost and time (see below).\n\n---"
     },
     {
-      "id": "16-wrench#wrench-subclasses#28",
+      "id": "16-wrench#wrench-subclasses#33",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4233,7 +4283,7 @@
       "text": "Three subclasses, one per role: **Drone Jockey** (swarm of small deployables), **Vehicle Rig-Pilot** (one big platform), **Facility Rigger** (pre-placed building defense). All three are **street-taught** — no corp academy for any of them (see Origin Doctrine, above). Each grants a starting skill, a contact, 1st-level features, a signature reskin describing how Deploy & Command / Rigged Fire / Field Repair change in their hands, and its own ability ladder across Levels 1-10.\n\n---"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#29",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#34",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4243,7 +4293,7 @@
       "text": "Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact**. Starter Kit: **Fabricator's Bench** (light Kit; mobile tool rig + sidearm; an **edge** on Field Repair rolls made on your own drones).\n\n**Signature reskin:** Deploy & Command becomes a **swarm launch** — a single Deploy action can bring up to 2 microdrones online at once (instead of 1) at the cost of each being individually fragile. Rigged Fire, when made by 3 or more active drones in the same Focus Fire action, auto-applies the Suppressed rider regardless of roll. Field Repair on a drone restores full Integrity in one action rather than a partial amount.\n\n**Feature ladder:**"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#30",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#35",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4253,7 +4303,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | **Wide Band** (passive) | Fleet size cap raised by +1 over the class baseline; a single Deploy & Command maneuver can Command the entire swarm at once regardless of count |\n| 1 | **Salvage Sense** (passive, triggered) | When a drone you control is wrecked, you may immediately strip it for parts as a free triggered action (grants the standard Salvage Tick Uptime, see Heroic Resource: Uptime, above) |\n| 2 | **Suppressing Volume** (passive) | Focus Fire with 3+ drones auto-suppresses the target regardless of individual roll results |\n| 3 | **Cheap and Many** (passive) | A wrecked Micro-chassis drone can be redeployed from spare parts as a maneuver instead of a main action, once per encounter |\n| 5 | **Swarm Sense** (passive) | While 3+ drones are active, you gain an edge on Instinct tests to notice ambushes or hidden threats (distributed sensor coverage) |\n| 6 | **Overwhelm** (passive) | When 4 or more drones you control target the same creature in one Focus Fire, that target's Armor is treated as 1 lower for that action |\n| 7 | **Endless Swarm** (passive) | Fleet size cap raised by a further +2 (total +3 over baseline); Deploy Momentum income doubles |\n| 8 | **Wide Band, Redoubled** (passive) | The Wide Band Command-the-whole-swarm maneuver no longer requires all drones be within Range; it reaches any drone you currently control |\n| 9 | **Total Coverage** (passive) | Your recon and sensor drones grant the whole crew (not just you) the Swarm Sense edge to notice ambushes while 3+ of your drones are active |"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#31",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#36",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4263,7 +4313,7 @@
       "text": "**Full ability ladder (Drone Jockey):**\n\n*Base Band (1-5 Uptime, chosen at 1st level; 6 abilities total in the band):*\n\n> **Taser Swarm**\n> *Command · Main Action · Uptime cost 1*\n> Target: 1 creature within any active drone's weapon range\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | No effect. |\n> | 12-16 | 2 + Logic damage, target is Slowed (save ends). |\n> | 17+ | 3 + Logic damage, target is Stunned until end of their next turn. |\n\n> **Kamikaze Run**\n> *Command · Main Action · Uptime cost 3*\n> Target: 1 creature or object\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 3 damage; the drone is destroyed regardless of roll. |\n> | 12-16 | 6 damage; drone destroyed. |\n> | 17+ | 10 damage; drone destroyed, target knocked prone. |\n>\n> *One microdrone is expended entirely — it flies into the target and detonates. Always destroys the drone.*\n\n> **Spotter Lock**\n> *Command · Maneuver · Range 10 · Uptime cost 1*\n> Target: 1 creature\n> **Power Roll** — none\n>\n> *A spotter-drone marks the target: the next Rigged Fire or Focus Fire against that target this round gains an edge. No damage; pure setup.*\n\n> **Recon Loop**\n> *Command · Maneuver · Self · Uptime cost 1*\n> No target; utility\n>\n> *A recon quadrotor sweeps a 10-square radius and reports back — you learn the position of every creature in the area, even through light cover, until the start of your next turn.*"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#32",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#37",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4273,7 +4323,7 @@
       "text": "> **Buzzsaw Pass**\n> *Command · Main Action · Melee 1 (drone must be adjacent) · Uptime cost 2*\n> Target: 1 creature\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 2 damage. |\n> | 12-16 | 4 damage, drone may reposition up to its Speed after. |\n> | 17+ | 6 damage, target is Bleeding (save ends). |\n\n> **Decoy Chirp**\n> *Command · Free Triggered · Range 10 · Uptime cost 1*\n> No target; utility\n>\n> *Trigger: an enemy targets you or an ally with a ranged attack. Effect: a drone broadcasts a false heat/comm signature, and the attack must retarget the drone instead if it is a valid target in range.*\n\n*7-Cost Band (chosen at 3rd level; 5-6 abilities):*\n\n> **Bee Storm**\n> *Command · Main Action · Uptime cost 5*\n> Target: up to 3 creatures within a 3-burst\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 2 damage each. |\n> | 12-16 | 4 damage each, Slowed (save ends). |\n> | 17+ | 6 damage each, Slowed and Bleeding (save ends). |\n>\n> *Every taser-bee you control converges on an area.*\n\n> **Autogun Lockdown**\n> *Command · Main Action · Range = autogun's mount range · Uptime cost 5*\n> Target: 1 zone (3-burst)\n> **Power Roll** — none\n>\n> *An autogun turret-drone establishes an area of control: until the start of your next turn, any enemy that enters or acts in the zone triggers a free Rigged Fire from the autogun.*"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#33",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#38",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4283,7 +4333,7 @@
       "text": "> **Sensor Ghost**\n> *Command · Maneuver · Range 10 · Uptime cost 3*\n> Target: self or 1 ally\n>\n> *A recon drone projects a false sensor return, granting the target concealment against Wired-assisted targeting (smartlinks, drone gunners, sensor-fusion) until start of your next turn.*\n\n> **Swarm Reposition**\n> *Command · Maneuver · Self · Uptime cost 2*\n>\n> *Every drone you control may reposition up to its Speed. No attack.*\n\n> **Focus Sting**\n> *Command · Main Action · Uptime cost 4*\n> Target: 1 creature\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage. |\n> | 12-16 | 7 damage. |\n> | 17+ | 10 damage, target is Weakened (save ends). |\n>\n> *Every taser-bee currently active converges its charge into a single overload strike on one target.*\n\n> **Wide Eyes**\n> *Command · Free Triggered · Range 10 · Uptime cost 2*\n>\n> *Trigger: an ally within 10 squares of any of your active drones is about to be flanked or ambushed. Effect: the ally gains a free Reposition of 2 squares before the triggering effect resolves (your recon net calls the warning a half-second early).*\n\n*9-Cost Band (chosen at 5th level; 4-5 abilities):*\n\n> **Saturation Fire**\n> *Command · Main Action · Uptime cost 7*\n> Target: up to 4 creatures within a 4-burst\n> **Power Roll** — 2d10 + Logic (rolled once, applied to all targets)\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage each. |\n> | 12-16 | 7 damage each, Slowed (save ends). |\n> | 17+ | 10 damage each, Suppressed until end of their next turn. |\n>\n> *Every autogun and drone with a ranged weapon opens up at once.*"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#34",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#39",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4293,7 +4343,7 @@
       "text": "> **Ghost Swarm**\n> *Command · Maneuver · Uptime cost 5*\n> No target; utility\n>\n> *Every drone you control becomes hidden (even if observed) for one round, so long as it does not attack.*\n\n> **Kamikaze Volley**\n> *Command · Main Action · Uptime cost 9*\n> Target: up to 3 creatures or objects\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage each; expended drones destroyed. |\n> | 12-16 | 8 damage each; drones destroyed. |\n> | 17+ | 12 damage each; drones destroyed, targets knocked prone. |\n>\n> *Up to three microdrones detonate simultaneously against up to three separate targets.*\n\n> **Adaptive Net**\n> *Command · Free Triggered · Range 10 · Uptime cost 4*\n>\n> *Trigger: a drone you control would be destroyed. Effect: it survives at 1 Integrity, and you may immediately reposition it up to its Speed away from danger.*\n\n*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*\n\n> **Total Swarm Protocol** (apex)\n> *Command · Main Action · Uptime cost 11*\n> Target: all creatures within 5 of any active drone\n> **Power Roll** — 2d10 + Logic (rolled once per drone participating)\n>\n> *Every drone you control — regardless of count — makes a Rigged Fire attack this action, splitting freely among all valid targets in range. This is Focus Fire without the target-count cap, once per encounter.*"
     },
     {
-      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#35",
+      "id": "16-wrench#drone-jockey-the-swarm-street-taught-no-corp-academy#40",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4303,7 +4353,7 @@
       "text": "> **Unbreakable Hive** (apex passive)\n>\n> *Whenever a drone you control would be destroyed, make a **saving throw** for it (`03` — 1d10, succeed on 6+). On a success it instead drops to 1 Integrity and is Systems Down (inactive but not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.*\n\n**Skill grants:** Electronics (1st). **Contact grant:** a drone-parts/grey-market salvage contact. **Kit grant:** Fabricator's Bench (light Kit; an **edge** on Field Repair rolls made on your own drones). **Signature chrome:** none required.\n\n---"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#36",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#41",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4313,7 +4363,7 @@
       "text": "Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). The Harness is a **Connect** interface (≡ deck; see **The Wire**, `21`).\n\n**Signature reskin:** Deploy & Command, for a Rig-Pilot, is really \"wake the platform up\" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.\n\n**Feature ladder:**"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#37",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#42",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4323,7 +4373,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | **One With the Machine** (passive) | Jump-In into your registered signature platform costs 1 fewer Uptime and grants a larger temporary Integrity buffer (+2 over the class baseline) |\n| 1 | **Pilot and Gunner** (passive) | While Jumped-In, you count as occupying both the Pilot and a Gunner station simultaneously, with an extra edge on Rigged Fire rolls made this way |\n| 2 | **Line Breaker** (passive) | Rigged Fire made from a Jumped-In vehicle can target 2 creatures in a line within the weapon's arc, rolled once |\n| 3 | **Hardened Rig** (passive) | While Jumped-In, damage to your meat body from biofeedback is reduced by 2 |\n| 5 | **Redline Reflexes** (passive) | While Jumped-In, you gain the platform's full Speed as your own for the purpose of any ability that cares about your Speed |\n| 6 | **Scrapheap Loyalty** (passive) | Your signature platform can be field-repaired to full Integrity once per respite even outside of downtime, so long as you have access to any workshop (Physical Upgrade Slot) |\n| 7 | **Ghost in the Frame** (passive) | While Jumped-In, if your platform would be wrecked, you may spend all remaining Uptime to eject safely with no biofeedback damage, regardless of roll |\n| 8 | **Redline Mastery** (passive) | Redline Reflexes' Speed benefit now also grants a +1 Handling bonus while Jumped-In |\n| 9 | **One Frame, Perfect Timing** (passive) | Once per encounter, when you would fail a Jump-In check, treat it as a success instead |\n\n**Full ability ladder (Vehicle Rig-Pilot):**"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#38",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#43",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4333,7 +4383,7 @@
       "text": "*Base Band (1-5 Uptime, chosen at 1st level; 5-6 abilities):*\n\n> **Jump-In (Signature Platform)**\n> *Command · Maneuver · Uptime cost 1*\n> Target: self, into your registered signature platform within Range 10\n>\n> *You jack directly into your platform's control systems. See Jump-In Plumbing (THE MACHINES, above) for the full mechanical resolution; this ability grants the One With the Machine discount automatically.*\n\n> **Ram Speed**\n> *Command · Main Action · Uptime cost 3*\n> Target: 1 creature or object in the platform's path\n> **Power Roll** — 2d10 + Reflex (piloting the ram)\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage to target, 2 damage to platform. |\n> | 12-16 | 8 damage to target, 2 damage to platform, target pushed 3. |\n> | 17+ | 12 damage to target, 1 damage to platform, target pushed 5 and prone. |\n>\n> *A pilot-action ramming attack, per the vehicle-combat ramming rules (THE MACHINES, above): Scale + Speed sets the damage basis; the heavier/faster party takes less.*\n\n> **Twin Mount Volley**\n> *Command · Main Action · Uptime cost 3*\n> Target: 2 creatures in a line within a mount's arc\n> **Power Roll** — 2d10 + Logic + Gunnery\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | No damage. |\n> | 12-16 | 4 + Logic damage each. |\n> | 17+ | 6 + Logic damage each, both Suppressed. |\n\n> **Evasive Burn**\n> *Command · Maneuver · Uptime cost 2*\n> No target; self-buff\n>\n> *Your platform gains a defensive edge against the next attack made against it this round (a hard evasive maneuver).*"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#39",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#44",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4343,7 +4393,7 @@
       "text": "> **Systems Purge**\n> *Command · Free Triggered · Uptime cost 2*\n> Trigger: your platform would gain a mechanical condition (Crippled, Systems Down, On Fire/Leaking)\n> **Power Roll** — **2d10 + Logic**\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | The purge doesn't take — the condition applies as normal. |\n> | 12-16 | The condition is prevented entirely. |\n> | 17+ | The condition is prevented entirely. |\n\n> **Boarding Repel**\n> *Command · Main Action · Melee 1 · Uptime cost 3*\n> Target: 1 creature attempting to board your platform\n> **Power Roll** — 2d10 + Reflex\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | No effect. |\n> | 12-16 | Target pushed off, falls prone. |\n> | 17+ | Target pushed off, takes 4 damage, falls prone. |\n\n*7-Cost Band (chosen at 3rd level; 5-6 abilities):*\n\n> **Overdrive Charge**\n> *Command · Main Action · Uptime cost 5*\n> Target: 1 creature or object\n> **Power Roll** — 2d10 + Reflex\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 6 damage, 3 damage to platform. |\n> | 12-16 | 10 damage, 2 damage to platform, push 3. |\n> | 17+ | 14 damage, 1 damage to platform, push 5, target prone. |\n\n> **Sensor Fusion Lock**\n> *Command · Maneuver · Uptime cost 3*\n> Target: 1 creature within sensor range\n>\n> *Grants an edge to the next Rigged Fire or Twin Mount Volley against this target, and denies it any cover benefit for one round.*"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#40",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#45",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4353,7 +4403,7 @@
       "text": "> **Full Broadside**\n> *Command · Main Action · Uptime cost 7*\n> Target: up to 3 creatures within the platform's firing arc\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage each. |\n> | 12-16 | 8 damage each. |\n> | 17+ | 12 damage each, all Suppressed. |\n\n> **Emergency Patch**\n> *Command · Maneuver · Uptime cost 4*\n> Target: your own platform\n>\n> *Restore 6 + Logic Integrity to your platform while Jumped-In, without leaving Jump-In state.*\n\n> **Terrain Breaker**\n> *Command · Main Action · Uptime cost 5*\n> Target: 1 zone of difficult/obstacle terrain\n>\n> *Your platform smashes through an obstacle, clearing a path and potentially damaging anything sheltering behind it (Director's call on secondary targets).*\n\n*9-Cost Band (chosen at 5th level; 4-5 abilities):*\n\n> **Redline Barrage**\n> *Command · Main Action · Uptime cost 7*\n> Target: up to 3 creatures\n> **Power Roll** — 2d10 + Logic + Gunnery\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 6 damage each. |\n> | 12-16 | 10 damage each, Slowed. |\n> | 17+ | 14 damage each, Slowed and Suppressed. |\n\n> **Kill Ram**\n> *Command · Main Action · Uptime cost 9*\n> Target: 1 creature or object\n> **Power Roll** — 2d10 + Reflex\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 8 damage, 3 to platform. |\n> | 12-16 | 14 damage, 2 to platform, push 5. |\n> | 17+ | 20 damage, 0 to platform, push 8 and prone. |\n\n> **Full Stabilization**\n> *Command · Maneuver · Uptime cost 5*\n>\n> *Clear all mechanical conditions from your platform and restore 10 + Logic Integrity, once per encounter.*"
     },
     {
-      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#41",
+      "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#46",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4363,7 +4413,7 @@
       "text": "> **Ghost Signature**\n> *Command · Free Triggered · Uptime cost 4*\n>\n> *Trigger: your platform would be targeted by an enemy lock/mark effect. Effect: the lock fails; your platform's sensor ghosting sells a false position.*\n\n*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*\n\n> **One Machine, One Will** (apex)\n> *Command · Main Action · Uptime cost 11*\n> Target: up to 3 creatures within the platform's full firing arc\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once, at double edge\n>\n> *The platform and pilot act as a single perfect system for one exchange: maximum damage output, no biofeedback risk this action regardless of outcome.*\n\n> **Unkillable Frame** (apex passive)\n>\n> *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*\n\n**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests; **Connect** interface ≡ deck). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.\n\n---"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#42",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#47",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4373,7 +4423,7 @@
       "text": "Grants the **Security Systems** skill and a **parts-supplier/quartermaster contact**. Starter Kit: **Field Chassis** (light Kit; portable turret-control tablet + sidearm; an **edge** on Deploy tests for pre-placed assets).\n\n**Signature reskin:** Deploy & Command, for a Facility Rigger, doesn't deploy from a carried machine — it **activates** a pre-placed asset already wired into their base of operations (see Building Stat Card, above), at reduced Uptime cost since the hard work (installation) happened during downtime, not in the fight. Rigged Fire from a pre-placed turret benefits from the terrain the Rigger chose for it — always treat pre-placed turret fire as having prepared cover unless the enemy specifically flanks it. Field Repair on a Physical Upgrade Slot asset (a turret, a mesh-web generator) is faster and cheaper than field-repairing a mobile drone, since the Rigger built it to be serviced in place.\n\n**Feature ladder:**"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#43",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#48",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4383,7 +4433,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | **Home Ground** (passive) | While fighting inside or adjacent to your registered base of operations, all Deploy actions for pre-placed assets cost 1 fewer Uptime |\n| 1 | **Pre-Wired** (passive) | You may pre-designate up to 2 Physical Upgrade Slot assets as \"primed\" during downtime; primed assets activate as a free triggered action the first time combat starts at that site |\n| 2 | **Killbox Instinct** (passive) | Your base of operations gains +1 Physical Upgrade Slot if designated Killbox (stacks with the Killbox baseline, see THE MACHINES, above) |\n| 3 | **Mesh-Web Doctrine** (passive) | Mesh-web tripwires you place impose a bane on the enemy's next Power Roll after it triggers one, in addition to their normal effect |\n| 5 | **Fortified Node** (passive) | Your base's Node gains +1 Wired Upgrade Slot, and any hostile Hacker attempting to breach it takes a bane on the attempt while you are present |\n| 6 | **Turn the Building** (passive) | You unlock the **Turn the Building** ability — one working, defined once in the 11-Cost Band, below. This feature is how a Facility Rigger gets it at 6th level instead of spending an 11-cost band pick on it at 8th |"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#44",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#49",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4393,7 +4443,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 7 | **The Building Remembers** (passive) | Your base of operations never loses Downtime Fabrication progress even if abandoned and later reclaimed; additionally, Physical Upgrade Slot assets repair themselves 1 Integrity per downtime cycle automatically. (The apex passive **The Building Remembers (Apex)**, below, is a separate, later effect that shares the name — it covers what survives a collapse, not downtime memory) |\n| 8 | **Fortress Doctrine** (passive) | Pre-Wired's \"primed assets\" cap rises from 2 to 4 |\n| 9 | **The Warlord's Reach** (passive) | Home Ground's Uptime discount now also applies to any secondary site you've spent at least one Downtime Fabrication cycle upgrading, not just your primary base |"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#45",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#50",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4403,7 +4453,7 @@
       "text": "**Full ability ladder (Facility Rigger):**\n\n*Base Band (1-5 Uptime, chosen at 1st level; 5-6 abilities):*\n\n> **Wake the Walls**\n> *Command · Main Action · Uptime cost 1 (reduced by Home Ground)*\n> Target: 1 pre-placed asset within your base\n>\n> *Activate a single pre-placed turret, sentry, or mesh-web generator. It comes online and acts immediately this round.*\n\n> **Sentry Fire**\n> *Command · Main Action · Uptime cost 2*\n> Target: 1 creature within a sentry's mount range\n> **Power Roll** — 2d10 + Logic + Gunnery\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | No damage. |\n> | 12-16 | 4 + Logic damage. |\n> | 17+ | 6 + Logic damage, target Suppressed. |\n\n> **Trip the Web**\n> *Command · Free Triggered · Range = mesh-web's placement · Uptime cost 1*\n>\n> *Trigger: an enemy enters a square containing your mesh-web. Effect: the enemy is Restrained (save ends) and takes a bane on its next Power Roll (Mesh-Web Doctrine, once unlocked).*\n\n> **Breach Charge**\n> *Command · Main Action · Uptime cost 3*\n> Target: 1 zone (2-burst) at a pre-wired breach point\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage to all in zone. |\n> | 12-16 | 8 damage to all in zone, knocked prone. |\n> | 17+ | 12 damage to all in zone, knocked prone and Deafened (save ends). |\n\n> **Lockdown Protocol**\n> *Command · Maneuver · Uptime cost 2*\n> Target: 1 door/access point in your base\n>\n> *Seal a door or corridor — enemies must spend an action to force it, or find another way around.*"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#46",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#51",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4413,7 +4463,7 @@
       "text": "> **Ghost in the Walls**\n> *Command · Maneuver · Uptime cost 1*\n> No target; utility\n>\n> *You know the location and status of every pre-placed asset and every enemy detected by your base's sensors, without needing line of sight, as long as you are inside or adjacent to the base.*\n\n*7-Cost Band (chosen at 3rd level; 5-6 abilities):*\n\n> **Crossfire Grid**\n> *Command · Main Action · Uptime cost 5*\n> Target: up to 3 creatures within 2 or more sentries' combined arcs\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage each. |\n> | 12-16 | 8 damage each, Slowed. |\n> | 17+ | 12 damage each, Restrained (save ends). |\n\n> **Web the Corridor**\n> *Command · Main Action · Uptime cost 4*\n> Target: 1 zone (line, length 5)\n>\n> *Deploy a fresh mesh-web tripwire mid-encounter (rather than pre-placed).*\n\n> **Overpressure Vent**\n> *Command · Main Action · Uptime cost 5*\n> Target: 1 zone (3-burst) at a pre-wired vent point\n> **Power Roll** — 2d10 + Logic\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 4 damage each. |\n> | 12-16 | 8 damage each, pushed 3. |\n> | 17+ | 12 damage each, pushed 5 and prone. |\n\n> **Emergency Reinforcement**\n> *Command · Maneuver · Uptime cost 3*\n> Target: 1 Physical Upgrade Slot asset\n>\n> *Restore 6 + Logic Integrity to a turret, sentry, or mesh-web generator without leaving your position.*"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#47",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#52",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4423,7 +4473,7 @@
       "text": "> **Feedback Loop**\n> *Command · Free Triggered · Uptime cost 3*\n>\n> *Trigger: a hostile Hacker attempts to breach your base's Node. Effect: roll 2d10 + Logic contested against their attempt; success deals Wired-side biofeedback to the attacker and denies the breach.*\n\n*9-Cost Band (chosen at 5th level; 4-5 abilities):*\n\n> **Total Lockdown**\n> *Command · Main Action · Uptime cost 7*\n> Target: your entire base of operations\n>\n> *Every door and access point seals simultaneously; every sentry and turret gains a free Rigged Fire against the first enemy to force entry at each point.*\n\n> **Building-Scale Volley**\n> *Command · Main Action · Uptime cost 9*\n> Target: up to 4 creatures within any Physical Upgrade Slot asset's combined range\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once per asset\n>\n> | Roll | Effect |\n> |---|---|\n> | ≤11 | 6 damage each. |\n> | 12-16 | 10 damage each, Suppressed. |\n> | 17+ | 14 damage each, Suppressed and Restrained (save ends). |\n\n> **Fortify Node**\n> *Command · Maneuver · Uptime cost 5*\n>\n> *Grant your base's Node a temporary +2 effective Wired Upgrade Slot worth of hardening until end of encounter (a rapid firewall reconfiguration).*\n\n> **Collapse the Corridor**\n> *Command · Free Triggered · Uptime cost 4*\n>\n> *Trigger: an enemy attempts to flee through a corridor inside your base. Effect: a pre-wired structural charge seals the route (Director's call on collateral); the enemy is Restrained until they force their way through.*\n\n*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*"
     },
     {
-      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#48",
+      "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#53",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4433,7 +4483,7 @@
       "text": "> **Turn the Building** (apex)\n> *Command · Main Action · Uptime cost 11*\n> Target: all valid enemy targets within your base of operations\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once per Physical Upgrade Slot asset active\n>\n> *Every turret, sentry, mesh-web, and breaching charge in your base activates simultaneously. This is the Facility Rigger's Focus Fire equivalent at building scale, once per encounter. This block is the ability's only definition; the 6th-level **Turn the Building** feature simply unlocks it early.*\n\n> **The Building Remembers (Apex)** (apex passive)\n>\n> *Your base of operations never fully falls. Even reduced to 0 Structural Integrity, one Physical Upgrade Slot asset survives (Director's choice) and can be the seed of rebuilding it in downtime. This is a distinct effect from the 7th-level feature of the same name, which covers Downtime Fabrication memory and slow self-repair.*\n\n**Skill grants:** Security Systems (1st). **Contact grant:** a parts-supplier/quartermaster contact. **Kit grant:** Field Chassis (light Kit; portable turret-control tablet + sidearm; an **edge** on Deploy tests for pre-placed assets). **Signature chrome:** none required at baseline, but a control rig or sensor-suite implant amplifies the Node-hardening features. See Kit & Chrome Interaction, below.\n\n---"
     },
     {
-      "id": "16-wrench#level-1-10-progression-table#49",
+      "id": "16-wrench#level-1-10-progression-table#54",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4443,7 +4493,7 @@
       "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Uptime resource (heroic resource) - Deploy & Command / Rigged Fire / Field Repair / Override Ping (signatures) - Kit - Choose subclass - Choose a Base Band (1-5 Uptime) ability | -- | Subclass passive + subclass triggered action |\n| **2** | Fleet Size Doctrine online (base 1) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Focus Fire (7-Cost band, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |\n| **4** | Fleet Cap +1 (fleet size 2) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost ability - Uptime cap 10→12 | -- | Subclass 5th-level feature |\n| **6** | Jump-In Buffer Increase (+4 → +5) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Fleet Cap +1 (fleet size 3) - Jump-In Buffer Increase (+5 → +6) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost ability | Perk (choice) | Subclass 8th-level feature |\n| **9** | Uptime Economy Mastery (once-per-encounter +2 drip tick) | -- | Subclass 9th-level feature |\n| **10** | Overclock (epic capstone) - Fleet Cap +1 (fleet size 4) - Uptime cap 12→14 | Characteristic Increase - Perk (choice) - Skill | -- |"
     },
     {
-      "id": "16-wrench#core-class-features-non-subclass#50",
+      "id": "16-wrench#core-class-features-non-subclass#55",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4453,7 +4503,7 @@
       "text": "- **Fleet Size Doctrine** (2nd) — Passive. Tracks how many machines a Wrench may have active simultaneously; see Fleet Size Doctrine under THE MACHINES, above, for the full cap table (base 3 at 1st, stepping to 4/5/6 at 4th/7th/10th).\n- **Fleet Cap +1** (4th, 7th, 10th) — Passive. Each of these levels raises your Fleet Size Doctrine cap by 1 (see THE MACHINES, above, for the full progression: 3 → 4 → 5 → 6).\n- **Uptime Cap Increase** (5th, 10th) — Passive. Your Uptime pool's soft cap rises from 10 to 12 at 5th level, and from 12 to 14 at 10th level (see Heroic Resource: Uptime, above).\n- **Jump-In Buffer Increase** (6th) — Passive. The temporary Integrity buffer granted on a successful Jump-In check rises from **+4 to +5** (see Jump-In Plumbing under THE MACHINES, above).\n- **Jump-In Buffer Increase** (7th) — Passive. The Jump-In Integrity buffer rises again, from **+5 to +6**.\n- **Uptime Economy Mastery** (9th) — Once per encounter, when the fielded-fleet drip resolves at the start of your turn, gain **+2 Uptime** instead of the usual per-machine total for that tick only (still subject to your Uptime pool cap).\n- **Overclock** (10th, epic capstone) — Once per encounter, as a free triggered action when you Deploy or Command: until the end of your next turn, (a) Uptime costs on your abilities are **2 less** (minimum 1), and (b) every machine you control gains a **+2 Integrity** temporary buffer. When it ends, you cannot gain Uptime from the fielded-fleet drip until the start of your following turn."
     },
     {
-      "id": "16-wrench#kit-chrome-interaction#51",
+      "id": "16-wrench#kit-chrome-interaction#56",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -4463,7 +4513,7 @@
       "text": "**Chrome-positive.** Power runs *through* hardware for a Wrench, so Body Integrity spend directly supports the class — and the Wrench is uniquely tied to **nuyen gear** (the fleet) plus the mod/upgrade-slot subsystem defined in THE MACHINES, above, as the class most likely to be a premier gear-mod crafter."
     },
     {
-      "id": "16-wrench#kit-chrome-interaction#52",
+      "id": "16-wrench#kit-chrome-interaction#57",
       "file": "16-wrench.md",
       "source": "docs/raw/16-wrench.md",
       "chapter": "The Wrench",
@@ -7790,7 +7840,7 @@
       "heading": "Street Eye (Companion Link)",
       "kind": "rules",
       "audience": "player",
-      "text": "> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** is a treasure SKU like every other drone: Deploy stamps `machine-drone-medium` (industrial hauler plate, Wire Kit). A named Summons **Mule-Bot** Actor is only for an unowned/NPC mule a Director drags in. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.\n\n---"
+      "text": "> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** is a treasure SKU like every other drone: Deploy stamps `machine-drone-medium` (industrial hauler plate, Wire Kit). A named Summons **Mule-Bot** Actor is only for an unowned/NPC mule a Director drags in. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Integrity; Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.\n\n---"
     },
     {
       "id": "23-machines#scale-bands-drones#9",
@@ -7810,7 +7860,7 @@
       "heading": "Full drone inventory",
       "kind": "rules",
       "audience": "player",
-      "text": "**Reading the tables:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add **Stamina** (Integrity); machines have **no armor rating / DR**.\n\n#### Echelon shopping guidance\n\nShop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).\n\n**Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.\n\n#### Inventory by Echelon\n\n##### Echelon 1 — Street / Professional (clunkers + starter frames)"
+      "text": "**Reading the tables:** prices climb with Availability + Echelon. Every drone card prints its **Integrity**, its **Handling** 1–4 and its **Speed band**. Armor kits add **Integrity**; machines have **no armor rating / DR**.\n\n#### Echelon shopping guidance\n\nShop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).\n\n**Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.\n\n#### Inventory by Echelon\n\n##### Echelon 1 — Street / Professional (clunkers + starter frames)"
     },
     {
       "id": "23-machines#full-drone-inventory#11",
@@ -7930,7 +7980,7 @@
       "heading": "Integrity, destruction, recovery",
       "kind": "rules",
       "audience": "player",
-      "text": "Drones use a short **Integrity** track (numbers not yet published). For now, Directors may treat Street/Professional frames as fragile (a few solid hits) and Military/Prototype as sturdy. **Clunkers** are especially fragile — treat as one solid hit from serious fire unless the Director is feeling generous.\n\n| Event | Effect |\n|---|---|\n| **Hit while fielded** | Integrity damage; Wrench loses **1 Uptime** per hit (per **The Wrench**, `16`). Non-Wrench: no Uptime, but link jitter — Director may impose a bane next Remote action |\n| **0 Integrity** | **Wrecked** — offline, not vaporized. Wrench lump **3 Uptime** drain. Salvage Sense / salvage maneuver still apply for Wrenches |\n| **Recovery** | Field Repair (Wrench signature / Repair skill) restores Integrity in the fight per class text. Between scenes: §Craft **Repair** Project or short bench time + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild; clunkers are cheap to patch and cheap to write off) |\n| **Total loss** | If the wreck is seized, burned, or dropped into the Sinks, the ¥ is gone — buy or craft another |\n| **Non-Wrench scene end** | Street Eye / Companion Link drops; drone standbys. Wrecked drones still need Repair / ¥ |\n\n**Expendable tags (Needle, Buzz, Tape-Eye, etc.):** some Street micros are meant to die — Kamikaze / Decoy / Clunker runs destroy the chassis by design (see Drone Jockey abilities).\n\n---"
+      "text": "Drones use a short **Integrity** track, and every drone card now prints its number: Personal / Micro frames start at **5**, Light / Small at **12**, Vehicle / Medium at **24**, and the number climbs with Echelon. (Foundry stores Integrity as Draw Steel Stamina under the hood; heroes keep **Stamina**.) Street/Professional frames are fragile, Military/Prototype are sturdy. **Clunkers** are especially fragile — treat as one solid hit from serious fire unless the Director is feeling generous.\n\n| Event | Effect |\n|---|---|\n| **Hit while fielded** | Integrity damage; Wrench loses **1 Uptime** per hit (per **The Wrench**, `16`). Non-Wrench: no Uptime, but link jitter — Director may impose a bane next Remote action |\n| **0 Integrity** | **Wrecked** — offline, not vaporized. Wrench lump **3 Uptime** drain. Salvage Sense / salvage maneuver still apply for Wrenches |\n| **Recovery** | Field Repair (Wrench signature / Repair skill) restores Integrity in the fight per class text. Between scenes: §Craft **Repair** Project or short bench time + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild; clunkers are cheap to patch and cheap to write off) |\n| **Total loss** | If the wreck is seized, burned, or dropped into the Sinks, the ¥ is gone — buy or craft another |\n| **Non-Wrench scene end** | Street Eye / Companion Link drops; drone standbys. Wrecked drones still need Repair / ¥ |\n\n**Expendable tags (Needle, Buzz, Tape-Eye, etc.):** some Street micros are meant to die — Kamikaze / Decoy / Clunker runs destroy the chassis by design (see Drone Jockey abilities).\n\n---"
     },
     {
       "id": "23-machines#modding#23",
@@ -7990,20 +8040,50 @@
       "heading": "Stat card fields",
       "kind": "rules",
       "audience": "player",
-      "text": "Align to the Vehicle Stat Card in **The Wrench** (`16`). Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.\n\n| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |\n| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Stamina to this pool. |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina (Integrity) bonus. Kits do not stack. |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |\n\n**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (**Mods**, `10`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.\n\n---"
+      "text": "Align to the Vehicle Stat Card in **The Wrench** (`16`). Every catalog chassis now publishes the same fields, and the Foundry Item, the deployed Actor, the card, and the sheet all read them off one schema: **Handling** 1–4, **Integrity**, **Scale**, **Speed band**, **Domain**, **Echelon**, **Mod slots**, **Tags**, **Jump-In Capable**. Armor kits add Integrity."
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#29",
+      "id": "23-machines#stat-card-fields#29",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Stat card fields",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Integer **1–4**, higher is better; chase and vehicle combat only. Beat the other machine's Handling and you take an **edge** on maneuvers and on Piloting / Driving / Rigging; a tie or a lower number gives you nothing from this rule. **Assignment rubric:** scale base (Light / Personal / Micro / Small **3**, Vehicle **2**, Heavy **1**, Capital **1**) plus speed band (extreme or fast **+1**, standard **0**, slow **−1**), clamped to 1–4. So a Scrap-Bike (Light + fast) is **4** and a Bulldog (Vehicle + slow) is **1**. A **Tune Kit** adds +1 up to the cap of 4. Fixed base assets have no Handling. |\n| **Integrity** | The machine's damage track, and the name players use for it. (Foundry stores it as Draw Steel Stamina under the hood; heroes and other creatures keep **Stamina**.) 0 Integrity = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Integrity to this pool: Scrap-Weld **+6**, Plate-Up **+12**, Combat Plate **+18**, Aegis Kit **+27**. |\n| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. Kits do not stack, and **Plate-Up does not cost Handling**. |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |"
+    },
+    {
+      "id": "23-machines#stat-card-fields#30",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Stat card fields",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Field | Description |\n|---|---|\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |"
+    },
+    {
+      "id": "23-machines#stat-card-fields#31",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Stat card fields",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (**Mods**, `10`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.\n\n---"
+    },
+    {
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#32",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Anyone vs Wrench / Rig-Pilot excellence",
       "kind": "rules",
       "audience": "player",
-      "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Vehicles in play** | May **drive/pilot one** vehicle at a time using **Piloting** (or a Director-approved Drive fantasy equivalent) |\n| **Jump-In** | **Forbidden** — no sensor merge, no inert-body Jump-In, no temporary Jump-In Integrity buffer |\n| **RCC / fleet-vehicle features** | **Cannot** use advanced RCC fleet-vehicle features (Fleet Deck+ vehicle orchestration, multi-platform Command, War Table / Hydra-style vehicle swarm tools) even if the hardware is owned — inert or Remote-Box-equivalent at Director discretion |\n| **Risky chase / combat Piloting** | **Bane** on risky chase stunts, combat Piloting, and evasive driving Power Rolls **if not trained** in Piloting (untrained driver can still putter in traffic) |\n| **Gunnery from mounts** | Passengers/gunners may fire personal weapons and Street/Professional soft mounts; **Restricted+ combat hardpoints** prefer a trained Gunner or a Wrench — Director may allow with bane |\n| **Uptime** | No Uptime pool; no Deploy & Command / Rigged Fire vehicle spend |\n| **Heroic resource** | Cannot spend Uptime; cannot use Vehicle Rig-Pilot signature Jump-In discounts |\n\n**Intent:** an Operator can steal a street hover and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.\n\n#### Wrench"
+      "text": "Chase and vehicle combat are **anyone versus anyone** — the round in §6 is the whole rule, and it needs no Wrench. What follows is what a Wrench adds on top of it.\n\n#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Vehicles in play** | May **drive/pilot one** vehicle at a time using **Piloting** (or a Director-approved Drive fantasy equivalent) |\n| **Jump-In** | **Forbidden** — no sensor merge, no inert-body Jump-In, no temporary Jump-In Integrity buffer |\n| **RCC / fleet-vehicle features** | **Cannot** use advanced RCC fleet-vehicle features (Fleet Deck+ vehicle orchestration, multi-platform Command, War Table / Hydra-style vehicle swarm tools) even if the hardware is owned — inert or Remote-Box-equivalent at Director discretion |\n| **Risky chase / combat Piloting** | **Bane** on risky chase stunts, combat Piloting, and evasive driving Power Rolls **if not trained** in Piloting (untrained driver can still putter in traffic) |\n| **Gunnery from mounts** | Passengers/gunners may fire personal weapons and Street/Professional soft mounts; **Restricted+ combat hardpoints** prefer a trained Gunner or a Wrench — Director may allow with bane |\n| **Uptime** | No Uptime pool; no Deploy & Command / Rigged Fire vehicle spend |\n| **Heroic resource** | Cannot spend Uptime; cannot use Vehicle Rig-Pilot signature Jump-In discounts |\n\n**Intent:** an Operator can steal a street hover and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.\n\n#### Wrench"
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#30",
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#33",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -8013,7 +8093,7 @@
       "text": "| Rule | Align to **The Wrench** (`16`) (do not invent parallel names) |\n|---|---|\n| **Jump-In** | Full Jump-In Plumbing into **Jump-In Capable** vehicles (maneuver; Logic or Reflex; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Rigging / Piloting** | Full excellence — Rigging and/or Piloting as class/subclass grants; no untrained bane on combat stunts |\n| **Solo / Jumped-In** | While Jumped-In, act as **pilot and gunner** simultaneously through the control rig (Vehicle Rig-Pilot default mode) |\n| **Uptime** | Asset hits / wrecks drain Uptime per Wrench chapter; Field Repair / Deploy interactions unchanged |\n| **RCC** | Full use of owned RCC ladder for vehicle-linked command where the Wrench chapter already allows it |\n| **Subclass** | **Vehicle Rig-Pilot** — signature platform, One With the Machine discounts, Ram Speed / Redline ladders — as printed in **The Wrench** (`16`) |\n\n**Firewall reminder:** ¥ buys frames and mods. Uptime runs the fight. Chrome (control rig) improves Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.\n\n**Rigger Cocoon (§5F):** upgrades a frame to accept Jump-In cleanly. It does **not** grant Jump-In to non-Wrenches.\n\n---"
     },
     {
-      "id": "23-machines#customize-modding#31",
+      "id": "23-machines#customize-modding#34",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -8023,17 +8103,37 @@
       "text": "- Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).\n- **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).\n- **Ghost Rein** buffers Jump-In biofeedback; it **never grants Jump-In**. Jump-In stays Wrench-only, and the frame still has to be Jump-In Capable or wear a **Rigger Cocoon**.\n\n---"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#32",
+      "id": "23-machines#vehicle-combat-chase#35",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Vehicle combat / chase",
       "kind": "rules",
       "audience": "player",
-      "text": "**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in **The Wrench** (`16`) — same skills, same wreck language.\n\n#### Abstract range track\n\n```\nBroken off ← Extreme → Long → Medium → Close → Ramming / Boarding\n```\n\n- Each round, the **pilot** makes an opposed **Piloting** or **Rigging** Power Roll (Handling modifies) against the lead pursuer / quarry.\n- **Middle / High:** advance one band toward your goal (close the gap or open it).\n- **Low:** stall or lose a band (Director: traffic, wake, lane crosswind, dock clutter).\n- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).\n- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.\n- **Broken off:** chase ends (escape or lost contact).\n\n**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).\n\n#### Crash, wreck, ram"
+      "text": "Chase and vehicle combat are **anyone versus anyone**. Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the rules below, whatever class they are and whether or not a Wrench is at the table. The Wrench's **Jump-In**, **Uptime**, **Override Ping** and fleet **Command** are **overlays only**: they change who can hold two stations at once and what a hit costs the Wrench. They change nothing in the round below.\n\n**Default chase mode for this ship: the abstract track.** Positional mode stays an optional Director call for the rounds when the vehicles and a foot fight share one map — same skills, same wreck language.\n\n#### Chase round checklist — two machines in contest\n\n**0. Setup — once, no roll.** Put on the table for each machine: **Handling** (1–4), **Speed band**, **Integrity**, installed **mods**, and who is sitting in which **crew seat**.\n\n**1. Pilots — range and maneuvers**\n\n- Opposed Power Roll: **2d10 + Reflex + (Driving | Piloting | Rigging**, whichever the machine calls for**)**.\n- **Higher Handling takes an edge.** A tie, or the lower number, gets nothing from this rule.\n- Untrained in the skill, on a risky or combat maneuver: **bane**.\n- **Lane Skirt** is a situational edge in the limiter lanes and tight street-deck traffic only — it is **not** +Handling.\n- The winner closes, opens, or holds the chase band: `Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding`.\n- At **Ramming / Boarding**, a ram is the same opposed roll; damage feel is **Scale + Speed band**.\n\n**2. Systems / Sensors / EW — locks before jams**"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#33",
+      "id": "23-machines#vehicle-combat-chase#36",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Vehicle combat / chase",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Systems is a real station with a real action: locks, jam and spoof, terrain read.\n\n- **2a Sensor lock.** **2d10 + Logic + Electronics**. A **Sensor Pod** grants an edge. A **Storm Lattice** is the apex — edge, pierces smoke, dark and spoof, and **shares its lock** with the crew and the rest of the fleet. A target wearing a **Ghost Coat** imposes a bane on the attempt. The published sensor ladder for this ship is **Sensor Pod → Storm Lattice**; nothing sits between them.\n- **2b Jam / spoof.** Opposed: the jammer rolls **2d10 + Logic + Security Systems** (untrained in Security Systems: Electronics at a bane) against the lock-holder's **2d10 + Logic + Electronics**. A **Signal Mule** gives the defender an edge. Success **breaks or denies that sensor lock for the round**. It **drains no Uptime** — jamming a Wrench costs the Wrench nothing from the pool. A **Spoof Cowl** is transit and ID only and is never a combat jam. **Buzz**, **Choir-Box** and **Choir-King** keep their published jam bubbles.\n- **2c Terrain read — optional.** **2d10 + Logic (or Instinct) + Navigation** hands an edge to the Pilot or the Gunner for this round.\n\n**3. Gunners and passengers — fire**"
+    },
+    {
+      "id": "23-machines#vehicle-combat-chase#37",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Vehicle combat / chase",
+      "kind": "rules",
+      "audience": "player",
+      "text": "- Mounted weapons: **2d10 + Reflex + Gunnery** hands-on, **or** **2d10 + Logic + Gunnery** sensor-fed (a Jumped-In Wrench fires this way).\n- **Lock state changes the roll:**\n  - Firing at a **moving** vehicle **with** a sensor lock: **bane**.\n  - Firing **from** a moving vehicle **without** a sensor lock: **double bane**.\n- Passengers make an ordinary personal strike Power Roll at a speed bane, and use the hull as cover.\n\n**4. Damage and wrecks.** Damage comes off **Integrity**. **0 Integrity = wrecked** — the domain catastrophe (ground crash, air downing, hull flood, decompress).\n\n**5. End of round.** Broken off or wrecked ends the chase. Otherwise the band and every live sensor lock carry into the next round.\n\n**Wrench overlay.** A Jumped-In Wrench may cover Pilot **and** Gunner from one seat. **Override Ping** and fleet **Command** exist only if a Wrench is present. No step above needs a Wrench.\n\n#### Weapons at range\n\n```\nBroken off ← Extreme → Long → Medium → Close → Ramming / Boarding\n```\n\n- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).\n- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.\n- **Broken off:** chase ends (escape or lost contact).\n- **Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).\n\n#### Crash, wreck, ram"
+    },
+    {
+      "id": "23-machines#vehicle-combat-chase#38",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -8043,64 +8143,14 @@
       "text": "| Event | Effect |\n|---|---|\n| **Hit while underway** | Integrity damage; Wrench loses **1 Uptime** per hit if the vehicle is their fielded asset. Non-Wrench: no Uptime; Director may impose a bane on the next risky Piloting action |\n| **0 Integrity** | **Wrecked** — domain catastrophe (ground crash, air downing, hull flood, decompress). Occupants take a Personal-scale crash hit and must escape. Wrench: lump **3 Uptime** drain |\n| **Ram** | Opposed Piloting/Rigging. Damage basis = **Scale + Speed band** (heavier/faster party takes less). On success, force a band shift and/or apply **Crippled** / Integrity loss. Full numeric multipliers deferred |\n| **Recovery** | Field Repair (Wrench) in the fight per class text. Between scenes: §Craft **Repair** Project + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild) |\n| **Total loss** | Seized, burned, sunk, or dropped into the Sinks — the ¥ is gone |\n\n**Conditions (reskin):** **Crippled** (Handling/Speed penalty), **Systems Down** (a station offline), **On Fire/Leaking** (ongoing), **Stalled/Dead-stick** (immobilized). Called shots inflict conditions instead of raw Integrity.\n\n#### Crew roles"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#34",
+      "id": "23-machines#vehicle-combat-chase#39",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Vehicle combat / chase",
       "kind": "rules",
       "audience": "player",
-      "text": "| Station | Does |\n|---|---|\n| **Pilot / Driver** | Moves the vehicle; only the pilot advances the chase track or positional Speed. Evasive driving = defensive edge. Stunts = risky Piloting/Rigging |\n| **Gunner** | Fires mounted weapons with **Gunnery** on their turn |\n| **Systems / Sensors / EW** | Locks, terrain reads, jams — feed an edge to pilot/gunner or a bane to a foe |\n| **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |\n| **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |\n\n---"
-    },
-    {
-      "id": "23-machines#full-inventory-by-echelon#35",
-      "file": "23-machines.md",
-      "source": "docs/raw/23-machines.md",
-      "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Full inventory by Echelon",
-      "kind": "rules",
-      "audience": "player",
-      "text": "**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (46 crewed platforms)"
-    },
-    {
-      "id": "23-machines#full-inventory-by-echelon#36",
-      "file": "23-machines.md",
-      "source": "docs/raw/23-machines.md",
-      "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Full inventory by Echelon",
-      "kind": "rules",
-      "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |\n| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |\n| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |\n| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |\n| Star-Chopper / Long-Fork / tandem limiter hover-bike | Ground | Light | 1 | Street | 700 | 1 | 1+pillion | Fast | No | Street POV hover-bike — electric stretch-fork chopper, two seats, no wheels, limiter ~25–50 ft. Not the rifle named Chopper. | Courier, Hover, POV |\n| Bulldog / Heavy Hauler / street cargo van | Ground | Vehicle | 1 | Street | 650 | 1 | 1+2 (cab) + cargo | Slow | No | Tires-on-deck cargo van — mass, not a hover POV. | Cargo, Ground-hauler |"
-    },
-    {
-      "id": "23-machines#full-inventory-by-echelon#37",
-      "file": "23-machines.md",
-      "source": "docs/raw/23-machines.md",
-      "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Full inventory by Echelon",
-      "kind": "rules",
-      "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |\n| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |\n| Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |\n| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |\n| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |\n| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |"
-    },
-    {
-      "id": "23-machines#full-inventory-by-echelon#38",
-      "file": "23-machines.md",
-      "source": "docs/raw/23-machines.md",
-      "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Full inventory by Echelon",
-      "kind": "rules",
-      "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Stamina kits fit. | Patrol, Pursuit, Hover, AEQ |\n| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |\n| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |\n| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |\n| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |"
-    },
-    {
-      "id": "23-machines#full-inventory-by-echelon#39",
-      "file": "23-machines.md",
-      "source": "docs/raw/23-machines.md",
-      "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Full inventory by Echelon",
-      "kind": "rules",
-      "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |\n| Dock Tug / Yard Tug / short-burn pressurised dock handler | Space | Vehicle | 1 | Professional | 1,800 | 2 | 1+3 (pressurised) | Slow | No | Stubby sealed handler with a grapple arm — walks containers and dead hulls around a dock ring. No guns, no legs, but it is the Street-band way off the deck. | Sealed, Cargo, Utility |\n| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |\n| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |\n| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |\n| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |"
+      "text": "| Station | Does |\n|---|---|\n| **Pilot / Driver** | Moves the vehicle; only the pilot advances the chase track or positional Speed. Evasive driving = defensive edge. Stunts = risky Piloting/Rigging |\n| **Gunner** | Fires mounted weapons with **Gunnery** on their turn |\n| **Systems / Sensors / EW** | A real station with a real action: **sensor lock** (2d10 + Logic + Electronics), **jam / spoof** (opposed, breaks the target's lock, **no Uptime drain**), and an optional **terrain read** that hands an edge to the Pilot or the Gunner |\n| **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |\n| **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |\n\n---"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#40",
@@ -8110,7 +8160,7 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |\n| Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |\n| Trauma Barge / Laz Wetwagon / Lazarus Extract (LAZ) canal ambulance | Water | Vehicle | 2 | Restricted | 4,800 | 3 | 2+2 (cab) + patient deck | Standard | No | LAZ flood-canal ambulance — hex brand, shallow draft, patient deck amidships, stern hoist. Works the Sinks where the White Door cannot float. Not a gun boat. | Medical, Extraction, Aquatic, LAZ |\n| Lane Bus / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | 2 | Restricted | 5,200 | 3 | 1+18 (standing and strapped) | Slow | No | Decommissioned shaft shuttle — limiter-lane hover body, two doors, grab rails, a fare plate nobody reads. Moves a whole crew in plain sight, or a squad if you own the route. | Transit, Troop, Hover, Ground-hauler |\n| Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |"
+      "text": "**Reading the table:** prices climb with Availability + Echelon. Every chassis card prints its **Integrity**, its **Handling** 1–4 and its **Speed band**. Armor kits add Integrity; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (46 crewed platforms)"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#41",
@@ -8120,7 +8170,7 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |\n| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |\n| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |\n| Gale-Runner / Lane Interceptor / high-thrust pursuit VTOL | Air | Vehicle | 3 | Military | 13,000 | 4 | 1+1 | Extreme | Yes | Thin, loud, and far too fast for the VTOL lanes — a two-seat interceptor built to run something down and keep a gun on it. | Pursuit, Combat, Mount, VTOL |\n| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |"
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |\n| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |\n| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |\n| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |\n| Star-Chopper / Long-Fork / tandem limiter hover-bike | Ground | Light | 1 | Street | 700 | 1 | 1+pillion | Fast | No | Street POV hover-bike — electric stretch-fork chopper, two seats, no wheels, limiter ~25–50 ft. Not the rifle named Chopper. | Courier, Hover, POV |\n| Bulldog / Heavy Hauler / street cargo van | Ground | Vehicle | 1 | Street | 650 | 1 | 1+2 (cab) + cargo | Slow | No | Tires-on-deck cargo van — mass, not a hover POV. | Cargo, Ground-hauler |"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#42",
@@ -8130,7 +8180,7 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Ash-Crawler / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | 3 | Military | 16,000 | 4 | 2+6 + bunk and bench space | Slow | Yes | Tracked, sealed, and slow as a grudge — scrubbers, bunks, a bench, and enough water to argue about. Terrible in a chase, unkillable on a week-long haul past the last lane light. | Sealed, Survival, Workshop, Ground-hauler |\n| River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |\n| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |\n| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |\n| Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |"
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |\n| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |\n| Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |\n| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |\n| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |\n| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#43",
@@ -8140,7 +8190,7 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |\n| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |\n| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |\n| Longshore / Deep Freighter / deep-draft low-observable cargo hull | Water | Heavy | 4 | Prototype | 54,000 | 5 | 4+6 + holds | Slow | Yes | The hull that moves what nobody will admit to moving — quiet plant, sonar-shy skin, holds that swallow a drone fleet. Slow enough that the plan has to be good. | Cargo, Stealth, Aquatic, Heavy |\n| Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |"
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Integrity kits fit. | Patrol, Pursuit, Hover, AEQ |\n| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |\n| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |\n| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |\n| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#44",
@@ -8150,7 +8200,7 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
-      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Black Ledger / Command Deck Air / airborne command-and-EW post | Air | Heavy | 4 | Prototype | 65,000 | 5 | 2 flight + 4 stations (Systems / EW / Command) | Fast | Yes | A flying operations room — four crew stations under a hardened roof, a jam-and-spoof crown on the spine, and the lane authority to hold station over a job while it happens. | Command, EW, Heavy, VTOL |\n| Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |\n| Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |"
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |\n| Dock Tug / Yard Tug / short-burn pressurised dock handler | Space | Vehicle | 1 | Professional | 1,800 | 2 | 1+3 (pressurised) | Slow | No | Stubby sealed handler with a grapple arm — walks containers and dead hulls around a dock ring. No guns, no legs, but it is the Street-band way off the deck. | Sealed, Cargo, Utility |\n| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |\n| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |\n| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |\n| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#45",
@@ -8160,10 +8210,60 @@
       "heading": "Full inventory by Echelon",
       "kind": "rules",
       "audience": "player",
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |\n| Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |\n| Trauma Barge / Laz Wetwagon / Lazarus Extract (LAZ) canal ambulance | Water | Vehicle | 2 | Restricted | 4,800 | 3 | 2+2 (cab) + patient deck | Standard | No | LAZ flood-canal ambulance — hex brand, shallow draft, patient deck amidships, stern hoist. Works the Sinks where the White Door cannot float. Not a gun boat. | Medical, Extraction, Aquatic, LAZ |\n| Lane Bus / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | 2 | Restricted | 5,200 | 3 | 1+18 (standing and strapped) | Slow | No | Decommissioned shaft shuttle — limiter-lane hover body, two doors, grab rails, a fare plate nobody reads. Moves a whole crew in plain sight, or a squad if you own the route. | Transit, Troop, Hover, Ground-hauler |\n| Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |"
+    },
+    {
+      "id": "23-machines#full-inventory-by-echelon#46",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Full inventory by Echelon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |\n| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |\n| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |\n| Gale-Runner / Lane Interceptor / high-thrust pursuit VTOL | Air | Vehicle | 3 | Military | 13,000 | 4 | 1+1 | Extreme | Yes | Thin, loud, and far too fast for the VTOL lanes — a two-seat interceptor built to run something down and keep a gun on it. | Pursuit, Combat, Mount, VTOL |\n| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |"
+    },
+    {
+      "id": "23-machines#full-inventory-by-echelon#47",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Full inventory by Echelon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Ash-Crawler / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | 3 | Military | 16,000 | 4 | 2+6 + bunk and bench space | Slow | Yes | Tracked, sealed, and slow as a grudge — scrubbers, bunks, a bench, and enough water to argue about. Terrible in a chase, unkillable on a week-long haul past the last lane light. | Sealed, Survival, Workshop, Ground-hauler |\n| River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |\n| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |\n| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |\n| Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |"
+    },
+    {
+      "id": "23-machines#full-inventory-by-echelon#48",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Full inventory by Echelon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |\n| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |\n| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |\n| Longshore / Deep Freighter / deep-draft low-observable cargo hull | Water | Heavy | 4 | Prototype | 54,000 | 5 | 4+6 + holds | Slow | Yes | The hull that moves what nobody will admit to moving — quiet plant, sonar-shy skin, holds that swallow a drone fleet. Slow enough that the plan has to be good. | Cargo, Stealth, Aquatic, Heavy |\n| Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |"
+    },
+    {
+      "id": "23-machines#full-inventory-by-echelon#49",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Full inventory by Echelon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Black Ledger / Command Deck Air / airborne command-and-EW post | Air | Heavy | 4 | Prototype | 65,000 | 5 | 2 flight + 4 stations (Systems / EW / Command) | Fast | Yes | A flying operations room — four crew stations under a hardened roof, a jam-and-spoof crown on the spine, and the lane authority to hold station over a job while it happens. | Command, EW, Heavy, VTOL |\n| Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |\n| Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |"
+    },
+    {
+      "id": "23-machines#full-inventory-by-echelon#50",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Full inventory by Echelon",
+      "kind": "rules",
+      "audience": "player",
       "text": "**Count:** **46** published crewed platforms.\n\n#### Role quick-index\n\n| Role | Chassis |\n|---|---|\n| Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |\n| Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |\n| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Lane Bus, Pod, Void-Runner |\n| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette, Gale-Runner |\n| Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed, Dock Tug, Ash-Crawler, Longshore |\n| Medical / extract | White Door, Crash Angel, Trauma Barge |\n| Armor / extraction / troop | Hardtop, Brick, Cage, Lane Bus |\n| Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |\n| Gunship / combat air | Skyhunter, Gale-Runner |\n| Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter, Trauma Barge |\n| Water pursuit / attack | Cigarette, River-Fang, Leviathan, Longshore |\n| Wet infiltrate | Wetsub |\n| Walker / siege ground | Iron Giant, Spider-Frame |\n| Space / sealed | Dock Tug, Pod, Mule, Void-Runner, Reaver |\n\n#### Availability and Echelon\n\n| Availability | Typical Echelon |\n|---|---|\n| Street | 1 |\n| Professional | 1 |\n| Restricted | 2 |\n| Military | 3 |\n| Prototype | 4 |\n\n---"
     },
     {
-      "id": "23-machines#buildings#46",
+      "id": "23-machines#buildings#51",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -8173,7 +8273,7 @@
       "text": "Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in **The Wrench** (`16`) (The Machines). No shared building inventory is published yet."
     },
     {
-      "id": "23-machines#hands-off-accords-setting-law#47",
+      "id": "23-machines#hands-off-accords-setting-law#52",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",

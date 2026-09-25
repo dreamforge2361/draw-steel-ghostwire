@@ -75,7 +75,7 @@ The Companion Link **limits** in the Non-Wrench table still apply if you field a
 > *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*
 
 > **In Foundry**
-> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** is a treasure SKU like every other drone: Deploy stamps `machine-drone-medium` (industrial hauler plate, Wire Kit). A named Summons **Mule-Bot** Actor is only for an unowned/NPC mule a Director drags in. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.
+> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** is a treasure SKU like every other drone: Deploy stamps `machine-drone-medium` (industrial hauler plate, Wire Kit). A named Summons **Mule-Bot** Actor is only for an unowned/NPC mule a Director drags in. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Integrity; Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.
 
 ---
 
@@ -97,7 +97,7 @@ The Companion Link **limits** in the Non-Wrench table still apply if you field a
 
 ### Full drone inventory
 
-**Reading the tables:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add **Stamina** (Integrity); machines have **no armor rating / DR**.
+**Reading the tables:** prices climb with Availability + Echelon. Every drone card prints its **Integrity**, its **Handling** 1–4 and its **Speed band**. Armor kits add **Integrity**; machines have **no armor rating / DR**.
 
 #### Echelon shopping guidance
 
@@ -207,7 +207,7 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 
 ### Integrity, destruction, recovery
 
-Drones use a short **Integrity** track (numbers not yet published). For now, Directors may treat Street/Professional frames as fragile (a few solid hits) and Military/Prototype as sturdy. **Clunkers** are especially fragile — treat as one solid hit from serious fire unless the Director is feeling generous.
+Drones use a short **Integrity** track, and every drone card now prints its number: Personal / Micro frames start at **5**, Light / Small at **12**, Vehicle / Medium at **24**, and the number climbs with Echelon. (Foundry stores Integrity as Draw Steel Stamina under the hood; heroes keep **Stamina**.) Street/Professional frames are fragile, Military/Prototype are sturdy. **Clunkers** are especially fragile — treat as one solid hit from serious fire unless the Director is feeling generous.
 
 | Event | Effect |
 |---|---|
@@ -288,16 +288,16 @@ World texture for licensed Flats rides. Full prose: Setting Primer **Public Flat
 
 ### Stat card fields
 
-Align to the Vehicle Stat Card in **The Wrench** (`16`). Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.
+Align to the Vehicle Stat Card in **The Wrench** (`16`). Every catalog chassis now publishes the same fields, and the Foundry Item, the deployed Actor, the card, and the sheet all read them off one schema: **Handling** 1–4, **Integrity**, **Scale**, **Speed band**, **Domain**, **Echelon**, **Mod slots**, **Tags**, **Jump-In Capable**. Armor kits add Integrity.
 
 | Field | Description |
 |---|---|
 | **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |
 | **Scale** | Light / Vehicle / Heavy / Capital |
 | **Domain** | Ground / Air / Water / Space |
-| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |
-| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Stamina to this pool. |
-| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina (Integrity) bonus. Kits do not stack. |
+| **Handling** | Integer **1–4**, higher is better; chase and vehicle combat only. Beat the other machine's Handling and you take an **edge** on maneuvers and on Piloting / Driving / Rigging; a tie or a lower number gives you nothing from this rule. **Assignment rubric:** scale base (Light / Personal / Micro / Small **3**, Vehicle **2**, Heavy **1**, Capital **1**) plus speed band (extreme or fast **+1**, standard **0**, slow **−1**), clamped to 1–4. So a Scrap-Bike (Light + fast) is **4** and a Bulldog (Vehicle + slow) is **1**. A **Tune Kit** adds +1 up to the cap of 4. Fixed base assets have no Handling. |
+| **Integrity** | The machine's damage track, and the name players use for it. (Foundry stores it as Draw Steel Stamina under the hood; heroes and other creatures keep **Stamina**.) 0 Integrity = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Integrity to this pool: Scrap-Weld **+6**, Plate-Up **+12**, Combat Plate **+18**, Aegis Kit **+27**. |
+| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. Kits do not stack, and **Plate-Up does not cost Handling**. |
 | **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |
 | **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |
 | **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |
@@ -311,6 +311,8 @@ Align to the Vehicle Stat Card in **The Wrench** (`16`). Profiles here are **qua
 ---
 
 ### Anyone vs Wrench / Rig-Pilot excellence
+
+Chase and vehicle combat are **anyone versus anyone** — the round in §6 is the whole rule, and it needs no Wrench. What follows is what a Wrench adds on top of it.
 
 #### Non-Wrench (any other class)
 
@@ -356,22 +358,55 @@ Align to the Vehicle Stat Card in **The Wrench** (`16`). Profiles here are **qua
 
 ### Vehicle combat / chase
 
-**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in **The Wrench** (`16`) — same skills, same wreck language.
+Chase and vehicle combat are **anyone versus anyone**. Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the rules below, whatever class they are and whether or not a Wrench is at the table. The Wrench's **Jump-In**, **Uptime**, **Override Ping** and fleet **Command** are **overlays only**: they change who can hold two stations at once and what a hit costs the Wrench. They change nothing in the round below.
 
-#### Abstract range track
+**Default chase mode for this ship: the abstract track.** Positional mode stays an optional Director call for the rounds when the vehicles and a foot fight share one map — same skills, same wreck language.
+
+#### Chase round checklist — two machines in contest
+
+**0. Setup — once, no roll.** Put on the table for each machine: **Handling** (1–4), **Speed band**, **Integrity**, installed **mods**, and who is sitting in which **crew seat**.
+
+**1. Pilots — range and maneuvers**
+
+- Opposed Power Roll: **2d10 + Reflex + (Driving | Piloting | Rigging**, whichever the machine calls for**)**.
+- **Higher Handling takes an edge.** A tie, or the lower number, gets nothing from this rule.
+- Untrained in the skill, on a risky or combat maneuver: **bane**.
+- **Lane Skirt** is a situational edge in the limiter lanes and tight street-deck traffic only — it is **not** +Handling.
+- The winner closes, opens, or holds the chase band: `Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding`.
+- At **Ramming / Boarding**, a ram is the same opposed roll; damage feel is **Scale + Speed band**.
+
+**2. Systems / Sensors / EW — locks before jams**
+
+Systems is a real station with a real action: locks, jam and spoof, terrain read.
+
+- **2a Sensor lock.** **2d10 + Logic + Electronics**. A **Sensor Pod** grants an edge. A **Storm Lattice** is the apex — edge, pierces smoke, dark and spoof, and **shares its lock** with the crew and the rest of the fleet. A target wearing a **Ghost Coat** imposes a bane on the attempt. The published sensor ladder for this ship is **Sensor Pod → Storm Lattice**; nothing sits between them.
+- **2b Jam / spoof.** Opposed: the jammer rolls **2d10 + Logic + Security Systems** (untrained in Security Systems: Electronics at a bane) against the lock-holder's **2d10 + Logic + Electronics**. A **Signal Mule** gives the defender an edge. Success **breaks or denies that sensor lock for the round**. It **drains no Uptime** — jamming a Wrench costs the Wrench nothing from the pool. A **Spoof Cowl** is transit and ID only and is never a combat jam. **Buzz**, **Choir-Box** and **Choir-King** keep their published jam bubbles.
+- **2c Terrain read — optional.** **2d10 + Logic (or Instinct) + Navigation** hands an edge to the Pilot or the Gunner for this round.
+
+**3. Gunners and passengers — fire**
+
+- Mounted weapons: **2d10 + Reflex + Gunnery** hands-on, **or** **2d10 + Logic + Gunnery** sensor-fed (a Jumped-In Wrench fires this way).
+- **Lock state changes the roll:**
+  - Firing at a **moving** vehicle **with** a sensor lock: **bane**.
+  - Firing **from** a moving vehicle **without** a sensor lock: **double bane**.
+- Passengers make an ordinary personal strike Power Roll at a speed bane, and use the hull as cover.
+
+**4. Damage and wrecks.** Damage comes off **Integrity**. **0 Integrity = wrecked** — the domain catastrophe (ground crash, air downing, hull flood, decompress).
+
+**5. End of round.** Broken off or wrecked ends the chase. Otherwise the band and every live sensor lock carry into the next round.
+
+**Wrench overlay.** A Jumped-In Wrench may cover Pilot **and** Gunner from one seat. **Override Ping** and fleet **Command** exist only if a Wrench is present. No step above needs a Wrench.
+
+#### Weapons at range
 
 ```
 Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 ```
 
-- Each round, the **pilot** makes an opposed **Piloting** or **Rigging** Power Roll (Handling modifies) against the lead pursuer / quarry.
-- **Middle / High:** advance one band toward your goal (close the gap or open it).
-- **Low:** stall or lose a band (Director: traffic, wake, lane crosswind, dock clutter).
 - **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).
 - **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.
 - **Broken off:** chase ends (escape or lost contact).
-
-**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).
+- **Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).
 
 #### Crash, wreck, ram
 
@@ -391,7 +426,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 |---|---|
 | **Pilot / Driver** | Moves the vehicle; only the pilot advances the chase track or positional Speed. Evasive driving = defensive edge. Stunts = risky Piloting/Rigging |
 | **Gunner** | Fires mounted weapons with **Gunnery** on their turn |
-| **Systems / Sensors / EW** | Locks, terrain reads, jams — feed an edge to pilot/gunner or a bane to a foe |
+| **Systems / Sensors / EW** | A real station with a real action: **sensor lock** (2d10 + Logic + Electronics), **jam / spoof** (opposed, breaks the target's lock, **no Uptime drain**), and an optional **terrain read** that hands an edge to the Pilot or the Gunner |
 | **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |
 | **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |
 
@@ -399,7 +434,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 ### Full inventory by Echelon
 
-**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).
+**Reading the table:** prices climb with Availability + Echelon. Every chassis card prints its **Integrity**, its **Handling** 1–4 and its **Speed band**. Armor kits add Integrity; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).
 
 #### Inventory (46 crewed platforms)
 
@@ -417,7 +452,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
 | Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
 | Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
-| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Stamina kits fit. | Patrol, Pursuit, Hover, AEQ |
+| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Integrity kits fit. | Patrol, Pursuit, Hover, AEQ |
 | White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |
 | Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |
 | Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |

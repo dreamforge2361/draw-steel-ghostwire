@@ -102,10 +102,9 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 - **Maintenance tick:** a successful Field Repair or a successful save/skill check made to keep a machine functional under pressure (patch a jammed mount, clear a fault, hold a losing Integrity fight) banks **+1 Uptime** *(v1 estimate)* — this is the "banked by focus and successful maintenance ticks" clause from the design brief, made mechanical.
 - **Salvage tick:** destroying an enemy machine, or stripping a wreck (yours or theirs) for parts as a maneuver, banks **+1 Uptime** *(v1 estimate)*.
 
-**Drained.** Per the design brief verbatim — Uptime is drained, not just capped, by four conditions:
+**Drained.** Uptime is drained, not just capped, by three conditions. **Jamming is not one of them (0.3.138):** an enemy Electronic Warfare pulse that jams or spoofs your link takes your **sensor lock** away for the round (see the chase round in **Machines**, `23`) and costs you **no Uptime at all**.
 - **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged bleeds Uptime (see Jump-In plumbing, below) — represents the feedback spike breaking your focus on the fleet.
 - **Damage to fielded assets** — every time a machine you control takes a hit, you lose **1 Uptime** *(v1 estimate)*, on top of whatever the machine's own Integrity track absorbs. Your attention is a finite resource and every hit on your hardware is a hit on your bandwidth.
-- **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains Uptime directly (typically **2–4 Uptime per jam pulse**, *v1 estimate*) rather than (or in addition to) imposing the usual EW penalty.
 - **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** *(v1 estimate)* — the shock of losing hardware outright, distinct from the smaller per-hit drain above.
 
 **Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 tier ladder used by every other GHOSTWIRE Heroic Resource.
