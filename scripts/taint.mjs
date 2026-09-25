@@ -408,19 +408,9 @@ export function registerTaint() {
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 
-  Hooks.on("getSceneControlButtons", controls => {
-    const tools = controls.tokens?.tools;
-    if (!tools || !game.user?.isGM) return;
-    tools.ghostwireTaintPlusOne = {
-      name: "ghostwireTaintPlusOne",
-      title: "GHOSTWIRE.Taint.Director.Title",
-      icon: "fa-solid fa-biohazard",
-      order: Object.keys(tools).length,
-      button: true,
-      visible: true,
-      onChange: () => directorTaintPlusOne(),
-    };
-  });
+  // 0.3.137: the Token toolbar button is gone. Taint +1 is a **Ghostwire Macro** ("Director Taint +1",
+  // `src/packs/macros/director-taint-plus-one.json`), the keybinding registered above, and the biohazard
+  // on the Token HUD.
 
   Hooks.on("renderTokenHUD", (hud, html) => {
     if (!game.user.isGM) return;

@@ -247,28 +247,9 @@ export function registerDirectorWealth() {
     precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
   });
 
-  Hooks.on("getSceneControlButtons", controls => {
-    const tools = controls.tokens?.tools;
-    if (!tools || !game.user?.isGM) return;
-    tools.ghostwireWealthPay = {
-      name: "ghostwireWealthPay",
-      title: `${L}.PayTitle`,
-      icon: "fa-solid fa-hand-holding-dollar",
-      order: Object.keys(tools).length,
-      button: true,
-      visible: true,
-      onChange: () => directorWealthPrompt({ mode: "pay" }),
-    };
-    tools.ghostwireWealthSpend = {
-      name: "ghostwireWealthSpend",
-      title: `${L}.SpendTitle`,
-      icon: "fa-solid fa-money-bill-transfer",
-      order: Object.keys(tools).length,
-      button: true,
-      visible: true,
-      onChange: () => directorWealthPrompt({ mode: "spend" }),
-    };
-  });
+  // 0.3.137: the two Token toolbar buttons are gone. Pay and Spend are **Ghostwire Macros**
+  // ("Director Pay Hero" / "Director Spend Hero", `src/packs/macros/director-{pay,spend}-hero.json`),
+  // the keybinding registered above, and the yen sign on the Token HUD.
 
   Hooks.on("renderTokenHUD", (hud, html) => {
     if (!game.user.isGM) return;

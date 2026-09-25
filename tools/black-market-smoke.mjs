@@ -13,7 +13,7 @@
  *
  * Run: node tools/black-market-smoke.mjs
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import {
   BASE_SALE_PERCENT,
   DEFAULT_HAGGLE_CHARACTERISTIC,
@@ -230,7 +230,10 @@ for (const name of ["blackMarketPrompt", "blackMarketSellPrompt", "executeSale",
 }
 ok(true, "the prompt, the macro entry, the raw sale and the one-Item door are on module.api and game.ghostwire");
 ok(source.includes('Hooks.on("getDocumentListContextOptions"'), "a hero-sheet Item context menu opens the sale");
-ok(source.includes("ghostwireBlackMarket"), "a scene-control tool is declared");
+// 0.3.137 declutter: the Token toolbar button is GONE. The macro, the keybinding, the HUD sack and the
+// item-context Sell entry are the doors that remain.
+ok(!source.includes("ghostwireBlackMarket"), "no scene-control tool is declared (dropped in 0.3.137)");
+ok(existsSync("src/packs/macros/black-market-sell.json"), "…and the Black Market Sell macro still ships");
 ok(source.includes('Hooks.on("renderTokenHUD"'), "a token-HUD button opens the sale on one hero");
 ok(source.includes("game.keybindings.register") && source.includes("restricted: false"),
   "the keybinding is open to players — this is their door, not only the Director's");

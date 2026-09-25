@@ -1,6 +1,6 @@
 // B80 smoke: Taint 0–12 lock, RAW + journal + flag path, BOM-free JSON, chrome/rest firewall.
 // 0.3.58: Director Taint +1 helper / macro / scene control.
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import {
   clampTaint,
@@ -60,7 +60,10 @@ note(sheet.includes("isOwner") && sheet.includes("isGM"), "owner + GM can edit")
 note(sheet.includes("addEventListener(\"input\""), "band updates live on input");
 note(sheet.includes("corruptionHistory") && sheet.includes("ghostwire-corruption-history"), "Biography tab Corruption History field");
 note(sheet.includes("data-tab='biography'"), "history injects on Biography tab");
-note(sheet.includes("getSceneControlButtons"), "Director Taint +1 registers a scene-control button");
+// 0.3.137 declutter: the Token toolbar button is GONE. The keybinding, the macro and the HUD biohazard
+// are the doors that remain.
+note(!sheet.includes("getSceneControlButtons"), "Director Taint +1 has no scene-control button (dropped in 0.3.137)");
+note(existsSync("src/packs/macros/director-taint-plus-one.json"), "…and the Director Taint +1 macro still ships");
 note(sheet.includes("export async function incrementTaint"), "incrementTaint is exported");
 note(sheet.includes("directorTaintPlusOne"), "directorTaintPlusOne is exported");
 note(boot.includes("registerTaint()"), "module registers Taint");
