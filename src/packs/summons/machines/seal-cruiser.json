@@ -262,7 +262,23 @@
         "Hover",
         "AEQ"
       ],
-      "faction": "AEQ"
+      "faction": "AEQ",
+      "machine": {
+        "handling": 3,
+        "integrity": 40,
+        "speedBand": "fast",
+        "sizeScale": "Vehicle",
+        "domain": "Ground",
+        "modSlots": 4,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Patrol",
+          "Pursuit",
+          "Hover",
+          "AEQ"
+        ]
+      }
     }
   }
 }

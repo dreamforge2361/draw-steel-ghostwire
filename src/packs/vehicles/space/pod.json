@@ -57,7 +57,9 @@
         "domain": "Space",
         "scale": "Vehicle",
         "drone": false,
-        "speedBand": "extreme"
+        "speedBand": "extreme",
+        "handling": 3,
+        "integrity": 120
       }
     }
   }

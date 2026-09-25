@@ -261,7 +261,23 @@
         "Crew-car",
         "Hover",
         "POV"
-      ]
+      ],
+      "machine": {
+        "handling": 2,
+        "integrity": 40,
+        "speedBand": "standard",
+        "sizeScale": "Vehicle",
+        "domain": "Ground",
+        "modSlots": 3,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Transit",
+          "Crew-car",
+          "Hover",
+          "POV"
+        ]
+      }
     }
   }
 }

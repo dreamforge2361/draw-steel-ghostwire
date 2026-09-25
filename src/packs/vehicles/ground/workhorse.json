@@ -58,7 +58,9 @@
         "domain": "Ground",
         "scale": "Vehicle",
         "drone": false,
-        "speedBand": "slow"
+        "speedBand": "slow",
+        "handling": 1,
+        "integrity": 40
       }
     }
   }

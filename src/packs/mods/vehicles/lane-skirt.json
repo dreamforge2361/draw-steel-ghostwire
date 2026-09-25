@@ -61,7 +61,9 @@
         "slotCost": 1,
         "craftSkill": [
           "repair"
-        ]
+        ],
+        "situationalEdge": true,
+        "handlingBonus": 0
       }
     }
   }

@@ -254,7 +254,12 @@
       "band": "vehicle-car",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-car"
+      "dsid": "machine-vehicle-car",
+      "machine": {
+        "handling": 2,
+        "integrity": 40,
+        "kind": "vehicle"
+      }
     }
   }
 }

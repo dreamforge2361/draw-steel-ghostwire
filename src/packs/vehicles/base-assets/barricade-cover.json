@@ -63,7 +63,7 @@
         "stamina": 24,
         "speed": 0,
         "jumpInCapable": false,
-        "handling": "fixed",
+        "handling": null,
         "controlMode": "remote",
         "movementMode": "none",
         "beacon": false,

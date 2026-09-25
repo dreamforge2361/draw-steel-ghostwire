@@ -260,7 +260,22 @@
         "Courier",
         "Hover",
         "POV"
-      ]
+      ],
+      "machine": {
+        "handling": 4,
+        "integrity": 20,
+        "speedBand": "fast",
+        "sizeScale": "Light",
+        "domain": "Ground",
+        "modSlots": 2,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Courier",
+          "Hover",
+          "POV"
+        ]
+      }
     }
   }
 }

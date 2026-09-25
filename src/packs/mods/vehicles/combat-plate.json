@@ -38,10 +38,10 @@
     {
       "_id": "pusJGdulURuMMXxl",
       "_key": "!items.effects!yBf28QdlONHik8Tp.pusJGdulURuMMXxl",
-      "name": "Machine Armor (+18 Stamina)",
+      "name": "Machine Armor (+18 Integrity)",
       "img": "icons/commodities/tech/metal-pistons.webp",
       "origin": "Compendium.draw-steel-ghostwire.mods.Item.yBf28QdlONHik8Tp",
-      "description": "<p>Installed on a vehicle or drone: +18 Stamina (Integrity). One armor kit at a time. Ghostwire machines have no armor rating or damage reduction.</p>",
+      "description": "<p>Installed on a vehicle or drone: +18 Integrity. One armor kit at a time. Ghostwire machines have no armor rating or damage reduction.</p>",
       "disabled": false,
       "transfer": false,
       "statuses": [],

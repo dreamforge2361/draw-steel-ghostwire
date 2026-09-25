@@ -262,7 +262,23 @@
         "Hover",
         "LAZ"
       ],
-      "faction": "LAZ"
+      "faction": "LAZ",
+      "machine": {
+        "handling": 2,
+        "integrity": 40,
+        "speedBand": "standard",
+        "sizeScale": "Vehicle",
+        "domain": "Ground",
+        "modSlots": 4,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Medical",
+          "Extraction",
+          "Hover",
+          "LAZ"
+        ]
+      }
     }
   }
 }

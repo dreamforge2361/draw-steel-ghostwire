@@ -262,7 +262,23 @@
         "VTOL",
         "AEQ"
       ],
-      "faction": "AEQ"
+      "faction": "AEQ",
+      "machine": {
+        "handling": 3,
+        "integrity": 40,
+        "speedBand": "fast",
+        "sizeScale": "Vehicle",
+        "domain": "Air",
+        "modSlots": 4,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Patrol",
+          "Insertion",
+          "VTOL",
+          "AEQ"
+        ]
+      }
     }
   }
 }

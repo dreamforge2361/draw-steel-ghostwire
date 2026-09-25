@@ -59,7 +59,8 @@
         "slotCost": 1,
         "craftSkill": [
           "repair"
-        ]
+        ],
+        "handlingBonus": 1
       }
     }
   }

@@ -59,7 +59,9 @@
         "domain": "Space",
         "scale": "Capital",
         "drone": false,
-        "speedBand": "extreme"
+        "speedBand": "extreme",
+        "handling": 2,
+        "integrity": 200
       }
     }
   }

@@ -58,7 +58,9 @@
         "domain": "Water",
         "scale": "Vehicle",
         "drone": false,
-        "speedBand": "slow"
+        "speedBand": "slow",
+        "handling": 1,
+        "integrity": 60
       }
     }
   }

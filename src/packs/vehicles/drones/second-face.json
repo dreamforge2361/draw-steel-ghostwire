@@ -60,7 +60,10 @@
         ],
         "domain": "Ground (drone)",
         "scale": "Personal",
-        "drone": true
+        "drone": true,
+        "speedBand": "standard",
+        "handling": 3,
+        "integrity": 13
       }
     }
   }

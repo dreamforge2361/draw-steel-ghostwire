@@ -254,7 +254,12 @@
       "band": "vehicle-heavy",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-heavy"
+      "dsid": "machine-vehicle-heavy",
+      "machine": {
+        "handling": 1,
+        "integrity": 80,
+        "kind": "vehicle"
+      }
     }
   }
 }
