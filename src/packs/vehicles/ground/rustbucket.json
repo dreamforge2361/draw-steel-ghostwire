@@ -3,7 +3,7 @@
   "_key": "!items!xGZGnKmtWp4SPBlJ",
   "name": "GHOSTWIRE.Vehicles.Items.Rustbucket.Name",
   "type": "treasure",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/rustbucket.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/rustbucket-ground.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Rustbucket.Description",
@@ -29,7 +29,7 @@
       ],
       "yield": {
         "amount": "1",
-        "display": "one Rustbucket chassis · a single machine, unmodded."
+        "display": "one Nyx Primer chassis · a single machine, unmodded."
       },
       "goal": 150
     }

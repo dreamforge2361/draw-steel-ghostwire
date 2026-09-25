@@ -1,0 +1,18 @@
+display_name,file_stem,art_role,group,png,webp,actor_id,live_import_performed
+Brick,brick,Heavy troop / hauler,named,png/brick.png,webp/brick.webp,,False
+Cage,cage,Prisoner / cargo lockup,named,png/cage.png,webp/cage.webp,,False
+Clunker,clunker,Cheap cargo beater,named,png/clunker.png,webp/clunker.webp,,False
+Crotch-Rocket,crotch-rocket,Hover courier bike,named,png/crotch-rocket.png,webp/crotch-rocket.webp,,False
+Flatbed,flatbed,Open cargo hauler,named,png/flatbed.png,webp/flatbed.webp,,False
+Getaway,getaway,Fast hover crew car,named,png/getaway.png,webp/getaway.webp,,False
+Grey Cab,grey-cab,Anonymous hover taxi,named,png/grey-cab.png,webp/grey-cab.webp,,False
+Hardtop,hardtop,Armored extraction,named,png/hardtop.png,webp/hardtop.webp,,False
+Iron Giant,iron-giant,Prototype heavy walker,named,png/iron-giant.png,webp/iron-giant.webp,,False
+Rustbucket,rustbucket-ground,Hover car / utility hauler,named,png/rustbucket-ground.png,webp/rustbucket-ground.webp,,False
+Scrap-Bike,scrap-bike,Scavenged hover bike,named,png/scrap-bike.png,webp/scrap-bike.webp,,False
+Spider-Frame,spider-frame,Six-leg industrial walker,named,png/spider-frame.png,webp/spider-frame.webp,,False
+Warbike,warbike,Military hover bike,named,png/warbike.png,webp/warbike.webp,,False
+Workhorse,workhorse,Workshop utility van,named,png/workhorse.png,webp/workhorse.webp,,False
+Vehicle (Bike),vehicle-bike,Neutral ground bike,generic,png/vehicle-bike.png,webp/vehicle-bike.webp,,False
+Vehicle (Car),vehicle-car,Neutral ground car,generic,png/vehicle-car.png,webp/vehicle-car.webp,,False
+Vehicle (Heavy Ground),vehicle-heavy-ground,Neutral tracked hauler,generic,png/vehicle-heavy-ground.png,webp/vehicle-heavy-ground.webp,,False

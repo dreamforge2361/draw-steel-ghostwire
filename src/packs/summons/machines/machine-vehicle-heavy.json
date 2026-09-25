@@ -3,7 +3,7 @@
   "_key": "!actors!nSHTLLOt0wO36qzC",
   "name": "GHOSTWIRE.Summons.Machines.VehicleHeavy.Name",
   "type": "npc",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/vehicle-heavy-ground.webp",
   "system": {
     "stamina": {
       "value": 80,
@@ -190,7 +190,7 @@
     "height": 3,
     "depth": 3,
     "texture": {
-      "src": "icons/environment/settlement/wagon.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/vehicles/vehicle-heavy-ground.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

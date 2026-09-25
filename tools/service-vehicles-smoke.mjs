@@ -12,6 +12,7 @@ import { actorHasKit, isMachineActor, isVehicleActor, isWireKit } from "../scrip
 import { itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 import { MATRIX_VERB_DSIDS } from "../scripts/wired-verbs.mjs";
 import { chassisStamina, machineBand } from "../scripts/machines.mjs";
+import { VEHICLE_RENAMES } from "../scripts/vehicle-rename.mjs";
 import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -190,8 +191,11 @@ for (const s of SKUS) {
   ok(actor.system.stamina.max === s.stamina && actor.system.movement.value === (s.band === "vehicle-air" ? 14 : s.speedBand === "fast" ? 12 : 10), `${s.name} placeholder stamina/speed`);
   ok(existsSync(`assets/tokens/vehicles/${s.dsid}.png`) && existsSync(`assets/tokens/vehicles/${s.dsid}.webp`), `${s.name} png+webp on disk`);
 
-  ok(lang.GHOSTWIRE.Vehicles.Items[s.lang].Name === s.name, `${s.name} Item lang Name`);
-  ok(lang.GHOSTWIRE.Summons.Machines[s.lang].Name === s.name, `${s.name} Actor lang Name`);
+  // `s.name` is the street name this file labels its asserts with. Since 0.3.144 the *printed* name
+  // is the catalog name, so the lang assert reads it off the rename table rather than the label.
+  const catalog = VEHICLE_RENAMES[s.dsid]?.name ?? s.name;
+  ok(lang.GHOSTWIRE.Vehicles.Items[s.lang].Name === catalog, `${s.name} Item lang Name is ${catalog}`);
+  ok(lang.GHOSTWIRE.Summons.Machines[s.lang].Name === catalog, `${s.name} Actor lang Name is ${catalog}`);
   const itemDesc = lang.GHOSTWIRE.Vehicles.Items[s.lang].Description;
   const actorDesc = lang.GHOSTWIRE.Summons.Machines[s.lang].Description;
   ok(itemDesc.includes(s.factionName) && itemDesc.includes(s.faction), `${s.name} Item lang names ${s.factionName}`);
