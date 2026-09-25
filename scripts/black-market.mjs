@@ -553,19 +553,9 @@ export function registerBlackMarket() {
     });
   });
 
-  Hooks.on("getSceneControlButtons", controls => {
-    const tools = controls.tokens?.tools;
-    if (!tools) return;
-    tools.ghostwireBlackMarket = {
-      name: "ghostwireBlackMarket",
-      title: `${L}.SceneTool`,
-      icon: "fa-solid fa-sack-dollar",
-      order: Object.keys(tools).length,
-      button: true,
-      visible: true,
-      onChange: () => blackMarketPrompt(),
-    };
-  });
+  // 0.3.137: the Token toolbar button is gone. Sell is a **Ghostwire Macro** ("Black Market Sell",
+  // `src/packs/macros/black-market-sell.json`), the sack on the Token HUD, and the item-context Sell
+  // entry above — the toolbar had grown past what fits down the left edge of the canvas.
 
   // Token HUD: the hero's owner, or the Director, gets a sack on the right column.
   Hooks.on("renderTokenHUD", (hud, html) => {

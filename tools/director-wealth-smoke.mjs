@@ -12,7 +12,7 @@
  *
  * Run: node tools/director-wealth-smoke.mjs
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import {
   WEALTH_MODES,
   actorAcceptsWealth,
@@ -160,8 +160,12 @@ for (const name of ["directorPayHero", "directorSpendHero", "directorAdjustWealt
   if (!new RegExp(`game\\.ghostwire = \\{[\\s\\S]{0,300}${name}`).test(source)) failures.push(`game.ghostwire does not expose ${name}`);
 }
 ok(true, "pay, spend, the raw adjust and the prompt are all on the API and on game.ghostwire");
-ok(source.includes("ghostwireWealthPay") && source.includes("ghostwireWealthSpend"), "both scene-control tools are declared");
-ok(/getSceneControlButtons[\s\S]{0,200}game\.user\?\.isGM/.test(source), "the scene tools are Director-only");
+// 0.3.137 declutter: both Token toolbar buttons are GONE. The keybinding, the two macros and the HUD
+// yen sign are the doors that remain.
+ok(!source.includes("ghostwireWealthPay") && !source.includes("ghostwireWealthSpend"),
+  "neither scene-control tool is declared (dropped in 0.3.137)");
+ok(existsSync("src/packs/macros/director-pay-hero.json") && existsSync("src/packs/macros/director-spend-hero.json"),
+  "…and the Pay / Spend macros still ship");
 ok(source.includes('Hooks.on("renderTokenHUD"'), "a GM token-HUD button opens the prompt on one hero");
 ok(source.includes('game.keybindings.register') && source.includes("restricted: true"), "the keybinding is Director-restricted");
 
