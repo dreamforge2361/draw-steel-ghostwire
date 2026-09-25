@@ -187,6 +187,27 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 
 ---
 
+### Special Sprite -- the purpose-built shape
+
+Compile Sprite hands you one of four stock archetypes. **Special Sprite** hands you none of them: you compile a shape woven for one job, and the dice decide how much of that job it can do.
+
+**The order is the whole ability. Do not reorder it.**
+
+1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.
+2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.
+3. **Now say what it is for.** One sentence, written knowing the budget — “pull the wounded runner out of the doorway”, “jam the turret until we are past it”.
+4. **It manifests with the cap written on it.** The sprite's description opens with the budget and your sentence: **Actions (2): jam the turret until we are past it**. It does that and nothing else, and it stops when the Actions are spent.
+
+**Cost.** **3 Resonance in combat.** Out of combat it costs nothing.
+
+**Cap, Stamina and cleanup.** A Special Sprite counts against your sprite cap like any other sprite, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced. Recompile cannot reshape a Special Sprite: its purpose is not a menu entry.
+
+**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different sprite.
+
+> **Special Sprite** *(Signature — 3 Resonance in combat, free out of combat)*
+>
+> **Effect:** Make the Power Roll **first**. On **low (≤11)** the sprite compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The sprite manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose.
+
 ## Heroic Abilities — Cost Bands 1 Through 11
 
 Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
@@ -291,6 +312,31 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band a
 > *The summoner's apex — the entire net answers with a coordinated strike. **Biofeedback: hard Physique test with a bane.***
 
 ---
+
+## Wired firefight -- round-by-round checklist
+
+The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Technomancer actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.
+
+**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In is usual; unlike a Hacker's Agents, sprites compile from **Linked** too — they are Resonance, not software), your **Resonance**, your **sprite cap**, your discipline, and any biofeedback already taken. Your body still stands where you left it, and it can still be shot.
+
+**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. A **Data-sprite** already on the field hands you an edge on it.
+
+**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. Turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Seize Control needs a named asset, and a purpose-built sprite needs a job worth naming.
+
+**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A **Machine-sprite** is the one you want standing next to it.
+
+**4. Compile — one of the two, never both in one action.**
+
+- **Compile Sprite** (free at its base effect; **3 Resonance** only for the Enhance that compiles a second in the same action): a stock **Data / Attack / Machine / Ward** sprite. You know what it does before you roll.
+- **Special Sprite** (**3 Resonance** in combat, free out of combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.
+
+Either way you cannot exceed your sprite cap.
+
+**5. Command — the maneuver that makes the congregation useful.** Minor-band sprites act on your turn; intermediate sprites need a command each round to act that round; advanced sprites take their own turn. **Recompile** reshapes a standing sprite or rebuilds the one just destroyed at half Stamina — it cannot reshape a **Special Sprite**, whose purpose is not a menu entry. A Special Sprite needs no command: it already has its orders and its budget.
+
+**6. Cleanup / Jack Out.** Decompile dismisses one sprite or the whole congregation — free maneuver, no Resonance back. The congregation decompiles on its own when the encounter ends, and “just destroyed” does not survive the fight it died in. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. Biofeedback already taken follows you out.
+
+**Hacker overlay.** Swap Resonance for Bandwidth, sprite for Agent, and Compile Sprite / Special Sprite for **Compile Agent / Special Agent** (`19`). Steps 0–6 are otherwise identical, with one difference: a Hacker must be **Overlay or Jacked In** to compile at all — Linked refuses.
 
 ## Total Resonance — Deep Dive
 
