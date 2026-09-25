@@ -145,24 +145,39 @@ const spritesSrc = code(read("scripts/sprites.mjs"));
 const agentUse = agentsSrc.slice(agentsSrc.indexOf("async function useSpecialFromSheet"));
 const agentBody = agentUse.slice(0, agentUse.indexOf("\n}\n") + 1);
 note(agentBody.includes("await use.call("), "Special Agent's Use calls the stock roll");
-note(agentBody.indexOf("await use.call(") < agentBody.indexOf("promptSpecialPurpose"),
-  "…and it rolls BEFORE prompting for the purpose");
-note(agentBody.indexOf("tierFromMessage") < agentBody.indexOf("promptSpecialPurpose"),
+// 0.3.140: the roll → budget → purpose half of each engine moved into one shared helper per file
+// (`specialAgentPayload` / `specialSpritePayload`) so the Compile picker can run it too. The order
+// this section exists to protect is unchanged — it is just read one function deeper now.
+const bodyOf = (src, signature) => {
+  const start = src.indexOf(signature);
+  if (start < 0) return "";
+  const rest = src.slice(start);
+  return rest.slice(0, rest.indexOf("\n}\n") + 1);
+};
+const agentPayload = bodyOf(agentsSrc, "async function specialAgentPayload");
+note(!!agentPayload, "Special Agent's roll → budget → purpose half is one named helper");
+note(agentBody.indexOf("await use.call(") < agentBody.indexOf("specialAgentPayload("),
+  "…and it rolls BEFORE the purpose prompt is reached");
+note(agentPayload.indexOf("tierFromMessage") < agentPayload.indexOf("promptSpecialPurpose"),
   "…and reads the tier before prompting, so the prompt can show the budget");
-note(agentBody.indexOf("promptSpecialPurpose") < agentBody.indexOf("compileAgent("),
+note(agentBody.indexOf("specialAgentPayload(") < agentBody.indexOf("await compileAgent("),
   "…and prompts before the Agent is compiled");
 note(agentBody.indexOf("await use.call(") < agentBody.indexOf("spendBandwidth("),
   "…and does not spend before the roll");
-note(/specialSpendPlan\(/.test(agentBody), "…and checks affordability with the shared plan before rolling");
+note(/specialSpendPlan\(/.test(agentBody) && /specialSpendPlan\(/.test(agentPayload),
+  "…and checks affordability with the shared plan before rolling");
 
-const spriteFn = spritesSrc.slice(spritesSrc.indexOf("async function compileSpecialSprite"));
-const spriteBody = spriteFn.slice(0, spriteFn.indexOf("\n}\n") + 1);
-note(spriteBody.indexOf("tierFromMessage") < spriteBody.indexOf("promptSpecialPurpose"),
+const spriteBody = bodyOf(spritesSrc, "async function compileSpecialSprite");
+const spritePayload = bodyOf(spritesSrc, "async function specialSpritePayload");
+note(!!spritePayload, "Special Sprite's roll → budget → purpose half is one named helper");
+note(spritePayload.indexOf("tierFromMessage") < spritePayload.indexOf("promptSpecialPurpose"),
   "Special Sprite reads the tier off the posted card before prompting");
-note(spriteBody.indexOf("promptSpecialPurpose") < spriteBody.indexOf("compileSprite("),
+note(spriteBody.indexOf("specialSpritePayload(") < spriteBody.indexOf("compileSprite("),
   "…and prompts before the sprite is compiled");
-note(/specialSpendPlan\(/.test(spriteBody) && /plan\.spend > 0/.test(spriteBody),
+note(/specialSpendPlan\(/.test(spritePayload) && /plan\.spend > 0/.test(spritePayload),
   "…and only writes Resonance when the plan says there is a spend");
+note(spritePayload.indexOf("promptSpecialPurpose") < spritePayload.indexOf("plan.spend > 0"),
+  "…and writes it only after the purpose is in, so backing out costs nothing");
 note(/SPECIAL_SPRITE_DSID\) await compileSpecialSprite\(caster, message\)/.test(spritesSrc)
   || /else if \(ability\.system\?\.\_dsid === SPECIAL_SPRITE_DSID\)/.test(spritesSrc),
   "…and it is wired to the Special Sprite card's own chat message");

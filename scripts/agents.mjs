@@ -18,8 +18,8 @@
 import { isFullyConnected, WIRED_STATUS_DEFS } from "./wired-state.mjs";
 import {
   ACTIONS_BY_TIER, PURPOSE_MAX, SPECIAL_AGENT_BANDWIDTH, SPECIAL_AGENT_DSID, SPECIAL_ARCHETYPE,
-  SPECIAL_STAMINA_BASE, actionsForTier, normalizePurpose, specialSpendPlan, specialSummonDescription,
-  specialSummonLabel, tierFromMessage,
+  SPECIAL_STAMINA_BASE, actionsForTier, compileArchetypeOptions, normalizePurpose, specialSpendPlan,
+  specialSummonDescription, specialSummonLabel, tierFromMessage,
 } from "./special-summons.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -29,8 +29,11 @@ const UI = "GHOSTWIRE.Summons.Agents.UI";
 const COMPILE_DSID = "compile-agent";
 const DECOMPILE_DSID = "decompile-agent";
 const ARCHETYPES = ["probe", "spike", "daemon", "watchdog"];
-/** Every archetype a compile may stamp. `special` is never offered in the picker — it has its own ability. */
-const ALL_ARCHETYPES = [...ARCHETYPES, SPECIAL_ARCHETYPE];
+/**
+ * Every archetype a compile may stamp, and — since 0.3.140 (B) — the exact option list the Compile
+ * Agent picker offers, Special last. Special keeps its own ability as a second entry path.
+ */
+const ALL_ARCHETYPES = compileArchetypeOptions(ARCHETYPES);
 
 /** 3 Bandwidth — same number as Compile Sprite's Enhance / Ghost Signal. Michael can tune later. */
 export const COMPILE_BANDWIDTH = 3;
@@ -186,8 +189,15 @@ function placement(caster, index) {
   return { x: (Math.round(x / grid) + dx) * grid, y: (Math.round(y / grid) + dy) * grid };
 }
 
+/**
+ * The archetype picker.
+ *
+ * 0.3.140 (B) — **Special Agent** is an option here, last in the list, for parity with Compile Sprite.
+ * Picking it does not stamp an Agent from this dialog: the caller runs the roll → Actions → purpose
+ * flow first and only compiles once the player has written what the Agent is for.
+ */
 async function promptArchetype(caster, band) {
-  const options = ARCHETYPES.map((archetype, index) => {
+  const options = ALL_ARCHETYPES.map((archetype, index) => {
     const label = game.i18n.localize(`${UI}.Archetype.${archetype}`);
     const line = game.i18n.format(`${UI}.ArchetypeLine`, {
       stamina: agentStamina(archetype, band, caster),
@@ -263,9 +273,12 @@ async function spendBandwidth(caster, cost = COMPILE_BANDWIDTH) {
  * @param {{actions: number, purpose: string}} [options.special]  0.3.139 (A): the Special Agent's
  *   action budget and the purpose the player wrote after seeing it. Stamped onto the summoned Actor's
  *   description as `Actions (N): …purpose…` and kept in flags so a band swap can re-stamp it.
+ * @param {object} [options.message]      0.3.140 (B): the Compile Agent card this compile came from.
+ *   Its Power Roll is the tier that buys the action budget when the player picks Special out of the
+ *   archetype dropdown, so that path never rolls twice.
  * @returns {Promise<Actor|null>}
  */
-export async function compileAgent(caster, { archetype, position, silent = false, skipSpend = false, special = null } = {}) {
+export async function compileAgent(caster, { archetype, position, silent = false, skipSpend = false, special = null, message = null } = {}) {
   if (!isHacker(caster)) return warn("NotHacker");
   const state = actorWiredState(caster);
   const cap = agentCap(caster);
@@ -281,10 +294,20 @@ export async function compileAgent(caster, { archetype, position, silent = false
 
   const level = casterLevel(caster);
   const band = agentBand(level);
+  // Whether the player chose this archetype just now decides what an un-budgeted Special means.
+  const picked = (archetype === undefined) || (archetype === null);
   archetype ??= await promptArchetype(caster, band);
   if (!ALL_ARCHETYPES.includes(archetype)) return null;
-  // A Special Agent without a budget and a purpose is not a Special Agent; the ability owns that prompt.
-  if ((archetype === SPECIAL_ARCHETYPE) && !special) return null;
+  // A Special Agent without a budget and a purpose is not a Special Agent.
+  if ((archetype === SPECIAL_ARCHETYPE) && !special) {
+    // A *caller* that asks for one without a payload still gets null — the level refresh must never
+    // open a prompt. A player who picked it off the dropdown gets the flow it needs: roll → Actions
+    // → purpose, and then this compiles with the payload in hand.
+    if (!picked) return null;
+    const payload = await specialAgentPayload(caster, message);
+    if (!payload) return null;
+    return compileAgent(caster, { archetype, position, silent, skipSpend, special: payload });
+  }
 
   if (!skipSpend && !(await spendBandwidth(caster))) return null;
 
@@ -466,12 +489,22 @@ async function useCompileFromSheet(model, use, config, dialogOptions, messageOpt
   let archetype;
   if (plan.mode === "compile") {
     archetype = await promptArchetype(caster, agentBand(casterLevel(caster)));
-    if (!ARCHETYPES.includes(archetype)) return null;
+    if (!ALL_ARCHETYPES.includes(archetype)) return null;
   }
 
   const message = await use.call(model, config, dialogOptions, messageOptions);
   if (!message) return message;
-  if (plan.mode === "compile") await compileAgent(caster, { archetype, skipSpend: true });
+  if (plan.mode !== "compile") return message;
+
+  // 0.3.140 (B) — Special picked out of the dropdown. The card has just rolled, so that tier is the
+  // budget; the purpose is asked for after it. Compile Agent's stock 3 Bandwidth is already spent and
+  // a Special costs the same 3, so `skipSpend` covers both.
+  let special = null;
+  if (archetype === SPECIAL_ARCHETYPE) {
+    special = await specialAgentPayload(caster, message);
+    if (!special) return message;
+  }
+  await compileAgent(caster, { archetype, skipSpend: true, special });
   return message;
 }
 
@@ -500,6 +533,51 @@ async function promptSpecialPurpose(caster, actions) {
 }
 
 /**
+ * 0.3.140 (B) — the Power Roll for a Special picked somewhere no card was posted: the ⋮ menu on the
+ * Compile Agent row, or the Compile button on its sheet. Both call {@link compileAgent} directly, so
+ * there is no `abilityResult` to read a tier off — and a budget handed out without dice would be the
+ * one thing this feature is not allowed to do. Same 2d10 + Logic the ability rolls, and it posts, so
+ * the table sees the roll that bought the Actions.
+ *
+ * @returns {Promise<number>} The tier the dice landed on.
+ */
+async function rollSpecialTier(caster) {
+  const roll = new ds.rolls.PowerRoll("2d10 + @logic", { logic: casterLogic(caster) }, {
+    type: "ability",
+    flavor: game.i18n.format(`${UI}.SpecialRollFlavor`, { name: caster.name }),
+  });
+  await roll.evaluate();
+  await roll.toMessage({ speaker: ChatMessage.getSpeaker({ actor: caster }) });
+  return Number(roll.product) || 1;
+}
+
+/**
+ * The Special Agent's budget and purpose, in the locked order: roll (or read the card that already
+ * rolled) → the tier buys the Actions → the player writes what it is for, knowing the budget.
+ *
+ * The **spend is not here**. Compile Agent's stock `resource` takes its 3 Bandwidth on the card path
+ * and {@link compileAgent} takes it on the sheet path; the standalone Special Agent ability carries no
+ * stock resource and pays for itself. Both prices are the same 3, so a Special picked out of the
+ * Compile dropdown is charged once, not twice.
+ *
+ * @param {Actor} caster
+ * @param {object|null} message  The card that already rolled, or null to roll here.
+ * @returns {Promise<{actions: number, purpose: string}|null>} null when the player backed out or cannot pay.
+ */
+async function specialAgentPayload(caster, message) {
+  // Affordability is checked *before* the roll so a Hacker never spends an action on a compile they
+  // cannot pay for. The resource itself is written by the caller, after the purpose is in.
+  const current = Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0;
+  const afford = specialSpendPlan({ inCombat: !!caster.inCombat, current, cost: SPECIAL_AGENT_BANDWIDTH });
+  if (!afford.ok) return warn("NotEnoughBandwidth", { name: caster.name, cost: SPECIAL_AGENT_BANDWIDTH, current });
+
+  const actions = actionsForTier(message ? tierFromMessage(message) : await rollSpecialTier(caster));
+  const purpose = await promptSpecialPurpose(caster, actions);
+  if (purpose === null) return null;
+  return { actions, purpose };
+}
+
+/**
  * Abilities-tab Use of **Special Agent**. The order is the feature and it is LOCKED:
  *
  *   roll → tier buys Actions → player writes the purpose → the Agent manifests with it annotated.
@@ -513,34 +591,24 @@ async function useSpecialFromSheet(model, use, config, dialogOptions, messageOpt
   // Special Agent is a compile, never a command: at cap there is no second thing for it to do.
   if (plan.mode !== "compile") return warnPlan(caster, plan.gate ?? "AtCap");
 
-  // Affordability is checked *before* the roll so a Hacker never spends an action on a compile they
-  // cannot pay for. The resource itself is not written until the purpose is in.
-  const afford = specialSpendPlan({
-    inCombat: !!caster.inCombat,
-    current: Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0,
-    cost: SPECIAL_AGENT_BANDWIDTH,
-  });
-  if (!afford.ok) {
-    return warn("NotEnoughBandwidth", {
-      name: caster.name, cost: SPECIAL_AGENT_BANDWIDTH,
-      current: Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0,
-    });
-  }
+  // Affordability is checked before the roll, inside the shared half, so a Hacker never spends an
+  // action on a compile they cannot pay for.
+  const current = Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0;
+  const afford = specialSpendPlan({ inCombat: !!caster.inCombat, current, cost: SPECIAL_AGENT_BANDWIDTH });
+  if (!afford.ok) return warn("NotEnoughBandwidth", { name: caster.name, cost: SPECIAL_AGENT_BANDWIDTH, current });
 
   // 1 — Power Roll first.
   const message = await use.call(model, config, dialogOptions, messageOptions);
   if (!message) return message;
 
-  // 2 — the tier sets the action budget.
-  const actions = actionsForTier(tierFromMessage(message));
+  // 2 — the tier sets the action budget; 3 — only now does the player write what it is for.
+  const special = await specialAgentPayload(caster, message);
+  if (!special) return message;
 
-  // 3 — only now does the player write what it is for.
-  const purpose = await promptSpecialPurpose(caster, actions);
-  if (purpose === null) return message;
-
-  // 4 — pay (in combat only), then summon with the budget annotated on the description.
+  // 4 — pay (in combat only), then summon with the budget annotated on the description. The standalone
+  // ability carries no stock resource, so this is the only thing that writes Bandwidth for it.
   if (!(await spendBandwidth(caster, SPECIAL_AGENT_BANDWIDTH))) return message;
-  await compileAgent(caster, { archetype: SPECIAL_ARCHETYPE, skipSpend: true, special: { actions, purpose } });
+  await compileAgent(caster, { archetype: SPECIAL_ARCHETYPE, skipSpend: true, special });
   return message;
 }
 
@@ -714,6 +782,8 @@ export function registerAgents() {
       // 0.3.139 (A) — Special Agent
       actionsForTier, specialSummonDescription, specialSpendPlan, tierFromMessage,
       SPECIAL_AGENT_BANDWIDTH, SPECIAL_AGENT_DSID, SPECIAL_ARCHETYPE, ACTIONS_BY_TIER,
+      // 0.3.140 (B) — Special Agent is in the Compile picker too.
+      compileArchetypeOptions, ARCHETYPES: [...ARCHETYPES], PICKER_ARCHETYPES: [...ALL_ARCHETYPES],
     };
   }
   console.log(`${MODULE_ID} | Agents: Compile / Special / Decompile registered (sheet Use, hero sheet row menu, Compile Agent item sheet)`);

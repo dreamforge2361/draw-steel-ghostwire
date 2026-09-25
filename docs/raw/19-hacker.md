@@ -118,6 +118,8 @@ Compile Agent hands you one of four stock archetypes. **Special Agent** hands yo
 
 **Cost.** **3 Bandwidth in combat.** Out of combat it costs nothing, like the rest of your Programs.
 
+**Two ways in.** Special Agent has its own ability card, and it is also the last entry in the **Compile Agent** archetype list. Both run the order above, and both cost the same 3 Bandwidth in combat.
+
 **Cap, Stamina and cleanup.** A Special Agent counts against your Agent cap like any other Agent, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced.
 
 **No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different Agent.
@@ -127,7 +129,7 @@ Compile Agent hands you one of four stock archetypes. **Special Agent** hands yo
 > **Effect:** Make the Power Roll **first**. On **low (≤11)** the Agent compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The Agent manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose.
 
 > **In Foundry**
-> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`.
+> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog — or **Special Agent**, last in the list — and the matching Summons › Agents Actor drops a token beside you. Special Agent is the one entry that does not compile straight away: the card rolls, the tier sets the action budget, and only then are you asked what the Agent is for. Its own **Special Agent** ability card does the same thing, so either way in works; the 3 Bandwidth is charged once. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`.
 
 ## Wired firefight -- round-by-round checklist
 

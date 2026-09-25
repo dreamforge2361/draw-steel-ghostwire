@@ -13,12 +13,45 @@
 // Cost is **3 Bandwidth** (Hacker) / **3 Resonance** (Technomancer) **in combat only**. Out of combat
 // the construct is free — same table discipline as the rest of the Hacker's Programs.
 //
+// 0.3.140 (A/B): Special is now also offered *inside* the Compile picker, so the whole flow above
+// runs from either entry path. {@link compileArchetypeOptions} / {@link reshapeArchetypes} own which
+// list it belongs to.
+//
 // This file is the pure half: no Foundry globals are touched at import time, so `tools/wave-03139-smoke.mjs`
 // can drive the flow order, the tier→Actions map, the description stamp and the spend plan offline.
 // scripts/agents.mjs and scripts/sprites.mjs own the dialogs, the roll and the Actor.
 
-/** The archetype token both engines use for a purpose-built construct. Not in either archetype picker. */
+/** The archetype token both engines use for a purpose-built construct. */
 export const SPECIAL_ARCHETYPE = "special";
+
+/**
+ * 0.3.140 (A/B) — the option list a **Compile** picker offers, Special last.
+ *
+ * Michael opened Compile Sprite expecting Special Sprite in the dropdown and it was not there:
+ * 0.3.139 shipped Special as a separate ability only. Both entry paths are live now, and this is the
+ * one place either picker's option order is written, so `tools/wave-03140-smoke.mjs` can assert that
+ * the compile list includes `special` and the reshape list does not without re-typing the archetypes.
+ *
+ * @param {string[]} archetypes  The published archetypes, in card order.
+ * @returns {string[]}
+ */
+export function compileArchetypeOptions(archetypes = []) {
+  return [...archetypes.filter(archetype => archetype !== SPECIAL_ARCHETYPE), SPECIAL_ARCHETYPE];
+}
+
+/**
+ * The same list with Special taken back out: what a **reshape / rebuild** may turn a construct into.
+ *
+ * A Special is purpose-built once, for one job the player wrote down after seeing the budget the dice
+ * bought. There is no roll and no purpose prompt in a reshape, so reshaping *into* one would produce a
+ * Special with neither — and reshaping one *away* would quietly delete the job it was made for.
+ *
+ * @param {string[]} archetypes
+ * @returns {string[]}
+ */
+export function reshapeArchetypes(archetypes = []) {
+  return archetypes.filter(archetype => archetype !== SPECIAL_ARCHETYPE);
+}
 
 /** The two ability `_dsid`s that drive this flow. */
 export const SPECIAL_AGENT_DSID = "special-agent";

@@ -96,9 +96,9 @@
     "ritual": 46,
     "summon": 74
   },
-  "chunkCount": 2275,
+  "chunkCount": 2276,
   "audienceCounts": {
-    "player": 2247,
+    "player": 2248,
     "director": 28
   },
   "chunks": [
@@ -5440,7 +5440,7 @@
       "heading": "Special Agent -- the purpose-built daemon",
       "kind": "rules",
       "audience": "player",
-      "text": "Compile Agent hands you one of four stock archetypes. **Special Agent** hands you none of them: you compile a daemon written for one job, and the dice decide how much of that job it can do.\n\n**The order is the whole ability. Do not reorder it.**\n\n1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.\n2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.\n3. **Now say what it is for.** One sentence, written knowing the budget — “cut the cameras on floor 6”, “hold the maglock open and scream if anyone comes”.\n4. **It manifests with the cap written on it.** The Agent's description opens with the budget and your sentence: **Actions (2): cut the cameras on floor 6**. It does that and nothing else, and it stops when the Actions are spent.\n\n**Cost.** **3 Bandwidth in combat.** Out of combat it costs nothing, like the rest of your Programs.\n\n**Cap, Stamina and cleanup.** A Special Agent counts against your Agent cap like any other Agent, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced.\n\n**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different Agent."
+      "text": "Compile Agent hands you one of four stock archetypes. **Special Agent** hands you none of them: you compile a daemon written for one job, and the dice decide how much of that job it can do.\n\n**The order is the whole ability. Do not reorder it.**\n\n1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.\n2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.\n3. **Now say what it is for.** One sentence, written knowing the budget — “cut the cameras on floor 6”, “hold the maglock open and scream if anyone comes”.\n4. **It manifests with the cap written on it.** The Agent's description opens with the budget and your sentence: **Actions (2): cut the cameras on floor 6**. It does that and nothing else, and it stops when the Actions are spent.\n\n**Cost.** **3 Bandwidth in combat.** Out of combat it costs nothing, like the rest of your Programs.\n\n**Two ways in.** Special Agent has its own ability card, and it is also the last entry in the **Compile Agent** archetype list. Both run the order above, and both cost the same 3 Bandwidth in combat.\n\n**Cap, Stamina and cleanup.** A Special Agent counts against your Agent cap like any other Agent, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced."
     },
     {
       "id": "19-hacker#special-agent-the-purpose-built-daemon#13",
@@ -5450,17 +5450,17 @@
       "heading": "Special Agent -- the purpose-built daemon",
       "kind": "rules",
       "audience": "player",
-      "text": "> **Special Agent** *(Class Feature Signature — 3 Bandwidth in combat, free out of combat, Overlay or Jacked In)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the Agent compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The Agent manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose.\n\n> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`."
+      "text": "**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different Agent.\n\n> **Special Agent** *(Class Feature Signature — 3 Bandwidth in combat, free out of combat, Overlay or Jacked In)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the Agent compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The Agent manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose."
     },
     {
-      "id": "19-hacker#wired-firefight-round-by-round-checklist#14",
+      "id": "19-hacker#special-agent-the-purpose-built-daemon#14",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
-      "heading": "Wired firefight -- round-by-round checklist",
+      "heading": "Special Agent -- the purpose-built daemon",
       "kind": "rules",
       "audience": "player",
-      "text": "The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Hacker actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.\n\n**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In — **Linked refuses** an Agent compile), your **Bandwidth**, your **deck** and what is installed on it, your **Agent cap**, and any **Trace Alert** you carried in. Your meat body still stands where you left it, and it can still be shot.\n\n**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. Skip it when you already know the room.\n\n**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. This is what turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Almost nothing downstream works well without it: Seize Control needs a named asset, and a purpose-built Agent needs a job worth naming.\n\n**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A held asset is the difference between an Agent that *watches* a door and an Agent that *holds* one.\n\n**4. Compile — one of the two, never both in one action.**"
+      "text": "> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog — or **Special Agent**, last in the list — and the matching Summons › Agents Actor drops a token beside you. Special Agent is the one entry that does not compile straight away: the card rolls, the tier sets the action budget, and only then are you asked what the Agent is for. Its own **Special Agent** ability card does the same thing, so either way in works; the 3 Bandwidth is charged once. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`."
     },
     {
       "id": "19-hacker#wired-firefight-round-by-round-checklist#15",
@@ -5470,17 +5470,17 @@
       "heading": "Wired firefight -- round-by-round checklist",
       "kind": "rules",
       "audience": "player",
-      "text": "- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.\n- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nOut of combat, neither costs anything. Either way you cannot exceed your Agent cap.\n\n**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.\n\n**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software."
+      "text": "The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Hacker actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.\n\n**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In — **Linked refuses** an Agent compile), your **Bandwidth**, your **deck** and what is installed on it, your **Agent cap**, and any **Trace Alert** you carried in. Your meat body still stands where you left it, and it can still be shot.\n\n**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. Skip it when you already know the room.\n\n**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. This is what turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Almost nothing downstream works well without it: Seize Control needs a named asset, and a purpose-built Agent needs a job worth naming.\n\n**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A held asset is the difference between an Agent that *watches* a door and an Agent that *holds* one.\n\n**4. Compile — one of the two, never both in one action.**"
     },
     {
-      "id": "19-hacker#level-1-10-progression-table#16",
+      "id": "19-hacker#wired-firefight-round-by-round-checklist#16",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
-      "heading": "Level 1-10 Progression Table",
+      "heading": "Wired firefight -- round-by-round checklist",
       "kind": "rules",
       "audience": "player",
-      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
+      "text": "- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.\n- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nOut of combat, neither costs anything. Either way you cannot exceed your Agent cap.\n\n**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.\n\n**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software."
     },
     {
       "id": "19-hacker#level-1-10-progression-table#17",
@@ -5490,10 +5490,20 @@
       "heading": "Level 1-10 Progression Table",
       "kind": "rules",
       "audience": "player",
+      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
+    },
+    {
+      "id": "19-hacker#level-1-10-progression-table#18",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Level 1-10 Progression Table",
+      "kind": "rules",
+      "audience": "player",
       "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **10** | Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability) | Characteristic Increase - Perk (choice) - Skill | -- |"
     },
     {
-      "id": "19-hacker#core-class-features-non-subclass#18",
+      "id": "19-hacker#core-class-features-non-subclass#19",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5503,7 +5513,7 @@
       "text": "- **Ghost Step** (3rd) -- Free Triggered Action, no Bandwidth cost. Trigger: a Track 2 target (ICE, hostile AI, rival decker) targets you directly, OR the Alert Track increases from your own action. Effect: choose one -- immediately use a Maneuver-cost Matrix Verb for free, or cancel the Alert increase entirely (once per encounter).\n- **Exploit the Breach** (4th) -- Passive. Whenever your Deep Scan lands a high (17+), the target has a marked exploitable weakness until the end of the encounter (or until re-scanned). The next Track 1/Track 2 Wired-based hit against that target from you or an ally gains an edge, and a Track 2 hit also deals +2 Integrity damage. Only one target can be marked at a time.\n- **Improved Cyberdeck** (4th) -- Passive. +1 Intrusion Roll Modifier and +1 Integrity Damage Bonus at every result band, on top of whatever deck you're currently running. Granted by the class, not the deck.\n- **Dual Boot** (6th) -- Passive enabling a once-per-encounter Free Triggered Action: apply a second owned deck's Roll Modifier/Damage Bonus to a single Program/Verb/signature roll instead of your equipped deck's, whichever is better. Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Reach, and Ghost Distance are unaffected -- only the roll/damage numbers swap.\n- **Bandwidth Overclock** (7th) -- Passive. Base income +1->+2 per turn; cap 6->8 x Echelon.\n- **Ghost Protocol** (7th) -- Passive with a pre-encounter Free Triggered use. If you had at least one uninterrupted round of Overlay/Jacked-In access before initiative (Director’s call), you and your allies get an edge on your first Power Roll of the encounter, and you may use one free Matrix Verb or Deep Scan before the first turn begins.\n- **Root Access** (9th) -- Passive. Dual Boot becomes twice per encounter; Improved Cyberdeck's bonus rises to +2/+2 at every result band (replacing, not stacking with, the 4th-level +1/+1).\n- **Ghost in the Machine** (10th, epic capstone) -- Free Triggered Action, once per encounter. Treat any Power Roll you just made as a natural 19 if the actual result was lower -- can turn a low/middle into a guaranteed high (17+), and also triggers the natural-19/20 bonus Bandwidth.\n- **Infinite Loop** (10th) -- Passive. Bandwidth no longer fully resets between encounters -- retain Echelon's worth (4 at 10th level) instead of dropping to 0. The first 2 points of cap overflow in a round are retained for one round instead of lost outright.\n- **Borrowed Access** (10th) -- Main Action, 3 Bandwidth. Choose an ally within Reach who is Jacked In/Overlaid; they immediately use one Program you know costing 5 Bandwidth or less, using your deck's stats, without spending their own action -- but it costs your Main Action and your Bandwidth."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#19",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#20",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5513,7 +5523,7 @@
       "text": "The Hacker's offensive specialist: hard, fast, single-target Intrusion strikes that punish Track 2 targets and amplify the whole team's damage against ICE, hostile deckers, and hostile AIs."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#20",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#21",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5523,7 +5533,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Overclocked Damage (passive) | +1 flat Integrity damage on your own successful Track 2 hits |\n| 1 | Cascade Strike (Triggered Action, 1 Bandwidth) | Trigger: any Track 2 target takes Integrity damage from anyone. Effect: add +2 flat Integrity damage to that hit |\n| 2 | Overclocked Strikes (passive) | Your own-hit bonus rises from +1 to +2 (the ally-hit trigger stays +2) |\n| 3 | Cascade Failure (Triggered Action, 2 Bandwidth) | Trigger: you drop a Track 2 target to 0 Integrity. Effect: another Track 2 target within Reach immediately takes Integrity damage equal to your deck's low-band Damage Bonus |\n| 5 | No Second Chances (passive) | Your 1st-level triggered action can also apply Exploit the Breach's marked-weakness edge to the same hit, even if you didn't scan the target |\n| 6 | Overwhelm ICE (Main Action, 4 Bandwidth) | Power Roll, Logic. low (≤11): half low-band Damage Bonus (rounded down), Alert up. middle (12–16): full middle-band bonus + your 1st-level passive. high (17+): full high-band bonus + passive + bane on target's next roll |\n| 7 | Hair Trigger (passive) | Your 1st-level triggered action can be used twice per round (still 1 Bandwidth each) |\n| 8 | Total Breach (passive) | Own-hit bonus rises to +3; dropping a Track 2 target to 0 Integrity refunds 2 Bandwidth |"
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#21",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#22",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5533,7 +5543,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 9 | Zero Day (Main Action, 6 Bandwidth) | Power Roll with an edge, Logic. Always deals high-band Damage Bonus damage regardless of roll result (a low roll still raises Alert) + passive bonus. On an actual high (17+) roll, target also can't act on its next turn |"
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#22",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#23",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5543,7 +5553,7 @@
       "text": "A specialist in seizing and holding fixed systems, turning nodes into weapons and tripwires against anyone who tries to take them back."
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#23",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#24",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5553,7 +5563,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Extra Node (passive) | Hold 1 extra node beyond your deck's normal limit |\n| 1 | Lockout (Triggered Action, 1 Bandwidth) | Trigger: an enemy attempts to retake/break your hold on a seized node. Effect: apply a bane to that attempt |\n| 2 | Redundant Systems (passive, enabling a once-per-encounter Free Triggered Action) | If you lose control of a held node, spend 1 Bandwidth to attempt re-seizing it with a Power Roll (Logic), no Maneuver/Main Action cost, once per encounter |\n| 3 | Chokepoint (Main Action, 3 Bandwidth) | No roll. Until your next turn, any Track 2 target that breaches/retakes/routes through a node you hold takes a bane and alerts you immediately, even if you're not Jacked In |\n| 5 | Wider Net (passive) | Extra-node count rises from 1 to 2 |\n| 6 | Puppet Strings (Main Action, 4 Bandwidth) | No roll. Use a held interactive node's normal function (turret, camera, drone, smartlink) once, without counting against its own action economy |\n| 7 | Iron Grip (passive) | 1st-level triggered action's single bane becomes a double-bane |\n| 8 | Total Awareness (passive) | You always know when a held node is targeted for retake/breach/disruption, even off-map or out of Reach, and may spend a Maneuver to act on it as though it were in Reach |\n| 9 | Master Sysop (Main Action, 6 Bandwidth) | Power Roll (Logic), one roll vs up to 3 unheld nodes within Reach. low (≤11): seize 1 (your choice), Alert up. middle (12–16): seize 2. high (17+): seize all 3, none count against your held-node limit for the rest of the encounter |"
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#24",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#25",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5563,7 +5573,7 @@
       "text": "The Hacker whose value extends to the whole team, feeding allies edges and softening the blows of Wired-side combat before they reach flesh."
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#25",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#26",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5573,7 +5583,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Wired Guard (passive) | +1 flat defense bonus to allies within Reach who are Jacked In/Overlaid, vs Track 2 attacks |\n| 1 | Dampen (Triggered Action, 1 Bandwidth) | Trigger: a nearby Jacked-In ally takes a Track 2 hit. Effect: -2 flat damage reduction on that hit |\n| 2 | Watchful Relay (passive) | Defense bonus rises from +1 to +2 |\n| 3 | Signal Boost (Maneuver, 2 Bandwidth) | No roll. One ally within Reach gains an edge on their next Power Roll before your next turn (Wired or physical) |\n| 5 | Standing Watch (passive) | Dampen can now trigger off a Track 2 hit against ANY ally in Reach (not just Jacked In/Overlaid); -2 reduction unchanged |\n| 6 | Emergency Patch (Main Action, 4 Bandwidth) | No roll. Target ally (or self) regains Stamina = 2 + Echelon; if Jacked In, also cancels the next biofeedback bleed-through this encounter |\n| 7 | Anchor Point (passive) | Defense bonus rises to +3; allies in Reach who are Jacked In also gain your deck's Biofeedback Resistance as bonus resistance of their own |\n| 8 | Full Coverage (passive) | Dampen and Standing Watch's trigger cost 0 Bandwidth the first time each triggers per round (additional uses still cost 1) |\n| 9 | Guardian Angel in the Net (Main Action, 6 Bandwidth) | No roll. All allies in Reach who are Jacked In/Overlaid get double your defense bonus (currently +6) vs Track 2 attacks until your next turn, and biofeedback bleed-through is reduced by an additional flat 3 |"
     },
     {
-      "id": "19-hacker#chrome-a-hacker-runs#26",
+      "id": "19-hacker#chrome-a-hacker-runs#27",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5750,7 +5760,7 @@
       "heading": "Signature Abilities (No Resonance Cost)",
       "kind": "rules",
       "audience": "player",
-      "text": "> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward, and the matching Summons › Sprites Actor drops a token beside you. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan — the token stays meat-side. Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor."
+      "text": "> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward — or **Special Sprite**, last in the list — and the matching Summons › Sprites Actor drops a token beside you. Special Sprite is the one entry that does not compile straight away: it rolls, tells you the action budget the tier bought, and asks what the sprite is for first. Its own **Special Sprite** ability card still does exactly the same thing, so either way in works. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan — the token stays meat-side. Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor."
     },
     {
       "id": "20-technomancer#signature-abilities-no-resonance-cost#18",
@@ -5790,7 +5800,7 @@
       "heading": "Special Sprite -- the purpose-built shape",
       "kind": "rules",
       "audience": "player",
-      "text": "> **Special Sprite** *(Signature — 3 Resonance in combat, free out of combat)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the sprite compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The sprite manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose."
+      "text": "**Two ways in.** Special Sprite has its own ability card, and it is also the last entry in the **Compile Sprite** archetype list. Both run the order above, and both cost the same.\n\n> **Special Sprite** *(Signature — 3 Resonance in combat, free out of combat)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the sprite compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The sprite manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose."
     },
     {
       "id": "20-technomancer#heroic-abilities-cost-bands-1-through-11#22",
