@@ -8,7 +8,7 @@
 // flags.draw-steel-ghostwire.voidmarkAudience = "director".
 // Lock: docs/spikes/B122-DIRECTOR-ONLY-LORE-VOIDMARK.md
 
-import { citationLabels, retrieve, retrievalQuery } from "./voidmark-rag.mjs";
+import { citationLabels, clarification, retrieve, retrieveConversational } from "./voidmark-rag.mjs";
 import { audienceForAsk } from "./voidmark-audience.mjs";
 import { worldJournalChunks } from "./voidmark-journal.mjs";
 import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages, normalizeMode } from "./voidmark-prompt.mjs";
@@ -81,10 +81,10 @@ function formatMessageHtml(text) {
  */
 async function retrieveHits(query, { user = game.user, mode = "runner", forcePlayer = false, history = [], token = null } = {}) {
   const audience = audienceForAsk({ user, mode, forcePlayer });
-  // 0.3.134 (G7): retrieve on the question *plus* the previous user turn and the selected token.
-  // The model still only sees `query`; this widens what is fetched for it, which is what makes a
-  // follow-up ("and how much damage?") land on the same chapter the first question did.
-  const search = retrievalQuery({ query, history, token });
+  // 0.3.135 (3b): the **current question** is scored on its own and holds the top slots; the previous
+  // turn and the selected token only fill what is left (scripts/voidmark-rag.mjs). 0.3.134 merged all
+  // three into one search string, which is what let a summon question three messages back starve
+  // "what does ward the room do?" — and what made the table reach for Clear thread between topics.
   let staticChunks = [];
   try {
     const index = await loadIndex();
@@ -98,7 +98,11 @@ async function retrieveHits(query, { user = game.user, mode = "runner", forcePla
   } catch (error) {
     console.warn(`${MODULE_ID} | VOIDMARK world journal scan failed`, error);
   }
-  return retrieve([...staticChunks, ...journalChunks], search, { k: 5, maxChars: 5500, audience });
+  return retrieveConversational(
+    [...staticChunks, ...journalChunks],
+    { query, history, token },
+    { k: 5, maxChars: 5500, audience },
+  );
 }
 
 /**
@@ -169,6 +173,8 @@ async function completeFromSettings(query, mode, history, asker = {}) {
     hits,
     history,
     query,
+    // 0.3.135 (3d): weak or tied hits and no card named → the Mark asks which one, in his own voice.
+    clarify: clarification(hits, query),
   });
   const request = buildChatRequest({
     baseUrl: setting("apiBaseUrl"),
@@ -529,7 +535,10 @@ export function registerVoidmark() {
       module.api = {
         ...(module.api ?? {}),
         openVoidmark,
-        voidmark: { open: openVoidmark, retrieve, loadIndex, canOpenVoidmark, worldJournalChunks },
+        voidmark: {
+          open: openVoidmark, retrieve, retrieveConversational, clarification,
+          loadIndex, canOpenVoidmark, worldJournalChunks,
+        },
       };
     }
     game.ghostwire = { ...(game.ghostwire ?? {}), openVoidmark };

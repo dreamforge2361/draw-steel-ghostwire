@@ -9,11 +9,19 @@
  * under docs/directors/** or docs/manuscript/03-directors/** is a Director
  * campaign aid and never reaches a player or Runner-mode retrieve.
  *
+ * 0.3.135 (3a): the packs are ingested too — all 418 abilities, all 46 ritual
+ * Workings and all 68 summon / machine Actors, one entry per card, rendered by
+ * tools/lib/pack-entries.mjs straight off the src pack JSON. Before this, VOIDMARK
+ * had the chapter that *describes* rituals and no entry for Ward the Room, so a
+ * question about a specific card had nothing to land on.
+ *
  * Run: node tools/build-voidmark-index.mjs
  */
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { PACK_FILES, packEntries, packEntryCounts } from "./lib/pack-entries.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RAW_DIR = join(ROOT, "docs/raw");
@@ -240,6 +248,48 @@ function ingestFile(abs, kind) {
   return chunkMarkdown(readFileSync(abs, "utf8"), rel(abs), kind);
 }
 
+/**
+ * 0.3.135 (3a) — one pack card as one or more chunks.
+ *
+ * A card is a unit: splitting Hurl Element across two chunks means a retrieve can hand the model the
+ * tiers without the keywords. So the cap is generous (PACK_MAX_CHUNK, well under `retrieve`'s 5500-char
+ * per-hit ceiling) and most cards fit in one piece — but five of the 46 Workings run past 4 KB of
+ * printed text, and a chunk `retrieve` silently skips for being oversized is worse than a split. The
+ * splits break on line boundaries and **repeat the card's first line**, so every piece still says which
+ * card it belongs to and still carries the `entity` name that drives the exact-name boost.
+ */
+const PACK_MAX_CHUNK = 2600;
+
+function chunkPackEntry(entry) {
+  const lines = entry.text.split("\n");
+  const header = lines[0] ?? entry.entity;
+  const parts = [];
+  let buf = [];
+  const flush = () => {
+    const text = buf.join("\n").trim();
+    if (text) parts.push(parts.length ? `${header}\n${text}` : text);
+    buf = [];
+  };
+  for (const line of lines) {
+    const pending = buf.join("\n").length + line.length + 1;
+    if (buf.length && (pending > PACK_MAX_CHUNK)) flush();
+    buf.push(line);
+  }
+  flush();
+  return parts.map((text, i) => ({
+    id: `${entry.kind}:${slug(entry.entityDsid || entry.entity)}#${i + 1}`,
+    file: entry.file,
+    source: entry.source,
+    chapter: entry.chapter,
+    heading: entry.heading,
+    kind: entry.kind,
+    audience: audienceFor(entry.source),
+    entity: entry.entity,
+    entityDsid: entry.entityDsid,
+    text,
+  }));
+}
+
 const rawFiles = listMarkdown(RAW_DIR, SKIP_RAW);
 const loreFiles = listMarkdown(LORE_DIR, SKIP_LORE).filter(f => /^L\d+-/i.test(f));
 const handbookFiles = listMarkdown(HANDBOOK_DIR, SKIP_HANDBOOK);
@@ -257,6 +307,9 @@ for (const name of handbookFiles) {
 for (const source of SETTING_PAGES) {
   chunks.push(...ingestFile(join(ROOT, source), "setting"));
 }
+const entries = packEntries(ROOT);
+for (const entry of entries) chunks.push(...chunkPackEntry(entry));
+const entryCounts = packEntryCounts(entries);
 
 const index = {
   version: 1,
@@ -268,9 +321,12 @@ const index = {
     lore: loreFiles.map(f => `docs/manuscript/01-lore/${f}`),
     handbook: handbookFiles.map(f => `docs/setting/reach-handbook/${f}`),
     setting: [...SETTING_PAGES],
+    packs: [...Object.values(PACK_FILES)],
     director: [...new Set(chunks.filter(c => c.audience === "director").map(c => c.source))].sort(),
     skipped: [...SKIP_RAW, ...SKIP_HANDBOOK, ...SKIP_LORE],
   },
+  // 0.3.135 (3a): abilities / rituals / summons, one entry per card.
+  entityCounts: entryCounts,
   chunkCount: chunks.length,
   audienceCounts: {
     player: chunks.filter(c => c.audience === "player").length,
@@ -284,3 +340,4 @@ writeFileSync(OUT, `${JSON.stringify(index, null, 2)}\n`);
 const bytes = Buffer.byteLength(JSON.stringify(index));
 console.log(`Wrote ${chunks.length} chunks (${Math.round(bytes / 1024)} KB) → ${OUT}`);
 console.log(`  audience: ${index.audienceCounts.player} player / ${index.audienceCounts.director} director`);
+console.log(`  packs: ${entryCounts.ability} abilities / ${entryCounts.ritual} rituals / ${entryCounts.summon} summons`);
