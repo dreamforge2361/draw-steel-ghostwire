@@ -406,15 +406,20 @@ for (const ref of ["origin/main", "main"]) {
 }
 if (baseRef) {
   const changed = execFileSync("git", ["diff", "--name-only", baseRef, "--", "src/packs"], { encoding: "utf8" }).split("\n").filter(f => f.endsWith(".json"));
-  const idsOf = doc => JSON.stringify([
+  const idsOf = doc => [
     doc._id, doc.system?._dsid, doc.flags?.["draw-steel-ghostwire"]?.dsid,
     ...(doc.pages ?? []).map(p => p._id), ...(doc.items ?? []).map(i => [i._id, i.system?._dsid]), ...(doc.effects ?? []).map(e => e._id),
-  ]);
+  ].flat(2).filter(Boolean);
   let moved = 0;
   for (const file of changed) {
     let before = null;
     try { before = JSON.parse(execFileSync("git", ["show", `${baseRef}:${file}`], { encoding: "utf8" })); } catch { continue; }
-    if (!existsSync(file) || idsOf(before) !== idsOf(readJson(file))) moved += 1;
+    if (!existsSync(file)) { moved += 1; continue; }
+    // 0.3.142: the check is that no id *moved*, which is a subset test — an appended journal page or a
+    // new embedded item is a brand-new id, not a moved one. The old strict string compare read the
+    // North Substation page 0.3.142 added to The Wire as movement and went red on a clean tree.
+    const after = new Set(idsOf(readJson(file)));
+    if (!idsOf(before).every(id => after.has(id))) moved += 1;
   }
   note(!moved, `${changed.length} changed pack source file(s) against ${baseRef}; no _id / dsid moved`);
 } else {

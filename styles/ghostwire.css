@@ -279,6 +279,27 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-mod-install-chat p { margin: 0.25rem 0 0; }
 
+/* Director: Apply Biofeedback (0.3.142 D) — the four-step card. Jacked In and the Winded floor
+   are the two states the table needs to spot from across the log, so they carry the error colour. */
+.ghostwire-biofeedback-chat {
+  border-left: 3px solid var(--color-level-warning, #c90);
+  padding: 0.35rem 0.6rem;
+}
+.ghostwire-biofeedback-chat.state-jackedIn,
+.ghostwire-biofeedback-chat.winded-floor {
+  border-left-color: var(--color-level-error, #d33);
+}
+.ghostwire-biofeedback-chat header {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: var(--ghostwire-track);
+  text-transform: uppercase;
+}
+.ghostwire-biofeedback-chat p { margin: 0.25rem 0 0; }
+.ghostwire-biofeedback-chat .hint { opacity: 0.8; font-size: var(--font-size-12, 12px); }
+
 /* Corruption History on the Biography tab (B80) */
 .ghostwire-corruption-history {
   margin-top: 0.75rem;

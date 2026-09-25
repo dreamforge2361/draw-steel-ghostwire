@@ -96,9 +96,9 @@
     "ritual": 46,
     "summon": 74
   },
-  "chunkCount": 2277,
+  "chunkCount": 2295,
   "audienceCounts": {
-    "player": 2249,
+    "player": 2267,
     "director": 28
   },
   "chunks": [
@@ -920,7 +920,7 @@
       "heading": "Connection states in combat",
       "kind": "rules",
       "audience": "player",
-      "text": "Four states (`21`): **Disconnected | Linked | Overlay | Jacked In**. Connect lands in Linked. Toggle steps Linked → Overlay → Jacked In → Linked. Jack Out is the only off-ramp.\n\n- **Linked:** on-net for comms / Broadcast only. Meat Power Rolls are **normal** (no Overlay bane). No Jacked In Wired edge. Scan, Programs, and payload Runs still need Overlay or Jacked In. Soft presence — Wire-discoverable.\n- **Overlaid:** the runner still stands on the street grid but takes a **bane** on real-world Power Rolls while the Wire hangs in their vision.\n- **Jacked In:** the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (`21`).\n- **Biofeedback** from the Wired deals damage to the runner’s Stamina when the Wire hits back (`21`). Linked has **none** (not immersed). Overlay is half (round down, min 1); Jacked In is ×1.5 (round up).\n\nCutting between boards mid-round is normal. Finish one action on one board, then cut.\n\n---"
+      "text": "Four states (`21`): **Disconnected | Linked | Overlay | Jacked In**. Connect lands in Linked. Toggle steps Linked → Overlay → Jacked In → Linked. Jack Out is the only off-ramp.\n\n- **Linked:** on-net for comms / Broadcast only. Meat Power Rolls are **normal** (no Overlay bane). No Jacked In Wired edge. Scan, Programs, and payload Runs still need Overlay or Jacked In. Soft presence — Wire-discoverable.\n- **Overlaid:** the runner still stands on the street grid but takes a **bane** on real-world Power Rolls while the Wire hangs in their vision.\n- **Jacked In:** the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (`21`).\n- **Biofeedback** from the Wired deals damage to the runner’s Stamina when the Wire hits back (`21`). Linked has **none** (not immersed). Overlay is half (round down, min 1); Jacked In is ×1.5 (round up). Then the deck's Biofeedback Resistance comes off. **Biofeedback that would take a hero to 0 Stamina leaves them Winded, not Dying** — they stop at 1 Stamina. Non-biofeedback damage still kills normally. ICE does **not** attack every round; it bites on four named triggers (`21`).\n\nCutting between boards mid-round is normal. Finish one action on one board, then cut.\n\n---"
     },
     {
       "id": "04-combat#chrome-under-fire#20",
@@ -5360,7 +5360,7 @@
       "heading": "Cyberdecks (Your Kit)",
       "kind": "rules",
       "audience": "player",
-      "text": "At 1st level you're equipped with a cyberdeck of your choice -- this is your Kit slot. Three Echelon 1 (\"Street Grade\") decks exist today, one leaning toward each subclass, though any Hacker can carry any deck:\n\n| Cyberdeck | Deck Role | Price | Bandwidth Bonus/Echelon | Alert Discount/Echelon | Biofeedback Resistance/Echelon | Intrusion Roll Mod | Integrity Damage Bonus (low / middle / high) | Reach | Ghost Distance | Signature Ability |\n|---|---|---|---|---|---|---|---|---|---|---|\n| **Nyx Cartel \"Switchblade\"** | Disruptor | ¥800 | +2 | +0 | +1 | +1 | +1/+2/+3 | 1 | +0 | Flatline Jab |\n| **Ferrum \"Padlock-6\"** | Controller | ¥900 | +1 | +1 | +2 | +0 | +0/+1/+2 | 2 | +1 | Seize |\n| **Meridian \"Lookout\"** | Support | ¥750 | +1 | +2 | +1 | +0 | +0/+0/+1 | 3 | +1 | Overwatch Ping |\n\n**Intrusion Roll Modifier** is your cyberdeck's flat bonus applied to Programs' Power Rolls (rolled with Logic). **Integrity Damage Bonus** is the flat damage a successful Program hit deals to Track 2 targets, gated by Power Roll result band. Both numbers grow with **Improved Cyberdeck** (4th level) and again with **Root Access** (9th level) -- these bonuses come from the class, not the deck, so they persist even if you swap decks.\n\n**Cyberdeck Signature Abilities** (each deck's built-in Power Roll, Logic-keyed, `2 + @chr / 4 + @chr / 6 + @chr` style result-band damage on the Switchblade, `0 / 1+@chr / 2+@chr` on the Padlock-6, and a no-damage ally-edge effect on the Lookout):"
+      "text": "At 1st level you're equipped with a cyberdeck of your choice -- this is your Kit slot. Three Echelon 1 (\"Street Grade\") decks exist today, one leaning toward each subclass, though any Hacker can carry any deck:\n\n| Cyberdeck | Deck Role | Price | Bandwidth Bonus/Echelon | Alert Discount/Echelon | Biofeedback Resistance/Echelon | Intrusion Roll Mod | Integrity Damage Bonus (low / middle / high) | Reach | Ghost Distance | Signature Ability |\n|---|---|---|---|---|---|---|---|---|---|---|\n| **Nyx Cartel \"Switchblade\"** | Disruptor | ¥800 | +2 | +0 | +1 | +1 | +1/+2/+3 | 1 | +0 | Flatline Jab |\n| **Ferrum \"Padlock-6\"** | Controller | ¥900 | +1 | +1 | +2 | +0 | +0/+1/+2 | 2 | +1 | Seize |\n| **Meridian \"Lookout\"** | Support | ¥750 | +1 | +2 | +1 | +0 | +0/+0/+1 | 3 | +1 | Overwatch Ping |\n\n**Intrusion Roll Modifier** is your cyberdeck's flat bonus applied to Programs' Power Rolls (rolled with Logic). **Integrity Damage Bonus** is the flat damage a successful Program hit deals to Track 2 targets, gated by Power Roll result band. Both numbers grow with **Improved Cyberdeck** (4th level) and again with **Root Access** (9th level) -- these bonuses come from the class, not the deck, so they persist even if you swap decks."
     },
     {
       "id": "19-hacker#cyberdecks-your-kit#5",
@@ -5370,7 +5370,7 @@
       "heading": "Cyberdecks (Your Kit)",
       "kind": "rules",
       "audience": "player",
-      "text": "- **Flatline Jab** (Switchblade) -- a quick, single-target Intrusion strike against one node or device; guarantees a small Alert bump regardless of the Power Roll result.\n- **Seize** (Padlock-6) -- attempt to take temporary control of an already-compromised node and hold it steady; favors holding what you've got over grabbing more.\n- **Overwatch Ping** (Lookout) -- grants one ally within Reach an edge on their next roll by feeding them real-time Wired data; deals no direct damage of its own."
+      "text": "**Biofeedback Resistance** is the column that keeps you alive. It is a **per-Echelon** number: multiply it by your own Echelon, and that total comes off every Biofeedback hit **after** your connection state has scaled it (**The Wired System**, `21`). It never applies to the base value, and it never takes the damage below 0. Off the market rack, the Matrix Gear decks carry it by band: **Scrapdeck 1** (street) · **Street Deck 2** (professional) · **Ghostbox 2** (restricted) · **Blackdeck 3** (military) · **Fairlight Ghost 3** (prototype). You run one deck at a time, so you get one deck's resistance -- the best one you are carrying, not the sum.\n\n**Cyberdeck Signature Abilities** (each deck's built-in Power Roll, Logic-keyed, `2 + @chr / 4 + @chr / 6 + @chr` style result-band damage on the Switchblade, `0 / 1+@chr / 2+@chr` on the Padlock-6, and a no-damage ally-edge effect on the Lookout):\n\n- **Flatline Jab** (Switchblade) -- a quick, single-target Intrusion strike against one node or device; guarantees a small Alert bump regardless of the Power Roll result.\n- **Seize** (Padlock-6) -- attempt to take temporary control of an already-compromised node and hold it steady; favors holding what you've got over grabbing more.\n- **Overwatch Ping** (Lookout) -- grants one ally within Reach an edge on their next roll by feeding them real-time Wired data; deals no direct damage of its own."
     },
     {
       "id": "19-hacker#programs-your-signature-abilities#6",
@@ -5480,17 +5480,17 @@
       "heading": "Wired firefight -- round-by-round checklist",
       "kind": "rules",
       "audience": "player",
-      "text": "- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.\n- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nOut of combat, neither costs anything. Either way you cannot exceed your Agent cap.\n\n**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.\n\n**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software."
+      "text": "- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.\n- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nOut of combat, neither costs anything. Either way you cannot exceed your Agent cap.\n\n**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene."
     },
     {
-      "id": "19-hacker#level-1-10-progression-table#17",
+      "id": "19-hacker#wired-firefight-round-by-round-checklist#17",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
-      "heading": "Level 1-10 Progression Table",
+      "heading": "Wired firefight -- round-by-round checklist",
       "kind": "rules",
       "audience": "player",
-      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
+      "text": "**When the host bites back.** **ICE does not attack every round.** It deals Biofeedback on exactly four triggers: a **low (≤11) Wired Power Roll** against a host with active ICE (Rating 3+); a **failed breach at Rating 4+**; the **Alert 9–11 hunt bite** at the end of each of your turns while you are still Overlay or Jacked In on that host; and a **Director Malice ICE surge**. Passive ICE at Rating 1–2 is flavor only, **Linked takes none**, and host ICE bites **the compiler** by default. The four-step math (Rating base → connection scale → minus deck Biofeedback Resistance → Stamina) and the **Winded floor** are in **The Wired System** (`21`).\n\n**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software."
     },
     {
       "id": "19-hacker#level-1-10-progression-table#18",
@@ -5500,10 +5500,20 @@
       "heading": "Level 1-10 Progression Table",
       "kind": "rules",
       "audience": "player",
+      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
+    },
+    {
+      "id": "19-hacker#level-1-10-progression-table#19",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Level 1-10 Progression Table",
+      "kind": "rules",
+      "audience": "player",
       "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **10** | Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability) | Characteristic Increase - Perk (choice) - Skill | -- |"
     },
     {
-      "id": "19-hacker#core-class-features-non-subclass#19",
+      "id": "19-hacker#core-class-features-non-subclass#20",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5513,7 +5523,7 @@
       "text": "- **Ghost Step** (3rd) -- Free Triggered Action, no Bandwidth cost. Trigger: a Track 2 target (ICE, hostile AI, rival decker) targets you directly, OR the Alert Track increases from your own action. Effect: choose one -- immediately use a Maneuver-cost Matrix Verb for free, or cancel the Alert increase entirely (once per encounter).\n- **Exploit the Breach** (4th) -- Passive. Whenever your Deep Scan lands a high (17+), the target has a marked exploitable weakness until the end of the encounter (or until re-scanned). The next Track 1/Track 2 Wired-based hit against that target from you or an ally gains an edge, and a Track 2 hit also deals +2 Integrity damage. Only one target can be marked at a time.\n- **Improved Cyberdeck** (4th) -- Passive. +1 Intrusion Roll Modifier and +1 Integrity Damage Bonus at every result band, on top of whatever deck you're currently running. Granted by the class, not the deck.\n- **Dual Boot** (6th) -- Passive enabling a once-per-encounter Free Triggered Action: apply a second owned deck's Roll Modifier/Damage Bonus to a single Program/Verb/signature roll instead of your equipped deck's, whichever is better. Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Reach, and Ghost Distance are unaffected -- only the roll/damage numbers swap.\n- **Bandwidth Overclock** (7th) -- Passive. Base income +1->+2 per turn; cap 6->8 x Echelon.\n- **Ghost Protocol** (7th) -- Passive with a pre-encounter Free Triggered use. If you had at least one uninterrupted round of Overlay/Jacked-In access before initiative (Director’s call), you and your allies get an edge on your first Power Roll of the encounter, and you may use one free Matrix Verb or Deep Scan before the first turn begins.\n- **Root Access** (9th) -- Passive. Dual Boot becomes twice per encounter; Improved Cyberdeck's bonus rises to +2/+2 at every result band (replacing, not stacking with, the 4th-level +1/+1).\n- **Ghost in the Machine** (10th, epic capstone) -- Free Triggered Action, once per encounter. Treat any Power Roll you just made as a natural 19 if the actual result was lower -- can turn a low/middle into a guaranteed high (17+), and also triggers the natural-19/20 bonus Bandwidth.\n- **Infinite Loop** (10th) -- Passive. Bandwidth no longer fully resets between encounters -- retain Echelon's worth (4 at 10th level) instead of dropping to 0. The first 2 points of cap overflow in a round are retained for one round instead of lost outright.\n- **Borrowed Access** (10th) -- Main Action, 3 Bandwidth. Choose an ally within Reach who is Jacked In/Overlaid; they immediately use one Program you know costing 5 Bandwidth or less, using your deck's stats, without spending their own action -- but it costs your Main Action and your Bandwidth."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#20",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#21",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5523,7 +5533,7 @@
       "text": "The Hacker's offensive specialist: hard, fast, single-target Intrusion strikes that punish Track 2 targets and amplify the whole team's damage against ICE, hostile deckers, and hostile AIs."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#21",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#22",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5533,7 +5543,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Overclocked Damage (passive) | +1 flat Integrity damage on your own successful Track 2 hits |\n| 1 | Cascade Strike (Triggered Action, 1 Bandwidth) | Trigger: any Track 2 target takes Integrity damage from anyone. Effect: add +2 flat Integrity damage to that hit |\n| 2 | Overclocked Strikes (passive) | Your own-hit bonus rises from +1 to +2 (the ally-hit trigger stays +2) |\n| 3 | Cascade Failure (Triggered Action, 2 Bandwidth) | Trigger: you drop a Track 2 target to 0 Integrity. Effect: another Track 2 target within Reach immediately takes Integrity damage equal to your deck's low-band Damage Bonus |\n| 5 | No Second Chances (passive) | Your 1st-level triggered action can also apply Exploit the Breach's marked-weakness edge to the same hit, even if you didn't scan the target |\n| 6 | Overwhelm ICE (Main Action, 4 Bandwidth) | Power Roll, Logic. low (≤11): half low-band Damage Bonus (rounded down), Alert up. middle (12–16): full middle-band bonus + your 1st-level passive. high (17+): full high-band bonus + passive + bane on target's next roll |\n| 7 | Hair Trigger (passive) | Your 1st-level triggered action can be used twice per round (still 1 Bandwidth each) |\n| 8 | Total Breach (passive) | Own-hit bonus rises to +3; dropping a Track 2 target to 0 Integrity refunds 2 Bandwidth |"
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#22",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#23",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5543,7 +5553,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 9 | Zero Day (Main Action, 6 Bandwidth) | Power Roll with an edge, Logic. Always deals high-band Damage Bonus damage regardless of roll result (a low roll still raises Alert) + passive bonus. On an actual high (17+) roll, target also can't act on its next turn |"
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#23",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#24",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5553,7 +5563,7 @@
       "text": "A specialist in seizing and holding fixed systems, turning nodes into weapons and tripwires against anyone who tries to take them back."
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#24",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#25",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5563,7 +5573,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Extra Node (passive) | Hold 1 extra node beyond your deck's normal limit |\n| 1 | Lockout (Triggered Action, 1 Bandwidth) | Trigger: an enemy attempts to retake/break your hold on a seized node. Effect: apply a bane to that attempt |\n| 2 | Redundant Systems (passive, enabling a once-per-encounter Free Triggered Action) | If you lose control of a held node, spend 1 Bandwidth to attempt re-seizing it with a Power Roll (Logic), no Maneuver/Main Action cost, once per encounter |\n| 3 | Chokepoint (Main Action, 3 Bandwidth) | No roll. Until your next turn, any Track 2 target that breaches/retakes/routes through a node you hold takes a bane and alerts you immediately, even if you're not Jacked In |\n| 5 | Wider Net (passive) | Extra-node count rises from 1 to 2 |\n| 6 | Puppet Strings (Main Action, 4 Bandwidth) | No roll. Use a held interactive node's normal function (turret, camera, drone, smartlink) once, without counting against its own action economy |\n| 7 | Iron Grip (passive) | 1st-level triggered action's single bane becomes a double-bane |\n| 8 | Total Awareness (passive) | You always know when a held node is targeted for retake/breach/disruption, even off-map or out of Reach, and may spend a Maneuver to act on it as though it were in Reach |\n| 9 | Master Sysop (Main Action, 6 Bandwidth) | Power Roll (Logic), one roll vs up to 3 unheld nodes within Reach. low (≤11): seize 1 (your choice), Alert up. middle (12–16): seize 2. high (17+): seize all 3, none count against your held-node limit for the rest of the encounter |"
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#25",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#26",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5573,7 +5583,7 @@
       "text": "The Hacker whose value extends to the whole team, feeding allies edges and softening the blows of Wired-side combat before they reach flesh."
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#26",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#27",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5583,7 +5593,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Wired Guard (passive) | +1 flat defense bonus to allies within Reach who are Jacked In/Overlaid, vs Track 2 attacks |\n| 1 | Dampen (Triggered Action, 1 Bandwidth) | Trigger: a nearby Jacked-In ally takes a Track 2 hit. Effect: -2 flat damage reduction on that hit |\n| 2 | Watchful Relay (passive) | Defense bonus rises from +1 to +2 |\n| 3 | Signal Boost (Maneuver, 2 Bandwidth) | No roll. One ally within Reach gains an edge on their next Power Roll before your next turn (Wired or physical) |\n| 5 | Standing Watch (passive) | Dampen can now trigger off a Track 2 hit against ANY ally in Reach (not just Jacked In/Overlaid); -2 reduction unchanged |\n| 6 | Emergency Patch (Main Action, 4 Bandwidth) | No roll. Target ally (or self) regains Stamina = 2 + Echelon; if Jacked In, also cancels the next biofeedback bleed-through this encounter |\n| 7 | Anchor Point (passive) | Defense bonus rises to +3; allies in Reach who are Jacked In also gain your deck's Biofeedback Resistance as bonus resistance of their own |\n| 8 | Full Coverage (passive) | Dampen and Standing Watch's trigger cost 0 Bandwidth the first time each triggers per round (additional uses still cost 1) |\n| 9 | Guardian Angel in the Net (Main Action, 6 Bandwidth) | No roll. All allies in Reach who are Jacked In/Overlaid get double your defense bonus (currently +6) vs Track 2 attacks until your next turn, and biofeedback bleed-through is reduced by an additional flat 3 |"
     },
     {
-      "id": "19-hacker#chrome-a-hacker-runs#27",
+      "id": "19-hacker#chrome-a-hacker-runs#28",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5730,7 +5740,7 @@
       "heading": "Biofeedback — The Cost of Overreach",
       "kind": "rules",
       "audience": "player",
-      "text": "- **On a success:** no effect. The ability resolves normally either way.\n- **On a failure:** you take **Persona-score damage** (this damage bypasses shields and temporary Stamina — it's your own current biting back, not an external attack), and the ability still resolves fully.\n- **0-Stamina consequence:** if biofeedback damage drops you to 0 Stamina, you become **Winded** instead of Dying. While Winded this way, you regain 1 Stamina per turn until stabilized, and you are not at risk of death from your own overreach — only external damage can kill a Technomancer outright.\n- **Discipline modifiers:** a Sprite-Weaver rolls every biofeedback test with an **edge**. A Resonance-Warrior rolls every biofeedback test with a **bane** — on an 11-cost ability that stacks with the band's own bane, so the Resonance-Warrior tests with a **double bane**.\n- **Sprites acting on the Technomancer's own turn (the minor/extension rank) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.\n\n**Winded, in this chapter.** *Winded* is the ordinary Ghostwire state (`04`) — a creature at or below half its maximum Stamina — and this chapter uses it in exactly one way, stated here once so it is never confused at the table:"
+      "text": "- **On a success:** no effect. The ability resolves normally either way.\n- **On a failure:** you take **Persona-score damage** (this damage bypasses shields and temporary Stamina — it's your own current biting back, not an external attack), and the ability still resolves fully.\n- **0-Stamina consequence (the Winded floor):** biofeedback damage that would take your Stamina to **0 or below** leaves you **Winded, not Dying** — you stop at **1 Stamina**, you regain **1 Stamina per turn until stabilized**, and your own overreach can never kill you. Only external, non-biofeedback damage can kill a Technomancer outright. This is the **same floor** the Wired chapter's Wire Biofeedback uses (`21`), worded the same way in both places: one rule, two sources.\n- **Discipline modifiers:** a Sprite-Weaver rolls every biofeedback test with an **edge**. A Resonance-Warrior rolls every biofeedback test with a **bane** — on an 11-cost ability that stacks with the band's own bane, so the Resonance-Warrior tests with a **double bane**.\n- **Sprites acting on the Technomancer's own turn (the minor/extension rank) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.\n\n**Winded, in this chapter.** *Winded* is the ordinary Ghostwire state (`04`) — a creature at or below half its maximum Stamina — and this chapter uses it in exactly one way, stated here once so it is never confused at the table:"
     },
     {
       "id": "20-technomancer#biofeedback-the-cost-of-overreach#15",
@@ -5740,7 +5750,7 @@
       "heading": "Biofeedback — The Cost of Overreach",
       "kind": "rules",
       "audience": "player",
-      "text": "1. **As the biofeedback floor (the rule above).** Biofeedback damage that would take you to 0 Stamina leaves you **Winded instead of Dying**: you stop at the winded threshold rather than dropping, you regain 1 Stamina per turn until stabilized, and your own overreach can never kill you. This applies only to biofeedback damage; external damage kills a Technomancer normally.\n2. **Never as a condition an ability inflicts.** Nothing in this chapter *applies* Winded to a target: the two abilities that once read that way — Resonance Slam's Slam mode and The Weaver's Web — inflict **weakened (save ends)** instead (`04`).\n\n---"
+      "text": "1. **As the biofeedback floor (the rule above).** Biofeedback damage that would take you to **0 Stamina or below** leaves you **Winded instead of Dying**: you stop at **1 Stamina** rather than dropping, you regain 1 Stamina per turn until stabilized, and your own overreach can never kill you. The floor never *heals* — at 1 Stamina you stay at 1 — and it applies **only** to biofeedback damage; external damage kills a Technomancer normally, on the same turn if it lands. The Wired chapter's Wire Biofeedback (`21`) uses this identical floor.\n2. **Never as a condition an ability inflicts.** Nothing in this chapter *applies* Winded to a target: the two abilities that once read that way — Resonance Slam's Slam mode and The Weaver's Web — inflict **weakened (save ends)** instead (`04`).\n\n---"
     },
     {
       "id": "20-technomancer#signature-abilities-no-resonance-cost#16",
@@ -5930,7 +5940,7 @@
       "heading": "Wired firefight -- round-by-round checklist",
       "kind": "rules",
       "audience": "player",
-      "text": "**Hacker overlay.** Swap Resonance for Bandwidth, sprite for Agent, and Compile Sprite / Special Sprite for **Compile Agent / Special Agent** (`19`). Steps 0–6 are otherwise identical, with one difference: a Hacker must be **Overlay or Jacked In** to compile at all — Linked refuses."
+      "text": "**When the host bites back.** **ICE does not attack every round.** It deals Biofeedback on exactly four triggers: a **low (≤11) Wired Power Roll** against a host with active ICE (Rating 3+); a **failed breach at Rating 4+**; the **Alert 9–11 hunt bite** at the end of each of your turns while you are still Overlay or Jacked In on that host; and a **Director Malice ICE surge**. Passive ICE at Rating 1–2 is flavor only, **Linked takes none**, and host ICE bites **the compiler** by default. The four-step math (Rating base → connection scale → minus deck Biofeedback Resistance → Stamina) is in **The Wired System** (`21`) — and its **Winded floor** is the same floor your own overreach uses, above.\n\n**Hacker overlay.** Swap Resonance for Bandwidth, sprite for Agent, and Compile Sprite / Special Sprite for **Compile Agent / Special Agent** (`19`). Steps 0–6 are otherwise identical, with one difference: a Hacker must be **Overlay or Jacked In** to compile at all — Linked refuses."
     },
     {
       "id": "20-technomancer#total-resonance-deep-dive#35",
@@ -6160,7 +6170,7 @@
       "heading": "Connection States: Disconnected, Linked, Overlay, Jacked In",
       "kind": "rules",
       "audience": "player",
-      "text": "| State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |\n|---|---|---|---|---|\n| **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |\n| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | None — you are not immersed |\n| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |"
+      "text": "| State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |\n|---|---|---|---|---|\n| **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | **None — ×0.** Biofeedback cannot reach you off-net |\n| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | **None — ×0.** Linked is soft presence, not immersion: **a Linked runner takes no Biofeedback at all** |\n| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced — **×0.5, round down, minimum 1**. Biofeedback while Overlaid is half the node's listed Biofeedback Value. |"
     },
     {
       "id": "21-the-wire#connection-states-disconnected-linked-overlay-jacked-in#5",
@@ -6170,7 +6180,7 @@
       "heading": "Connection States: Disconnected, Linked, Overlay, Jacked In",
       "kind": "rules",
       "audience": "player",
-      "text": "| State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |\n|---|---|---|---|---|\n| **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |"
+      "text": "| State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |\n|---|---|---|---|---|\n| **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full — **×1.5, round up**. The tradeoff for full-immersion speed and power. |"
     },
     {
       "id": "21-the-wire#connection-states-disconnected-linked-overlay-jacked-in#6",
@@ -6240,7 +6250,7 @@
       "heading": "Wired-System Stats: Integrity (Not Body Integrity)",
       "kind": "rules",
       "audience": "player",
-      "text": "**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above)."
+      "text": "**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state. Every bleed-through resolves on the same four steps as any other bite: see **Biofeedback -- the full procedure**, below."
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#13",
@@ -6270,7 +6280,7 @@
       "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
       "audience": "player",
-      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |\n| **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |\n| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |"
+      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. **Passive layers at R1-2 are flavor only and never deal Biofeedback**; active ICE (R3+) bites only on the four **ICE attack triggers**, below. |\n| **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |"
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#16",
@@ -6280,7 +6290,7 @@
       "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
       "audience": "player",
-      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |"
+      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Disconnected or Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina, and floored so that Biofeedback alone never kills you. Full four-step procedure and the Winded floor: **Biofeedback -- the full procedure**, below. A node's Biofeedback Value only ever *fires* on one of the four **ICE attack triggers**, also below -- ICE does not bite every round. |"
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#17",
@@ -6290,20 +6300,80 @@
       "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
       "audience": "player",
+      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |"
+    },
+    {
+      "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#18",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
+      "kind": "rules",
+      "audience": "player",
       "text": "**Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's \"What a Node Is\" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to \"reduce to 0.\"\n\n**Track 2 note:** Track 2 targets (ICE, hostile AIs, rival deckers, and any actively-defended node) use the full card -- Node Rating, Node Description, Breach difficulty, ICE Layers, Integrity, Biofeedback Value, and Alert Contribution all apply. This is the template a Director uses to stat up any hostile Wired presence on the fly: pick a Node Rating (1–5), and all five downstream numbers are already fixed by the table.\n\n**Worked example -- statting a Rating 3 corp host (Track 2) on the fly:** Node Rating 3 -> Breach difficulty medium (optional) -> ICE Layers: passive + 1 active ICE -> Integrity 26 -> Biofeedback Value 8 (x1.5 = 12, round up, if a Hacker gets hit while Jacked In, before that Hacker's own Biofeedback Resistance reduces it further) -> Alert Contribution: governed by the standard Trace Alert rules on every roll against it, same as any other target."
     },
     {
-      "id": "21-the-wire#trace-alert-definition-and-escalation#18",
+      "id": "21-the-wire#biofeedback-the-full-procedure#19",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Biofeedback -- the full procedure",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Biofeedback is the Wired hitting back: damage that crosses out of a *system* and into a *body*. Two things in Ghostwire deal it, and they resolve the same way.\n\n- **Wire Biofeedback** -- ICE, black ICE, an Integrity-to-Stamina bleed-through clause, or a catastrophic bite from the host you are standing in. That is the procedure below.\n- **Technomancer overreach** -- a failed biofeedback test after spending 5 or more Resonance (**The Technomancer**, `20`). Different trigger, different base number, **the same floor**.\n\n**Four steps, in this order.**\n\n1. **Base Biofeedback Value, by the host's Node Rating.** **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. These are the numbers already printed on the System Stat Card, above; a Director may name a custom base instead when the fiction calls for one.\n2. **Scale it by *your own* connection state.** **Disconnected** or **Linked** → **0 — no Biofeedback at all.** **Overlay** → **×0.5, round down, minimum 1.** **Jacked In** → **×1.5, round up.** There is no ×1 step.\n3. **Subtract your deck's Biofeedback Resistance.** Your cyberdeck's Biofeedback Resistance stat (**The Hacker**, `19`) comes off the **scaled** number, not the base. It never takes the damage below 0.\n4. **Apply the remainder as Stamina damage.** This is untyped damage to your own Stamina — not Integrity damage, and not a saving throw."
+    },
+    {
+      "id": "21-the-wire#biofeedback-the-full-procedure#20",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Biofeedback -- the full procedure",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Worked line.** A Rating 3 host bites an **Overlaid** runner carrying a street deck (Biofeedback Resistance 2): base **8** → Overlay **8 × 0.5 = 4** → minus **2** → **2 Stamina damage**. The same host biting the same runner while **Jacked In**: base **8** → **8 × 1.5 = 12** → minus **2** → **10 Stamina damage**. That difference is the whole argument for staying Overlaid.\n\n#### The Winded floor (both sources)\n\n**Biofeedback that would take your Stamina to 0 or below leaves you Winded, not Dying.** You stop at **1 Stamina**, you regain **1 Stamina per turn until stabilized**, and Biofeedback on its own can never kill you.\n\n- **The floor never heals.** If you are already at 1 Stamina you stay at 1, and a hero already down at 0 from gunfire is not brought back up by a bite.\n- **Only Biofeedback is floored.** Non-Biofeedback damage — a round, a blade, a fall, a hostile spell — still takes you to 0 and into Dying as normal, on the same turn if it lands. Being saved by the floor does not make you safe.\n- **One floor, two sources.** Wire Biofeedback (above) and **Technomancer overreach** (`20`) use the same floor, worded the same way in both chapters. Neither is a separate rule."
+    },
+    {
+      "id": "21-the-wire#biofeedback-the-full-procedure#21",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Biofeedback -- the full procedure",
+      "kind": "rules",
+      "audience": "player",
+      "text": "> The Director macro **Director: Apply Biofeedback** (Ghostwire Macros) runs exactly these four steps and this floor. Pick a Node Rating 1–5 — or type a custom base — and it reads the target's connection state and deck Biofeedback Resistance off the Actor, with an override on each. The chat card shows the whole line (base, scale, resistance, damage, Stamina before → after) and says so when the Winded floor caught the hit."
+    },
+    {
+      "id": "21-the-wire#ice-attack-triggers-when-ice-actually-bites#22",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "ICE attack triggers -- when ICE actually bites",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**ICE does not get a free attack every round.** It is a defence, not a second initiative slot. Active ICE deals Biofeedback on exactly four triggers:\n\n1. **A low (≤11) Wired Power Roll** against a host that has **active ICE** (Node Rating **3** or higher) — **one** Biofeedback bite, on top of the usual +1 Trace Alert.\n2. **A failed breach against a Rating 4+ host** — Biofeedback as already printed on the System Stat Card (R4 and R5 both carry biofeedback on a failed breach).\n3. **Trace Alert 9–11 — the hunt bite.** At the **end of each of the runner's turns**, while they are still **Overlay or Jacked In** on that host, the hunting ICE bites **once**. Step back to Linked, or Jack Out, and the hunt bite stops.\n4. **A Director Malice ICE surge** — the Director spends Malice to have the host's ICE strike now. The Malice the Alert track pays out at steps 5–8 is what funds it.\n\nAnd the limits that go with them:"
+    },
+    {
+      "id": "21-the-wire#ice-attack-triggers-when-ice-actually-bites#23",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "ICE attack triggers -- when ICE actually bites",
+      "kind": "rules",
+      "audience": "player",
+      "text": "- **Passive ICE at Rating 1–2 is flavor only — it never deals Biofeedback.** A first-layer firewall stirring is atmosphere, not damage.\n- **Linked deals no Biofeedback**, on any trigger: step 2 of the procedure scales it to 0 before anything else happens. Neither does Disconnected.\n- **Default target: the compiler.** Host ICE bites the runner whose roll or whose presence set it off — the person holding the deck. It does not reach past them into the rest of the crew unless an ability says so, and a compiled Agent or sprite is not a lightning rod for its compiler.\n- **One trigger, one bite.** Two different triggers on the same turn are two bites; the same trigger firing twice in one turn is still one.\n- **A Black ICE *creature* is a different thing.** An ICE construct statted as an opposition Actor (the Bestiary's **Black ICE**, or a rival decker's screen run as a combatant) is a **Track 2 combatant**: it takes its own turns like any creature, and its damage is whatever its card prints. The four triggers above govern a **host's ICE layers** — the defence built into the node — not a creature the Director has put on the board. If a Director wants ICE that acts every round, they stat it as a creature so the table can see it coming. Either way, Biofeedback it deals still runs the four-step procedure and still lands on the Winded floor."
+    },
+    {
+      "id": "21-the-wire#trace-alert-definition-and-escalation#24",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
       "heading": "Trace Alert: Definition and Escalation",
       "kind": "rules",
       "audience": "player",
-      "text": "**Trace Alert** (called \"the Alert Track\" on some abilities) is the Wired system's rising detection meter — the longer you stay in a hostile host, the worse it gets. Track it **per hostile node/host** on a **12-step track**:\n\n| Alert Steps | Effect |\n|---|---|\n| **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |\n| **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |\n| **9–11** | As above, plus a **bane on your next Wired Power Roll** — active ICE is hunting you. |\n| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |\n\n#### Default Alert by Power Roll result (locked)\n\nUnless an ability's printed text says otherwise, every Wired Power Roll (Matrix Verb, Program, payload Run, or Wired signature ability) uses these Alert defaults:"
+      "text": "**Trace Alert** (called \"the Alert Track\" on some abilities) is the Wired system's rising detection meter — the longer you stay in a hostile host, the worse it gets. Track it **per hostile node/host** on a **12-step track**:\n\n| Alert Steps | Effect |\n|---|---|\n| **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |\n| **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |\n| **9–11** | As above, plus the **ICE hunt bite** — active ICE is hunting you. At the **end of each of the runner's turns**, while they are still **Overlay or Jacked In** on this host, that ICE deals **one Biofeedback hit** (trigger 3 under **ICE attack triggers**, above; full math and the Winded floor under **Biofeedback -- the full procedure**). Stepping back to Linked or Jacking Out stops the bites. |\n| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |\n\n#### Default Alert by Power Roll result (locked)\n\nUnless an ability's printed text says otherwise, every Wired Power Roll (Matrix Verb, Program, payload Run, or Wired signature ability) uses these Alert defaults:"
     },
     {
-      "id": "21-the-wire#trace-alert-definition-and-escalation#19",
+      "id": "21-the-wire#trace-alert-definition-and-escalation#25",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6313,17 +6383,17 @@
       "text": "| Result | Trace Alert (default) |\n|---|---|\n| **Low (≤11)** | **+1** to that host's Trace Alert. The verb or Program still usually works, but something goes wrong — logs notice you, ICE twitches, the host marks the intrusion. |\n| **Middle (12–16)** | **No Alert increase.** Clean success. Middle never raises Trace Alert by default. |\n| **High (17+)** | **No Alert increase.** Always clean on Alert. Some abilities also erase Alert that would have risen, or leave zero forensic trace, as their high payoff. |\n\n**Ability text can override the middle default** — only when it explicitly says the middle result raises Alert (or raises it by more than one). Most Hacker Programs do **not**; check each card. Low remains the default trigger unless stated otherwise.\n\n**Other Alert movers (not a second tax):**\n\n- **Direct triggers** named on an ability, independent of the Power Roll band (rare; follow the card).\n- Triggered features that fire *when* Alert rises (e.g. Ghost Step) — they react to an increase; they do not cause one by themselves.\n- There is **no separate “noisy Track 2” Alert tax** beyond the roll result. Hostile or contested rolls still use the table above; Track 2 just means you may roll more times against Integrity/ICE, so low results (and Alert) come up more often in practice.\n\n**What never raises Alert by itself:**"
     },
     {
-      "id": "21-the-wire#trace-alert-definition-and-escalation#20",
+      "id": "21-the-wire#trace-alert-definition-and-escalation#26",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
       "heading": "Trace Alert: Definition and Escalation",
       "kind": "rules",
       "audience": "player",
-      "text": "- **High (17+) results** — always clean on Alert.\n- Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).\n- Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.\n\n**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see **The Hacker**, `19`):\n\n- **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).\n- Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.\n\n**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 put banes on the runner's Wired rolls. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too."
+      "text": "- **High (17+) results** — always clean on Alert.\n- Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).\n- Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.\n\n**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see **The Hacker**, `19`):\n\n- **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).\n- Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.\n\n**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 are where the host starts hurting the runner: one Biofeedback hunt bite at the end of every one of their turns for as long as they stay Overlay or Jacked In. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too."
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#21",
+      "id": "21-the-wire#matrix-verbs-universal#27",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6333,7 +6403,7 @@
       "text": "These 9 abilities aren't unique to the Hacker -- *any* hero with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC, pack drone, or pack vehicle, or Technomancer Resonance). They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill grants an edge on all seven** (instead of the usual skill bonus on tests)."
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#22",
+      "id": "21-the-wire#matrix-verbs-universal#28",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6343,7 +6413,7 @@
       "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface (commlink / deck / chrome, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer). | Instinct | Yes | Refunds the Maneuver |\n| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |\n| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |\n| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |"
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#23",
+      "id": "21-the-wire#matrix-verbs-universal#29",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6353,7 +6423,7 @@
       "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |\n| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof. | Logic | Yes | Refunds the Maneuver |\n| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |"
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#24",
+      "id": "21-the-wire#matrix-verbs-universal#30",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6363,7 +6433,7 @@
       "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |\n| **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |"
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#25",
+      "id": "21-the-wire#matrix-verbs-universal#31",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6373,7 +6443,7 @@
       "text": "**Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert."
     },
     {
-      "id": "21-the-wire#ping-vs-read-write#26",
+      "id": "21-the-wire#ping-vs-read-write#32",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6383,7 +6453,7 @@
       "text": "**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:\n\n- Flick the hallway lights off (or on) — lights are the classic Ping.\n- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).\n- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).\n- Trigger a trivial system response (“does this socket wake up?”).\n- **Not ICE.** Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nLogic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.\n\n**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.\n\nPing is **not** the Director Console Wire ping/spoof."
     },
     {
-      "id": "21-the-wire#ping-vs-ice#27",
+      "id": "21-the-wire#ping-vs-ice#33",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6393,7 +6463,7 @@
       "text": "Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nTrying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system."
     },
     {
-      "id": "21-the-wire#wire-atlas-topology#28",
+      "id": "21-the-wire#wire-atlas-topology#34",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6403,7 +6473,7 @@
       "text": "Device tokens answer **what is this socket**. Atlas tokens answer **where am I on the Wire map**. Directors place atlas tokens by hand. Room-scale auto-nodes (lights, maglocks) never appear on a district or facility graph."
     },
     {
-      "id": "21-the-wire#three-altitudes#29",
+      "id": "21-the-wire#three-altitudes#35",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6413,7 +6483,7 @@
       "text": "| Altitude | Scene example | Token family |\n|---|---|---|\n| **Region / district graph** | Switchboard district map | **Relay**, **Host** |\n| **Site / facility graph** | Power Company Wire scene | **Segment** (+ **Host** as the site root) |\n| **Room / device graph** | Office, Gold Line car, maintenance room | **Device** (existing library: Light, Maglock, Cam, ICE, …) |\n\nGhostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do not call a Host a “server farm” in player text."
     },
     {
-      "id": "21-the-wire#reach-is-hops-on-the-current-scene#30",
+      "id": "21-the-wire#reach-is-hops-on-the-current-scene#36",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6423,7 +6493,7 @@
       "text": "**Scan** and **Navigate** **Reach** is a number of **node-hops on the graph of the Scene you are on**, not the whole district and not Ossian Reach the campaign region. When the crew changes altitude (district → facility → room), Reach recounts from the new graph. A runner with Reach 2 on the Switchboard district map can hop two Relays/Hosts; they cannot see the Power Co substation or a maintenance-room maglock until that scene is loaded."
     },
     {
-      "id": "21-the-wire#relay-vs-host-vs-segment#31",
+      "id": "21-the-wire#relay-vs-host-vs-segment#37",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6433,7 +6503,7 @@
       "text": "| Token | Role | Rules hook |\n|---|---|---|\n| **Relay** | Major Wired highway / backbone traffic — a **path**, not a place | Navigate along it. Trace can travel fast on a Relay. Usually **not** Seize-for-loot. Node Rating is optional (traffic density). Track 1 unless something is hunting the backbone. |\n| **Host** | Destination place (corp, civic, street). Faction is name and color, not a new token type. | May have Node Rating, ICE, Watchdog. Entering a Host **may change scene** (load the facility graph). |\n| **Segment** | Child of a Host (substation, wing, server hall) | Same mechanical class as Host, nested. **Name includes the parent** (`Power Co — North Substation`). |\n| **Endpoint** *(optional v1.1)* | Dig-down leaf that opens a meatspace room | Not a fourth mechanical class. Until its own art exists, reuse Host with a depth pip. |\n| **Device** | Room socket: Light, Maglock, Cam, ICE, … | **Room-only.** Never place device tokens on a region graph. |"
     },
     {
-      "id": "21-the-wire#dig-down-procedure#32",
+      "id": "21-the-wire#dig-down-procedure#38",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6443,7 +6513,7 @@
       "text": "1. **District scene:** place **Relays** and **Hosts** only.\n2. **Enter Host** (Navigate, Seize, or story) → load the **facility** scene; place **Segments**. The Host may remain as the site root.\n3. **Enter Segment** (or Endpoint) → load the **room** scene; place **Device** tokens. Auto-nodes from named lights and doors belong here.\n4. Auto-nodes stay **room-scale only**. Atlas tokens are Director-placed (a Console picker is later)."
     },
     {
-      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#33",
+      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#39",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6453,7 +6523,7 @@
       "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX plus **AEQ** / **LAZ** — `node-host-aeq` / `node-host-laz`, `placeholder: false`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`."
     },
     {
-      "id": "21-the-wire#connection-state-modifiers-summary#34",
+      "id": "21-the-wire#connection-state-modifiers-summary#40",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6463,7 +6533,7 @@
       "text": "**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, **Compile Agent**, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.\n\n| State | Wired abilities (Wired keyword) | Real-world abilities and tests |\n|---|---|---|\n| Disconnected | Only **Connect** can be used | Normal |\n| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs, payload Runs, or **Compile Agent** | Normal |\n| Overlay | Normal (full Connected) | **Bane** |\n| Jacked In | **Edge** | Can’t be used (body inert) |\n\n- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.\n- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.\n- **Jack Out** (any on-net state) returns you to Disconnected.\n- **Broadcast** works from any on-net state, including Linked.\n- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent** require Overlay or Jacked In.\n- Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability."
     },
     {
-      "id": "21-the-wire#connection-state-modifiers-summary#35",
+      "id": "21-the-wire#connection-state-modifiers-summary#41",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6473,7 +6543,7 @@
       "text": "**Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs** and **Compile Agent**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs. Agents (Probe / Spike / Daemon / Watchdog) are Hacker-only deck daemons, not Technomancer sprites."
     },
     {
-      "id": "21-the-wire#constructs-sprites-and-agents#36",
+      "id": "21-the-wire#constructs-sprites-and-agents#42",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6483,7 +6553,7 @@
       "text": "Compiled **sprites** (Technomancer, `20`) and **Agents** (Hacker, `19`) are Wire constructs, not extra nodes on the host graph.\n\n**Lock A (2026-09-20).** A construct’s **scene token is a roster anchor only**. Wire play lives in the **Wired Console**. Meat-space attacks and other meat actions against that token stay **off** unless an ability explicitly bridges (Resonance Strike through a device, a Daemon holding a Track 1 object, and similar printed bridges). Do not treat the token as a second copy of the runner on the Connections list.\n\n**Constructs section.** The Console lists compiled sprites and Agents in a **Constructs** roster, separate from **Connections** and **Nodes**. Owner and Director see the relevant rows (name, archetype, Stamina, hybrid band, compiler). A **Special Agent** or **Special Sprite** (`19`, `20`) is an ordinary roster row with no archetype: its purpose and its action budget are printed on its own description as `Actions (N): …`, and the Console shows it under the same cap as every other construct. **Overlay / Jacked In compilers on the same scene see each other’s compiled sprites and Agents in that roster without Scan.** Linked is soft presence and does not. An optional chip may name the Wire node the construct is **facing** — a label only. **Do not** add construct↔node edges to the board graph; node↔node wires stay infrastructure topology."
     },
     {
-      "id": "21-the-wire#constructs-sprites-and-agents#37",
+      "id": "21-the-wire#constructs-sprites-and-agents#43",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6493,7 +6563,7 @@
       "text": "**Meat-side anchors.** Construct scene tokens stay roster anchors only (Lock A). Seeing a rival construct on the Console does **not** reveal, unhide, or grant meat-space targeting of that token. Pan / Command / Decompile stay with the owner (and Director).\n\n**Construct vs construct.** Sprite/Agent fights resolve as **Wired / EW** attacks (a physical strike that can target them at all is made with a **bane**, per `20`). Action economy follows hybrid band: **minor** = extension on the compiler’s turn; **intermediate** = own turn under a Command maneuver that round; **advanced** = independent turn. The Console does not auto-run those turns or auto-initiative constructs."
     },
     {
-      "id": "21-the-wire#deck-software-suites-vs-payloads#38",
+      "id": "21-the-wire#deck-software-suites-vs-payloads#44",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6503,7 +6573,7 @@
       "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
-      "id": "21-the-wire#suites#39",
+      "id": "21-the-wire#suites#45",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6513,7 +6583,7 @@
       "text": "A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own."
     },
     {
-      "id": "21-the-wire#payloads-magazines#40",
+      "id": "21-the-wire#payloads-magazines#46",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6523,7 +6593,7 @@
       "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
-      "id": "21-the-wire#payloads-magazines#41",
+      "id": "21-the-wire#payloads-magazines#47",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6533,7 +6603,7 @@
       "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire. Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in **Mods** (`10`)."
     },
     {
-      "id": "21-the-wire#payloads-magazines#42",
+      "id": "21-the-wire#payloads-magazines#48",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6543,7 +6613,7 @@
       "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
     },
     {
-      "id": "21-the-wire#director-tools#43",
+      "id": "21-the-wire#director-tools#49",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6553,7 +6623,7 @@
       "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, **Constructs** roster for sprites and Agents, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). Constructs never add edges to the node graph. The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#44",
+      "id": "21-the-wire#voidmark-wired-presence#50",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6561,6 +6631,106 @@
       "kind": "rules",
       "audience": "player",
       "text": "Some hosts answer with a voice that is not MER support and not ICE. Street callsign **VOIDMARK** (the Mark): a leash-slipped intelligence that treats the Wired as territory. Full lore: the **VOIDMARK** chapter (L4).\n\n> Open **VOIDMARK** from Token controls (ghost) or a keybinding under Configure Controls. Module Configuration holds the API endpoint, secret key, model, temperature, player access, and **Edit VOIDMARK instructions**. Rules answers are retrieved from the shipped Ghostwire RAW index. Canvas token art when the Mark takes scene presence is a later hook (`assets/ai-persona/`)."
+    },
+    {
+      "id": "21-the-wire#north-substation-a-worked-wired-run#51",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "North Substation — a worked Wired run",
+      "kind": "rules",
+      "audience": "player",
+      "text": "This is one run, start to finish, against a Rating 3 host: what the players say, what they roll, what the Director answers, and what the numbers do. **Nothing here is a new rule.** Every beat points back at something already printed in this chapter, in **The Hacker** (`19`), or in **The Technomancer** (`20`). Read it once and the chapter's whole order of operations is in your hands.\n\n**The crew.** **Vira**, a Hacker: Logic 3, a **street deck** (Biofeedback Resistance **2**), Bandwidth **6**. **Kade**, an Operator, all meat — no interface, no deck, and no business on the wire except as the body standing over Vira's.\n\n**The host.** *Power Co — North Substation.* Node Rating **3**, **Track 2**. Breach difficulty **medium**. ICE: **passive + 1 active**. Integrity **26**. Biofeedback Value **8**. Trace Alert starts at **0**.\n\n**The room (Track 1).** Three objects hang off the host: **Maglock Door 1**, **Light Control**, and a **Turret feed**. They are Track 1 — Rating, description, breach difficulty, Alert contribution, and no Integrity pool of their own."
+    },
+    {
+      "id": "21-the-wire#act-0-getting-on-the-wire#52",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 0 — getting on the wire",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Vira uses **Connect**. She has a deck, so it lands, and it lands in **Linked** — not Overlay. Linked is comms, ID and packets and nothing more. She **Broadcasts** to Kade from there, because Broadcast is the one verb that works at Linked: *\"I'm on. Give me the corner.\"* She has not Scanned anything and cannot: Scan needs Overlay or Jacked In.\n\nShe uses **Toggle Connection State** — one rung deeper — and she is **Overlaid**. Her meat rolls now carry a bane. Her Wired rolls get nothing either way. Her Biofeedback exposure is **×0.5, round down, minimum 1**.\n\nThe Director puts the **System Stat Card** on the table: Rating 3, Track 2, breach medium, passive + 1 active ICE, Integrity 26, Biofeedback 8, Alert 0. Nothing is hidden about the *shape* of the host. What is inside it still has to be found."
+    },
+    {
+      "id": "21-the-wire#act-1-finding-out-what-is-there#53",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 1 — finding out what is there",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Scan** (Instinct). Middle. Vira learns there is a host here and that something on Track 2 is awake inside it. No Alert — Scan only looks.\n\n**Deep Scan** (the Hacker's own Program, Logic). Middle. Now the room has names: **Maglock Door 1**, **Light Control**, **Turret feed**, and a **Watchdog** on Track 2. This is the step everything downstream needs. Seize Control wants a named asset; a purpose-built Agent wants a job worth naming.\n\n**Ping** (Logic). She pings **Light Control**, a Track 1 object, and the lights stutter in the corridor Kade is watching. That is all a Ping ever does: touch and test. She does **not** try to Ping the host itself — Ping is Track 1 only and never defeats ICE.\n\n**Search** (Logic). Middle. Inside the host she finds the maintenance schedule, and the fact that the turret feed answers to the substation rather than to corp security. Useful, and quiet."
+    },
+    {
+      "id": "21-the-wire#act-2-the-first-bite#54",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 2 — the first bite",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Read/Write** on **Maglock Door 1** (Logic). Middle: the door unlocks for entry and leaves **zero forensic trace**. Kade walks through.\n\nThen Vira reaches for the turret. She rolls **Seize Control** against the host — and rolls **low (≤11)**.\n\nTwo things happen, in this order, and neither of them is a surprise:\n\n1. **Trace Alert +1.** Low is the default Alert trigger. The host is now at **1**.\n2. **One reactive Biofeedback bite** — trigger 1: a low Wired Power Roll against a host with **active ICE** (Rating 3+). The active ICE that Deep Scan named gets exactly one hit.\n\nThe math, out loud: base **8** (Rating 3) → Vira is **Overlaid**, so **8 × 0.5 = 4** → minus her street deck's Biofeedback Resistance **2** → **2 Stamina damage**. Vira takes 2 and keeps her turn.\n\nNote what did *not* happen. The ICE did not then take a turn of its own, and it does not get one next round either. It bit once, on a trigger, and went back to being a defence."
+    },
+    {
+      "id": "21-the-wire#act-3-compiling-a-special-agent#55",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 3 — compiling a Special Agent",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Vira wants the turret handled. She uses **Compile Agent** and takes the last entry in the list: **Special Agent** (3 Bandwidth in combat). The order matters, and it is not the order most tables expect:\n\n1. **She rolls first.** 2d10 + Logic — middle tier.\n2. **The tier buys the action budget.** Middle is **2 Actions**.\n3. **Only then** does she say what it is for.\n\nShe says: *\"spoof the turret lock so it reads the corridor as clear.\"* That is a **Wire** job, against an asset Deep Scan named, and it is the only kind of job a Special Agent can be given. The Agent manifests with `Actions (2): spoof the turret lock so it reads the corridor as clear` written at the top of its own description.\n\n**What she cannot ask for.** *\"Pull Kade out of the corridor.\"* *\"Carry the case.\"* *\"Stand in the doorway and block it.\"* Agents and sprites are **Wire-only**. They act on nodes, systems, ICE, feeds and data. They do not pick things up, they do not drag bodies, and their scene token is a roster anchor rather than a second fighter on the meat board (see **Constructs (Sprites and Agents)**, above). A Director who lets one lift a downed runner has quietly handed the Hacker a free extra body in every fight."
+    },
+    {
+      "id": "21-the-wire#act-4-integrity-malice-and-going-deeper#56",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 4 — Integrity, Malice, and going deeper",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Vira runs a Program at the host's **Integrity** and lands it: Integrity **26 → 21**, her deck's Integrity Damage Bonus on top of the roll. Over the next few exchanges the Alert climbs on her low results and the host crosses **step 5** — the Director banks **+1 Malice**. That Malice is real money, and it buys something later.\n\nVira decides she needs the edge and **Toggles** again: **Jacked In**. Her Wired rolls now carry an **edge**, she cannot act in the physical world at all, and her body is on the floor with Kade standing over it. Her Biofeedback exposure just went from ×0.5 to **×1.5**.\n\nThe Director spends that Malice on an **ICE surge** — trigger 4. Same four steps, new connection state: base **8** → Jacked In **8 × 1.5 = 12** → minus **2** → **10 Stamina damage**. Ten, from the host that dealt her two a minute ago. That is what the edge costs."
+    },
+    {
+      "id": "21-the-wire#act-5-the-hunt-and-the-floor#57",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 5 — the hunt, and the floor",
+      "kind": "rules",
+      "audience": "player",
+      "text": "The Alert track reaches **9**, and trigger 3 goes live: **at the end of each of Vira's turns, while she is still Overlay or Jacked In on this host, the hunting ICE bites once.** Not on the Director's turn. Not twice. Not on Kade. On Vira, at the end of her turn, once per turn, for as long as she stays immersed.\n\nShe stays two more turns, because the job is nearly done. Two more bites. Her Stamina runs out on the second one — and this is the beat the whole procedure exists for: **Biofeedback that would take her to 0 leaves her Winded, not Dying.** She stops at **1 Stamina**, she regains 1 per turn until stabilized, and the wire cannot finish her.\n\nWhat *can* finish her is the corridor. If corp security rounds the corner and puts a round into her inert body, that damage is not Biofeedback, it is not floored, and she goes down for real. The floor is a promise about the wire. It is not a promise about the room.\n\nHad the Alert reached **12** instead, the host would have gone to **full lockout** with a **hard counter-trace to Vira's physical location**, then reset to step **6** rather than 0. That is the Director's other lever, and it ends the Wired half of the fight by moving it into the street."
+    },
+    {
+      "id": "21-the-wire#act-6-out#58",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Act 6 — out",
+      "kind": "rules",
+      "audience": "player",
+      "text": "While the Special Agent was up, another compiler **Overlay or Jacked In on this same scene** would have seen it in their own **Constructs** roster with no Scan spent — that is Lock A. Kade, standing in the corridor in his own body, sees nothing: meat tokens are not Wire eyes.\n\nVira uses **Decompile Agent** on the Special Agent — a free maneuver, no Bandwidth back, token and world Actor gone. Then she **Jacks Out**: the one off-ramp to Disconnected, and usable as a Free Triggered Action in a genuine emergency. She is off-net, and nothing on the wire can reach her Stamina now.\n\n**The Alert does not leave with her.** North Substation is still sitting at 11. It will still be sitting at 11 the next time anyone in the crew touches it, tonight or next week. A maxed host never fully forgets you found it, and a hunting one does not forget either."
+    },
+    {
+      "id": "21-the-wire#technomancer-appendix-the-same-run-the-other-side-of-the-wir#59",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Technomancer appendix — the same run, the other side of the wire",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Run the same hour with a Technomancer instead, and three things change.\n\n- **They can compile from Linked.** Sprites are Resonance, not software, so a Technomancer sitting at **Linked** — no meat bane, and **no Biofeedback exposure at all** — can still put a sprite on the board. A Hacker cannot: Compile Agent refuses below Overlay.\n- **Special Sprite runs the same order** as Special Agent: roll, the tier buys 1 / 2 / 3 Actions, then the purpose. And it carries the same guardrail — **Wire-only**. A Special Sprite spoofs a turret lock. It does not pull a downed runner out of a corridor.\n- **Overreach is their own Biofeedback.** Spend **5 or more Resonance** on a single ability and make a **Physique test** by cost band (`20`). Fail it and the damage is theirs — nothing to do with the host's Rating, nothing to do with ICE. But it lands on the **same Winded floor**: it would take them to 0, so they stop at **1 Stamina** and regain 1 per turn. One floor, two sources, and a Technomancer who pushes too hard is standing exactly where Vira was."
+    },
+    {
+      "id": "21-the-wire#technomancer-appendix-the-same-run-the-other-side-of-the-wir#60",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Technomancer appendix — the same run, the other side of the wire",
+      "kind": "rules",
+      "audience": "player",
+      "text": "> Every beat above has a control. The Wired Console's node templates expose Rating 1–5 with **Integrity**, **Biofeedback Value**, **ICE layers** and **Trace Alert** on the card. The node applet's verbs refuse by state: **Connect** lands in Linked, **Broadcast** works there, and **Scan / Ping / Navigate / Search / Read-Write / Programs / payload Runs / Compile Agent** all refuse until Overlay or Jacked In. **Deep Scan**, **Seize Control**, **Compile Agent / Special Agent** and **Decompile Agent** run from the Hacker's own ability cards. The **Constructs** pane lists the Special Agent with its `Actions (2): …` budget. And the Director macro **Director: Apply Biofeedback** does the arithmetic this chapter prints — the 2 in Act 2 and the 10 in Act 4 are the numbers it produces, Winded floor in Act 5 included.\n>\n> Director cue sheet and the full Foundry alignment note: `docs/directors/north-substation-masterwork.md`."
     },
     {
       "id": "22-the-veil#what-this-chapter-covers#1",
@@ -8670,10 +8840,20 @@
       "heading": "Malice",
       "kind": "rules",
       "audience": "player",
-      "text": "**Malice (this book).** Malice is the Director’s fight budget.\n\n- Start each combat with **Malice equal to the number of players** (not counting the Director).\n- At the **start of each round after the first**, gain **1 Malice**. If a **leader** or **solo** is still on the board, gain **1** more.\n- Spend Malice on features **printed on the Actor**. If an Actor has no Malice feature, you may spend **2 Malice** to bring a same-level minion/horde reinforcement, or **5 Malice** for a villain-scale complication (lockdown, grenade, ICE surge).\n- Villain actions (if the Actor lists them) fire on the printed round or spend — do not invent a second clock.\n\nGhostwire adds **one** extra Malice source:\n\n- **Trace Alert:** each step a node’s Trace Alert crosses from **5 to 8** gives the Director **1 Malice** (`21`).\n\nThat Malice is the same pool you spend on meatspace Malice features. A Jacked In runner who keeps rolling lows is funding the street fight even if they never look up from the Wire.\n\nOther GW remaps that touch opposition pressure (not separate Malice engines):\n\n- Class abilities that **strip Malice** on high (for example some Elementalist apex text) still strip from this shared pool.\n- Heat, extraction clocks, and lifestyle fallout are **not** Malice — track them separately (`01`, `26`).\n\nSpend Malice to make the fiction hurt: reinforcements, ICE surge, a leader’s signature, a grenade that reshapes cover. Do not spend Malice just to pad damage if the crew is already winning cleanly — save it for the beat that changes the run.\n\n---"
+      "text": "**Malice (this book).** Malice is the Director’s fight budget.\n\n- Start each combat with **Malice equal to the number of players** (not counting the Director).\n- At the **start of each round after the first**, gain **1 Malice**. If a **leader** or **solo** is still on the board, gain **1** more.\n- Spend Malice on features **printed on the Actor**. If an Actor has no Malice feature, you may spend **2 Malice** to bring a same-level minion/horde reinforcement, or **5 Malice** for a villain-scale complication (lockdown, grenade, ICE surge).\n- Villain actions (if the Actor lists them) fire on the printed round or spend — do not invent a second clock.\n\nGhostwire adds **one** extra Malice source:\n\n- **Trace Alert:** each step a node’s Trace Alert crosses from **5 to 8** gives the Director **1 Malice** (`21`).\n\nThat Malice is the same pool you spend on meatspace Malice features. A Jacked In runner who keeps rolling lows is funding the street fight even if they never look up from the Wire."
     },
     {
-      "id": "25-opposition#trace-alert-as-wire-opposition-pressure#11",
+      "id": "25-opposition#malice#11",
+      "file": "25-opposition.md",
+      "source": "docs/raw/25-opposition.md",
+      "chapter": "Opposition (Director)",
+      "heading": "Malice",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Spending it back on the Wire — the ICE surge.** A Malice **ICE surge** is one of the four — and only four — triggers on which a host's ICE deals Biofeedback (`21`). The others are a low (≤11) Wired Power Roll against a host with active ICE at Rating 3+, a failed breach at Rating 4+, and the Alert 9–11 hunt bite at the end of each of the runner's turns while they stay Overlay or Jacked In. **A host's ICE does not get a free attack every round.** If you want ICE that acts on its own initiative, stat it as a creature (the Bestiary's **Black ICE**) and put it on the board where the table can see it.\n\nOther GW remaps that touch opposition pressure (not separate Malice engines):\n\n- Class abilities that **strip Malice** on high (for example some Elementalist apex text) still strip from this shared pool.\n- Heat, extraction clocks, and lifestyle fallout are **not** Malice — track them separately (`01`, `26`).\n\nSpend Malice to make the fiction hurt: reinforcements, ICE surge, a leader’s signature, a grenade that reshapes cover. Do not spend Malice just to pad damage if the crew is already winning cleanly — save it for the beat that changes the run.\n\n---"
+    },
+    {
+      "id": "25-opposition#trace-alert-as-wire-opposition-pressure#12",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
@@ -8683,7 +8863,7 @@
       "text": "Trace Alert is the Wired half of opposition. Full track rules live in `21`; this chapter only tells the Director how to **use** it as pressure.\n\n| Steps | What the table feels |\n|---|---|\n| **0–4** | Atmosphere — flicker, camera pause, ICE twitch. Flavor, not yet Malice. |\n| **5–8** | **+1 Malice per step crossed.** The whole crew feels the heat, not just the runner. |\n| **9–11** | Banes on the runner’s Wired rolls. The host is hunting. |\n| **12** | Containment breaks — meatspace response, lockdown, or the fight spills off the Wire. |\n\nDefaults when someone rolls a Matrix Verb or Program against a hostile host:\n\n| Result | Trace Alert |\n|---|---|\n| **Low (≤11)** | **+1** (still usually works, but something goes wrong) |\n| **Middle (12–16)** | **No** increase |\n| **High (17+)** | Never raises Alert by default |\n\n**Director use:** announce when Alert crosses into the Malice band so the table hears the shared budget tick. When Alert hits 12, decide the spill — corp security kicks the door, the node dumps the runner, or the extraction clock jumps. Do not leave step 12 as a soft number with no fiction.\n\nICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). You may also drop a construct / ICE Actor from the bestiary onto a Wired map when you want a monster turn on that board.\n\n---"
     },
     {
-      "id": "25-opposition#mixing-meatspace-and-wired-opposition#12",
+      "id": "25-opposition#mixing-meatspace-and-wired-opposition#13",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
@@ -8693,7 +8873,7 @@
       "text": "Many Ghostwire fights are **two-board**:\n\n1. **Declare both boards** when the fight starts (`04`). Who is Linked, who is Overlay, who is Jacked In, which node is hostile.\n2. **Budget once.** Count meatspace monsters and Wired pressure toward the same difficulty feel. A Rating 4 host plus a full street squad is a climax, not a warm-up.\n3. **Cut turns.** Use the turn order in `04`. Cut to the Jacked In runner between meatspace turns when both boards matter.\n4. **Let Malice cross boards.** Trace Alert Malice may fuel a street Malice feature (reinforcements, suppression) or a Wire feature (ICE surge, lockdown). Say which board pays the fiction.\n5. **End conditions can be asymmetric.** The crew might jack out and run while the host is still up — or clear the room while Trace Alert sits at 11. Victory is the run’s goal, not clearing every Actor.\n\n**Overlay** fighters still stand on the meatspace map with Wire tools at half biofeedback risk; **Jacked In** fighters are primarily on the Wire until they Jack Out (`21`). Do not forget the body on the floor when the runner is deep in a host.\n\n---"
     },
     {
-      "id": "25-opposition#when-to-end-or-escape#13",
+      "id": "25-opposition#when-to-end-or-escape#14",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
@@ -8703,7 +8883,7 @@
       "text": "A street fight should end when the **fiction’s job** is done, not when the last minion’s Stamina hits 0.\n\nEnd or offer escape when:\n\n- The **objective** is complete (drive secured, node dumped, VIP extracted, ritual broken).\n- **Trace Alert** hits 12 and the spill makes staying suicidal.\n- The crew is **winded and out of Recoveries**, and continuing only pads time.\n- A **named threat** offers a deal, retreats to escalate later, or triggers a villain escape.\n- Reinforcements would blow past the encounter budget into a TPK the table did not sign up for — escalate heat and pay later instead (`08` payouts, lifestyle burn in `26`).\n\n**Escape** is a legitimate beat. Call for a short chase, a Drive test, a Matrix Verb to freeze cameras, or a Commander / Scout ability that buys the door. Defeated opposition is usually out — fled, bound, unconscious, or dead — Director’s call (`04`). Named threats may use full dying rules; mooks often just drop.\n\nAfter the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`). Bookkeeping for Victories and Malice follows the shared engine and this chapter.\n\n---"
     },
     {
-      "id": "25-opposition#scaling-payouts-and-tools#14",
+      "id": "25-opposition#scaling-payouts-and-tools#15",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
@@ -8713,7 +8893,7 @@
       "text": "**Paying the crew.** Use the integrated payday table in **Kits, Gear & Wealth** (`08`) (`U + G + ~25%` by level band; L6+ half favor OK). A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down. Payday lands at **full respite** / job complete (`24`, `26`).\n\n**Prep tools (optional):**\n\n- **Run Generator** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.\n- **Reach Events** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security (including **Aequitas Mandate** and **Lazarus Extract**), Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter."
     },
     {
-      "id": "25-opposition#aeq-patrols-and-laz-extract-foundry-pack#15",
+      "id": "25-opposition#aeq-patrols-and-laz-extract-foundry-pack#16",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
@@ -8723,7 +8903,7 @@
       "text": "**Aequitas Mandate (AEQ)** and **Lazarus Extract (LAZ)** are corp-line opposition in the Bestiary — Council-mandate patrols and combat-medic extract teams. Both hold seats on the **Twelve Conglomerates** (chairs 11 and 12); the tickers double as Director opposition filters. Full profiles live in Ghostwire Lore → **Twelve Conglomerates**.\n\n| Actor | Band | Spine (math) | Kit |\n|---|---|---|---|\n| Mandate Trooper | L1 minion | Corp Security Officer | Sidearm + baton, zip-cuffs, HUD/radio, **Wire Kit** |\n| Mandate Sergeant | L2 horde support | Ironclad Subcommander | Stronger sidearm, Hold the Line, **Wire Kit** |\n| Extract Medic | L1 platoon support | Street Doc | Trauma bag, Stabilize / patch / stim, light stunner, **Wire Kit** |\n| Extract Chief Medic | L2 elite support | Rival Commander envelope + Street Doc med kit | Same med math, more Stamina, Extract Lead, Lazarus Trauma Package, **Wire Kit** |\n\nAll four start **Disconnected**. Wire Kit is the Connect interface (same as pack drones / vehicles). Token Has Vision on.\n\n---"
     },
     {
-      "id": "25-opposition#what-not-to-do#16",
+      "id": "25-opposition#what-not-to-do#17",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",

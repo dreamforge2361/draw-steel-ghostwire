@@ -36,6 +36,8 @@ At 1st level you're equipped with a cyberdeck of your choice -- this is your Kit
 
 **Intrusion Roll Modifier** is your cyberdeck's flat bonus applied to Programs' Power Rolls (rolled with Logic). **Integrity Damage Bonus** is the flat damage a successful Program hit deals to Track 2 targets, gated by Power Roll result band. Both numbers grow with **Improved Cyberdeck** (4th level) and again with **Root Access** (9th level) -- these bonuses come from the class, not the deck, so they persist even if you swap decks.
 
+**Biofeedback Resistance** is the column that keeps you alive. It is a **per-Echelon** number: multiply it by your own Echelon, and that total comes off every Biofeedback hit **after** your connection state has scaled it (**The Wired System**, `21`). It never applies to the base value, and it never takes the damage below 0. Off the market rack, the Matrix Gear decks carry it by band: **Scrapdeck 1** (street) · **Street Deck 2** (professional) · **Ghostbox 2** (restricted) · **Blackdeck 3** (military) · **Fairlight Ghost 3** (prototype). You run one deck at a time, so you get one deck's resistance -- the best one you are carrying, not the sum.
+
 **Cyberdeck Signature Abilities** (each deck's built-in Power Roll, Logic-keyed, `2 + @chr / 4 + @chr / 6 + @chr` style result-band damage on the Switchblade, `0 / 1+@chr / 2+@chr` on the Padlock-6, and a no-damage ally-edge effect on the Lookout):
 
 - **Flatline Jab** (Switchblade) -- a quick, single-target Intrusion strike against one node or device; guarantees a small Alert bump regardless of the Power Roll result.
@@ -153,6 +155,8 @@ Out of combat, neither costs anything. Either way you cannot exceed your Agent c
 **5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.
 
 **6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.
+
+**When the host bites back.** **ICE does not attack every round.** It deals Biofeedback on exactly four triggers: a **low (≤11) Wired Power Roll** against a host with active ICE (Rating 3+); a **failed breach at Rating 4+**; the **Alert 9–11 hunt bite** at the end of each of your turns while you are still Overlay or Jacked In on that host; and a **Director Malice ICE surge**. Passive ICE at Rating 1–2 is flavor only, **Linked takes none**, and host ICE bites **the compiler** by default. The four-step math (Rating base → connection scale → minus deck Biofeedback Resistance → Stamina) and the **Winded floor** are in **The Wired System** (`21`).
 
 **Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software.
 

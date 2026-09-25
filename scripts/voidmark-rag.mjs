@@ -88,7 +88,12 @@ const SYNONYMS = {
   watchdog: ["watchdog", "agent", "trace", "hacker"],
   compile: ["compile", "agent", "hacker"],
   decompile: ["decompile", "agent", "hacker"],
-  biofeedback: ["biofeedback", "wired", "jacked", "overlay"],
+  biofeedback: ["biofeedback", "wired", "jacked", "overlay", "winded", "resistance", "bite"],
+  // 0.3.142: the words a table actually uses for the four ICE attack triggers and the Winded floor.
+  bite: ["bite", "biofeedback", "ice", "hunt", "trigger"],
+  winded: ["winded", "biofeedback", "floor", "stamina", "dying"],
+  substation: ["substation", "masterwork", "worked", "north"],
+  trigger: ["trigger", "ice", "biofeedback", "bite", "alert"],
   switchboard: ["switchboard", "cassavir", "fixer"],
   cassavir: ["cassavir", "switchboard", "mama"],
   shambles: ["shambles", "neon"],
@@ -203,6 +208,17 @@ const LOCK_PHRASES = [
   "roster anchor",
   "special agent",
   "special sprite",
+  // 0.3.142: the Biofeedback / ICE-trigger locks. All multi-word, so they only fire when the table
+  // actually asks for one of them — "how does biofeedback work" and "does ICE attack every round"
+  // both have to beat the four class chapters that merely *mention* biofeedback in passing.
+  "north substation",
+  "biofeedback resistance",
+  "winded floor",
+  "ice bite",
+  "ice trigger",
+  "hunt bite",
+  "malice surge",
+  "wire-only",
 ].sort((a, b) => b.length - a.length);
 
 /* ------------------------------------------------------------------ 0.3.135 (3c) class routing */

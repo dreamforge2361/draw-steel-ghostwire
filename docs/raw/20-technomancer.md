@@ -145,13 +145,13 @@ Overreach into the Wired's spirit world bites back — but not as hard as it bit
 
 - **On a success:** no effect. The ability resolves normally either way.
 - **On a failure:** you take **Persona-score damage** (this damage bypasses shields and temporary Stamina — it's your own current biting back, not an external attack), and the ability still resolves fully.
-- **0-Stamina consequence:** if biofeedback damage drops you to 0 Stamina, you become **Winded** instead of Dying. While Winded this way, you regain 1 Stamina per turn until stabilized, and you are not at risk of death from your own overreach — only external damage can kill a Technomancer outright.
+- **0-Stamina consequence (the Winded floor):** biofeedback damage that would take your Stamina to **0 or below** leaves you **Winded, not Dying** — you stop at **1 Stamina**, you regain **1 Stamina per turn until stabilized**, and your own overreach can never kill you. Only external, non-biofeedback damage can kill a Technomancer outright. This is the **same floor** the Wired chapter's Wire Biofeedback uses (`21`), worded the same way in both places: one rule, two sources.
 - **Discipline modifiers:** a Sprite-Weaver rolls every biofeedback test with an **edge**. A Resonance-Warrior rolls every biofeedback test with a **bane** — on an 11-cost ability that stacks with the band's own bane, so the Resonance-Warrior tests with a **double bane**.
 - **Sprites acting on the Technomancer's own turn (the minor/extension rank) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.
 
 **Winded, in this chapter.** *Winded* is the ordinary Ghostwire state (`04`) — a creature at or below half its maximum Stamina — and this chapter uses it in exactly one way, stated here once so it is never confused at the table:
 
-1. **As the biofeedback floor (the rule above).** Biofeedback damage that would take you to 0 Stamina leaves you **Winded instead of Dying**: you stop at the winded threshold rather than dropping, you regain 1 Stamina per turn until stabilized, and your own overreach can never kill you. This applies only to biofeedback damage; external damage kills a Technomancer normally.
+1. **As the biofeedback floor (the rule above).** Biofeedback damage that would take you to **0 Stamina or below** leaves you **Winded instead of Dying**: you stop at **1 Stamina** rather than dropping, you regain 1 Stamina per turn until stabilized, and your own overreach can never kill you. The floor never *heals* — at 1 Stamina you stay at 1 — and it applies **only** to biofeedback damage; external damage kills a Technomancer normally, on the same turn if it lands. The Wired chapter's Wire Biofeedback (`21`) uses this identical floor.
 2. **Never as a condition an ability inflicts.** Nothing in this chapter *applies* Winded to a target: the two abilities that once read that way — Resonance Slam's Slam mode and The Weaver's Web — inflict **weakened (save ends)** instead (`04`).
 
 ---
@@ -337,6 +337,8 @@ Either way you cannot exceed your sprite cap.
 **5. Command — the maneuver that makes the congregation useful.** Minor-band sprites act on your turn; intermediate sprites need a command each round to act that round; advanced sprites take their own turn. **Recompile** reshapes a standing sprite or rebuilds the one just destroyed at half Stamina — it cannot reshape a **Special Sprite**, whose purpose is not a menu entry. A Special Sprite needs no command: it already has its orders and its budget.
 
 **6. Cleanup / Jack Out.** Decompile dismisses one sprite or the whole congregation — free maneuver, no Resonance back. The congregation decompiles on its own when the encounter ends, and “just destroyed” does not survive the fight it died in. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. Biofeedback already taken follows you out.
+
+**When the host bites back.** **ICE does not attack every round.** It deals Biofeedback on exactly four triggers: a **low (≤11) Wired Power Roll** against a host with active ICE (Rating 3+); a **failed breach at Rating 4+**; the **Alert 9–11 hunt bite** at the end of each of your turns while you are still Overlay or Jacked In on that host; and a **Director Malice ICE surge**. Passive ICE at Rating 1–2 is flavor only, **Linked takes none**, and host ICE bites **the compiler** by default. The four-step math (Rating base → connection scale → minus deck Biofeedback Resistance → Stamina) is in **The Wired System** (`21`) — and its **Winded floor** is the same floor your own overreach uses, above.
 
 **Hacker overlay.** Swap Resonance for Bandwidth, sprite for Agent, and Compile Sprite / Special Sprite for **Compile Agent / Special Agent** (`19`). Steps 0–6 are otherwise identical, with one difference: a Hacker must be **Overlay or Jacked In** to compile at all — Linked refuses.
 

@@ -8843,7 +8843,7 @@
         "BlackIce": {
           "Name": "Black ICE",
           "Description": "<p>Lethal countermeasure that reaches back down the connection to stop a heart or fry a brain. The Wired’s apex predator.</p><p><strong>Hook:</strong> Nobody guards nothing with Black ICE. Whatever’s behind this wall is worth a life — is it worth the decker’s?</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 6 Mindkiller (elite hexer). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
-          "Director": "<p><strong>Handbook:</strong> Tier 2 Elite (lethal construct ICE) → Draw Steel level 6 elite hexer, echelon 2.</p><p>Wired encounter token. Biofeedback Kill: damage it deals to a jacked-in persona carries to the runner’s body.</p>"
+          "Director": "<p><strong>Handbook:</strong> Tier 2 Elite (lethal construct ICE) → Draw Steel level 6 elite hexer, echelon 2.</p><p>Wired encounter token. This is a Track 2 <em>combatant</em> — it takes its own turns, unlike a host's ICE layers, which only bite on the four named triggers.</p><p>Biofeedback Kill: damage it deals to a jacked-in persona carries to the runner's body. Resolve it on the Wire Biofeedback procedure (The Wired System): scale by the runner's connection state (Linked 0 · Overlay ×0.5 round down min 1 · Jacked In ×1.5 round up), subtract the deck's Biofeedback Resistance, then apply the Winded floor — biofeedback stops the runner at 1 Stamina and leaves them Winded, never Dying. A bullet in the corridor still kills them.</p>"
         },
         "MamaCassavir": {
           "Name": "Mama Cassavir, “the Switchboard”",
@@ -9496,6 +9496,56 @@
         "NoReason": "no reason given",
         "NotifyPay": "{actor} paid {amount} — now {after}",
         "NotifySpend": "{actor} spent {amount} — now {after}"
+      }
+    },
+    "Biofeedback": {
+      "Director": {
+        "MacroName": "Director: Apply Biofeedback",
+        "Title": "Apply Biofeedback",
+        "Keybinding": "Director: Apply Biofeedback",
+        "Hint": "Bite a targeted or selected runner with Wire Biofeedback: Node Rating base, scaled by their connection state, less their deck's Biofeedback Resistance. Biofeedback never kills — it stops at 1 Stamina and leaves them Winded.",
+        "GMOnly": "Only the Director can apply Biofeedback.",
+        "NoTarget": "Target or select a token first.",
+        "NotEligible": "{actor} has no Stamina pool and cannot take Biofeedback.",
+        "Speaker": "The Wire",
+        "Targets": "Targets: {actors}",
+        "Rating": "Host Node Rating",
+        "RatingOption": "Rating {rating} — Biofeedback {base}",
+        "CustomBaseLabel": "Custom base (overrides the Rating)",
+        "CustomBasePlaceholder": "leave blank to use the Rating",
+        "State": "Connection state",
+        "StateAuto": "Auto — {state}",
+        "Resistance": "Biofeedback Resistance",
+        "ResistanceAuto": "Auto — {resistance}",
+        "ResistanceShort": "resistance {resistance}",
+        "Trigger": "ICE trigger",
+        "Submit": "Apply Biofeedback",
+        "FloorHint": "Winded floor: Biofeedback that would take a hero to 0 Stamina leaves them at 1, Winded and not Dying. Non-Biofeedback damage still kills.",
+        "States": {
+          "disconnected": "Disconnected — no Biofeedback",
+          "linked": "Linked — no Biofeedback",
+          "overlay": "Overlay — ×0.5, round down, min 1",
+          "jackedIn": "Jacked In — ×1.5, round up"
+        },
+        "Triggers": {
+          "unstated": "Director's call",
+          "low-roll": "Low (≤11) Wired Power Roll vs active ICE (R3+)",
+          "failed-breach": "Failed breach against a Rating 4+ host",
+          "hunt-bite": "Trace Alert 9–11 hunt bite (end of the runner's turn)",
+          "malice-surge": "Director Malice ICE surge"
+        },
+        "ChatTitle": "Biofeedback — {actor}",
+        "ChatTrigger": "Trigger: {trigger}",
+        "RatingBase": "Rating {rating} host, Biofeedback Value {base}",
+        "CustomBase": "Custom base {base}",
+        "ChatSource": "1. Base: {source}",
+        "ChatScale": "2. {state} → {scaled}",
+        "ChatResist": "3. Less Biofeedback Resistance {resistance} → {damage} damage",
+        "ChatApplied": "4. Stamina {before} → {after}",
+        "ChatWindedFloor": "Winded floor: Biofeedback stopped at 1 Stamina. {actor} is Winded, not Dying — but a bullet still kills.",
+        "ChatNoBite": "No Biofeedback lands: the scale or the resistance took it to zero.",
+        "Notify": "{actor} takes {applied} Biofeedback — Stamina now {after}.",
+        "NotifyFloored": "{actor} is held at {after} Stamina by the Winded floor — Winded, not Dying."
       }
     },
     "BlackMarket": {

@@ -129,6 +129,8 @@ Ghostwire adds **one** extra Malice source:
 
 That Malice is the same pool you spend on meatspace Malice features. A Jacked In runner who keeps rolling lows is funding the street fight even if they never look up from the Wire.
 
+**Spending it back on the Wire — the ICE surge.** A Malice **ICE surge** is one of the four — and only four — triggers on which a host's ICE deals Biofeedback (`21`). The others are a low (≤11) Wired Power Roll against a host with active ICE at Rating 3+, a failed breach at Rating 4+, and the Alert 9–11 hunt bite at the end of each of the runner's turns while they stay Overlay or Jacked In. **A host's ICE does not get a free attack every round.** If you want ICE that acts on its own initiative, stat it as a creature (the Bestiary's **Black ICE**) and put it on the board where the table can see it.
+
 Other GW remaps that touch opposition pressure (not separate Malice engines):
 
 - Class abilities that **strip Malice** on high (for example some Elementalist apex text) still strip from this shared pool.

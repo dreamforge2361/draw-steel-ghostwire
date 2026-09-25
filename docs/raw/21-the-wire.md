@@ -21,10 +21,10 @@ Four states. **Connect** (from Disconnected, with a Wire interface) lands you in
 
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
-| **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |
-| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | None — you are not immersed |
-| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
-| **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
+| **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | **None — ×0.** Biofeedback cannot reach you off-net |
+| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | **None — ×0.** Linked is soft presence, not immersion: **a Linked runner takes no Biofeedback at all** |
+| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced — **×0.5, round down, minimum 1**. Biofeedback while Overlaid is half the node's listed Biofeedback Value. |
+| **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full — **×1.5, round up**. The tradeoff for full-immersion speed and power. |
 
 **On-net vs Connected.** **On-net** (the Connected-family) means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Features that say “Jacked In or Overlaid” still mean those two — Linked does not satisfy them. **Compile Agent** (`19`) is the same gate: Overlay or Jacked In; Linked refuses. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone.
 
@@ -75,7 +75,7 @@ The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targe
 > **Constructs Console (Lock A).** Compiled constructs — sprites, Agents, and independent spirits — are a **separate Console section** from the node graph. Do not list them as nodes. The Console **Constructs** pane is the roster; at the table you can also track it on the summon ability sheet (`19` / `20` / `22`). Pet hit points are **Stamina** (sprites, Agents, independent spirits). Extension spirits have **no separate pool**.
 
 
-**Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).
+**Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state. Every bleed-through resolves on the same four steps as any other bite: see **Biofeedback -- the full procedure**, below.
 
 ### System Stat Card -- The Universal Template for Nodes, ICE, and Systems
 
@@ -86,9 +86,9 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 | **Node Rating** | Both Tracks | The target's overall Wired defense grade (Rating **1–5**) -- the single input that sets every other stat on this card. | A Director-assigned Rating reflecting how well-defended/valuable the system is (street-grade lock = **Rating 1**; alpha-corp core = **Rating 5**). Not a character level or echelon. Everything below reads off this one number. |
 | **Node Description** | Both Tracks | The node's aesthetic -- often artistic and stylized to brand the System, and represented in the Wired by a holographic icon or similar visual signature (a corp's sigil rendered as a floating glyph, a black-market host skinned like a snarling dog, a government node as a flat gray monolith). Pure flavor, no mechanical effect -- but it's how a Hacker (and the table) actually *sees* a node before touching it. | Director/Session-defined per node, not Rating-derived like the other rows -- describe it to match the node's owner, purpose, and reputation. No formula; this is narrative color layered on top of the mechanical stats above. |
 | **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick difficulty call instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) — this shortcut is for trivial nodes only. |
-| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |
+| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. **Passive layers at R1-2 are flavor only and never deal Biofeedback**; active ICE (R3+) bites only on the four **ICE attack triggers**, below. |
 | **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |
-| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |
+| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Disconnected or Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina, and floored so that Biofeedback alone never kills you. Full four-step procedure and the Winded floor: **Biofeedback -- the full procedure**, below. A node's Biofeedback Value only ever *fires* on one of the four **ICE attack triggers**, also below -- ICE does not bite every round. |
 | **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |
 
 **Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's "What a Node Is" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to "reduce to 0."
@@ -96,6 +96,50 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 **Track 2 note:** Track 2 targets (ICE, hostile AIs, rival deckers, and any actively-defended node) use the full card -- Node Rating, Node Description, Breach difficulty, ICE Layers, Integrity, Biofeedback Value, and Alert Contribution all apply. This is the template a Director uses to stat up any hostile Wired presence on the fly: pick a Node Rating (1–5), and all five downstream numbers are already fixed by the table.
 
 **Worked example -- statting a Rating 3 corp host (Track 2) on the fly:** Node Rating 3 -> Breach difficulty medium (optional) -> ICE Layers: passive + 1 active ICE -> Integrity 26 -> Biofeedback Value 8 (x1.5 = 12, round up, if a Hacker gets hit while Jacked In, before that Hacker's own Biofeedback Resistance reduces it further) -> Alert Contribution: governed by the standard Trace Alert rules on every roll against it, same as any other target.
+
+### Biofeedback -- the full procedure
+
+Biofeedback is the Wired hitting back: damage that crosses out of a *system* and into a *body*. Two things in Ghostwire deal it, and they resolve the same way.
+
+- **Wire Biofeedback** -- ICE, black ICE, an Integrity-to-Stamina bleed-through clause, or a catastrophic bite from the host you are standing in. That is the procedure below.
+- **Technomancer overreach** -- a failed biofeedback test after spending 5 or more Resonance (**The Technomancer**, `20`). Different trigger, different base number, **the same floor**.
+
+**Four steps, in this order.**
+
+1. **Base Biofeedback Value, by the host's Node Rating.** **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. These are the numbers already printed on the System Stat Card, above; a Director may name a custom base instead when the fiction calls for one.
+2. **Scale it by *your own* connection state.** **Disconnected** or **Linked** → **0 — no Biofeedback at all.** **Overlay** → **×0.5, round down, minimum 1.** **Jacked In** → **×1.5, round up.** There is no ×1 step.
+3. **Subtract your deck's Biofeedback Resistance.** Your cyberdeck's Biofeedback Resistance stat (**The Hacker**, `19`) comes off the **scaled** number, not the base. It never takes the damage below 0.
+4. **Apply the remainder as Stamina damage.** This is untyped damage to your own Stamina — not Integrity damage, and not a saving throw.
+
+**Worked line.** A Rating 3 host bites an **Overlaid** runner carrying a street deck (Biofeedback Resistance 2): base **8** → Overlay **8 × 0.5 = 4** → minus **2** → **2 Stamina damage**. The same host biting the same runner while **Jacked In**: base **8** → **8 × 1.5 = 12** → minus **2** → **10 Stamina damage**. That difference is the whole argument for staying Overlaid.
+
+#### The Winded floor (both sources)
+
+**Biofeedback that would take your Stamina to 0 or below leaves you Winded, not Dying.** You stop at **1 Stamina**, you regain **1 Stamina per turn until stabilized**, and Biofeedback on its own can never kill you.
+
+- **The floor never heals.** If you are already at 1 Stamina you stay at 1, and a hero already down at 0 from gunfire is not brought back up by a bite.
+- **Only Biofeedback is floored.** Non-Biofeedback damage — a round, a blade, a fall, a hostile spell — still takes you to 0 and into Dying as normal, on the same turn if it lands. Being saved by the floor does not make you safe.
+- **One floor, two sources.** Wire Biofeedback (above) and **Technomancer overreach** (`20`) use the same floor, worded the same way in both chapters. Neither is a separate rule.
+
+> **In Foundry**
+> The Director macro **Director: Apply Biofeedback** (Ghostwire Macros) runs exactly these four steps and this floor. Pick a Node Rating 1–5 — or type a custom base — and it reads the target's connection state and deck Biofeedback Resistance off the Actor, with an override on each. The chat card shows the whole line (base, scale, resistance, damage, Stamina before → after) and says so when the Winded floor caught the hit.
+
+### ICE attack triggers -- when ICE actually bites
+
+**ICE does not get a free attack every round.** It is a defence, not a second initiative slot. Active ICE deals Biofeedback on exactly four triggers:
+
+1. **A low (≤11) Wired Power Roll** against a host that has **active ICE** (Node Rating **3** or higher) — **one** Biofeedback bite, on top of the usual +1 Trace Alert.
+2. **A failed breach against a Rating 4+ host** — Biofeedback as already printed on the System Stat Card (R4 and R5 both carry biofeedback on a failed breach).
+3. **Trace Alert 9–11 — the hunt bite.** At the **end of each of the runner's turns**, while they are still **Overlay or Jacked In** on that host, the hunting ICE bites **once**. Step back to Linked, or Jack Out, and the hunt bite stops.
+4. **A Director Malice ICE surge** — the Director spends Malice to have the host's ICE strike now. The Malice the Alert track pays out at steps 5–8 is what funds it.
+
+And the limits that go with them:
+
+- **Passive ICE at Rating 1–2 is flavor only — it never deals Biofeedback.** A first-layer firewall stirring is atmosphere, not damage.
+- **Linked deals no Biofeedback**, on any trigger: step 2 of the procedure scales it to 0 before anything else happens. Neither does Disconnected.
+- **Default target: the compiler.** Host ICE bites the runner whose roll or whose presence set it off — the person holding the deck. It does not reach past them into the rest of the crew unless an ability says so, and a compiled Agent or sprite is not a lightning rod for its compiler.
+- **One trigger, one bite.** Two different triggers on the same turn are two bites; the same trigger firing twice in one turn is still one.
+- **A Black ICE *creature* is a different thing.** An ICE construct statted as an opposition Actor (the Bestiary's **Black ICE**, or a rival decker's screen run as a combatant) is a **Track 2 combatant**: it takes its own turns like any creature, and its damage is whatever its card prints. The four triggers above govern a **host's ICE layers** — the defence built into the node — not a creature the Director has put on the board. If a Director wants ICE that acts every round, they stat it as a creature so the table can see it coming. Either way, Biofeedback it deals still runs the four-step procedure and still lands on the Winded floor.
 
 ### Trace Alert: Definition and Escalation
 
@@ -105,7 +149,7 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 |---|---|
 | **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |
 | **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |
-| **9–11** | As above, plus a **bane on your next Wired Power Roll** — active ICE is hunting you. |
+| **9–11** | As above, plus the **ICE hunt bite** — active ICE is hunting you. At the **end of each of the runner's turns**, while they are still **Overlay or Jacked In** on this host, that ICE deals **one Biofeedback hit** (trigger 3 under **ICE attack triggers**, above; full math and the Winded floor under **Biofeedback -- the full procedure**). Stepping back to Linked or Jacking Out stops the bites. |
 | **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |
 
 #### Default Alert by Power Roll result (locked)
@@ -137,7 +181,7 @@ Unless an ability's printed text says otherwise, every Wired Power Roll (Matrix 
 - **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).
 - Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.
 
-**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 put banes on the runner's Wired rolls. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too.
+**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 are where the host starts hurting the runner: one Biofeedback hunt bite at the end of every one of their turns for as long as they stay Overlay or Jacked In. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too.
 
 ## Matrix Verbs (Universal)
 
@@ -314,4 +358,98 @@ Some hosts answer with a voice that is not MER support and not ICE. Street calls
 
 > **In Foundry**
 > Open **VOIDMARK** from Token controls (ghost) or a keybinding under Configure Controls. Module Configuration holds the API endpoint, secret key, model, temperature, player access, and **Edit VOIDMARK instructions**. Rules answers are retrieved from the shipped Ghostwire RAW index. Canvas token art when the Mark takes scene presence is a later hook (`assets/ai-persona/`).
+
+## North Substation — a worked Wired run
+
+This is one run, start to finish, against a Rating 3 host: what the players say, what they roll, what the Director answers, and what the numbers do. **Nothing here is a new rule.** Every beat points back at something already printed in this chapter, in **The Hacker** (`19`), or in **The Technomancer** (`20`). Read it once and the chapter's whole order of operations is in your hands.
+
+**The crew.** **Vira**, a Hacker: Logic 3, a **street deck** (Biofeedback Resistance **2**), Bandwidth **6**. **Kade**, an Operator, all meat — no interface, no deck, and no business on the wire except as the body standing over Vira's.
+
+**The host.** *Power Co — North Substation.* Node Rating **3**, **Track 2**. Breach difficulty **medium**. ICE: **passive + 1 active**. Integrity **26**. Biofeedback Value **8**. Trace Alert starts at **0**.
+
+**The room (Track 1).** Three objects hang off the host: **Maglock Door 1**, **Light Control**, and a **Turret feed**. They are Track 1 — Rating, description, breach difficulty, Alert contribution, and no Integrity pool of their own.
+
+### Act 0 — getting on the wire
+
+Vira uses **Connect**. She has a deck, so it lands, and it lands in **Linked** — not Overlay. Linked is comms, ID and packets and nothing more. She **Broadcasts** to Kade from there, because Broadcast is the one verb that works at Linked: *"I'm on. Give me the corner."* She has not Scanned anything and cannot: Scan needs Overlay or Jacked In.
+
+She uses **Toggle Connection State** — one rung deeper — and she is **Overlaid**. Her meat rolls now carry a bane. Her Wired rolls get nothing either way. Her Biofeedback exposure is **×0.5, round down, minimum 1**.
+
+The Director puts the **System Stat Card** on the table: Rating 3, Track 2, breach medium, passive + 1 active ICE, Integrity 26, Biofeedback 8, Alert 0. Nothing is hidden about the *shape* of the host. What is inside it still has to be found.
+
+### Act 1 — finding out what is there
+
+**Scan** (Instinct). Middle. Vira learns there is a host here and that something on Track 2 is awake inside it. No Alert — Scan only looks.
+
+**Deep Scan** (the Hacker's own Program, Logic). Middle. Now the room has names: **Maglock Door 1**, **Light Control**, **Turret feed**, and a **Watchdog** on Track 2. This is the step everything downstream needs. Seize Control wants a named asset; a purpose-built Agent wants a job worth naming.
+
+**Ping** (Logic). She pings **Light Control**, a Track 1 object, and the lights stutter in the corridor Kade is watching. That is all a Ping ever does: touch and test. She does **not** try to Ping the host itself — Ping is Track 1 only and never defeats ICE.
+
+**Search** (Logic). Middle. Inside the host she finds the maintenance schedule, and the fact that the turret feed answers to the substation rather than to corp security. Useful, and quiet.
+
+### Act 2 — the first bite
+
+**Read/Write** on **Maglock Door 1** (Logic). Middle: the door unlocks for entry and leaves **zero forensic trace**. Kade walks through.
+
+Then Vira reaches for the turret. She rolls **Seize Control** against the host — and rolls **low (≤11)**.
+
+Two things happen, in this order, and neither of them is a surprise:
+
+1. **Trace Alert +1.** Low is the default Alert trigger. The host is now at **1**.
+2. **One reactive Biofeedback bite** — trigger 1: a low Wired Power Roll against a host with **active ICE** (Rating 3+). The active ICE that Deep Scan named gets exactly one hit.
+
+The math, out loud: base **8** (Rating 3) → Vira is **Overlaid**, so **8 × 0.5 = 4** → minus her street deck's Biofeedback Resistance **2** → **2 Stamina damage**. Vira takes 2 and keeps her turn.
+
+Note what did *not* happen. The ICE did not then take a turn of its own, and it does not get one next round either. It bit once, on a trigger, and went back to being a defence.
+
+### Act 3 — compiling a Special Agent
+
+Vira wants the turret handled. She uses **Compile Agent** and takes the last entry in the list: **Special Agent** (3 Bandwidth in combat). The order matters, and it is not the order most tables expect:
+
+1. **She rolls first.** 2d10 + Logic — middle tier.
+2. **The tier buys the action budget.** Middle is **2 Actions**.
+3. **Only then** does she say what it is for.
+
+She says: *"spoof the turret lock so it reads the corridor as clear."* That is a **Wire** job, against an asset Deep Scan named, and it is the only kind of job a Special Agent can be given. The Agent manifests with `Actions (2): spoof the turret lock so it reads the corridor as clear` written at the top of its own description.
+
+**What she cannot ask for.** *"Pull Kade out of the corridor."* *"Carry the case."* *"Stand in the doorway and block it."* Agents and sprites are **Wire-only**. They act on nodes, systems, ICE, feeds and data. They do not pick things up, they do not drag bodies, and their scene token is a roster anchor rather than a second fighter on the meat board (see **Constructs (Sprites and Agents)**, above). A Director who lets one lift a downed runner has quietly handed the Hacker a free extra body in every fight.
+
+### Act 4 — Integrity, Malice, and going deeper
+
+Vira runs a Program at the host's **Integrity** and lands it: Integrity **26 → 21**, her deck's Integrity Damage Bonus on top of the roll. Over the next few exchanges the Alert climbs on her low results and the host crosses **step 5** — the Director banks **+1 Malice**. That Malice is real money, and it buys something later.
+
+Vira decides she needs the edge and **Toggles** again: **Jacked In**. Her Wired rolls now carry an **edge**, she cannot act in the physical world at all, and her body is on the floor with Kade standing over it. Her Biofeedback exposure just went from ×0.5 to **×1.5**.
+
+The Director spends that Malice on an **ICE surge** — trigger 4. Same four steps, new connection state: base **8** → Jacked In **8 × 1.5 = 12** → minus **2** → **10 Stamina damage**. Ten, from the host that dealt her two a minute ago. That is what the edge costs.
+
+### Act 5 — the hunt, and the floor
+
+The Alert track reaches **9**, and trigger 3 goes live: **at the end of each of Vira's turns, while she is still Overlay or Jacked In on this host, the hunting ICE bites once.** Not on the Director's turn. Not twice. Not on Kade. On Vira, at the end of her turn, once per turn, for as long as she stays immersed.
+
+She stays two more turns, because the job is nearly done. Two more bites. Her Stamina runs out on the second one — and this is the beat the whole procedure exists for: **Biofeedback that would take her to 0 leaves her Winded, not Dying.** She stops at **1 Stamina**, she regains 1 per turn until stabilized, and the wire cannot finish her.
+
+What *can* finish her is the corridor. If corp security rounds the corner and puts a round into her inert body, that damage is not Biofeedback, it is not floored, and she goes down for real. The floor is a promise about the wire. It is not a promise about the room.
+
+Had the Alert reached **12** instead, the host would have gone to **full lockout** with a **hard counter-trace to Vira's physical location**, then reset to step **6** rather than 0. That is the Director's other lever, and it ends the Wired half of the fight by moving it into the street.
+
+### Act 6 — out
+
+While the Special Agent was up, another compiler **Overlay or Jacked In on this same scene** would have seen it in their own **Constructs** roster with no Scan spent — that is Lock A. Kade, standing in the corridor in his own body, sees nothing: meat tokens are not Wire eyes.
+
+Vira uses **Decompile Agent** on the Special Agent — a free maneuver, no Bandwidth back, token and world Actor gone. Then she **Jacks Out**: the one off-ramp to Disconnected, and usable as a Free Triggered Action in a genuine emergency. She is off-net, and nothing on the wire can reach her Stamina now.
+
+**The Alert does not leave with her.** North Substation is still sitting at 11. It will still be sitting at 11 the next time anyone in the crew touches it, tonight or next week. A maxed host never fully forgets you found it, and a hunting one does not forget either.
+
+### Technomancer appendix — the same run, the other side of the wire
+
+Run the same hour with a Technomancer instead, and three things change.
+
+- **They can compile from Linked.** Sprites are Resonance, not software, so a Technomancer sitting at **Linked** — no meat bane, and **no Biofeedback exposure at all** — can still put a sprite on the board. A Hacker cannot: Compile Agent refuses below Overlay.
+- **Special Sprite runs the same order** as Special Agent: roll, the tier buys 1 / 2 / 3 Actions, then the purpose. And it carries the same guardrail — **Wire-only**. A Special Sprite spoofs a turret lock. It does not pull a downed runner out of a corridor.
+- **Overreach is their own Biofeedback.** Spend **5 or more Resonance** on a single ability and make a **Physique test** by cost band (`20`). Fail it and the damage is theirs — nothing to do with the host's Rating, nothing to do with ICE. But it lands on the **same Winded floor**: it would take them to 0, so they stop at **1 Stamina** and regain 1 per turn. One floor, two sources, and a Technomancer who pushes too hard is standing exactly where Vira was.
+
+> **In Foundry**
+> Every beat above has a control. The Wired Console's node templates expose Rating 1–5 with **Integrity**, **Biofeedback Value**, **ICE layers** and **Trace Alert** on the card. The node applet's verbs refuse by state: **Connect** lands in Linked, **Broadcast** works there, and **Scan / Ping / Navigate / Search / Read-Write / Programs / payload Runs / Compile Agent** all refuse until Overlay or Jacked In. **Deep Scan**, **Seize Control**, **Compile Agent / Special Agent** and **Decompile Agent** run from the Hacker's own ability cards. The **Constructs** pane lists the Special Agent with its `Actions (2): …` budget. And the Director macro **Director: Apply Biofeedback** does the arithmetic this chapter prints — the 2 in Act 2 and the 10 in Act 4 are the numbers it produces, Winded floor in Act 5 included.
+>
+> Director cue sheet and the full Foundry alignment note: `docs/directors/north-substation-masterwork.md`.
 
