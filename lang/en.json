@@ -7806,13 +7806,15 @@
             "data": "Data-sprite",
             "attack": "Attack-sprite",
             "machine": "Machine-sprite",
-            "ward": "Ward-sprite"
+            "ward": "Ward-sprite",
+            "special": "Special Sprite"
           },
           "ArchetypeHint": {
             "data": "the scout and spotter",
             "attack": "the congregation's damage",
             "machine": "the mender",
-            "ward": "the screen"
+            "ward": "the screen",
+            "special": "purpose-built — roll first, then say what it is for"
           },
           "Band": {
             "minor": "minor (extension, levels 1–3)",
@@ -7835,7 +7837,7 @@
           "CommandMissing": "No Compile Sprite ability on the compiler — Command lives on that sheet handle.",
           "Setting": {
             "Name": "Compile sprites when the card is used",
-            "Hint": "Using Compile Sprite opens the archetype picker and puts the sprite on the canvas; using Recompile reshapes or rebuilds one; using Special Sprite asks what the purpose-built sprite is for and compiles it with the action budget the roll bought. Turn this off to go back to roll-only cards and the sheet buttons."
+            "Hint": "Using Compile Sprite opens the archetype picker — including Special Sprite, which asks what the purpose-built sprite is for and compiles it with the action budget the roll bought — and puts the sprite on the canvas; using Recompile reshapes or rebuilds one. The separate Special Sprite ability still works too. Turn this off to go back to roll-only cards and the sheet buttons."
           },
           "Recompile": "Recompile",
           "RecompileTitle": "Recompile a Sprite",
@@ -7855,7 +7857,8 @@
           "SpecialCompile": "Compile Special Sprite",
           "SpecialNoPurpose": "no purpose given — the Director decides what it does",
           "SpecialCompiled": "{sprite} compiled: {stamina} Stamina, {band}. {budget} Roster {count} / {cap}.",
-          "NotEnoughResonance": "{name} needs {cost} Resonance to compile a Special Sprite (has {current})."
+          "NotEnoughResonance": "{name} needs {cost} Resonance to compile a Special Sprite (has {current}).",
+          "SpecialRollFlavor": "{name} compiles a Special Sprite — the tier buys its Actions."
         }
       },
       "Agents": {
@@ -8005,13 +8008,15 @@
             "probe": "Probe",
             "spike": "Spike",
             "daemon": "Daemon",
-            "watchdog": "Watchdog"
+            "watchdog": "Watchdog",
+            "special": "Special Agent"
           },
           "ArchetypeHint": {
             "probe": "recon / Deep Scan twin",
             "spike": "intrusion / Integrity strike",
             "daemon": "system control / Track 1 puppet",
-            "watchdog": "defend / Trace scrub"
+            "watchdog": "defend / Trace scrub",
+            "special": "purpose-built — roll first, then say what it is for"
           },
           "Band": {
             "minor": "minor (extension, levels 1–3)",
@@ -8042,7 +8047,8 @@
           "SpecialPlaceholder": "cut the cameras on floor 6",
           "SpecialCompile": "Compile Special Agent",
           "SpecialNoPurpose": "no purpose given — the Director decides what it does",
-          "SpecialCompiled": "{agent} compiled: {stamina} Stamina, {band}. {budget} Roster {count} / {cap}."
+          "SpecialCompiled": "{agent} compiled: {stamina} Stamina, {band}. {budget} Roster {count} / {cap}.",
+          "SpecialRollFlavor": "{name} compiles a Special Agent — the tier buys its Actions."
         }
       },
       "Elementals": {

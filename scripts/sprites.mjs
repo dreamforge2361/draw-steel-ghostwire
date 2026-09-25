@@ -15,8 +15,8 @@
 import { abilityFromMessage } from "./token-light.mjs";
 import {
   ACTIONS_BY_TIER, PURPOSE_MAX, SPECIAL_ARCHETYPE, SPECIAL_SPRITE_DSID, SPECIAL_SPRITE_RESONANCE,
-  SPECIAL_STAMINA_BASE, actionsForTier, normalizePurpose, specialSpendPlan, specialSummonDescription,
-  specialSummonLabel, tierFromMessage,
+  SPECIAL_STAMINA_BASE, actionsForTier, compileArchetypeOptions, normalizePurpose, reshapeArchetypes,
+  specialSpendPlan, specialSummonDescription, specialSummonLabel, tierFromMessage,
 } from "./special-summons.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -26,8 +26,13 @@ const UI = "GHOSTWIRE.Summons.Sprites.UI";
 const COMPILE_DSID = "compile-sprite";
 const RECOMPILE_DSID = "recompile";
 const ARCHETYPES = ["data", "attack", "machine", "ward"];
-/** Every archetype a compile may stamp. `special` is never offered in the picker — it has its own ability. */
-const ALL_ARCHETYPES = [...ARCHETYPES, SPECIAL_ARCHETYPE];
+/**
+ * Every archetype a compile may stamp, and — since 0.3.140 (A) — the exact option list the Compile
+ * Sprite picker offers, Special last. Special keeps its own ability as a second entry path.
+ */
+const ALL_ARCHETYPES = compileArchetypeOptions(ARCHETYPES);
+/** What a Recompile may reshape or rebuild into: the published four. A Special is built once, on purpose. */
+const RESHAPE_ARCHETYPES = reshapeArchetypes(ALL_ARCHETYPES);
 
 /** Where a hero's heroic resource (Resonance, for a Technomancer) lives on the Actor. */
 const RESOURCE_PATH = "system.hero.primary.value";
@@ -57,9 +62,9 @@ export function reducedStamina(stamina) {
  */
 export function recompileTargets({ sprites = [], destroyed = null } = {}) {
   const rows = sprites
-    .filter(sprite => ARCHETYPES.includes(sprite.archetype))
+    .filter(sprite => RESHAPE_ARCHETYPES.includes(sprite.archetype))
     .map(sprite => ({ value: sprite.uuid, kind: "reshape", archetype: sprite.archetype, name: sprite.name }));
-  if (destroyed && ARCHETYPES.includes(destroyed.archetype)) {
+  if (destroyed && RESHAPE_ARCHETYPES.includes(destroyed.archetype)) {
     rows.push({ value: "destroyed", kind: "rebuild", archetype: destroyed.archetype, name: destroyed.name ?? "" });
   }
   return rows;
@@ -187,9 +192,16 @@ function placement(caster, index) {
   return { x: (Math.round(x / grid) + dx) * grid, y: (Math.round(y / grid) + dy) * grid };
 }
 
-/** The archetype picker: one dialog, with the band and the Stamina it will stamp shown up front. */
+/**
+ * The archetype picker: one dialog, with the band and the Stamina it will stamp shown up front.
+ *
+ * 0.3.140 (A) — **Special Sprite** is an option here, last in the list. Michael opened Compile Sprite
+ * expecting to find it and 0.3.139 had shipped it as a separate ability only. Picking it does not
+ * stamp a sprite from this dialog: {@link compileSprite} hands off to the roll → Actions → purpose
+ * flow first, and only compiles once the player has written what the sprite is for.
+ */
 async function promptArchetype(caster, band) {
-  const options = ARCHETYPES.map((archetype, index) => {
+  const options = ALL_ARCHETYPES.map((archetype, index) => {
     const label = game.i18n.localize(`${UI}.Archetype.${archetype}`);
     const line = game.i18n.format(`${UI}.ArchetypeLine`, {
       stamina: spriteStamina(archetype, band, caster),
@@ -215,16 +227,19 @@ async function promptArchetype(caster, band) {
  * Compile one sprite for a Technomancer: band from their current level, Stamina stamped from live Logic × level.
  * @param {Actor} caster                  The Technomancer.
  * @param {object} [options]
- * @param {string} [options.archetype]    data | attack | machine | ward; prompts when omitted.
+ * @param {string} [options.archetype]    data | attack | machine | ward | special; prompts when omitted.
  * @param {object} [options.position]     {x, y} to place the token at, instead of the ring beside the caster.
  * @param {boolean} [options.silent]      Skip the "compiled" notification (used by the level refresh).
  * @param {boolean} [options.reduced]     C5: rebuild at reduced power (half Stamina).
  * @param {{actions: number, purpose: string}} [options.special]  0.3.139 (A): the Special Sprite's
  *   action budget and the purpose the player wrote after seeing it. Stamped onto the summoned Actor's
  *   description as `Actions (N): …purpose…` and kept in flags so a band swap can re-stamp it.
+ * @param {object} [options.message]      0.3.140 (A): the Compile Sprite card this compile came from.
+ *   Its Power Roll is the tier that buys the action budget when the player picks Special out of the
+ *   archetype dropdown, so that path never rolls twice.
  * @returns {Promise<Actor|null>}
  */
-export async function compileSprite(caster, { archetype, position, silent = false, reduced = false, special = null } = {}) {
+export async function compileSprite(caster, { archetype, position, silent = false, reduced = false, special = null, message = null } = {}) {
   if (!isTechnomancer(caster)) return ui.notifications.warn(game.i18n.localize(`${UI}.NotTechnomancer`));
   if (!canvas.scene) return ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`));
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) return ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`));
@@ -238,10 +253,20 @@ export async function compileSprite(caster, { archetype, position, silent = fals
 
   const level = casterLevel(caster);
   const band = spriteBand(level);
+  // Whether the player chose this archetype just now decides what an un-budgeted Special means.
+  const picked = (archetype === undefined) || (archetype === null);
   archetype ??= await promptArchetype(caster, band);
   if (!ALL_ARCHETYPES.includes(archetype)) return null;
-  // A Special Sprite without a budget and a purpose is not a Special Sprite; the ability owns that prompt.
-  if ((archetype === SPECIAL_ARCHETYPE) && !special) return null;
+  // A Special Sprite without a budget and a purpose is not a Special Sprite.
+  if ((archetype === SPECIAL_ARCHETYPE) && !special) {
+    // A *caller* that asks for one without a payload still gets null: the level refresh and Recompile
+    // must never open a prompt. A player who picked it off the dropdown gets the flow it needs —
+    // roll → Actions → purpose → spend — and then compiles with the payload in hand.
+    if (!picked) return null;
+    const payload = await specialSpritePayload(caster, message);
+    if (!payload) return null;
+    return compileSprite(caster, { archetype, position, silent, reduced, special: payload });
+  }
 
   const template = await templateFor(archetype, band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { dsid: `sprite-${archetype}-${band}` }));
@@ -413,7 +438,7 @@ const isRecompileAbility = item =>
 /** The just-destroyed sprite this caster can still rebuild, or null. */
 export function destroyedSprite(caster) {
   const record = caster?.getFlag?.(MODULE_ID, DESTROYED_FLAG) ?? null;
-  return ARCHETYPES.includes(record?.archetype) ? record : null;
+  return RESHAPE_ARCHETYPES.includes(record?.archetype) ? record : null;
 }
 
 /**
@@ -444,7 +469,8 @@ async function promptRecompile(caster, targets) {
       : game.i18n.format(`${UI}.RecompileReshapeOption`, { name: row.name });
     return `<option value="${row.value}"${index === 0 ? " selected" : ""}>${label}</option>`;
   }).join("");
-  const archetypeOptions = ARCHETYPES.map((archetype, index) =>
+  // Special is never a reshape target: it is built once, for a job the player wrote after the dice.
+  const archetypeOptions = RESHAPE_ARCHETYPES.map((archetype, index) =>
     `<option value="${archetype}"${index === 0 ? " selected" : ""}>${UIL(`Archetype.${archetype}`)}</option>`).join("");
   return foundry.applications.api.DialogV2.prompt({
     window: { title: UIL("RecompileTitle") },
@@ -495,7 +521,7 @@ export async function recompileSprite(caster, { target, archetype } = {}) {
     target = choice.target;
     archetype = choice.archetype;
   }
-  if (!ARCHETYPES.includes(archetype)) return null;
+  if (!RESHAPE_ARCHETYPES.includes(archetype)) return null;
   const row = targets.find(t => t.value === target);
   if (!row) return null;
 
@@ -554,16 +580,41 @@ async function promptSpecialPurpose(caster, actions) {
 }
 
 /**
- * **Special Sprite**, driven off the card the ability just posted. The order is the feature, and here
- * it falls out of the seam: the hook only runs *after* the Power Roll, so the tier is already on the
- * message when the budget is computed and the purpose is asked for.
+ * 0.3.140 (A) — the Power Roll for a Special picked somewhere no card was posted: the ⋮ menu on the
+ * Compile Sprite row, or the Compile button on its sheet. Both of those call {@link compileSprite}
+ * directly, so there is no `abilityResult` to read a tier off — and a budget handed out without dice
+ * would be the one thing this feature is not allowed to do. Same 2d10 + Logic the ability rolls, and
+ * it posts, so the table sees the roll that bought the Actions.
  *
- *   roll → tier buys Actions → player writes the purpose → the sprite manifests with it annotated.
- *
- * Cost is 3 Resonance **in combat only**; out of combat the sprite is free, so the ability card carries
- * no stock `resource` and this is the only thing that writes Resonance for it.
+ * @returns {Promise<number>} The tier the dice landed on.
  */
-async function compileSpecialSprite(caster, message) {
+async function rollSpecialTier(caster) {
+  const roll = new ds.rolls.PowerRoll("2d10 + @logic", { logic: casterLogic(caster) }, {
+    type: "ability",
+    flavor: game.i18n.format(`${UI}.SpecialRollFlavor`, { name: caster.name }),
+  });
+  await roll.evaluate();
+  await roll.toMessage({ speaker: ChatMessage.getSpeaker({ actor: caster }) });
+  return Number(roll.product) || 1;
+}
+
+/**
+ * The whole Special Sprite half, up to but not including the Actor: check, roll, budget, purpose, pay.
+ *
+ * Shared by both entry paths — the standalone **Special Sprite** ability (which arrives with its own
+ * card, so the tier is already rolled) and **Compile Sprite**'s archetype dropdown (0.3.140 A). The
+ * order is the feature and it is LOCKED, so it is written once:
+ *
+ *   roll → tier buys Actions → player writes the purpose → pay → the sprite manifests annotated.
+ *
+ * Cost is 3 Resonance **in combat only**; out of combat the sprite is free, so neither ability card
+ * carries a stock `resource` and this is the only thing that writes Resonance for them.
+ *
+ * @param {Actor} caster
+ * @param {object|null} message  The card that already rolled, or null to roll here.
+ * @returns {Promise<{actions: number, purpose: string}|null>} null when the player backed out or cannot pay.
+ */
+async function specialSpritePayload(caster, message) {
   const current = Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0;
   const plan = specialSpendPlan({ inCombat: !!caster.inCombat, current, cost: SPECIAL_SPRITE_RESONANCE });
   if (!plan.ok) {
@@ -579,13 +630,26 @@ async function compileSpecialSprite(caster, message) {
     return null;
   }
 
-  const actions = actionsForTier(tierFromMessage(message));
+  // 1 — the roll, then 2 — the tier buys the budget. A card that came in already rolled is never re-rolled.
+  const actions = actionsForTier(message ? tierFromMessage(message) : await rollSpecialTier(caster));
+  // 3 — only now does the player write what it is for.
   const purpose = await promptSpecialPurpose(caster, actions);
   if (purpose === null) return null;
 
-  // Out of combat there is no spend at all — not a spend of 0.
+  // 4 — pay. Out of combat there is no spend at all — not a spend of 0.
   if (plan.spend > 0) await caster.update({ [RESOURCE_PATH]: plan.next });
-  return compileSprite(caster, { archetype: SPECIAL_ARCHETYPE, special: { actions, purpose } });
+  return { actions, purpose };
+}
+
+/**
+ * **Special Sprite**, driven off the card the ability just posted. The order falls out of the seam:
+ * the hook only runs *after* the Power Roll, so the tier is already on the message when
+ * {@link specialSpritePayload} computes the budget and asks for the purpose.
+ */
+async function compileSpecialSprite(caster, message) {
+  const special = await specialSpritePayload(caster, message);
+  if (!special) return null;
+  return compileSprite(caster, { archetype: SPECIAL_ARCHETYPE, special });
 }
 
 export function registerSprites() {
@@ -602,7 +666,9 @@ export function registerSprites() {
     const ability = abilityFromMessage(message);
     const caster = ability?.parent;
     if (!(caster instanceof Actor) || !caster.isOwner || !isTechnomancer(caster)) return;
-    if (ability.system?._dsid === COMPILE_DSID) await compileSprite(caster);
+    // 0.3.140 (A): the card is passed through — if the player picks Special out of the dropdown,
+    // the Power Roll that just posted is the tier that buys its Actions.
+    if (ability.system?._dsid === COMPILE_DSID) await compileSprite(caster, { message });
     else if (ability.system?._dsid === SPECIAL_SPRITE_DSID) await compileSpecialSprite(caster, message);
     else if (ability.system?._dsid === RECOMPILE_DSID) await recompileSprite(caster);
   });
@@ -759,6 +825,9 @@ export function registerSprites() {
       // 0.3.139 (A) — Special Sprite
       compileSpecialSprite, actionsForTier, specialSummonDescription, specialSpendPlan, tierFromMessage,
       SPECIAL_SPRITE_RESONANCE, SPECIAL_SPRITE_DSID, SPECIAL_ARCHETYPE, ACTIONS_BY_TIER,
+      // 0.3.140 (A) — Special Sprite is in the Compile picker too; Recompile still refuses it.
+      compileArchetypeOptions, reshapeArchetypes, ARCHETYPES: [...ARCHETYPES],
+      PICKER_ARCHETYPES: [...ALL_ARCHETYPES], RESHAPE_ARCHETYPES: [...RESHAPE_ARCHETYPES],
     };
   }
   console.log(`${MODULE_ID} | Sprites: Compile / Special / Decompile registered (hero sheet row menu and Compile Sprite item sheet)`);

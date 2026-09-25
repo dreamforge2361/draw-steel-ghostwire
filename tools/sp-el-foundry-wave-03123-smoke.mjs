@@ -274,7 +274,9 @@ note(/is-self/.test(read("templates/wired-console.hbs")), "the row is marked in 
 console.log("\nC4/C5) Sprites: the card compiles, and Recompile rebuilds");
 const spriteSrc = read("scripts/sprites.mjs");
 note(/spriteCompileOnUse/.test(spriteSrc), "there is a world setting for compile-on-use");
-note(/if \(ability\.system\?\._dsid === COMPILE_DSID\) await compileSprite\(caster\)/.test(spriteSrc),
+// 0.3.140 (A): the card is handed through as well, so a Special picked out of the dropdown reads the
+// tier off the Power Roll that just posted instead of rolling again. Still the same one call.
+note(/if \(ability\.system\?\._dsid === COMPILE_DSID\) await compileSprite\(caster(, \{ message \})?\)/.test(spriteSrc),
   "using the Compile Sprite card compiles a sprite");
 note(/await recompileSprite\(caster\)/.test(spriteSrc), "and using Recompile recompiles one");
 note(/rememberDestroyed/.test(spriteSrc), "a destroyed sprite is remembered so it can be rebuilt");

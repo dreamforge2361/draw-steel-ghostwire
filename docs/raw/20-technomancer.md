@@ -168,7 +168,7 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 > *Your baseline, every-turn presence — the class's answer to "what does the Technomancer do when nothing bigger is queued up."*
 
 > **In Foundry**
-> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward, and the matching Summons › Sprites Actor drops a token beside you. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan — the token stays meat-side. Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor.
+> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward — or **Special Sprite**, last in the list — and the matching Summons › Sprites Actor drops a token beside you. Special Sprite is the one entry that does not compile straight away: it rolls, tells you the action budget the tier bought, and asks what the sprite is for first. Its own **Special Sprite** ability card still does exactly the same thing, so either way in works. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan — the token stays meat-side. Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor.
 
 > **Resonance Strike** *(Class Feature Signature — the damage)*
 > *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*
@@ -203,6 +203,8 @@ Compile Sprite hands you one of four stock archetypes. **Special Sprite** hands 
 **Cap, Stamina and cleanup.** A Special Sprite counts against your sprite cap like any other sprite, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced. Recompile cannot reshape a Special Sprite: its purpose is not a menu entry.
 
 **No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different sprite.
+
+**Two ways in.** Special Sprite has its own ability card, and it is also the last entry in the **Compile Sprite** archetype list. Both run the order above, and both cost the same.
 
 > **Special Sprite** *(Signature — 3 Resonance in combat, free out of combat)*
 >
