@@ -1,4 +1,4 @@
-// Passengers (0.3.136) — Ghostwire-native **Mount / Dismount**: hero tokens ride a machine token.
+// Passengers (0.3.137) — Ghostwire-native **Mount / Dismount**: hero tokens ride a machine token.
 //
 // The third-party Rideable module was doing this badly, so Ghostwire owns it now. The whole feature
 // is two flags and one rule:
@@ -13,18 +13,31 @@
 // Nothing in this file touches it, imports it, or shares a lang key with it. Weapon Mount / Unmount
 // keeps `GHOSTWIRE.Mounts.*`; passengers get `GHOSTWIRE.Ride.*`.
 //
-// **Where riders sit.** On the *rim*, not on top. Riders shrink to half art scale and orbit the mount
-// token's bounding circle at a fixed seat angle, so a 3-square Bulldog with four heroes aboard reads
-// as a crewed truck rather than a pile of overlapping portraits. The seat angle is relative to the
-// mount's rotation, so turning the truck carries its crew around with it.
+// **Where riders sit.** On the *hull rim*, not on top and not out in the road. Riders shrink to half
+// art scale and sit on an **ellipse** that follows the mount token's own footprint — `(w/2)·cos` by
+// `(h/2)·sin`, pulled in to `SEAT_RING` (0.9) of it — so a 3-square Bulldog with four heroes aboard
+// reads as a crewed truck rather than a pile of overlapping portraits, and a 1×4 flatbed does not park
+// its crew two squares off its flanks the way a circle of `max(w, h)/2` did through 0.3.136. The seat
+// offset is worked out in the mount's own frame and then turned by the mount's rotation, so turning
+// the truck carries its crew around with it.
+//
+// **Following the mount (0.3.137).** Foundry 13/14 push a drag through the MovementManager, so
+// `updateToken` can fire with the x/y the crew needed missing from `changes`. Three things fix that:
+// the follow hook also listens to `moveToken` / `stopToken`, every follow re-reads geometry off the
+// **live** TokenDocument instead of trusting `changes`, and the last geometry the crew was seated
+// against is remembered per mount so *any* update that leaves the mount somewhere else re-seats them
+// even when `changes` says nothing useful. Rider writes ask for the `displace` movement action, so a
+// carried passenger is *placed* in its seat rather than walked there along a wall-constrained path —
+// the v13 `{ teleport: true }` shorthand does the same thing but logs a deprecation warning per seat.
 //
 // **Capacity.** No Ghostwire chassis carries a crew-seat number in its data — `vehicle.stations` is
 // declared in `machines.mjs` and empty on every shipped SKU — so the band decides, per the 0.3.136
 // brief's default: Micro cannot carry, Small carries 1, Medium carries 2, and vehicles carry by band.
 // A Director who wants a different number sets `flags.<module>.machine.seats` on the machine Actor.
 //
-// Everything above `registerPassengers` is Foundry-free so `tools/wave-03136-smoke.mjs` can run the
-// real seat maths and the real capacity table offline.
+// Everything above `registerPassengers` is Foundry-free so `tools/wave-03136-smoke.mjs` and
+// `tools/wave-03137-smoke.mjs` can run the real seat maths, the real follow test and the real capacity
+// table offline.
 
 import { isMachineKindDocument } from "./machines.mjs";
 
@@ -38,6 +51,16 @@ export const RIDERS_FLAG = "riders";
 
 /** Art scale a rider is drawn at while aboard. The token footprint never changes. */
 export const MOUNTED_RIDER_SCALE = 0.5;
+
+/**
+ * How far out along the hull a seat sits, as a fraction of the mount's own half-width / half-height.
+ *
+ * **0.3.137 fix.** Seats used the mount's bounding *circle* at ring 1, which is right on a square
+ * token and wrong on every long one: a 1×4 flatbed put its crew `2` squares off its flanks, clear of
+ * the painted chassis, which is the "rider off to the side" bug Michael screenshotted on 0.3.136.
+ * Just inside the footprint (0.9) reads as *on* the hull at every aspect ratio — the brief's 0.85–0.95.
+ */
+export const SEAT_RING = 0.9;
 
 /**
  * Passenger seats per machine band. **Default rule, 0.3.136** — no shipped chassis carries a seat
@@ -100,8 +123,13 @@ export function seatAngle(seatIndex, seatCount, rotation = 0) {
 /**
  * Top-left pixel position for a rider sitting on a mount's rim.
  *
- * `ring` scales the orbit radius: 1 puts the rider centred on the mount's bounding circle (aboard),
- * and `dismountPosition` pushes it out past the hull.
+ * The rim is an **ellipse** on the mount's own footprint, not a circle on its longest side: the seat
+ * offset is `(ring · w/2 · cos θ, ring · h/2 · sin θ)` in the mount's *unrotated* frame, and that
+ * offset is then turned by the mount's rotation. A long chassis therefore seats its crew along the
+ * hull instead of throwing the flank seats out past the art.
+ *
+ * `ring` scales the offset: 1 is the edge of the footprint, `SEAT_RING` is the seat used by Mount and
+ * follow, and `dismountPosition` pushes it out past the hull.
  *
  * @returns {{x: number, y: number}} integer pixels, top-left, the shape a TokenDocument update wants.
  */
@@ -111,14 +139,32 @@ export function rimSeatPosition({
   seatIndex = 0, seatCount = 1, rotation = 0, grid = 100, ring = 1,
 } = {}) {
   const size = Math.max(1, Number(grid) || 100);
-  const centreX = Number(mountX) + ((Number(mountWidth) || 1) * size / 2);
-  const centreY = Number(mountY) + ((Number(mountHeight) || 1) * size / 2);
-  const radius = (Math.max(Number(mountWidth) || 1, Number(mountHeight) || 1) * size / 2) * (Number(ring) || 1);
-  const theta = seatAngle(seatIndex, seatCount, rotation);
+  const halfW = (Number(mountWidth) || 1) * size / 2;
+  const halfH = (Number(mountHeight) || 1) * size / 2;
+  const centreX = Number(mountX) + halfW;
+  const centreY = Number(mountY) + halfH;
+  const scale = Number(ring) || 1;
+  // Seat angle in the mount's own frame, then rotate the offset with the hull.
+  const theta = seatAngle(seatIndex, seatCount, 0);
+  const localX = scale * halfW * Math.cos(theta);
+  const localY = scale * halfH * Math.sin(theta);
+  const spin = ((Number(rotation) || 0) * Math.PI) / 180;
+  const cos = Math.cos(spin);
+  const sin = Math.sin(spin);
   return {
-    x: Math.round(centreX + (radius * Math.cos(theta)) - ((Number(riderWidth) || 1) * size / 2)),
-    y: Math.round(centreY + (radius * Math.sin(theta)) - ((Number(riderHeight) || 1) * size / 2)),
+    x: Math.round(centreX + (localX * cos) - (localY * sin) - ((Number(riderWidth) || 1) * size / 2)),
+    y: Math.round(centreY + (localX * sin) + (localY * cos) - ((Number(riderHeight) || 1) * size / 2)),
   };
+}
+
+/**
+ * Where a rider actually sits — the one seating function **both** Mount and follow-the-mount use, so
+ * the first mount cannot land somewhere the first move then corrects.
+ *
+ * Same options as `rimSeatPosition`; the only difference is that `ring` defaults to `SEAT_RING`.
+ */
+export function seatPosition(options = {}) {
+  return rimSeatPosition({ ...options, ring: Number(options?.ring) || SEAT_RING });
 }
 
 /**
@@ -195,12 +241,114 @@ export function riderMoveBlocked(tokenDoc, changes = {}, options = {}) {
   return ("x" in changes) || ("y" in changes) || ("elevation" in changes);
 }
 
+/* ============================================ Following the mount (0.3.137, Foundry 14.367) */
+
+/**
+ * Token fields that move a seat. Kept as one exported list so the hook and the smoke agree.
+ *
+ * This is the **fast path**, not the only one: on Foundry 14.367 a drag is a MovementManager
+ * operation, and `updateToken` can arrive without the keys the crew needed in `changes`. See
+ * `shouldFollowMount`.
+ */
+export const MOUNT_GEOMETRY_KEYS = ["x", "y", "rotation", "elevation", "width", "height"];
+
+/** The six numbers a seat is worked out from, read off a live TokenDocument (never off `changes`). */
+export function mountGeometry(tokenDoc) {
+  return {
+    x: Number(tokenDoc?.x) || 0,
+    y: Number(tokenDoc?.y) || 0,
+    width: Number(tokenDoc?.width) || 1,
+    height: Number(tokenDoc?.height) || 1,
+    rotation: Number(tokenDoc?.rotation) || 0,
+    elevation: Number(tokenDoc?.elevation) || 0,
+  };
+}
+
+/** True when two geometries would seat the crew in the same place. */
+export function sameGeometry(a, b) {
+  if (!a || !b) return false;
+  return MOUNT_GEOMETRY_KEYS.every(key => (Number(a[key]) || 0) === (Number(b[key]) || 0));
+}
+
+/**
+ * Should the crew be re-seated?
+ *
+ * **0.3.137 fix.** Through 0.3.136 this was only "does `changes` mention x/y/rotation/elevation/size",
+ * which is the bug Michael screenshotted: Foundry 13/14 route a drag through the MovementManager, the
+ * `updateToken` that comes out of it need not carry those keys, and the crew stayed where it was while
+ * the truck drove off. Three independent ways in now, cheapest first:
+ *
+ * 1. `movement` — a `moveToken` / `stopToken` hook fired, so the mount definitely moved.
+ * 2. `changes` names a geometry key (the old fast path; still the common case for a rotate or a resize).
+ * 3. The live geometry differs from the geometry the crew was last seated against — which catches
+ *    *any* update at all that left the mount somewhere else, whatever `changes` happened to say.
+ *
+ * A mount we have never seated is always followed, so a fresh session re-seats on first contact.
+ *
+ * @param {{changes?: object, geometry?: object|null, seated?: object|null, movement?: boolean}} options
+ */
+export function shouldFollowMount({ changes = {}, geometry = null, seated = null, movement = false } = {}) {
+  if (movement) return true;
+  if (MOUNT_GEOMETRY_KEYS.some(key => key in (changes ?? {}))) return true;
+  if (!seated) return true;
+  return !sameGeometry(geometry, seated);
+}
+
+/**
+ * Which client writes the seats. Exactly one, or four heroes get moved four times.
+ *
+ * The active GM owns the write whenever one is connected — that is Michael's solo-GM table, where the
+ * active GM *is* the client that dragged the truck. With no GM connected, the user who caused the
+ * update does it. `stopToken` hands us no user at all, so that last case falls back to "a GM, if this
+ * client is one" rather than letting every spectator write.
+ *
+ * @param {{userId?: string|null, activeGmId?: string|null, selfId?: string|null, selfIsGM?: boolean}} options
+ */
+export function shouldHandleRide({ userId = null, activeGmId = null, selfId = null, selfIsGM = false } = {}) {
+  if (activeGmId) return activeGmId === selfId;
+  if (userId) return userId === selfId;
+  return !!selfIsGM;
+}
+
+/**
+ * The `movement` operation a rider write carries, so a carried passenger is **displaced** into its
+ * seat instead of walking there.
+ *
+ * This matters more than it sounds: a plain x/y write is a normal move, and Foundry 14 constrains a
+ * normal move against walls and regions. A rider seated on the far side of a wall from its own last
+ * square would be stopped short of the seat — the truck drives through the gate, the crew piles up
+ * against it. `action: "displace"` is the non-deprecated way to say "put it there"; the v13 shorthand
+ * `{ teleport: true }` still works but logs a deprecation warning on every single seat.
+ */
+export function rideMovement(updates = []) {
+  const movement = {};
+  for (const update of updates ?? []) {
+    if (!update?._id) continue;
+    // An update that does not name a square is not a move; do not invent a stand-still waypoint for it.
+    if (!Number.isFinite(update.x) && !Number.isFinite(update.y)) continue;
+    movement[update._id] = {
+      method: "api",
+      autoRotate: false,
+      showRuler: false,
+      waypoints: [{
+        x: update.x, y: update.y, elevation: update.elevation,
+        action: "displace", snapped: false, explicit: false, checkpoint: true,
+      }],
+    };
+  }
+  return movement;
+}
+
 /* ================================================================ Foundry side */
 
 /** One client does the writing: the active GM, or the user who moved the mount when there is none. */
 function shouldHandle(userId) {
-  if (game.users?.activeGM) return !!game.users.activeGM.isSelf;
-  return userId === game.user?.id;
+  return shouldHandleRide({
+    userId: userId ?? null,
+    activeGmId: game.users?.activeGM?.id ?? null,
+    selfId: game.user?.id ?? null,
+    selfIsGM: !!game.user?.isGM,
+  });
 }
 
 function gridSize(tokenDoc) {
@@ -229,6 +377,22 @@ export function canCarryRiders(tokenDoc) {
 function warn(key, data) {
   ui.notifications.warn(data ? game.i18n.format(`${L}.${key}`, data) : game.i18n.localize(`${L}.${key}`));
   return false;
+}
+
+/**
+ * One rider's seat on one mount, off the mount's **live** TokenDocument.
+ *
+ * The single place either code path works out a seat: `mountRiders` seats the first mount through it
+ * and `followMount` re-seats through it, so the first mount cannot land somewhere the first move then
+ * silently corrects — the 0.3.136 "rider off to the side" report was partly exactly that.
+ */
+function seatFor(mount, rider, { seatIndex = 0, seatCount = 1 } = {}) {
+  const geometry = mountGeometry(mount);
+  return seatPosition({
+    mountX: geometry.x, mountY: geometry.y, mountWidth: geometry.width, mountHeight: geometry.height,
+    riderWidth: rider?.width, riderHeight: rider?.height,
+    seatIndex, seatCount, rotation: geometry.rotation, grid: gridSize(mount),
+  });
 }
 
 /**
@@ -264,11 +428,7 @@ export async function mountRiders(mount, riders = []) {
   const updates = [];
   for (const { tokenId, seatIndex } of plan.seated) {
     const rider = byId.get(tokenId);
-    const spot = rimSeatPosition({
-      mountX: mount.x, mountY: mount.y, mountWidth: mount.width, mountHeight: mount.height,
-      riderWidth: rider.width, riderHeight: rider.height,
-      seatIndex, seatCount: capacity, rotation: mount.rotation, grid: gridSize(mount),
-    });
+    const spot = seatFor(mount, rider, { seatIndex, seatCount: capacity });
     updates.push({
       _id: tokenId,
       ...spot,
@@ -286,8 +446,13 @@ export async function mountRiders(mount, riders = []) {
       },
     });
   }
-  await scene.updateEmbeddedDocuments("Token", updates, { ghostwireRide: true });
+  await scene.updateEmbeddedDocuments("Token", updates, {
+    ghostwireRide: true, movement: rideMovement(updates),
+  });
   await mount.setFlag(MODULE_ID, RIDERS_FLAG, [...occupied, ...plan.seated]);
+  // 0.3.137: run the follow path once now, so the seat the table sees on the first Mount is the same
+  // seat the first drag would have produced. Everyone aboard gets re-checked, not just the new arrivals.
+  await followMount(mount);
 
   const names = plan.seated.map(seat => byId.get(seat.tokenId)?.name).filter(Boolean).join(", ");
   ui.notifications.info(game.i18n.format(`${L}.Mounted`, {
@@ -348,7 +513,11 @@ export async function dismountRiders(riders = [], { notify = true, mount = null 
     }
   }
   for (const { scene, updates } of byScene.values()) {
-    await scene.updateEmbeddedDocuments("Token", updates, { ghostwireRide: true });
+    // Displace, same as a seat write: a hero stepping off a truck against a wall must land in the
+    // square we picked for them, not be stopped short of it by a pathfinding constraint.
+    await scene.updateEmbeddedDocuments("Token", updates, {
+      ghostwireRide: true, movement: rideMovement(updates),
+    });
   }
   for (const { host, ids } of byMount.values()) {
     if (!host) continue;
@@ -376,32 +545,55 @@ export async function dismountAll(mount, { notify = true } = {}) {
   return dismountRiders(riders, { notify, mount });
 }
 
+/**
+ * The geometry each mount's crew was last seated against, by token id.
+ *
+ * Not persisted and not meant to be: it is the memory that lets *any* `updateToken` re-seat a crew
+ * whose mount has drifted, even when `changes` says nothing a seat depends on. A forgotten entry costs
+ * one extra follow, which is the safe direction to be wrong in.
+ */
+const seatedGeometry = new Map();
+
 /** Move every rider to its seat after the mount has moved, turned or changed elevation. */
 async function followMount(mount) {
   const scene = mount?.parent;
   const seats = ridersOf(mount);
-  if (!scene || !seats.length) return;
+  if (!scene || !seats.length) { if (mount?.id) seatedGeometry.delete(mount.id); return; }
   const capacity = tokenSeatCapacity(mount) || seats.length;
-  const grid = gridSize(mount);
+  const geometry = mountGeometry(mount);
   const updates = [];
   const orphaned = [];
   for (const seat of seats) {
     const rider = scene.tokens.get(seat.tokenId);
     if (!rider) { orphaned.push(seat.tokenId); continue; }
-    const spot = rimSeatPosition({
-      mountX: mount.x, mountY: mount.y, mountWidth: mount.width, mountHeight: mount.height,
-      riderWidth: rider.width, riderHeight: rider.height,
-      seatIndex: seat.seatIndex, seatCount: capacity, rotation: mount.rotation, grid,
-    });
-    updates.push({ _id: rider.id, ...spot, elevation: mount.elevation ?? 0 });
+    const spot = seatFor(mount, rider, { seatIndex: seat.seatIndex, seatCount: capacity });
+    updates.push({ _id: rider.id, ...spot, elevation: geometry.elevation });
   }
-  if (updates.length) await scene.updateEmbeddedDocuments("Token", updates, { ghostwireRide: true, animate: true });
+  if (updates.length) {
+    await scene.updateEmbeddedDocuments("Token", updates, {
+      ghostwireRide: true, animate: true, movement: rideMovement(updates),
+    });
+  }
+  seatedGeometry.set(mount.id, geometry);
   // A rider token deleted out from under us leaves a dead seat; drop it rather than carry a ghost.
   if (orphaned.length) {
     const kept = seats.filter(seat => !orphaned.includes(seat.tokenId));
     if (kept.length) await mount.setFlag(MODULE_ID, RIDERS_FLAG, kept);
     else await mount.unsetFlag(MODULE_ID, RIDERS_FLAG);
   }
+}
+
+/**
+ * The gate in front of `followMount`: is this mount carrying anybody, and has anything a seat depends
+ * on actually changed? Shared by the `updateToken` and the Foundry 14 movement hooks.
+ */
+async function followIfMoved(mount, { changes = {}, movement = false } = {}) {
+  if (!mount?.id) return;
+  const seats = ridersOf(mount);
+  if (!seats.length) { seatedGeometry.delete(mount.id); return; }
+  const geometry = mountGeometry(mount);
+  if (!shouldFollowMount({ changes, geometry, seated: seatedGeometry.get(mount.id) ?? null, movement })) return;
+  await followMount(mount);
 }
 
 /**
@@ -527,12 +719,26 @@ export function registerPassengers() {
     return false;
   });
 
-  // The mount moved, turned or climbed: carry the crew.
+  // The mount moved, turned or climbed: carry the crew. `changes` is only the fast path — see
+  // `shouldFollowMount` for why, and note that the seat itself is always worked out from the live
+  // TokenDocument, never from `changes`.
   Hooks.on("updateToken", async (tokenDoc, changes, options, userId) => {
     if (options?.ghostwireRide || !shouldHandle(userId)) return;
-    if (!["x", "y", "rotation", "elevation", "width", "height"].some(key => key in changes)) return;
-    if (!ridersOf(tokenDoc).length) return;
-    await followMount(tokenDoc);
+    await followIfMoved(tokenDoc, { changes: changes ?? {} });
+  });
+
+  // Foundry 14.367 pushes a drag / keyboard step through the MovementManager and announces it here:
+  // `moveToken(document, movement, operation, user)` fires after the document holds its destination,
+  // and `stopToken(document)` fires when a constrained move is cut short (one argument, no user). This
+  // is the hook that was missing through 0.3.136, which is why a dragged truck left its crew behind.
+  Hooks.on("moveToken", async (tokenDoc, _movement, operation, user) => {
+    if (operation?.ghostwireRide) return;
+    if (!shouldHandle(user?.id ?? operation?.user?.id ?? null)) return;
+    await followIfMoved(tokenDoc, { movement: true });
+  });
+  Hooks.on("stopToken", async tokenDoc => {
+    if (!shouldHandle(null)) return;
+    await followIfMoved(tokenDoc, { movement: true });
   });
 
   // Recall, undeploy or a plain delete frees the crew. Recall deletes the mount's token first, so the
@@ -542,6 +748,7 @@ export function registerPassengers() {
     if (seats.length) tokenDoc._ghostwireRiders = seats;
   });
   Hooks.on("deleteToken", async (tokenDoc, _options, userId) => {
+    seatedGeometry.delete(tokenDoc.id);
     if (!shouldHandle(userId)) return;
     const scene = tokenDoc.parent;
     // The mount is gone: free whoever was on it.
@@ -606,14 +813,18 @@ export function registerPassengers() {
         canCarryRiders,
         resolveRideParty,
         rimSeatPosition,
+        seatPosition,
         dismountPosition,
         mountPlan,
+        followMount,
         SEAT_CAPACITY,
+        SEAT_RING,
         MOUNTED_RIDER_SCALE,
       },
     };
   }
-  console.log(`${MODULE_ID} | Passengers: Mount / Dismount registered (rim seats; weapon hardpoints untouched)`);
+  console.log(`${MODULE_ID} | Passengers: Mount / Dismount registered (ellipse hull seats, `
+    + `Foundry 14 movement hooks; weapon hardpoints untouched)`);
 }
 
 /** The lang root this file owns. `GHOSTWIRE.Mounts.*` belongs to weapon hardpoints and stays there. */
