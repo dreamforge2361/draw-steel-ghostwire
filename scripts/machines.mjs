@@ -62,6 +62,74 @@ export function machineTokenSize(band, item = null) {
   }
 }
 
+/**
+ * Token art scale per drone band. **Locked 0.3.135 (4).**
+ *
+ * Three bands ship, so three numbers ship. A Skitter and a Mule-Bot were both drawn at `scaleX: 1` on
+ * a one-square token, so a palm-sized recon bug and a cargo hauler read as the same machine on the
+ * map. This is the **art** scale (`prototypeToken.texture.scaleX/scaleY`), not the token footprint —
+ * `machineTokenSize` still owns width and height in grid squares, and no drone art was touched or
+ * regenerated for this: the existing silhouette plates are simply drawn at the right size.
+ *
+ * `+0.5` per band above Medium if a fourth band is ever added — but this table invents nothing now.
+ */
+export const DRONE_TOKEN_SCALES = Object.freeze({
+  "drone-micro": 0.5,
+  "drone-small": 1,
+  "drone-medium": 1.5,
+});
+
+/** The Item `flags.<module>.vehicle.scale` word each drone band is spelled with, lowercase. */
+const DRONE_SCALE_WORDS = Object.freeze({
+  personal: "drone-micro",
+  micro: "drone-micro",
+  light: "drone-small",
+  small: "drone-small",
+  vehicle: "drone-medium",
+  medium: "drone-medium",
+});
+
+/**
+ * The drone band a scale word or band name names, or `null`.
+ *
+ * Takes either side of the source of truth: `flags.draw-steel-ghostwire.vehicle.scale` on the Item
+ * ("Personal" / "Light" / "Vehicle") or the band on the summon Actor ("drone-micro" / …). Anything
+ * else — a vehicle band, a base asset, a Director's homebrew word — is `null`, and `null` means
+ * "leave the art alone" everywhere this is used.
+ *
+ * @param {string} value
+ * @returns {"drone-micro"|"drone-small"|"drone-medium"|null}
+ */
+export function droneScaleBand(value) {
+  const raw = String(value ?? "").trim().toLowerCase().replace(/^machine-/, "");
+  if (!raw) return null;
+  if (raw in DRONE_TOKEN_SCALES) return raw;
+  // `vehicle-car` / `vehicle-air` are **vehicle** bands, not the Item scale word "Vehicle". Reading
+  // the first word of either would turn every car into a Medium drone, so band names are rejected
+  // before the word table is consulted.
+  if (/^(?:vehicle|drone)-/.test(raw)) return null;
+  return DRONE_SCALE_WORDS[raw.split(/[^a-z]+/)[0]] ?? null;
+}
+
+/**
+ * Art scale for a drone token: 0.5 Micro / 1 Small / 1.5 Medium, or `null` when this is not a drone.
+ *
+ * The Item's own `vehicle.scale` wins over the band, because a named drone Item is the specific thing
+ * and the band is the scaffold it was stamped from. A **vehicle** — a car, a bike, a VTOL — returns
+ * `null`: this wave is drones only, by lock.
+ *
+ * @param {string|null} band   `machineBand(item)` / the Actor's band flag.
+ * @param {object} [vehicle]   `flags.<module>.vehicle` from the Item.
+ * @returns {number|null}
+ */
+export function droneTokenScale(band, vehicle = null) {
+  if (vehicle?.baseAsset) return null;             // a Door Lock borrows the small-drone band; it is furniture
+  if (vehicle && !vehicle.drone) return null;      // a car, a bike, a VTOL — not this wave, by lock
+  // An Item flagged a drone but spelling its scale some other way still follows its band.
+  const resolved = (vehicle ? droneScaleBand(vehicle.scale ?? vehicle.sizeScale) : null) ?? droneScaleBand(band);
+  return resolved ? DRONE_TOKEN_SCALES[resolved] : null;
+}
+
 /** Monk's Bloodsplats damage indicator for constructs. Harmless if that module is disabled. */
 export const MACHINE_BLOODSPLAT_SCOPE = "monks-bloodsplats";
 export const MACHINE_BLOODSPLAT_TYPE = "scorch";
@@ -926,10 +994,17 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
   await actor.update(machinePatch);
 
   const tokenSize = machineTokenSize(band, item);
+  // 0.3.135 (4) — art scale by band: 0.5 Micro / 1 Small / 1.5 Medium. `null` for vehicles and base
+  // assets, and `null` leaves the template's own scale exactly where it was.
+  const artScale = droneTokenScale(band, vehicleFlags);
   await actor.update({
     "system.combat.size.value": tokenSize,
     "prototypeToken.width": tokenSize,
     "prototypeToken.height": tokenSize,
+    ...(artScale == null ? {} : {
+      "prototypeToken.texture.scaleX": artScale,
+      "prototypeToken.texture.scaleY": artScale,
+    }),
     [`prototypeToken.flags.${MACHINE_BLOODSPLAT_SCOPE}.bloodsplat-type`]: MACHINE_BLOODSPLAT_TYPE,
   });
   const tokenDocument = await actor.getTokenDocument({
@@ -937,6 +1012,7 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
     actorLink: true,
     width: tokenSize,
     height: tokenSize,
+    ...(artScale == null ? {} : { texture: { scaleX: artScale, scaleY: artScale } }),
   });
   const tokenData = tokenDocument.toObject();
   applyMachineTokenDefaults(tokenData);
@@ -1125,6 +1201,7 @@ export function registerMachines() {
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
       describeWeaponryKit, machineModSheetFields, machineModMirrorData, machineMountMirrorData, mountedWeaponsOn,
       fleetSizeCap, fieldedMachineCount, fleetIdleWirePlan, machineTokenSize, isDeployedMachineActor, hasAnyToken,
+      droneTokenScale, droneScaleBand, DRONE_TOKEN_SCALES,
       applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
       isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
     };

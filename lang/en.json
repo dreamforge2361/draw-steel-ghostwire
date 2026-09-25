@@ -10353,7 +10353,7 @@
       },
       "Edge": {
         "Name": "Rallied — edge on your next roll",
-        "Description": "<p>You have an <strong>edge</strong> on your next power roll. It clears the moment you use it.</p>",
+        "Description": "<p>You have an <strong>edge</strong> on your next power roll &mdash; ability rolls and tests alike. It clears the moment you use it.</p>",
         "Spent": "{name}'s rally edge is spent."
       }
     }

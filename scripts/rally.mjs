@@ -42,6 +42,29 @@ export const RALLY_CONDITIONS = Object.freeze([
 export const EDGE_CHARACTERISTICS = Object.freeze(["might", "agility", "reason", "intuition", "presence"]);
 
 /**
+ * Edges an **ability** power roll takes from a live Rally edge.
+ *
+ * 0.3.135 (1). The bug: the Active Effect above adds 1 to `system.characteristics.*.edges`, and Draw
+ * Steel's ability roll never reads that key. `AbilityModel#use` builds its dialog from
+ * `config.modifiers.edges` / `power.roll.edges` — characteristic edges are a **test** concept — so the
+ * Rallied icon sat on the sheet, the description said "edge on your next power roll", and every
+ * ability roll came out at zero edges. The AE stays (it is the marker the clear-hook looks for, and it
+ * is what makes the edge show up on a characteristic *test*); ability rolls get this explicit bump,
+ * the same seam scripts/mark.mjs, scripts/module.mjs and scripts/workshop-benches.mjs already use.
+ *
+ * Only a roll can eat the edge, so a maneuver with no power roll returns 0 and the edge survives for
+ * the roll it was promised to.
+ *
+ * @param {object} spec
+ * @param {boolean} spec.hasEdge      The actor is carrying the Rally edge effect.
+ * @param {boolean} spec.rollEnabled  `this.power.roll.enabled` on the ability being used.
+ * @returns {0|1}
+ */
+export function rallyAbilityEdges({ hasEdge = false, rollEnabled = false } = {}) {
+  return (hasEdge && rollEnabled) ? 1 : 0;
+}
+
+/**
  * The single condition Rally lifts from this set, or `null` when none of them is present.
  * @param {Iterable<string>} statuses  The actor's current status ids.
  * @returns {string|null}
@@ -124,7 +147,8 @@ function edgeEffectData() {
   };
 }
 
-const hasRallyEdge = actor => !!actor?.effects?.get?.(RALLY_EDGE_ID);
+/** Is this actor carrying the one-shot Rally edge? Exported so the smoke can name the seam. */
+export const hasRallyEdge = actor => !!actor?.effects?.get?.(RALLY_EDGE_ID);
 
 /** Put the one-shot edge on one actor, replacing any it already has rather than stacking. */
 async function grantRallyEdge(actor) {
@@ -258,6 +282,19 @@ function patchSupportCards() {
   const use = AbilityModel.prototype.use;
   AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
     const dsid = this.parent?.system?._dsid ?? "";
+
+    // 0.3.135 (1) — the Rally edge, on **any** ability with a power roll, before anything else runs.
+    // It rides in on `config.modifiers` so the player sees it sitting in the roll dialog and the
+    // Director can clear it, exactly like the Mark edge and the workshop bench edge.
+    const rallyEdges = rallyAbilityEdges({
+      hasEdge: hasRallyEdge(this.actor),
+      rollEnabled: !!this.power?.roll?.enabled,
+    });
+    if (rallyEdges) {
+      const modifiers = config.modifiers ?? {};
+      config = { ...config, modifiers: { ...modifiers, edges: (Number(modifiers.edges) || 0) + rallyEdges } };
+    }
+
     if ((dsid !== RALLY_DSID) && (dsid !== LAY_ON_HANDS_DSID)) {
       return use.call(this, config, dialogOptions, messageOptions);
     }
@@ -296,8 +333,11 @@ export function registerRally() {
   if (module) {
     module.api = {
       ...(module.api ?? {}),
-      rally: { resolveRally, resolveLayOnHands, worstCondition, rallyTempStamina, inRally, RALLY_CONDITIONS },
+      rally: {
+        resolveRally, resolveLayOnHands, worstCondition, rallyTempStamina, inRally, RALLY_CONDITIONS,
+        rallyAbilityEdges, hasRallyEdge,
+      },
     };
   }
-  console.log(`${MODULE_ID} | Rally the Crew and Lay On Hands registered (shared recovery prompt)`);
+  console.log(`${MODULE_ID} | Rally the Crew and Lay On Hands registered (shared recovery prompt; rally edge on ability rolls)`);
 }

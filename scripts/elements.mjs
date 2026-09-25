@@ -97,6 +97,74 @@ export function elementFx(element, sfxRoot = "modules/draw-steel-ghostwire/asset
   return { color: row.color, core: row.core, sound: `${sfxRoot}/${row.sound}` };
 }
 
+/** The three damage tiers, in the order a card prints them. */
+const DAMAGE_TIERS = Object.freeze(["tier1", "tier2", "tier3"]);
+
+/**
+ * Every power effect on an ability, whatever shape it is in.
+ *
+ * 0.3.135 (2) — this is the second half of the Hurl Element colour bug, and the reason 0.3.134's fix
+ * only worked in Node. `system.power.effects` is a **CollectionField** on the live `AbilityModel`, so
+ * `Object.values(effects)` on it returns the collection's own enumerable *properties* — not its
+ * entries — which is an empty list of damage effects on every real card in a running world. The
+ * attunement write path was correct all along (Kaës had `flag = fire` and typed tiers, and chat said
+ * Fire Damage); `elementOfAbility` simply could not see it, returned `null`, and `hit-fx.mjs` fell
+ * through to `spellFlavour("Hurl Element")` — arcane pale blue.
+ *
+ * Four shapes, in order of how much they tell us:
+ *
+ *  1. `effects.documentsByType.damage` — a `ModelCollection`'s type index. Cheapest and exact.
+ *  2. `effects.values()` — any Map / Collection / Set.
+ *  3. a plain array (what a smoke or a `toObject()` hands over).
+ *  4. a plain object keyed by effect id (what the pack JSON on disk looks like).
+ *
+ * @param {object|Array|Map|null} effects
+ * @returns {object[]}
+ */
+export function powerEffectList(effects) {
+  if (!effects) return [];
+  if (Array.isArray(effects)) return effects;
+  const byType = effects.documentsByType;
+  if (byType) {
+    const damage = byType.damage ?? byType.get?.("damage");
+    if (damage) return Array.isArray(damage) ? damage : [...damage];
+  }
+  if (typeof effects.values === "function") {
+    try {
+      return [...effects.values()];
+    } catch {
+      /* fall through to the plain-object read */
+    }
+  }
+  if (typeof effects !== "object") return [];
+  return Object.values(effects).filter(value => value && (typeof value === "object"));
+}
+
+/**
+ * The model type of one power effect.
+ *
+ * A plain row carries `type`; a live `DamageModel` carries it on its schema *and* on the class as
+ * `TYPE`, and a `toObject()`-ed one keeps it on `_source`. All three are read rather than assuming.
+ *
+ * @param {object} effect
+ * @returns {string}
+ */
+export function powerEffectType(effect) {
+  const raw = effect?.type ?? effect?.constructor?.TYPE ?? effect?._source?.type ?? "";
+  return String(raw ?? "").toLowerCase();
+}
+
+/** A tier's damage types as a plain lowercase array, whatever container they arrived in. */
+function damageTypes(tier) {
+  const types = tier?.types;
+  if (!types) return [];
+  if (typeof types === "string") return [types.toLowerCase()];
+  if (Array.isArray(types) || (typeof types[Symbol.iterator] === "function")) {
+    return [...types].map(type => String(type).toLowerCase());
+  }
+  return Object.values(types).map(type => String(type).toLowerCase());
+}
+
 /**
  * The element an ability is currently typed to, read off its own damage effects.
  *
@@ -109,17 +177,38 @@ export function elementFx(element, sfxRoot = "modules/draw-steel-ghostwire/asset
  * @returns {string|null}
  */
 export function elementOfAbility(ability) {
-  const effects = ability?.system?.power?.effects ?? {};
-  const list = Array.isArray(effects) ? effects : Object.values(effects);
-  for (const effect of list) {
-    if ((effect?.type ?? "") !== "damage") continue;
-    for (const tier of ["tier1", "tier2", "tier3"]) {
-      const types = effect?.damage?.[tier]?.types ?? [];
-      const hit = [...types].map(t => String(t).toLowerCase()).find(t => ELEMENT_FX[t]);
+  const effects = ability?.system?.power?.effects ?? ability?.power?.effects ?? null;
+  for (const effect of powerEffectList(effects)) {
+    if (powerEffectType(effect) !== "damage") continue;
+    for (const tier of DAMAGE_TIERS) {
+      const hit = damageTypes(effect?.damage?.[tier]).find(type => ELEMENT_FX[type]);
       if (hit) return hit;
     }
   }
   return null;
+}
+
+/**
+ * The element to colour an attack with: the card's own damage type, else the caster's attunement.
+ *
+ * 0.3.135 (2), the belt to the braces above. A Director's homebrew Hurl Element, or a card the
+ * attunement sync has not reached yet, still carries the hero's chosen element — it is on the actor
+ * as `flags.draw-steel-ghostwire.attunement`. Reading it here means the fallback is the player's own
+ * pick rather than arcane blue. Returns `null` when neither source says anything, because a guess is
+ * worse than the generic profile.
+ *
+ * `attunement` is passed in rather than imported so this file stays Foundry-free and free of a cycle
+ * with scripts/elementalist.mjs.
+ *
+ * @param {object} ability
+ * @param {string} [attunement]  The caster's attunement flag, when the caller can see one.
+ * @returns {string|null}
+ */
+export function elementForFx(ability, attunement = "") {
+  const typed = elementOfAbility(ability);
+  if (typed) return typed;
+  const fallback = String(attunement ?? "").trim().toLowerCase();
+  return ELEMENT_FX[fallback] ? fallback : null;
 }
 
 /**

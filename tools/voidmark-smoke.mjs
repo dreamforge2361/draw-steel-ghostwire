@@ -7,8 +7,12 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { citationLabels, retrieve, retrievalQuery, scoreChunk } from "../scripts/voidmark-rag.mjs";
-import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages } from "../scripts/voidmark-prompt.mjs";
+import {
+  citationLabels, clarification, classRoute, retrieve, retrievalQuery, retrieveConversational, scoreChunk,
+} from "../scripts/voidmark-rag.mjs";
+import {
+  DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages, formatClarification,
+} from "../scripts/voidmark-prompt.mjs";
 import { buildChatRequest, redactSecrets, serializeRequestForLog } from "../scripts/voidmark-client.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -283,6 +287,150 @@ ok(files.has("29-summon-stat-blocks.md"), "the index includes the generated summ
   ok(topFiles(hits).includes("L9-arms-makers.md"), `"who makes the Ferrum Rivet" reaches the Arms Makers chapter (${topFiles(hits)[0]})`);
 }
 
+
+/* ------------------------------------------------- 0.3.135 (3) VOIDMARK full wave */
+
+console.log("");
+console.log("0.3.135) Packs indexed, current-query-first retrieval, class routing, clarifying questions");
+
+/* 3a — every ability, ritual Working and summon is a first-class entry. */
+{
+  ok(files.has("pack-abilities.md"), "the index ingests the abilities packs");
+  ok(files.has("pack-rituals.md"), "…the 46 ritual Workings");
+  ok(files.has("pack-summons.md"), "…and the summons pack");
+  ok(index.entityCounts?.ability === 418, `${index.entityCounts?.ability} ability entries`);
+  ok(index.entityCounts?.ritual === 46, `${index.entityCounts?.ritual} ritual Working entries`);
+  ok(index.entityCounts?.summon === 68, `${index.entityCounts?.summon} summon / machine entries`);
+  const entities = new Set(index.chunks.map(c => c.entity).filter(Boolean));
+  ok(entities.has("Ward the Room"), "Ward the Room is an entry by name, not a paragraph of Veil prose");
+  ok(entities.has("Hurl Element"), "…and so is Hurl Element");
+  ok(entities.has("Zephyr Companion"), "…and the Zephyr");
+  // Every Working, not a sample of them: the lock is "all Workings".
+  const workings = index.chunks.filter(c => c.kind === "ritual");
+  const workingNames = new Set(workings.map(c => c.entity));
+  ok(workingNames.size === 46, `all ${workingNames.size} Workings are retrievable by name`);
+  ok(workings.every(c => c.entityDsid?.startsWith("ritual-")), "…and every one carries its own dsid");
+  ok(index.chunks.every(c => (c.kind !== "ability") || c.entityDsid), "every ability entry carries its dsid");
+  const ward = workings.find(c => c.entity === "Ward the Room");
+  ok(/bane/i.test(ward.text) && /one room/i.test(ward.text), "the Ward entry carries the card's own plain-words text");
+  // `retrieve` skips any chunk longer than its char budget, so an unsplit card would be invisible.
+  // (Three long *chapter* chunks predate this wave and are not pack entries — hence the kind filter.)
+  const packKinds = new Set(["ability", "ritual", "summon"]);
+  const oversize = index.chunks.filter(c => packKinds.has(c.kind) && (String(c.text ?? "").length > 5500));
+  ok(!oversize.length, `no pack entry is too large for retrieve to pick up (${oversize.length} oversize)`);
+}
+
+/* 3b — the current question first. Ward must survive a thread that was about summons. */
+const SUMMON_TURN = { role: "user", content: "I am an elementalist and I've just summoned my electrical spirit what can he do?" };
+const WARD_Q = "What does ward the room do?";
+
+{
+  const alone = retrieveConversational(index, { query: WARD_Q });
+  ok(alone[0]?.entity === "Ward the Room", `"${WARD_Q}" alone leads with the Ward entry (${alone[0]?.heading})`);
+
+  const afterSummons = retrieveConversational(index, {
+    query: WARD_Q,
+    history: [SUMMON_TURN, { role: "assistant", content: "Your zephyr strikes for 4 electrical." }],
+  });
+  ok(afterSummons[0]?.entity === "Ward the Room", `…and still leads with it after a summon turn (${afterSummons[0]?.heading})`);
+  ok(afterSummons.filter(h => h.origin === "current").length >= 3, "the current question holds its reserved slots");
+  ok(afterSummons.some(h => /ward/i.test(h.heading ?? "")), "Ward is not starved by the prior summon chat");
+
+  // The 0.3.134 behaviour, for contrast: one merged search string put summons on top.
+  const merged = retrieve(index, retrievalQuery({ query: WARD_Q, history: [SUMMON_TURN] }));
+  ok(!/ward the room/i.test(merged[0]?.heading ?? ""), "the old merged-query path did lead with the summons (the bug)");
+
+  // Diversity: one card or chapter cannot take every slot.
+  const spread = retrieveConversational(index, { query: WARD_Q }, { k: 5 });
+  const perKey = new Map();
+  for (const hit of spread) {
+    const key = hit.entity || hit.file;
+    perKey.set(key, (perKey.get(key) ?? 0) + 1);
+  }
+  ok([...perKey.values()].every(n => n <= 2), `per-source quota holds (${[...perKey.entries()].map(([k, n]) => `${k} x${n}`).join(", ")})`);
+
+  // And a bare follow-up still works — that is what the continuity pass is for.
+  const followUp = retrieveConversational(index, {
+    query: "and how much damage?",
+    history: [SUMMON_TURN],
+    token: { name: "Electrical Zephyr", type: "npc", dsid: "companion-zephyr" },
+  });
+  ok(followUp.some(h => /zephyr/i.test(h.heading ?? "")), "a bare follow-up still reaches the Zephyr through continuity");
+}
+
+/* 3c — an Elementalist's electrical spirit is a Zephyr / bound elemental, never a pact spirit. */
+{
+  const route = classRoute(SUMMON_TURN.content);
+  ok(route?.kind === "elementalistSummon", `the question routes to the Elementalist (${route?.kind})`);
+  ok(route.demote.includes("hunter spirit"), "…and pact spirits are demoted, not deleted");
+
+  const hits = retrieveConversational(index, { query: SUMMON_TURN.content });
+  const headings = hits.map(h => h.heading).join(" | ");
+  ok(/bound elemental|zephyr|greater elemental/i.test(headings), `electrical spirit reaches the Bound Elemental / Zephyr path (${headings})`);
+  ok(!/guardian spirit|hunter spirit|warrior spirit/i.test(headings), `…and no Street Priest pact spirit (${headings})`);
+
+  // The aliases work without the class being named at all.
+  for (const alias of ["what can my electrical spirit do?", "how does a lightning spirit attack?", "electrical zephyr damage"]) {
+    ok(classRoute(alias)?.kind === "elementalistSummon", `alias routes: "${alias}"`);
+  }
+  // A Street Priest still gets their own spirits.
+  const priestQ = "I am a street priest, what does my pact spirit do?";
+  ok(classRoute(priestQ)?.kind === "pactSpirit", "a priest's spirit is a pact spirit");
+  const priest = retrieveConversational(index, { query: priestQ });
+  ok(/guardian|hunter|warrior|pact/i.test(priest.map(h => h.heading).join(" | ")), "…and the pact blocks come back for them");
+
+  // Selected-token boost.
+  for (const [dsid, want] of [["elemental-rank-3", /bound elemental \(rank 3\)/i], ["companion-zephyr", /zephyr/i]]) {
+    const selected = retrieveConversational(index, {
+      query: "what can it do?",
+      token: { name: "Bound Elemental", type: "npc", dsid },
+    });
+    ok(want.test(selected[0]?.heading ?? ""), `selected ${dsid} boosts its own entry (${selected[0]?.heading})`);
+  }
+}
+
+/* 3d — "did you mean X?" instead of a guess or "not on this channel". */
+{
+  const ambiguous = "what does the ward do?";
+  const hits = retrieveConversational(index, { query: ambiguous });
+  const clarify = clarification(hits, ambiguous);
+  ok(clarify?.ask === true, `"${ambiguous}" asks which ward`);
+  ok(clarify.candidates.length >= 2, `…and offers ${clarify.candidates.length}: ${clarify.candidates.join(" / ")}`);
+  const instruction = formatClarification(clarify);
+  ok(/Did you mean X, or Y\?/.test(instruction), "the prompt carries the did-you-mean instruction");
+  ok(/not on this channel/.test(instruction), "…and explicitly forbids the not-on-this-channel fallback here");
+
+  ok(clarification(retrieveConversational(index, { query: WARD_Q }), WARD_Q) === null,
+    "a question that names its card asks nothing");
+  ok(clarification([], "anything") === null, "an empty retrieve is a different problem, not an ambiguous one");
+
+  const messages = buildChatMessages({ mode: "director", hits, query: ambiguous, clarify });
+  ok(/AMBIGUOUS ASK/.test(messages[0].content), "the system message carries the clarify block");
+  ok(!/AMBIGUOUS ASK/.test(buildChatMessages({ mode: "director", hits, query: WARD_Q }).content),
+    "…and does not when there is nothing to ask");
+}
+
+/* 3e — grounded rules first, then a labelled read. */
+{
+  ok(/ANSWER SHAPE/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "the prompt has an answer shape");
+  ok(/\*\*The rules\*\*/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "…rules first");
+  ok(/Mark's read/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "…then Mark's read");
+  ok(/Tactical angle/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "…labelled as the tactical angle in Director mode");
+  ok(/never invents a rule/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "…and never invents a rule there");
+  ok(/ability, ritual, Working, spell, summon or construct/.test(DEFAULT_SYSTEM_INSTRUCTIONS),
+    "the prompt knows the packet covers any card");
+  ok(/Never ask the table to clear the thread/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "no CLEAR THREAD between topics");
+  ok(/Did you mean X, or Y/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "the persona knows to ask rather than guess");
+  const wardHits = retrieveConversational(index, { query: WARD_Q });
+  const system = buildChatMessages({ mode: "director", hits: wardHits, query: WARD_Q })[0].content;
+  ok(/card: Ward the Room/.test(system), "the context names the exact card the answer should quote");
+  const threaded = buildChatMessages({
+    mode: "director",
+    hits: retrieveConversational(index, { query: WARD_Q, history: [SUMMON_TURN] }),
+    query: WARD_Q,
+  })[0].content;
+  ok(/background only/.test(threaded), "…and marks continuity packets as background, not as the answer");
+}
 
 console.log("");
 if (failures.length) {
