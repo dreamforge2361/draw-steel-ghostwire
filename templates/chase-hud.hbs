@@ -1,0 +1,230 @@
+<div class="gw-ch">
+  {{#if noScene}}
+  <p class="gw-ch-dim">{{localize "GHOSTWIRE.ChaseHud.NoScene"}}</p>
+  {{else if noChase}}
+  <section class="gw-ch-start">
+    <p class="gw-ch-dim">{{noChaseText}}</p>
+    {{#if isGM}}
+    <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="startChase">
+      <i class="fa-solid fa-flag-checkered"></i> {{localize "GHOSTWIRE.ChaseHud.Start"}}
+    </button>
+    {{/if}}
+    <button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="toggleMute" data-tooltip="{{muteHint}}">
+      <i class="fa-solid {{#if muted}}fa-volume-xmark{{else}}fa-volume-high{{/if}}"></i> {{muteLabel}}
+    </button>
+  </section>
+  {{else}}
+
+  <header class="gw-ch-bar">
+    <span class="gw-ch-chip gw-ch-round">{{round}}</span>
+    <span class="gw-ch-phase-now">{{phaseLabel}}</span>
+    {{#if isGM}}
+    <button type="button" class="gw-ch-btn" data-action="prevPhase" data-tooltip="{{localize 'GHOSTWIRE.ChaseHud.Prev'}}"><i class="fa-solid fa-backward-step"></i></button>
+    <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="nextPhase"><i class="fa-solid fa-forward-step"></i> {{localize "GHOSTWIRE.ChaseHud.Next"}}</button>
+    {{/if}}
+    <span class="gw-ch-spacer"></span>
+    <button type="button" class="gw-ch-btn gw-ch-btn-ghost gw-ch-mute {{#if muted}}muted{{/if}}" data-action="toggleMute" data-tooltip="{{muteHint}}" aria-pressed="{{#if muted}}true{{else}}false{{/if}}">
+      <i class="fa-solid {{#if muted}}fa-volume-xmark{{else}}fa-volume-high{{/if}}"></i> {{muteLabel}}
+    </button>
+    {{#if isGM}}
+    <button type="button" class="gw-ch-btn gw-ch-btn-danger" data-action="endChase"><i class="fa-solid fa-ban"></i> {{localize "GHOSTWIRE.ChaseHud.End"}}</button>
+    {{/if}}
+  </header>
+
+  <ol class="gw-ch-phases">
+    {{#each phases}}
+    <li class="gw-ch-phase {{#if current}}current{{/if}} {{#if done}}done{{/if}}" data-tooltip="{{label}}">
+      <span class="gw-ch-step">{{step}}</span> {{label}}
+    </li>
+    {{/each}}
+  </ol>
+  <p class="gw-ch-phase-hint">{{phaseHint}}</p>
+
+  {{#if overText}}<p class="gw-ch-over"><i class="fa-solid fa-flag-checkered"></i> {{overText}}</p>{{/if}}
+
+  <section class="gw-ch-track" aria-label="{{localize 'GHOSTWIRE.ChaseHud.Track'}}">
+    <div class="gw-ch-track-lead" data-tooltip="{{leadHint}}">
+      <i class="fa-solid fa-crown"></i> {{localize "GHOSTWIRE.ChaseHud.Lead"}}: <strong>{{leadName}}</strong>
+    </div>
+    <ol class="gw-ch-bands">
+      {{#each track}}
+      <li class="gw-ch-band band-{{id}}">
+        <span class="gw-ch-band-label">{{label}}</span>
+        <div class="gw-ch-band-chips">
+          {{#each chips}}<span class="gw-ch-car side-{{side}} {{#if out}}out{{/if}}">{{name}}</span>{{/each}}
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+
+  {{#if pending.length}}
+  <section class="gw-ch-pending">
+    <h4><i class="fa-solid fa-hourglass-half"></i> {{localize "GHOSTWIRE.ChaseHud.Pending" count=pending.length}}</h4>
+    {{#each pending}}
+    <div class="gw-ch-pending-row">
+      <span class="gw-ch-pending-summary">{{summary}}{{#if from}} <span class="gw-ch-dim">— {{from}}</span>{{/if}}</span>
+      {{#if ../isGM}}
+      <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="review" data-pending="{{id}}"><i class="fa-solid fa-sliders"></i> {{localize "GHOSTWIRE.ChaseHud.Review.Open"}}</button>
+      <button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="discard" data-pending="{{id}}"><i class="fa-solid fa-trash"></i></button>
+      {{/if}}
+    </div>
+    {{/each}}
+  </section>
+  {{/if}}
+
+  {{#if isIntegrityPhase}}
+  <section class="gw-ch-integrity-phase">
+    <span>{{localize "GHOSTWIRE.ChaseHud.Queued.Total" damage=queuedTotal}}</span>
+    {{#if isGM}}
+    <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="applyQueued"><i class="fa-solid fa-car-burst"></i> {{localize "GHOSTWIRE.ChaseHud.Queued.Open"}}</button>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  <section class="gw-ch-vehicles">
+    {{#unless hasVehicles}}<p class="gw-ch-dim">{{localize "GHOSTWIRE.ChaseHud.NoVehicles"}}</p>{{/unless}}
+    {{#each vehicles}}
+    <article class="gw-ch-vehicle side-{{side}} {{#if isLead}}lead{{/if}} {{#if out}}out{{/if}}">
+      <header class="gw-ch-vehicle-head">
+        <img class="gw-ch-img" src="{{img}}" alt="" data-action="openSheet" data-vehicle="{{id}}">
+        <div class="gw-ch-identity">
+          <h3 class="gw-ch-name" data-action="openSheet" data-vehicle="{{id}}">{{name}}</h3>
+          <div class="gw-ch-meta">
+            {{#if ../isGM}}
+            <select data-edit="side" data-vehicle="{{id}}" aria-label="{{localize 'GHOSTWIRE.ChaseHud.SideLabel'}}">
+              {{#each sides}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+            </select>
+            {{else}}
+            <span class="gw-ch-chip side-{{side}}">{{sideLabel}}</span>
+            {{/if}}
+            {{#if isLead}}<span class="gw-ch-chip lead"><i class="fa-solid fa-crown"></i> {{localize "GHOSTWIRE.ChaseHud.Lead"}}</span>{{/if}}
+            {{#if missing}}<span class="gw-ch-chip warn">{{localize "GHOSTWIRE.ChaseHud.Missing"}}</span>{{/if}}
+          </div>
+        </div>
+        {{#if ../isGM}}
+        <div class="gw-ch-vehicle-controls">
+          {{#unless isLead}}<button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="makeLead" data-vehicle="{{id}}"><i class="fa-solid fa-crown"></i> {{localize "GHOSTWIRE.ChaseHud.MakeLead"}}</button>{{/unless}}
+          <button type="button" class="gw-ch-btn" data-action="adjustIntegrity" data-vehicle="{{id}}"><i class="fa-solid fa-screwdriver-wrench"></i> {{localize "GHOSTWIRE.ChaseHud.AdjustIntegrity"}}</button>
+          <button type="button" class="gw-ch-btn gw-ch-btn-danger" data-action="removeVehicle" data-vehicle="{{id}}" data-tooltip="{{localize 'GHOSTWIRE.ChaseHud.Remove'}}"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        {{/if}}
+      </header>
+
+      <div class="gw-ch-stats">
+        <div class="gw-ch-stat gw-ch-stat-integrity {{#if low}}low{{/if}}">
+          <span class="gw-ch-stat-label">{{localize "GHOSTWIRE.ChaseHud.Stat.Integrity"}}</span>
+          <span class="gw-ch-stat-value">{{integrity}}</span>
+          <span class="gw-ch-bar-track"><span class="gw-ch-bar-fill" style="width: {{pct}}%"></span></span>
+        </div>
+        <div class="gw-ch-stat"><span class="gw-ch-stat-label">{{localize "GHOSTWIRE.ChaseHud.Stat.Handling"}}</span><span class="gw-ch-stat-value">{{handling}}</span></div>
+        <div class="gw-ch-stat"><span class="gw-ch-stat-label">{{localize "GHOSTWIRE.ChaseHud.Stat.Speed"}}</span><span class="gw-ch-stat-value">{{speed}}</span></div>
+        <div class="gw-ch-stat"><span class="gw-ch-stat-label">{{localize "GHOSTWIRE.ChaseHud.Stat.Scale"}}</span><span class="gw-ch-stat-value">{{scale}}</span></div>
+        <div class="gw-ch-stat gw-ch-stat-band">
+          <span class="gw-ch-stat-label">{{localize "GHOSTWIRE.ChaseHud.Stat.Band"}}</span>
+          {{#if isLead}}
+          <span class="gw-ch-stat-value">{{bandLabel}}</span>
+          {{else if ../isGM}}
+          <span class="gw-ch-band-fiat">
+            <button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="bandStep" data-vehicle="{{id}}" data-delta="-1" data-tooltip="{{localize 'GHOSTWIRE.ChaseHud.BandOpen'}}"><i class="fa-solid fa-angle-left"></i></button>
+            <select data-edit="band" data-vehicle="{{id}}" aria-label="{{localize 'GHOSTWIRE.ChaseHud.BandFiat'}}" data-tooltip="{{localize 'GHOSTWIRE.ChaseHud.BandFiat'}}">
+              {{#each bands}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+            </select>
+            <button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="bandStep" data-vehicle="{{id}}" data-delta="1" data-tooltip="{{localize 'GHOSTWIRE.ChaseHud.BandClose'}}"><i class="fa-solid fa-angle-right"></i></button>
+          </span>
+          {{else}}
+          <span class="gw-ch-stat-value">{{bandLabel}}</span>
+          {{/if}}
+        </div>
+      </div>
+
+      {{#if tags.length}}
+      <div class="gw-ch-tags">{{#each tags}}<span class="gw-ch-chip {{cls}}">{{label}}</span>{{/each}}</div>
+      {{/if}}
+
+      <div class="gw-ch-stations">
+        {{#each stations}}
+        <div class="gw-ch-station station-{{id}}">
+          <span class="gw-ch-station-label" data-tooltip="{{hint}}">{{label}}</span>
+          <span class="gw-ch-seats">
+            {{#each seated}}
+            <span class="gw-ch-seat {{#if missing}}missing{{/if}}">{{name}}{{#if ../../../isGM}}<button type="button" class="gw-ch-unseat" data-action="unseat" data-vehicle="{{../../id}}" data-station="{{../id}}" data-actor="{{actorUuid}}" aria-label="{{localize 'GHOSTWIRE.ChaseHud.Unseat'}}"><i class="fa-solid fa-xmark"></i></button>{{/if}}</span>
+            {{/each}}
+            {{#if empty}}<span class="gw-ch-dim">{{localize "GHOSTWIRE.ChaseHud.Empty"}}</span>{{/if}}
+          </span>
+          {{#if canAdd}}
+          <select data-edit="seat" data-vehicle="{{../id}}" data-station="{{id}}" aria-label="{{localize 'GHOSTWIRE.ChaseHud.Seat'}}">
+            <option value="">{{#if single}}{{localize "GHOSTWIRE.ChaseHud.SeatSingle"}}{{else}}{{localize "GHOSTWIRE.ChaseHud.Seat"}}{{/if}}</option>
+            {{#each options}}<option value="{{value}}">{{label}}</option>{{/each}}
+          </select>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+
+      {{#if actions.length}}
+      <div class="gw-ch-actions">
+        {{#each actions}}
+        {{#if info}}
+        <p class="gw-ch-dim">{{info}}</p>
+        {{else}}
+        <div class="gw-ch-action {{#if acted}}acted{{/if}}" data-row="{{row}}">
+          <span class="gw-ch-action-label">{{label}} <span class="gw-ch-dim">— {{crewName}}</span></span>
+          {{#each intents}}
+          <label class="gw-ch-pick">{{label}}
+            <select data-pick="{{name}}" data-row="{{../row}}">{{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+          </label>
+          {{/each}}
+          {{#if targets}}
+          <label class="gw-ch-pick">{{localize "GHOSTWIRE.ChaseHud.Action.Target"}}
+            <select data-pick="target" data-row="{{row}}">{{#each targets}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+          </label>
+          {{/if}}
+          {{#if weapons}}
+          <label class="gw-ch-pick">{{localize "GHOSTWIRE.ChaseHud.Action.Weapon"}}
+            <select data-pick="weapon" data-row="{{row}}">{{#each weapons}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+          </label>
+          {{/if}}
+          {{#if edgeTo}}
+          <label class="gw-ch-pick">{{localize "GHOSTWIRE.ChaseHud.Action.EdgeTo"}}
+            <select data-pick="edgeTo" data-row="{{row}}">{{#each edgeTo}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}</select>
+          </label>
+          {{/if}}
+          <span class="gw-ch-action-buttons">
+            {{#if acted}}
+            <span class="gw-ch-chip ok"><i class="fa-solid fa-check"></i> {{localize "GHOSTWIRE.ChaseHud.Action.Acted"}}</span>
+            {{else}}
+            {{#if blockedText}}<span class="gw-ch-chip warn">{{blockedText}}</span>{{/if}}
+            {{#if (eq kind "pilot")}}
+            <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="pilotContest" data-vehicle="{{../id}}" {{disabled (not canRoll)}}><i class="fa-solid fa-dice-d10"></i> {{rollLabel}}</button>
+            {{/if}}
+            {{#if (eq kind "systems")}}
+            <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="systemsRoll" data-kind="{{systemsKind}}" data-vehicle="{{../id}}" {{disabled (not canRoll)}}><i class="fa-solid fa-dice-d10"></i> {{rollLabel}}</button>
+            {{/if}}
+            {{#if (eq kind "fire")}}
+            <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="fire" data-vehicle="{{../id}}" data-station="{{station}}" data-actor="{{actorUuid}}" {{disabled (not canRoll)}}><i class="fa-solid fa-crosshairs"></i> {{rollLabel}}</button>
+            {{/if}}
+            <button type="button" class="gw-ch-btn gw-ch-btn-ghost" data-action="pass" data-vehicle="{{../id}}" data-station="{{station}}" data-actor="{{actorUuid}}" {{disabled (not canPass)}}>{{localize "GHOSTWIRE.ChaseHud.Action.Pass"}}</button>
+            {{/if}}
+          </span>
+        </div>
+        {{/if}}
+        {{/each}}
+      </div>
+      {{/if}}
+    </article>
+    {{/each}}
+  </section>
+
+  {{#if isGM}}
+  <footer class="gw-ch-add">
+    <select name="addVehicle" aria-label="{{localize 'GHOSTWIRE.ChaseHud.AddVehicle'}}">
+      <option value="">{{#if addOptions.length}}{{localize "GHOSTWIRE.ChaseHud.AddPick"}}{{else}}{{localize "GHOSTWIRE.ChaseHud.NoneToAdd"}}{{/if}}</option>
+      {{#each addOptions}}<option value="{{value}}">{{label}}</option>{{/each}}
+    </select>
+    <button type="button" class="gw-ch-btn gw-ch-btn-hot" data-action="addVehicle"><i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.ChaseHud.AddVehicle"}}</button>
+    <button type="button" class="gw-ch-btn" data-action="addSelected"><i class="fa-solid fa-object-group"></i> {{localize "GHOSTWIRE.ChaseHud.AddSelected"}}</button>
+  </footer>
+  {{/if}}
+  {{/if}}
+</div>

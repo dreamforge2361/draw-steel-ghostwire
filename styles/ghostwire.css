@@ -2926,3 +2926,168 @@ body.ghostwire-theme .application.ghostwire-hero-sheet :focus-visible {
   border-color: var(--ghostwire-danger);
   box-shadow: 0 0 6px color-mix(in srgb, var(--ghostwire-danger) 40%, transparent);
 }
+
+/* ---------- Chase HUD (0.3.141) ---------- */
+
+.ghostwire-chase-hud {
+  --ch-cyan: var(--ghostwire-accent);
+  --ch-hot: var(--ghostwire-accent-hot);
+  --ch-border: var(--ghostwire-border);
+  --ch-muted: var(--ghostwire-text-muted);
+  --ch-text: var(--ghostwire-text);
+  --ch-surface: var(--ghostwire-surface);
+  --ch-ok: var(--ghostwire-ok);
+  --ch-warn: var(--ghostwire-warn);
+  --ch-danger: var(--ghostwire-danger);
+  --ch-crew: var(--ghostwire-accent);
+  --ch-opposition: var(--ghostwire-accent-hot);
+}
+.ghostwire-chase-hud .window-header { border-bottom: 1px solid color-mix(in srgb, var(--ch-cyan) 40%, transparent); }
+.ghostwire-chase-hud .window-content { padding: 0; background: var(--ch-surface); color: var(--ch-text); }
+.ghostwire-chase-hud .gw-ch { display: flex; flex-direction: column; gap: 0.5rem; min-height: 100%; padding: 0.55rem 0.7rem; font-size: 0.8rem; }
+.ghostwire-chase-hud .gw-ch-dim { margin: 0; color: var(--ch-muted); font-size: 0.74rem; }
+.ghostwire-chase-hud select {
+  background: var(--ghostwire-panel-2);
+  color: var(--ch-text);
+  border: 1px solid var(--ch-border);
+  border-radius: var(--ghostwire-radius-sm);
+  padding: 0.1rem 0.25rem;
+  font-size: 0.76rem;
+  height: auto;
+  width: auto;
+  max-width: 14rem;
+}
+.ghostwire-chase-hud .gw-ch-btn {
+  background: transparent;
+  color: var(--ch-cyan);
+  border: 1px solid color-mix(in srgb, var(--ch-cyan) 55%, var(--ch-border));
+  border-radius: var(--ghostwire-radius-sm);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: var(--ghostwire-track-md);
+  padding: 0.15rem 0.4rem;
+  width: auto;
+  line-height: 1.4;
+  flex: 0 0 auto;
+}
+.ghostwire-chase-hud .gw-ch-btn-hot { color: var(--ch-hot); border-color: color-mix(in srgb, var(--ch-hot) 60%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-btn-danger { color: var(--ch-danger); border-color: color-mix(in srgb, var(--ch-danger) 55%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-btn-ghost { color: var(--ch-muted); border-color: var(--ch-border); }
+.ghostwire-chase-hud .gw-ch-btn:hover:not(:disabled) { box-shadow: 0 0 8px color-mix(in srgb, var(--ch-cyan) 35%, transparent); }
+.ghostwire-chase-hud .gw-ch-btn:disabled { opacity: 0.4; }
+.ghostwire-chase-hud .gw-ch-mute.muted { color: var(--ch-warn); border-color: color-mix(in srgb, var(--ch-warn) 55%, var(--ch-border)); }
+
+.ghostwire-chase-hud .gw-ch-chip {
+  display: inline-flex; align-items: center; gap: 0.2rem;
+  border: 1px solid var(--ch-border);
+  border-radius: var(--ghostwire-radius-pill);
+  padding: 0.02rem 0.45rem;
+  font-size: 0.68rem;
+  color: var(--ch-muted);
+  white-space: nowrap;
+}
+.ghostwire-chase-hud .gw-ch-chip.ok { color: var(--ch-ok); border-color: color-mix(in srgb, var(--ch-ok) 45%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-chip.warn { color: var(--ch-warn); border-color: color-mix(in srgb, var(--ch-warn) 45%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-chip.hot { color: var(--ch-hot); border-color: color-mix(in srgb, var(--ch-hot) 45%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-chip.danger { color: var(--ch-danger); border-color: color-mix(in srgb, var(--ch-danger) 55%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-chip.kit { color: var(--ch-cyan); }
+.ghostwire-chase-hud .gw-ch-chip.lead { color: var(--ch-warn); }
+.ghostwire-chase-hud .gw-ch-chip.side-crew { color: var(--ch-crew); }
+.ghostwire-chase-hud .gw-ch-chip.side-opposition { color: var(--ch-opposition); }
+
+.ghostwire-chase-hud .gw-ch-start { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+.ghostwire-chase-hud .gw-ch-bar { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; border-bottom: 1px solid var(--ch-border); padding-bottom: 0.4rem; }
+.ghostwire-chase-hud .gw-ch-phase-now { font-weight: 700; color: var(--ch-cyan); letter-spacing: var(--ghostwire-track-sm); }
+.ghostwire-chase-hud .gw-ch-spacer { flex: 1; }
+
+.ghostwire-chase-hud .gw-ch-phases { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 0.2rem; }
+.ghostwire-chase-hud .gw-ch-phase {
+  border: 1px solid var(--ch-border);
+  border-radius: var(--ghostwire-radius-sm);
+  padding: 0.15rem 0.25rem;
+  font-size: 0.66rem;
+  color: var(--ch-muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.ghostwire-chase-hud .gw-ch-phase .gw-ch-step { font-weight: 700; }
+.ghostwire-chase-hud .gw-ch-phase.done { color: var(--ch-ok); border-color: color-mix(in srgb, var(--ch-ok) 35%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-phase.current { color: var(--ch-hot); border-color: var(--ch-hot); box-shadow: 0 0 6px color-mix(in srgb, var(--ch-hot) 35%, transparent); }
+.ghostwire-chase-hud .gw-ch-phase-hint { margin: 0; font-size: 0.74rem; color: var(--ch-text); border-left: 3px solid var(--ch-hot); padding-left: 0.4rem; }
+.ghostwire-chase-hud .gw-ch-over { margin: 0; color: var(--ch-warn); font-weight: 600; }
+
+.ghostwire-chase-hud .gw-ch-track { border: 1px solid var(--ch-border); border-radius: var(--ghostwire-radius-sm); padding: 0.35rem; background: color-mix(in srgb, var(--ch-surface) 80%, #000); }
+.ghostwire-chase-hud .gw-ch-track-lead { font-size: 0.72rem; color: var(--ch-warn); margin-bottom: 0.25rem; text-align: right; }
+.ghostwire-chase-hud .gw-ch-bands { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.2rem; }
+.ghostwire-chase-hud .gw-ch-band { border-top: 3px solid var(--ch-border); padding-top: 0.2rem; min-height: 3.2rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.ghostwire-chase-hud .gw-ch-band.band-brokenOff { border-top-color: var(--ch-muted); }
+.ghostwire-chase-hud .gw-ch-band.band-close { border-top-color: color-mix(in srgb, var(--ch-hot) 60%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-band.band-ramming { border-top-color: var(--ch-danger); }
+.ghostwire-chase-hud .gw-ch-band-label { font-size: 0.64rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--ch-muted); }
+.ghostwire-chase-hud .gw-ch-band-chips { display: flex; flex-direction: column; gap: 0.15rem; }
+.ghostwire-chase-hud .gw-ch-car {
+  font-size: 0.7rem; border-radius: var(--ghostwire-radius-sm); padding: 0.05rem 0.3rem;
+  border: 1px solid var(--ch-border); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  transition: background 200ms ease;
+}
+.ghostwire-chase-hud .gw-ch-car.side-crew { color: var(--ch-crew); border-color: color-mix(in srgb, var(--ch-crew) 50%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-car.side-opposition { color: var(--ch-opposition); border-color: color-mix(in srgb, var(--ch-opposition) 50%, var(--ch-border)); }
+.ghostwire-chase-hud .gw-ch-car.out { opacity: 0.45; text-decoration: line-through; }
+
+.ghostwire-chase-hud .gw-ch-pending { border: 1px solid color-mix(in srgb, var(--ch-hot) 50%, var(--ch-border)); border-radius: var(--ghostwire-radius-sm); padding: 0.35rem; display: flex; flex-direction: column; gap: 0.25rem; }
+.ghostwire-chase-hud .gw-ch-pending h4 { margin: 0; font-size: 0.76rem; color: var(--ch-hot); border: none; }
+.ghostwire-chase-hud .gw-ch-pending-row { display: flex; gap: 0.3rem; align-items: center; }
+.ghostwire-chase-hud .gw-ch-pending-summary { flex: 1; }
+.ghostwire-chase-hud .gw-ch-integrity-phase { display: flex; gap: 0.5rem; align-items: center; justify-content: space-between; border: 1px dashed var(--ch-border); border-radius: var(--ghostwire-radius-sm); padding: 0.3rem 0.4rem; }
+
+.ghostwire-chase-hud .gw-ch-vehicles { display: flex; flex-direction: column; gap: 0.45rem; overflow-y: auto; flex: 1; }
+.ghostwire-chase-hud .gw-ch-vehicle {
+  border: 1px solid var(--ch-border);
+  border-left: 3px solid var(--ch-crew);
+  border-radius: var(--ghostwire-radius-sm);
+  padding: 0.4rem 0.5rem;
+  background: color-mix(in srgb, var(--ch-surface) 85%, #000);
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+.ghostwire-chase-hud .gw-ch-vehicle.side-opposition { border-left-color: var(--ch-opposition); }
+.ghostwire-chase-hud .gw-ch-vehicle.lead { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ch-warn) 35%, transparent); }
+.ghostwire-chase-hud .gw-ch-vehicle.out { opacity: 0.6; }
+.ghostwire-chase-hud .gw-ch-vehicle-head { display: flex; gap: 0.5rem; align-items: center; }
+.ghostwire-chase-hud .gw-ch-img { width: 40px; height: 40px; object-fit: contain; border: 1px solid var(--ch-border); border-radius: var(--ghostwire-radius-sm); cursor: pointer; flex: 0 0 auto; }
+.ghostwire-chase-hud .gw-ch-identity { flex: 1; min-width: 0; }
+.ghostwire-chase-hud .gw-ch-name { margin: 0; font-size: 0.9rem; color: var(--ch-cyan); cursor: pointer; border: none; }
+.ghostwire-chase-hud .gw-ch-meta { display: flex; flex-wrap: wrap; gap: 0.25rem; align-items: center; margin-top: 0.15rem; }
+.ghostwire-chase-hud .gw-ch-vehicle-controls { display: flex; flex-wrap: wrap; gap: 0.25rem; justify-content: flex-end; }
+
+.ghostwire-chase-hud .gw-ch-stats { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr) 1.8fr; gap: 0.35rem; }
+.ghostwire-chase-hud .gw-ch-stat { display: flex; flex-direction: column; gap: 0.05rem; min-width: 0; }
+.ghostwire-chase-hud .gw-ch-stat-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--ch-muted); }
+.ghostwire-chase-hud .gw-ch-stat-value { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ghostwire-chase-hud .gw-ch-bar-track { display: block; height: 4px; border-radius: 2px; background: var(--ch-border); overflow: hidden; }
+.ghostwire-chase-hud .gw-ch-bar-fill { display: block; height: 100%; background: var(--ch-ok); transition: width 300ms ease; }
+.ghostwire-chase-hud .gw-ch-stat-integrity.low .gw-ch-bar-fill { background: var(--ch-danger); }
+.ghostwire-chase-hud .gw-ch-stat-integrity.low .gw-ch-stat-value { color: var(--ch-danger); }
+.ghostwire-chase-hud .gw-ch-band-fiat { display: flex; gap: 0.15rem; align-items: center; }
+.ghostwire-chase-hud .gw-ch-tags { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+
+.ghostwire-chase-hud .gw-ch-stations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.25rem 0.5rem; }
+.ghostwire-chase-hud .gw-ch-station { display: flex; flex-wrap: wrap; gap: 0.25rem; align-items: center; border-top: 1px solid color-mix(in srgb, var(--ch-border) 60%, transparent); padding-top: 0.2rem; }
+.ghostwire-chase-hud .gw-ch-station-label { font-size: 0.66rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--ch-muted); min-width: 4.2rem; }
+.ghostwire-chase-hud .gw-ch-seats { display: flex; flex-wrap: wrap; gap: 0.2rem; flex: 1; }
+.ghostwire-chase-hud .gw-ch-seat { display: inline-flex; align-items: center; gap: 0.15rem; border: 1px solid var(--ch-border); border-radius: var(--ghostwire-radius-pill); padding: 0 0.1rem 0 0.4rem; font-size: 0.72rem; }
+.ghostwire-chase-hud .gw-ch-seat.missing { color: var(--ch-warn); }
+.ghostwire-chase-hud .gw-ch-unseat { background: none; border: none; color: var(--ch-muted); padding: 0 0.2rem; width: auto; line-height: 1; font-size: 0.66rem; }
+.ghostwire-chase-hud .gw-ch-unseat:hover { color: var(--ch-danger); box-shadow: none; }
+
+.ghostwire-chase-hud .gw-ch-actions { display: flex; flex-direction: column; gap: 0.25rem; border-top: 1px solid var(--ch-border); padding-top: 0.3rem; }
+.ghostwire-chase-hud .gw-ch-action { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: flex-end; }
+.ghostwire-chase-hud .gw-ch-action.acted { opacity: 0.7; }
+.ghostwire-chase-hud .gw-ch-action-label { flex: 1 1 100%; font-weight: 600; font-size: 0.76rem; }
+.ghostwire-chase-hud .gw-ch-pick { display: flex; flex-direction: column; gap: 0.05rem; font-size: 0.6rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--ch-muted); }
+.ghostwire-chase-hud .gw-ch-action-buttons { display: flex; gap: 0.25rem; align-items: center; margin-left: auto; }
+
+.ghostwire-chase-hud .gw-ch-add { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; border-top: 1px solid var(--ch-border); padding-top: 0.4rem; }
+
+.ghostwire-chase-card h4 { margin: 0 0 0.2rem; }
+.ghostwire-chase-card p { margin: 0.1rem 0; }
+.ghostwire-chase-card .gw-ch-card-notes { color: var(--ghostwire-text-muted, #9aabbd); font-size: 0.85em; }
+.ghostwire-chase-review .form-group { margin: 0.25rem 0; }
