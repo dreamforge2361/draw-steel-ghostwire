@@ -397,6 +397,20 @@ Systems is a real station with a real action: locks, jam and spoof, terrain read
 
 **Wrench overlay.** A Jumped-In Wrench may cover Pilot **and** Gunner from one seat. **Override Ping** and fleet **Command** exist only if a Wrench is present. No step above needs a Wrench.
 
+#### Chase HUD (Foundry)
+
+In Foundry the checklist above runs in one window, the **Chase HUD**, also called the vehicle combat HUD. It does not use Foundry's combat tracker. Its phase stepper is the clock, so a chase and a foot fight can run side by side.
+
+- **Open it.** With a scene open, click the **Chase HUD** button (the crashing-car icon) in the Token controls on the left of the canvas. The Director starts the chase. Players can open the same window to watch the track and roll for the crew they play.
+- **Roster and seats.** The Director adds each deployed vehicle or drone on the scene, picks its side (Crew or Opposition) and the **lead**, and seats heroes or NPCs at **Pilot**, **Systems**, **Turrets** and **Ports**. Ports are passengers only; anyone already riding the vehicle starts there. Anyone can sit anywhere — no class is needed. An empty seat is skipped.
+- **Range track.** Every vehicle sits on the band track `Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding`, measured to the lead. The track is the source of truth for range.
+- **Phases.** The Director steps through 0 Setup → 1 Pilots → 2a Sensor lock → 2b Jam / spoof → 2c Terrain read → 3 Gunners → 4 Integrity → 5 End for every vehicle at once. In each phase, each seated crew member can roll that phase's action from the HUD, or pass.
+- **Rolls.** The HUD rolls the Power Rolls above with their edges and banes already worked out — Handling, untrained, Sensor Pod, Storm Lattice, Ghost Coat, Signal Mule, the lock banes on gunnery and the passengers' speed bane — and posts the dice to chat.
+- **The Director adjusts before anything changes.** Every roll waits for the Director. The review window can change the tier, the winner, the new band, hit or miss, and the Integrity damage before Confirm. It can also keep a result for later or discard it.
+- **Director's call on range.** The Director can set any vehicle's band at any time. That setting beats any roll, and the track moves at once.
+- **Integrity write-through.** Hits queue on the target and land in phase 4. Applying them writes the new Integrity straight onto the vehicle's own Actor, so its sheet and its token bar show the same number as the HUD. At 0 Integrity the vehicle is wrecked. The Director can also damage or repair a vehicle from the HUD at any time.
+- **Sound.** Pilot contests, sensor locks, jams, gunnery, Integrity damage, wrecks and band shifts each play a sound. The speaker button in the HUD mutes the HUD's sounds for you only.
+
 #### Weapons at range
 
 ```
