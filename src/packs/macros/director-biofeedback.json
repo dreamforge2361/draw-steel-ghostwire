@@ -1,0 +1,20 @@
+{
+  "_id": "gwDirBiofeed0001",
+  "_key": "!macros!gwDirBiofeed0001",
+  "name": "GHOSTWIRE.Biofeedback.Director.MacroName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.directorBiofeedbackPrompt) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Director: Apply Biofeedback.\");\n} else {\n  api.directorBiofeedbackPrompt();\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "biofeedback-apply"
+    }
+  }
+}

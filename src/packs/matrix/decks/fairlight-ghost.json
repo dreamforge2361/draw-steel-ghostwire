@@ -53,7 +53,8 @@
         "modFamily": [
           "deck"
         ],
-        "role": "deck"
+        "role": "deck",
+        "biofeedbackResistance": 3
       }
     }
   }

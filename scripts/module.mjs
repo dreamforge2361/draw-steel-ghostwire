@@ -53,6 +53,7 @@ import { registerGoldLineScene } from "./gold-line-scene.mjs";
 import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerDirectorWealth } from "./director-wealth.mjs";
+import { registerDirectorBiofeedback } from "./director-biofeedback.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerBlackMarket } from "./black-market.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
@@ -224,6 +225,9 @@ Hooks.once("init", () => {
   registerNightjarMarketScene();
   registerKiosk();
   registerDirectorWealth();
+  // 0.3.142 (D) — Director: Apply Biofeedback. Takes getWiredState so the macro reads the same
+  // connection state the Wired Console and the Matrix Verbs already do, rather than a second copy.
+  registerDirectorBiofeedback({ getWiredState });
   registerBlackMarket();
   registerConsumableUse();
   registerRituals();
