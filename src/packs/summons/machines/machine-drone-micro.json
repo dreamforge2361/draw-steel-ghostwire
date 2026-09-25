@@ -3,7 +3,7 @@
   "_key": "!actors!ZhcKO9q6sdJyH590",
   "name": "GHOSTWIRE.Summons.Machines.DroneMicro.Name",
   "type": "npc",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/fly.webp",
   "system": {
     "stamina": {
       "value": 5,
@@ -190,7 +190,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/drones/fly.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
