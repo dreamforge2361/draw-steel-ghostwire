@@ -384,7 +384,7 @@ note(/blocks nothing/.test(localize("GHOSTWIRE.WiredIce.Checklist.Hint") ?? ""),
 
 console.log("\nG) version, docs and scope");
 
-note(manifest.version === "0.3.143", `module.json is ${manifest.version}`);
+note(atLeast(manifest.version, "0.3.143"), `module.json is ${manifest.version} (>= 0.3.143)`);
 note(atLeast(manifest.version, "0.3.143"), "…and the version pin agrees");
 const readme = read("README.md");
 note(/- `0\.3\.143` — \*\*The node applet notices the ICE/.test(readme), "README carries a 0.3.143 Status entry");
@@ -449,7 +449,11 @@ if (baseRef) {
   note(!moved, `${changed.length} changed pack source file(s) against ${baseRef}; no _id / dsid moved`);
 
   const allChanged = execFileSync("git", ["diff", "--name-only", baseRef], { encoding: "utf8" }).split("\n").filter(Boolean);
-  note(!allChanged.some(f => f.startsWith("src/packs/summons/")), "no summon Actor touched — Specials token scale 0.5 is still a later wave");
+  // Scope guards for *this* wave only: they read the working tree against main, so they can only
+  // mean something while 0.3.143 is the tip. 0.3.144 ships summon Actor art on purpose.
+  if (manifest.version === "0.3.143") {
+    note(!allChanged.some(f => f.startsWith("src/packs/summons/")), "no summon Actor touched — Specials token scale 0.5 is still a later wave");
+  }
   note(!allChanged.some(f => f === "scripts/chase-hud.mjs"), "the Chase HUD is untouched — Pilot-first seats are still a later wave");
   note(!allChanged.some(f => f.startsWith("docs/directors/_")), "no director scratch file staged for commit");
 } else {

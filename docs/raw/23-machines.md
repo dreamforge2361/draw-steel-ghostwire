@@ -243,18 +243,18 @@ Drones use a short **Integrity** track, and every drone card now prints its numb
 - **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars.
 - **VTOL / flying craft** are **more expensive** but also in **common use** (corp, transit, well-funded runners).
 
-**Street-class tags:** **Hover** = limiter-band POV (**Lane-Hopper** 4-seat table-token; **Star-Chopper** tandem hover-bike; Hoverpad; many Ground-domain sedan/cab/bike SKUs still hug the street deck for chase). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Water and space stay as printed.
+**Street-class tags:** **Hover** = limiter-band POV (**Laneline Hopper** 4-seat table-token; **Kestrel Star-Chopper** tandem hover-bike; Hoverpad; many Ground-domain sedan/cab/bike SKUs still hug the street deck for chase). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Water and space stay as printed.
 
-**Lane-Hopper** is the published 4-seat street hovercar yes-example (E1 Street, Domain Ground, four seats, limiter **~25–50 ft**). Open/closed cabins exist; the shipped token is the open top-down plate. **Rideable** passenger slots are a future pass — do not implement now.
+The **Laneline Hopper** (street: **Lane-Hopper**) is the published 4-seat street hovercar yes-example (E1 Street, Domain Ground, four seats, limiter **~25–50 ft**). Open/closed cabins exist; the shipped token is the open top-down plate. **Rideable** passenger slots are a future pass — do not implement now.
 
-**Star-Chopper** is the published tandem hover-bike (E1 Street/custom, Domain Ground, Scale Light, 1+pillion, limiter **~25–50 ft**, stretch forks, no wheels). Not a sky bike and not the rifle named Chopper.
+The **Kestrel Star-Chopper** (street: **Star-Chopper**) is the published tandem hover-bike (E1 Street/custom, Domain Ground, Scale Light, 1+pillion, limiter **~25–50 ft**, stretch forks, no wheels). Not a sky bike and not the rifle named Chopper.
 
-**Bulldog** is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV).
+The **IW Bulldog** (street: **Bulldog**) is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV).
 
-**Conglomerate service chassis.** Four published SKUs with top-down plates. **Aequitas Mandate (AEQ):** **Seal Cruiser** (Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door** (Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.
+**Conglomerate service chassis.** Four published SKUs with top-down plates. **Aequitas Mandate (AEQ):** **Seal Warden Cruiser** (street **Seal Cruiser**, Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door Quiet Room** (street **White Door**, Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**, Item **Seal Cruiser**, Item **Writ VTOL**, Item **White Door**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), Bulldog (**2×4**, placeholder art), Seal Cruiser (**2×3**), Writ VTOL (**2×4**), White Door (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
+> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Laneline Hopper**, Item **Kestrel Star-Chopper**, Item **IW Bulldog**, Item **Seal Warden Cruiser**, Item **Writ VTOL**, Item **White Door Quiet Room**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Laneline Hopper (**2×3**), Kestrel Star-Chopper (**1×3**), IW Bulldog (**2×4**), Seal Warden Cruiser (**2×3**), Writ VTOL (**2×4**), White Door Quiet Room (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
 
 ### Public transit (Flats)
 
@@ -265,7 +265,7 @@ World texture for licensed Flats rides. Full prose: Setting Primer **Public Flat
 | **Grey Cab Services** (`grey-cab-services`) | Autocab hover pod | **Hover** — Ground-domain limiter craft (~25–50 ft); not VTOL | Place one closed-pod token (**2×3** / **2×4**); crew rides as party token; narrate or skim a travel strip | Professional-leaning fare; **quieter**; ARG meter + FER chassis + MER hail ping |
 | **Veinline Civic** (`veinline-civic`) | District tram car | Tram-as-**vehicle** token on elevated / culvert-hung FER rails (not a Spire maglev spine) | Place one long car (**1×4** / **2×5**); party rides the car | **Street / cheaper**; louder; more eyes; civic teal + gunmetal |
 
-**Director:** These are travel fixtures first, chase platforms second. Do not invent sky-car altitudes. Do **not** collide naming with existing Restricted Item **Grey Cab** (`grey-cab` / Ghost Fare) — public brand vs fixer plate.
+**Director:** These are travel fixtures first, chase platforms second. Do not invent sky-car altitudes. Do **not** collide naming with existing Restricted Item **Grey Ledger Meter** (`grey-cab` / street **Grey Cab** / Ghost Fare) — public brand vs fixer plate.
 
 **Cross-link:** Primer L1 › Vehicles & Transit › Public Flats transit (WORKING). Runs journal: **Flats Transit — Grey Cab & Veinline**.
 
@@ -273,9 +273,9 @@ World texture for licensed Flats rides. Full prose: Setting Primer **Public Flat
 
 | Scale | Plain meaning | Examples |
 |---|---|---|
-| **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Star-Chopper, junk rotor, harbor skiff |
-| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Seal Cruiser, White Door, Getaway hover, panel hauler, Writ VTOL, tiltjet, wetsub, orbital pod |
-| **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
+| **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Kestrel Star-Chopper, junk rotor, harbor skiff |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Laneline Hopper, Seal Warden Cruiser, White Door Quiet Room, Velvet Afterburn hover, panel hauler, Writ VTOL, tiltjet, wetsub, orbital pod |
+| **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Ferrum Bastion APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
 **Vs drone Scale (`15-drones.md`):** drones use **Personal / Light / Vehicle (drone)**. A Vehicle-scale **drone** (Stinger, Warhound, etc.) remains on the **drone** inventory so swarm/fleet play stays one list. This chapter is **crewed** platforms — seats, stations, passengers — even when a Wrench Jump-In runs the shell solo.
@@ -454,46 +454,46 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |
-| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |
-| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |
-| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |
-| Star-Chopper / Long-Fork / tandem limiter hover-bike | Ground | Light | 1 | Street | 700 | 1 | 1+pillion | Fast | No | Street POV hover-bike — electric stretch-fork chopper, two seats, no wheels, limiter ~25–50 ft. Not the rifle named Chopper. | Courier, Hover, POV |
-| Bulldog / Heavy Hauler / street cargo van | Ground | Vehicle | 1 | Street | 650 | 1 | 1+2 (cab) + cargo | Slow | No | Tires-on-deck cargo van — mass, not a hover POV. | Cargo, Ground-hauler |
+| Nyx Rattlecrate (Clunker) / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |
+| Nyx Boneframe (Scrap-Bike) / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |
+| Nyx Primer (Rustbucket) / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |
+| Laneline Hopper (Lane-Hopper) / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |
+| Kestrel Star-Chopper (Star-Chopper) / Long-Fork / tandem limiter hover-bike | Ground | Light | 1 | Street | 700 | 1 | 1+pillion | Fast | No | Street POV hover-bike — electric stretch-fork chopper, two seats, no wheels, limiter ~25–50 ft. Not the rifle named Chopper. | Courier, Hover, POV |
+| IW Bulldog (Bulldog) / Heavy Hauler / street cargo van | Ground | Vehicle | 1 | Street | 650 | 1 | 1+2 (cab) + cargo | Slow | No | Tires-on-deck cargo van — mass, not a hover POV. | Cargo, Ground-hauler |
 | Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |
 | Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |
 | Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |
-| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
-| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
-| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
-| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Integrity kits fit. | Patrol, Pursuit, Hover, AEQ |
-| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |
+| Kestrel Stiletto (Crotch-Rocket) / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
+| Velvet Afterburn (Getaway) / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
+| Ferrum Yardboss (Workhorse) / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
+| Seal Warden Cruiser (Seal Cruiser) / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Integrity kits fit. | Patrol, Pursuit, Hover, AEQ |
+| White Door Quiet Room (White Door) / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |
 | Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |
 | Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |
 | Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |
 | Dock Tug / Yard Tug / short-burn pressurised dock handler | Space | Vehicle | 1 | Professional | 1,800 | 2 | 1+3 (pressurised) | Slow | No | Stubby sealed handler with a grapple arm — walks containers and dead hulls around a dock ring. No guns, no legs, but it is the Street-band way off the deck. | Sealed, Cargo, Utility |
-| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
-| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |
-| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |
+| White Door Cradle (Hardtop) / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
+| Grey Ledger Meter (Grey Cab) / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |
+| Ferrum Deckplate (Flatbed) / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |
 | Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |
 | Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |
 | Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |
 | Trauma Barge / Laz Wetwagon / Lazarus Extract (LAZ) canal ambulance | Water | Vehicle | 2 | Restricted | 4,800 | 3 | 2+2 (cab) + patient deck | Standard | No | LAZ flood-canal ambulance — hex brand, shallow draft, patient deck amidships, stern hoist. Works the Sinks where the White Door cannot float. Not a gun boat. | Medical, Extraction, Aquatic, LAZ |
-| Lane Bus / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | 2 | Restricted | 5,200 | 3 | 1+18 (standing and strapped) | Slow | No | Decommissioned shaft shuttle — limiter-lane hover body, two doors, grab rails, a fare plate nobody reads. Moves a whole crew in plain sight, or a squad if you own the route. | Transit, Troop, Hover, Ground-hauler |
+| Laneline Omnibus (Lane Bus) / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | 2 | Restricted | 5,200 | 3 | 1+18 (standing and strapped) | Slow | No | Decommissioned shaft shuttle — limiter-lane hover body, two doors, grab rails, a fare plate nobody reads. Moves a whole crew in plain sight, or a squad if you own the route. | Transit, Troop, Hover, Ground-hauler |
 | Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |
 | Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |
-| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |
-| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |
+| IW Lance (Warbike) / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |
+| Ferrum Bastion (Brick) / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |
 | Gale-Runner / Lane Interceptor / high-thrust pursuit VTOL | Air | Vehicle | 3 | Military | 13,000 | 4 | 1+1 | Extreme | Yes | Thin, loud, and far too fast for the VTOL lanes — a two-seat interceptor built to run something down and keep a gun on it. | Pursuit, Combat, Mount, VTOL |
-| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |
-| Ash-Crawler / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | 3 | Military | 16,000 | 4 | 2+6 + bunk and bench space | Slow | Yes | Tracked, sealed, and slow as a grudge — scrubbers, bunks, a bench, and enough water to argue about. Terrible in a chase, unkillable on a week-long haul past the last lane light. | Sealed, Survival, Workshop, Ground-hauler |
+| Grey Ledger Lockbox (Cage) / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |
+| Ferrum Ash-Crawler (Ash-Crawler) / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | 3 | Military | 16,000 | 4 | 2+6 + bunk and bench space | Slow | Yes | Tracked, sealed, and slow as a grudge — scrubbers, bunks, a bench, and enough water to argue about. Terrible in a chase, unkillable on a week-long haul past the last lane light. | Sealed, Survival, Workshop, Ground-hauler |
 | River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |
 | Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |
 | Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |
 | Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |
-| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |
-| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |
+| IW Colossus (Iron Giant) / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |
+| Ferrum Arachnid (Spider-Frame) / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |
 | Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |
 | Longshore / Deep Freighter / deep-draft low-observable cargo hull | Water | Heavy | 4 | Prototype | 54,000 | 5 | 4+6 + holds | Slow | Yes | The hull that moves what nobody will admit to moving — quiet plant, sonar-shy skin, holds that swallow a drone fleet. Slow enough that the plan has to be good. | Cargo, Stealth, Aquatic, Heavy |
 | Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |
@@ -507,19 +507,19 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 | Role | Chassis |
 |---|---|
-| Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
-| Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |
-| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Lane Bus, Pod, Void-Runner |
-| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette, Gale-Runner |
-| Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed, Dock Tug, Ash-Crawler, Longshore |
-| Medical / extract | White Door, Crash Angel, Trauma Barge |
-| Armor / extraction / troop | Hardtop, Brick, Cage, Lane Bus |
+| Clunker / beater | Nyx Rattlecrate, Nyx Boneframe, Nyx Primer, Sink-Skiff, Junk Rotor |
+| Courier / bike | Nyx Boneframe, Kestrel Star-Chopper, Kestrel Stiletto, IW Lance |
+| Crew-car / transit | Laneline Hopper, Velvet Afterburn, Grey Ledger Meter, Hoverpad, Laneline Omnibus, Pod, Void-Runner |
+| Patrol / pursuit | Seal Warden Cruiser, Writ VTOL, Kestrel Stiletto, Cigarette, Gale-Runner |
+| Cargo / workshop | Nyx Rattlecrate, IW Bulldog, Ferrum Yardboss, Ferrum Deckplate, Dock Tug, Ferrum Ash-Crawler, Longshore |
+| Medical / extract | White Door Quiet Room, Crash Angel, Trauma Barge |
+| Armor / extraction / troop | White Door Cradle, Ferrum Bastion, Grey Ledger Lockbox, Laneline Omnibus |
 | Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
 | Gunship / combat air | Skyhunter, Gale-Runner |
 | Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter, Trauma Barge |
 | Water pursuit / attack | Cigarette, River-Fang, Leviathan, Longshore |
 | Wet infiltrate | Wetsub |
-| Walker / siege ground | Iron Giant, Spider-Frame |
+| Walker / siege ground | IW Colossus, Ferrum Arachnid |
 | Space / sealed | Dock Tug, Pod, Mule, Void-Runner, Reaver |
 
 #### Availability and Echelon

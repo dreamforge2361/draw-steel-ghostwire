@@ -3,7 +3,7 @@
   "_key": "!actors!h454S2wcgUB0b1C5",
   "name": "GHOSTWIRE.Summons.Machines.VehicleCar.Name",
   "type": "npc",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/vehicle-car.webp",
   "system": {
     "stamina": {
       "value": 40,
@@ -190,7 +190,7 @@
     "height": 2,
     "depth": 2,
     "texture": {
-      "src": "icons/environment/settlement/wagon.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/vehicles/vehicle-car.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

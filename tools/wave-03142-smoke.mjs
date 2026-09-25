@@ -399,7 +399,11 @@ if (baseRef) {
   note(!moved, `${changed.length} changed pack source file(s) against ${baseRef}; no _id / dsid moved`);
 
   const allChanged = execFileSync("git", ["diff", "--name-only", baseRef], { encoding: "utf8" }).split("\n").filter(Boolean);
-  note(!allChanged.some(f => f.startsWith("src/packs/summons/")), "no summon Actor touched — Specials token scale 0.5 is 0.3.143");
+  // Scope guard for *this* wave only: it reads the working tree against main, so it can only mean
+  // something while 0.3.142 is the tip. 0.3.144 ships summon Actor art on purpose.
+  if (manifest.version === "0.3.142") {
+    note(!allChanged.some(f => f.startsWith("src/packs/summons/")), "no summon Actor touched — Specials token scale 0.5 is 0.3.143");
+  }
   note(!allChanged.some(f => f === "scripts/chase-hud.mjs"), "the Chase HUD is untouched — Pilot-first seats are 0.3.143");
   note(!allChanged.some(f => f.startsWith("docs/directors/_")), "no director scratch file staged for commit");
 } else {

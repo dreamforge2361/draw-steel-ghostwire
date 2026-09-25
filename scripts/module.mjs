@@ -39,6 +39,7 @@ import { registerAbilitySfx } from "./sfx.mjs";
 import { registerHitFx } from "./hit-fx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
 import { registerWeaponRename } from "./weapon-rename.mjs";
+import { registerVehicleRename } from "./vehicle-rename.mjs";
 import { registerFieldTriage } from "./field-triage.mjs";
 import { registerRecoveryPrompt } from "./recovery-prompt.mjs";
 import { registerRally } from "./rally.mjs";
@@ -208,6 +209,10 @@ Hooks.once("init", () => {
   // embedded copies and the generated "Fire <weapon>" abilities. Registered after registerEquipmentUse
   // so a weapon armed on this load is already there when the rename walks the actor.
   registerWeaponRename();
+  // 0.3.144 — the 21 ground chassis and 3 band templates renamed to Catalog Name · Maker · role, same
+  // shape and same reason as the firearms above: a pack rebuild fixes the compendium and nothing a
+  // Director already bought. Keyed by `_dsid`, so a chassis somebody named themselves keeps its name.
+  registerVehicleRename();
   // 0.3.134 (H) — Field Triage is Medic-only now. The compendium and the pregens already are; this
   // is the GM-only `ready` pass that takes the 0.3.130 copies off existing non-Medic sheets.
   registerFieldTriage();
