@@ -20,6 +20,7 @@ import { registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines, isDeployedMachineActor, hasAnyToken } from "./machines.mjs";
 import { registerRiggerVertical } from "./rigger-vertical.mjs";
+import { registerPassengers } from "./passengers.mjs";
 import { registerMachineSheet } from "./machine-sheet.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
 import { registerKitGrants } from "./kit-grants.mjs";
@@ -166,6 +167,10 @@ Hooks.once("init", () => {
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();
   registerRiggerVertical();
+  // 0.3.136 (2) — Ghostwire-native passengers: heroes ride a machine token and move with it.
+  // This is **not** scripts/mounts.mjs, which is weapon hardpoints; the two share no flag, lang key
+  // or hook. Registered after registerMachines so the band / kind helpers it reads are live.
+  registerPassengers();
   registerMachineSheet();
   registerStreetEye();
   registerKitGrants();
