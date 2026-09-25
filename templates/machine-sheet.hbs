@@ -52,6 +52,10 @@
             <input type="number" name="system.stamina.max" value="{{stamina.max}}" />
           </div>
         </label>
+        {{!-- 0.3.138: Handling 1-4 is a chase stat, so it reads beside Integrity here too. Edit it on Control. --}}
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Handling"}}
+          <span class="gw-m-handling" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.HandlingHint'}}">{{#if machine.handling}}{{machine.handling}}{{else}}&mdash;{{/if}}</span>
+        </label>
         {{!-- 0.3.122: the damage band Integrity puts this frame in. One band at a time, worst wins. --}}
         <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Condition"}}
           <span class="gw-m-condition condition-{{conditionId}}" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.ConditionHint'}}">{{conditionLabel}}</span>
@@ -78,7 +82,7 @@
           <input type="text" name="flags.draw-steel-ghostwire.machine.controlMode" value="{{machine.controlMode}}" />
         </label>
         <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Handling"}}
-          <input type="text" name="flags.draw-steel-ghostwire.machine.handling" value="{{machine.handling}}" />
+          <input type="number" name="flags.draw-steel-ghostwire.machine.handling" value="{{machine.handling}}" min="1" max="4" step="1" placeholder="—" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.HandlingHint'}}" />
         </label>
         <div class="gw-m-actions flexrow">
           <button type="button" data-action="jumpIn" {{#unless canJumpIn}}disabled{{/unless}}><i class="fa-solid fa-plug"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.JumpIn"}}</button>

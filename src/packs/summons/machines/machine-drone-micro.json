@@ -257,7 +257,9 @@
       "dsid": "machine-drone-micro",
       "machine": {
         "kind": "drone",
-        "jumpInCapable": true
+        "jumpInCapable": true,
+        "handling": 3,
+        "integrity": 5
       }
     }
   }

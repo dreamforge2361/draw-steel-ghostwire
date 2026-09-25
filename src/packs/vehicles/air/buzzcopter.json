@@ -58,7 +58,9 @@
         "domain": "Air",
         "scale": "Light",
         "drone": false,
-        "speedBand": "fast"
+        "speedBand": "fast",
+        "handling": 4,
+        "integrity": 40
       }
     }
   }

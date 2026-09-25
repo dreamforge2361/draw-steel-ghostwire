@@ -259,7 +259,7 @@
         "movementMode": "none",
         "jumpInCapable": true,
         "controlMode": "remote",
-        "handling": "fixed",
+        "handling": null,
         "domain": "Ground",
         "modSlots": 1,
         "installedModsText": "",
@@ -273,7 +273,8 @@
           "Beacon",
           "Home Ground",
           "Fixed"
-        ]
+        ],
+        "integrity": 20
       }
     }
   }

@@ -257,7 +257,9 @@
       "dsid": "machine-drone-medium",
       "machine": {
         "kind": "drone",
-        "jumpInCapable": true
+        "jumpInCapable": true,
+        "handling": 2,
+        "integrity": 24
       }
     }
   }

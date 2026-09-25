@@ -280,8 +280,11 @@ Drones and vehicles fight on the same meatspace grid as runners.
 
 - Anyone can run **one** drone within ordinary limits.
 - **Wrenches** field fleets, spend **Uptime**, and can Jump In (`16`, `23`).
-- Machine Stamina / Integrity and what “destroyed” means for a hull are in `23`.
-- Vehicle chases use a **range track**; boarding actions can dump people back onto a normal grid mid-scene.
+- A machine's damage track is **Integrity** (0 = wrecked); what “destroyed” means for a hull is in `23`. Heroes and other creatures keep **Stamina**.
+- Every machine also has **Handling**, an integer **1–4**, higher is better. Beat the other machine's Handling in a chase and you take an **edge** on maneuvers and on Piloting / Driving / Rigging.
+- **Chases are anyone versus anyone** — Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the same round, and none of it needs a Wrench. The canonical **chase round checklist** (setup → pilots → systems/EW → gunners → damage → end) is in `23`; the Wrench's Jump-In, Uptime, Override Ping and Command are overlays on it.
+- Firing in a chase turns on the **sensor lock**: at a **moving** vehicle **with** a lock is a **bane**; **from** a moving vehicle **without** a lock is a **double bane**.
+- Vehicle chases use a **range track** by default; boarding actions can dump people back onto a normal grid mid-scene.
 
 A drone’s attack is still an ability use — often a Wrench command — not a generic free strike.
 

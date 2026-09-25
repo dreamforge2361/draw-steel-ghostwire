@@ -58,7 +58,10 @@
         ],
         "domain": "Ground (drone)",
         "scale": "Vehicle",
-        "drone": true
+        "drone": true,
+        "speedBand": "standard",
+        "handling": 2,
+        "integrity": 24
       }
     }
   }

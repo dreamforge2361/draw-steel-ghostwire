@@ -328,11 +328,75 @@ export function machineBand(item) {
 
 const bandKey = band => band.split("-").map(w => w[0].toUpperCase() + w.slice(1)).join("");
 
-/** Chassis Integrity before an armor kit: band Stamina × echelon multiplier. */
+/* ---------------------------------------------------------------- Handling (0.3.138)
+ * Handling is one number on one scale, shared by the rules chapter, the catalog Item, the deployed
+ * Actor, the card and the machine sheet: an **integer 1–4, higher is better**, used in chase and
+ * vehicle combat only. Beat the other machine's Handling and you take an edge on maneuvers and on
+ * Piloting / Driving / Rigging; tie or lose and you get nothing from this rule.
+ *
+ * Before 0.3.138 `handling` was a word ("standard", "fixed") that no roll could read. The rubric
+ * below derives the number from the two flags every chassis already carries — `scale` and
+ * `speedBand` — so the catalog, Deploy and the smoke all reach the same answer without a hand table.
+ */
+export const HANDLING_MIN = 1;
+export const HANDLING_MAX = 4;
+/** Scale base. Personal / Micro / Small frames ride the Light base — they are small and nimble. */
+export const HANDLING_SCALE_BASE = {
+  light: 3, personal: 3, micro: 3, small: 3,
+  vehicle: 2, heavy: 1, capital: 1,
+};
+/** Speed band step. A drone with no published speed band is treated as standard (0). */
+export const HANDLING_SPEED_STEP = { extreme: 1, fast: 1, standard: 0, slow: -1 };
+
+const clampHandling = value => Math.min(HANDLING_MAX, Math.max(HANDLING_MIN, value));
+
+/**
+ * The published rubric: scale base + speed-band step, clamped to 1–4.
+ * Fixed base assets (bench, door lock, beacon) never contest a chase and have **no** Handling — they
+ * return `null` so the sheet prints a dash instead of a number that means nothing.
+ */
+export function handlingFromRubric({ scale, speedBand, baseAsset } = {}) {
+  if (baseAsset) return null;
+  const base = HANDLING_SCALE_BASE[String(scale ?? "").trim().toLowerCase()] ?? 2;
+  const step = HANDLING_SPEED_STEP[String(speedBand ?? "standard").trim().toLowerCase()] ?? 0;
+  return clampHandling(base + step);
+}
+
+/** Handling stamped on the chassis flags, or the rubric when nothing is stamped. `null` = fixed asset. */
+export function vehicleHandling(vehicleFlags = {}) {
+  if (vehicleFlags?.baseAsset) return null;
+  const stamped = Number(vehicleFlags?.handling);
+  if (Number.isInteger(stamped) && (stamped >= HANDLING_MIN) && (stamped <= HANDLING_MAX)) return stamped;
+  return handlingFromRubric(vehicleFlags);
+}
+
+/** Chassis Handling plus installed mods. Tune Kit is +1 (clamped at 4); Lane Skirt adds nothing here. */
+export function handlingWithMods(vehicleFlags, profiles = []) {
+  const base = vehicleHandling(vehicleFlags);
+  if (base == null) return null;
+  const bonus = profiles.reduce((total, profile) => total + (Number(profile?.handlingBonus) || 0), 0);
+  return clampHandling(base + bonus);
+}
+
+/** Live Handling for a catalog Item: its own flags plus every installed, active mod on the owner. */
+export function machineHandling(item) {
+  const vehicleFlags = item?.getFlag?.(MODULE_ID, "vehicle") ?? {};
+  const profiles = activeHostMods(item).map(mod => kitProfile(mod.system?._dsid) ?? mod.getFlag(MODULE_ID, "mod") ?? {});
+  return handlingWithMods(vehicleFlags, profiles);
+}
+
+/**
+ * Chassis Integrity before an armor kit.
+ * A chassis that publishes its own Integrity (base assets, and every catalog frame from 0.3.138)
+ * wins; otherwise it is the band Stamina × the echelon multiplier.
+ */
 export function chassisStamina(item) {
-  const band = machineBand(item);
   const vehicle = item?.getFlag(MODULE_ID, "vehicle");
-  if (!band || !vehicle) return 0;
+  if (!vehicle) return 0;
+  const published = Number(vehicle.integrity ?? vehicle.stamina);
+  if (Number.isFinite(published) && (published > 0)) return Math.round(published);
+  const band = machineBand(item);
+  if (!band) return 0;
   return Math.round(BANDS[band].stamina * (ECHELON_MULTIPLIER[vehicle.echelon] ?? 1));
 }
 
@@ -351,25 +415,29 @@ export const MACHINE_MOD_PROFILES = {
   "twin-mount": { kind: "weaponry", gunnery: true, hardpoints: 2, scale: "category-3", dualFeed: true, turret: false, heavy: false, applied: "flags" },
   "turret-ring": { kind: "weaponry", gunnery: true, hardpoints: 1, scale: "medium", dualFeed: false, turret: true, wideArc: true, heavy: false, applied: "flags" },
   "heavy-hardpoint": { kind: "weaponry", gunnery: true, hardpoints: 1, scale: "heavy", dualFeed: false, turret: false, heavy: true, integrated: true, applied: "flags" },
-  "tune-kit": { kind: "other", handlingEdge: true, applied: "director" },
-  "sensor-pod": { kind: "other", sensorEdge: true, pierceConcealment: true, applied: "director" },
-  "ghost-coat": { kind: "other", stealthBane: true, applied: "director" },
+  // 0.3.138 — Tune Kit is +1 Handling (clamped at 4), not a free Piloting edge of its own.
+  "tune-kit": { kind: "other", handlingBonus: 1, applied: "director" },
+  "sensor-pod": { kind: "other", sensorEdge: true, sensorLockEdge: true, pierceConcealment: true, applied: "director" },
+  "ghost-coat": { kind: "other", stealthBane: true, enemyLockBane: true, applied: "director" },
   "runflats": { kind: "other", resistCrippled: true, selfRepair: true, applied: "director" },
   "rigger-cocoon": { kind: "other", jumpInCapable: true, applied: "director" },
   "ammo-bin": { kind: "other", ammoFeed: true, applied: "director" },
   // 0.3.98 (S8) — second wave of §5F "other" mods: mobility, cargo, insertion,
   // link/EW, environment, sensors. All Director-applied like the first wave.
-  "lane-skirt": { kind: "other", handlingEdge: true, urbanLanes: true, applied: "director" },
+  // 0.3.138 — situational only: the limiter lanes and tight street-deck traffic. Never +Handling.
+  "lane-skirt": { kind: "other", situationalEdge: true, urbanLanes: true, applied: "director" },
   "spool-rig": { kind: "other", cargoHoist: true, applied: "director" },
   "burner-plates": { kind: "other", heatShed: true, applied: "director" },
   "drop-harness": { kind: "other", rapidEgress: true, applied: "director" },
-  "signal-mule": { kind: "other", linkRelay: true, jamResist: true, applied: "director" },
+  "signal-mule": { kind: "other", linkRelay: true, jamResist: true, jamDefenseEdge: true, applied: "director" },
   // Softens Jump-In biofeedback; never grants Jump-In (Wrench-only, per 16-vehicles.md §4).
   "ghost-rein": { kind: "other", biofeedbackBuffer: true, applied: "director" },
   "deep-shell": { kind: "other", sealedEnvelope: true, applied: "director" },
-  "spoof-cowl": { kind: "other", transponderSpoof: true, applied: "director" },
+  // Transit and ID only — a forged transponder is not a combat jam, and never breaks a sensor lock.
+  "spoof-cowl": { kind: "other", transponderSpoof: true, combatJam: false, applied: "director" },
   "kick-drive": { kind: "other", speedBandBurst: true, applied: "director" },
-  "storm-lattice": { kind: "other", sensorEdge: true, pierceConcealment: true, fleetLock: true, applied: "director" },
+  // The published sensor ladder for this ship is Sensor Pod → Storm Lattice. There is no mid rung.
+  "storm-lattice": { kind: "other", sensorEdge: true, sensorLockEdge: true, sensorApex: true, pierceConcealment: true, pierceSpoof: true, fleetLock: true, applied: "director" },
 };
 
 export function kitProfile(dsid) {
@@ -698,6 +766,9 @@ export async function syncMachineMods(item) {
     [`flags.${MODULE_ID}.installedKits`]: kits,
     [`flags.${MODULE_ID}.machine.hardpoints`]: sheet.hardpoints,
     [`flags.${MODULE_ID}.machine.installedModsText`]: sheet.installedModsText,
+    // A Tune Kit going on or coming off moves Handling, so restamp it with the kits.
+    [`flags.${MODULE_ID}.machine.handling`]: machineHandling(item),
+    [`flags.${MODULE_ID}.machine.integrity`]: chassis,
   });
   await stampMachineModEffects(actor, item);
   await syncMachineModMirrors(actor, item);
@@ -965,7 +1036,12 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
       stations: vehicleFlags.stations ?? vehicleFlags.crewStations ?? "",
       hardpoints: modSheet.hardpoints,
       controlMode: vehicleFlags.controlMode ?? (vehicle.drone ? "remote" : "crew"),
-      handling: vehicleFlags.handling ?? "standard",
+      // 0.3.138 — one schema: the Actor carries the chassis' own Handling 1–4 (plus Tune Kit),
+      // its Integrity, its speed band and its scale, so the sheet and the chase read the same numbers.
+      handling: machineHandling(item),
+      integrity: chassisStamina(item),
+      speedBand: speedBand ?? null,
+      drone: !!vehicle.drone,
       domain: vehicleFlags.domain ?? vehicle.domain ?? "",
       modSlots: Number(vehicleFlags.modSlots ?? vehicleFlags.slots ?? 0) || 0,
       installedModsText: modSheet.installedModsText,
@@ -1196,6 +1272,8 @@ export function registerMachines() {
     module.api = {
       ...(module.api ?? {}),
       machineBand, deployMachine, recallMachine, deployedMachine,
+      handlingFromRubric, vehicleHandling, handlingWithMods, machineHandling,
+      HANDLING_MIN, HANDLING_MAX, HANDLING_SCALE_BASE, HANDLING_SPEED_STEP,
       chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,

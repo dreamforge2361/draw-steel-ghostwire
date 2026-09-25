@@ -59,7 +59,9 @@
         "domain": "Water",
         "scale": "Heavy",
         "drone": false,
-        "speedBand": "slow"
+        "speedBand": "slow",
+        "handling": 1,
+        "integrity": 100
       }
     }
   }

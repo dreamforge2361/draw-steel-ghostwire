@@ -84,7 +84,10 @@ export function defineMachineSheet() {
         movementMode: "walk",
         jumpInCapable: false,
         controlMode: "remote",
-        handling: "standard",
+        // 0.3.138 — Handling is an integer 1-4 (higher is better). Fixed base assets have none.
+        handling: null,
+        integrity: null,
+        speedBand: "",
         domain: "",
         modSlots: 0,
         installedModsText: "",

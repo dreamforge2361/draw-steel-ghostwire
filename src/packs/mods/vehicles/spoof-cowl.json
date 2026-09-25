@@ -61,7 +61,8 @@
         "slotCost": 1,
         "craftSkill": [
           "electronics"
-        ]
+        ],
+        "combatJam": false
       }
     }
   }

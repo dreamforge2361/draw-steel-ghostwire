@@ -254,7 +254,12 @@
       "band": "vehicle-bike",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-bike"
+      "dsid": "machine-vehicle-bike",
+      "machine": {
+        "handling": 3,
+        "integrity": 20,
+        "kind": "vehicle"
+      }
     }
   }
 }

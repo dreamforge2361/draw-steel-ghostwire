@@ -254,7 +254,12 @@
       "band": "vehicle-water",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-water"
+      "dsid": "machine-vehicle-water",
+      "machine": {
+        "handling": 2,
+        "integrity": 40,
+        "kind": "vehicle"
+      }
     }
   }
 }

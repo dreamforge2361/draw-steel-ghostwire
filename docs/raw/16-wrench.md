@@ -44,10 +44,9 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 - **Maintenance tick:** a successful Field Repair or a successful save/skill check made to keep a machine functional under pressure (patch a jammed mount, clear a fault, hold a losing Integrity fight) banks **+1 Uptime**.
 - **Salvage tick:** destroying an enemy machine, or stripping a wreck (yours or theirs) for parts as a maneuver, banks **+1 Uptime**.
 
-**Drained.** Uptime is drained, not just capped, by four conditions:
+**Drained.** Uptime is drained, not just capped, by three conditions. **Jamming is not one of them:** an enemy Electronic Warfare pulse that jams or spoofs your link takes your **sensor lock** away for the round (see the chase round in **Machines**, `23`) and costs you **no Uptime at all**.
 - **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged with the fleet bleeds Uptime (see Jump-In plumbing, below) — the feedback spike breaking your focus. **The amount is the Director's call**, scaled to how hard the hit landed; there is no fixed figure.
 - **Damage to fielded assets** — every time a machine you control takes a hit, you lose **1 Uptime**, on top of whatever the machine's own Integrity track absorbs. Your attention is a finite resource and every hit on your hardware is a hit on your bandwidth.
-- **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains **2–4 Uptime per jam pulse** (Director's call within that range, by the strength of the pulse) rather than (or in addition to) imposing the usual EW penalty.
 - **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** — the shock of losing hardware outright, distinct from the smaller per-hit drain above.
 
 **Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 cost-band ladder used by every other GHOSTWIRE Heroic Resource.
@@ -177,7 +176,7 @@ Every drone is a **device** with a compact stat block. Drones sit at **Scale: Pe
 | **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. An armor kit (§5F) adds Stamina. |
 | **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |
 | **Speed** | Movement in squares or Speed bands. |
-| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |
+| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. One kit at a time, and **Plate-Up does not cost Handling**. |
 | **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |
 | **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |
 | **Upgrade Slots** | See below. |
@@ -217,10 +216,10 @@ The Vehicle Rig-Pilot's platform — and any vehicle a Wrench of any subclass bu
 |---|---|
 | **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |
 | **Scale** | Light / Vehicle / Heavy / Capital (see above) |
-| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Stamina. |
-| **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |
+| **Integrity** | The machine's damage track, and the name players use for it (Foundry stores it as Draw Steel Stamina under the hood; heroes keep **Stamina**). 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Integrity: Scrap-Weld **+6**, Plate-Up **+12**, Combat Plate **+18**, Aegis Kit **+27**. |
+| **Handling** | Integer **1–4**, higher is better; chase and vehicle combat only. Beat the other machine's Handling and you take an **edge** on maneuvers and on Piloting / Driving / Rigging; a tie or a lower number gives you nothing from this rule. Scale base (Light / Personal / Micro / Small **3**, Vehicle **2**, Heavy **1**, Capital **1**) plus speed band (extreme or fast **+1**, standard **0**, slow **−1**), clamped 1–4. A **Tune Kit** adds +1 up to the cap of 4; a **Lane Skirt** does not. |
 | **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |
-| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |
+| **Armor kit** | **No armor rating / DR.** Install **one** §5F armor kit for an Integrity bonus. One kit at a time, and **Plate-Up does not cost Handling**. |
 | **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |
 | **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |
 | **Domain** | Ground / Air / Space / Water. |
@@ -241,7 +240,7 @@ A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utili
 **Crew Stations.** A vehicle's Crew field lists how many of each station it has:
 - **Pilot/Driver** — moves the vehicle (Rigging or Reflex + Handling); only the pilot moves the vehicle. Pilot-actions include evasive driving (defensive edge) and stunts.
 - **Gunner** — fires mounted weapons with **Gunnery** on their own turn (vehicle mounts scale-translate as normal). A vehicle may have multiple gunner stations.
-- **Systems/Sensors/EW** — runs sensors, electronic warfare, and comms; feeds the pilot or gunner an edge (a lock, a terrain read) or imposes a bane on an enemy (a jam).
+- **Systems/Sensors/EW** — a real station with a real action: **sensor lock** (2d10 + Logic + Electronics), **jam / spoof** (opposed against the lock-holder; success breaks or denies their lock for the round, and drains **no** Uptime from anyone), and an optional **terrain read** (2d10 + Logic or Instinct + Navigation) that hands an edge to the Pilot or the Gunner.
 - **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.
 - **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform.
 
@@ -249,9 +248,63 @@ Linked while driving vs Linked remote vs Jump-In. A Wrench who is Linked and sea
 
 **Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (easy / medium / hard: `03`), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
 
-**Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:
-- **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.
-- **Abstract range-state track (optional, cinematic pursuits):** `Broken off ← Extreme → Long → Medium → Close → Ramming/Boarding`, advanced by opposed Rigging/Piloting Power Rolls each round. Weapons work at their effective range-state band; Close/Ramming enables boarding and ramming; Broken off ends the chase.
+**The chase round (canonical).** This is the same round every crew runs — it is printed in full in **Machines** (`23`) and repeated here so a Wrench never has to leave the class chapter. Jump-In, Uptime, Override Ping and Command are the Wrench's **overlays** on it, not a replacement for it.
+
+#### Vehicle combat / chase
+
+Chase and vehicle combat are **anyone versus anyone**. Pilot/Driver, Gunner, Systems/Sensors/EW and Passengers all use the rules below, whatever class they are and whether or not a Wrench is at the table. The Wrench's **Jump-In**, **Uptime**, **Override Ping** and fleet **Command** are **overlays only**: they change who can hold two stations at once and what a hit costs the Wrench. They change nothing in the round below.
+
+**Default chase mode for this ship: the abstract track.** Positional mode stays an optional Director call for the rounds when the vehicles and a foot fight share one map — same skills, same wreck language.
+
+##### Chase round checklist — two machines in contest
+
+**0. Setup — once, no roll.** Put on the table for each machine: **Handling** (1–4), **Speed band**, **Integrity**, installed **mods**, and who is sitting in which **crew seat**.
+
+**1. Pilots — range and maneuvers**
+
+- Opposed Power Roll: **2d10 + Reflex + (Driving | Piloting | Rigging**, whichever the machine calls for**)**.
+- **Higher Handling takes an edge.** A tie, or the lower number, gets nothing from this rule.
+- Untrained in the skill, on a risky or combat maneuver: **bane**.
+- **Lane Skirt** is a situational edge in the limiter lanes and tight street-deck traffic only — it is **not** +Handling.
+- The winner closes, opens, or holds the chase band: `Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding`.
+- At **Ramming / Boarding**, a ram is the same opposed roll; damage feel is **Scale + Speed band**.
+
+**2. Systems / Sensors / EW — locks before jams**
+
+Systems is a real station with a real action: locks, jam and spoof, terrain read.
+
+- **2a Sensor lock.** **2d10 + Logic + Electronics**. A **Sensor Pod** grants an edge. A **Storm Lattice** is the apex — edge, pierces smoke, dark and spoof, and **shares its lock** with the crew and the rest of the fleet. A target wearing a **Ghost Coat** imposes a bane on the attempt. The published sensor ladder for this ship is **Sensor Pod → Storm Lattice**; nothing sits between them.
+- **2b Jam / spoof.** Opposed: the jammer rolls **2d10 + Logic + Security Systems** (untrained in Security Systems: Electronics at a bane) against the lock-holder's **2d10 + Logic + Electronics**. A **Signal Mule** gives the defender an edge. Success **breaks or denies that sensor lock for the round**. It **drains no Uptime** — jamming a Wrench costs the Wrench nothing from the pool. A **Spoof Cowl** is transit and ID only and is never a combat jam. **Buzz**, **Choir-Box** and **Choir-King** keep their published jam bubbles.
+- **2c Terrain read — optional.** **2d10 + Logic (or Instinct) + Navigation** hands an edge to the Pilot or the Gunner for this round.
+
+**3. Gunners and passengers — fire**
+
+- Mounted weapons: **2d10 + Reflex + Gunnery** hands-on, **or** **2d10 + Logic + Gunnery** sensor-fed (a Jumped-In Wrench fires this way).
+- **Lock state changes the roll:**
+  - Firing at a **moving** vehicle **with** a sensor lock: **bane**.
+  - Firing **from** a moving vehicle **without** a sensor lock: **double bane**.
+- Passengers make an ordinary personal strike Power Roll at a speed bane, and use the hull as cover.
+
+**4. Damage and wrecks.** Damage comes off **Integrity**. **0 Integrity = wrecked** — the domain catastrophe (ground crash, air downing, hull flood, decompress).
+
+**5. End of round.** Broken off or wrecked ends the chase. Otherwise the band and every live sensor lock carry into the next round.
+
+**Wrench overlay.** A Jumped-In Wrench may cover Pilot **and** Gunner from one seat. **Override Ping** and fleet **Command** exist only if a Wrench is present. No step above needs a Wrench.
+
+##### Weapons at range
+
+```
+Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
+```
+
+- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).
+- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.
+- **Broken off:** chase ends (escape or lost contact).
+- **Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).
+
+**Chase Modes (reference).** Vehicle combat runs in one of two modes:
+- **Abstract range-state track (default):** `Broken off ← Extreme → Long → Medium → Close → Ramming/Boarding`, advanced by the opposed pilot roll each round. Weapons work at their effective range-state band; Close/Ramming enables boarding and ramming; Broken off ends the chase. This is the default for Ghostwire — see **Machines** (`23`).
+- **Positional (optional, Director's call):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot. Use it when the vehicles and a foot fight share one map.
 
 Both modes use the Wrench's same Rigged Fire and Command actions — nothing about the class chassis changes between modes.
 

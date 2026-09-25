@@ -259,7 +259,7 @@
         "movementMode": "none",
         "jumpInCapable": false,
         "controlMode": "remote",
-        "handling": "fixed",
+        "handling": null,
         "domain": "Ground",
         "modSlots": 0,
         "installedModsText": "",
@@ -275,7 +275,8 @@
           "Project",
           "Fixed",
           "Restricted"
-        ]
+        ],
+        "integrity": 20
       },
       "workshopBench": {
         "family": "ritual",

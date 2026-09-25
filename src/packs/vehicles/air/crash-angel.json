@@ -60,7 +60,9 @@
         "scale": "Vehicle",
         "drone": false,
         "speedBand": "fast",
-        "faction": "LAZ"
+        "faction": "LAZ",
+        "handling": 3,
+        "integrity": 40
       }
     }
   }

@@ -60,7 +60,9 @@
         "scale": "Vehicle",
         "drone": false,
         "speedBand": "fast",
-        "faction": "AEQ"
+        "faction": "AEQ",
+        "handling": 3,
+        "integrity": 40
       }
     }
   }

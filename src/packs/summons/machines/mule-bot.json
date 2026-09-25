@@ -263,7 +263,19 @@
       ],
       "machine": {
         "kind": "drone",
-        "jumpInCapable": true
+        "jumpInCapable": true,
+        "handling": 2,
+        "integrity": 24,
+        "speedBand": "standard",
+        "sizeScale": "Vehicle",
+        "domain": "Ground (drone)",
+        "modSlots": 4,
+        "drone": true,
+        "tags": [
+          "Cargo",
+          "Cover",
+          "Wired"
+        ]
       }
     }
   }

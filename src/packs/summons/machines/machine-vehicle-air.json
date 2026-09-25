@@ -254,7 +254,12 @@
       "band": "vehicle-air",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-air"
+      "dsid": "machine-vehicle-air",
+      "machine": {
+        "handling": 2,
+        "integrity": 40,
+        "kind": "vehicle"
+      }
     }
   }
 }

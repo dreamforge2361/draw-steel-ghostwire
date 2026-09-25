@@ -259,7 +259,21 @@
       "tags": [
         "Cargo",
         "Ground-hauler"
-      ]
+      ],
+      "machine": {
+        "handling": 1,
+        "integrity": 40,
+        "speedBand": "slow",
+        "sizeScale": "Vehicle",
+        "domain": "Ground",
+        "modSlots": 3,
+        "drone": false,
+        "kind": "vehicle",
+        "tags": [
+          "Cargo",
+          "Ground-hauler"
+        ]
+      }
     }
   }
 }

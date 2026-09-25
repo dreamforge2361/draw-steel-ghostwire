@@ -61,7 +61,9 @@
         "slotCost": 1,
         "craftSkill": [
           "electronics"
-        ]
+        ],
+        "sensorLockEdge": true,
+        "sensorApex": true
       }
     }
   }

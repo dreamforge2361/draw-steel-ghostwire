@@ -254,7 +254,12 @@
       "band": "vehicle-space",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-vehicle-space"
+      "dsid": "machine-vehicle-space",
+      "machine": {
+        "handling": 1,
+        "integrity": 80,
+        "kind": "vehicle"
+      }
     }
   }
 }
