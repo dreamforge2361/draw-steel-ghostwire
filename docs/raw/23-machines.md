@@ -20,7 +20,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 **Hardware gate (¥ side):**
 - **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see **The Wire**, `21`).
-- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
+- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), spare console slots — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
 
 **Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**, **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: **The Wire** (`21`).
 
@@ -39,7 +39,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 | **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |
 | **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |
 | **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |
-| **Autosofts** | May run **one** basic Pilot/Sensor autosoft if the chassis has a free slot — no swarm / Focus Fire / Override packages |
+| **Softs** | Softs are **skillsofts on the pilot’s Skillwires** (`09`), never console software. A **Targeting Soft** or **Clearsight Soft** the pilot is running helps their drone fire and sensing — no swarm / Focus Fire / Override packages |
 | **Heroic resource** | Cannot spend Uptime; cannot use Wrench Deploy & Command / Focus Fire / subclass swarm features |
 
 **Intent:** a Scout's eye-in-the-sky or a Medic's trauma mule is supported; a second Operator does not become a discount Wrench. Buying a taped-together junk mote still burns the one-drone slot.
@@ -52,7 +52,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 | **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |
 | **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |
 | **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |
-| **RCC / autosofts** | Full use of owned RCC ladder + autosoft slots |
+| **RCC / softs** | Full use of owned RCC ladder; softs are skillsofts on Skillwires (`09`) |
 | **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (**The Wrench**, `16`). “Overheat pressure” on high-end RCCs is narrative only. |
 
 **Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.
@@ -224,7 +224,7 @@ Drones use a short **Integrity** track, and every drone card now prints its numb
 ### Modding
 
 - Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.
-- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).
+- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). RCC programs use **Hacking** (**Mods**, `10`). Softs are not mods: they are skillsofts on **Skillwires** (`09`).
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.
 - Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.
@@ -348,7 +348,7 @@ Chase and vehicle combat are **anyone versus anyone** — the round in §6 is th
 ### Customize & modding
 
 - Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.
-- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).
+- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). RCC programs use **Hacking** (**Mods**, `10`). Softs are not mods: they are skillsofts on **Skillwires** (`09`).
 - **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).

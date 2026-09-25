@@ -298,9 +298,11 @@ console.log("0.3.135) Packs indexed, current-query-first retrieval, class routin
   ok(files.has("pack-abilities.md"), "the index ingests the abilities packs");
   ok(files.has("pack-rituals.md"), "…the 46 ritual Workings");
   ok(files.has("pack-summons.md"), "…and the summons pack");
-  ok(index.entityCounts?.ability === 418, `${index.entityCounts?.ability} ability entries`);
+  // 0.3.139 (A): +2 — Special Agent and Special Sprite.
+  ok(index.entityCounts?.ability === 420, `${index.entityCounts?.ability} ability entries`);
   ok(index.entityCounts?.ritual === 46, `${index.entityCounts?.ritual} ritual Working entries`);
-  ok(index.entityCounts?.summon === 68, `${index.entityCounts?.summon} summon / machine entries`);
+  // 0.3.139 (A): +6 — three Special Agent bands and three Special Sprite bands.
+  ok(index.entityCounts?.summon === 74, `${index.entityCounts?.summon} summon / machine entries`);
   const entities = new Set(index.chunks.map(c => c.entity).filter(Boolean));
   ok(entities.has("Ward the Room"), "Ward the Room is an entry by name, not a paragraph of Veil prose");
   ok(entities.has("Hurl Element"), "…and so is Hurl Element");

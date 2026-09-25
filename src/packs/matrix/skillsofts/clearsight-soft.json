@@ -1,0 +1,113 @@
+{
+  "_id": "AXmzeysL13YkNKR9",
+  "_key": "!items!AXmzeysL13YkNKR9",
+  "name": "GHOSTWIRE.Matrix.Items.ClearsightSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.ClearsightSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "clearsight-autosoft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "diXwfqPDHiMKGi6x",
+      "_key": "!items.effects!AXmzeysL13YkNKR9.diXwfqPDHiMKGi6x",
+      "name": "GHOSTWIRE.Matrix.Items.ClearsightSoft.Name",
+      "img": "icons/commodities/tech/electronics-chip-data.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.AXmzeysL13YkNKR9",
+      "description": "GHOSTWIRE.Matrix.Items.ClearsightSoft.SoftwareEffect",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.perception.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "skillsoft": true
+        }
+      }
+    }
+  ],
+  "folder": "3ushV9l5YOZEAI1E",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 700,
+        "modSlots": 0,
+        "tags": [
+          "Skillsoft",
+          "Wired"
+        ],
+        "role": "skillsoft",
+        "host": "skillwires",
+        "slotCost": 0,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ]
+      },
+      "skillsoft": {
+        "skill": "perception",
+        "host": "skillwires",
+        "active": false,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ],
+        "edgeAbilities": []
+      }
+    }
+  }
+}

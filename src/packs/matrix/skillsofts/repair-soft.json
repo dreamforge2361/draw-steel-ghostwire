@@ -1,12 +1,12 @@
 {
-  "_id": "7VS9Rzvn1vEmCYk0",
-  "_key": "!items!7VS9Rzvn1vEmCYk0",
-  "name": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.Name",
+  "_id": "gwSoftRepair0000",
+  "_key": "!items!gwSoftRepair0000",
+  "name": "GHOSTWIRE.Matrix.Items.RepairSoft.Name",
   "type": "treasure",
   "img": "icons/commodities/tech/electronics-chip-data.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.Description",
+      "value": "GHOSTWIRE.Matrix.Items.RepairSoft.Description",
       "director": ""
     },
     "source": {
@@ -14,7 +14,7 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "evade-autosoft",
+    "_dsid": "repair-soft",
     "kind": "other",
     "category": "trinket",
     "echelon": 1,
@@ -33,18 +33,26 @@
   },
   "effects": [
     {
-      "_id": "Mlee0B044C8YkNH4",
-      "_key": "!items.effects!7VS9Rzvn1vEmCYk0.Mlee0B044C8YkNH4",
-      "name": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.Name",
+      "_id": "gwAeSoftRepair00",
+      "_key": "!items.effects!gwSoftRepair0000.gwAeSoftRepair00",
+      "name": "GHOSTWIRE.Matrix.Items.RepairSoft.Name",
       "img": "icons/commodities/tech/electronics-chip-data.webp",
       "type": "base",
-      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.7VS9Rzvn1vEmCYk0",
-      "description": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.SoftwareEffect",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.gwSoftRepair0000",
+      "description": "GHOSTWIRE.Matrix.Items.RepairSoft.SoftwareEffect",
       "system": {
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         },
-        "changes": []
+        "changes": [
+          {
+            "key": "system.skills.modifiers.repair.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
       },
       "disabled": false,
       "duration": {
@@ -61,7 +69,7 @@
       "showIcon": 1,
       "flags": {
         "draw-steel-ghostwire": {
-          "software": true
+          "skillsoft": true
         }
       }
     }
@@ -76,30 +84,27 @@
       "matrix": {
         "echelon": 1,
         "availability": "professional",
-        "price": 800,
+        "price": 600,
         "modSlots": 0,
         "tags": [
-          "Program",
-          "Wired",
-          "Autosoft"
+          "Skillsoft",
+          "Wired"
         ],
-        "role": "autosoft",
-        "host": "rcc",
-        "slotCost": 1,
+        "role": "skillsoft",
+        "host": "skillwires",
+        "slotCost": 0,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ]
       },
-      "mod": {
-        "slotCost": 1,
-        "hosts": [
-          "rcc"
-        ],
-        "host": "rcc",
+      "skillsoft": {
+        "skill": "repair",
+        "host": "skillwires",
+        "active": false,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ],
         "edgeAbilities": []
       }

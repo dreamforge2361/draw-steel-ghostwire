@@ -16,6 +16,11 @@
 // (mirrors Compile Sprite's 3 Resonance Enhance). Outside combat, Hacker Programs fire without spending.
 
 import { isFullyConnected, WIRED_STATUS_DEFS } from "./wired-state.mjs";
+import {
+  ACTIONS_BY_TIER, PURPOSE_MAX, SPECIAL_AGENT_BANDWIDTH, SPECIAL_AGENT_DSID, SPECIAL_ARCHETYPE,
+  SPECIAL_STAMINA_BASE, actionsForTier, normalizePurpose, specialSpendPlan, specialSummonDescription,
+  specialSummonLabel, tierFromMessage,
+} from "./special-summons.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
@@ -24,9 +29,14 @@ const UI = "GHOSTWIRE.Summons.Agents.UI";
 const COMPILE_DSID = "compile-agent";
 const DECOMPILE_DSID = "decompile-agent";
 const ARCHETYPES = ["probe", "spike", "daemon", "watchdog"];
+/** Every archetype a compile may stamp. `special` is never offered in the picker — it has its own ability. */
+const ALL_ARCHETYPES = [...ARCHETYPES, SPECIAL_ARCHETYPE];
 
 /** 3 Bandwidth — same number as Compile Sprite's Enhance / Ghost Signal. Michael can tune later. */
 export const COMPILE_BANDWIDTH = 3;
+
+/** Where a hero's heroic resource (Bandwidth, for a Hacker) lives on the Actor. */
+const RESOURCE_PATH = "system.hero.primary.value";
 
 // Agent Stat Block Reference (19-hacker.md): Stamina = archetype base + (Logic × level), per band.
 // Parallel to sprite Data / Attack / Machine / Ward bases. Must match src/packs/summons/agents/.
@@ -35,6 +45,8 @@ const STAMINA_BASE = {
   spike: { minor: 12, intermediate: 18, advanced: 26 },
   daemon: { minor: 10, intermediate: 16, advanced: 22 },
   watchdog: { minor: 10, intermediate: 16, advanced: 22 },
+  // 0.3.139 (A): the purpose-built Special Agent sits on the middle base, like Daemon and Watchdog.
+  [SPECIAL_ARCHETYPE]: { ...SPECIAL_STAMINA_BASE },
 };
 
 /** The hybrid band a Hacker of this level compiles into: minor L1–3, intermediate L4–7, advanced L8–10. */
@@ -55,6 +67,9 @@ const isCompileAbility = item =>
   (item?.type === "ability") && (item.system?._dsid === COMPILE_DSID) && isHacker(item.parent);
 const isDecompileAbility = item =>
   (item?.type === "ability") && (item.system?._dsid === DECOMPILE_DSID) && isHacker(item.parent);
+/** 0.3.139 (A) — Special Agent: roll first, tier buys Actions, then the player writes the purpose. */
+const isSpecialAbility = item =>
+  (item?.type === "ability") && (item.system?._dsid === SPECIAL_AGENT_DSID) && isHacker(item.parent);
 
 /**
  * How many Agents this Hacker may command at once.
@@ -225,15 +240,15 @@ function warn(key, data) {
  * Spend 3 Bandwidth in combat. Outside combat, Hacker Programs (and this compile) fire without spending
  * (19-hacker.md — once until Victory / respite is table discipline, not a Foundry counter).
  */
-async function spendBandwidth(caster) {
-  if (!caster.inCombat) return true;
-  const path = "system.hero.primary.value";
-  const current = Number(foundry.utils.getProperty(caster, path)) || 0;
-  if (current < COMPILE_BANDWIDTH) {
-    warn("NotEnoughBandwidth", { name: caster.name, cost: COMPILE_BANDWIDTH, current });
+async function spendBandwidth(caster, cost = COMPILE_BANDWIDTH) {
+  const current = Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0;
+  const plan = specialSpendPlan({ inCombat: !!caster.inCombat, current, cost });
+  if (!plan.ok) {
+    warn("NotEnoughBandwidth", { name: caster.name, cost, current });
     return false;
   }
-  await caster.update({ [path]: current - COMPILE_BANDWIDTH });
+  // Out of combat there is no spend at all — not a spend of 0. Don't write the resource.
+  if (plan.spend > 0) await caster.update({ [RESOURCE_PATH]: plan.next });
   return true;
 }
 
@@ -241,13 +256,16 @@ async function spendBandwidth(caster) {
  * Compile one Agent for a Hacker: band from their current level, Stamina stamped from live Logic × level.
  * @param {Actor} caster
  * @param {object} [options]
- * @param {string} [options.archetype]    probe | spike | daemon | watchdog; prompts when omitted.
+ * @param {string} [options.archetype]    probe | spike | daemon | watchdog | special; prompts when omitted.
  * @param {object} [options.position]     {x, y} instead of the ring beside the caster.
  * @param {boolean} [options.silent]
  * @param {boolean} [options.skipSpend]   Level-refresh swaps already paid; don't charge again.
+ * @param {{actions: number, purpose: string}} [options.special]  0.3.139 (A): the Special Agent's
+ *   action budget and the purpose the player wrote after seeing it. Stamped onto the summoned Actor's
+ *   description as `Actions (N): …purpose…` and kept in flags so a band swap can re-stamp it.
  * @returns {Promise<Actor|null>}
  */
-export async function compileAgent(caster, { archetype, position, silent = false, skipSpend = false } = {}) {
+export async function compileAgent(caster, { archetype, position, silent = false, skipSpend = false, special = null } = {}) {
   if (!isHacker(caster)) return warn("NotHacker");
   const state = actorWiredState(caster);
   const cap = agentCap(caster);
@@ -264,7 +282,9 @@ export async function compileAgent(caster, { archetype, position, silent = false
   const level = casterLevel(caster);
   const band = agentBand(level);
   archetype ??= await promptArchetype(caster, band);
-  if (!ARCHETYPES.includes(archetype)) return null;
+  if (!ALL_ARCHETYPES.includes(archetype)) return null;
+  // A Special Agent without a budget and a purpose is not a Special Agent; the ability owns that prompt.
+  if ((archetype === SPECIAL_ARCHETYPE) && !special) return null;
 
   if (!skipSpend && !(await spendBandwidth(caster))) return null;
 
@@ -288,8 +308,19 @@ export async function compileAgent(caster, { archetype, position, silent = false
     [`flags.${MODULE_ID}`]: {
       kind: "agent", archetype, hybridTier: band, compiler: caster.uuid,
       dsid: `agent-${archetype}-${band}`, compiledAtLevel: level,
+      ...(special ? { special: { actions: special.actions, purpose: normalizePurpose(special.purpose) } } : {}),
     },
   });
+  // LOCKED: the action cap is annotated on the summoned Actor's description, not only in a flag.
+  if (special) {
+    data.system ??= {};
+    data.system.biography ??= {};
+    data.system.biography.value = specialSummonDescription({
+      actions: special.actions,
+      purpose: special.purpose,
+      lead: game.i18n.localize(`${UI}.SpecialLead`),
+    });
+  }
   const actor = await Actor.create(data);
   if (!actor) return null;
 
@@ -298,9 +329,10 @@ export async function compileAgent(caster, { archetype, position, silent = false
   await syncRoster(caster);
   refreshSheets(caster);
   if (!silent) {
-    ui.notifications.info(game.i18n.format(`${UI}.Compiled`, {
+    ui.notifications.info(game.i18n.format(special ? `${UI}.SpecialCompiled` : `${UI}.Compiled`, {
       agent: actor.name, stamina, count: current.length + 1, cap,
       band: game.i18n.localize(`${UI}.Band.${band}`),
+      budget: special ? specialSummonLabel(special) : "",
     }));
   }
   return actor;
@@ -367,7 +399,10 @@ export async function refreshAgents(caster, { silent = false } = {}) {
   let deferred = 0;
   for (const agent of agents) {
     const archetype = agent.getFlag(MODULE_ID, "archetype");
-    if (!ARCHETYPES.includes(archetype)) continue;
+    if (!ALL_ARCHETYPES.includes(archetype)) continue;
+    // 0.3.139 (A): a Special Agent carries its budget and purpose across a band swap. Re-rolling for
+    // a new budget on level-up would take back something the player already bought with a Power Roll.
+    const special = agent.getFlag(MODULE_ID, "special") ?? null;
     const stamina = agentStamina(archetype, band, caster);
     const sameBand = agent.getFlag(MODULE_ID, "hybridTier") === band;
     if (!sameBand && !canSwap) { deferred++; continue; }
@@ -385,7 +420,7 @@ export async function refreshAgents(caster, { silent = false } = {}) {
       const token = agent.getActiveTokens()[0]?.document;
       const position = token ? { x: token.x, y: token.y } : null;
       await decompileAgent(agent, { silent: true });
-      await compileAgent(caster, { archetype, position, silent: true, skipSpend: true });
+      await compileAgent(caster, { archetype, position, silent: true, skipSpend: true, special });
     }
     changed++;
   }
@@ -440,6 +475,75 @@ async function useCompileFromSheet(model, use, config, dialogOptions, messageOpt
   return message;
 }
 
+/**
+ * 0.3.139 (A) — the purpose prompt. Shown **after** the Power Roll, so the number in the label is the
+ * budget the dice actually bought.
+ * @returns {Promise<string|null>} The typed purpose, or null if the player backed out.
+ */
+async function promptSpecialPurpose(caster, actions) {
+  const typed = await foundry.applications.api.DialogV2.prompt({
+    window: { title: game.i18n.localize(`${UI}.SpecialTitle`) },
+    content: `<p>${game.i18n.format(`${UI}.SpecialPrompt`, {
+      name: foundry.utils.escapeHTML(caster.name),
+      actions,
+    })}</p><div class="form-group"><label>${game.i18n.localize(`${UI}.SpecialLabel`)}</label>`
+      + `<input type="text" name="purpose" maxlength="${PURPOSE_MAX}" placeholder="${game.i18n.localize(`${UI}.SpecialPlaceholder`)}"></div>`,
+    ok: {
+      label: game.i18n.localize(`${UI}.SpecialCompile`),
+      callback: (event, button) => button.form.elements.purpose.value,
+    },
+    rejectClose: false,
+  });
+  if (typed === null || typed === undefined) return null;
+  const purpose = normalizePurpose(typed);
+  return purpose || game.i18n.localize(`${UI}.SpecialNoPurpose`);
+}
+
+/**
+ * Abilities-tab Use of **Special Agent**. The order is the feature and it is LOCKED:
+ *
+ *   roll → tier buys Actions → player writes the purpose → the Agent manifests with it annotated.
+ *
+ * Nothing is asked before the dice. The spend (3 Bandwidth, in combat only) happens after the purpose
+ * is confirmed and before the Actor is created, so backing out of the prompt costs nothing but the roll.
+ */
+async function useSpecialFromSheet(model, use, config, dialogOptions, messageOptions) {
+  const caster = model.actor;
+  const plan = liveCompilePlan(caster);
+  // Special Agent is a compile, never a command: at cap there is no second thing for it to do.
+  if (plan.mode !== "compile") return warnPlan(caster, plan.gate ?? "AtCap");
+
+  // Affordability is checked *before* the roll so a Hacker never spends an action on a compile they
+  // cannot pay for. The resource itself is not written until the purpose is in.
+  const afford = specialSpendPlan({
+    inCombat: !!caster.inCombat,
+    current: Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0,
+    cost: SPECIAL_AGENT_BANDWIDTH,
+  });
+  if (!afford.ok) {
+    return warn("NotEnoughBandwidth", {
+      name: caster.name, cost: SPECIAL_AGENT_BANDWIDTH,
+      current: Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0,
+    });
+  }
+
+  // 1 — Power Roll first.
+  const message = await use.call(model, config, dialogOptions, messageOptions);
+  if (!message) return message;
+
+  // 2 — the tier sets the action budget.
+  const actions = actionsForTier(tierFromMessage(message));
+
+  // 3 — only now does the player write what it is for.
+  const purpose = await promptSpecialPurpose(caster, actions);
+  if (purpose === null) return message;
+
+  // 4 — pay (in combat only), then summon with the budget annotated on the description.
+  if (!(await spendBandwidth(caster, SPECIAL_AGENT_BANDWIDTH))) return message;
+  await compileAgent(caster, { archetype: SPECIAL_ARCHETYPE, skipSpend: true, special: { actions, purpose } });
+  return message;
+}
+
 /** Abilities-tab Use of Decompile Agent: pick a target (or all), then dismiss after the card posts. */
 async function useDecompileFromSheet(model, use, config, dialogOptions, messageOptions) {
   const caster = model.actor;
@@ -462,6 +566,7 @@ function patchAbilityUse() {
   AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
     const item = this.parent;
     if (isCompileAbility(item)) return useCompileFromSheet(this, use, config, dialogOptions, messageOptions);
+    if (isSpecialAbility(item)) return useSpecialFromSheet(this, use, config, dialogOptions, messageOptions);
     if (isDecompileAbility(item)) return useDecompileFromSheet(this, use, config, dialogOptions, messageOptions);
     return use.call(this, config, dialogOptions, messageOptions);
   };
@@ -499,7 +604,7 @@ export function registerAgents() {
   Hooks.on("renderDrawSteelItemSheet", (app, element) => {
     const item = app.document;
     element.querySelector(".ghostwire-agent-controls")?.remove();
-    if (!isCompileAbility(item) && !isDecompileAbility(item)) return;
+    if (!isCompileAbility(item) && !isDecompileAbility(item) && !isSpecialAbility(item)) return;
     const header = element.querySelector(".sheet-header .header-center") ?? element.querySelector(".sheet-header");
     if (!header) return;
 
@@ -606,7 +711,10 @@ export function registerAgents() {
       compileAgent, decompileAgent, decompileAllAgents, refreshAgents, commandAgent,
       compiledAgents, agentCompiler, agentCap, agentBand, agentStamina, compileAbility,
       compileAllowedAtState, actorWiredState, compileAgentGate, sheetUseCompilePlan, COMPILE_BANDWIDTH,
+      // 0.3.139 (A) — Special Agent
+      actionsForTier, specialSummonDescription, specialSpendPlan, tierFromMessage,
+      SPECIAL_AGENT_BANDWIDTH, SPECIAL_AGENT_DSID, SPECIAL_ARCHETYPE, ACTIONS_BY_TIER,
     };
   }
-  console.log(`${MODULE_ID} | Agents: Compile / Decompile registered (sheet Use, hero sheet row menu, Compile Agent item sheet)`);
+  console.log(`${MODULE_ID} | Agents: Compile / Special / Decompile registered (sheet Use, hero sheet row menu, Compile Agent item sheet)`);
 }

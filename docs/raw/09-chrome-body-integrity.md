@@ -30,13 +30,13 @@ Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyb
 | **Standard / Clinic** | Baseline | Baseline | Factory-grade default |
 | **Soft / Bioware** | Expensive | ×**0.4** of Standard (**round up**) | Vat-cultured; mage-tolerable at high cost/Availability |
 
-**Representative Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires/Encephalon 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1.
+**Representative Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1.
 
 ## Location slots
 
 | Location | Typical | Slot cap |
 |---|---|---|
-| Head / Neural | Datajacks, skillwires, encephalon, memory | 3 |
+| Head / Neural | Datajacks, Skillwires, Encephalon, memory | 3 |
 | Eyes / Optics | Cyber-eyes, optical suites, targeting | 1 |
 | Ears / Aural | Cyber-ears, audio suites | 1 |
 | Torso / Core | Lacing, dermal, filtration, secondary hearts | 3 |
@@ -146,7 +146,7 @@ Baseline street-clinic metal. Default grade for Operators, Scouts, and anyone wh
 | Running Gear | Legs / Locomotion | 3 | 2,500 | Professional | +1 speed; edge on Athletics |
 | Reaction Enhancer | Nervous system | 3 | 3,500 | Restricted | +1 square when you shift with Disengage |
 | Dermal Plating | Torso / Core | 4 | 4,000 | Restricted | Damage immunity 2 (all); visible chrome social cost |
-| Skillwires / Encephalon | Head / Neural | 4 | 5,000 | Restricted | Loaded skillsoft edge (default Repair; swap per soft) |
+| Skillwires | Head / Neural | 4 | 5,000 | Restricted | Soft socket: run skillsofts (E1–E2 one, E3 two, E4 three). No edge of its own |
 | Muscle / Bone Lacing | Torso / Core | 5 | 6,000 | Restricted | +1 stability; edge on Athletics |
 | Cyberlimb (Arm) | Arms / Hands | 5 | 7,500 | Restricted | Limb replace / mount; +1 damage on melee weapon abilities |
 | Wired Reflexes | Nervous system | 6 | 12,000 | Military | +1 speed; +2 squares on Disengage shifts; hardest slot |
@@ -171,6 +171,31 @@ Vat-cultured chrome for Faces and casters who refuse to carve their casting pool
 ### Salvage / Used
 
 Black-clinic and ex-corpse grade: **cheaper ¥**, **×1.5** Standard BI (Pass A), worst magic erosion (−1 cap per 1 BI). There are **no Salvage SKU rows** in the Chrome pack yet — Directors who need a used Datajack or scavenged Wired Reflexes treat ¥ and Availability as **PROVISIONAL** (cheap / Street-leaning) and apply the Integrity multiplier strictly.
+
+### Skillwires and skillsofts
+
+**Skillwires** is a socket, not a skill. Installed on its own it does nothing: BI 4, ¥5,000, Restricted, Head / Neural, and an empty co-processor waiting for a chip. What it does is let you run **skillsofts**.
+
+A **skillsoft** is a chip you buy, carry and own like any other gear. It sits in inventory doing nothing until you **load** it.
+
+- **Active softs by echelon.** **E1–E2: one.** **E3: two.** **E4: three.** Own as many chips as you can pay for — only the active ones apply.
+- **Loading, unloading and swapping** is a **short field action, out of combat only**. It is **not** a §Craft Project, and you **cannot** swap a soft in the middle of a fight. Decide before the door opens.
+- **A matching active soft auto-applies its edge.** If the soft names the skill you are rolling, the edge is already on the Power Roll or Project. There is no card toggle to remember.
+- **Chrome edges do not stack with other chrome edges on the same skill.** Cyber-Eyes and a Clearsight Soft are still one edge on Perception.
+- **Skillwires is not the Hacker's Encephalon / Cerebral Datastore.** That is a separate Wired implant with its own Bandwidth benefits. The two never merge, and a Hacker who wants both buys both.
+
+**The shipped catalog** (Ghostwire Matrix › **Skillsofts**):
+
+| Soft | What it helps |
+|---|---|
+| **Targeting Soft** | Gunnery — your own mounts, Rigged Fire, and fire through a linked drone |
+| **Evade Soft** | Piloting / Driving / Rigging while evading or pulling a Handling maneuver |
+| **Clearsight Soft** | Perception and sensor-lock rolls, in the meat or through a linked drone |
+| **Repair Tick Soft** | Between scenes, one linked drone slowly regains Integrity |
+| **Crafting Soft** | Crafting, fabricate and §Craft Project rolls |
+| **Core skill softs** | One chip per skill: Athletics, Acrobatics, Stealth, Medicine, Firearms, Heavy Weapons, Melee, Demolitions, Repair, Electronics, Hacking, Security Systems, Cybertech, Driving, Piloting, Rigging, Persuasion, Deception, Intimidation, Insight, Navigation, Streetwise |
+
+**There are no autosofts.** Softs used to be RCC software that filled a console's mod slots and loaded with a downtime Project. They are not any more: every soft is a skillsoft on Skillwires. An **RCC** still commands drones and still has its published mod slots — it just has nothing in the catalog to put in them yet, and it never takes a soft.
 
 ### Provisional gaps (still unpublished)
 

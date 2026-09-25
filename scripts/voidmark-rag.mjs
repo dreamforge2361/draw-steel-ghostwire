@@ -124,8 +124,13 @@ const FILE_HINTS = [
   { re: /\bhovercraft\b|\baltitude limiter\b|street.?pov|\blane-hopper\b|\bstar-chopper\b|how the flats move/, file: "03-life-on-the-flats" },
   { re: /\bbulldog\b|heavy hauler|cargo van|ground-hauler/, file: "L1-setting-primer" },
   { re: /hover \/ pov|ground-hauler|\bvtol\b|limiter band/, file: "28-glossary-slang" },
-  { re: /\bmods?\b|\bautosofts?\b|\binstall(?:ing|ed)?\b/, file: "10-mods" },
-  { re: /\bhackers?\b|\bbandwidth\b|\bprograms?\b|compile agent|decompile agent|\bagents?\b|probe agent|spike agent|daemon agent|watchdog agent|integrity spike/, file: "19-hacker" },
+  { re: /\bmods?\b|\binstall(?:ing|ed)?\b/, file: "10-mods" },
+  // 0.3.139 (C): softs left the mods chapter for the chrome one when autosofts became skillsofts.
+  { re: /\bskillwires\b|\bskillsofts?\b|\bencephalon\b|cerebral datastore/, file: "09-chrome-body-integrity" },
+  { re: /\bhackers?\b|\bbandwidth\b|\bprograms?\b|compile agent|decompile agent|special agent|\bagents?\b|probe agent|spike agent|daemon agent|watchdog agent|integrity spike|wired firefight|deep scan/, file: "19-hacker" },
+  // 0.3.139 (A/B): the Technomancer chapter had no hint of its own, so "how does Special Sprite work?"
+  // and "wired firefight" landed on the Veil chapter's sprite prose instead of the class chapter.
+  { re: /\btechnomancers?\b|compile sprite|special sprite|\brecompile\b|\bcongregation\b|wired firefight/, file: "20-technomancer" },
   { re: /\bvoidmark\b|\bthe mark\b|\bblacklight\b/, file: "L4-voidmark" },
   { re: /hands off|\baccords?\b|\bactuators?\b/, file: "L5-hands-off-accords" },
   { re: /\blifestyle\b|\bdowntime\b|\brespite\b|\bupkeep\b/, file: "26-lifestyle-downtime" },
@@ -191,6 +196,13 @@ const LOCK_PHRASES = [
   "wire kit",
   "pack drones",
   "pack vehicles",
+  // 0.3.139: the Console roster. Adding Special Agent / Special Sprite to the Hacker and Technomancer
+  // chapters gave "where do my constructs live?" four strong class-chapter chunks to out-score the one
+  // chapter that actually answers it. These two phrases put The Wire back on top when they are asked for.
+  "wired console",
+  "roster anchor",
+  "special agent",
+  "special sprite",
 ].sort((a, b) => b.length - a.length);
 
 /* ------------------------------------------------------------------ 0.3.135 (3c) class routing */

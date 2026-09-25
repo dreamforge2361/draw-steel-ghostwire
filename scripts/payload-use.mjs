@@ -6,7 +6,8 @@
 // (keywords ranged + wired, Reason power roll, distance special / Reach), which runs the normal ability
 // pipeline, emits the `abilityUse` chat part, and hits B40's `wired` SFX rule by keyword.
 //
-// Suite programs and autosofts are NOT payloads: they stay Activate/Deactivate in scripts/mods.mjs.
+// Suite programs are NOT payloads: they stay Activate/Deactivate in scripts/mods.mjs.
+// Skillsofts are not payloads either — they load on Skillwires (scripts/skillsofts.mjs).
 //
 // B51b magazine rule (docs/raw/21-the-wire.md, Deck software): a payload is a deck mod (mod.magazine) sharing
 // the deck's slots with suites. A loose chip does nothing. Load magazine (Craft) rolls Reason (Hacking adds an

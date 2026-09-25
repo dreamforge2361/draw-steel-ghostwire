@@ -1,6 +1,6 @@
 # The Hacker
 
-The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in **The Wire** (`21`). **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
+The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in **The Wire** (`21`). **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Special Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
 
 ---
 
@@ -105,14 +105,60 @@ Agents are software constructs you compile from your deck — **Probe** (recon /
 >
 > **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
 
+### Special Agent -- the purpose-built daemon
+
+Compile Agent hands you one of four stock archetypes. **Special Agent** hands you none of them: you compile a daemon written for one job, and the dice decide how much of that job it can do.
+
+**The order is the whole ability. Do not reorder it.**
+
+1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.
+2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.
+3. **Now say what it is for.** One sentence, written knowing the budget — “cut the cameras on floor 6”, “hold the maglock open and scream if anyone comes”.
+4. **It manifests with the cap written on it.** The Agent's description opens with the budget and your sentence: **Actions (2): cut the cameras on floor 6**. It does that and nothing else, and it stops when the Actions are spent.
+
+**Cost.** **3 Bandwidth in combat.** Out of combat it costs nothing, like the rest of your Programs.
+
+**Cap, Stamina and cleanup.** A Special Agent counts against your Agent cap like any other Agent, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced.
+
+**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different Agent.
+
+> **Special Agent** *(Class Feature Signature — 3 Bandwidth in combat, free out of combat, Overlay or Jacked In)*
+>
+> **Effect:** Make the Power Roll **first**. On **low (≤11)** the Agent compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The Agent manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose.
+
 > **In Foundry**
-> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU.
+> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`.
+
+## Wired firefight -- round-by-round checklist
+
+The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Hacker actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.
+
+**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In — **Linked refuses** an Agent compile), your **Bandwidth**, your **deck** and what is installed on it, your **Agent cap**, and any **Trace Alert** you carried in. Your meat body still stands where you left it, and it can still be shot.
+
+**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. Skip it when you already know the room.
+
+**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. This is what turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Almost nothing downstream works well without it: Seize Control needs a named asset, and a purpose-built Agent needs a job worth naming.
+
+**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A held asset is the difference between an Agent that *watches* a door and an Agent that *holds* one.
+
+**4. Compile — one of the two, never both in one action.**
+
+- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.
+- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.
+
+Out of combat, neither costs anything. Either way you cannot exceed your Agent cap.
+
+**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.
+
+**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.
+
+**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software.
 
 ## Level 1-10 Progression Table
 
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
-| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
+| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
 | **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |
 | **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |

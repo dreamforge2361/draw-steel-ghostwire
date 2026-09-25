@@ -65,7 +65,7 @@ If an item publishes **modSlots > 0**, a **published mod family** must exist for
 | **Armor / shields** | **Published** *(wearable)* | Gear master **§2F** (harvested below). Hosts: `armor` and `shield`. **No wearable mod adds Stamina** |
 | **Gadgets** | **Published** | Gear master **§1H** (harvested below). Hosts: `comms`, `sensors`, `bne-mechanical`, `bne-electronic`, `survival`, `wired` |
 | **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below). Hosts: `vehicle` and `drone` |
-| **Decks / RCCs** | **Published** (software) | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. Play rules: `21` |
+| **Decks / RCCs** | **Published** (software) | Slots filled by **suites** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. **Softs are not console software** — they are skillsofts on the **Skillwires** implant (`09`). Play rules: `21` |
 
 A gadget you bought from Category 1 is a **host** when a published family exists for its family tag — and as of G2 every Category-1 family has one. You still cannot slot a row this chapter does not print: §1H is the menu, and Invent a Mod is the only other door.
 
@@ -344,7 +344,7 @@ Project points come from **Lifestyle project slots** (`26`) like any other Proje
 
 ### Programs and payloads (pointer)
 
-- **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
+- **Programs / suites** occupy deck slots (Category 4B+); §Craft Project skill = **Hacking**. **Skillsofts** are not mods at all: they load on **Skillwires** as a field action out of combat (`09`).
 - **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: **The Wire** (`21`) (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
 
 ---

@@ -13,6 +13,11 @@
 // *current* level, and a level-up while the congregation is out re-compiles it into the right band.
 
 import { abilityFromMessage } from "./token-light.mjs";
+import {
+  ACTIONS_BY_TIER, PURPOSE_MAX, SPECIAL_ARCHETYPE, SPECIAL_SPRITE_DSID, SPECIAL_SPRITE_RESONANCE,
+  SPECIAL_STAMINA_BASE, actionsForTier, normalizePurpose, specialSpendPlan, specialSummonDescription,
+  specialSummonLabel, tierFromMessage,
+} from "./special-summons.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
@@ -21,6 +26,11 @@ const UI = "GHOSTWIRE.Summons.Sprites.UI";
 const COMPILE_DSID = "compile-sprite";
 const RECOMPILE_DSID = "recompile";
 const ARCHETYPES = ["data", "attack", "machine", "ward"];
+/** Every archetype a compile may stamp. `special` is never offered in the picker — it has its own ability. */
+const ALL_ARCHETYPES = [...ARCHETYPES, SPECIAL_ARCHETYPE];
+
+/** Where a hero's heroic resource (Resonance, for a Technomancer) lives on the Actor. */
+const RESOURCE_PATH = "system.hero.primary.value";
 
 /**
  * C5 (0.3.123) — Recompile's "at reduced power" (docs/raw/20-technomancer.md, 1-cost band).
@@ -62,6 +72,8 @@ const STAMINA_BASE = {
   attack: { minor: 12, intermediate: 18, advanced: 26 },
   machine: { minor: 10, intermediate: 16, advanced: 22 },
   ward: { minor: 10, intermediate: 16, advanced: 22 },
+  // 0.3.139 (A): the purpose-built Special Sprite sits on the middle base, like Machine and Ward.
+  [SPECIAL_ARCHETYPE]: { ...SPECIAL_STAMINA_BASE },
 };
 
 /** The hybrid band a Technomancer of this level compiles into: minor L1–3, intermediate L4–7, advanced L8–10. */
@@ -82,6 +94,9 @@ export const compileAbility = actor =>
   actor?.items.find(i => (i.type === "ability") && (i.system._dsid === COMPILE_DSID)) ?? null;
 const isCompileAbility = item =>
   (item?.type === "ability") && (item.system?._dsid === COMPILE_DSID) && isTechnomancer(item.parent);
+/** 0.3.139 (A) — Special Sprite: roll first, tier buys Actions, then the player writes the purpose. */
+const isSpecialAbility = item =>
+  (item?.type === "ability") && (item.system?._dsid === SPECIAL_SPRITE_DSID) && isTechnomancer(item.parent);
 
 /**
  * How many sprites this Technomancer may command at once.
@@ -204,9 +219,12 @@ async function promptArchetype(caster, band) {
  * @param {object} [options.position]     {x, y} to place the token at, instead of the ring beside the caster.
  * @param {boolean} [options.silent]      Skip the "compiled" notification (used by the level refresh).
  * @param {boolean} [options.reduced]     C5: rebuild at reduced power (half Stamina).
+ * @param {{actions: number, purpose: string}} [options.special]  0.3.139 (A): the Special Sprite's
+ *   action budget and the purpose the player wrote after seeing it. Stamped onto the summoned Actor's
+ *   description as `Actions (N): …purpose…` and kept in flags so a band swap can re-stamp it.
  * @returns {Promise<Actor|null>}
  */
-export async function compileSprite(caster, { archetype, position, silent = false, reduced = false } = {}) {
+export async function compileSprite(caster, { archetype, position, silent = false, reduced = false, special = null } = {}) {
   if (!isTechnomancer(caster)) return ui.notifications.warn(game.i18n.localize(`${UI}.NotTechnomancer`));
   if (!canvas.scene) return ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`));
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) return ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`));
@@ -221,7 +239,9 @@ export async function compileSprite(caster, { archetype, position, silent = fals
   const level = casterLevel(caster);
   const band = spriteBand(level);
   archetype ??= await promptArchetype(caster, band);
-  if (!ARCHETYPES.includes(archetype)) return null;
+  if (!ALL_ARCHETYPES.includes(archetype)) return null;
+  // A Special Sprite without a budget and a purpose is not a Special Sprite; the ability owns that prompt.
+  if ((archetype === SPECIAL_ARCHETYPE) && !special) return null;
 
   const template = await templateFor(archetype, band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { dsid: `sprite-${archetype}-${band}` }));
@@ -249,8 +269,19 @@ export async function compileSprite(caster, { archetype, position, silent = fals
     [`flags.${MODULE_ID}`]: {
       kind: "sprite", archetype, hybridTier: band, compiler: caster.uuid,
       dsid: `sprite-${archetype}-${band}`, compiledAtLevel: level, reduced,
+      ...(special ? { special: { actions: special.actions, purpose: normalizePurpose(special.purpose) } } : {}),
     },
   });
+  // LOCKED: the action cap is annotated on the summoned Actor's description, not only in a flag.
+  if (special) {
+    data.system ??= {};
+    data.system.biography ??= {};
+    data.system.biography.value = specialSummonDescription({
+      actions: special.actions,
+      purpose: special.purpose,
+      lead: game.i18n.localize(`${UI}.SpecialLead`),
+    });
+  }
   const actor = await Actor.create(data);
   if (!actor) return null;
 
@@ -259,9 +290,10 @@ export async function compileSprite(caster, { archetype, position, silent = fals
   await syncRoster(caster);
   refreshSheets(caster);
   if (!silent) {
-    ui.notifications.info(game.i18n.format(`${UI}.Compiled`, {
+    ui.notifications.info(game.i18n.format(special ? `${UI}.SpecialCompiled` : `${UI}.Compiled`, {
       sprite: actor.name, stamina, count: current.length + 1, cap,
       band: game.i18n.localize(`${UI}.Band.${band}`),
+      budget: special ? specialSummonLabel(special) : "",
     }));
   }
   return actor;
@@ -331,7 +363,10 @@ export async function refreshSprites(caster, { silent = false } = {}) {
   let deferred = 0;
   for (const sprite of sprites) {
     const archetype = sprite.getFlag(MODULE_ID, "archetype");
-    if (!ARCHETYPES.includes(archetype)) continue;
+    if (!ALL_ARCHETYPES.includes(archetype)) continue;
+    // 0.3.139 (A): a Special Sprite carries its budget and purpose across a band swap. Re-rolling for
+    // a new budget on level-up would take back something the player already bought with a Power Roll.
+    const special = sprite.getFlag(MODULE_ID, "special") ?? null;
     // A sprite rebuilt by Recompile stays rebuilt: levelling re-stamps its *reduced* pool, not a full one.
     const reduced = sprite.getFlag(MODULE_ID, "reduced") === true;
     const full = spriteStamina(archetype, band, caster);
@@ -353,7 +388,7 @@ export async function refreshSprites(caster, { silent = false } = {}) {
       const token = sprite.getActiveTokens()[0]?.document;
       const position = token ? { x: token.x, y: token.y } : null;
       await decompileSprite(sprite, { silent: true });
-      await compileSprite(caster, { archetype, position, silent: true, reduced });
+      await compileSprite(caster, { archetype, position, silent: true, reduced, special });
     }
     changed++;
   }
@@ -494,6 +529,65 @@ export async function recompileSprite(caster, { target, archetype } = {}) {
   return actor;
 }
 
+/**
+ * 0.3.139 (A) — the purpose prompt. Shown **after** the Power Roll, so the number in the label is the
+ * budget the dice actually bought.
+ * @returns {Promise<string|null>} The typed purpose, or null if the player backed out.
+ */
+async function promptSpecialPurpose(caster, actions) {
+  const typed = await foundry.applications.api.DialogV2.prompt({
+    window: { title: game.i18n.localize(`${UI}.SpecialTitle`) },
+    content: `<p>${game.i18n.format(`${UI}.SpecialPrompt`, {
+      name: foundry.utils.escapeHTML(caster.name),
+      actions,
+    })}</p><div class="form-group"><label>${game.i18n.localize(`${UI}.SpecialLabel`)}</label>`
+      + `<input type="text" name="purpose" maxlength="${PURPOSE_MAX}" placeholder="${game.i18n.localize(`${UI}.SpecialPlaceholder`)}"></div>`,
+    ok: {
+      label: game.i18n.localize(`${UI}.SpecialCompile`),
+      callback: (event, button) => button.form.elements.purpose.value,
+    },
+    rejectClose: false,
+  });
+  if (typed === null || typed === undefined) return null;
+  const purpose = normalizePurpose(typed);
+  return purpose || game.i18n.localize(`${UI}.SpecialNoPurpose`);
+}
+
+/**
+ * **Special Sprite**, driven off the card the ability just posted. The order is the feature, and here
+ * it falls out of the seam: the hook only runs *after* the Power Roll, so the tier is already on the
+ * message when the budget is computed and the purpose is asked for.
+ *
+ *   roll → tier buys Actions → player writes the purpose → the sprite manifests with it annotated.
+ *
+ * Cost is 3 Resonance **in combat only**; out of combat the sprite is free, so the ability card carries
+ * no stock `resource` and this is the only thing that writes Resonance for it.
+ */
+async function compileSpecialSprite(caster, message) {
+  const current = Number(foundry.utils.getProperty(caster, RESOURCE_PATH)) || 0;
+  const plan = specialSpendPlan({ inCombat: !!caster.inCombat, current, cost: SPECIAL_SPRITE_RESONANCE });
+  if (!plan.ok) {
+    ui.notifications.warn(game.i18n.format(`${UI}.NotEnoughResonance`, {
+      name: caster.name, cost: SPECIAL_SPRITE_RESONANCE, current,
+    }));
+    return null;
+  }
+  if (compiledSprites(caster).length >= spriteCap(caster)) {
+    ui.notifications.warn(game.i18n.format(`${UI}.AtCap`, {
+      name: caster.name, cap: spriteCap(caster), count: compiledSprites(caster).length,
+    }));
+    return null;
+  }
+
+  const actions = actionsForTier(tierFromMessage(message));
+  const purpose = await promptSpecialPurpose(caster, actions);
+  if (purpose === null) return null;
+
+  // Out of combat there is no spend at all — not a spend of 0.
+  if (plan.spend > 0) await caster.update({ [RESOURCE_PATH]: plan.next });
+  return compileSprite(caster, { archetype: SPECIAL_ARCHETYPE, special: { actions, purpose } });
+}
+
 export function registerSprites() {
   // C4 / C5 (0.3.123): using the *card* is what a player actually does at the table, and until this wave
   // it only rolled. Compile Sprite now opens the archetype picker and puts a sprite on the canvas;
@@ -509,6 +603,7 @@ export function registerSprites() {
     const caster = ability?.parent;
     if (!(caster instanceof Actor) || !caster.isOwner || !isTechnomancer(caster)) return;
     if (ability.system?._dsid === COMPILE_DSID) await compileSprite(caster);
+    else if (ability.system?._dsid === SPECIAL_SPRITE_DSID) await compileSpecialSprite(caster, message);
     else if (ability.system?._dsid === RECOMPILE_DSID) await recompileSprite(caster);
   });
 
@@ -545,7 +640,7 @@ export function registerSprites() {
   Hooks.on("renderDrawSteelItemSheet", (app, element) => {
     const item = app.document;
     element.querySelector(".ghostwire-sprite-controls")?.remove();
-    if (!isCompileAbility(item)) return;
+    if (!isCompileAbility(item) && !isSpecialAbility(item)) return;
     const header = element.querySelector(".sheet-header .header-center") ?? element.querySelector(".sheet-header");
     if (!header) return;
 
@@ -661,7 +756,10 @@ export function registerSprites() {
       compileSprite, decompileSprite, decompileAll, refreshSprites, commandSprite, recompileSprite,
       compiledSprites, spriteCompiler, spriteCap, spriteBand, spriteStamina, compileAbility,
       recompileAbility, destroyedSprite, recompileTargets, reducedStamina,
+      // 0.3.139 (A) — Special Sprite
+      compileSpecialSprite, actionsForTier, specialSummonDescription, specialSpendPlan, tierFromMessage,
+      SPECIAL_SPRITE_RESONANCE, SPECIAL_SPRITE_DSID, SPECIAL_ARCHETYPE, ACTIONS_BY_TIER,
     };
   }
-  console.log(`${MODULE_ID} | Sprites: Compile / Decompile registered (hero sheet row menu and Compile Sprite item sheet)`);
+  console.log(`${MODULE_ID} | Sprites: Compile / Special / Decompile registered (hero sheet row menu and Compile Sprite item sheet)`);
 }

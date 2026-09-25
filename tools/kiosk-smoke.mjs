@@ -189,7 +189,7 @@ note(getPreset("mods")?.match.modAny === true && getPreset("mods")?.match.packs.
 note(getPreset("vehicleWeapons")?.match.pathPrefixes.includes("weapons/mounted")
   && getPreset("vehicleWeapons")?.match.tagsAny.includes("Mounted")
   && !getPreset("vehicleWeapons")?.match.kinds, "Hardpoint Bay is weapons/mounted + the Mounted tag, not every weapon");
-note(!getPreset("programs")?.match.tagsAny, "programs does not match the Program tag (autosofts share it)");
+note(!getPreset("programs")?.match.tagsAny, "programs does not match the Program tag (other matrix rows share it)");
 
 function scanSrcCatalog() {
   const items = [];
@@ -268,7 +268,7 @@ const deckIds = new Set(decks.map(r => r.uuid.split(".").pop()));
 const programIds = new Set(programs.map(r => r.uuid.split(".").pop()));
 note(deckIds.has("6XVXN8DuHNp3HkDH"), "decks include Street Deck");
 note(programIds.has("1NvjDKxm7AuK6hN3") && programIds.has("nmPnddhr5SDWKUWo"), "programs include Guardian suite + Zap payload");
-note(!programIds.has("J9dt33fDzpVDSHGM") && !deckIds.has("J9dt33fDzpVDSHGM"), "autosofts are not on Programs or Decks");
+note(!programIds.has("J9dt33fDzpVDSHGM") && !deckIds.has("J9dt33fDzpVDSHGM"), "skillsofts are not on Programs or Decks");
 note([...deckIds].every(id => !programIds.has(id)), "decks and programs shelves do not overlap");
 note(decks.every(row => row.uuid.includes(".matrix.Item.")), "deck UUIDs are matrix pack");
 note(programs.every(row => row.uuid.includes(".matrix.Item.")), "program UUIDs are matrix pack");

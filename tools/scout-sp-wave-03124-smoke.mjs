@@ -162,7 +162,12 @@ console.log("\nD) Sprites are half a square");
 note(SPRITE_TOKEN_SIZE === 0.5, "the compile path's constant is 0.5");
 const spriteDir = "src/packs/summons/sprites";
 const sprites = readdirSync(spriteDir).filter(f => f.endsWith(".json") && f !== "_folder.json");
-note(sprites.length === 12, `all twelve templates present (${sprites.length})`);
+// 0.3.139 (A): the Special Sprite bands joined the folder. The half-square lock is about the
+// twelve archetype templates this wave shipped, so they are counted by name rather than by
+// folder size — a future sprite must not quietly turn this assertion off.
+const archetypeSprites = sprites.filter(f => !f.startsWith("sprite-special-"));
+note(archetypeSprites.length === 12, `all twelve archetype templates present (${archetypeSprites.length})`);
+note(sprites.length === 15, `…plus the three Special Sprite bands (${sprites.length})`);
 for (const file of sprites) {
   const t = readJson(join(spriteDir, file)).prototypeToken;
   note(t.width === 0.5 && t.height === 0.5, `${file.replace(/\.json$/, "")} is ${t.width}×${t.height}`);

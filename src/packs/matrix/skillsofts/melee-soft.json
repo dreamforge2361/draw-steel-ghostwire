@@ -1,0 +1,113 @@
+{
+  "_id": "gwSoftMelee00000",
+  "_key": "!items!gwSoftMelee00000",
+  "name": "GHOSTWIRE.Matrix.Items.MeleeSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.MeleeSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "melee-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "gwAeSoftMelee000",
+      "_key": "!items.effects!gwSoftMelee00000.gwAeSoftMelee000",
+      "name": "GHOSTWIRE.Matrix.Items.MeleeSoft.Name",
+      "img": "icons/commodities/tech/electronics-chip-data.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.gwSoftMelee00000",
+      "description": "GHOSTWIRE.Matrix.Items.MeleeSoft.SoftwareEffect",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.melee.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "skillsoft": true
+        }
+      }
+    }
+  ],
+  "folder": "3ushV9l5YOZEAI1E",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 600,
+        "modSlots": 0,
+        "tags": [
+          "Skillsoft",
+          "Wired"
+        ],
+        "role": "skillsoft",
+        "host": "skillwires",
+        "slotCost": 0,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ]
+      },
+      "skillsoft": {
+        "skill": "melee",
+        "host": "skillwires",
+        "active": false,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ],
+        "edgeAbilities": []
+      }
+    }
+  }
+}

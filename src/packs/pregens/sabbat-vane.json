@@ -670,9 +670,12 @@
               },
               {
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LFCiX6KD1lFXj7Ey"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gwSpecialSprite0"
               }
             ],
-            "description": "<p>You know all three Technomancer signature abilities: Compile Sprite, Resonance Strike, and Resonance Mending. None of them costs Resonance; spending Resonance boosts them.</p>",
+            "description": "<p>You know all three Technomancer signature abilities: Compile Sprite, Resonance Strike, and Resonance Mending. None of them costs Resonance; spending Resonance boosts them. You also gain <strong>Special Sprite</strong>, which rolls first — the tier buys 1, 2 or 3 Actions, and only then do you say what the sprite is for. It costs 3 Resonance in combat and nothing out of combat.</p>",
             "chooseN": null,
             "sort": 7000,
             "additional": {
@@ -2206,6 +2209,112 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!KPCLV5MeIfUCbBXw.3bne6BJ5SFvu6KWx"
+    },
+    {
+      "_id": "gwSpecialSprite0",
+      "name": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Name",
+      "type": "ability",
+      "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "20-technomancer",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "special-sprite",
+        "story": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Story",
+        "keywords": [
+          "magic",
+          "wired"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "value": null,
+          "custom": "The net (one purpose-built sprite)"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "sSprSpcFx0000001": {
+              "name": "",
+              "img": null,
+              "type": "other",
+              "_id": "sSprSpcFx0000001",
+              "other": {
+                "tier1": {
+                  "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier1",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier2",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Tier3",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 100
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Technomancer.Items.SpecialSprite.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "technomancer"
+          ],
+          "level": null
+        }
+      },
+      "folder": "yGJtc2su0yOsHFhh",
+      "sort": 50,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!KPCLV5MeIfUCbBXw.gwSpecialSprite0"
     },
     {
       "_id": "uqwKT7JjOHDlSrnP",

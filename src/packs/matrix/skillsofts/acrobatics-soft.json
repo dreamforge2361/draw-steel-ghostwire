@@ -1,12 +1,12 @@
 {
-  "_id": "J9dt33fDzpVDSHGM",
-  "_key": "!items!J9dt33fDzpVDSHGM",
-  "name": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Name",
+  "_id": "gwSoftAcrobatic0",
+  "_key": "!items!gwSoftAcrobatic0",
+  "name": "GHOSTWIRE.Matrix.Items.AcrobaticsSoft.Name",
   "type": "treasure",
   "img": "icons/commodities/tech/electronics-chip-data.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Description",
+      "value": "GHOSTWIRE.Matrix.Items.AcrobaticsSoft.Description",
       "director": ""
     },
     "source": {
@@ -14,7 +14,7 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "targeting-autosoft",
+    "_dsid": "acrobatics-soft",
     "kind": "other",
     "category": "trinket",
     "echelon": 1,
@@ -33,18 +33,26 @@
   },
   "effects": [
     {
-      "_id": "tj5WvPh8Z20TBfrm",
-      "_key": "!items.effects!J9dt33fDzpVDSHGM.tj5WvPh8Z20TBfrm",
-      "name": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Name",
+      "_id": "gwAeSoftAcrobati",
+      "_key": "!items.effects!gwSoftAcrobatic0.gwAeSoftAcrobati",
+      "name": "GHOSTWIRE.Matrix.Items.AcrobaticsSoft.Name",
       "img": "icons/commodities/tech/electronics-chip-data.webp",
       "type": "base",
-      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.J9dt33fDzpVDSHGM",
-      "description": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.SoftwareEffect",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.gwSoftAcrobatic0",
+      "description": "GHOSTWIRE.Matrix.Items.AcrobaticsSoft.SoftwareEffect",
       "system": {
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         },
-        "changes": []
+        "changes": [
+          {
+            "key": "system.skills.modifiers.acrobatics.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
       },
       "disabled": false,
       "duration": {
@@ -61,7 +69,7 @@
       "showIcon": 1,
       "flags": {
         "draw-steel-ghostwire": {
-          "software": true
+          "skillsoft": true
         }
       }
     }
@@ -76,40 +84,29 @@
       "matrix": {
         "echelon": 1,
         "availability": "professional",
-        "price": 800,
+        "price": 600,
         "modSlots": 0,
         "tags": [
-          "Program",
-          "Wired",
-          "Autosoft"
+          "Skillsoft",
+          "Wired"
         ],
-        "role": "autosoft",
-        "host": "rcc",
-        "slotCost": 1,
+        "role": "skillsoft",
+        "host": "skillwires",
+        "slotCost": 0,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ]
       },
-      "mod": {
-        "slotCost": 1,
-        "hosts": [
-          "rcc"
-        ],
-        "host": "rcc",
+      "skillsoft": {
+        "skill": "acrobatics",
+        "host": "skillwires",
+        "active": false,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ],
-        "edgeAbilities": [
-          "rigged-fire",
-          "focus-fire",
-          "sentry-fire",
-          "crossfire-grid",
-          "wrench-saturation-fire",
-          "bench-rigged-shot",
-          "tablet-crossfire"
-        ]
+        "edgeAbilities": []
       }
     }
   }

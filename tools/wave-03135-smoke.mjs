@@ -238,9 +238,11 @@ const WARD_Q = "What does ward the room do?";
   /* 3a — the packs are in the index. */
   const entries = packEntries(".");
   const counts = packEntryCounts(entries);
-  note(counts.ability === 418, `${counts.ability} abilities rendered from the packs`);
+  // 0.3.139 (A): +2 — Special Agent and Special Sprite.
+  note(counts.ability === 420, `${counts.ability} abilities rendered from the packs`);
   note(counts.ritual === 46, `${counts.ritual} ritual Workings`);
-  note(counts.summon === 68, `${counts.summon} summon / machine Actors`);
+  // 0.3.139 (A): +6 — three Special Agent bands and three Special Sprite bands.
+  note(counts.summon === 74, `${counts.summon} summon / machine Actors`);
   note(index.entityCounts?.ability === counts.ability, "the shipped index was rebuilt from those entries");
   note(index.entityCounts?.ritual === counts.ritual, "…rituals too");
   note(index.entityCounts?.summon === counts.summon, "…and summons");

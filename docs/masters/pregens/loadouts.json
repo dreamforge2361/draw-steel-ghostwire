@@ -166,7 +166,7 @@
     ],
     "gear": [
       "src/packs/matrix/rccs/fleet-deck.json",
-      "src/packs/matrix/autosofts/targeting-autosoft.json",
+      "src/packs/matrix/skillsofts/targeting-soft.json",
       "src/packs/gear/general/comms/burner.json",
       "src/packs/gear/general/infiltration/lockpick-set.json",
       {
@@ -179,16 +179,21 @@
         "path": "src/packs/chrome/datajack.json",
         "grade": "Standard",
         "bi": 1
+      },
+      {
+        "path": "src/packs/chrome/skillwires.json",
+        "grade": "Standard",
+        "bi": 4
       }
     ],
-    "biTotal": 1,
+    "biTotal": 5,
     "languages": [
       "ChangerPackTongue",
       "WireSpeak",
       "MachineMarkup",
       "SprawlArgot"
     ],
-    "why": "The Warren-Wire dresses in soft ballistic weave that squeezes through a duct grille with her, keeps a compact pistol as a last resort, and does her real work through a Fleet Deck RCC with a targeting autosoft feeding Rigged Fire; one Datajack (1 of 20 BI) is the rigger's minimum — the least metal a Wererat can carry and still jump in."
+    "why": "The Warren-Wire dresses in soft ballistic weave that squeezes through a duct grille with her, keeps a compact pistol as a last resort, and does her real work through a Fleet Deck RCC; a Datajack (1 BI) is the rigger’s minimum, and Skillwires (4 BI) is the socket that runs her Targeting Soft — 5 of 20 Body Integrity, the least metal a Wererat can carry and still jump in shooting."
   },
   "kessic-draye": {
     "armor": "src/packs/gear/armor/light/secure-threads.json",
