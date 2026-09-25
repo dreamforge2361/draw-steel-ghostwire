@@ -3516,12 +3516,12 @@
     },
     {
       "_id": "J9dt33fDzpVDSHGM",
-      "name": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Name",
+      "name": "GHOSTWIRE.Matrix.Items.TargetingSoft.Name",
       "type": "treasure",
       "img": "icons/commodities/tech/electronics-chip-data.webp",
       "system": {
         "description": {
-          "value": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Description",
+          "value": "GHOSTWIRE.Matrix.Items.TargetingSoft.Description",
           "director": ""
         },
         "source": {
@@ -3559,27 +3559,24 @@
             "price": 800,
             "modSlots": 0,
             "tags": [
-              "Program",
-              "Wired",
-              "Autosoft"
+              "Skillsoft",
+              "Wired"
             ],
-            "role": "autosoft",
-            "host": "rcc",
-            "slotCost": 1,
+            "role": "skillsoft",
+            "host": "skillwires",
+            "slotCost": 0,
             "craftSkill": [
               "hacking",
-              "rigging"
+              "electronics"
             ]
           },
-          "mod": {
-            "slotCost": 1,
-            "hosts": [
-              "rcc"
-            ],
-            "host": "rcc",
+          "skillsoft": {
+            "skill": "gunnery",
+            "host": "skillwires",
+            "active": false,
             "craftSkill": [
               "hacking",
-              "rigging"
+              "electronics"
             ],
             "edgeAbilities": [
               "rigged-fire",
@@ -3596,16 +3593,24 @@
       "effects": [
         {
           "_id": "tj5WvPh8Z20TBfrm",
-          "name": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.Name",
+          "name": "GHOSTWIRE.Matrix.Items.TargetingSoft.Name",
           "img": "icons/commodities/tech/electronics-chip-data.webp",
           "type": "base",
           "origin": "Compendium.draw-steel-ghostwire.matrix.Item.J9dt33fDzpVDSHGM",
-          "description": "GHOSTWIRE.Matrix.Items.TargetingAutosoft.SoftwareEffect",
+          "description": "GHOSTWIRE.Matrix.Items.TargetingSoft.SoftwareEffect",
           "system": {
             "end": {
               "roll": "1d10 + @combat.save.bonus"
             },
-            "changes": []
+            "changes": [
+              {
+                "key": "system.skills.modifiers.gunnery.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
           },
           "disabled": false,
           "duration": {
@@ -3622,7 +3627,7 @@
           "showIcon": 1,
           "flags": {
             "draw-steel-ghostwire": {
-              "software": true
+              "skillsoft": true
             }
           },
           "_key": "!actors.items.effects!8jyyJ1eq3XQnJ95X.J9dt33fDzpVDSHGM.tj5WvPh8Z20TBfrm"
@@ -3887,6 +3892,87 @@
         }
       ],
       "_key": "!actors.items!8jyyJ1eq3XQnJ95X.cSMtKRqIn2MHv0aV"
+    },
+    {
+      "_id": "BwwUfaHERDyVGgRY",
+      "name": "GHOSTWIRE.Chrome.Skillwires.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/usb-thumb-drive.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.Skillwires.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "skillwires",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "standard",
+            "location": "head",
+            "integrity": 4,
+            "price": 5000,
+            "availability": "restricted",
+            "softSocket": true
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "YGebgluzOpf4UMNQ",
+          "name": "GHOSTWIRE.Chrome.Skillwires.Name",
+          "img": "icons/commodities/tech/usb-thumb-drive.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.BwwUfaHERDyVGgRY",
+          "description": "GHOSTWIRE.Chrome.Skillwires.EffectDescription",
+          "disabled": true,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 0,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": []
+          },
+          "_key": "!actors.items.effects!8jyyJ1eq3XQnJ95X.BwwUfaHERDyVGgRY.YGebgluzOpf4UMNQ"
+        }
+      ],
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.BwwUfaHERDyVGgRY"
     },
     {
       "name": "Catch Breath",
@@ -4774,10 +4860,10 @@
   "flags": {
     "draw-steel-ghostwire": {
       "pregen": "vira-kellis-nade",
-      "biSpent": 1,
-      "biRemaining": 19,
+      "biSpent": 5,
+      "biRemaining": 15,
       "integrity": {
-        "value": 19,
+        "value": 15,
         "max": 20
       },
       "changer": {

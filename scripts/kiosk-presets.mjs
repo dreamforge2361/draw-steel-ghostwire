@@ -143,9 +143,11 @@ export const KIOSK_PRESETS = Object.freeze([
   },
   {
     // Cat 4B persistent suites + Cat 4C attack payloads share one Programs shelf in v1.
-    // Both are buyable matrix Items that fill deck slots. Autosofts (drone/RCC software)
-    // also carry the Program tag, so this preset keys on role + programs/payloads folders
-    // — never tagsAny: ["Program"]. Hacker class Program abilities live in classes, not here.
+    // Both are buyable matrix Items that fill deck slots. This preset keys on role + the
+    // programs/payloads folders — never tagsAny: ["Program"] — so the other tagged matrix rows
+    // (and, before 0.3.139, the RCC autosofts that shared the Program tag) can never leak onto
+    // it. Skillsofts carry no Program tag at all now; they are chrome chips, not deck software.
+    // Hacker class Program abilities live in classes, not here.
     id: "programs",
     langKey: "Programs",
     match: {

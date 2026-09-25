@@ -31,6 +31,8 @@ import { registerSummonArt } from "./summon-art.mjs";
 import { registerDismissAbilities } from "./dismiss-abilities.mjs";
 import { registerElementalist } from "./elementalist.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
+// 0.3.139 (C) — Skillwires / skillsofts, the system that replaces RCC autosofts.
+import { registerSkillsofts, skillsoftEdges } from "./skillsofts.mjs";
 import { registerMounts } from "./mounts.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
@@ -192,6 +194,9 @@ Hooks.once("init", () => {
   // Zephyr and Boulder both ask for as they are summoned.
   registerElementalist();
   registerMods();
+  // 0.3.139 (C) — registered after registerMods: both patch ActiveEffect#isSuppressed, and skillsofts
+  // must wrap the mods getter (each one falls through to the descriptor it captured).
+  registerSkillsofts();
   registerMounts();
   registerAbilitySfx();
   registerEquipmentUse();
@@ -407,12 +412,14 @@ function patchWiredAbilities() {
     })) return warn("JackedInPhysical");
 
     if (this.power.roll.enabled) {
-      // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs),
-      // plus the Jump-In weapon-lock edge and Pilot and Gunner's extra edge on Rigged Fire (0.3.114).
+      // Installed, running deck programs and payloads that name this ability (B20d, scripts/mods.mjs),
+      // plus running skillsofts that name it (0.3.139 C, scripts/skillsofts.mjs — this is where the
+      // old RCC-autosoft edge went), plus the Jump-In weapon-lock edge and Pilot and Gunner's extra
+      // edge on Rigged Fire (0.3.114).
       const { edges, banes } = abilityPowerRollModifiers({
         wired,
         hasHacking: !!actor.system.skills?.value?.has?.("hacking"),
-        softwareEdges: softwareEdges(actor, dsid),
+        softwareEdges: softwareEdges(actor, dsid) + skillsoftEdges(actor, dsid),
         state,
         jumpedIn,
         dsid,
@@ -1076,7 +1083,7 @@ Hooks.on("deleteItem", (item, options, userId) => {
 // Item sheet: chrome and catalog items (gear, mods, matrix, vehicles, foci) show their grade and ¥ under the name.
 // Draw Steel treasure has no price field, so price lives in flags.draw-steel-ghostwire.<type>.price.
 const formatYen = price => `¥${Number(price ?? 0).toLocaleString(game.i18n.lang)}`;
-// Matrix before mod: deck programs and RCC autosofts carry both, and the matrix flag has their ¥ and echelon (B20d).
+// Matrix before mod: deck programs and payloads carry both, and the matrix flag has their ¥ and echelon (B20d).
 const CATALOG_FLAGS = ["gear", "matrix", "mod", "vehicle", "focus"];
 
 function catalogLine(entry, item) {

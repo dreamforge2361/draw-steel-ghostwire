@@ -5,8 +5,11 @@
 // Used slots are computed on the fly from the Actor's mods whose mod.installedOn is the host. Capacity and families come from the
 // host's catalog flag (matrix, vehicle, or gear — whichever publishes modSlots > 0); the mod's hosts must overlap modFamily.
 // Install / uninstall write each Item once, in one embedded update, so the hero sheet re-renders once.
-// B20d: installed mods have a field toggle (mod.active, default on). Deck programs and RCC autosofts are mods too; their transferred
+// B20d: installed mods have a field toggle (mod.active, default on). Deck programs are mods too; their transferred
 // software Active Effect is suppressed unless installed and on, and mod.edgeAbilities lists ability _dsids that roll with an edge.
+// 0.3.139 (C): RCC autosofts were mods here until this wave. They are gone — a soft is a **skillsoft** on the
+// Skillwires chrome implant now, with its own flag, its own suppression rule and its own load action in
+// scripts/skillsofts.mjs. Nothing in this file should ever reach one.
 // B51b: matrix payloads are mods with mod.magazine. They install only through Load magazine (Craft) in scripts/payload-use.mjs,
 // which sets their fires, so the generic Install onto… and the field toggle are hidden for them. Uninstall still works, after a
 // confirm when fires are left: unloading dumps them (payload-use.mjs).

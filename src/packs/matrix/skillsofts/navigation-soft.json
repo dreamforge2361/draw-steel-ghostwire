@@ -1,12 +1,12 @@
 {
-  "_id": "EIyfIy8Lc3ARgSsi",
-  "_key": "!items!EIyfIy8Lc3ARgSsi",
-  "name": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.Name",
+  "_id": "gwSoftNavigate00",
+  "_key": "!items!gwSoftNavigate00",
+  "name": "GHOSTWIRE.Matrix.Items.NavigationSoft.Name",
   "type": "treasure",
   "img": "icons/commodities/tech/electronics-chip-data.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.Description",
+      "value": "GHOSTWIRE.Matrix.Items.NavigationSoft.Description",
       "director": ""
     },
     "source": {
@@ -14,10 +14,10 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "repair-tick-autosoft",
+    "_dsid": "navigation-soft",
     "kind": "other",
     "category": "trinket",
-    "echelon": 2,
+    "echelon": 1,
     "keywords": [],
     "quantity": 1,
     "project": {
@@ -33,18 +33,26 @@
   },
   "effects": [
     {
-      "_id": "6SXEhoBWp65NGNPQ",
-      "_key": "!items.effects!EIyfIy8Lc3ARgSsi.6SXEhoBWp65NGNPQ",
-      "name": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.Name",
+      "_id": "gwAeSoftNavigate",
+      "_key": "!items.effects!gwSoftNavigate00.gwAeSoftNavigate",
+      "name": "GHOSTWIRE.Matrix.Items.NavigationSoft.Name",
       "img": "icons/commodities/tech/electronics-chip-data.webp",
       "type": "base",
-      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.EIyfIy8Lc3ARgSsi",
-      "description": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.SoftwareEffect",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.gwSoftNavigate00",
+      "description": "GHOSTWIRE.Matrix.Items.NavigationSoft.SoftwareEffect",
       "system": {
         "end": {
           "roll": "1d10 + @combat.save.bonus"
         },
-        "changes": []
+        "changes": [
+          {
+            "key": "system.skills.modifiers.navigation.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
       },
       "disabled": false,
       "duration": {
@@ -61,7 +69,7 @@
       "showIcon": 1,
       "flags": {
         "draw-steel-ghostwire": {
-          "software": true
+          "skillsoft": true
         }
       }
     }
@@ -74,32 +82,29 @@
   "flags": {
     "draw-steel-ghostwire": {
       "matrix": {
-        "echelon": 2,
-        "availability": "restricted",
-        "price": 1200,
+        "echelon": 1,
+        "availability": "professional",
+        "price": 600,
         "modSlots": 0,
         "tags": [
-          "Program",
-          "Wired",
-          "Autosoft"
+          "Skillsoft",
+          "Wired"
         ],
-        "role": "autosoft",
-        "host": "rcc",
-        "slotCost": 1,
+        "role": "skillsoft",
+        "host": "skillwires",
+        "slotCost": 0,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ]
       },
-      "mod": {
-        "slotCost": 1,
-        "hosts": [
-          "rcc"
-        ],
-        "host": "rcc",
+      "skillsoft": {
+        "skill": "navigation",
+        "host": "skillwires",
+        "active": false,
         "craftSkill": [
           "hacking",
-          "rigging"
+          "electronics"
         ],
         "edgeAbilities": []
       }
