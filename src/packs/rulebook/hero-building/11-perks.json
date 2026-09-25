@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "VCSNzrmFz7eIVTMQ",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.VCSNzrmFz7eIVTMQ",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/17-perks.md`, Ghostwire Perks pack (`src/packs/perks/`)*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/17-perks.md</code>, Ghostwire Perks pack (<code>src/packs/perks/</code>)</em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "eEHBxlPBTukl5lut",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.eEHBxlPBTukl5lut",
+      "_id": "DqaAZ4pLOZ1kznUZ",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.DqaAZ4pLOZ1kznUZ",
       "name": "What a perk is",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "Sp4KPNHi1iP1cHZC",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.Sp4KPNHi1iP1cHZC",
+      "_id": "TwPcAJfMn8XnmND9",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.TwPcAJfMn8XnmND9",
       "name": "The six perk types",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "AlAUwEEjaj7YlNMd",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.AlAUwEEjaj7YlNMd",
+      "_id": "HykC6VaNrEu7EE7F",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.HykC6VaNrEu7EE7F",
       "name": "When you gain perks",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "BzVmJnhDXgwP3KGW",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.BzVmJnhDXgwP3KGW",
+      "_id": "Hz3khotdNeCab9hk",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.Hz3khotdNeCab9hk",
       "name": "Test results in perk text",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "WuLSSdISJnbHaCME",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.WuLSSdISJnbHaCME",
+      "_id": "L5eYtJOYe2ZGM3Pg",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.L5eYtJOYe2ZGM3Pg",
       "name": "Perk list",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "vk8JEiQcQzZXkaCL",
-      "_key": "!journal.pages!rtGumxlpMCvrB7K4.vk8JEiQcQzZXkaCL",
+      "_id": "1QyYUVdQf9R3k9dP",
+      "_key": "!journal.pages!rtGumxlpMCvrB7K4.1QyYUVdQf9R3k9dP",
       "name": "Perk abilities",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1

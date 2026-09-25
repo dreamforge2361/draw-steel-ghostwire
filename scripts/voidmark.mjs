@@ -8,7 +8,7 @@
 // flags.draw-steel-ghostwire.voidmarkAudience = "director".
 // Lock: docs/spikes/B122-DIRECTOR-ONLY-LORE-VOIDMARK.md
 
-import { citationLabels, retrieve } from "./voidmark-rag.mjs";
+import { citationLabels, retrieve, retrievalQuery } from "./voidmark-rag.mjs";
 import { audienceForAsk } from "./voidmark-audience.mjs";
 import { worldJournalChunks } from "./voidmark-journal.mjs";
 import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages, normalizeMode } from "./voidmark-prompt.mjs";
@@ -79,8 +79,12 @@ function formatMessageHtml(text) {
  * @param {string} query
  * @param {{ user?: User, mode?: string, forcePlayer?: boolean }} [spec]
  */
-async function retrieveHits(query, { user = game.user, mode = "runner", forcePlayer = false } = {}) {
+async function retrieveHits(query, { user = game.user, mode = "runner", forcePlayer = false, history = [], token = null } = {}) {
   const audience = audienceForAsk({ user, mode, forcePlayer });
+  // 0.3.134 (G7): retrieve on the question *plus* the previous user turn and the selected token.
+  // The model still only sees `query`; this widens what is fetched for it, which is what makes a
+  // follow-up ("and how much damage?") land on the same chapter the first question did.
+  const search = retrievalQuery({ query, history, token });
   let staticChunks = [];
   try {
     const index = await loadIndex();
@@ -94,7 +98,29 @@ async function retrieveHits(query, { user = game.user, mode = "runner", forcePla
   } catch (error) {
     console.warn(`${MODULE_ID} | VOIDMARK world journal scan failed`, error);
   }
-  return retrieve([...staticChunks, ...journalChunks], query, { k: 5, maxChars: 5500, audience });
+  return retrieve([...staticChunks, ...journalChunks], search, { k: 5, maxChars: 5500, audience });
+}
+
+/**
+ * The token the asker has selected, reduced to the three facts retrieval can use.
+ *
+ * `dsid` is read from both places Ghostwire keeps one — `flags.<module>.dsid` on a summon or machine
+ * template, `system._dsid` on everything else — because a question about "it" is almost always a
+ * question about a summon, and the summon templates use the flag.
+ */
+function selectedTokenContext() {
+  try {
+    const token = canvas?.tokens?.controlled?.[0] ?? null;
+    const actor = token?.actor ?? null;
+    if (!token && !actor) return null;
+    return {
+      name: token?.name ?? actor?.name ?? "",
+      type: actor?.type ?? "",
+      dsid: actor?.getFlag?.(MODULE_ID, "dsid") ?? actor?.system?._dsid ?? "",
+    };
+  } catch {
+    return null;
+  }
 }
 
 function readThread() {
@@ -116,10 +142,15 @@ async function writeThread(thread) {
   });
 }
 
-function askPayload(query, mode, history) {
+function askPayload(query, mode, history, token = null) {
   return {
     query: String(query ?? "").trim().slice(0, 4000),
     mode: normalizeMode(mode),
+    token: token ? {
+      name: String(token.name ?? "").slice(0, 120),
+      type: String(token.type ?? "").slice(0, 40),
+      dsid: String(token.dsid ?? "").slice(0, 80),
+    } : null,
     history: (history ?? [])
       .filter(m => m.role === "user" || m.role === "assistant")
       .slice(-8)
@@ -128,7 +159,10 @@ function askPayload(query, mode, history) {
 }
 
 async function completeFromSettings(query, mode, history, asker = {}) {
-  const hits = await retrieveHits(query, { user: asker.user ?? game.user, mode, forcePlayer: asker.forcePlayer });
+  const hits = await retrieveHits(query, {
+    user: asker.user ?? game.user, mode, forcePlayer: asker.forcePlayer,
+    history, token: asker.token ?? null,
+  });
   const messages = buildChatMessages({
     systemInstructions: setting("systemInstructions"),
     mode,
@@ -277,8 +311,8 @@ export class VoidmarkChat extends HandlebarsApplicationMixin(ApplicationV2) {
 
   async #complete(query, thread) {
     const history = thread.messages.slice(0, -1);
-    const body = askPayload(query, thread.mode, history);
-    if (game.user.isGM) return completeFromSettings(body.query, body.mode, body.history, { user: game.user });
+    const body = askPayload(query, thread.mode, history, selectedTokenContext());
+    if (game.user.isGM) return completeFromSettings(body.query, body.mode, body.history, { user: game.user, token: body.token });
     return requestViaGm(body);
   }
 }
@@ -347,7 +381,7 @@ async function onSocket(payload) {
   if (!user || !canOpenVoidmark(user)) return fail("VOIDMARK_DENIED", loc("Errors.Denied"));
   try {
     // Relay asks are always player audience, whatever mode the payload claims.
-    const reply = await completeFromSettings(payload.query, payload.mode, payload.history, { user, forcePlayer: true });
+    const reply = await completeFromSettings(payload.query, payload.mode, payload.history, { user, forcePlayer: true, token: payload.token ?? null });
     game.socket.emit(SOCKET, { op: "voidmark.reply", id: payload.id, ok: true, ...reply });
   } catch (error) {
     fail(error.code ?? "VOIDMARK_HTTP", userFacingError(error));

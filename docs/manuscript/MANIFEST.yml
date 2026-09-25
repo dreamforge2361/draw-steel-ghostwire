@@ -85,6 +85,12 @@ entries:
     path: 01-lore/L8-ash-survey.md
     kind: lore
 
+  - type: file
+    id: L9
+    title: Arms Makers of the Reach
+    path: 01-lore/L9-arms-makers.md
+    kind: lore
+
   - type: part
     id: I
     title: Part I — Core Rules

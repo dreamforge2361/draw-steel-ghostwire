@@ -23,7 +23,7 @@ const FOLDERS = [
   { id: "gwRulebookCore00", dir: "shared-core", key: "SharedCore", label: "Shared Core", files: ["01-how-to-play", "02-heroes-characteristics", "03-tests-power-rolls", "04-combat", "24-advancement"] },
   { id: "gwRulebookHeroes", dir: "hero-building", key: "HeroBuilding", label: "Hero Building", files: ["05-ancestries", "06-backgrounds-professions", "07-languages", "08-kits-gear-wealth", "09-chrome-body-integrity", "10-mods", "11-perks"] },
   { id: "gwRulebookClass0", dir: "classes", key: "Classes", label: "Classes", files: ["12-operator", "13-scout", "14-commander", "15-medic", "16-wrench", "17-elementalist", "18-street-priest", "19-hacker", "20-technomancer"] },
-  { id: "gwRulebookSystem", dir: "ghostwire-systems", key: "GhostwireSystems", label: "Ghostwire Systems", files: ["21-the-wire", "22-the-veil", "27-corruption-taint", "23-machines", "25-opposition", "26-lifestyle-downtime", "28-constructs-pets-faq"] },
+  { id: "gwRulebookSystem", dir: "ghostwire-systems", key: "GhostwireSystems", label: "Ghostwire Systems", files: ["21-the-wire", "22-the-veil", "27-corruption-taint", "23-machines", "25-opposition", "26-lifestyle-downtime", "28-constructs-pets-faq", "29-summon-stat-blocks"] },
 ];
 
 const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

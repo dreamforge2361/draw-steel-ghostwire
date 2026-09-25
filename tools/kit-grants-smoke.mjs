@@ -249,7 +249,9 @@ ok(!/Hooks\.once\(\s*"ready"/.test(grantSrc), "no ready-hook sweep: existing her
 ok(grantSrc.includes("isChargenHero"), "the grant is gated on chargen level");
 
 const gearMaster = readFileSync("docs/masters/GHOSTWIRE_GEAR_MASTER.md", "utf8");
-for (const name of ["Scrap Cleaver", "Slugger", "Pipe Rifle", "Slab-Hammer", "Scaffold Pike", "Chain Lash", "Weighted Net", "Scrap-Bow"]) {
+// 0.3.134 (B): Slugger and Pipe Rifle are firearms and were renamed to maker + model; the other six
+// keep their names. The gear master is checked against what the SKU is *called now*.
+for (const name of ["Scrap Cleaver", "Seal Warden Gavel", "Nyx Gutterline", "Slab-Hammer", "Scaffold Pike", "Chain Lash", "Weighted Net", "Scrap-Bow"]) {
   ok(gearMaster.includes(name), `Gear master lists the new street SKU ${name}`);
 }
 

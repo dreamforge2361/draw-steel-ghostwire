@@ -36,7 +36,7 @@
         "value": 2,
         "letter": "M"
       },
-      "stability": 0,
+      "stability": 4,
       "turns": 1
     },
     "movement": {
@@ -196,7 +196,713 @@
       "alphaThreshold": 0.75
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "yBfoSdgpJKwkLCak",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.yBfoSdgpJKwkLCak",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Strike.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "magic",
+          "melee",
+          "strike"
+        ],
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "bEXQNGDizS8Gcufd": {
+              "_id": "bEXQNGDizS8Gcufd",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "11 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "15 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "20 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              }
+            }
+          }
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-elemental-lash",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Strike.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "S2b8KpB9b2GdRlMZ",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.S2b8KpB9b2GdRlMZ",
+      "name": "GHOSTWIRE.Summons.Command.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-command",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "summonCommand000": {
+            "_id": "summonCommand000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Command.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "4O3W0QepkWUtTNAh",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.4O3W0QepkWUtTNAh",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.AncientFlame.Maneuver.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-ancient-flame-maneuver",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterManeuver0": {
+            "_id": "greaterManeuver0",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.AncientFlame.Maneuver.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "zvee18VMoKLazZrd",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.zvee18VMoKLazZrd",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.AncientFlame.Area.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "3",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-ancient-flame-area",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterArea00000": {
+            "_id": "greaterArea00000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.AncientFlame.Area.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "xUSe57G9o7BQTOax",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.xUSe57G9o7BQTOax",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.RoaringStorm.Maneuver.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-roaring-storm-maneuver",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterManeuver0": {
+            "_id": "greaterManeuver0",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.RoaringStorm.Maneuver.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "Sv9cGSGR2D47kZLw",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.Sv9cGSGR2D47kZLw",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.RoaringStorm.Area.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "3",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-roaring-storm-area",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterArea00000": {
+            "_id": "greaterArea00000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.RoaringStorm.Area.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "zQnUIoRAxuPJWBbb",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.zQnUIoRAxuPJWBbb",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.LivingMountain.Maneuver.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-living-mountain-maneuver",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterManeuver0": {
+            "_id": "greaterManeuver0",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.LivingMountain.Maneuver.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "8Jso5rbrDTvgZtq8",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.8Jso5rbrDTvgZtq8",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.LivingMountain.Area.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "3",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-living-mountain-area",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterArea00000": {
+            "_id": "greaterArea00000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.LivingMountain.Area.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "4N3CbzE5Sr8jD0sV",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.4N3CbzE5Sr8jD0sV",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.DevouringVoid.Maneuver.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-devouring-void-maneuver",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterManeuver0": {
+            "_id": "greaterManeuver0",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.DevouringVoid.Maneuver.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "AWf4CLCQX7lMwLjD",
+      "_key": "!actors.items!ITCZAWDd9YvX7NPE.AWf4CLCQX7lMwLjD",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.DevouringVoid.Area.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "3",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-greater-devouring-void-area",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "greaterArea00000": {
+            "_id": "greaterArea00000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalGreater.Forms.DevouringVoid.Area.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
   "effects": [],
   "folder": "gwSummonsElement",
   "sort": 7000,

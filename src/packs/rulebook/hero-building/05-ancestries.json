@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "ZeXGB5eJhT7Xcbid",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.ZeXGB5eJhT7Xcbid",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/09-species.md`, `docs/rulebook/SPECIES-DS-MAP.md`*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/09-species.md</code>, <code>docs/rulebook/SPECIES-DS-MAP.md</code></em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "fERuKfsMLQA8o5cQ",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.fERuKfsMLQA8o5cQ",
+      "_id": "vXdaRyOWYv2Q9PWd",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.vXdaRyOWYv2Q9PWd",
       "name": "Structural rule",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "sX81xnjwAJDuti7U",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.sX81xnjwAJDuti7U",
+      "_id": "r6sEmLFoWhePQ48B",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.r6sEmLFoWhePQ48B",
       "name": "Peoples and ancestry points",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "HUDwTYIicrYfL9gN",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.HUDwTYIicrYfL9gN",
+      "_id": "b5EXWU1M08GAYO18",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.b5EXWU1M08GAYO18",
       "name": "Roster at a glance",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "f5uxOAxlKWlz4ihV",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.f5uxOAxlKWlz4ihV",
+      "_id": "c0Q7tLGGalAJulCT",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.c0Q7tLGGalAJulCT",
       "name": "Key species constraints",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -137,8 +109,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.\n- **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).\n- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fEwnmi3gp05vhWUc]{Corruption & Taint}.\n- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina (2d6 severity table in `04`). Installed Suite Psionic/Tech abilities from this ancestry are allowed.",
-        "content": "<ul>\n<li><strong>Changers</strong> are one People with three <strong>lineages</strong> (Raven, Rat, Wolf) chosen at creation, and three <strong>forms</strong> (Human / Hybrid / Beast). Changing form is a <strong>maneuver</strong> and grants no mechanical bonus by itself.</li>\n<li><strong>Revenants</strong> are embodied undead. They use this chapter’s <strong>Former Life</strong> and <strong>Tough But Withered</strong> traits (inert instead of dying; fire while inert = permanent destruction).</li>\n<li><strong>Mutants</strong> can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic <strong>Corruptive Flaw</strong> may be picked at creation. The retired <strong>Corruption Load</strong> is not used — Mutants share the hero <strong>Taint</strong> track in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fEwnmi3gp05vhWUc]{Corruption &amp; Taint}.</li>\n<li><strong>Full Cyborgs</strong> are machine-first. Hard chargen/setting limits (not ancestry-point costs): <strong>Arcane Severance</strong> (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), <strong>tech-only recovery</strong>, and <strong>System Crisis</strong> instead of a normal organic death spiral at 0 Stamina (2d6 severity table in <code>04</code>). Installed Suite Psionic/Tech abilities from this ancestry are allowed.</li>\n</ul>"
+        "markdown": "- **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.\n- **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).\n- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in **Corruption & Taint**.\n- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina (2d6 severity table in `04`). Installed Suite Psionic/Tech abilities from this ancestry are allowed.",
+        "content": "<ul>\n<li><strong>Changers</strong> are one People with three <strong>lineages</strong> (Raven, Rat, Wolf) chosen at creation, and three <strong>forms</strong> (Human / Hybrid / Beast). Changing form is a <strong>maneuver</strong> and grants no mechanical bonus by itself.</li>\n<li><strong>Revenants</strong> are embodied undead. They use this chapter’s <strong>Former Life</strong> and <strong>Tough But Withered</strong> traits (inert instead of dying; fire while inert = permanent destruction).</li>\n<li><strong>Mutants</strong> can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic <strong>Corruptive Flaw</strong> may be picked at creation. The retired <strong>Corruption Load</strong> is not used — Mutants share the hero <strong>Taint</strong> track in <strong>Corruption & Taint</strong>.</li>\n<li><strong>Full Cyborgs</strong> are machine-first. Hard chargen/setting limits (not ancestry-point costs): <strong>Arcane Severance</strong> (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), <strong>tech-only recovery</strong>, and <strong>System Crisis</strong> instead of a normal organic death spiral at 0 Stamina (2d6 severity table in <code>04</code>). Installed Suite Psionic/Tech abilities from this ancestry are allowed.</li>\n</ul>"
       },
       "category": null,
       "ownership": {
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "tvbyOi64Kj2iXGMF",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.tvbyOi64Kj2iXGMF",
+      "_id": "WYD8SNF3ynMd5EaD",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.WYD8SNF3ynMd5EaD",
       "name": "Pure Human",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "urQuKnWIzdlgFqhE",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.urQuKnWIzdlgFqhE",
+      "_id": "k1zWf3xT5rCWcY4z",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.k1zWf3xT5rCWcY4z",
       "name": "Corran (“Squat”)",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "MJYAlVDcB2AdlPmK",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.MJYAlVDcB2AdlPmK",
+      "_id": "3skIm45DvWseCRNj",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.3skIm45DvWseCRNj",
       "name": "Elvani (“Elf”)",
       "type": "text",
-      "sort": 800000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "NcItrdOukUNUBBBN",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.NcItrdOukUNUBBBN",
+      "_id": "QvHr3AF6GONMAbSN",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.QvHr3AF6GONMAbSN",
       "name": "Goliar (“Ogre”)",
       "type": "text",
-      "sort": 900000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "HQG0XMr2x2ClY6Q3",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.HQG0XMr2x2ClY6Q3",
+      "_id": "clgMVsEAjanDJfnX",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.clgMVsEAjanDJfnX",
       "name": "Changer",
       "type": "text",
-      "sort": 1000000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -287,11 +259,11 @@
       "flags": {}
     },
     {
-      "_id": "Z6wXCY35O67D5ojC",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.Z6wXCY35O67D5ojC",
+      "_id": "f3JoC3cON2S9dKN1",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.f3JoC3cON2S9dKN1",
       "name": "Revenant",
       "type": "text",
-      "sort": 1100000,
+      "sort": 1000000,
       "title": {
         "show": true,
         "level": 1
@@ -315,11 +287,11 @@
       "flags": {}
     },
     {
-      "_id": "Ko1ARD0sV4XEYk3c",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.Ko1ARD0sV4XEYk3c",
+      "_id": "Jk39ATUkpwHjQOxr",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.Jk39ATUkpwHjQOxr",
       "name": "Mutant Human",
       "type": "text",
-      "sort": 1200000,
+      "sort": 1100000,
       "title": {
         "show": true,
         "level": 1
@@ -333,8 +305,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "**Ancestry points:** 3  \n\n**Quick Build:** Warped Legs, Ossified Crown\n\n### Signature Trait — Aberrant Rapport (free)\n\n*(Devil Silver Tongue mechanics.)*\n\nYour taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have **one skill of your choice from the interpersonal skill group**, and you gain an **edge on tests** when attempting to discover an NPC’s motivations and pitfalls during a negotiation.\n\n### Purchased Traits — 3 ancestry points\n\n- **Barbed Mutation (1):** *(Barbed Tail.)* A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to your **highest characteristic score**.\n- **Warped Legs (1):** *(Beast Legs.)* Your mutated legs make you faster. You have **speed 6**.\n- **Taint Flare (1):** *(Glowing Eyes.)* When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature **psychic damage equal to 1d10 + your level**.\n- **Taint Sight (1):** *(Hellsight.)* Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.\n- **Ossified Crown (2):** *(Impressive Horns.)* Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of **5 or higher**.\n- **Prehensile Mutation (2):** *(Prehensile Tail.)* A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You **can’t be flanked**.\n- **Membrane Wings (2):** *(Wings.)* Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to your **Physique** score (minimum 1 round) before you fall. While flying at **3rd level or lower**, you have **damage weakness 5**.\n\n### Corruptive Flaw (optional fiction)\n\nVisible taint and social “reads as wrong” are Director color layered on this package, not a second economy.\n\n**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fEwnmi3gp05vhWUc]{Corruption & Taint}). Reducing Taint does not erase a Flaw.",
-        "content": "<p><strong>Ancestry points:</strong> 3  </p>\n<p><strong>Quick Build:</strong> Warped Legs, Ossified Crown</p>\n<h3>Signature Trait — Aberrant Rapport (free)</h3>\n<p><em>(Devil Silver Tongue mechanics.)</em></p>\n<p>Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have <strong>one skill of your choice from the interpersonal skill group</strong>, and you gain an <strong>edge on tests</strong> when attempting to discover an NPC’s motivations and pitfalls during a negotiation.</p>\n<h3>Purchased Traits — 3 ancestry points</h3>\n<ul>\n<li><strong>Barbed Mutation (1):</strong> <em>(Barbed Tail.)</em> A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to your <strong>highest characteristic score</strong>.</li>\n<li><strong>Warped Legs (1):</strong> <em>(Beast Legs.)</em> Your mutated legs make you faster. You have <strong>speed 6</strong>.</li>\n<li><strong>Taint Flare (1):</strong> <em>(Glowing Eyes.)</em> When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature <strong>psychic damage equal to 1d10 + your level</strong>.</li>\n<li><strong>Taint Sight (1):</strong> <em>(Hellsight.)</em> Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.</li>\n<li><strong>Ossified Crown (2):</strong> <em>(Impressive Horns.)</em> Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of <strong>5 or higher</strong>.</li>\n<li><strong>Prehensile Mutation (2):</strong> <em>(Prehensile Tail.)</em> A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You <strong>can’t be flanked</strong>.</li>\n<li><strong>Membrane Wings (2):</strong> <em>(Wings.)</em> Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to your <strong>Physique</strong> score (minimum 1 round) before you fall. While flying at <strong>3rd level or lower</strong>, you have <strong>damage weakness 5</strong>.</li>\n</ul>\n<h3>Corruptive Flaw (optional fiction)</h3>\n<p>Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.</p>\n<p><strong>Optional:</strong> at creation, pick a cosmetic <strong>Corruptive Flaw</strong> (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has <strong>no mechanical Load bands</strong> and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is <strong>not</strong> Taint. Every People — Mutants included — uses the shared <strong>Taint 0–12</strong> track (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fEwnmi3gp05vhWUc]{Corruption &amp; Taint}). Reducing Taint does not erase a Flaw.</p>"
+        "markdown": "**Ancestry points:** 3  \n\n**Quick Build:** Warped Legs, Ossified Crown\n\n### Signature Trait — Aberrant Rapport (free)\n\n*(Devil Silver Tongue mechanics.)*\n\nYour taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have **one skill of your choice from the interpersonal skill group**, and you gain an **edge on tests** when attempting to discover an NPC’s motivations and pitfalls during a negotiation.\n\n### Purchased Traits — 3 ancestry points\n\n- **Barbed Mutation (1):** *(Barbed Tail.)* A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to your **highest characteristic score**.\n- **Warped Legs (1):** *(Beast Legs.)* Your mutated legs make you faster. You have **speed 6**.\n- **Taint Flare (1):** *(Glowing Eyes.)* When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature **psychic damage equal to 1d10 + your level**.\n- **Taint Sight (1):** *(Hellsight.)* Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.\n- **Ossified Crown (2):** *(Impressive Horns.)* Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of **5 or higher**.\n- **Prehensile Mutation (2):** *(Prehensile Tail.)* A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You **can’t be flanked**.\n- **Membrane Wings (2):** *(Wings.)* Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to your **Physique** score (minimum 1 round) before you fall. While flying at **3rd level or lower**, you have **damage weakness 5**.\n\n### Corruptive Flaw (optional fiction)\n\nVisible taint and social “reads as wrong” are Director color layered on this package, not a second economy.\n\n**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (**Corruption & Taint**). Reducing Taint does not erase a Flaw.",
+        "content": "<p><strong>Ancestry points:</strong> 3  </p>\n<p><strong>Quick Build:</strong> Warped Legs, Ossified Crown</p>\n<h3>Signature Trait — Aberrant Rapport (free)</h3>\n<p><em>(Devil Silver Tongue mechanics.)</em></p>\n<p>Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have <strong>one skill of your choice from the interpersonal skill group</strong>, and you gain an <strong>edge on tests</strong> when attempting to discover an NPC’s motivations and pitfalls during a negotiation.</p>\n<h3>Purchased Traits — 3 ancestry points</h3>\n<ul>\n<li><strong>Barbed Mutation (1):</strong> <em>(Barbed Tail.)</em> A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to your <strong>highest characteristic score</strong>.</li>\n<li><strong>Warped Legs (1):</strong> <em>(Beast Legs.)</em> Your mutated legs make you faster. You have <strong>speed 6</strong>.</li>\n<li><strong>Taint Flare (1):</strong> <em>(Glowing Eyes.)</em> When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature <strong>psychic damage equal to 1d10 + your level</strong>.</li>\n<li><strong>Taint Sight (1):</strong> <em>(Hellsight.)</em> Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.</li>\n<li><strong>Ossified Crown (2):</strong> <em>(Impressive Horns.)</em> Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of <strong>5 or higher</strong>.</li>\n<li><strong>Prehensile Mutation (2):</strong> <em>(Prehensile Tail.)</em> A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You <strong>can’t be flanked</strong>.</li>\n<li><strong>Membrane Wings (2):</strong> <em>(Wings.)</em> Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to your <strong>Physique</strong> score (minimum 1 round) before you fall. While flying at <strong>3rd level or lower</strong>, you have <strong>damage weakness 5</strong>.</li>\n</ul>\n<h3>Corruptive Flaw (optional fiction)</h3>\n<p>Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.</p>\n<p><strong>Optional:</strong> at creation, pick a cosmetic <strong>Corruptive Flaw</strong> (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has <strong>no mechanical Load bands</strong> and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is <strong>not</strong> Taint. Every People — Mutants included — uses the shared <strong>Taint 0–12</strong> track (<strong>Corruption & Taint</strong>). Reducing Taint does not erase a Flaw.</p>"
       },
       "category": null,
       "ownership": {
@@ -343,11 +315,11 @@
       "flags": {}
     },
     {
-      "_id": "fWHtW1eDbVloqI4A",
-      "_key": "!journal.pages!YL0jYpff6XtNNAop.fWHtW1eDbVloqI4A",
+      "_id": "s5lcYGoOqEowaH9N",
+      "_key": "!journal.pages!YL0jYpff6XtNNAop.s5lcYGoOqEowaH9N",
       "name": "Cyborg",
       "type": "text",
-      "sort": 1300000,
+      "sort": 1200000,
       "title": {
         "show": true,
         "level": 1

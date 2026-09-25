@@ -215,9 +215,10 @@ const DEFAULT_TARGET_LEVEL = 1;
  *  * **Kept stock defaults** — Catch Breath, Escape Grab, Grab, Knockback, Stand Up, Advance,
  *    Disengage — from the committed snapshot in docs/masters/pregens/default-items.json
  *    (refreshed by tools/ds-default-items.mjs).
- *  * **Ghostwire's five swaps** — Drive, Rush, Take Cover, Patch Up, Spot Target — the module's own
+ *  * **Ghostwire's four swaps** — Drive, Rush, Take Cover, Spot Target — the module's own
  *    Items under src/packs/abilities/, exactly the compendium ids `DEFAULT_ITEM_SWAPS` in
- *    scripts/module.mjs substitutes for Ride / Charge / Defend / Heal / Aid Attack at `init`. The
+ *    scripts/module.mjs substitutes for Ride / Charge / Defend / Aid Attack at `init` (Heal is deleted outright,
+ *    0.3.134 H — Field Triage is a Medic class grant now, not a universal default). The
  *    ids are asserted below rather than assumed, so the two files cannot drift apart silently.
  *
  * What is **not** here is as deliberate: the two generic Free Strikes (B44c strips them everywhere,
@@ -228,9 +229,18 @@ const GW_SWAP_ABILITIES = [
   ["Xc5MebcXHYG1hdQR", "src/packs/abilities/spot-target.json"],
   ["Od6u2idYoCRmoDYD", "src/packs/abilities/rush.json"],
   ["1W0HIoL2SAcbTU6W", "src/packs/abilities/take-cover.json"],
-  ["pJY4ybZUtkH9HDxy", "src/packs/abilities/patch-up.json"],
   ["Lc7LhoqWg9ydP5Jm", "src/packs/abilities/drive.json"],
 ];
+
+/**
+ * 0.3.134 (H) — Field Triage is **not** here any more.
+ *
+ * It used to ride in as the universal Heal swap, which gave all nine pregens a 2-Reagent Medic
+ * maneuver (and gave the eight non-Medics no reagents to pay for it with). It is now granted by the
+ * Medic class's own level-1 advancement, so exactly one pregen — Renn, the Medic — ends up
+ * holding it, and `resolveGrants` below is what puts it there.
+ */
+const MEDIC_ONLY_DSIDS = new Set(["field-triage"]);
 
 /** Abilities that must never reach a pregen sheet, whatever else changes. */
 const FORBIDDEN_DEFAULT_DSIDS = new Set(["melee-free-strike", "ranged-free-strike"]);

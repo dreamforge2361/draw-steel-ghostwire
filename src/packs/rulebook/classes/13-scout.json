@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "ffdLqXSCoWtlz37X",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.ffdLqXSCoWtlz37X",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/02-scout.md`*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/02-scout.md</code></em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "VFEJ57iCrsN19GYZ",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.VFEJ57iCrsN19GYZ",
+      "_id": "JZHe7Z2EnWfjxB4x",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.JZHe7Z2EnWfjxB4x",
       "name": "Class Chassis",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "guG6p7sqDswji2f9",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.guG6p7sqDswji2f9",
+      "_id": "BVp4vTKyM3muJvzy",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.BVp4vTKyM3muJvzy",
       "name": "Advantage — Your Heroic Resource",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "Bgg35FHdc1YluImY",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.Bgg35FHdc1YluImY",
+      "_id": "oVsPGwq0Jzm8Cqt8",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.oVsPGwq0Jzm8Cqt8",
       "name": "Signature Abilities",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "jVVRIarDDdp4aIeY",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.jVVRIarDDdp4aIeY",
+      "_id": "jDVZjmPV8BrWxpiU",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.jDVZjmPV8BrWxpiU",
       "name": "Heroic Abilities — Cost Bands 3 Through 11",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "DAsIYvvExeQ9nA8A",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.DAsIYvvExeQ9nA8A",
+      "_id": "lWK09xKqZE9auqmX",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.lWK09xKqZE9auqmX",
       "name": "Scout Subclasses",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "GrWQ33iUeRkur4pq",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.GrWQ33iUeRkur4pq",
+      "_id": "Ttd99kvZvpLhf583",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.Ttd99kvZvpLhf583",
       "name": "Level 1-10 Progression Table",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "rLuD78LY54wBKBFE",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.rLuD78LY54wBKBFE",
+      "_id": "6kQsnCRHpzRlGh2J",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.6kQsnCRHpzRlGh2J",
       "name": "Core Class Features (Non-Subclass)",
       "type": "text",
-      "sort": 800000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "KkqAzSYRCrdOwbwH",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.KkqAzSYRCrdOwbwH",
+      "_id": "mcTFeeCACHkBzySR",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.mcTFeeCACHkBzySR",
       "name": "Kits (Your Loadout)",
       "type": "text",
-      "sort": 900000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "yhc77F0kKY1haPAe",
-      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.yhc77F0kKY1haPAe",
+      "_id": "vyfGyq99NRB7VUdn",
+      "_key": "!journal.pages!TBbbG1U0FD0Qwm80.vyfGyq99NRB7VUdn",
       "name": "Chrome a Scout Runs",
       "type": "text",
-      "sort": 1000000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1

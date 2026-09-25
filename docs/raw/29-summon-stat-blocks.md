@@ -1,0 +1,435 @@
+# Summon Stat Blocks
+
+**RAW status:** generated — `node tools/gen-summon-statblocks.mjs` renders this from `src/packs/summons/**`. Edit the pack rows, not this file.
+**Related:** Elementalist (`17`) · Street Priest (`18`) · The Veil (`22`) · Constructs, Pets & Drones FAQ (`28`)
+
+---
+
+Every companion, elemental, spirit, sprite and agent the module ships, with the numbers the table asks for mid-fight. The rules for **ordering** any of them are the same for all of them and are repeated here so this chapter answers on its own.
+
+## How to command summons
+
+**LOCKED 0.3.134.** These eight rules cover every companion, elemental, spirit, sprite and agent. They are printed in the Elementalist chapter (`17`), the Street Priest chapter (`18`), The Veil (`22`), the Constructs, Pets & Drones FAQ (`28`) and the Summon Stat Blocks (`29`), and they are the same eight everywhere.
+
+1. **Ordering a strike costs you a maneuver.** Telling a companion, an extension elemental or an extension spirit to make its **signature strike** costs you a **maneuver** on your turn. It **moves for free** on your turn without costing you anything. On the turn you summon it, its first signature strike is **included** — no extra maneuver that turn.
+2. **Independent summons act on their own.** A Rank 2 or higher summon is **independent**: it takes its own turn every round and you do not spend anything to let it. Its **upkeep** is what you pay instead.
+3. **The command roll is a maneuver.** When you order a summon, roll **2d10 + Logic** (Elementalist) or **2d10 + Instinct** (Street Priest). **Low result:** it ignores the order this round. **Middle result:** it obeys. **High result:** it obeys and gains an **edge** on what you ordered.
+4. **Strike damage by rank.** **Rank 2: 6 / 9 / 12 + Logic. Rank 3: 9 / 12 / 15 + Logic. Greater: 11 / 15 / 20 + Logic.** A Greater elemental also has **one maneuver and one area ability per form** — Ancient Flame, Roaring Storm (lightning damage **and dazed**), Living Mountain, and Devouring Void.
+5. **Dismissing is a free maneuver.** Letting one go costs a maneuver and nothing else. No resource, no roll.
+6. **Extensions cannot be targeted; independents can.** An **extension** summon is part of you: nothing can target it and it has no Stamina track of its own that matters. An **independent** summon can be targeted and uses its **own Stamina**.
+7. **An elemental resists its own element.** Its resistance to the element it was summoned with equals **rank × 2** (a Rank 3 fire elemental has fire immunity 6). Its **stability equals its rank**.
+8. **A Guardian spirit has a light strike and Warding Aegis.** The Shepherd's Guardian is the defensive ministry's spirit: it carries a light signature strike (**2 / 4 / 6 + Persona**) and **Warding Aegis**, and the Aegis is the reason you called it.
+
+---
+## Elementalist elementals and companions
+
+Summoned by: **Elementalist**.
+
+### Boulder Companion
+
+**Rank** 1 · **Form** extension · **Stamina** 15 · **Speed** 5 (walk) · **Stability** 0 · **Size** 1
+
+The Geomancer’s signature summon: a Rank 1 earth or void elemental, a stone fist bound for a moment. — Signature Summon — Granted by Boulder Companion (Geomancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose acid or corruption damage when you summon it. — Hybrid band — Extension: the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. — Stamina (provisional) — Live formula: 15 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 15, with Reason Logic 2 (the Elementalist’s Logic at 1st level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Stone Fist** · *main* · melee 1 · damage 4 + @chr / 7 + @chr / 10 + @chr · Acid or corruption damage (chosen on summon), light band (4 / 7 / 10 + Logic). On a middle or high result, the strike can also shove the target 1 square.
+
+*Machine handle (dsid): `companion-boulder`.*
+
+### Ember Companion
+
+**Rank** 1 · **Form** extension · **Stamina** 15 · **Speed** 5 (walk) · **Stability** 0 · **Size** 1
+
+The Pyromancer’s signature summon: a Rank 1 fire elemental, a lash of living flame bound for a moment. — Signature Summon — Granted by Ember Companion (Pyromancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). It doesn’t replace Summon Elemental. — Hybrid band — Extension: the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. — Stamina (provisional) — Live formula: 15 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 15, with Reason Logic 2 (the Elementalist’s Logic at 1st level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Lash of Flame** · *main* · melee 1 · damage 4 + @chr fire / 7 + @chr fire / 10 + @chr fire · Fire damage, light band (4 / 7 / 10 + Logic).
+
+*Machine handle (dsid): `companion-ember`.*
+
+### Zephyr Companion
+
+**Rank** 1 · **Form** extension · **Stamina** 15 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+The Stormcaller’s signature summon: a Rank 1 air or water elemental, a striking wind bound for a moment. — Signature Summon — Granted by Zephyr Companion (Stormcaller, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose cold, lightning, or sonic damage when you summon it. — Hybrid band — Extension: the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. — Stamina (provisional) — Live formula: 15 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 15, with Reason Logic 2 (the Elementalist’s Logic at 1st level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1S, speed 5 (fly, hover). The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Striking Wind** · *main* · melee 1 · damage 3 + @chr / 5 + @chr / 8 + @chr · Cold, lightning, or sonic damage (chosen on summon), light band (3 / 5 / 8 + Logic). On a middle or high result, the strike slides the target 1 square.
+
+*Machine handle (dsid): `companion-zephyr`.*
+
+### Greater Elemental
+
+**Rank** 4 · **Form** independent · **Stamina** 50 · **Speed** 5 (walk) · **Stability** 4 · **Size** 2
+
+Scaffold. A Rank 4 greater elemental: an Ancient Flame, a Roaring Storm, a Living Mountain, or a Devouring Void. — Greater Elemental Summon — Bound with Greater Elemental Summon (11 Essence) as an independent figure. Sustain: Persistent 6 = −12 Essence banked per turn. At echelon 4 (late career) the bind is a Rank 5 elemental: use this Actor; Greater Elemental Summon stamps the Rank 5 Stamina itself. A willing elemental demands a greater task; coercing one costs 3 corruption and 3 spirit attention. Its signature strike is Elemental Lash, 11 / 15 / 20 + the summoner’s Logic, typed to the element it was called with, and it carries one maneuver and one area ability for each of its four forms — Ancient Flame, Roaring Storm (lightning and dazed), Living Mountain and Devouring Void (0.3.134 G8). — Hybrid band — Independent figure: the elemental is its own figure on the map with its own Stamina and its own turn on the shared round. — Stamina (provisional) — Live formula: 50 + (Elementalist’s Logic × level) at Rank 4; 65 + (Logic × level) at Rank 5 (echelon 4), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 60, with Reason Logic 4 (the Elementalist’s Logic at 8th level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 2M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Elemental Lash** · *main* · melee 1 · damage 11 + @chr / 15 + @chr / 20 + @chr · Signature strike. 11 / 15 / 20 damage + the summoner's Logic, in the element this elemental was called with. Commanding it to make this strike costs the summoner a maneuver; on the turn it is summoned the strike is included.
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+- **Ancient Flame: Stoke the Furnace** · *maneuver* · self · Maneuver. The Ancient Flame burns hotter. Until the end of its next turn, its signature strike deals +3 fire damage and it sheds bright light 5 squares.
+- **Ancient Flame: Conflagration** · *main* · burst 3 · Main action · 3 burst. Fire fills the burst. Each enemy in it takes the elemental's tier damage as fire; each ally in it may shift 1 square out of the flames for free.
+- **Roaring Storm: Gather the Charge** · *maneuver* · self · Maneuver. The storm draws in. Until the end of its next turn, the Roaring Storm's signature strike is lightning damage and it gains an edge on strikes against a target already dazed.
+- **Roaring Storm: Thunderhead** · *main* · burst 3 · Main action · 3 burst. Each enemy in the burst takes the elemental's tier damage as lightning and is dazed (save ends).
+- **Living Mountain: Set the Foundation** · *maneuver* · self · Maneuver. The Living Mountain plants itself. Until it moves, it cannot be force-moved and adjacent allies gain +1 stability.
+- **Living Mountain: Fault Line** · *main* · burst 3 · Main action · 5 × 1 line. The ground splits. Each creature in the line takes the elemental's tier damage and is knocked prone on a tier 2 or tier 3 result.
+- **Devouring Void: Swallow the Light** · *maneuver* · self · Maneuver. The Void drinks. Until the end of its next turn, the Devouring Void has concealment and any creature that starts its turn adjacent to it takes 2 corruption damage.
+- **Devouring Void: Collapse** · *main* · burst 3 · Main action · 3 burst. Each enemy in the burst takes the elemental's tier damage as corruption and is pulled 2 squares toward the elemental.
+
+*Machine handle (dsid): `elemental-greater`.*
+
+### Bound Elemental (Rank 1)
+
+**Rank** 1 · **Form** extension · **Stamina** 15 · **Speed** 5 (walk) · **Stability** 1 · **Size** 1
+
+A Rank 1 elemental torn loose from the Veil and bound. Its form follows the Elementalist’s attuned element (flame, storm, stone, void). — Summon Elemental — Bound with Summon Elemental (5 Essence, main action). Sustain: Persistent 2 = −4 Essence banked per turn as an extension (Persistent 4 = −8 per turn as an independent figure). A heavy hit on the Elementalist can break the bind (Persona save against the potency). — Hybrid band — Extension: the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. (1st–5th level.) — From 5th level (Rank 2) and later in a career, a properly bound elemental is instead an independent figure: use the Rank 2 or Rank 3 Actor. This is the same extension-to-independent ladder as Technomancer sprites. — Stamina (provisional) — Live formula: 15 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 15, with Reason Logic 2 (the Elementalist’s Logic at 1st level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Elemental Lash** · *main* · melee 1 · damage 4 + @chr / 7 + @chr / 10 + @chr · Damage of the attuned element, light band (4 / 7 / 10 + Logic).
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+
+- **Twin Elemental Summon** — Twin Elemental Summon (9 Essence) binds two elementals with one action and one bind roll: place two of this Actor (or one of these and a higher-Rank independent at echelon 3+). Sustain Persistent 3 (−6 per turn) for two extensions, or Persistent 5 (−10 per turn) with an independent. A broken bind on either turns both hostile.
+
+*Machine handle (dsid): `elemental-rank-1`.*
+
+### Bound Elemental (Rank 2)
+
+**Rank** 2 · **Form** independent · **Stamina** 25 · **Speed** 5 (walk) · **Stability** 2 · **Size** 1
+
+Scaffold. A Rank 2 bound elemental, unlocked as an independent figure at 5th level. — Summon Elemental — Bound with Summon Elemental (5 Essence). Sustain: Persistent 4 = −8 Essence banked per turn as an independent figure. Its signature strike is Elemental Lash, 6 / 9 / 12 + the summoner’s Logic, typed to the element it was called with (0.3.134 G8). It resists that element at rank × 2 and its stability equals its rank. — Hybrid band — Independent figure: the elemental is its own figure on the map with its own Stamina and its own turn on the shared round. — Stamina (provisional) — Live formula: 25 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 30, with Reason Logic 3 (the Elementalist’s Logic at 5th level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Elemental Lash** · *main* · melee 1 · damage 6 + @chr / 9 + @chr / 12 + @chr · Signature strike. 6 / 9 / 12 damage + the summoner's Logic, in the element this elemental was called with. Commanding it to make this strike costs the summoner a maneuver; on the turn it is summoned the strike is included.
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+
+*Machine handle (dsid): `elemental-rank-2`.*
+
+### Bound Elemental (Rank 3)
+
+**Rank** 3 · **Form** independent · **Stamina** 35 · **Speed** 5 (walk) · **Stability** 3 · **Size** 1
+
+Scaffold. A Rank 3 bound elemental for a later-career bind. — Summon Elemental — Bound with Summon Elemental (5 Essence). Sustain: Persistent 4 = −8 Essence banked per turn as an independent figure. Its signature strike is Elemental Lash, 9 / 12 / 15 + the summoner’s Logic, typed to the element it was called with (0.3.134 G8). It resists that element at rank × 2 and its stability equals its rank. — Hybrid band — Independent figure: the elemental is its own figure on the map with its own Stamina and its own turn on the shared round. — Stamina (provisional) — Live formula: 35 + (Elementalist’s Logic × level), stamped when the summon is placed and refreshed when the Elementalist levels up, until the Veil entity table (§C3) locks final numbers. This template: 45, with Reason Logic 4 (the Elementalist’s Logic at 7th level); summoning from the ability sets Stamina, Reason and level from the caster. — Defenses — Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for. — Placeholders: size 1L, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends. — The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.
+
+**Abilities**
+
+- **Elemental Lash** · *main* · melee 1 · damage 9 + @chr / 12 + @chr / 15 + @chr · Signature strike. 9 / 12 / 15 damage + the summoner's Logic, in the element this elemental was called with. Commanding it to make this strike costs the summoner a maneuver; on the turn it is summoned the strike is included.
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+
+*Machine handle (dsid): `elemental-rank-3`.*
+
+---
+
+## Street Priest pact spirits
+
+Summoned by: **Street Priest**.
+
+### Guardian Spirit
+
+**Form** extension · **Stamina** 20 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+The Shepherd’s invoked aid: a guardian or warding spirit that sticks close to allies, shields them, and anchors wards. — Invoke the Pact — Main action · 7 Conviction. Bind Check: power roll 2d10 + Instinct (not Persona). — · low (≤11) — failed bind. Light pact: the entity vanishes without effect and the priest takes a bane on their next power rolls (save ends). Dark pact: the entity strikes the priest once at its tier’s damage, then departs. — · middle (12–16) — extension. The entity acts on the priest’s turn as an extension of their action economy. It has no Stamina track or turn of its own; no sustain cost beyond the 7 Conviction. — · high (17+) — independent. The entity is its own figure with its own Stamina and turn on the shared round. Sustain: Persistent 2 = −4 Conviction per turn. — The Price applies hardest here: a Light entity exacts a task of mercy or protection; a Dark entity loads corruption and spirit attention. — Sentinel Spirit — The Shepherd’s 5-cost Sentinel Spirit is a different, briefer flare: a size-2 guardian for 1 turn whose presence deals Instinct-scaled holy or corruption damage (by pact) to enemies within 2 squares at the start of their turns. No separate Actor: enlarge this token to size 2 for that turn if you want it on the map. — Pact Tint — One Actor serves both pacts. Invoke the Pact reads the priest’s Light Pact or Dark Pact feature and places the spirit already tinted. By hand, enable Pact: Light or Pact: Dark on its Effects tab (or set flags.draw-steel-ghostwire.pact to light or dark). The tint makes its strikes deal holy (Light) or corruption (Dark) damage, tints the token, and records the pact. Only one pact can be active. — Stamina and Defenses (provisional) — Live formula (provisional, until the Veil entity table §C3): independent 30 + (priest’s Persona × level); extension 20 + (Persona × level). RAW gives the extension no Stamina track of its own: its pool is a table convenience so the token can roll its strike, and the Director may rule it can’t be targeted. Invoke the Pact stamps the pool, Persona, Instinct and level from the priest when it places the token, and refreshes them when the priest levels up. This template: 20. Draw Steel creatures have no defense scores; Veil entity defenses land with the Veil chapter, so use the Director’s call until then. Its Presence is Persona 2 (a 3rd-level Street Priest); set it to the priest’s Persona for rolls that add Persona. — Placeholders: size 1M, speed 5 (fly, hover). The Cyborg bar (Arcane Severance) is on the Street Priest class, not this Actor.
+
+**Abilities**
+
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+- **Warding Blow** · *main* · melee 1 · damage 2 + @chr / 4 + @chr / 6 + @chr · Light signature strike. 2 / 4 / 6 damage + the priest's Persona. The Guardian is the defensive ministry's spirit: it hits one band below the Warrior's Pact Blade, and its job is Warding Aegis, not the damage. Commanding this strike costs the priest a maneuver.
+
+- **Warding Aegis** — While the spirit exists, it screens its charges: attacks against allies adjacent to it take a bane (Aegis Bound, Shepherd 6th level, makes this explicit for the extension form). A ward the Shepherd anchors on the spirit’s square persists while the spirit stands.
+
+*Machine handle (dsid): `spirit-guardian`.*
+
+### Hunter Spirit
+
+**Form** extension · **Stamina** 20 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+The Exorcist’s invoked aid: a hunting or binding spirit that tracks and holds spirit-type foes. — Invoke the Pact — Main action · 7 Conviction. Bind Check: power roll 2d10 + Instinct (not Persona). — · low (≤11) — failed bind. Light pact: the entity vanishes without effect and the priest takes a bane on their next power rolls (save ends). Dark pact: the entity strikes the priest once at its tier’s damage, then departs. — · middle (12–16) — extension. The entity acts on the priest’s turn as an extension of their action economy. It has no Stamina track or turn of its own; no sustain cost beyond the 7 Conviction. — · high (17+) — independent. The entity is its own figure with its own Stamina and turn on the shared round. Sustain: Persistent 2 = −4 Conviction per turn. — The Price applies hardest here: a Light entity exacts a task of mercy or protection; a Dark entity loads corruption and spirit attention. — Pact Tint — One Actor serves both pacts. Invoke the Pact reads the priest’s Light Pact or Dark Pact feature and places the spirit already tinted. By hand, enable Pact: Light or Pact: Dark on its Effects tab (or set flags.draw-steel-ghostwire.pact to light or dark). The tint makes its strikes deal holy (Light) or corruption (Dark) damage, tints the token, and records the pact. Only one pact can be active. — Stamina and Defenses (provisional) — Live formula (provisional, until the Veil entity table §C3): independent 30 + (priest’s Persona × level); extension 20 + (Persona × level). RAW gives the extension no Stamina track of its own: its pool is a table convenience so the token can roll its strike, and the Director may rule it can’t be targeted. Invoke the Pact stamps the pool, Persona, Instinct and level from the priest when it places the token, and refreshes them when the priest levels up. This template: 20. Draw Steel creatures have no defense scores; Veil entity defenses land with the Veil chapter, so use the Director’s call until then. Its Presence is Persona 2 (a 3rd-level Street Priest); set it to the priest’s Persona for rolls that add Persona. — Placeholders: size 1M, speed 5 (fly, hover). The Cyborg bar (Arcane Severance) is on the Street Priest class, not this Actor.
+
+**Abilities**
+
+- **Binding Chain** · *main* · melee 1 · damage 4 + @chr psychic / 7 + @chr psychic / 10 + @chr psychic · Psychic. The chain is a name, not metal: Binding Chain deals psychic damage under either pact, so psychic immunity (a Cyborg’s Cortical Firewall) reduces it. The Warrior Spirit’s Pact Blade still tints holy or corruption — only the Hunter binds by name. Light band: 4 / 7 / 10 + Persona. Against a spirit-type target (a spirit, a corrupted or possessed creature, or a dark entity), a middle or high result also leaves it restrained (save ends), and the spirit always knows where a spirit it has struck is while they share a scene. Hunter’s Bind (Exorcist 2nd level) gives an edge on rolls made to track or restrain a spirit-type target.
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+
+*Machine handle (dsid): `spirit-hunter`.*
+
+### Warrior Spirit
+
+**Form** extension · **Stamina** 20 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+The Templar’s invoked aid: an angelic (Light) or infernal (Dark) warrior, a true combatant built to trade blows. — Invoke the Pact — Main action · 7 Conviction. Bind Check: power roll 2d10 + Instinct (not Persona). — · low (≤11) — failed bind. Light pact: the entity vanishes without effect and the priest takes a bane on their next power rolls (save ends). Dark pact: the entity strikes the priest once at its tier’s damage, then departs. — · middle (12–16) — extension. The entity acts on the priest’s turn as an extension of their action economy. It has no Stamina track or turn of its own; no sustain cost beyond the 7 Conviction. — · high (17+) — independent. The entity is its own figure with its own Stamina and turn on the shared round. Sustain: Persistent 2 = −4 Conviction per turn. — The Price applies hardest here: a Light entity exacts a task of mercy or protection; a Dark entity loads corruption and spirit attention. — Pact Tint — One Actor serves both pacts. Invoke the Pact reads the priest’s Light Pact or Dark Pact feature and places the spirit already tinted. By hand, enable Pact: Light or Pact: Dark on its Effects tab (or set flags.draw-steel-ghostwire.pact to light or dark). The tint makes its strikes deal holy (Light) or corruption (Dark) damage, tints the token, and records the pact. Only one pact can be active. — Stamina and Defenses (provisional) — Live formula (provisional, until the Veil entity table §C3): independent 30 + (priest’s Persona × level); extension 20 + (Persona × level). RAW gives the extension no Stamina track of its own: its pool is a table convenience so the token can roll its strike, and the Director may rule it can’t be targeted. Invoke the Pact stamps the pool, Persona, Instinct and level from the priest when it places the token, and refreshes them when the priest levels up. This template: 20. Draw Steel creatures have no defense scores; Veil entity defenses land with the Veil chapter, so use the Director’s call until then. Its Presence is Persona 2 (a 3rd-level Street Priest); set it to the priest’s Persona for rolls that add Persona. — Placeholders: size 1M, speed 5 (fly, hover). The Cyborg bar (Arcane Severance) is on the Street Priest class, not this Actor.
+
+**Abilities**
+
+- **Pact Blade** · *main* · melee 1 · damage 4 + @chr / 7 + @chr / 10 + @chr · Holy damage under a Light pact, corruption damage under a Dark pact (enable the pact tint). Light band: 4 / 7 / 10 + Persona.
+- **Command** · *maneuver* · ranged 10 · Maneuver. Order this summon to act. Roll 2d10 + Logic (Elementalist) or 2d10 + Instinct (Street Priest). — · Low result: it ignores the order this round. — · Middle result: it obeys. — · High result: it obeys, and gains an edge on the action you ordered. — You do not need to roll to move it — it moves free on your turn. You do need the maneuver (and, for a signature strike, this roll) to make it act. On the turn you summon it, its first signature strike is included and costs no extra maneuver.
+
+*Machine handle (dsid): `spirit-warrior`.*
+
+---
+
+## Technomancer sprites
+
+Summoned by: **Technomancer**.
+
+### Attack Sprite (Advanced)
+
+**Form** advanced · **Stamina** 58 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A damage sprite that strikes Wired targets directly, or flesh through a device or jack. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 26 + (Technomancer’s Logic × Technomancer’s level). This template: 58, baked for a 8th-level Technomancer with Logic 4 (26 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Advanced — Independent (8th–10th level): the sprite takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Code Strike** · *main* · special · damage 0 / 3d10 + @chr / 3d10 + @chr · Distance: a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.
+
+*Machine handle (dsid): `sprite-attack-advanced`.*
+
+### Attack Sprite (Intermediate)
+
+**Form** intermediate · **Stamina** 30 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A damage sprite that strikes Wired targets directly, or flesh through a device or jack. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 18 + (Technomancer’s Logic × Technomancer’s level). This template: 30, baked for a 4th-level Technomancer with Logic 3 (18 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Intermediate — Commanded (4th–7th level): the sprite acts on its own turn, but only within the Technomancer’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Code Strike** · *main* · special · damage 0 / 2d10 + @chr + 1d6 / 2d10 + @chr + 1d6 · Distance: a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.
+
+*Machine handle (dsid): `sprite-attack-intermediate`.*
+
+### Attack Sprite (Minor)
+
+**Form** minor · **Stamina** 14 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A damage sprite that strikes Wired targets directly, or flesh through a device or jack. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 12 + (Technomancer’s Logic × Technomancer’s level). This template: 14, baked for a 1st-level Technomancer with Logic 2 (12 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Minor — Extension (1st–3rd level): the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Code Strike** · *main* · special · damage 0 / 2d10 + @chr / 2d10 + @chr · Distance: a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.
+
+*Machine handle (dsid): `sprite-attack-minor`.*
+
+### Data Sprite (Advanced)
+
+**Form** advanced · **Stamina** 52 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A scout-and-screen sprite that feeds the congregation information. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 20 + (Technomancer’s Logic × Technomancer’s level). This template: 52, baked for a 8th-level Technomancer with Logic 4 (20 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Advanced — Independent (8th–10th level): the sprite takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Data Uplink** — The Technomancer and allies gain an edge on every Wired roll against a target this sprite can see.
+
+*Machine handle (dsid): `sprite-data-advanced`.*
+
+### Data Sprite (Intermediate)
+
+**Form** intermediate · **Stamina** 26 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A scout-and-screen sprite that feeds the congregation information. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 14 + (Technomancer’s Logic × Technomancer’s level). This template: 26, baked for a 4th-level Technomancer with Logic 3 (14 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Intermediate — Commanded (4th–7th level): the sprite acts on its own turn, but only within the Technomancer’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Data Uplink** — Once per round, grant an edge on two roll types (Search, Scan, breach, or command) made by the Technomancer or an ally directing the sprite.
+
+*Machine handle (dsid): `sprite-data-intermediate`.*
+
+### Data Sprite (Minor)
+
+**Form** minor · **Stamina** 10 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A scout-and-screen sprite that feeds the congregation information. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 8 + (Technomancer’s Logic × Technomancer’s level). This template: 10, baked for a 1st-level Technomancer with Logic 2 (8 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Minor — Extension (1st–3rd level): the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Data Uplink** — Once per round, grant an edge on one roll type (Search, Scan, breach, or command) made by the Technomancer or an ally directing the sprite.
+
+*Machine handle (dsid): `sprite-data-minor`.*
+
+### Machine Sprite (Advanced)
+
+**Form** advanced · **Stamina** 54 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 22 + (Technomancer’s Logic × Technomancer’s level). This template: 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Advanced — Independent (8th–10th level): the sprite takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Mend** — The sprite mends as a full Resonance Mending: the base effect, applied as if the Technomancer used the signature through the sprite.
+
+*Machine handle (dsid): `sprite-machine-advanced`.*
+
+### Machine Sprite (Intermediate)
+
+**Form** intermediate · **Stamina** 28 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 16 + (Technomancer’s Logic × Technomancer’s level). This template: 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Intermediate — Commanded (4th–7th level): the sprite acts on its own turn, but only within the Technomancer’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Mend** — The sprite mends one machine, drone, vehicle, piece of chrome, or Cyborg for one Recovery’s worth of Stamina or Integrity, and can optionally mend one additional target the same way.
+
+*Machine handle (dsid): `sprite-machine-intermediate`.*
+
+### Machine Sprite (Minor)
+
+**Form** minor · **Stamina** 12 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 10 + (Technomancer’s Logic × Technomancer’s level). This template: 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Minor — Extension (1st–3rd level): the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Mend** — The sprite mends one machine, drone, vehicle, piece of chrome, or Cyborg: the target regains Stamina or Integrity equal to one Recovery’s worth.
+
+*Machine handle (dsid): `sprite-machine-minor`.*
+
+### Ward Sprite (Advanced)
+
+**Form** advanced · **Stamina** 54 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A shield sprite that resists ICE and electronic warfare on the congregation’s behalf. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 22 + (Technomancer’s Logic × Technomancer’s level). This template: 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Advanced — Independent (8th–10th level): the sprite takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Ward Screen** — Wired and electronic warfare attacks against the sprite or any adjacent ally take a double bane.
+
+*Machine handle (dsid): `sprite-ward-advanced`.*
+
+### Ward Sprite (Intermediate)
+
+**Form** intermediate · **Stamina** 28 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A shield sprite that resists ICE and electronic warfare on the congregation’s behalf. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 16 + (Technomancer’s Logic × Technomancer’s level). This template: 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Intermediate — Commanded (4th–7th level): the sprite acts on its own turn, but only within the Technomancer’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Ward Screen** — Wired and electronic warfare attacks against the sprite or one adjacent ally take a bane.
+
+*Machine handle (dsid): `sprite-ward-intermediate`.*
+
+### Ward Sprite (Minor)
+
+**Form** minor · **Stamina** 12 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A shield sprite that resists ICE and electronic warfare on the congregation’s behalf. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Sprite Stamina — Live formula: 10 + (Technomancer’s Logic × Technomancer’s level). This template: 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic. — Defenses — Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens. — Hybrid band: Minor — Extension (1st–3rd level): the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Ward Screen** — Wired and electronic warfare attacks against the sprite take a bane.
+
+*Machine handle (dsid): `sprite-ward-minor`.*
+
+---
+
+## Hacker agents
+
+Summoned by: **Hacker**.
+
+### Daemon Agent (Advanced)
+
+**Form** advanced · **Stamina** 54 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A system-control daemon — Track 1 puppet. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 22 + (Hacker’s Logic × Hacker’s level). This template: 54, baked for an 8th-level Hacker with Logic 4 (22 + 4 × 8). — Hybrid band: Advanced — Independent (8th–10th level): the Agent takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Puppet Thread** — The Agent puppets as a full Seize Control high (17+) result on one Track 1 object: lasting control, no extra Bandwidth, no extra Alert from the puppet itself.
+
+*Machine handle (dsid): `agent-daemon-advanced`.*
+
+### Daemon Agent (Intermediate)
+
+**Form** intermediate · **Stamina** 28 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A system-control daemon — Track 1 puppet. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 16 + (Hacker’s Logic × Hacker’s level). This template: 28, baked for a 4th-level Hacker with Logic 3 (16 + 3 × 4). — Hybrid band: Intermediate — Commanded (4th–7th level): the Agent acts on its own turn, but only within the Hacker’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Puppet Thread** — The Agent holds one Track 1 object the Hacker has breached and can fire its normal function, and may optionally puppet one additional Track 1 object the same way.
+
+*Machine handle (dsid): `agent-daemon-intermediate`.*
+
+### Daemon Agent (Minor)
+
+**Form** minor · **Stamina** 12 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A system-control daemon — Track 1 puppet. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 10 + (Hacker’s Logic × Hacker’s level). This template: 12, baked for a 1st-level Hacker with Logic 2 (10 + 2 × 1). — Hybrid band: Minor — Extension (1st–3rd level): the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Puppet Thread** — Once per round, the Agent holds one Track 1 object the Hacker has breached (a maglock, cam, or light) and can fire that object’s normal function as a puppet.
+
+*Machine handle (dsid): `agent-daemon-minor`.*
+
+### Probe Agent (Advanced)
+
+**Form** advanced · **Stamina** 52 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A recon daemon — Deep Scan’s twin. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 20 + (Hacker’s Logic × Hacker’s level). This template: 52, baked for an 8th-level Hacker with Logic 4 (20 + 4 × 8). — Hybrid band: Advanced — Independent (8th–10th level): the Agent takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Probe Sweep** — The Hacker and allies gain an edge on every Wired recon roll (Scan, Search, Deep Scan) against a target this Agent can see.
+
+*Machine handle (dsid): `agent-probe-advanced`.*
+
+### Probe Agent (Intermediate)
+
+**Form** intermediate · **Stamina** 26 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A recon daemon — Deep Scan’s twin. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 14 + (Hacker’s Logic × Hacker’s level). This template: 26, baked for a 4th-level Hacker with Logic 3 (14 + 3 × 4). — Hybrid band: Intermediate — Commanded (4th–7th level): the Agent acts on its own turn, but only within the Hacker’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Probe Sweep** — Once per round, grant an edge on two recon roll types (Scan, Search, Deep Scan, or breach) made by the Hacker or an ally directing the Agent.
+
+*Machine handle (dsid): `agent-probe-intermediate`.*
+
+### Probe Agent (Minor)
+
+**Form** minor · **Stamina** 10 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A recon daemon — Deep Scan’s twin. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. Distinct from Technomancer sprites: different Actors, different art, deck-side only. — Agent Stamina — Live formula: 8 + (Hacker’s Logic × Hacker’s level). This template: 10, baked for a 1st-level Hacker with Logic 2 (8 + 2 × 1). Compile Agent stamps the owner’s Logic × level automatically. — Hybrid band: Minor — Extension (1st–3rd level): the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed — an AR overlay, not a meatspace flyer.
+
+- **Probe Sweep** — Once per round, grant an edge on one Scan, Search, or Deep Scan made by the Hacker or an ally directing the Agent.
+
+*Machine handle (dsid): `agent-probe-minor`.*
+
+### Spike Agent (Advanced)
+
+**Form** advanced · **Stamina** 58 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+An intrusion daemon — Integrity strike. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 26 + (Hacker’s Logic × Hacker’s level). This template: 58, baked for an 8th-level Hacker with Logic 4 (26 + 4 × 8). — Hybrid band: Advanced — Independent (8th–10th level): the Agent takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Integrity Spike** · *main* · special · damage 0 / 3d10 + @chr / 3d10 + @chr · Distance: a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage.
+
+*Machine handle (dsid): `agent-spike-advanced`.*
+
+### Spike Agent (Intermediate)
+
+**Form** intermediate · **Stamina** 30 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+An intrusion daemon — Integrity strike. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 18 + (Hacker’s Logic × Hacker’s level). This template: 30, baked for a 4th-level Hacker with Logic 3 (18 + 3 × 4). — Hybrid band: Intermediate — Commanded (4th–7th level): the Agent acts on its own turn, but only within the Hacker’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Integrity Spike** · *main* · special · damage 0 / 2d10 + @chr + 1d6 / 2d10 + @chr + 1d6 · Distance: a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage.
+
+*Machine handle (dsid): `agent-spike-intermediate`.*
+
+### Spike Agent (Minor)
+
+**Form** minor · **Stamina** 14 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+An intrusion daemon — Integrity strike. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 12 + (Hacker’s Logic × Hacker’s level). This template: 14, baked for a 1st-level Hacker with Logic 2 (12 + 2 × 1). — Hybrid band: Minor — Extension (1st–3rd level): the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+**Abilities**
+
+- **Integrity Spike** · *main* · special · damage 0 / 2d10 + @chr / 2d10 + @chr · Distance: a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage. Agents acting on the Hacker’s turn never trigger biofeedback.
+
+*Machine handle (dsid): `agent-spike-minor`.*
+
+### Watchdog Agent (Advanced)
+
+**Form** advanced · **Stamina** 54 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A defend daemon — Trace scrub and screen. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 22 + (Hacker’s Logic × Hacker’s level). This template: 54, baked for an 8th-level Hacker with Logic 4 (22 + 4 × 8). — Hybrid band: Advanced — Independent (8th–10th level): the Agent takes its own turn in the round and acts independently. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Watchdog Screen** — Trace Alert increases from the Hacker’s own actions are reduced by 2 (minimum 0). Wired and electronic-warfare attacks against the Agent or any adjacent ally take a double bane.
+
+*Machine handle (dsid): `agent-watchdog-advanced`.*
+
+### Watchdog Agent (Intermediate)
+
+**Form** intermediate · **Stamina** 28 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A defend daemon — Trace scrub and screen. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 16 + (Hacker’s Logic × Hacker’s level). This template: 28, baked for a 4th-level Hacker with Logic 3 (16 + 3 × 4). — Hybrid band: Intermediate — Commanded (4th–7th level): the Agent acts on its own turn, but only within the Hacker’s standing orders. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Watchdog Screen** — Trace Alert increases from the Hacker’s own actions are reduced by 1 (minimum 0). Wired and electronic-warfare attacks against the Agent or one adjacent ally take a bane.
+
+*Machine handle (dsid): `agent-watchdog-intermediate`.*
+
+### Watchdog Agent (Minor)
+
+**Form** minor · **Stamina** 12 · **Speed** 5 (fly) · **Stability** 0 · **Size** 1
+
+A defend daemon — Trace scrub and screen. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. — Agent Stamina — Live formula: 10 + (Hacker’s Logic × Hacker’s level). This template: 12, baked for a 1st-level Hacker with Logic 2 (10 + 2 × 1). — Hybrid band: Minor — Extension (1st–3rd level): the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own. — Speed 5 (fly, hover) is a placeholder token speed.
+
+- **Watchdog Screen** — Trace Alert increases from the Hacker’s own actions are reduced by 1 (minimum 0). Wired and electronic-warfare attacks against the Agent take a bane.
+
+*Machine handle (dsid): `agent-watchdog-minor`.*

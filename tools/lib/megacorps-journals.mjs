@@ -12,19 +12,27 @@ const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-lore:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 
 export const MEGACORPS = [
-  { ticker: "HAL", name: "HALO Ascendant", domain: "Orbital, energy, and life-support", langKey: "HaloAscendant" },
-  { ticker: "FER", name: "Ferrum Dynastic", domain: "Heavy industry, construction, hive superstructure", langKey: "FerrumDynastic" },
-  { ticker: "MER", name: "Meridian Signal", domain: "Wired, telecom, media, information", langKey: "MeridianSignal" },
-  { ticker: "CAD", name: "Caduceus Vitalis", domain: "Biotech, pharma, chrome-flesh interface, medicine", langKey: "CaduceusVitalis" },
-  { ticker: "IRN", name: "Ironclad Martial", domain: "Arms, security, private military, mercenary trade", langKey: "IroncladMartial" },
-  { ticker: "ARG", name: "Argent Exchange", domain: "Finance, currency, scrip-and-nuyen, credit", langKey: "ArgentExchange" },
-  { ticker: "VER", name: "Verdant Provision", domain: "Agriculture, food, water, wasteland reclamation", langKey: "VerdantProvision" },
-  { ticker: "OBS", name: "Obsidian Holdings", domain: "Luxury, entertainment, vice, simsense/experience", langKey: "ObsidianHoldings" },
-  { ticker: "SAN", name: "Sanctum Assurance", domain: "Insurance, data, surveillance, private law", langKey: "SanctumAssurance" },
-  { ticker: "NYX", name: "Nyx Cartel", domain: "Legitimized underworld — tenth seat", langKey: "NyxCartel" },
-  { ticker: "AEQ", name: "Aequitas Mandate", domain: "Council justice, investigation, and security — sells only to the Council", langKey: "AequitasMandate" },
-  { ticker: "LAZ", name: "Lazarus Extract", domain: "Trauma rescue, hot extraction, body recovery", langKey: "LazarusExtract" },
+  { ticker: "HAL", name: "HALO Ascendant", domain: "Orbital, energy, and life-support", langKey: "HaloAscendant" , arms: "**Seraph Armaments** — white-polymer “humane” peacekeeper weapons (sister firm to Aureole Security). It markets mercy and quietly sells lethality. Signature: Seraph Mercy, Seraph Halcyon, Seraph Stilling."},
+  { ticker: "FER", name: "Ferrum Dynastic", domain: "Heavy industry, construction, hive superstructure", langKey: "FerrumDynastic" , arms: "**Ferrum Forgeworks** and **Deepworks Excavation** — old-money foundries whose demolition tools became weapons; Ferrum denies it has an arms division at all. Signature: Ferrum Rivet, Ferrum Mason .60, Ferrum Keystone, Deepworks Roughneck."},
+  { ticker: "MER", name: "Meridian Signal", domain: "Wired, telecom, media, information", langKey: "MeridianSignal" , arms: "**Meridian Blacklight** (via Blacklight Systems) — networked smart guns that upload every shot. Signature: Meridian Vector, the SmartSystem mod, the Nullfield and Airburst grenades."},
+  { ticker: "CAD", name: "Caduceus Vitalis", domain: "Biotech, pharma, chrome-flesh interface, medicine", langKey: "CaduceusVitalis" , arms: "**Lancet Biodefense** and **Grafthouse** — darts, gas and fire sold as quarantine tools, and cyber-weapons grafted into people. Signature: Lancet Hushdart, Lancet Cauterizer, Grafthouse Talon."},
+  { ticker: "IRN", name: "Ironclad Martial", domain: "Arms, security, private military, mercenary trade", langKey: "IroncladMartial" , arms: "**Iron Writ Arms (IW)** — plain military workhorses sold to anyone with a contract. IW hates that Nyx copies its designs. Signature: IW Journeyman, IW Bastion, IW Barrage-12, IW Absolution."},
+  { ticker: "ARG", name: "Argent Exchange", domain: "Finance, currency, scrip-and-nuyen, credit", langKey: "ArgentExchange" , arms: "**Argent Mint Arms** — luxury pieces stamped with the Exchange mint mark. Debt collectors carry them and every serial number is a bond. Signature: Argent Sovereign .50, Argent Mint Persuader."},
+  { ticker: "VER", name: "Verdant Provision", domain: "Agriculture, food, water, wasteland reclamation", langKey: "VerdantProvision" , arms: "**Greenline Outfitters** — frontier bows, rifles and blades for the rangers who cull Incursion beasts. Signature: Greenline Longwatch, Greenline Thornback, Greenline Bushmaster."},
+  { ticker: "OBS", name: "Obsidian Holdings", domain: "Luxury, entertainment, vice, simsense/experience", langKey: "ObsidianHoldings" , arms: "**Velvet Arms** — elegant concealables, presented as gifts in the Velvet Room. Signature: Velvet Cufflink, Velvet Nocturne, Velvet Murmur."},
+  { ticker: "SAN", name: "Sanctum Assurance", domain: "Insurance, data, surveillance, private law", langKey: "SanctumAssurance" , arms: "**Grey Ledger** — “compliance gear”: nets, restraints, and a suppressed rifle that erases a line item. Signature: Grey Ledger Redaction, Grey Ledger Lien, Grey Ledger Snarecast."},
+  { ticker: "NYX", name: "Nyx Cartel", domain: "Legitimized underworld — tenth seat", langKey: "NyxCartel" , arms: "**Nyx Undermarket** — cheap, rugged Sinks guns, many of them unlicensed copies. Signature: Nyx Wasp-9, Nyx Rattletrap (an unlicensed IW copy), Nyx Doorknocker, Nyx Grinder."},
+  { ticker: "AEQ", name: "Aequitas Mandate", domain: "Council justice, investigation, and security — sells only to the Council", langKey: "AequitasMandate" , arms: "**Seal Warden Armory** — warrant-service shotguns and batons named after courtroom words, without irony. Signature: Seal Warden Gavel, Seal Warden Verdict, Seal Warden Prod."},
+  { ticker: "LAZ", name: "Lazarus Extract", domain: "Trauma rescue, hot extraction, body recovery", langKey: "LazarusExtract" , arms: "**White Door Tactical** — extraction kit: compact carbines, smoke, everything sized to ride beside a med-bag. Signature: White Door Lifeline, the Screening Canister."},
 ];
+
+/**
+ * 0.3.134 (C) — the arms subsidiaries. Every one of the Twelve that builds weapons now says so on
+ * its own ticker card, and every card points at the Arms Makers of the Reach journal (L9), which is
+ * where the rivalries and the full signature lists live. Kestrel Aerodyne has no card here on
+ * purpose: Kestrel Dynamics is the seatless thirteenth (L1), not one of the Twelve.
+ */
+const ARMS_MAKERS_ENTRY = stableId("L9-arms-makers");
 
 export const MEGACORP_FOLDER = {
   key: "Megacorps",
@@ -57,12 +65,21 @@ function overviewMarkdown(corp) {
       "",
       `*${alt} — brand mark*`,
     ];
+  const armsBlock = corp.arms
+    ? [
+      "",
+      `**Arms division:** ${corp.arms}`,
+      "",
+      `Full house profile, rivalries and street names: @UUID[Compendium.${MODULE_ID}.lore.JournalEntry.${ARMS_MAKERS_ENTRY}]{Arms Makers of the Reach}.`,
+    ]
+    : [];
   return [
     ...art,
     "",
     `**${corp.ticker}** — ${corp.name}`,
     "",
     `**Domain:** ${corp.domain}`,
+    ...armsBlock,
     "",
     "Ticker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
   ].join("\n");

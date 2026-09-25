@@ -1181,6 +1181,25 @@ The Machine sells the sky, the flesh, and the harvest — and one power sells sa
 **Run hook — "The Recanting."** A licensed Concord confessor hires the crew for a mercy job: find a runaway — a young street-prophet whose "delusions of the Light" are frightening her family — and bring her in for "pastoral care" before she hurts herself. The crew discovers the truth by degrees: the girl's Conviction is real (Ch. 1, the Light moving through the faithful), she is one of the genuine servants the Concord exists to silence, and "pastoral care" means the Reliquary Deep and a quiet unmaking. The job flips — the crew must decide whether to deliver a true daughter of the Light to a church that serves the Dark, or cross the most beloved, most powerful, most trusted institution in the hive on the word of a frightened girl no one will believe. Completes the war's spiritual face: the other corporate hooks show the Dark endured, denied, prescribed, sold, and watched — here it is worshipped, in the Light's own stolen name.
 
 
+## Arms Makers of the Reach
+
+Every gun in the Reach was built by a subsidiary of one of the Twelve, and the maker's name tells you who is liable when it turns up somewhere embarrassing. Street names survive the paperwork: ask for a Popper and you will be handed a **Ferrum Rivet**, and everyone in the room will know what you meant. The full house profiles, rivalries and the street-name table are in **Arms Makers of the Reach** (L9).
+
+- **Iron Writ Arms (IW)** — Ironclad Martial's arms division; the abbreviation is what appears on the gun. Plain military workhorses sold to anyone with a signed contract, and a standing grudge that Nyx copies every one of them. *IW Journeyman, IW Bastion, IW Barrage-12, IW Absolution.*
+- **Seraph Armaments** — HALO Ascendant, sister firm to Aureole Security. White-polymer "humane" peacekeeper weapons; markets mercy, quietly sells lethality. *Seraph Mercy, Seraph Halcyon, Seraph Stilling.*
+- **Argent Mint Arms** — Argent Exchange. Luxury pieces stamped with the Exchange mint mark; debt collectors carry them, and every serial number is a bond. *Argent Sovereign .50, Argent Mint Persuader.*
+- **Ferrum Forgeworks** and **Deepworks Excavation** — Ferrum Dynastic. Old-money foundries whose demolition tools became weapons; Ferrum denies it. *Ferrum Rivet, Ferrum Mason .60, Ferrum Keystone, Deepworks Roughneck.*
+- **Meridian Blacklight** — Meridian Signal, via Blacklight Systems. Networked smart guns that upload every shot. *Meridian Vector, the SmartSystem mod.*
+- **Lancet Biodefense** and **Grafthouse** — Caduceus Vitalis. Darts, gas and fire sold as quarantine tools; grafted cyber-weapons. *Lancet Hushdart, Lancet Cauterizer, Grafthouse Talon.*
+- **Greenline Outfitters** — Verdant Provision. Frontier bows, rifles and blades for the rangers culling Incursion beasts. *Greenline Longwatch, Greenline Thornback.*
+- **Velvet Arms** — Obsidian Holdings. Elegant concealables, handed out as gifts in the Velvet Room. *Velvet Cufflink, Velvet Nocturne, Velvet Murmur.*
+- **Grey Ledger** — Sanctum Assurance. "Compliance" gear, nets, restraints, and a suppressed rifle that erases a line item. *Grey Ledger Redaction, Grey Ledger Lien.*
+- **Seal Warden Armory** — Aequitas Mandate. Warrant-service shotguns and batons, courtroom names without irony. *Seal Warden Gavel, Seal Warden Verdict.*
+- **White Door Tactical** — Lazarus Extract. Extraction kit: compact carbines, smoke, gear sized to ride beside a med-bag. *White Door Lifeline.*
+- **Nyx Undermarket** — Nyx Cartel. Cheap, rugged Sinks guns, many of them unlicensed copies. *Nyx Wasp-9, Nyx Rattletrap, Nyx Doorknocker, Nyx Grinder.*
+- **Kestrel Aerodyne** — Kestrel Dynamics, the seatless thirteenth (above). Missiles and drone pods, and nothing you can hold. *Kestrel Talon, Kestrel Swarmcaster, Kestrel Guided Rack.*
+
+
 ## The Wired — A Thin Place
 
 the lit world. Hackers breach it (Bandwidth), Riggers/Wrenches command it, and Technomancers commune with it through living Resonance, conjuring sprites — “living code-spirits” — out of the net itself. This chapter gives that mechanical language its cosmological truth. The Wired is unusually thin The Wired is firmly part of the Ground (Ch. 2) — it is built of mortal hardware, cable, and orbital relay, not a separate plane. But it is the thinnest place in the whole prime world. Where a haunted battlefield or a corrupted zone is a local thin spot, the Wired is a thin place that spans the entire lit world at once — a single, planet-wide membrane worn dangerously fine. The reason is the locked cosmology itself. Creation is the Signal — the Word, an ongoing transmission (Ch. 1–2). The Wired is the first thing mortals ever built that behaves like the Signal: a realm made of pure transmission, information, and pattern rather than matter. In building a world-spanning lattice of pure signal, the peoples of the Ground unknowingly built a structural rhyme with the higher realms — and a rhyme resonates. The membrane between the Wired and the rest of creation is thin precisely because the Wired is, in its very nature, an echo of the Signal. How it echoes the Signal

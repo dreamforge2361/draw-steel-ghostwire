@@ -7,39 +7,11 @@
   "categories": [],
   "pages": [
     {
-      "_id": "VY8L1tRZAVHYShH0",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.VY8L1tRZAVHYShH0",
-      "name": "Overview",
-      "type": "text",
-      "sort": 100000,
-      "title": {
-        "show": true,
-        "level": 1
-      },
-      "image": {},
-      "video": {
-        "controls": true,
-        "volume": 0.5
-      },
-      "src": null,
-      "system": {},
-      "text": {
-        "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/01-operator.md`*",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/01-operator.md</code></em></p>"
-      },
-      "category": null,
-      "ownership": {
-        "default": -1
-      },
-      "flags": {}
-    },
-    {
-      "_id": "xbdrfpRznyG2hB7G",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.xbdrfpRznyG2hB7G",
+      "_id": "k0g9DtB2Zwl9HSFv",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.k0g9DtB2Zwl9HSFv",
       "name": "Class Chassis",
       "type": "text",
-      "sort": 200000,
+      "sort": 100000,
       "title": {
         "show": true,
         "level": 1
@@ -63,11 +35,11 @@
       "flags": {}
     },
     {
-      "_id": "6NuDTZcwG7NXxohS",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.6NuDTZcwG7NXxohS",
+      "_id": "TWEEX1WTeqwzQDKi",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.TWEEX1WTeqwzQDKi",
       "name": "Adrenaline -- Your Heroic Resource",
       "type": "text",
-      "sort": 300000,
+      "sort": 200000,
       "title": {
         "show": true,
         "level": 1
@@ -91,11 +63,11 @@
       "flags": {}
     },
     {
-      "_id": "uYwwDDA1BQ1L4coT",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.uYwwDDA1BQ1L4coT",
+      "_id": "05ZYlyCHjUdCFR0q",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.05ZYlyCHjUdCFR0q",
       "name": "Signature Abilities",
       "type": "text",
-      "sort": 400000,
+      "sort": 300000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +91,11 @@
       "flags": {}
     },
     {
-      "_id": "yReETVYw0fNiCcEE",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.yReETVYw0fNiCcEE",
+      "_id": "BUwGjbwOyZV2SLK3",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.BUwGjbwOyZV2SLK3",
       "name": "Heroic Abilities — Cost Bands 1 Through 11",
       "type": "text",
-      "sort": 500000,
+      "sort": 400000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +119,11 @@
       "flags": {}
     },
     {
-      "_id": "tTTh3uEK7qE9ruv4",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.tTTh3uEK7qE9ruv4",
+      "_id": "BSJ5JeshmENWsaD5",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.BSJ5JeshmENWsaD5",
       "name": "Origin Subclasses",
       "type": "text",
-      "sort": 600000,
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "IYKFg8PeKKgtYS70",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.IYKFg8PeKKgtYS70",
+      "_id": "uHiHF72hOtQPQnJX",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.uHiHF72hOtQPQnJX",
       "name": "Kits (Your Loadout)",
       "type": "text",
-      "sort": 700000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "0z3JXZOO9pMQ6CDK",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.0z3JXZOO9pMQ6CDK",
+      "_id": "Y7zDikaqO5yvAyC8",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.Y7zDikaqO5yvAyC8",
       "name": "Level 1-10 Progression Table",
       "type": "text",
-      "sort": 800000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "x5FskwPy6oQ3MnTq",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.x5FskwPy6oQ3MnTq",
+      "_id": "twNdob100lReulHW",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.twNdob100lReulHW",
       "name": "Core Class Features (Non-Subclass)",
       "type": "text",
-      "sort": 900000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "28k8W9j8dueE2eVv",
-      "_key": "!journal.pages!NGpKoWZRQf24bwR4.28k8W9j8dueE2eVv",
+      "_id": "OLANHIHSZi7rotsj",
+      "_key": "!journal.pages!NGpKoWZRQf24bwR4.OLANHIHSZi7rotsj",
       "name": "Chrome an Operator Runs",
       "type": "text",
-      "sort": 1000000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -277,8 +249,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome & Body Integrity}).",
-        "content": "<p>Body Integrity (chrome capacity) starts at <strong>20</strong>, as for every living non-Cyborg hero (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome &amp; Body Integrity}).</p>"
+        "markdown": "Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (**Chrome & Body Integrity**, `09`).",
+        "content": "<p>Body Integrity (chrome capacity) starts at <strong>20</strong>, as for every living non-Cyborg hero (<strong>Chrome & Body Integrity</strong>, <code>09</code>).</p>"
       },
       "category": null,
       "ownership": {

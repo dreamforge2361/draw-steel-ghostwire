@@ -150,7 +150,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Gel/Stick-n-Shock / Less-Lethal / capacitive stun rounds | T4 | 4 | 350 | Deals band's glancing damage but applies Dazed on standard-or-better hit; non-lethal takedown ammo. | — | Consumable |
 | Frag Grenade / Fragmentation / prefragmented dispersal charge | T3 | 3 | 1,300 | Thrown to Short; [Heavy]-band burst in a small area. | — | Consumable, Heavy |
 | Flash-Bang / Distraction Device / photoacoustic stun charge | T3 | 3 | 1,200 | Thrown to Short; no damage, applies Dazed + Frightened to all in area (save-ends). | — | Consumable |
-| Smoke / Screening Canister / aerosol obscurant | T5 | 5 | 200 | Thrown to Short; creates concealment (bane on ranged through it) — negated by thermal optics. | — | Consumable |
+| Smoke / White Door Screening Canister / aerosol obscurant | T5 | 5 | 200 | Thrown to Short; creates concealment (bane on ranged through it) — negated by thermal optics. | — | Consumable |
 
 ### 1G — Lifestyle Goods & Services
 
@@ -203,7 +203,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Item (slang / corp / sci) | Tier | Avail | Price ¥ | Effect | Mod Slots | Tags |
 |---|---|---|---|---|---|---|
 | Secure Threads / Executive Line / ballistic-weave streetwear | T5 | 5 | 250 | Reads as ordinary clothing; edge to conceal that you're armored. | 1 | Concealable |
-| Armored Jacket / Defiance Line / aramid-panel outerwear | T4 | 4 | 900 | The classic armored jacket — rugged, unremarkable. | 1 | Concealable |
+| Armored Jacket / White Door Line / aramid-panel outerwear | T4 | 4 | 900 | The classic armored jacket — rugged, unremarkable. | 1 | Concealable |
 | Synth-Leather Duster / Nightcoat / lined tactical longcoat | T3 | 3 | 3,500 | Room to hide a longarm or holdout; edge to conceal a Concealable weapon on your person. | 2 | Concealable |
 | Second-Skin / Chameleon Weave / adaptive-camo bodysuit | T2 | 2 | 15,000 | Edge on Stealth in matching environments (thermoptic-lite). | 3 | Concealable, Stealth |
 | Whisperweave / Diplomat's Skin / milspec concealed liner | T1 | 1 | 45,000 | Undetectable by pat-down or standard scanner; edge to defeat weapon/armor detection. | 4 | Concealable, Stealth |
@@ -292,43 +292,43 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
-| Sleeve-Gun / Streek Vanish / holdout pistol | T5 | 5 | 150 | 3 kinetic | Short | 1 | [Light] Concealable |
-| Popper / Ares Viper / compact pistol | T5 | 5 | 250 | 4 kinetic | Short | 1 | [Light] Concealable |
-| Slugger / Ares Bulldog / heavy revolver | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Loud |
-| Workhorse / Ceska Duty / service pistol | T4 | 4 | 500 | 4 kinetic | Short | 2 | [Light] |
-| Hand-Cannon / Ruger MaxForce / heavy pistol | T4 | 4 | 900 | 5 kinetic | Short | 2 | [Light] Loud |
-| Zapper / Defiance Shock / capacitive pistol | T4 | 4 | 800 | 4 electrical | Short | 2 | [Light] Non-lethal-capable |
-| Buzz-Gun / Ares Stutter / machine pistol | T3 | 3 | 1,800 | 4 kinetic | Short | 3 | [Light] Auto |
-| Chatter / SternMeyer Whisper / suppressed SMG | T3 | 3 | 2,800 | 5 kinetic | Medium | 3 | [Light] Auto Quiet |
-| Streetsweeper SMG / Ares Executive / milspec SMG | T2 | 2 | 7,500 | 5 kinetic | Medium | 4 | [Light] Auto |
-| Ghost Pistol / Fichetti Null / caseless prototype pistol | T1 | 1 | 24,000 | 5 kinetic | Short | 5 | [Light] Concealable Quiet Smart-ready |
+| Velvet Cufflink / Velvet Arms / holdout pistol | T5 | 5 | 150 | 3 kinetic | Short | 1 | [Light] Concealable |
+| Ferrum Rivet / Ferrum Forgeworks / compact pistol | T5 | 5 | 250 | 4 kinetic | Short | 1 | [Light] Concealable |
+| Seal Warden Gavel / Seal Warden Armory / heavy revolver | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Loud |
+| IW Journeyman / Iron Writ Arms / service pistol | T4 | 4 | 500 | 4 kinetic | Short | 2 | [Light] |
+| Argent Sovereign .50 / Argent Mint Arms / heavy pistol | T4 | 4 | 900 | 5 kinetic | Short | 2 | [Light] Loud |
+| Seraph Mercy / Seraph Armaments / capacitive pistol | T4 | 4 | 800 | 4 electrical | Short | 2 | [Light] Non-lethal-capable |
+| Nyx Wasp-9 / Nyx Undermarket / machine pistol | T3 | 3 | 1,800 | 4 kinetic | Short | 3 | [Light] Auto |
+| Velvet Murmur / Velvet Arms / suppressed SMG | T3 | 3 | 2,800 | 5 kinetic | Medium | 3 | [Light] Auto Quiet |
+| Seraph Halcyon / Seraph Armaments / milspec SMG | T2 | 2 | 7,500 | 5 kinetic | Medium | 4 | [Light] Auto |
+| Velvet Nocturne / Velvet Arms / caseless prototype pistol | T1 | 1 | 24,000 | 5 kinetic | Short | 5 | [Light] Concealable Quiet Smart-ready |
 
 ### 3B — Longarms (rifles, carbines, shotguns, marksman rifles)
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
-| Boomstick / Remington Roomsweeper / pump shotgun | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Two-handed Spread |
-| Pipe Rifle / Streek Longpipe / single-shot marksman rifle | T5 | 5 | 300 | 6 kinetic | Long | 1 | [Medium] Two-handed Loud |
-| Brush-Gun / Ruger Ranger / hunting carbine | T4 | 4 | 700 | 6 kinetic | Medium | 2 | [Medium] Two-handed |
-| Chopper / AK-Kalash Endura / assault rifle | T4 | 4 | 1,100 | 6 kinetic | Medium | 2 | [Medium] Two-handed Auto |
-| Streetline Carbine / Ares Alpha-Lite / bullpup carbine | T3 | 3 | 2,400 | 6 kinetic | Medium | 3 | [Medium] Two-handed Auto |
-| Autoshotgun / Enfield Sweeper / combat shotgun | T3 | 3 | 3,200 | 7 kinetic | Short | 3 | [Medium] Two-handed Spread Auto |
-| Longshot / Ranger Arms Reach / bolt marksman rifle | T3 | 3 | 4,500 | 7 AP | Long | 3 | [Medium] Two-handed |
-| Milspec Battle Rifle / Ares Alpha / assault platform | T2 | 2 | 9,000 | 7 kinetic | Medium | 4 | [Medium] Two-handed Auto |
-| Whisper Rifle / SternMeyer Silent / suppressed DMR | T2 | 2 | 12,000 | 7 AP | Long | 4 | [Medium] Two-handed Quiet |
-| Apex Rifle / Fichetti Prototype / caseless smart-rifle | T1 | 1 | 30,000 | 8 AP | Long | 5 | [Medium] Two-handed Auto Quiet Smart-ready |
+| Nyx Doorknocker / Nyx Undermarket / pump shotgun | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Two-handed Spread |
+| Nyx Gutterline / Nyx Undermarket / single-shot marksman rifle | T5 | 5 | 300 | 6 kinetic | Long | 1 | [Medium] Two-handed Loud |
+| Greenline Thornback / Greenline Outfitters / hunting carbine | T4 | 4 | 700 | 6 kinetic | Medium | 2 | [Medium] Two-handed |
+| Nyx Rattletrap / Nyx Undermarket / assault rifle | T4 | 4 | 1,100 | 6 kinetic | Medium | 2 | [Medium] Two-handed Auto |
+| White Door Lifeline / White Door Tactical / bullpup carbine | T3 | 3 | 2,400 | 6 kinetic | Medium | 3 | [Medium] Two-handed Auto |
+| Seal Warden Verdict / Seal Warden Armory / combat shotgun | T3 | 3 | 3,200 | 7 kinetic | Short | 3 | [Medium] Two-handed Spread Auto |
+| Greenline Longwatch / Greenline Outfitters / bolt marksman rifle | T3 | 3 | 4,500 | 7 AP | Long | 3 | [Medium] Two-handed |
+| IW Bastion / Iron Writ Arms / assault platform | T2 | 2 | 9,000 | 7 kinetic | Medium | 4 | [Medium] Two-handed Auto |
+| Grey Ledger Redaction / Grey Ledger / suppressed DMR | T2 | 2 | 12,000 | 7 AP | Long | 4 | [Medium] Two-handed Quiet |
+| Meridian Vector / Meridian Blacklight / caseless smart-rifle | T1 | 1 | 30,000 | 8 AP | Long | 5 | [Medium] Two-handed Auto Quiet Smart-ready |
 
 ### 3C — Heavy Weapons (LMGs, cannons, launchers, anti-vehicle)
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
-| Chatterbox / Ingram Valiant / light machine gun | T3 | 3 | 4,800 | 9 kinetic | Medium | 3 | [Heavy] Two-handed Auto Loud |
-| Wallbreaker / Ares HMG / heavy machine gun | T2 | 2 | 11,000 | 9 AP | Long | 4 | [Heavy] Mounted Auto Loud |
-| Grease-Gun / Ares Thunderstruck / grenade launcher | T2 | 2 | 14,000 | 9 fire | Medium | 4 | [Heavy] Two-handed Blast |
-| Hand-of-God / IRN Striker / anti-materiel rifle | T2 | 2 | 18,000 | 10 AP | Extreme | 4 | [Heavy] Two-handed |
-| Dragon's Breath / Shiawase Salamander / man-portable flamer | T2 | 2 | 15,000 | 9 fire | Short | 4 | [Heavy] Two-handed Blast |
-| Tank-Cracker / Ares Antioch / disposable rocket launcher | T1 | 1 | 22,000 | 14 fire | Long | — | [Anti-veh] Two-handed Blast Consumable |
-| Siege Missile / Ares Guided / smart anti-vehicle launcher | T1 | 1 | 45,000 | 14 AP | Extreme | 5 | [Anti-veh] Mounted Smart-ready |
+| IW Barrage-12 / Iron Writ Arms / light machine gun | T3 | 3 | 4,800 | 9 kinetic | Medium | 3 | [Heavy] Two-handed Auto Loud |
+| Ferrum Mason .60 / Ferrum Forgeworks / heavy machine gun | T2 | 2 | 11,000 | 9 AP | Long | 4 | [Heavy] Mounted Auto Loud |
+| Nyx Grinder / Nyx Undermarket / grenade launcher | T2 | 2 | 14,000 | 9 fire | Medium | 4 | [Heavy] Two-handed Blast |
+| IW Absolution / Iron Writ Arms / anti-materiel rifle | T2 | 2 | 18,000 | 10 AP | Extreme | 4 | [Heavy] Two-handed |
+| Lancet Cauterizer / Lancet Biodefense / man-portable flamer | T2 | 2 | 15,000 | 9 fire | Short | 4 | [Heavy] Two-handed Blast |
+| Ferrum Keystone / Ferrum Forgeworks / disposable rocket launcher | T1 | 1 | 22,000 | 14 fire | Long | — | [Anti-veh] Two-handed Blast Consumable |
+| Kestrel Talon / Kestrel Aerodyne / smart anti-vehicle launcher | T1 | 1 | 45,000 | 14 AP | Extreme | 5 | [Anti-veh] Mounted Smart-ready |
 
 *(Mounted weapons want a bipod/tripod, drone hardpoint, or vehicle mount. Blast weapons hit an area. Anti-veh damage interacts with vehicle Scale bands and called-shot softening.)*
 
@@ -338,19 +338,19 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Mod Slots | Tags |
 |---|---|---|---|---|---|---|
-| Knuckles / Ares Persuader / impact baton | T5 | 5 | 80 | 3 kinetic | 1 | [Light] Concealable Non-lethal-capable |
-| Street-Blade / Cavalier Combat / combat knife | T5 | 5 | 120 | 4 kinetic | 1 | [Light] Concealable |
-| Scrap Cleaver / Cavalier Warblade / forged broad blade | T5 | 5 | 280 | 5 kinetic | 1 | [Medium] |
-| Chain Lash / Fichetti Coilwork / weighted chain whip | T5 | 5 | 200 | 5 kinetic | 1 | [Medium] Concealable |
-| Scaffold Pike / Cavalier Longstaff / rebar pike-staff | T5 | 5 | 250 | 6 kinetic | 1 | [Medium] Two-handed |
-| Slab-Hammer / Ares Roughneck / demolition maul | T5 | 5 | 300 | 8 kinetic | 1 | [Heavy] Two-handed |
-| Shock-Stick / Defiance Prod / stun baton | T4 | 4 | 450 | 4 electrical | 2 | [Light] Non-lethal-capable |
-| Machete / Ares Bushmaster / survival blade | T4 | 4 | 300 | 5 kinetic | 2 | [Light] |
-| Monoblade / Renraku Edge / monofilament sword | T3 | 3 | 3,000 | 6 AP | 3 | [Medium] |
-| Warhammer / FER Crusher / powered maul | T2 | 2 | 6,500 | 9 kinetic | 4 | [Heavy] Two-handed |
-| Cyber-Spur / Renraku Talon / implant blade | T2 | 2 | 8,000 | 6 AP | 4 | [Medium] Concealable Implant |
-| Monowhip / Fichetti Razorline / retractable monofilament | T1 | 1 | 20,000 | 7 AP | 5 | [Medium] Concealable Dangerous |
-| Powered Greatsword / Ares Paladin / servo-blade | T1 | 1 | 26,000 | 10 AP | 5 | [Heavy] Two-handed |
+| Knuckles / Argent Mint Persuader / impact baton | T5 | 5 | 80 | 3 kinetic | 1 | [Light] Concealable Non-lethal-capable |
+| Street-Blade / IW Combat / combat knife | T5 | 5 | 120 | 4 kinetic | 1 | [Light] Concealable |
+| Scrap Cleaver / Nyx Warblade / forged broad blade | T5 | 5 | 280 | 5 kinetic | 1 | [Medium] |
+| Chain Lash / Nyx Coilwork / weighted chain whip | T5 | 5 | 200 | 5 kinetic | 1 | [Medium] Concealable |
+| Scaffold Pike / Nyx Longstaff / rebar pike-staff | T5 | 5 | 250 | 6 kinetic | 1 | [Medium] Two-handed |
+| Slab-Hammer / Deepworks Roughneck / demolition maul | T5 | 5 | 300 | 8 kinetic | 1 | [Heavy] Two-handed |
+| Shock-Stick / Seal Warden Prod / stun baton | T4 | 4 | 450 | 4 electrical | 2 | [Light] Non-lethal-capable |
+| Machete / Greenline Bushmaster / survival blade | T4 | 4 | 300 | 5 kinetic | 2 | [Light] |
+| Monoblade / Velvet Arms Edge / monofilament sword | T3 | 3 | 3,000 | 6 AP | 3 | [Medium] |
+| Warhammer / Ferrum Forgeworks Crusher / powered maul | T2 | 2 | 6,500 | 9 kinetic | 4 | [Heavy] Two-handed |
+| Cyber-Spur / Grafthouse Talon / implant blade | T2 | 2 | 8,000 | 6 AP | 4 | [Medium] Concealable Implant |
+| Monowhip / Velvet Arms Razorline / retractable monofilament | T1 | 1 | 20,000 | 7 AP | 5 | [Medium] Concealable Dangerous |
+| Powered Greatsword / IW Paladin / servo-blade | T1 | 1 | 26,000 | 10 AP | 5 | [Heavy] Two-handed |
 
 *(Implant melee is installed via the Chrome chapter — Body Integrity cost, not just nuyen — and cannot be disarmed. Dangerous weapons risk the wielder on a fumble.)*
 
@@ -362,14 +362,14 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Tags |
 |---|---|---|---|---|---|---|
-| Throwing Knife / Cavalier Fan / balanced blade | T5 | 5 | 60 | 3 kinetic | Short | [Light] Consumable-recoverable |
-| Frag / Ares Splinter / fragmentation grenade | T4 | 4 | 200 | 6 kinetic | Short | [Medium] Blast Consumable |
-| Firestarter / Shiawase Ember / incendiary grenade | T4 | 4 | 250 | 6 fire | Short | [Medium] Blast Consumable |
-| Gasser / IRN Choke / gas grenade | T4 | 4 | 220 | 4 toxin | Short | [Light] Blast Consumable |
-| Flash-Bang / Lone Star Dazzle / stun grenade | T4 | 4 | 180 | 4 electrical | Short | [Light] Blast Consumable Non-lethal-capable |
-| Thermite Charge / Ares Meltdown / breaching charge | T3 | 3 | 900 | 9 fire | Adjacent | [Heavy] Blast Consumable |
-| Shaped Charge / Ares Demo / directional breaching charge | T2 | 2 | 3,500 | 9 AP | Adjacent | [Heavy] Blast Consumable |
-| Smart-Grenade / Ares Airburst / programmable airburst grenade | T1 | 1 | 6,000 | 6 kinetic | Medium | [Medium] Blast Consumable Smart-ready |
+| Throwing Knife / Velvet Arms Fan / balanced blade | T5 | 5 | 60 | 3 kinetic | Short | [Light] Consumable-recoverable |
+| Frag / IW Splinter / fragmentation grenade | T4 | 4 | 200 | 6 kinetic | Short | [Medium] Blast Consumable |
+| Firestarter / Lancet Ember / incendiary grenade | T4 | 4 | 250 | 6 fire | Short | [Medium] Blast Consumable |
+| Gasser / Lancet Choke / gas grenade | T4 | 4 | 220 | 4 toxin | Short | [Light] Blast Consumable |
+| Flash-Bang / Seal Warden Dazzle / stun grenade | T4 | 4 | 180 | 4 electrical | Short | [Light] Blast Consumable Non-lethal-capable |
+| Thermite Charge / Deepworks Meltdown / breaching charge | T3 | 3 | 900 | 9 fire | Adjacent | [Heavy] Blast Consumable |
+| Shaped Charge / Deepworks Demo / directional breaching charge | T2 | 2 | 3,500 | 9 AP | Adjacent | [Heavy] Blast Consumable |
+| Smart-Grenade / Meridian Blacklight Airburst / programmable airburst grenade | T1 | 1 | 6,000 | 6 kinetic | Medium | [Medium] Blast Consumable Smart-ready |
 
 ### 3F — Bows, Crossbows & Exotic
 
@@ -377,15 +377,15 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
-| Street-Bow / Cavalier Silent / recurve bow | T5 | 5 | 200 | 4 kinetic | Medium | 1 | [Light] Two-handed Quiet |
-| Scrap-Bow / Reclaim Draw / shop-built composite longbow | T5 | 5 | 300 | 5 kinetic | Medium | 1 | [Medium] Two-handed Quiet |
-| Weighted Net / Lone Star Snarecast / hand-thrown capture net | T5 | 5 | 120 | — | Short | 1 | [Light] Restraining Non-lethal-capable |
-| Hand-Crossbow / Fichetti Sting / pistol crossbow | T4 | 4 | 400 | 4 kinetic | Short | 2 | [Light] Concealable Quiet |
-| Hunting Bow / Ranger Arms Draw / compound bow | T3 | 3 | 1,500 | 6 kinetic | Long | 3 | [Medium] Two-handed Quiet |
-| Heavy Crossbow / NYX Bolt / tactical crossbow | T3 | 3 | 2,200 | 6 AP | Medium | 3 | [Medium] Two-handed Quiet |
-| Dart-Gun / Shiawase Whisper / injection dart pistol | T3 | 3 | 2,000 | 3 toxin | Short | 3 | [Light] Concealable Quiet |
-| Net-Gun / Lone Star Snare / capture launcher | T4 | 4 | 900 | — | Short | 2 | [Light] Restraining Non-lethal-capable |
-| Gauss Needler / Renraku Railspike / coilgun prototype | T1 | 1 | 28,000 | 6 AP | Long | 5 | [Medium] Quiet Smart-ready |
+| Street-Bow / Greenline Silent / recurve bow | T5 | 5 | 200 | 4 kinetic | Medium | 1 | [Light] Two-handed Quiet |
+| Scrap-Bow / Nyx Reclaim Draw / shop-built composite longbow | T5 | 5 | 300 | 5 kinetic | Medium | 1 | [Medium] Two-handed Quiet |
+| Weighted Net / Grey Ledger Snarecast / hand-thrown capture net | T5 | 5 | 120 | — | Short | 1 | [Light] Restraining Non-lethal-capable |
+| Hand-Crossbow / Greenline Sting / pistol crossbow | T4 | 4 | 400 | 4 kinetic | Short | 2 | [Light] Concealable Quiet |
+| Hunting Bow / Greenline Draw / compound bow | T3 | 3 | 1,500 | 6 kinetic | Long | 3 | [Medium] Two-handed Quiet |
+| Heavy Crossbow / Nyx Bolt / tactical crossbow | T3 | 3 | 2,200 | 6 AP | Medium | 3 | [Medium] Two-handed Quiet |
+| Lancet Hushdart / Lancet Biodefense / injection dart pistol | T3 | 3 | 2,000 | 3 toxin | Short | 3 | [Light] Concealable Quiet |
+| Grey Ledger Lien / Grey Ledger / capture launcher | T4 | 4 | 900 | — | Short | 2 | [Light] Restraining Non-lethal-capable |
+| Seraph Stilling / Seraph Armaments / coilgun prototype | T1 | 1 | 28,000 | 6 AP | Long | 5 | [Medium] Quiet Smart-ready |
 
 ### 3G — Weapon Mods (core set)
 
@@ -393,14 +393,14 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Mod *(slang / corp / sci)* | Slot Cost | Cost ¥ | Effect | §Craft Skill | Tags |
 |---|---|---|---|---|---|
-| Smartlink / Ares SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Electronics | Wired Smart |
-| Suppressor / SternMeyer Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Repair | Quiet |
-| Recoil Comp / Ares Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Repair | — |
-| Extended Mag / Ares Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Repair | — |
+| Smartlink / Meridian Blacklight SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Electronics | Wired Smart |
+| Suppressor / Grey Ledger Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Repair | Quiet |
+| Recoil Comp / IW Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Repair | — |
+| Extended Mag / IW Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Repair | — |
 | Smart-Scope / Zeiss Hawkeye / optical smart-sight | 1 | 600 | Improves optimal range band by one step; enables Smart on non-datajack users. | Electronics | Smart |
-| Gas-Seal Kit / Shiawase Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Repair | Sealed |
-| Underbarrel Mount / Ares Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Repair | — |
-| Personalized Grip / Fichetti Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Electronics | Wired |
+| Gas-Seal Kit / Deepworks Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Repair | Sealed |
+| Underbarrel Mount / IW Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Repair | — |
+| Personalized Grip / Velvet Arms Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Electronics | Wired |
 
 ---
 
@@ -410,7 +410,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 weaponry SKU is an integrated package." These are those weapons — guns with no hand-held mode, bought
 to be bolted onto an installed **Weaponry kit** (§5F) on a drone or vehicle. Every row is fired with
 **Gunnery**, which in play means the pilot's **Rigged Fire** (or the machine's own action), never Heavy
-Weapons. Category-3 heavies that already ship tagged **Mounted** — Wallbreaker, Siege Missile — remain
+Weapons. Category-3 heavies that already ship tagged **Mounted** — Ferrum Mason .60, Kestrel Talon — remain
 mountable and are still Heavy Weapons in a hero's hands; the skill follows where the gun sits.*
 
 **Mount scale** is the ladder the kit has to reach: **category-3 < medium < heavy**. A mount takes any
@@ -423,13 +423,13 @@ Hardpoint 1.
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Mount | Tags |
 |---|---|---|---|---|---|---|---|---|
 | Hornet Pod / Kestrel Swarmcaster / drone-scale burst pod | T4 | 4 | 900 | 6 kinetic | Short | 2 | category-3 | [Medium] Vehicle Drone-scale Auto |
-| Roadspike / Ferrum Lane-Sweeper / pintle vehicle machine gun | T4 | 4 | 1,200 | 9 kinetic | Medium | 2 | category-3 | [Heavy] Vehicle Auto Loud |
-| Streetlash / Ironclad Coaxial Pair / twinned vehicle machine guns | T3 | 3 | 3,400 | 9 kinetic | Long | 3 | category-3 | [Heavy] Vehicle Auto Loud Dual-feed |
-| Ashwalker / Ferrum Hull-Clearer / vehicle flame projector | T3 | 3 | 4,200 | 9 fire | Short | 3 | category-3 | [Heavy] Vehicle Blast Loud |
+| Roadspike / Ferrum Forgeworks Lane-Sweeper / pintle vehicle machine gun | T4 | 4 | 1,200 | 9 kinetic | Medium | 2 | category-3 | [Heavy] Vehicle Auto Loud |
+| Streetlash / IW Coaxial Pair / twinned vehicle machine guns | T3 | 3 | 3,400 | 9 kinetic | Long | 3 | category-3 | [Heavy] Vehicle Auto Loud Dual-feed |
+| Ashwalker / Ferrum Forgeworks Hull-Clearer / vehicle flame projector | T3 | 3 | 4,200 | 9 fire | Short | 3 | category-3 | [Heavy] Vehicle Blast Loud |
 | Lanternhead / Nyx Streetlight / turret grenade thrower | T2 | 2 | 9,500 | 10 fire | Medium | 4 | medium turret | [Heavy] Turret Vehicle Blast Loud |
-| Crownfire / Ironclad Traverse Autocannon / powered turret autocannon | T2 | 2 | 13,000 | 11 AP | Long | 4 | medium turret | [Heavy] Turret Vehicle Auto Loud |
-| Hailstorm / Ironclad Rotary Battery / integrated rotary gun battery | T1 | 1 | 30,000 | 14 kinetic | Long | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Auto Loud |
-| God’s-Finger / Ferrum Breach Cannon / integrated anti-vehicle cannon | T1 | 1 | 38,000 | 14 AP | Extreme | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Loud |
+| Crownfire / IW Traverse Autocannon / powered turret autocannon | T2 | 2 | 13,000 | 11 AP | Long | 4 | medium turret | [Heavy] Turret Vehicle Auto Loud |
+| Hailstorm / IW Rotary Battery / integrated rotary gun battery | T1 | 1 | 30,000 | 14 kinetic | Long | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Auto Loud |
+| God’s-Finger / Ferrum Forgeworks Breach Cannon / integrated anti-vehicle cannon | T1 | 1 | 38,000 | 14 AP | Extreme | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Loud |
 | Quiverframe / Kestrel Guided Rack / integrated missile rack | T1 | 1 | 44,000 | 14 fire | Extreme | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Blast Smart-ready |
 
 *(Availability, price band and mod slots still come from Item Tier alone, §F5/§F6. Weapon Base still
@@ -635,7 +635,7 @@ preset stocks this whole table plus the Mounted heavies.)*
 
 #### Weaponry kits (one at a time) — Gunnery to fire
 
-*A kit is the **mount**, not the gun. Bolt a Category-3 weapon into it — the dedicated vehicle-mount SKUs in **§3H**, or a Mounted-tagged heavy (Wallbreaker, Siege Missile) — and the hardpoint answers to **Gunnery**. Capacity and scale are below; the scale ladder is category-3 < medium < heavy. **0.3.112:** mounting is recorded in Foundry (*Mount on…* / *Unmount weapon* on the weapon’s row), and Deploy mirrors the mounted gun onto the machine Actor’s Inventory.*
+*A kit is the **mount**, not the gun. Bolt a Category-3 weapon into it — the dedicated vehicle-mount SKUs in **§3H**, or a Mounted-tagged heavy (Ferrum Mason .60, Kestrel Talon) — and the hardpoint answers to **Gunnery**. Capacity and scale are below; the scale ladder is category-3 < medium < heavy. **0.3.112:** mounting is recorded in Foundry (*Mount on…* / *Unmount weapon* on the weapon’s row), and Deploy mirrors the mounted gun onto the machine Actor’s Inventory.*
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
 |---|---|---|---|---|---|

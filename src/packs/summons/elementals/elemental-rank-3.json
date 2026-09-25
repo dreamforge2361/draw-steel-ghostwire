@@ -36,7 +36,7 @@
         "value": 1,
         "letter": "L"
       },
-      "stability": 0,
+      "stability": 3,
       "turns": 1
     },
     "movement": {
@@ -196,7 +196,181 @@
       "alphaThreshold": 0.75
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "larBklxKBLg4i6gd",
+      "_key": "!actors.items!cnB3CwvFp2wEg0YA.larBklxKBLg4i6gd",
+      "name": "GHOSTWIRE.Summons.Elementals.ElementalRank3.Strike.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "magic",
+          "melee",
+          "strike"
+        ],
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "FTAVTuGy88kFE2Xw": {
+              "_id": "FTAVTuGy88kFE2Xw",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "9 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "12 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "15 + @chr",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              }
+            }
+          }
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-rank-3-elemental-lash",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Elementals.ElementalRank3.Strike.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "HnfsR3x5z2INIC3A",
+      "_key": "!actors.items!cnB3CwvFp2wEg0YA.HnfsR3x5z2INIC3A",
+      "name": "GHOSTWIRE.Summons.Command.Name",
+      "type": "ability",
+      "img": "icons/magic/fire/elemental-creature-horse.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "magic"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "ranged",
+        "power": {
+          "roll": {
+            "formula": "",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "06-elementalist",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "elemental-rank-3-command",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "summonCommand000": {
+            "_id": "summonCommand000",
+            "type": "base",
+            "description": "GHOSTWIRE.Summons.Command.Effect",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
   "effects": [],
   "folder": "gwSummonsElement",
   "sort": 6000,

@@ -56,7 +56,7 @@ Foundry Actor pack **`bestiary`** (“Ghostwire Bestiary”, Director-only by de
 
 | Actor | Stock → Ghostwire abilities |
 |---|---|
-| Corp Enforcer | Zweihander Swing → **Autoshotgun Sweep**; Parry! → **Ballistic Shield!**; Back! (sonic repulsor); I Can Throw My Blade… → **Dump Your Mags!**; You! = laser designator |
+| Corp Enforcer | Zweihander Swing → **Seal Warden Verdict Sweep**; Parry! → **Ballistic Shield!**; Back! (sonic repulsor); I Can Throw My Blade… → **Dump Your Mags!**; You! = laser designator |
 | Corp Security Officer | Halberd → **Stunstick & Sidearm** (Melee 2 or Ranged 5) |
 | Ironclad Conscript / Commando / Sharpshooter | Blade → **Bayonet Carbine**; Daggers → **Suppressed Machine Pistols**; Bolt Launcher → **Smartgun** |
 | Ironclad Subcommander | Command Saber → **Command Sidearm** (Melee 1 or Ranged 5); Posthumous Promotion → **Kill Code** |

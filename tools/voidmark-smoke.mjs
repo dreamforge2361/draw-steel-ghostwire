@@ -7,7 +7,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { citationLabels, retrieve } from "../scripts/voidmark-rag.mjs";
+import { citationLabels, retrieve, retrievalQuery, scoreChunk } from "../scripts/voidmark-rag.mjs";
 import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages } from "../scripts/voidmark-prompt.mjs";
 import { buildChatRequest, redactSecrets, serializeRequestForLog } from "../scripts/voidmark-client.mjs";
 
@@ -233,6 +233,56 @@ try { buildChatRequest({ apiKey: "", messages }); } catch (error) {
   threw = error.code === "VOIDMARK_NO_KEY";
 }
 ok(threw, "empty key throws VOIDMARK_NO_KEY");
+
+/* ---------------------------------------------------------------- 0.3.134 (G7) summon retrieval */
+
+console.log("");
+console.log("0.3.134) Summons, synonyms, and word boundaries");
+
+const search = (query, opts = {}) => retrieve(index, retrievalQuery({ query, ...opts }), { k: 5 });
+const topFiles = hits => hits.map(h => h.file);
+
+ok(files.has("29-summon-stat-blocks.md"), "the index includes the generated summon stat blocks");
+
+{
+  // The case Michael named: the player uses Ghostwire's own word for lightning damage ("electrical"),
+  // and the summon chapter has to come back with the Zephyr and the command rules.
+  const hits = search("how do I make my electrical zephyr attack?");
+  const hitFiles = topFiles(hits);
+  ok(hitFiles.includes("29-summon-stat-blocks.md"), `"electrical zephyr attack" retrieves the summon stat blocks (${hitFiles[0]})`);
+  ok(hits.some(h => /zephyr/i.test(h.heading) || /zephyr/i.test(h.text)), "…and the Zephyr's own block is in the hits");
+  ok(hits.some(h => /maneuver/i.test(h.text) && /command/i.test(h.text)), "…and the command rules come with it");
+}
+
+{
+  // The `ice` bug: a bare `ice` in the Wire hint matched "price" and "device", so a shopping question
+  // was answered out of the hacking chapter. The hint must not fire at all on this sentence.
+  const query = "what's the price of a device";
+  const wire = index.chunks.find(c => c.file === "21-the-wire.md");
+  const wireScore = scoreChunk(wire, query);
+  const hits = search(query);
+  ok(topFiles(hits)[0] !== "21-the-wire.md", `"price of a device" does not lead with The Wire (${topFiles(hits)[0]})`);
+  // The hint adds a flat +4; with the boundary fixed this chunk should score below that on its own.
+  ok(wireScore < 4, `…and the Wire hint no longer fires on "price"/"device" (score ${wireScore})`);
+}
+
+{
+  // A follow-up carries no nouns of its own. The previous user turn and the selected token do.
+  const bare = retrieve(index, "and how much damage?", { k: 5 });
+  const withContext = search("and how much damage?", {
+    history: [{ role: "user", content: "how do I make my electrical zephyr attack?" }],
+    token: { name: "Electrical Zephyr", type: "npc", dsid: "companion-zephyr" },
+  });
+  ok(!topFiles(bare).includes("29-summon-stat-blocks.md"), "a bare follow-up finds no summon chapter (as expected)");
+  ok(topFiles(withContext).includes("29-summon-stat-blocks.md"), "…and the same follow-up with the previous turn + selected token does");
+}
+
+{
+  // 0.3.134 (C): the arms makers are lore the index has to be able to answer from.
+  const hits = search("who makes the Ferrum Rivet?");
+  ok(topFiles(hits).includes("L9-arms-makers.md"), `"who makes the Ferrum Rivet" reaches the Arms Makers chapter (${topFiles(hits)[0]})`);
+}
+
 
 console.log("");
 if (failures.length) {

@@ -1,0 +1,494 @@
+{
+  "_id": "4rXPRaiXeAPVnC30",
+  "_key": "!journal!4rXPRaiXeAPVnC30",
+  "name": "GHOSTWIRE.Lore.Journals.ArmsMakers",
+  "folder": "gwLorePackArms00",
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "toxEn7k7PH38jXS8",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.toxEn7k7PH38jXS8",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Print:** Lore harvest — who builds the guns (L9)\n**Related:** The Twelve — Conglomerate Profiles (L1), Kits, Gear & Wealth (Ch. 8), Ossian Reach colour (L3)",
+        "content": "<p><strong>Print:</strong> Lore harvest — who builds the guns (L9)\n<strong>Related:</strong> The Twelve — Conglomerate Profiles (L1), Kits, Gear &amp; Wealth (Ch. 8), Ossian Reach colour (L3)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "0MMEEbUHlM1rCwrs",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.0MMEEbUHlM1rCwrs",
+      "name": "Why this chapter exists",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Every gun in Ossian Reach was built by somebody, and in the Reach \"somebody\" almost always means a subsidiary of one of the Twelve. A weapon's maker tells you more than its damage number: who sold it, who is liable for it, who can trace it, and who will be embarrassed when it turns up at a crime scene.\n\nStreet names survive anyway. A runner who says \"pass me the Popper\" is talking about a **Ferrum Rivet**, and everybody in the room knows it. This chapter lists the houses, what each one builds, who it hates, and the guns you will actually see.\n\n---",
+        "content": "<p>Every gun in Ossian Reach was built by somebody, and in the Reach \"somebody\" almost always means a subsidiary of one of the Twelve. A weapon's maker tells you more than its damage number: who sold it, who is liable for it, who can trace it, and who will be embarrassed when it turns up at a crime scene.</p>\n<p>Street names survive anyway. A runner who says \"pass me the Popper\" is talking about a <strong>Ferrum Rivet</strong>, and everybody in the room knows it. This chapter lists the houses, what each one builds, who it hates, and the guns you will actually see.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "BBoNEAATj2tieLDF",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.BBoNEAATj2tieLDF",
+      "name": "Iron Writ Arms (IW) — Ironclad Martial",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**IW = Iron Writ Arms, Ironclad Martial's arms division.** Everywhere the name appears on a gun it is shortened to **IW**; the full name is only ever on the contract.\n\n**What it builds.** Plain military workhorses. Nothing clever, nothing pretty, nothing that stops working because it got wet. IW's design brief has been the same for forty years: *a conscript can field-strip it in the dark.*\n\n**Identity.** IW sells to anyone with a signed contract — Council regulars, corporate security, hive militia, and, through three layers of paperwork it pretends not to see, whoever else can pay. It is the default gun of the Reach the way a shipping pallet is the default box.\n\n**Rivalry.** IW hates that Nyx copies its designs, and hates more that the copies work. Every Nyx Rattletrap on the street is an Iron Writ rifle with the serial ground off the tooling, and IW's lawyers have never once won that argument in a Sinks court.\n\n**Signature guns.** IW Journeyman (service pistol) · IW Bastion (assault platform) · IW Barrage-12 (light machine gun) · IW Absolution (anti-materiel rifle) · IW Paladin (powered greatsword) · the Splinter frag grenade.\n\n---",
+        "content": "<p><strong>IW = Iron Writ Arms, Ironclad Martial's arms division.</strong> Everywhere the name appears on a gun it is shortened to <strong>IW</strong>; the full name is only ever on the contract.</p>\n<p><strong>What it builds.</strong> Plain military workhorses. Nothing clever, nothing pretty, nothing that stops working because it got wet. IW's design brief has been the same for forty years: <em>a conscript can field-strip it in the dark.</em></p>\n<p><strong>Identity.</strong> IW sells to anyone with a signed contract — Council regulars, corporate security, hive militia, and, through three layers of paperwork it pretends not to see, whoever else can pay. It is the default gun of the Reach the way a shipping pallet is the default box.</p>\n<p><strong>Rivalry.</strong> IW hates that Nyx copies its designs, and hates more that the copies work. Every Nyx Rattletrap on the street is an Iron Writ rifle with the serial ground off the tooling, and IW's lawyers have never once won that argument in a Sinks court.</p>\n<p><strong>Signature guns.</strong> IW Journeyman (service pistol) · IW Bastion (assault platform) · IW Barrage-12 (light machine gun) · IW Absolution (anti-materiel rifle) · IW Paladin (powered greatsword) · the Splinter frag grenade.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ZIxLfgmdO8SKy65f",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.ZIxLfgmdO8SKy65f",
+      "name": "Seraph Armaments — HALO Ascendant",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** White-polymer \"humane\" peacekeeper weapons: capacitive pistols, low-recoil submachine guns, coilguns that make almost no noise. Everything is smooth, bright and shaped like medical equipment.\n\n**Identity.** Seraph is the sister firm of Aureole Security, and its marketing is entirely about restraint — *stop the situation, not the person*. Every catalogue photograph is of a weapon at rest.\n\n**The quiet part.** Every Seraph weapon has a lethal setting, and Seraph sells the lethal setting hard, in a separate catalogue, to a separate customer list. The company has never denied this, because nobody with a microphone has ever asked.\n\n**Signature guns.** Seraph Mercy (capacitive pistol) · Seraph Halcyon (milspec SMG) · Seraph Stilling (coilgun prototype).\n\n---",
+        "content": "<p><strong>What it builds.</strong> White-polymer \"humane\" peacekeeper weapons: capacitive pistols, low-recoil submachine guns, coilguns that make almost no noise. Everything is smooth, bright and shaped like medical equipment.</p>\n<p><strong>Identity.</strong> Seraph is the sister firm of Aureole Security, and its marketing is entirely about restraint — <em>stop the situation, not the person</em>. Every catalogue photograph is of a weapon at rest.</p>\n<p><strong>The quiet part.</strong> Every Seraph weapon has a lethal setting, and Seraph sells the lethal setting hard, in a separate catalogue, to a separate customer list. The company has never denied this, because nobody with a microphone has ever asked.</p>\n<p><strong>Signature guns.</strong> Seraph Mercy (capacitive pistol) · Seraph Halcyon (milspec SMG) · Seraph Stilling (coilgun prototype).</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "RpiBESveVXpYGFTZ",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.RpiBESveVXpYGFTZ",
+      "name": "Argent Mint Arms — Argent Exchange",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Luxury pieces. Machined heavy pistols, engraved knuckles, presentation cases. Every one of them is stamped with the Exchange mint mark on the frame.\n\n**Identity.** An Argent gun is a financial instrument. The serial number is registered as a bond, the bond is tradeable, and the weapon's ownership history is a matter of public record at the Exchange — which is the point. Debt collectors carry them precisely because the gun says *this visit is on the books*.\n\n**Rivalry.** Argent regards Nyx as counterfeiters and Velvet Arms as decorators. Velvet regards Argent as a bank that learned to make jewellery.\n\n**Signature guns.** Argent Sovereign .50 (heavy pistol) · Argent Mint Persuader (knuckles).\n\n---",
+        "content": "<p><strong>What it builds.</strong> Luxury pieces. Machined heavy pistols, engraved knuckles, presentation cases. Every one of them is stamped with the Exchange mint mark on the frame.</p>\n<p><strong>Identity.</strong> An Argent gun is a financial instrument. The serial number is registered as a bond, the bond is tradeable, and the weapon's ownership history is a matter of public record at the Exchange — which is the point. Debt collectors carry them precisely because the gun says <em>this visit is on the books</em>.</p>\n<p><strong>Rivalry.</strong> Argent regards Nyx as counterfeiters and Velvet Arms as decorators. Velvet regards Argent as a bank that learned to make jewellery.</p>\n<p><strong>Signature guns.</strong> Argent Sovereign .50 (heavy pistol) · Argent Mint Persuader (knuckles).</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "b5FESqusdofhPYXS",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.b5FESqusdofhPYXS",
+      "name": "Ferrum Forgeworks and Deepworks Excavation — Ferrum Dynastic",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What they build.** Ferrum Forgeworks makes guns out of foundry habits: thick, heavy, over-engineered, and cheap for what they are. Deepworks Excavation makes demolition tools — breaching charges, thermite, hammers big enough to argue with a wall.\n\n**Identity.** Old money and old iron. Ferrum Dynastic has never officially had an arms division, and will tell you so in writing. The Forgeworks catalogue calls the Mason .60 a \"site clearance system.\"\n\n**The open secret.** Deepworks tools became weapons the first week they shipped, and Deepworks has never changed a single part number in response.\n\n**Signature guns.** Ferrum Rivet (compact pistol) · Ferrum Mason .60 (heavy machine gun) · Ferrum Keystone (disposable rocket launcher) · Ferrum Crusher (powered maul) · Deepworks Roughneck (demolition maul) · Deepworks Demo and Meltdown charges.\n\n---",
+        "content": "<p><strong>What they build.</strong> Ferrum Forgeworks makes guns out of foundry habits: thick, heavy, over-engineered, and cheap for what they are. Deepworks Excavation makes demolition tools — breaching charges, thermite, hammers big enough to argue with a wall.</p>\n<p><strong>Identity.</strong> Old money and old iron. Ferrum Dynastic has never officially had an arms division, and will tell you so in writing. The Forgeworks catalogue calls the Mason .60 a \"site clearance system.\"</p>\n<p><strong>The open secret.</strong> Deepworks tools became weapons the first week they shipped, and Deepworks has never changed a single part number in response.</p>\n<p><strong>Signature guns.</strong> Ferrum Rivet (compact pistol) · Ferrum Mason .60 (heavy machine gun) · Ferrum Keystone (disposable rocket launcher) · Ferrum Crusher (powered maul) · Deepworks Roughneck (demolition maul) · Deepworks Demo and Meltdown charges.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "rCdPiTnqRgkAM4fb",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.rCdPiTnqRgkAM4fb",
+      "name": "Meridian Blacklight — Meridian Signal, via Blacklight Systems",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Networked smart guns. Every trigger pull is a logged event, timestamped, geotagged and uploaded the moment the weapon finds a signal.\n\n**Identity.** Meridian sells the telemetry as a feature — insurance discounts, automatic incident reports, \"responsible ownership.\" Everybody who has read the contract knows that the telemetry is the product and the gun is the sensor.\n\n**Rivalry.** Sanctum Assurance buys Meridian's data. Grey Ledger, Sanctum's own arms house, would rather Sanctum bought nothing from Meridian at all.\n\n**Signature guns.** Meridian Vector (caseless smart-rifle) · Meridian Blacklight Nullfield (EMP grenade) · Meridian Blacklight Airburst (programmable grenade) · the SmartSystem mod nearly every other maker's gun ends up wearing.\n\n---",
+        "content": "<p><strong>What it builds.</strong> Networked smart guns. Every trigger pull is a logged event, timestamped, geotagged and uploaded the moment the weapon finds a signal.</p>\n<p><strong>Identity.</strong> Meridian sells the telemetry as a feature — insurance discounts, automatic incident reports, \"responsible ownership.\" Everybody who has read the contract knows that the telemetry is the product and the gun is the sensor.</p>\n<p><strong>Rivalry.</strong> Sanctum Assurance buys Meridian's data. Grey Ledger, Sanctum's own arms house, would rather Sanctum bought nothing from Meridian at all.</p>\n<p><strong>Signature guns.</strong> Meridian Vector (caseless smart-rifle) · Meridian Blacklight Nullfield (EMP grenade) · Meridian Blacklight Airburst (programmable grenade) · the SmartSystem mod nearly every other maker's gun ends up wearing.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "sTCyYkSU7BwWNnAE",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.sTCyYkSU7BwWNnAE",
+      "name": "Lancet Biodefense and Grafthouse — Caduceus Vitalis",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What they build.** Lancet Biodefense sells darts, gas and fire under quarantine paperwork: dart pistols, gas grenades, man-portable flamers described on the invoice as sterilizers. Grafthouse grafts weapons into people and files the operation as a fitting.\n\n**Identity.** Both houses are medical companies, in the sense that the paperwork is medical. Lancet's Cauterizer is licensed as a contamination-control tool and is sold by the crate to people who have never contained anything.\n\n**Rivalry.** Lazarus Extract, who has to treat what Lancet ships, loathes them. Lancet points out that Lazarus buys its trauma kit by the pallet and does not ask who filled the ward.\n\n**Signature guns.** Lancet Hushdart (injection dart pistol) · Lancet Cauterizer (man-portable flamer) · Lancet Ember and Choke (incendiary and gas grenades) · Grafthouse Talon (implant blade).\n\n---",
+        "content": "<p><strong>What they build.</strong> Lancet Biodefense sells darts, gas and fire under quarantine paperwork: dart pistols, gas grenades, man-portable flamers described on the invoice as sterilizers. Grafthouse grafts weapons into people and files the operation as a fitting.</p>\n<p><strong>Identity.</strong> Both houses are medical companies, in the sense that the paperwork is medical. Lancet's Cauterizer is licensed as a contamination-control tool and is sold by the crate to people who have never contained anything.</p>\n<p><strong>Rivalry.</strong> Lazarus Extract, who has to treat what Lancet ships, loathes them. Lancet points out that Lazarus buys its trauma kit by the pallet and does not ask who filled the ward.</p>\n<p><strong>Signature guns.</strong> Lancet Hushdart (injection dart pistol) · Lancet Cauterizer (man-portable flamer) · Lancet Ember and Choke (incendiary and gas grenades) · Grafthouse Talon (implant blade).</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "MKfPWUB3zKMiZv7q",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.MKfPWUB3zKMiZv7q",
+      "name": "Greenline Outfitters — Verdant Provision",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Frontier gear for people who work past the fence: bolt rifles, hunting carbines, bows, machetes, and blades that cut brush all week and something worse on Friday.\n\n**Identity.** Greenline equips the rangers who cull Incursion beasts on Verdant's reclamation land. It is the only arms house in the Reach whose catalogue photographs are taken outdoors, and the only one whose customers regularly send back field notes.\n\n**Rivalry.** Greenline thinks Meridian's telemetry is a liability three hours from a signal. Meridian thinks Greenline sells antiques.\n\n**Signature guns.** Greenline Longwatch (bolt marksman rifle) · Greenline Thornback (hunting carbine) · Greenline Bushmaster (machete) · Greenline Sting, Draw and Silent (crossbow and bows).\n\n---",
+        "content": "<p><strong>What it builds.</strong> Frontier gear for people who work past the fence: bolt rifles, hunting carbines, bows, machetes, and blades that cut brush all week and something worse on Friday.</p>\n<p><strong>Identity.</strong> Greenline equips the rangers who cull Incursion beasts on Verdant's reclamation land. It is the only arms house in the Reach whose catalogue photographs are taken outdoors, and the only one whose customers regularly send back field notes.</p>\n<p><strong>Rivalry.</strong> Greenline thinks Meridian's telemetry is a liability three hours from a signal. Meridian thinks Greenline sells antiques.</p>\n<p><strong>Signature guns.</strong> Greenline Longwatch (bolt marksman rifle) · Greenline Thornback (hunting carbine) · Greenline Bushmaster (machete) · Greenline Sting, Draw and Silent (crossbow and bows).</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "JXE2wY90SLJfzADD",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.JXE2wY90SLJfzADD",
+      "name": "Velvet Arms — Obsidian Holdings",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Elegant concealables. Holdout pistols that look like cigarette cases, suppressed submachine guns finished like instruments, monofilament blades with no visible edge.\n\n**Identity.** A Velvet weapon is a gift. They are handed out in the Velvet Room, wrapped, to people who are being told something. Obsidian does not sell most of them; it presents them.\n\n**Rivalry.** Argent Mint thinks Velvet's guns are jewellery. Velvet's guns are, and that has never once stopped one working.\n\n**Signature guns.** Velvet Cufflink (holdout pistol) · Velvet Nocturne (caseless prototype pistol) · Velvet Murmur (suppressed SMG) · Velvet Arms Edge and Razorline (monoblade and monowhip) · the Fan throwing knife.\n\n---",
+        "content": "<p><strong>What it builds.</strong> Elegant concealables. Holdout pistols that look like cigarette cases, suppressed submachine guns finished like instruments, monofilament blades with no visible edge.</p>\n<p><strong>Identity.</strong> A Velvet weapon is a gift. They are handed out in the Velvet Room, wrapped, to people who are being told something. Obsidian does not sell most of them; it presents them.</p>\n<p><strong>Rivalry.</strong> Argent Mint thinks Velvet's guns are jewellery. Velvet's guns are, and that has never once stopped one working.</p>\n<p><strong>Signature guns.</strong> Velvet Cufflink (holdout pistol) · Velvet Nocturne (caseless prototype pistol) · Velvet Murmur (suppressed SMG) · Velvet Arms Edge and Razorline (monoblade and monowhip) · the Fan throwing knife.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "tw6PaPw83yN3ywGj",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.tw6PaPw83yN3ywGj",
+      "name": "Grey Ledger — Sanctum Assurance",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** \"Compliance gear.\" Nets, restraints, capture launchers, and one very quiet rifle that removes a line item from somebody's book.\n\n**Identity.** Grey Ledger's catalogue never uses the word weapon. It uses *instrument*, *device* and *remedy*. Its customer is an insurer deciding that a claim is cheaper closed than paid.\n\n**Rivalry.** Aequitas Mandate, who at least serves warrants in public, considers Grey Ledger a private court with a silencer. Grey Ledger considers Aequitas slow.\n\n**Signature guns.** Grey Ledger Redaction (suppressed DMR) · Grey Ledger Lien (capture launcher) · Grey Ledger Snarecast (weighted net) · the Hush suppressor.\n\n---",
+        "content": "<p><strong>What it builds.</strong> \"Compliance gear.\" Nets, restraints, capture launchers, and one very quiet rifle that removes a line item from somebody's book.</p>\n<p><strong>Identity.</strong> Grey Ledger's catalogue never uses the word weapon. It uses <em>instrument</em>, <em>device</em> and <em>remedy</em>. Its customer is an insurer deciding that a claim is cheaper closed than paid.</p>\n<p><strong>Rivalry.</strong> Aequitas Mandate, who at least serves warrants in public, considers Grey Ledger a private court with a silencer. Grey Ledger considers Aequitas slow.</p>\n<p><strong>Signature guns.</strong> Grey Ledger Redaction (suppressed DMR) · Grey Ledger Lien (capture launcher) · Grey Ledger Snarecast (weighted net) · the Hush suppressor.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "syoxM2qmWghNWMkr",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.syoxM2qmWghNWMkr",
+      "name": "Seal Warden Armory — Aequitas Mandate",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Warrant-service tools: combat shotguns, heavy revolvers, stun batons, flash charges. Everything is loud, obvious, and designed to be seen coming.\n\n**Identity.** Seal Warden names its products after courtroom words — Gavel, Verdict, Writ, Prod — entirely without irony, because Aequitas genuinely believes the naming is honest. The gun does what the court said.\n\n**Rivalry.** Seal Warden will not sell outside the Council, which has never stopped its shotguns turning up in the Sinks, which Seal Warden finds personally insulting.\n\n**Signature guns.** Seal Warden Gavel (heavy revolver) · Seal Warden Verdict (combat shotgun) · Seal Warden Prod (stun baton) · the Dazzle flash-bang.\n\n---",
+        "content": "<p><strong>What it builds.</strong> Warrant-service tools: combat shotguns, heavy revolvers, stun batons, flash charges. Everything is loud, obvious, and designed to be seen coming.</p>\n<p><strong>Identity.</strong> Seal Warden names its products after courtroom words — Gavel, Verdict, Writ, Prod — entirely without irony, because Aequitas genuinely believes the naming is honest. The gun does what the court said.</p>\n<p><strong>Rivalry.</strong> Seal Warden will not sell outside the Council, which has never stopped its shotguns turning up in the Sinks, which Seal Warden finds personally insulting.</p>\n<p><strong>Signature guns.</strong> Seal Warden Gavel (heavy revolver) · Seal Warden Verdict (combat shotgun) · Seal Warden Prod (stun baton) · the Dazzle flash-bang.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "zqrOIqZgszALRqG6",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.zqrOIqZgszALRqG6",
+      "name": "White Door Tactical — Lazarus Extract",
+      "type": "text",
+      "sort": 1300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Extraction kit. Compact carbines, smoke, breaching light enough to carry with a patient on your back. The design constraint on every product is *does it fit beside a med-bag*.\n\n**Identity.** White Door arms the people who go in to bring somebody out. Its weapons are unapologetically defensive and its marketing is entirely about the trip home.\n\n**Rivalry.** Lancet Biodefense, whose products fill Lazarus's wards.\n\n**Signature guns.** White Door Lifeline (bullpup carbine) · the Screening Canister smoke grenade.\n\n---",
+        "content": "<p><strong>What it builds.</strong> Extraction kit. Compact carbines, smoke, breaching light enough to carry with a patient on your back. The design constraint on every product is <em>does it fit beside a med-bag</em>.</p>\n<p><strong>Identity.</strong> White Door arms the people who go in to bring somebody out. Its weapons are unapologetically defensive and its marketing is entirely about the trip home.</p>\n<p><strong>Rivalry.</strong> Lancet Biodefense, whose products fill Lazarus's wards.</p>\n<p><strong>Signature guns.</strong> White Door Lifeline (bullpup carbine) · the Screening Canister smoke grenade.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "fB21XgHCItRKuku6",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.fB21XgHCItRKuku6",
+      "name": "Nyx Undermarket — Nyx Cartel",
+      "type": "text",
+      "sort": 1400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Cheap, rugged Sinks guns. Pipe rifles, pump shotguns, grenade launchers welded out of tube stock, and a great many unlicensed copies of other people's designs.\n\n**Identity.** Nyx sells to whoever is standing there. Its guns are ugly, forgiving of neglect, and available at three in the morning. A Nyx weapon has no warranty and no serial number anybody trusts.\n\n**Rivalry.** Iron Writ Arms, constantly and expensively. The Nyx Rattletrap is an IW rifle copied off stolen tooling; Nyx has never denied it, and the Rattletrap outsells the original in the Sinks four to one.\n\n**Signature guns.** Nyx Wasp-9 (machine pistol) · Nyx Rattletrap (assault rifle) · Nyx Gutterline (single-shot marksman rifle) · Nyx Doorknocker (pump shotgun) · Nyx Grinder (grenade launcher) · Nyx Coilwork, Longstaff and Warblade.\n\n---",
+        "content": "<p><strong>What it builds.</strong> Cheap, rugged Sinks guns. Pipe rifles, pump shotguns, grenade launchers welded out of tube stock, and a great many unlicensed copies of other people's designs.</p>\n<p><strong>Identity.</strong> Nyx sells to whoever is standing there. Its guns are ugly, forgiving of neglect, and available at three in the morning. A Nyx weapon has no warranty and no serial number anybody trusts.</p>\n<p><strong>Rivalry.</strong> Iron Writ Arms, constantly and expensively. The Nyx Rattletrap is an IW rifle copied off stolen tooling; Nyx has never denied it, and the Rattletrap outsells the original in the Sinks four to one.</p>\n<p><strong>Signature guns.</strong> Nyx Wasp-9 (machine pistol) · Nyx Rattletrap (assault rifle) · Nyx Gutterline (single-shot marksman rifle) · Nyx Doorknocker (pump shotgun) · Nyx Grinder (grenade launcher) · Nyx Coilwork, Longstaff and Warblade.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "QtTzm6I6teTXPmIc",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.QtTzm6I6teTXPmIc",
+      "name": "Kestrel Aerodyne — Kestrel Dynamics",
+      "type": "text",
+      "sort": 1500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**What it builds.** Missiles and drone pods. Nothing you can hold — every Kestrel product bolts to a vehicle, a drone or a rack.\n\n**Identity.** Kestrel Dynamics is the seatless thirteenth climber (L1, *The Rising Thirteenth*), and Aerodyne is the part of it that puts ordnance on the autonomous transport network it is building. Kestrel's line is that a guided weapon is a *safety* feature: it only hits what it was told to hit.\n\n**Rivalry.** Nyx, in everything. Kestrel means to make the tenth seat unnecessary, and arming its own logistics fleet is part of how.\n\n**Signature guns.** Kestrel Talon (smart anti-vehicle launcher) · Kestrel Swarmcaster (drone burst pod) · Kestrel Guided Rack (vehicle missile rack).\n\n---",
+        "content": "<p><strong>What it builds.</strong> Missiles and drone pods. Nothing you can hold — every Kestrel product bolts to a vehicle, a drone or a rack.</p>\n<p><strong>Identity.</strong> Kestrel Dynamics is the seatless thirteenth climber (L1, <em>The Rising Thirteenth</em>), and Aerodyne is the part of it that puts ordnance on the autonomous transport network it is building. Kestrel's line is that a guided weapon is a <em>safety</em> feature: it only hits what it was told to hit.</p>\n<p><strong>Rivalry.</strong> Nyx, in everything. Kestrel means to make the tenth seat unnecessary, and arming its own logistics fleet is part of how.</p>\n<p><strong>Signature guns.</strong> Kestrel Talon (smart anti-vehicle launcher) · Kestrel Swarmcaster (drone burst pod) · Kestrel Guided Rack (vehicle missile rack).</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ALuF6dLaHWacPnmn",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.ALuF6dLaHWacPnmn",
+      "name": "Quick table",
+      "type": "text",
+      "sort": 1600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| House | Parent | Builds | Hates |\n|---|---|---|---|\n| Iron Writ Arms (IW) | Ironclad Martial | Plain military workhorses | Nyx, for copying them |\n| Seraph Armaments | HALO Ascendant | White-polymer \"humane\" peacekeepers | Being asked about the other catalogue |\n| Argent Mint Arms | Argent Exchange | Luxury pieces, every serial a bond | Nyx counterfeits |\n| Ferrum Forgeworks | Ferrum Dynastic | Heavy foundry guns | Admitting it makes guns |\n| Deepworks Excavation | Ferrum Dynastic | Demolition tools used as weapons | The question |\n| Meridian Blacklight | Meridian Signal | Networked smart guns that log every shot | Grey Ledger |\n| Lancet Biodefense | Caduceus Vitalis | Darts, gas and fire as quarantine tools | Lazarus Extract |\n| Grafthouse | Caduceus Vitalis | Grafted cyber-weapons | Anyone who calls it surgery |\n| Greenline Outfitters | Verdant Provision | Frontier bows, rifles and blades | Telemetry |\n| Velvet Arms | Obsidian Holdings | Elegant concealables, given as gifts | Vulgarity |\n| Grey Ledger | Sanctum Assurance | \"Compliance gear\" and one quiet rifle | Aequitas |\n| Seal Warden Armory | Aequitas Mandate | Warrant-service shotguns and batons | Its own guns in the Sinks |\n| White Door Tactical | Lazarus Extract | Extraction kit | Lancet |\n| Nyx Undermarket | Nyx Cartel | Cheap Sinks guns and unlicensed copies | Nobody; it sells to everyone |\n| Kestrel Aerodyne | Kestrel Dynamics | Missiles and drone pods | Nyx |\n\n---",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"house\">House</th>\n<th id=\"parent\">Parent</th>\n<th id=\"builds\">Builds</th>\n<th id=\"hates\">Hates</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Iron Writ Arms (IW)</td>\n<td>Ironclad Martial</td>\n<td>Plain military workhorses</td>\n<td>Nyx, for copying them</td>\n</tr>\n<tr>\n<td>Seraph Armaments</td>\n<td>HALO Ascendant</td>\n<td>White-polymer \"humane\" peacekeepers</td>\n<td>Being asked about the other catalogue</td>\n</tr>\n<tr>\n<td>Argent Mint Arms</td>\n<td>Argent Exchange</td>\n<td>Luxury pieces, every serial a bond</td>\n<td>Nyx counterfeits</td>\n</tr>\n<tr>\n<td>Ferrum Forgeworks</td>\n<td>Ferrum Dynastic</td>\n<td>Heavy foundry guns</td>\n<td>Admitting it makes guns</td>\n</tr>\n<tr>\n<td>Deepworks Excavation</td>\n<td>Ferrum Dynastic</td>\n<td>Demolition tools used as weapons</td>\n<td>The question</td>\n</tr>\n<tr>\n<td>Meridian Blacklight</td>\n<td>Meridian Signal</td>\n<td>Networked smart guns that log every shot</td>\n<td>Grey Ledger</td>\n</tr>\n<tr>\n<td>Lancet Biodefense</td>\n<td>Caduceus Vitalis</td>\n<td>Darts, gas and fire as quarantine tools</td>\n<td>Lazarus Extract</td>\n</tr>\n<tr>\n<td>Grafthouse</td>\n<td>Caduceus Vitalis</td>\n<td>Grafted cyber-weapons</td>\n<td>Anyone who calls it surgery</td>\n</tr>\n<tr>\n<td>Greenline Outfitters</td>\n<td>Verdant Provision</td>\n<td>Frontier bows, rifles and blades</td>\n<td>Telemetry</td>\n</tr>\n<tr>\n<td>Velvet Arms</td>\n<td>Obsidian Holdings</td>\n<td>Elegant concealables, given as gifts</td>\n<td>Vulgarity</td>\n</tr>\n<tr>\n<td>Grey Ledger</td>\n<td>Sanctum Assurance</td>\n<td>\"Compliance gear\" and one quiet rifle</td>\n<td>Aequitas</td>\n</tr>\n<tr>\n<td>Seal Warden Armory</td>\n<td>Aequitas Mandate</td>\n<td>Warrant-service shotguns and batons</td>\n<td>Its own guns in the Sinks</td>\n</tr>\n<tr>\n<td>White Door Tactical</td>\n<td>Lazarus Extract</td>\n<td>Extraction kit</td>\n<td>Lancet</td>\n</tr>\n<tr>\n<td>Nyx Undermarket</td>\n<td>Nyx Cartel</td>\n<td>Cheap Sinks guns and unlicensed copies</td>\n<td>Nobody; it sells to everyone</td>\n</tr>\n<tr>\n<td>Kestrel Aerodyne</td>\n<td>Kestrel Dynamics</td>\n<td>Missiles and drone pods</td>\n<td>Nyx</td>\n</tr>\n</tbody>\n</table>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "w085iXe77wnBs50a",
+      "_key": "!journal.pages!4rXPRaiXeAPVnC30.w085iXe77wnBs50a",
+      "name": "Street names, old and new",
+      "type": "text",
+      "sort": 1700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The names changed on the paperwork, not in the mouth. Both are correct at a table.\n\n| Street name | On the receipt |\n|---|---|\n| Popper | Ferrum Rivet |\n| Workhorse | IW Journeyman |\n| Hand-Cannon | Argent Sovereign .50 |\n| Slugger | Seal Warden Gavel |\n| Sleeve-Gun | Velvet Cufflink |\n| Ghost Pistol | Velvet Nocturne |\n| Zapper | Seraph Mercy |\n| Buzz-Gun | Nyx Wasp-9 |\n| Chatter | Velvet Murmur |\n| Streetsweeper SMG | Seraph Halcyon |\n| Longshot | Greenline Longwatch |\n| Milspec Battle Rifle | IW Bastion |\n| Chopper | Nyx Rattletrap |\n| Streetline Carbine | White Door Lifeline |\n| Apex Rifle | Meridian Vector |\n| Whisper Rifle | Grey Ledger Redaction |\n| Brush-Gun | Greenline Thornback |\n| Pipe Rifle | Nyx Gutterline |\n| Autoshotgun | Seal Warden Verdict |\n| Boomstick | Nyx Doorknocker |\n| Chatterbox | IW Barrage-12 |\n| Hand-of-God | IW Absolution |\n| Wallbreaker | Ferrum Mason .60 |\n| Tank-Cracker | Ferrum Keystone |\n| Siege Missile | Kestrel Talon |\n| Grease-Gun | Nyx Grinder |\n| Dragon’s Breath | Lancet Cauterizer |\n| Dart-Gun | Lancet Hushdart |\n| Gauss Needler | Seraph Stilling |\n| Net-Gun | Grey Ledger Lien |",
+        "content": "<p>The names changed on the paperwork, not in the mouth. Both are correct at a table.</p>\n<table>\n<thead>\n<tr>\n<th id=\"street_name\">Street name</th>\n<th id=\"on_the_receipt\">On the receipt</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Popper</td>\n<td>Ferrum Rivet</td>\n</tr>\n<tr>\n<td>Workhorse</td>\n<td>IW Journeyman</td>\n</tr>\n<tr>\n<td>Hand-Cannon</td>\n<td>Argent Sovereign .50</td>\n</tr>\n<tr>\n<td>Slugger</td>\n<td>Seal Warden Gavel</td>\n</tr>\n<tr>\n<td>Sleeve-Gun</td>\n<td>Velvet Cufflink</td>\n</tr>\n<tr>\n<td>Ghost Pistol</td>\n<td>Velvet Nocturne</td>\n</tr>\n<tr>\n<td>Zapper</td>\n<td>Seraph Mercy</td>\n</tr>\n<tr>\n<td>Buzz-Gun</td>\n<td>Nyx Wasp-9</td>\n</tr>\n<tr>\n<td>Chatter</td>\n<td>Velvet Murmur</td>\n</tr>\n<tr>\n<td>Streetsweeper SMG</td>\n<td>Seraph Halcyon</td>\n</tr>\n<tr>\n<td>Longshot</td>\n<td>Greenline Longwatch</td>\n</tr>\n<tr>\n<td>Milspec Battle Rifle</td>\n<td>IW Bastion</td>\n</tr>\n<tr>\n<td>Chopper</td>\n<td>Nyx Rattletrap</td>\n</tr>\n<tr>\n<td>Streetline Carbine</td>\n<td>White Door Lifeline</td>\n</tr>\n<tr>\n<td>Apex Rifle</td>\n<td>Meridian Vector</td>\n</tr>\n<tr>\n<td>Whisper Rifle</td>\n<td>Grey Ledger Redaction</td>\n</tr>\n<tr>\n<td>Brush-Gun</td>\n<td>Greenline Thornback</td>\n</tr>\n<tr>\n<td>Pipe Rifle</td>\n<td>Nyx Gutterline</td>\n</tr>\n<tr>\n<td>Autoshotgun</td>\n<td>Seal Warden Verdict</td>\n</tr>\n<tr>\n<td>Boomstick</td>\n<td>Nyx Doorknocker</td>\n</tr>\n<tr>\n<td>Chatterbox</td>\n<td>IW Barrage-12</td>\n</tr>\n<tr>\n<td>Hand-of-God</td>\n<td>IW Absolution</td>\n</tr>\n<tr>\n<td>Wallbreaker</td>\n<td>Ferrum Mason .60</td>\n</tr>\n<tr>\n<td>Tank-Cracker</td>\n<td>Ferrum Keystone</td>\n</tr>\n<tr>\n<td>Siege Missile</td>\n<td>Kestrel Talon</td>\n</tr>\n<tr>\n<td>Grease-Gun</td>\n<td>Nyx Grinder</td>\n</tr>\n<tr>\n<td>Dragon’s Breath</td>\n<td>Lancet Cauterizer</td>\n</tr>\n<tr>\n<td>Dart-Gun</td>\n<td>Lancet Hushdart</td>\n</tr>\n<tr>\n<td>Gauss Needler</td>\n<td>Seraph Stilling</td>\n</tr>\n<tr>\n<td>Net-Gun</td>\n<td>Grey Ledger Lien</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/manuscript/01-lore/L9-arms-makers.md"
+    }
+  }
+}

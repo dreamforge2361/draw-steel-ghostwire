@@ -35,6 +35,10 @@ import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
 import { registerHitFx } from "./hit-fx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
+import { registerWeaponRename } from "./weapon-rename.mjs";
+import { registerFieldTriage } from "./field-triage.mjs";
+import { registerRecoveryPrompt } from "./recovery-prompt.mjs";
+import { registerRally } from "./rally.mjs";
 import { isMountedWeapon, weaponSkillBonus } from "./weapon-skills.mjs";
 import { registerPayloadUse } from "./payload-use.mjs";
 import { registerFreeStrikeStrip } from "./free-strikes.mjs";
@@ -88,6 +92,14 @@ const MODULE_ID = "draw-steel-ghostwire";
 
 // Draw Steel copies ds.CONFIG.hero.defaultItems onto every new hero.
 // Ghostwire swaps stock actions for street-themed copies with the same mechanics.
+// 0.3.134 (H) — Draw Steel's **Heal** is deleted from the hero defaults and replaced by nothing.
+//
+// 0.3.130 swapped it for Field Triage, which handed all nine pregens and every new hero a 2-Reagent
+// Medic maneuver. Field Triage is now Medic-only, granted by the Medic class advancement rather than
+// by the universal default list, and there is no universal First Aid in Ghostwire at all — everyone
+// else stabilises with Trauma Patches and medkits (see `scripts/consumable-use.mjs`).
+const DEFAULT_ITEM_DELETES = ["Compendium.draw-steel.abilities.Item.2qWHDVB7SBS9anLB"];
+
 const DEFAULT_ITEM_SWAPS = {
   // Ride -> Drive (vehicles, not mounts)
   "Compendium.draw-steel.abilities.Item.QXOkflcYF6DITJE3": `Compendium.${MODULE_ID}.abilities.Item.Xc5MebcXHYG1hdQR`,
@@ -95,8 +107,6 @@ const DEFAULT_ITEM_SWAPS = {
   "Compendium.draw-steel.abilities.Item.wNqJWJbgAbnJBqZf": `Compendium.${MODULE_ID}.abilities.Item.Od6u2idYoCRmoDYD`,
   // Defend -> Take Cover
   "Compendium.draw-steel.abilities.Item.fjtY7RKBGWx2u5tK": `Compendium.${MODULE_ID}.abilities.Item.1W0HIoL2SAcbTU6W`,
-  // Heal -> Field Triage (0.3.130: replaces Patch Up; costs 2 Reagents)
-  "Compendium.draw-steel.abilities.Item.2qWHDVB7SBS9anLB": `Compendium.${MODULE_ID}.abilities.Item.pJY4ybZUtkH9HDxy`,
   // Aid Attack -> Spot Target
   "Compendium.draw-steel.abilities.Item.Xb3S5N1fZyICD58D": `Compendium.${MODULE_ID}.abilities.Item.Lc7LhoqWg9ydP5Jm`,
 };
@@ -110,6 +120,9 @@ Hooks.once("init", () => {
   document.body.classList.add("ghostwire", "ghostwire-theme");
 
   const defaultItems = ds.CONFIG.hero.defaultItems;
+  for (const stock of DEFAULT_ITEM_DELETES) {
+    if (!defaultItems.delete(stock)) console.warn(`${MODULE_ID} | ${stock} not found in hero default items; nothing to remove`);
+  }
   for (const [stock, ghostwire] of Object.entries(DEFAULT_ITEM_SWAPS)) {
     if (defaultItems.delete(stock)) defaultItems.add(ghostwire);
     else console.warn(`${MODULE_ID} | ${stock} not found in hero default items; ${ghostwire} not added`);
@@ -177,6 +190,18 @@ Hooks.once("init", () => {
   registerMounts();
   registerAbilitySfx();
   registerEquipmentUse();
+  // 0.3.134 (B) — the 30 firearms renamed to maker + model. Rebuilding a pack renames the compendium
+  // and nothing already in a world, so this is the GM-only `ready` pass that renames world Items,
+  // embedded copies and the generated "Fire <weapon>" abilities. Registered after registerEquipmentUse
+  // so a weapon armed on this load is already there when the rename walks the actor.
+  registerWeaponRename();
+  // 0.3.134 (H) — Field Triage is Medic-only now. The compendium and the pregens already are; this
+  // is the GM-only `ready` pass that takes the 0.3.130 copies off existing non-Medic sheets.
+  registerFieldTriage();
+  // 0.3.134 (I/J) — the shared "Spend an immediate recovery?" prompt, and the two cards that use it.
+  // registerRecoveryPrompt first: it owns the socket both of them answer on.
+  registerRecoveryPrompt();
+  registerRally();
   registerPayloadUse({ getWiredState });
   registerFreeStrikeStrip();
   const { isCasterClass } = registerCasterChrome({ isCyborg, casterClasses: VEIL_CASTER_CLASSES });
