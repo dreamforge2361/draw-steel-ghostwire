@@ -358,7 +358,9 @@ console.log("\nE) Hurl Element renders the element you picked");
     "elementOfAbility reads the type off the card");
   note(elementOfAbility({ system: { power: { effects: {} } } }) === null, "…and returns null rather than guessing");
   const hitFxCode = code(read("scripts/hit-fx.mjs"));
-  note(/const element = elementOfAbility\(ability\)/.test(hitFxCode), "the fire point reads the element");
+  // 0.3.135 (2) widened this to `elementForFx(ability, attunementOf(...))` — the card first, the
+  // caster's attunement as the fallback — so the assertion follows the seam rather than the old call.
+  note(/const element = elementForFx\(ability, attunementOf\(/.test(hitFxCode), "the fire point reads the element");
   note(/playHitFx\(kind, \{ from, at, name: ability\?\.name \?\? "", element \}\)/.test(hitFxCode), "…and hands it to playHitFx");
   note(/element: payload\.element/.test(hitFxCode), "…and the relay carries it, so the whole table sees one colour");
   note(/element: type \|\| null/.test(code(read("scripts/elementalist.mjs"))), "Elemental Shaping passes its own element too");

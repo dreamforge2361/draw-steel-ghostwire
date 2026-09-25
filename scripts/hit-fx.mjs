@@ -67,7 +67,7 @@ import {
   preloadFxTextures, strokeArc, strokeCircle, strokePath, strokeQuad,
 } from "./fx-canvas.mjs";
 
-import { elementFx, elementOfAbility } from "./elements.mjs";
+import { elementFx, elementForFx, elementOfAbility } from "./elements.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.HitFx";
@@ -330,6 +330,17 @@ export function hasDamageEffect(system) {
 /* ============================================ Foundry registration */
 
 const gearFlags = item => item?.flags?.[MODULE_ID]?.gear ?? item?.getFlag?.(MODULE_ID, "gear") ?? null;
+
+/**
+ * The caster's Elementalist attunement, as the 0.3.135 (2) colour fallback.
+ *
+ * Read by flag name rather than imported from scripts/elementalist.mjs, because **that file already
+ * imports this one** (`playHitFx`) and an import cycle here would resolve to `undefined` at load
+ * depending on which module Foundry reaches first. `tools/wave-03135-smoke.mjs` asserts this literal
+ * against `ATTUNEMENT_FLAG`, so the two cannot drift apart silently.
+ */
+const attunementOf = actor =>
+  String(actor?.getFlag?.(MODULE_ID, "attunement") ?? actor?.flags?.[MODULE_ID]?.attunement ?? "");
 
 const trace = (...args) => {
   if (CONFIG?.debug?.ghostwireHitFx) console.debug(`${MODULE_ID} | hit FX |`, ...args);
@@ -1045,7 +1056,11 @@ export function registerHitFx() {
       // 0.3.134 (E) — the element, when the card carries one. Hurl Element and its eight siblings are
       // typed to the hero's attunement before the roll, and a summon's strike is typed to the element
       // it was called with, so the damage type on the card is the truth about what colour this is.
-      const element = elementOfAbility(ability);
+      //
+      // 0.3.135 (2) — and when the card says nothing, the **caster's attunement** does. A homebrew
+      // Hurl Element, or one the attunement sync has not reached, is still the element the player
+      // picked rather than arcane blue.
+      const element = elementForFx(ability, attunementOf(ability?.actor ?? ability?.parent ?? null));
       trace(`${ability?.name ?? kind} -> ${kind}${element ? ` (${element})` : ""}`, { from, targets: at.length });
       playHitFx(kind, { from, at, name: ability?.name ?? "", element });
       return;                                      // one attack, one bang
