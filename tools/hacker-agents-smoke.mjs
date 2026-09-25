@@ -102,9 +102,12 @@ ok(actorWiredState({ flags: { "draw-steel-ghostwire": { wired: { state: "linked"
 ok(actorWiredState({ statuses: { has: id => id === "ghostwire-overlay" } }) === "overlay", "status Overlay");
 ok(actorWiredState({ statuses: { has: id => id === "ghostwire-jacked-in" } }) === "jackedIn", "status Jacked In");
 
-console.log("\n3) 12 Agent Actors, distinct from sprites");
+console.log("\n3) 15 Agent Actors, distinct from sprites");
 const agentFiles = readdirSync(AGENT_DIR).filter(f => f.endsWith(".json") && f !== "_folder.json");
-ok(agentFiles.length === 12, `12 agent JSON files (${agentFiles.length})`);
+// 0.3.139 (A): 12 archetype Actors + 3 Special Agent bands. The Special rows are checked
+// separately below — they are deliberately *not* in ARCHETYPES, because they are never offered
+// in the Compile Agent picker.
+ok(agentFiles.length === 15, `15 agent JSON files: 12 archetype + 3 Special (${agentFiles.length})`);
 const spriteDsids = new Set(
   readdirSync(SPRITE_DIR).filter(f => f.endsWith(".json") && f !== "_folder.json")
     .map(f => read(join(SPRITE_DIR, f)).flags?.["draw-steel-ghostwire"]?.dsid),
@@ -135,7 +138,22 @@ for (const arch of ARCHETYPES) {
     ok(typeof lang.GHOSTWIRE.Summons.Agents?.[key.split(".").pop()]?.Name === "string" || key.startsWith("GHOSTWIRE.Summons.Agents."), `${dsid} lang name key`);
   }
 }
-ok(new Set(agentDsids).size === 12, "12 unique agent dsids");
+ok(new Set(agentDsids).size === 12, "12 unique archetype agent dsids");
+for (const band of BANDS) {
+  const dsid = `agent-special-${band}`;
+  const path = join(AGENT_DIR, `${dsid}.json`);
+  ok(existsSync(path), `${dsid} exists`);
+  if (!existsSync(path)) continue;
+  const json = read(path);
+  const flags = json.flags?.["draw-steel-ghostwire"] ?? {};
+  ok(flags.kind === "agent" && flags.archetype === "special" && flags.hybridTier === band && flags.dsid === dsid,
+    `${dsid} kind/archetype/band/dsid`);
+  ok(!ARCHETYPES.includes(flags.archetype), `${dsid} is not one of the four picker archetypes`);
+  ok(!spriteDsids.has(dsid), `${dsid} is not a sprite SKU`);
+  ok(json.type === "npc" && json.folder === "gwSummonsAgents0", `${dsid} npc in Agents folder`);
+  agentDsids.push(dsid);
+}
+ok(new Set(agentDsids).size === 15, "15 unique agent dsids with the Special rows");
 ok(!agentDsids.some(d => spriteDsids.has(d)), "no shared sprite dsids");
 
 const spike = read(join(AGENT_DIR, "agent-spike-minor.json"));

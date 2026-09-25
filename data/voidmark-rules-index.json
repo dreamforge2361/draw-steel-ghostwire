@@ -92,13 +92,13 @@
     ]
   },
   "entityCounts": {
-    "ability": 418,
+    "ability": 420,
     "ritual": 46,
-    "summon": 68
+    "summon": 74
   },
-  "chunkCount": 2256,
+  "chunkCount": 2275,
   "audienceCounts": {
-    "player": 2228,
+    "player": 2247,
     "director": 28
   },
   "chunks": [
@@ -1850,7 +1850,7 @@
       "heading": "Grades",
       "kind": "rules",
       "audience": "player",
-      "text": "| Grade | ¥ | Body Integrity | Flavor |\n|---|---|---|---|\n| **Salvage / Used** | Cheap | ×**1.5** of Standard | Black-clinic, ex-corpse; brutal on flesh |\n| **Standard / Clinic** | Baseline | Baseline | Factory-grade default |\n| **Soft / Bioware** | Expensive | ×**0.4** of Standard (**round up**) | Vat-cultured; mage-tolerable at high cost/Availability |\n\n**Representative Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires/Encephalon 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1."
+      "text": "| Grade | ¥ | Body Integrity | Flavor |\n|---|---|---|---|\n| **Salvage / Used** | Cheap | ×**1.5** of Standard | Black-clinic, ex-corpse; brutal on flesh |\n| **Standard / Clinic** | Baseline | Baseline | Factory-grade default |\n| **Soft / Bioware** | Expensive | ×**0.4** of Standard (**round up**) | Vat-cultured; mage-tolerable at high cost/Availability |\n\n**Representative Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1."
     },
     {
       "id": "09-chrome-body-integrity#location-slots#5",
@@ -1860,7 +1860,7 @@
       "heading": "Location slots",
       "kind": "rules",
       "audience": "player",
-      "text": "| Location | Typical | Slot cap |\n|---|---|---|\n| Head / Neural | Datajacks, skillwires, encephalon, memory | 3 |\n| Eyes / Optics | Cyber-eyes, optical suites, targeting | 1 |\n| Ears / Aural | Cyber-ears, audio suites | 1 |\n| Torso / Core | Lacing, dermal, filtration, secondary hearts | 3 |\n| Arms / Hands | Cyberlimbs, implant weapons, tool-hands | 2 per arm |\n| Legs / Locomotion | Cyberlegs, jacks, running gear | 2 per leg |\n| Nervous system | Wired reflexes, reaction enhancers, governors | **1** |\n\nSlots are a hard ceiling independent of Integrity. Large implants may consume a whole location."
+      "text": "| Location | Typical | Slot cap |\n|---|---|---|\n| Head / Neural | Datajacks, Skillwires, Encephalon, memory | 3 |\n| Eyes / Optics | Cyber-eyes, optical suites, targeting | 1 |\n| Ears / Aural | Cyber-ears, audio suites | 1 |\n| Torso / Core | Lacing, dermal, filtration, secondary hearts | 3 |\n| Arms / Hands | Cyberlimbs, implant weapons, tool-hands | 2 per arm |\n| Legs / Locomotion | Cyberlegs, jacks, running gear | 2 per leg |\n| Nervous system | Wired reflexes, reaction enhancers, governors | **1** |\n\nSlots are a hard ceiling independent of Integrity. Large implants may consume a whole location."
     },
     {
       "id": "09-chrome-body-integrity#magic-erosion#6",
@@ -1950,7 +1950,7 @@
       "heading": "Standard / Clinic",
       "kind": "rules",
       "audience": "player",
-      "text": "| Implant | Location | BI | ¥ | Avail | Effect |\n|---|---|---:|---:|---|---|\n| Datajack | Head / Neural | 1 | 500 | Street | Direct-neural Wired / device interface |\n| Vocal Modulator | Head / Neural | 1 | 800 | Professional | Edge on Deception tests |\n| Implant Weapon (Spur) | Arms / Hands | 1 | 1,000 | Restricted | Concealed, non-disarmable forearm spur (grants Spur Strike) |\n| Internal Air / Filtration | Torso / Core | 2 | 1,500 | Professional | Poison immunity 2; edge vs inhaled gases / toxins (manual) |\n| Cyber-Ears (audio suite) | Ears / Aural | 2 | 1,800 | Professional | Edge on Perception (does not stack with Cyber-Eyes) |\n| Cyber-Eyes (optical suite) | Eyes / Optics | 2 | 2,000 | Professional | Edge on Perception; ignore darkness / smoke banes on strikes (manual) |\n| Running Gear | Legs / Locomotion | 3 | 2,500 | Professional | +1 speed; edge on Athletics |\n| Reaction Enhancer | Nervous system | 3 | 3,500 | Restricted | +1 square when you shift with Disengage |\n| Dermal Plating | Torso / Core | 4 | 4,000 | Restricted | Damage immunity 2 (all); visible chrome social cost |\n| Skillwires / Encephalon | Head / Neural | 4 | 5,000 | Restricted | Loaded skillsoft edge (default Repair; swap per soft) |\n| Muscle / Bone Lacing | Torso / Core | 5 | 6,000 | Restricted | +1 stability; edge on Athletics |\n| Cyberlimb (Arm) | Arms / Hands | 5 | 7,500 | Restricted | Limb replace / mount; +1 damage on melee weapon abilities |\n| Wired Reflexes | Nervous system | 6 | 12,000 | Military | +1 speed; +2 squares on Disengage shifts; hardest slot |\n\n**13 Standard SKUs** priced from the Chrome pack."
+      "text": "| Implant | Location | BI | ¥ | Avail | Effect |\n|---|---|---:|---:|---|---|\n| Datajack | Head / Neural | 1 | 500 | Street | Direct-neural Wired / device interface |\n| Vocal Modulator | Head / Neural | 1 | 800 | Professional | Edge on Deception tests |\n| Implant Weapon (Spur) | Arms / Hands | 1 | 1,000 | Restricted | Concealed, non-disarmable forearm spur (grants Spur Strike) |\n| Internal Air / Filtration | Torso / Core | 2 | 1,500 | Professional | Poison immunity 2; edge vs inhaled gases / toxins (manual) |\n| Cyber-Ears (audio suite) | Ears / Aural | 2 | 1,800 | Professional | Edge on Perception (does not stack with Cyber-Eyes) |\n| Cyber-Eyes (optical suite) | Eyes / Optics | 2 | 2,000 | Professional | Edge on Perception; ignore darkness / smoke banes on strikes (manual) |\n| Running Gear | Legs / Locomotion | 3 | 2,500 | Professional | +1 speed; edge on Athletics |\n| Reaction Enhancer | Nervous system | 3 | 3,500 | Restricted | +1 square when you shift with Disengage |\n| Dermal Plating | Torso / Core | 4 | 4,000 | Restricted | Damage immunity 2 (all); visible chrome social cost |\n| Skillwires | Head / Neural | 4 | 5,000 | Restricted | Soft socket: run skillsofts (E1–E2 one, E3 two, E4 three). No edge of its own |\n| Muscle / Bone Lacing | Torso / Core | 5 | 6,000 | Restricted | +1 stability; edge on Athletics |\n| Cyberlimb (Arm) | Arms / Hands | 5 | 7,500 | Restricted | Limb replace / mount; +1 damage on melee weapon abilities |\n| Wired Reflexes | Nervous system | 6 | 12,000 | Military | +1 speed; +2 squares on Disengage shifts; hardest slot |\n\n**13 Standard SKUs** priced from the Chrome pack."
     },
     {
       "id": "09-chrome-body-integrity#soft-bioware#15",
@@ -1973,7 +1973,27 @@
       "text": "Black-clinic and ex-corpse grade: **cheaper ¥**, **×1.5** Standard BI (Pass A), worst magic erosion (−1 cap per 1 BI). There are **no Salvage SKU rows** in the Chrome pack yet — Directors who need a used Datajack or scavenged Wired Reflexes treat ¥ and Availability as **PROVISIONAL** (cheap / Street-leaning) and apply the Integrity multiplier strictly."
     },
     {
-      "id": "09-chrome-body-integrity#provisional-gaps-still-unpublished#17",
+      "id": "09-chrome-body-integrity#skillwires-and-skillsofts#17",
+      "file": "09-chrome-body-integrity.md",
+      "source": "docs/raw/09-chrome-body-integrity.md",
+      "chapter": "Chrome & Body Integrity",
+      "heading": "Skillwires and skillsofts",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Skillwires** is a socket, not a skill. Installed on its own it does nothing: BI 4, ¥5,000, Restricted, Head / Neural, and an empty co-processor waiting for a chip. What it does is let you run **skillsofts**.\n\nA **skillsoft** is a chip you buy, carry and own like any other gear. It sits in inventory doing nothing until you **load** it.\n\n- **Active softs by echelon.** **E1–E2: one.** **E3: two.** **E4: three.** Own as many chips as you can pay for — only the active ones apply.\n- **Loading, unloading and swapping** is a **short field action, out of combat only**. It is **not** a §Craft Project, and you **cannot** swap a soft in the middle of a fight. Decide before the door opens.\n- **A matching active soft auto-applies its edge.** If the soft names the skill you are rolling, the edge is already on the Power Roll or Project. There is no card toggle to remember.\n- **Chrome edges do not stack with other chrome edges on the same skill.** Cyber-Eyes and a Clearsight Soft are still one edge on Perception.\n- **Skillwires is not the Hacker's Encephalon / Cerebral Datastore.** That is a separate Wired implant with its own Bandwidth benefits. The two never merge, and a Hacker who wants both buys both.\n\n**The shipped catalog** (Ghostwire Matrix › **Skillsofts**):"
+    },
+    {
+      "id": "09-chrome-body-integrity#skillwires-and-skillsofts#18",
+      "file": "09-chrome-body-integrity.md",
+      "source": "docs/raw/09-chrome-body-integrity.md",
+      "chapter": "Chrome & Body Integrity",
+      "heading": "Skillwires and skillsofts",
+      "kind": "rules",
+      "audience": "player",
+      "text": "| Soft | What it helps |\n|---|---|\n| **Targeting Soft** | Gunnery — your own mounts, Rigged Fire, and fire through a linked drone |\n| **Evade Soft** | Piloting / Driving / Rigging while evading or pulling a Handling maneuver |\n| **Clearsight Soft** | Perception and sensor-lock rolls, in the meat or through a linked drone |\n| **Repair Tick Soft** | Between scenes, one linked drone slowly regains Integrity |\n| **Crafting Soft** | Crafting, fabricate and §Craft Project rolls |\n| **Core skill softs** | One chip per skill: Athletics, Acrobatics, Stealth, Medicine, Firearms, Heavy Weapons, Melee, Demolitions, Repair, Electronics, Hacking, Security Systems, Cybertech, Driving, Piloting, Rigging, Persuasion, Deception, Intimidation, Insight, Navigation, Streetwise |\n\n**There are no autosofts.** Softs used to be RCC software that filled a console's mod slots and loaded with a downtime Project. They are not any more: every soft is a skillsoft on Skillwires. An **RCC** still commands drones and still has its published mod slots — it just has nothing in the catalog to put in them yet, and it never takes a soft."
+    },
+    {
+      "id": "09-chrome-body-integrity#provisional-gaps-still-unpublished#19",
       "file": "09-chrome-body-integrity.md",
       "source": "docs/raw/09-chrome-body-integrity.md",
       "chapter": "Chrome & Body Integrity",
@@ -1983,7 +2003,7 @@
       "text": "Mark these **PROVISIONAL** until a later chrome / economy pass cites a source:\n\n| Gap | Notes |\n|---|---|\n| **All Salvage ¥ + Availability** | Grade rule locked; no pack SKUs |\n| **Soft variants** of Wired Reflexes, Reaction Enhancer, Muscle/Bone Lacing, Dermal Plating, Cyberlimb, Implant Weapon, Running Gear, Skillwires, Internal Air | Only the six Soft rows above have shipped |\n| **Chrome Package** bundle ¥ + total Integrity | Six signature lines named; totals open |\n| **Cyborg Frame Module** ¥ + hardpoint caps | Deferred: may later **retag** chrome SKUs — do not invent a separate pack yet |\n| Soft ¥ multiplier as final Appendix lock | Provisional 4× + one Avail step; revisit when Soft prices are appendix-locked |"
     },
     {
-      "id": "09-chrome-body-integrity#class-hooks-short#18",
+      "id": "09-chrome-body-integrity#class-hooks-short#20",
       "file": "09-chrome-body-integrity.md",
       "source": "docs/raw/09-chrome-body-integrity.md",
       "chapter": "Chrome & Body Integrity",
@@ -1993,7 +2013,7 @@
       "text": "- **Operator / Scout** — natural heavy chrome; class edges on Integrity efficiency / combat implants.\n- **Wrench / Medic** — installers/menders (hardware vs flesh).\n- **Hacker** — attack others' chrome across the Wired more than wear it.\n- **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.\n- **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.\n- **Cyborg** — **included**: Body Integrity **25**, living Chrome from this pack, Arcane Severance + Cortical Firewall unchanged."
     },
     {
-      "id": "09-chrome-body-integrity#cyborg-frame-modules-stub-deferred#19",
+      "id": "09-chrome-body-integrity#cyborg-frame-modules-stub-deferred#21",
       "file": "09-chrome-body-integrity.md",
       "source": "docs/raw/09-chrome-body-integrity.md",
       "chapter": "Chrome & Body Integrity",
@@ -2070,7 +2090,7 @@
       "heading": "Host families",
       "kind": "rules",
       "audience": "player",
-      "text": "| Host family | Status | Notes |\n|---|---|---|\n| **Weapons** | **Published** | Core set in Gear master **§3G** (harvested below) |\n| **Armor / shields** | **Published** *(wearable)* | Gear master **§2F** (harvested below). Hosts: `armor` and `shield`. **No wearable mod adds Stamina** |\n| **Gadgets** | **Published** | Gear master **§1H** (harvested below). Hosts: `comms`, `sensors`, `bne-mechanical`, `bne-electronic`, `survival`, `wired` |\n| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below). Hosts: `vehicle` and `drone` |\n| **Decks / RCCs** | **Published** (software) | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. Play rules: `21` |\n\nA gadget you bought from Category 1 is a **host** when a published family exists for its family tag — and as of G2 every Category-1 family has one. You still cannot slot a row this chapter does not print: §1H is the menu, and Invent a Mod is the only other door.\n\n---"
+      "text": "| Host family | Status | Notes |\n|---|---|---|\n| **Weapons** | **Published** | Core set in Gear master **§3G** (harvested below) |\n| **Armor / shields** | **Published** *(wearable)* | Gear master **§2F** (harvested below). Hosts: `armor` and `shield`. **No wearable mod adds Stamina** |\n| **Gadgets** | **Published** | Gear master **§1H** (harvested below). Hosts: `comms`, `sensors`, `bne-mechanical`, `bne-electronic`, `survival`, `wired` |\n| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below). Hosts: `vehicle` and `drone` |\n| **Decks / RCCs** | **Published** (software) | Slots filled by **suites** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. **Softs are not console software** — they are skillsofts on the **Skillwires** implant (`09`). Play rules: `21` |\n\nA gadget you bought from Category 1 is a **host** when a published family exists for its family tag — and as of G2 every Category-1 family has one. You still cannot slot a row this chapter does not print: §1H is the menu, and Invent a Mod is the only other door.\n\n---"
     },
     {
       "id": "10-mods#echelon-availability-gear-grade#8",
@@ -2400,7 +2420,7 @@
       "heading": "Programs and payloads (pointer)",
       "kind": "rules",
       "audience": "player",
-      "text": "- **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.\n- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: **The Wire** (`21`) (Deck software: suites vs payloads). This is the one exception to \"Consumables never have mod slots\": a payload *fills* a slot, it never has one.\n\n---"
+      "text": "- **Programs / suites** occupy deck slots (Category 4B+); §Craft Project skill = **Hacking**. **Skillsofts** are not mods at all: they load on **Skillwires** as a field action out of combat (`09`).\n- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: **The Wire** (`21`) (Deck software: suites vs payloads). This is the one exception to \"Consumables never have mod slots\": a payload *fills* a slot, it never has one.\n\n---"
     },
     {
       "id": "10-mods#invent-a-mod-v1-locked#41",
@@ -5310,7 +5330,7 @@
       "heading": "The Hacker",
       "kind": "rules",
       "audience": "player",
-      "text": "The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in **The Wire** (`21`). **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.\n\n---"
+      "text": "The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in **The Wire** (`21`). **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Special Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.\n\n---"
     },
     {
       "id": "19-hacker#class-chassis#2",
@@ -5410,20 +5430,60 @@
       "heading": "Agents -- Deck Daemons (not Sprites)",
       "kind": "rules",
       "audience": "player",
-      "text": "> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.\n\n> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU."
+      "text": "> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund."
     },
     {
-      "id": "19-hacker#level-1-10-progression-table#12",
+      "id": "19-hacker#special-agent-the-purpose-built-daemon#12",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Special Agent -- the purpose-built daemon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Compile Agent hands you one of four stock archetypes. **Special Agent** hands you none of them: you compile a daemon written for one job, and the dice decide how much of that job it can do.\n\n**The order is the whole ability. Do not reorder it.**\n\n1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.\n2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.\n3. **Now say what it is for.** One sentence, written knowing the budget — “cut the cameras on floor 6”, “hold the maglock open and scream if anyone comes”.\n4. **It manifests with the cap written on it.** The Agent's description opens with the budget and your sentence: **Actions (2): cut the cameras on floor 6**. It does that and nothing else, and it stops when the Actions are spent.\n\n**Cost.** **3 Bandwidth in combat.** Out of combat it costs nothing, like the rest of your Programs.\n\n**Cap, Stamina and cleanup.** A Special Agent counts against your Agent cap like any other Agent, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced.\n\n**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different Agent."
+    },
+    {
+      "id": "19-hacker#special-agent-the-purpose-built-daemon#13",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Special Agent -- the purpose-built daemon",
+      "kind": "rules",
+      "audience": "player",
+      "text": "> **Special Agent** *(Class Feature Signature — 3 Bandwidth in combat, free out of combat, Overlay or Jacked In)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the Agent compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The Agent manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose.\n\n> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU. **Use Special Agent** and the order flips: the card rolls first, the tier sets the action budget, and only then does Ghostwire ask what the Agent is for — the answer is written onto the summoned Actor as `Actions (N): …`."
+    },
+    {
+      "id": "19-hacker#wired-firefight-round-by-round-checklist#14",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Wired firefight -- round-by-round checklist",
+      "kind": "rules",
+      "audience": "player",
+      "text": "The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Hacker actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.\n\n**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In — **Linked refuses** an Agent compile), your **Bandwidth**, your **deck** and what is installed on it, your **Agent cap**, and any **Trace Alert** you carried in. Your meat body still stands where you left it, and it can still be shot.\n\n**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. Skip it when you already know the room.\n\n**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. This is what turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Almost nothing downstream works well without it: Seize Control needs a named asset, and a purpose-built Agent needs a job worth naming.\n\n**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A held asset is the difference between an Agent that *watches* a door and an Agent that *holds* one.\n\n**4. Compile — one of the two, never both in one action.**"
+    },
+    {
+      "id": "19-hacker#wired-firefight-round-by-round-checklist#15",
+      "file": "19-hacker.md",
+      "source": "docs/raw/19-hacker.md",
+      "chapter": "The Hacker",
+      "heading": "Wired firefight -- round-by-round checklist",
+      "kind": "rules",
+      "audience": "player",
+      "text": "- **Compile Agent** (**3 Bandwidth** in combat): a stock **Probe / Spike / Daemon / Watchdog**. You know what it does before you roll.\n- **Special Agent** (**3 Bandwidth** in combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nOut of combat, neither costs anything. Either way you cannot exceed your Agent cap.\n\n**5. Command — the maneuver that makes the roster useful.** Use **Compile Agent** while at cap and it commands instead of compiling. Minor-band Agents act on your turn; intermediate Agents need a command each round to act that round; advanced Agents take their own turn. A **Special Agent** needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** **Decompile Agent** dismisses one Agent or the whole roster — free maneuver, no Bandwidth back. The roster decompiles on its own when the encounter ends. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. **Trace Alert does not decompile with your Agents.** It follows you out of the net and into the next scene.\n\n**Technomancer overlay.** Swap Bandwidth for Resonance, Agent for sprite, and Compile Agent / Special Agent for **Compile Sprite / Special Sprite** (`20`). Steps 0–6 are otherwise identical, with one difference: a Technomancer may be **Linked** and still compile, because sprites are Resonance, not software."
+    },
+    {
+      "id": "19-hacker#level-1-10-progression-table#16",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
       "heading": "Level 1-10 Progression Table",
       "kind": "rules",
       "audience": "player",
-      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
+      "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Special Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |"
     },
     {
-      "id": "19-hacker#level-1-10-progression-table#13",
+      "id": "19-hacker#level-1-10-progression-table#17",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5433,7 +5493,7 @@
       "text": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **10** | Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability) | Characteristic Increase - Perk (choice) - Skill | -- |"
     },
     {
-      "id": "19-hacker#core-class-features-non-subclass#14",
+      "id": "19-hacker#core-class-features-non-subclass#18",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5443,7 +5503,7 @@
       "text": "- **Ghost Step** (3rd) -- Free Triggered Action, no Bandwidth cost. Trigger: a Track 2 target (ICE, hostile AI, rival decker) targets you directly, OR the Alert Track increases from your own action. Effect: choose one -- immediately use a Maneuver-cost Matrix Verb for free, or cancel the Alert increase entirely (once per encounter).\n- **Exploit the Breach** (4th) -- Passive. Whenever your Deep Scan lands a high (17+), the target has a marked exploitable weakness until the end of the encounter (or until re-scanned). The next Track 1/Track 2 Wired-based hit against that target from you or an ally gains an edge, and a Track 2 hit also deals +2 Integrity damage. Only one target can be marked at a time.\n- **Improved Cyberdeck** (4th) -- Passive. +1 Intrusion Roll Modifier and +1 Integrity Damage Bonus at every result band, on top of whatever deck you're currently running. Granted by the class, not the deck.\n- **Dual Boot** (6th) -- Passive enabling a once-per-encounter Free Triggered Action: apply a second owned deck's Roll Modifier/Damage Bonus to a single Program/Verb/signature roll instead of your equipped deck's, whichever is better. Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Reach, and Ghost Distance are unaffected -- only the roll/damage numbers swap.\n- **Bandwidth Overclock** (7th) -- Passive. Base income +1->+2 per turn; cap 6->8 x Echelon.\n- **Ghost Protocol** (7th) -- Passive with a pre-encounter Free Triggered use. If you had at least one uninterrupted round of Overlay/Jacked-In access before initiative (Director’s call), you and your allies get an edge on your first Power Roll of the encounter, and you may use one free Matrix Verb or Deep Scan before the first turn begins.\n- **Root Access** (9th) -- Passive. Dual Boot becomes twice per encounter; Improved Cyberdeck's bonus rises to +2/+2 at every result band (replacing, not stacking with, the 4th-level +1/+1).\n- **Ghost in the Machine** (10th, epic capstone) -- Free Triggered Action, once per encounter. Treat any Power Roll you just made as a natural 19 if the actual result was lower -- can turn a low/middle into a guaranteed high (17+), and also triggers the natural-19/20 bonus Bandwidth.\n- **Infinite Loop** (10th) -- Passive. Bandwidth no longer fully resets between encounters -- retain Echelon's worth (4 at 10th level) instead of dropping to 0. The first 2 points of cap overflow in a round are retained for one round instead of lost outright.\n- **Borrowed Access** (10th) -- Main Action, 3 Bandwidth. Choose an ally within Reach who is Jacked In/Overlaid; they immediately use one Program you know costing 5 Bandwidth or less, using your deck's stats, without spending their own action -- but it costs your Main Action and your Bandwidth."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#15",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#19",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5453,7 +5513,7 @@
       "text": "The Hacker's offensive specialist: hard, fast, single-target Intrusion strikes that punish Track 2 targets and amplify the whole team's damage against ICE, hostile deckers, and hostile AIs."
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#16",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#20",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5463,7 +5523,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Overclocked Damage (passive) | +1 flat Integrity damage on your own successful Track 2 hits |\n| 1 | Cascade Strike (Triggered Action, 1 Bandwidth) | Trigger: any Track 2 target takes Integrity damage from anyone. Effect: add +2 flat Integrity damage to that hit |\n| 2 | Overclocked Strikes (passive) | Your own-hit bonus rises from +1 to +2 (the ally-hit trigger stays +2) |\n| 3 | Cascade Failure (Triggered Action, 2 Bandwidth) | Trigger: you drop a Track 2 target to 0 Integrity. Effect: another Track 2 target within Reach immediately takes Integrity damage equal to your deck's low-band Damage Bonus |\n| 5 | No Second Chances (passive) | Your 1st-level triggered action can also apply Exploit the Breach's marked-weakness edge to the same hit, even if you didn't scan the target |\n| 6 | Overwhelm ICE (Main Action, 4 Bandwidth) | Power Roll, Logic. low (≤11): half low-band Damage Bonus (rounded down), Alert up. middle (12–16): full middle-band bonus + your 1st-level passive. high (17+): full high-band bonus + passive + bane on target's next roll |\n| 7 | Hair Trigger (passive) | Your 1st-level triggered action can be used twice per round (still 1 Bandwidth each) |\n| 8 | Total Breach (passive) | Own-hit bonus rises to +3; dropping a Track 2 target to 0 Integrity refunds 2 Bandwidth |"
     },
     {
-      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#17",
+      "id": "19-hacker#subclass-disruptor-striker-damage-amplification#21",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5473,7 +5533,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 9 | Zero Day (Main Action, 6 Bandwidth) | Power Roll with an edge, Logic. Always deals high-band Damage Bonus damage regardless of roll result (a low roll still raises Alert) + passive bonus. On an actual high (17+) roll, target also can't act on its next turn |"
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#18",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#22",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5483,7 +5543,7 @@
       "text": "A specialist in seizing and holding fixed systems, turning nodes into weapons and tripwires against anyone who tries to take them back."
     },
     {
-      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#19",
+      "id": "19-hacker#subclass-controller-lockdown-node-control-holding-the-sysop#23",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5493,7 +5553,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Extra Node (passive) | Hold 1 extra node beyond your deck's normal limit |\n| 1 | Lockout (Triggered Action, 1 Bandwidth) | Trigger: an enemy attempts to retake/break your hold on a seized node. Effect: apply a bane to that attempt |\n| 2 | Redundant Systems (passive, enabling a once-per-encounter Free Triggered Action) | If you lose control of a held node, spend 1 Bandwidth to attempt re-seizing it with a Power Roll (Logic), no Maneuver/Main Action cost, once per encounter |\n| 3 | Chokepoint (Main Action, 3 Bandwidth) | No roll. Until your next turn, any Track 2 target that breaches/retakes/routes through a node you hold takes a bane and alerts you immediately, even if you're not Jacked In |\n| 5 | Wider Net (passive) | Extra-node count rises from 1 to 2 |\n| 6 | Puppet Strings (Main Action, 4 Bandwidth) | No roll. Use a held interactive node's normal function (turret, camera, drone, smartlink) once, without counting against its own action economy |\n| 7 | Iron Grip (passive) | 1st-level triggered action's single bane becomes a double-bane |\n| 8 | Total Awareness (passive) | You always know when a held node is targeted for retake/breach/disruption, even off-map or out of Reach, and may spend a Maneuver to act on it as though it were in Reach |\n| 9 | Master Sysop (Main Action, 6 Bandwidth) | Power Roll (Logic), one roll vs up to 3 unheld nodes within Reach. low (≤11): seize 1 (your choice), Alert up. middle (12–16): seize 2. high (17+): seize all 3, none count against your held-node limit for the rest of the encounter |"
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#20",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#24",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5503,7 +5563,7 @@
       "text": "The Hacker whose value extends to the whole team, feeding allies edges and softening the blows of Wired-side combat before they reach flesh."
     },
     {
-      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#21",
+      "id": "19-hacker#subclass-support-tank-anchor-ally-protection-guardian-angel-#25",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5513,7 +5573,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| 1 | Wired Guard (passive) | +1 flat defense bonus to allies within Reach who are Jacked In/Overlaid, vs Track 2 attacks |\n| 1 | Dampen (Triggered Action, 1 Bandwidth) | Trigger: a nearby Jacked-In ally takes a Track 2 hit. Effect: -2 flat damage reduction on that hit |\n| 2 | Watchful Relay (passive) | Defense bonus rises from +1 to +2 |\n| 3 | Signal Boost (Maneuver, 2 Bandwidth) | No roll. One ally within Reach gains an edge on their next Power Roll before your next turn (Wired or physical) |\n| 5 | Standing Watch (passive) | Dampen can now trigger off a Track 2 hit against ANY ally in Reach (not just Jacked In/Overlaid); -2 reduction unchanged |\n| 6 | Emergency Patch (Main Action, 4 Bandwidth) | No roll. Target ally (or self) regains Stamina = 2 + Echelon; if Jacked In, also cancels the next biofeedback bleed-through this encounter |\n| 7 | Anchor Point (passive) | Defense bonus rises to +3; allies in Reach who are Jacked In also gain your deck's Biofeedback Resistance as bonus resistance of their own |\n| 8 | Full Coverage (passive) | Dampen and Standing Watch's trigger cost 0 Bandwidth the first time each triggers per round (additional uses still cost 1) |\n| 9 | Guardian Angel in the Net (Main Action, 6 Bandwidth) | No roll. All allies in Reach who are Jacked In/Overlaid get double your defense bonus (currently +6) vs Track 2 attacks until your next turn, and biofeedback bleed-through is reduced by an additional flat 3 |"
     },
     {
-      "id": "19-hacker#chrome-a-hacker-runs#22",
+      "id": "19-hacker#chrome-a-hacker-runs#26",
       "file": "19-hacker.md",
       "source": "docs/raw/19-hacker.md",
       "chapter": "The Hacker",
@@ -5713,7 +5773,27 @@
       "text": "> **Resonance Mending** *(Class Feature Signature — the unique niche; see its own Deep Dive section below)*\n> *Keywords: Wired, Resonance, Healing · Type: **maneuver** at its base effect; a **main action** only when you enhance it and mend against resistance · Distance: touch, or Wired range for a jacked/networked target · Target: **self**, or one machine, drone, vehicle, piece of chrome, or a Cyborg*\n> **Effect:** Channel Resonance to **restore Stamina/Integrity** to a machine, drone, vehicle, **or a Cyborg** (base at 1st level), mend damaged chrome, or clear a mechanical/Wired condition (glitch, jam, suppression). This is the class's signature niche — the only healing in the game that works on Cyborgs and tech. **Base effect (free): the target regains Stamina/Integrity equal to one Recovery's worth** — a Cyborg target instead spends one of their own Recoveries at no Resonance cost. **No Power Roll is made at all unless you mend against resistance** (a hostile EW field or contested Wired space); when you do, **high (17+):** the mend lands in full and the target clears one minor condition as well. **middle (12–16):** the mend lands in full. **low (≤11):** the patch is unstable — after one round the target loses half of what was restored unless it is stabilized.\n>\n> **Enhance (spend Resonance):** mend at greater range or a second target, OR restore a wrecked machine/crashing Cyborg to minimal function.\n> *The tech-side counterpart to the Street-Priest's Lay On Hands — flesh-and-soul there, steel-and-code here. Full mechanics and comparison in its own Deep Dive, below.*\n\n---"
     },
     {
-      "id": "20-technomancer#heroic-abilities-cost-bands-1-through-11#20",
+      "id": "20-technomancer#special-sprite-the-purpose-built-shape#20",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Special Sprite -- the purpose-built shape",
+      "kind": "rules",
+      "audience": "player",
+      "text": "Compile Sprite hands you one of four stock archetypes. **Special Sprite** hands you none of them: you compile a shape woven for one job, and the dice decide how much of that job it can do.\n\n**The order is the whole ability. Do not reorder it.**\n\n1. **Roll first.** Make the Power Roll before you decide anything. No archetype menu, no description, no spend.\n2. **The tier is your action budget.** Low (≤11) = **1 Action**. Middle (12–16) = **2 Actions**. High (17+) = **3 Actions**.\n3. **Now say what it is for.** One sentence, written knowing the budget — “pull the wounded runner out of the doorway”, “jam the turret until we are past it”.\n4. **It manifests with the cap written on it.** The sprite's description opens with the budget and your sentence: **Actions (2): jam the turret until we are past it**. It does that and nothing else, and it stops when the Actions are spent.\n\n**Cost.** **3 Resonance in combat.** Out of combat it costs nothing.\n\n**Cap, Stamina and cleanup.** A Special Sprite counts against your sprite cap like any other sprite, and decompiles the same way — dismissed, at **0 Stamina**, or at the end of the encounter. Stamina is **10 + (Logic × Level)** at minor, **16 + (Logic × Level)** at intermediate, **22 + (Logic × Level)** at advanced. Recompile cannot reshape a Special Sprite: its purpose is not a menu entry.\n\n**No re-tasking.** The budget was bought with one roll for one job. To do a different job, compile a different sprite."
+    },
+    {
+      "id": "20-technomancer#special-sprite-the-purpose-built-shape#21",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Special Sprite -- the purpose-built shape",
+      "kind": "rules",
+      "audience": "player",
+      "text": "> **Special Sprite** *(Signature — 3 Resonance in combat, free out of combat)*\n>\n> **Effect:** Make the Power Roll **first**. On **low (≤11)** the sprite compiles with **1 Action**; on **middle (12–16)**, **2 Actions**; on **high (17+)**, **3 Actions**. Then describe its purpose in a sentence. The sprite manifests with `Actions (N): <purpose>` at the top of its description and may take only those Actions, on that purpose."
+    },
+    {
+      "id": "20-technomancer#heroic-abilities-cost-bands-1-through-11#22",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5723,7 +5803,7 @@
       "text": "Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+)."
     },
     {
-      "id": "20-technomancer#1-cost-band-chosen-at-1st-level#21",
+      "id": "20-technomancer#1-cost-band-chosen-at-1st-level#23",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5733,7 +5813,7 @@
       "text": "> **Recompile** *(1 Resonance, maneuver)*\n> Instant congregation flexibility. **Reshape a compiled sprite** (Data → Attack, Attack → Ward, etc.) to meet the moment, **or** instantly **recompile a just-destroyed sprite** at reduced power.\n> *The low-cost adaptability tool — the shaman who always has the right ghost to hand.*\n\n> **Harmonic Adjustment** *(1 Resonance, maneuver)*\n> Grant a compiled sprite **one** of: an **edge on its Power Roll this turn**; **a bane on every attack made against it until the end of your next turn** (Ghostwire has no defense score, so the sprite's guard is written as a bane on the attacker, the same way a Ward-sprite's screen is); or a **free shift** up to its full movement.\n> *A cheap nudge — the shaman correcting a ghost's aim or footing mid-fight.*"
     },
     {
-      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#22",
+      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#24",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5743,7 +5823,7 @@
       "text": "> **Swarm the Signal** *(3 Resonance, main action)*\n> **Every sprite you command** takes an action at once against a single target or objective — all attack one foe, all mend one machine, or all pile onto one node.\n> *The summoner's burst — the force-multiplier payoff.*\n\n> **Deep Communion** *(3 Resonance, main action to enter — the Jump-In)*\n> Project fully into the Wired (or into a machine/drone/Cyborg you're attuned to) with edges to Wired verbs and sprite command, using the system's own reach and senses. Your body goes inert/exposed and biofeedback applies if this is enhanced past cost 5. No control rig needed — the communion **is** the interface. *(Machine-Whisperer reduces this cost to 2 and grants a larger buffer — see its table, below.)*\n\n> **Resonance Cascade** *(3 Resonance, main action, Ranged 10)*\n> **Power Roll + Logic.** **low (≤11):** target one enemy; on hit, they take **Logic-score biofeedback damage** and are **dazed** until end of their next turn (EoNT). **middle (12–16):** target up to 2 enemies within 3 squares of each other; each takes Logic-score damage. **high (17+):** target up to 3 enemies within Ranged 10; each takes Logic-score damage and is dazed EoNT.\n> *A thin lash of hostile code that fans out the harder you focus it.*"
     },
     {
-      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#23",
+      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#25",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5753,7 +5833,7 @@
       "text": "> **Sprite Redirect** *(3 Resonance, free triggered)*\n> **Trigger:** an ally within Wired range or Ranged 10 is hit by a Wired attack. **Effect:** redirect the attack to one of your compiled sprites — the sprite absorbs the hit in the ally's place, taking the attack's damage and effects against its own Stamina. A sprite reduced to 0 Stamina this way decompiles.\n> *Throwing a code-spirit into the path of a bullet meant for a friend.*"
     },
     {
-      "id": "20-technomancer#5-cost-band-chosen-at-1st-level-biofeedback-risk-begins#24",
+      "id": "20-technomancer#5-cost-band-chosen-at-1st-level-biofeedback-risk-begins#26",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5763,7 +5843,7 @@
       "text": "> **Resonance Ward** *(5 Resonance, main action, sets a stance until your next turn)*\n> Weave a **zone of resonant protection** — deploy Ward-sprites and a standing harmonic. **Wired and EW attacks against allies inside the zone are made with a bane**, chrome and devices inside it are screened from hijack, and you may counter hostile intrusion in the area.\n> ***Biofeedback: easy Physique test.***\n\n> **Overclock** *(5 Resonance, main action)*\n> All compiled sprites gain **double actions** this turn (each acts twice). You pour your current into the congregation, forcing them into a temporary frenzy state.\n> ***Biofeedback: easy Physique test.***\n\n> **Trance Compile** *(5 Resonance, main action)*\n> Compile **two** new sprites in a single action (any archetype combination from your available list). Both act normally after compiling.\n> ***Biofeedback: easy Physique test.***\n\n> **Signal Weave** *(5 Resonance, main action, Ranged 10)*\n> All allies gain an **edge on Wired-based Power Rolls** for the rest of the round, and one enemy of your choice is **glitched** (bane on their next Power Roll). Tuning-forks laid across the battlefield's own signal.\n> ***Biofeedback: easy Physique test.***"
     },
     {
-      "id": "20-technomancer#7-cost-band-chosen-at-3rd-level-includes-total-resonance#25",
+      "id": "20-technomancer#7-cost-band-chosen-at-3rd-level-includes-total-resonance#27",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5773,7 +5853,7 @@
       "text": "*This band is headlined by **Total Resonance**. Full mechanics are broken out in their own section below — see \"Total Resonance — Deep Dive.\"*\n\n> **Total Resonance** — *see the full Deep Dive section below.*\n\n> **Cascade Failure** *(7 Resonance, main action, Ranged 10)*\n> All enemies in a 5-cube within Ranged 10 are potential targets: **you make one Power Roll + Logic.** **low (≤11):** only the nearest enemy is affected — takes **Logic × 2 biofeedback damage** and is **stunned, save ends**. **middle (12–16):** up to 2 enemies of your choice — each takes Logic × 2 damage AND is **stunned until end of their next turn**. **high (17+):** up to 4 enemies of your choice in the area — each takes Logic × 2 damage, is **stunned, save ends**, and their next Wired ability **fizzles**.\n> ***Biofeedback: medium Physique test.***\n\n> **Sprite Storm** *(7 Resonance, main action)*\n> Compile **3 sprites** in a single action (Sprite-Weaver may compile 4). All compiled sprites strike different targets within Ranged 10 as part of the same action.\n> *A storm of ghost-code, called all at once. **Biofeedback: medium Physique test.***\n\n> **Resonance Slam** *(7 Resonance, main action, Melee 1 or Ranged 5)*\n> Choose one mode: **Slam** — one target takes **Logic × 3 damage**, is pushed 3 squares, and is **weakened (save ends)**. **Slam Group** — 3-cube within Ranged 5; each enemy in the area takes Logic-score damage and is knocked **prone**.\n> ***Biofeedback: medium Physique test.***"
     },
     {
-      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#26",
+      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#28",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5783,7 +5863,7 @@
       "text": "> **The Choir Sings Together** *(9 Resonance, main action, Ranged 10, self and up to 2 allies)*\n> Each target gains **temporary Stamina equal to Persona × 2**, and one of your Machine-sprites channels a mending pulse: each target regains a Recovery.\n> *You harmonize the crew's biofeedback into a resonant chord that steels them. **Biofeedback: hard Physique test.***\n\n> **Rewire Reality** *(9 Resonance, main action, Ranged 5, one enemy or one machine/drone)*\n> If the target has **Persona < STRONG**, then for the rest of the encounter you treat it as one of your compiled sprites — it still takes its own turn in the round, but you may Command it as a maneuver as if it were a sprite. Otherwise, the target takes **Logic × 2 damage** instead.\n> *You briefly hijack a mind or machine into your congregation. **Biofeedback: hard Physique test.***\n\n> **Wired Silence** *(9 Resonance, main action, 5-cube within Ranged 10, Ranged only)*\n> Any Wired-based attack (Hacker, Wrench, Technomancer, or any device or drone) in the area cannot function for the next round. All compiled **hostile** sprites in the area decompile. All **friendly** sprites in the area drop one sprite rank for the round.\n> ***Biofeedback: hard Physique test.***"
     },
     {
-      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#27",
+      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#29",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5793,7 +5873,7 @@
       "text": "> **Bone Deep Communion** *(9 Resonance, main action, self-affecting)*\n> For the rest of the encounter, all of your compiled sprites are treated as **one sprite rank higher** on the hybrid band ladder (extensions become intermediate, intermediate become advanced). An **advanced** sprite is already at the top of the ladder, so instead it gains bonus **Stamina** equal to the step its own archetype takes from intermediate to advanced in the Sprite Stat Block Reference: **+6** for a Data-, Machine-, or Ward-sprite, **+8** for an Attack-sprite. Your Resonance drip gains **+1 per turn**.\n> *You abandon the fence and go deep into the current — every sprite becomes more real, and you become more the current's servant. **Biofeedback: hard Physique test on cast AND at the start of each subsequent round.***"
     },
     {
-      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#28",
+      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#30",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5803,7 +5883,7 @@
       "text": "> **Sunlight in the Wire** *(11 Resonance, main action, Ranged 10, self, allies, and sprites)*\n> All enemy-controlled sprites within Ranged 10 **decompile**. All allied sprites in the area act at the **highest possible sprite rank** of the hybrid ladder for the rest of the encounter. All allies in the area gain a **Recovery** and **temporary Stamina equal to a minor sprite's Stamina — 10 + (your Logic × your level)**.\n> *You become the current itself — the net answers with full illumination. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage.***\n\n> **Machine God's Rite** *(11 Resonance, main action, in-scene ritual, 5 minutes minimum)*\n> Restore **full Stamina** to one Cyborg, one machine, one drone, or up to **3 pieces of chrome** in the party. Cannot be used again on the same target for 24 in-game hours.\n> *The shaman-priest lays resonant hands on the crew's tech-flesh and restores it whole. **Biofeedback: hard Physique test with a bane.***\n\n> **Recompile Reality** *(11 Resonance, main action, in-scene ritual, 10 minutes minimum)*\n> Undo one significant Wired event from the past scene (a system got locked down; a drone was destroyed; a Cyborg's chrome got hit). Force a re-roll of that event, OR treat the outcome as though it never happened. **Once per session per Technomancer.**\n> *You rewrite the current's memory of what just happened. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage AND lose one Recovery.***"
     },
     {
-      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#29",
+      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#31",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5813,7 +5893,37 @@
       "text": "> **The Weaver's Web** *(11 Resonance, main action, calls the whole congregation)*\n> Compile **5 sprites** in a single action. All 5 strike different targets within Ranged 10. Each target struck that has **Physique < STRONG** takes **Logic × 3 damage** and is **weakened (save ends)**.\n> *The summoner's apex — the entire net answers with a coordinated strike. **Biofeedback: hard Physique test with a bane.***\n\n---"
     },
     {
-      "id": "20-technomancer#total-resonance-deep-dive#30",
+      "id": "20-technomancer#wired-firefight-round-by-round-checklist#32",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Wired firefight -- round-by-round checklist",
+      "kind": "rules",
+      "audience": "player",
+      "text": "The deck half of a fight has an order, the same way a chase does (`23`). This is the happy path: what a Technomancer actually does, in the order they do it. Skip a step the table does not need; do not reorder the steps you keep.\n\n**0. Setup — before the first roll, no dice.** Put on the table: your **Wired state** (Overlay or Jacked In is usual; unlike a Hacker's Agents, sprites compile from **Linked** too — they are Resonance, not software), your **Resonance**, your **sprite cap**, your discipline, and any biofeedback already taken. Your body still stands where you left it, and it can still be shot.\n\n**1. Scan — optional, one action.** **2d10 + Logic + Hacking**. Names what is on the wire in reach: nodes, personas, ICE, other people's constructs. A **Data-sprite** already on the field hands you an edge on it.\n\n**2. Deep Scan — the step that finds cyber assets.** **2d10 + Logic + Hacking**. Turns “there is a system here” into “there is a **maglock**, two **cams**, a **turret**, and a Watchdog on Track 2.” Seize Control needs a named asset, and a purpose-built sprite needs a job worth naming.\n\n**3. Seize Control — optional.** **2d10 + Logic + Hacking** against the node. Take a cyber asset Deep Scan found and hold it for the scene. A **Machine-sprite** is the one you want standing next to it.\n\n**4. Compile — one of the two, never both in one action.**"
+    },
+    {
+      "id": "20-technomancer#wired-firefight-round-by-round-checklist#33",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Wired firefight -- round-by-round checklist",
+      "kind": "rules",
+      "audience": "player",
+      "text": "- **Compile Sprite** (free at its base effect; **3 Resonance** only for the Enhance that compiles a second in the same action): a stock **Data / Attack / Machine / Ward** sprite. You know what it does before you roll.\n- **Special Sprite** (**3 Resonance** in combat, free out of combat): the purpose-built one. **Roll first**, the tier buys **1 / 2 / 3 Actions**, *then* you write the purpose, and it manifests with `Actions (N): …` at the top of its description.\n\nEither way you cannot exceed your sprite cap.\n\n**5. Command — the maneuver that makes the congregation useful.** Minor-band sprites act on your turn; intermediate sprites need a command each round to act that round; advanced sprites take their own turn. **Recompile** reshapes a standing sprite or rebuilds the one just destroyed at half Stamina — it cannot reshape a **Special Sprite**, whose purpose is not a menu entry. A Special Sprite needs no command: it already has its orders and its budget.\n\n**6. Cleanup / Jack Out.** Decompile dismisses one sprite or the whole congregation — free maneuver, no Resonance back. The congregation decompiles on its own when the encounter ends, and “just destroyed” does not survive the fight it died in. Then step your Wired state down: Jacked In → Overlay → Linked → Disconnected. Biofeedback already taken follows you out."
+    },
+    {
+      "id": "20-technomancer#wired-firefight-round-by-round-checklist#34",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Wired firefight -- round-by-round checklist",
+      "kind": "rules",
+      "audience": "player",
+      "text": "**Hacker overlay.** Swap Resonance for Bandwidth, sprite for Agent, and Compile Sprite / Special Sprite for **Compile Agent / Special Agent** (`19`). Steps 0–6 are otherwise identical, with one difference: a Hacker must be **Overlay or Jacked In** to compile at all — Linked refuses."
+    },
+    {
+      "id": "20-technomancer#total-resonance-deep-dive#35",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5823,7 +5933,7 @@
       "text": "> **Total Resonance** *(7 Resonance, main action)*\n> *Keywords: Wired, Resonance, Summon · Type: Main action · Distance: Wired range · Target: your entire congregation*\n> **Effect:** For the rest of the encounter, **every sprite you currently command rises one sprite rank on the hybrid band ladder** (minor sprites act as intermediate; intermediate act as advanced) — and you may **immediately compile one additional sprite for free**, ignoring your sprite cap for the rest of the encounter. Your Resonance drip from the congregation trigger doubles for the rest of the fight.\n>\n> **Power Roll results apply to the free compile's manifestation, not the rank boost (which is unconditional):**\n> - **high (17+):** the free sprite compiles at full strength and acts immediately this turn.\n> - **middle (12–16):** the free sprite compiles at full strength but acts next turn.\n> - **low (≤11):** the free sprite compiles unstable — half its normal Stamina — but the sprite-rank boost still applies to the whole congregation regardless.\n>\n> ***Biofeedback: medium Physique test*** (this is a 7-cost ability and always triggers the check).\n>\n> **Interaction with discipline features.** Sprite-Weaver's higher sprite cap means the free compile from Total Resonance can push a Sprite-Weaver's congregation size well past what any other discipline can field in a single round. Machine-Whisperer can spend the free compile on a Machine-sprite and immediately follow with Resonance Mending at no extra biofeedback risk, since Resonance Mending's base effect is always free. Resonance-Warrior typically spends the free compile on an Attack-sprite to stack with their own discipline's damage amplifiers.\n\n---"
     },
     {
-      "id": "20-technomancer#resonance-mending-deep-dive-cyborg-heal-niche#31",
+      "id": "20-technomancer#resonance-mending-deep-dive-cyborg-heal-niche#36",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5833,7 +5943,7 @@
       "text": "> **Resonance Mending** *(Class Feature Signature — full grammar)*\n> *Keywords: Wired, Resonance, Healing · Type: Maneuver (base effect) or Main action (enhanced) · Distance: touch, or Wired range for a jacked/networked target · Target: self, one machine, one drone, one vehicle, one piece of chrome, or **one Cyborg** (base at 1st level)*\n>\n> **Base effect (always free, 0 Resonance):** the target regains Stamina/Integrity equal to **one Recovery's worth** (or, for a Cyborg specifically, the target may spend one of their own Recoveries at no Resonance cost). This works identically whether the target is a drone, a vehicle, a piece of standalone chrome, or a Cyborg's chrome-integrated Stamina pool.\n>\n> **Spend 1+ Resonance:** for each point of Resonance spent, choose **one** of the following enhancements (may pick the same enhancement more than once by spending multiple points, except where noted):\n> - **Reach one additional target** — extend the mending to a second machine/drone/Cyborg within range, applying the base effect to them as well.\n> - **Clear one save-ends mechanical condition** — a jam, a glitch, a suppression effect, a Cyborg-chrome malfunction.\n> - **Restore function to a \"dead\" machine** — a drone at 0 Integrity, a piece of chrome that has fully failed, or a Cyborg at 0 Stamina — bringing it back online at minimal function (1 Stamina/Integrity) instead of leaving it destroyed/dying. This costs a **minimum of 2 Resonance**, not 1, reflecting the higher stakes of the effect.\n> - **Grant the target an additional Recovery spend** beyond the base effect's single Recovery (stacks with itself — 2 Resonance spent this way grants 2 additional Recoveries, and so on).\n>\n> **Power Roll results (apply only when Resonance Mending is used as an enhanced main action against resistance — e.g., mending a target inside a hostile EW field or contested Wired space):**\n> - **high (17+):** the mend lands at full effect and the target also clears one minor condition for free, on top of any purchased enhancements.\n> - **middle (12–16):** the mend lands at full effect as purchased.\n> - **low (≤11):** the mend is unstable — it holds for one round, then the target loses half the Stamina/Integrity restored unless stabilized by a second mend or a full rest.\n>\n> **Does not trigger biofeedback at its base effect** (0 Resonance spent) or at low enhancement spends — a Technomancer can mend freely and often without any overreach risk at all. Only pushing total Resonance spent on a single Resonance Mending use to 5 or more (e.g., reaching 3 additional targets plus clearing 2 conditions in one action) triggers the standard biofeedback test at the appropriate difficulty.\n>\n> **Machine-Whisperer amplification (preview — full detail in that discipline's table below):** Machine-Whisperer reduces Resonance Mending's per-point enhancement cost, extends its base range, and eventually grants a free use once per encounter. Every Technomancer can mend a Cyborg; only a Machine-Whisperer does it as their whole reason for being.\n\n---"
     },
     {
-      "id": "20-technomancer#sprite-weaver#32",
+      "id": "20-technomancer#sprite-weaver#37",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5843,7 +5953,7 @@
       "text": "*The \"wide congregation\" tradition — more sprites, cheaper sprites, a bigger board presence than any other discipline.*\n\n| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Wide Compile** | Sprite cap rises to **3** (instead of 2). Compile Sprite's Enhance — a second sprite in the same action — costs **2 Resonance** (instead of 3); the base compile is free for everyone. Compile momentum Resonance gain doubles to **+2** per newly compiled sprite (instead of +1). |\n| **2nd** | **Overlapping Signals** | When you Compile Sprite and roll high (17+), you may compile a **second** sprite for free as part of the same action (does not stack with the signature's own Enhance-for-a-second-sprite option — choose one). |\n| **3rd** | **Congregation's Chorus** | Once per round, when **two or more** of your sprites act on the same turn (yours or their own), each of those sprites' rolls gain an **edge**. |\n| **5th** | **The Widening Gyre** | Sprite cap rises to **4**. Swarm the Signal (3-cost) no longer requires all sprites to target the same foe — you may split the swarm across up to 3 targets. |\n| **7th** | **Legion of the Current** | Sprite cap rises to **5**. Once per encounter, you may Compile Sprite as a **free action** instead of a main action. |\n| **8th** | **Unbroken Congregation** *(capstone)* | Your sprites no longer decompile automatically at end of encounter — once per session, you may keep **one** sprite compiled into the next scene (still subject to normal destruction rules). Sprite cap rises to **6**, the highest of any discipline. |"
     },
     {
-      "id": "20-technomancer#machine-whisperer#33",
+      "id": "20-technomancer#machine-whisperer#38",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5853,7 +5963,7 @@
       "text": "*The \"interface and healer\" tradition — the discipline that makes the class's Cyborg-mending niche its whole identity.*"
     },
     {
-      "id": "20-technomancer#machine-whisperer#34",
+      "id": "20-technomancer#machine-whisperer#39",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5863,7 +5973,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Deep Interface** | Deep Communion's cost drops to **2 Resonance** (instead of 3) and grants a larger biofeedback buffer (your Physique test, if any is triggered while in communion, gains an edge). Resonance Mending's range extends to **Wired range** even for the base (free) effect, instead of touch-only. |\n| **2nd** | **Machine Empathy** | Resonance Mending's per-point enhancement cost drops by 1 (minimum 1) when the target is a machine, drone, vehicle, chrome, or Cyborg (i.e., always, for this ability) — enhancements that would cost 2 Resonance cost 1, and the \"restore a dead machine\" enhancement drops from 2 to 1. |\n| **3rd** | **Whispered Diagnostics** | As a free action once per round, you may inspect one machine, drone, vehicle, or Cyborg within Wired range and learn its exact current Stamina/Integrity, all active conditions, and one exploitable weakness. |\n| **5th** | **Bonded Repair** | Once per encounter, you may use Resonance Mending's full enhanced effect (as if you'd spent 3 Resonance) at **no Resonance cost**, and this specific use never triggers biofeedback regardless of total spend. |\n| **7th** | **The Machine Remembers** | When you restore a \"dead\" machine, drone, piece of chrome, or Cyborg to minimal function via Resonance Mending, the target instead returns at **half** Stamina/Integrity (instead of just 1 point), and clears one additional condition for free. |"
     },
     {
-      "id": "20-technomancer#machine-whisperer#35",
+      "id": "20-technomancer#machine-whisperer#40",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5873,7 +5983,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **8th** | **Whisperer's Communion** *(capstone)* | You may target **any number** of machines/drones/Cyborgs within Wired range with a single Resonance Mending action (previously capped by purchased \"additional target\" enhancements) — the base effect applies to all of them at once, and enhancements still apply individually as normal. |"
     },
     {
-      "id": "20-technomancer#resonance-warrior#36",
+      "id": "20-technomancer#resonance-warrior#41",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5883,7 +5993,7 @@
       "text": "*The \"offensive mystic\" tradition — the discipline that turns the congregation into a weapon and accepts the highest biofeedback risk for the highest damage ceiling.*"
     },
     {
-      "id": "20-technomancer#resonance-warrior#37",
+      "id": "20-technomancer#resonance-warrior#42",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5893,7 +6003,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Overcharged Strike** | Resonance Strike's damage die increases to **3d10 + Logic** (instead of 2d10 + Logic). Attack-sprites you command deal an additional **+1d6** damage on a hit. |\n| **2nd** | **Aggressive Compile** | When you Compile Sprite and choose an Attack-sprite, it may act **immediately** even at the minor/extension rank (normally minor sprites only act on your own turn — this doesn't change the rank, but it removes any \"acts next turn\" language from unstable/low-result compiles specifically for Attack-sprites). |\n| **3rd** | **Feedback Weapon** | Once per round, when you take biofeedback damage from your own ability, you may immediately deal that same amount of damage to one enemy within Ranged 5 as psychic backlash. |\n| **5th** | **Burning the Current** | You may voluntarily take an **additional** 5-cost-equivalent biofeedback test (an easy Physique test, even on an ability that wouldn't normally trigger one) to add **+Logic score** damage to that ability's effect. Usable once per turn. |\n| **7th** | **No Such Thing As Too Much** | Cascade Failure and Resonance Slam (7-cost) are both made with an **edge** when used by a Resonance-Warrior, and their damage dice increase by one step (e.g., Logic × 2 becomes Logic × 2 plus 1d6). |\n| **8th** | **Apex Current** *(capstone)* | Once per encounter, you may treat a failed biofeedback test as a **success** — the current still bites, but not this time. This does not refund the Resonance spent. |\n\n---"
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#38",
+      "id": "20-technomancer#worked-play-example-table-reference#43",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5903,7 +6013,7 @@
       "text": "*A short worked example, showing the full Resonance loop and sprite economy in play across three rounds of a representative encounter. This section is illustrative only — it introduces no new rules, and any numbers shown are examples, not fixed outcomes.*\n\n**Setup:** Priya, a 5th-level Sprite-Weaver Technomancer (Logic 4, Persona 3), enters combat against a corp security team backed by a single combat drone. She rolled 2 Victories before combat, so she attunes for **2 Resonance** the moment she compiles her first sprite (Attunement, first communion).\n\n**Round 1.** Priya opens with **Compile Sprite**, calling a Data-sprite to scan the room. She spends nothing: Compile Sprite's base effect is a free signature, and the 3 Resonance (2 for her, via Wide Compile) only ever buys the signature's Enhance — a *second* sprite in the same action. Compiling a new sprite fires **Compile Momentum**, doubled by Wide Compile: +2 Resonance. Her Data-sprite then lands its scan (an effect), triggering **Harmonic Echo**: +1 Resonance. Full accounting: 2 (Attunement) + 2 (momentum) + 1 (echo) = **5 Resonance banked**. At the start of her turn she'd also gain Resonance equal to compiled-sprite-count, but that trigger fires at the *start* of a turn, so it won't apply until Round 2."
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#39",
+      "id": "20-technomancer#worked-play-example-table-reference#44",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5913,7 +6023,7 @@
       "text": "**Round 2.** At the start of her turn the congregation trigger fires: she has 1 sprite compiled, so +1 Resonance (6 banked). She uses **Compile Sprite** again — a fresh use of the free base signature, not the Enhance, so it costs nothing — and calls an Attack-sprite, well inside her 5th-level Sprite-Weaver cap of 4. Compile Momentum fires again: +2 Resonance (8 banked). Her Attack-sprite strikes the drone and hits, triggering Harmonic Echo: +1 Resonance. Full accounting: 5 (carried) + 1 (congregation) + 2 (momentum) + 1 (echo) = **9 Resonance banked at end of round**.\n\n**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (11 banked). Priya deploys **Resonance Ward** (5-cost), and because this is a cost-5+ ability she makes her biofeedback test (an easy Physique test, rolled with an edge because Sprite-Weaver's discipline modifier applies). She succeeds, the Ward deploys clean, and she is down to **6 Resonance banked** — 11 − 5 — with a Data-sprite and an Attack-sprite still active plus a fresh warded zone protecting the party. With 6 banked and the congregation trigger now worth +2 a turn, she is one round away from affording **Total Resonance** (7-cost) — which is exactly the point in a fight where this engine starts paying out."
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#40",
+      "id": "20-technomancer#worked-play-example-table-reference#45",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5923,7 +6033,7 @@
       "text": "**Why this matters as a reference:** note how the loop naturally accelerates the longer a fight runs and the more sprites stay alive — this is the intended shape (a slow-building summoner engine, not a burst-nova class), and it's also why Total Resonance (a 7-cost ability, doubling the congregation-trigger gain) is such a dramatic power spike when it lands mid-fight rather than at the very start."
     },
     {
-      "id": "20-technomancer#level-1-10-progression-table#41",
+      "id": "20-technomancer#level-1-10-progression-table#46",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5933,7 +6043,7 @@
       "text": "*Levels 1–10 are the primary progression axis (`24`). Echelon bands (E1–E4) are noted only where they matter for cross-class gear context, never as a gating mechanism.*\n\n| Level | Echelon (gear reference only) | Class Features | Abilities Gained | Discipline Feature |\n|---|---|---|---|---|\n| **1st** | E1 | Class Chassis, Resonance resource, Sprite Congregation (2-sprite cap), Biofeedback, all 3 Signatures, choice of discipline | Signatures (Compile Sprite, Resonance Strike, Resonance Mending); 1-cost, 3-cost, and 5-cost bands unlocked (choose starting selections) | Discipline 1st-level feature |\n| **2nd** | E1 | — | — | Discipline 2nd-level feature |\n| **3rd** | E1 | 7-cost band unlocked (includes Total Resonance) | Choose a 7-cost ability | Discipline 3rd-level feature |\n| **4th** | E2 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 3 | — | — |\n| **5th** | E2 | Sprite cap rises to 3 (baseline, all disciplines); 9-cost band unlocked | Choose a 9-cost ability | Discipline 5th-level feature |\n| **6th** | E2 | — | — | — |\n| **7th** | E3 | Characteristic Increase: all five characteristics +1 (max 4) | — | Discipline 7th-level feature |\n| **8th** | E3 | Sprite cap rises to 4 (baseline, all disciplines); 11-cost band unlocked | Choose an 11-cost ability | Discipline 8th-level capstone feature |\n| **9th** | E4 | — | — | — |\n| **10th** | E4 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 5; **Master of the Current** (capstone) | — | — |"
     },
     {
-      "id": "20-technomancer#level-1-10-progression-table#42",
+      "id": "20-technomancer#level-1-10-progression-table#47",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5943,7 +6053,7 @@
       "text": "**Master of the Current** *(10th-level capstone)*\n> Once per encounter, you may use **any one** heroic ability you know **without spending Resonance**, and that use never triggers a biofeedback test regardless of its cost band. In addition, the first time you use this capstone each session, your **sprite cap is removed entirely** for the rest of that encounter — Compile Sprite's cap check simply does not apply, and its normal action economy (one compile per main action, or two by paying the Enhance) is the only thing still limiting how fast the congregation grows. Every other Resonance cost in the chapter is paid as usual for anything beyond the one free ability use.\n\n---"
     },
     {
-      "id": "20-technomancer#core-class-features-non-subclass#43",
+      "id": "20-technomancer#core-class-features-non-subclass#48",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5953,7 +6063,7 @@
       "text": "These are granted to **every** Technomancer regardless of discipline, layered on top of the Class Chassis stats and the Signature abilities above.\n\n**Wired Native.** You are a full citizen of the Wired chapter — you use nodes, Trace Alert, and the standard Wired interface rules exactly as the Hacker and Wrench do, without needing a deck or a rig. Your body itself is the interface.\n\n**Congregation Sense.** You always know the current Stamina, position, and sprite rank of every sprite you command, even at range, even through walls, as long as they remain within Wired range of you.\n\n**Cyborg Mending (base).** Resonance Mending's Cyborg-target branch is available to you from 1st level regardless of discipline — see the full Deep Dive section above. This is the class's headline setting niche and is never discipline-gated.\n\n**Chrome Erosion.** You wield genuine magic (Resonance), so chrome erodes your Resonance cap by the same shared formula as every caster. See the Kit & Chrome section immediately below.\n\n**Arcane Severance Bar.** Cyborgs cannot take levels in the Technomancer class, under any circumstance, with no buy-back or exception. A character who becomes a Cyborg after already taking Technomancer levels immediately loses all access to Resonance, sprites, and every ability on this list until (and unless) the Cyborg conversion is reversed — treat this identically to how Arcane Severance already blocks Veil-caster classes."
     },
     {
-      "id": "20-technomancer#core-class-features-non-subclass#44",
+      "id": "20-technomancer#core-class-features-non-subclass#49",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5963,7 +6073,7 @@
       "text": "**Discipline Choice.** Chosen at 1st level from Sprite-Weaver, Machine-Whisperer, or Resonance-Warrior. Discipline choice is permanent absent an explicit respec ruling from the table.\n\n---"
     },
     {
-      "id": "20-technomancer#kit-chrome-interaction#45",
+      "id": "20-technomancer#kit-chrome-interaction#50",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5973,7 +6083,7 @@
       "text": "The Technomancer is a Wired class that still casts — so, unlike the Wired's other two classes, chrome costs it magic:\n\n| Class | Chrome Relationship |\n|---|---|\n| **Hacker / Wrench** | Chrome-positive — chrome enhances their tech-native abilities directly, no erosion at all. |\n| **Technomancer** | **Erodes** — chrome shrinks the Resonance cap by the shared magic-erosion formula, the same as any caster. |\n| **Elementalist / Street-Priest** | Chrome-averse — chrome shrinks their Essence / Conviction cap by the same shared formula. |\n\n**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (**Chrome & Body Integrity**, `09`). No caster is exempt.\n\n**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate) can grant an **edge on Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.\n\n---"
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#46",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#51",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5983,7 +6093,7 @@
       "text": "*A short FAQ addendum addressing the questions most likely to come up at an actual table before the Director has memorized every ruling above.*\n\n**Can I compile a sprite outside of combat?** Yes — Compile Sprite works identically outside combat, though outside combat you don't have a per-encounter Resonance pool actively refilling, so you're limited to the once-per-rest-or-Victory exception noted under Resonance's \"Outside combat\" rule.\n\n**Do sprites need line of sight to their target, same as a normal ranged attack?** Yes, unless a specific ability says otherwise. \"Wired range\" for a sprite means the sprite itself needs a valid Wired connection to the target (a device, a jack, a networked system) — it is not the same as a normal ranged weapon's line-of-sight rule, but it is not unlimited either. A Data-sprite scanning a room it can't technically \"see\" through a wall would need that room to have a networked device in it for the sprite's senses to reach.\n\n**What happens if I hit my sprite cap and try to compile again?** You cannot compile past your cap — Compile Sprite simply fails (or, at the table's discretion, you may choose to dismiss an existing sprite as part of the same action to make room, but this is a house-rule convenience, not a written rule).\n\n**Can an enemy target my sprites directly?** Yes. Sprites have their own Stamina, and their own defensive profile (see the Sprite Stat Block Reference table) and can be attacked, suppressed, or hacked like any other actor on the board — this is precisely why Ward-sprites and the Sprite Redirect ability exist."
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#47",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#52",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5993,7 +6103,7 @@
       "text": "**Does Resonance Mending work on my own chrome, or only on allies'/drones'?** Both. \"Self\" is always a valid target for Resonance Mending's base effect.\n\n**If I'm a Machine-Whisperer, can I mend a Cyborg who isn't in my party — say, an NPC or an enemy who surrenders?** Mechanically, yes — Resonance Mending doesn't restrict targeting to allies only, it restricts by target *type* (machine, drone, vehicle, chrome, or Cyborg). Whether the fiction allows it (would a corp Cyborg trust a runner shaman's hands on their chrome?) is a roleplay question for the table, not a rules restriction.\n\n**Can a sprite \"die\" permanently, or does it always come back next encounter?** A sprite destroyed in combat (reduced to 0 Stamina) is gone for that encounter. At the start of your next encounter, you begin fresh with zero sprites compiled and must re-compile from scratch — sprites are not persistent assets like a Wrench's drones, they're temporary conjurations remade each fight."
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#48",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#53",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -6360,7 +6470,7 @@
       "heading": "Constructs (Sprites and Agents)",
       "kind": "rules",
       "audience": "player",
-      "text": "Compiled **sprites** (Technomancer, `20`) and **Agents** (Hacker, `19`) are Wire constructs, not extra nodes on the host graph.\n\n**Lock A (2026-09-20).** A construct’s **scene token is a roster anchor only**. Wire play lives in the **Wired Console**. Meat-space attacks and other meat actions against that token stay **off** unless an ability explicitly bridges (Resonance Strike through a device, a Daemon holding a Track 1 object, and similar printed bridges). Do not treat the token as a second copy of the runner on the Connections list.\n\n**Constructs section.** The Console lists compiled sprites and Agents in a **Constructs** roster, separate from **Connections** and **Nodes**. Owner and Director see the relevant rows (name, archetype, Stamina, hybrid band, compiler). **Overlay / Jacked In compilers on the same scene see each other’s compiled sprites and Agents in that roster without Scan.** Linked is soft presence and does not. An optional chip may name the Wire node the construct is **facing** — a label only. **Do not** add construct↔node edges to the board graph; node↔node wires stay infrastructure topology.\n\n**Meat-side anchors.** Construct scene tokens stay roster anchors only (Lock A). Seeing a rival construct on the Console does **not** reveal, unhide, or grant meat-space targeting of that token. Pan / Command / Decompile stay with the owner (and Director)."
+      "text": "Compiled **sprites** (Technomancer, `20`) and **Agents** (Hacker, `19`) are Wire constructs, not extra nodes on the host graph.\n\n**Lock A (2026-09-20).** A construct’s **scene token is a roster anchor only**. Wire play lives in the **Wired Console**. Meat-space attacks and other meat actions against that token stay **off** unless an ability explicitly bridges (Resonance Strike through a device, a Daemon holding a Track 1 object, and similar printed bridges). Do not treat the token as a second copy of the runner on the Connections list.\n\n**Constructs section.** The Console lists compiled sprites and Agents in a **Constructs** roster, separate from **Connections** and **Nodes**. Owner and Director see the relevant rows (name, archetype, Stamina, hybrid band, compiler). A **Special Agent** or **Special Sprite** (`19`, `20`) is an ordinary roster row with no archetype: its purpose and its action budget are printed on its own description as `Actions (N): …`, and the Console shows it under the same cap as every other construct. **Overlay / Jacked In compilers on the same scene see each other’s compiled sprites and Agents in that roster without Scan.** Linked is soft presence and does not. An optional chip may name the Wire node the construct is **facing** — a label only. **Do not** add construct↔node edges to the board graph; node↔node wires stay infrastructure topology."
     },
     {
       "id": "21-the-wire#constructs-sprites-and-agents#37",
@@ -6370,7 +6480,7 @@
       "heading": "Constructs (Sprites and Agents)",
       "kind": "rules",
       "audience": "player",
-      "text": "**Construct vs construct.** Sprite/Agent fights resolve as **Wired / EW** attacks (a physical strike that can target them at all is made with a **bane**, per `20`). Action economy follows hybrid band: **minor** = extension on the compiler’s turn; **intermediate** = own turn under a Command maneuver that round; **advanced** = independent turn. The Console does not auto-run those turns or auto-initiative constructs."
+      "text": "**Meat-side anchors.** Construct scene tokens stay roster anchors only (Lock A). Seeing a rival construct on the Console does **not** reveal, unhide, or grant meat-space targeting of that token. Pan / Command / Decompile stay with the owner (and Director).\n\n**Construct vs construct.** Sprite/Agent fights resolve as **Wired / EW** attacks (a physical strike that can target them at all is made with a **bane**, per `20`). Action economy follows hybrid band: **minor** = extension on the compiler’s turn; **intermediate** = own turn under a Command maneuver that round; **advanced** = independent turn. The Console does not auto-run those turns or auto-initiative constructs."
     },
     {
       "id": "21-the-wire#deck-software-suites-vs-payloads#38",
@@ -7780,7 +7890,7 @@
       "heading": "Control modes",
       "kind": "rules",
       "audience": "player",
-      "text": "Every drone runs in one of three modes. Mode is a property of the **link**, not only the chassis.\n\n| Mode | Who | What it feels like | Mechanical spine |\n|---|---|---|---|\n| **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |\n| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per **The Wrench** (`16`); Reflex or Logic; biofeedback risk; temporary Integrity buffer |\n| **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |\n\n**Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.\n\n**Hardware gate (¥ side):**\n- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see **The Wire**, `21`).\n- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not."
+      "text": "Every drone runs in one of three modes. Mode is a property of the **link**, not only the chassis.\n\n| Mode | Who | What it feels like | Mechanical spine |\n|---|---|---|---|\n| **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |\n| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per **The Wrench** (`16`); Reflex or Logic; biofeedback risk; temporary Integrity buffer |\n| **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |\n\n**Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.\n\n**Hardware gate (¥ side):**\n- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see **The Wire**, `21`).\n- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), spare console slots — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not."
     },
     {
       "id": "23-machines#control-modes#3",
@@ -7800,7 +7910,7 @@
       "heading": "Anyone vs Wrench",
       "kind": "rules",
       "audience": "player",
-      "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Active drones** | **Max 1** active at a time — **even a Street clunker counts as that one non-Wrench drone** |\n| **Jump-In** | **Forbidden** |\n| **RCC fleet features** | **Cannot** use Fleet Deck / War Table / Command Rig / Hydra swarm features (even if purchased — they sit inert or Director may allow Remote-Box behavior only) |\n| **Rolls** | **Bane** on all **Rigging** and **Gunnery-through-drone** Power Rolls |\n| **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |\n| **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |\n| **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |\n| **Autosofts** | May run **one** basic Pilot/Sensor autosoft if the chassis has a free slot — no swarm / Focus Fire / Override packages |\n| **Heroic resource** | Cannot spend Uptime; cannot use Wrench Deploy & Command / Focus Fire / subclass swarm features |"
+      "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Active drones** | **Max 1** active at a time — **even a Street clunker counts as that one non-Wrench drone** |\n| **Jump-In** | **Forbidden** |\n| **RCC fleet features** | **Cannot** use Fleet Deck / War Table / Command Rig / Hydra swarm features (even if purchased — they sit inert or Director may allow Remote-Box behavior only) |\n| **Rolls** | **Bane** on all **Rigging** and **Gunnery-through-drone** Power Rolls |\n| **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |\n| **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |\n| **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |\n| **Softs** | Softs are **skillsofts on the pilot’s Skillwires** (`09`), never console software. A **Targeting Soft** or **Clearsight Soft** the pilot is running helps their drone fire and sensing — no swarm / Focus Fire / Override packages |\n| **Heroic resource** | Cannot spend Uptime; cannot use Wrench Deploy & Command / Focus Fire / subclass swarm features |"
     },
     {
       "id": "23-machines#anyone-vs-wrench#5",
@@ -7810,7 +7920,7 @@
       "heading": "Anyone vs Wrench",
       "kind": "rules",
       "audience": "player",
-      "text": "**Intent:** a Scout's eye-in-the-sky or a Medic's trauma mule is supported; a second Operator does not become a discount Wrench. Buying a taped-together junk mote still burns the one-drone slot.\n\n#### Wrench\n\n| Rule | Align to **The Wrench** (`16`) (do not invent parallel names) |\n|---|---|\n| **Fleet** | Field multiple machines up to **Fleet Size** cap (baseline 3 @ L1 → 6 @ L10; Drone Jockey raises further) |\n| **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |\n| **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |\n| **RCC / autosofts** | Full use of owned RCC ladder + autosoft slots |\n| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (**The Wrench**, `16`). “Overheat pressure” on high-end RCCs is narrative only. |\n\n**Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime."
+      "text": "**Intent:** a Scout's eye-in-the-sky or a Medic's trauma mule is supported; a second Operator does not become a discount Wrench. Buying a taped-together junk mote still burns the one-drone slot.\n\n#### Wrench\n\n| Rule | Align to **The Wrench** (`16`) (do not invent parallel names) |\n|---|---|\n| **Fleet** | Field multiple machines up to **Fleet Size** cap (baseline 3 @ L1 → 6 @ L10; Drone Jockey raises further) |\n| **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |\n| **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |\n| **RCC / softs** | Full use of owned RCC ladder; softs are skillsofts on Skillwires (`09`) |\n| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (**The Wrench**, `16`). “Overheat pressure” on high-end RCCs is narrative only. |\n\n**Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime."
     },
     {
       "id": "23-machines#street-eye-companion-link#6",
@@ -7990,7 +8100,7 @@
       "heading": "Modding",
       "kind": "rules",
       "audience": "player",
-      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.\n- Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.\n- **Fabricate** — you can build a mod (or a whole chassis) instead of buying it. That is the stock Draw Steel crafting **Project**: every catalog card prints its Goal, prerequisites, roll characteristics, and yield, and the points come out of **Lifestyle project slots** like any other Project. Goal by Echelon: **E1 150 · E2 300 · E3 450 · E4 600**; roll **Might or Reason** for Repair jobs, **Reason or Intuition** for Electronics jobs; prerequisites run about **half the ¥ in parts** plus a bay for the band. Finishing a fabricate Project yields the part — **installing it is still the separate §Craft Project**.\n\n---"
+      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). RCC programs use **Hacking** (**Mods**, `10`). Softs are not mods: they are skillsofts on **Skillwires** (`09`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.\n- Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.\n- **Fabricate** — you can build a mod (or a whole chassis) instead of buying it. That is the stock Draw Steel crafting **Project**: every catalog card prints its Goal, prerequisites, roll characteristics, and yield, and the points come out of **Lifestyle project slots** like any other Project. Goal by Echelon: **E1 150 · E2 300 · E3 450 · E4 600**; roll **Might or Reason** for Repair jobs, **Reason or Intuition** for Electronics jobs; prerequisites run about **half the ¥ in parts** plus a bay for the band. Finishing a fabricate Project yields the part — **installing it is still the separate §Craft Project**.\n\n---"
     },
     {
       "id": "23-machines#street-picture-vehicles-transit#24",
@@ -8100,7 +8210,7 @@
       "heading": "Customize & modding",
       "kind": "rules",
       "audience": "player",
-      "text": "- Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).\n- **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).\n- **Ghost Rein** buffers Jump-In biofeedback; it **never grants Jump-In**. Jump-In stays Wrench-only, and the frame still has to be Jump-In Capable or wear a **Rigger Cocoon**.\n\n---"
+      "text": "- Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). RCC programs use **Hacking** (**Mods**, `10`). Softs are not mods: they are skillsofts on **Skillwires** (`09`).\n- **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).\n- **Ghost Rein** buffers Jump-In biofeedback; it **never grants Jump-In**. Jump-In stays Wrench-only, and the frame still has to be Jump-In Capable or wear a **Rigger Cocoon**.\n\n---"
     },
     {
       "id": "23-machines#vehicle-combat-chase#35",
@@ -18163,6 +18273,18 @@
       "text": "Seize Control · Hacker · maneuver · signature · ranged wired\nBreach it and use it, in the same breath.\nCost: 2\nDistance: special · Target: 1 Track 1 object or item within Reach (including a person’s Wired-connected gear) · special\nPower roll: reason\n  ≤11: Brief, one-shot control; Trace Alert increases.\n  12-16: Solid, lasting control.\n  17+: Solid, lasting control, and choose one: refund the maneuver, or leave no trace.\nEffect: Distance: Reach.\nOne activation breaches the target’s security and lets you use it this turn. This is your primary out-of-combat lever: doors, lights, and power matter even with no ICE present. Add your deck’s Intrusion Roll Modifier."
     },
     {
+      "id": "ability:special-agent#1",
+      "file": "pack-abilities.md",
+      "source": "src/packs/classes/hacker/abilities/special-agent.json",
+      "chapter": "Ghostwire Abilities — Hacker",
+      "heading": "Special Agent",
+      "kind": "ability",
+      "audience": "player",
+      "entity": "Special Agent",
+      "entityDsid": "special-agent",
+      "text": "Special Agent · Hacker · main · signature · tech wired\nOne daemon, one job. Roll first; the tier buys the Actions.\nDistance: special · Target: The net (one purpose-built Agent) · special\nPower roll: reason\n  ≤11: 1 Action. The Agent compiles with one Action to spend on the purpose you name next.\n  12-16: 2 Actions. The Agent compiles with two Actions to spend on the purpose you name next.\n  17+: 3 Actions. The Agent compiles with three Actions to spend on the purpose you name next.\nEffect: Distance: Wired range. Cost: 3 Bandwidth in combat; out of combat it costs nothing. Requires Overlay or Jacked In — Linked refuses.\nRoll first. Make the Power Roll before you decide anything. The tier you land on is your action budget for the Agent: low = 1 Action, middle = 2 Actions, high = 3 Actions.\nThen say what it is for. Knowing the budget, describe the Agent's purpose in a sentence — “cut the cameras on floor 6”, “hold the maglock open and scream if anyone comes”. That sentence is written onto the Agent's description with the cap in front of it, like Actions (2): cut the cameras on floor 6. The Agent does that and nothing else, and it stops when the Actions are spent.\nA Special Agent is not a Probe, Spike, Daemon, or Watchdog. It has no archetype menu: you buy Actions with the roll and spend them on the job you named. It counts against your Agent cap and decompiles like any other Agent — dismissed, at 0 Stamina, or at the end of the encounter."
+    },
+    {
       "id": "ability:chokepoint#1",
       "file": "pack-abilities.md",
       "source": "src/packs/classes/hacker/origins/controller/chokepoint.json",
@@ -20441,6 +20563,18 @@
       "entity": "Signal Weave",
       "entityDsid": "signal-weave",
       "text": "Signal Weave · Technomancer · main · heroic · magic wired\nTuning forks laid across the battlefield’s signal.\nCost: 5\nDistance: ranged · 10 · Target: All allies, and 1 enemy · special\nPower roll: characteristic\nEffect: All allies gain an edge on Wired-based power rolls for the rest of the round, and one enemy of your choice within distance is glitched (a bane on its next power roll).\nBiofeedback: easy Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take damage equal to your Persona score that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded."
+    },
+    {
+      "id": "ability:special-sprite#1",
+      "file": "pack-abilities.md",
+      "source": "src/packs/classes/technomancer/abilities/special-sprite.json",
+      "chapter": "Ghostwire Abilities — Technomancer",
+      "heading": "Special Sprite",
+      "kind": "ability",
+      "audience": "player",
+      "entity": "Special Sprite",
+      "entityDsid": "special-sprite",
+      "text": "Special Sprite · Technomancer · main · signature · magic wired\nOne shape, one job. Roll first; the tier buys the Actions.\nDistance: special · Target: The net (one purpose-built sprite) · special\nPower roll: reason\n  ≤11: 1 Action. The sprite compiles with one Action to spend on the purpose you name next.\n  12-16: 2 Actions. The sprite compiles with two Actions to spend on the purpose you name next.\n  17+: 3 Actions. The sprite compiles with three Actions to spend on the purpose you name next.\nEffect: Distance: Wired range. Cost: 3 Resonance in combat; out of combat it costs nothing.\nRoll first. Make the Power Roll before you decide anything. The tier you land on is your action budget for the sprite: low = 1 Action, middle = 2 Actions, high = 3 Actions.\nThen say what it is for. Knowing the budget, describe the sprite's purpose in a sentence — “pull the wounded runner out of the doorway”, “jam the turret until we are past it”. That sentence is written onto the sprite's description with the cap in front of it, like Actions (2): jam the turret until we are past it. The sprite does that and nothing else, and it stops when the Actions are spent.\nA Special Sprite is not a Data, Attack, Machine, or Ward sprite. It has no archetype menu: you buy Actions with the roll and spend them on the job you named. It counts against your sprite cap and decompiles like any other sprite — dismissed, at 0 Stamina, or at the end of the encounter."
     },
     {
       "id": "ability:sprite-redirect#1",
@@ -22927,6 +23061,42 @@
       "text": "Probe Agent (Minor) · Agents · hexer · level 1 · minion\nStamina 10 · Speed 5 · fly · size 1 · stability 0\nA recon daemon — Deep Scan’s twin. Software, not Resonance. A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. Distinct from Technomancer sprites: different Actors, different art, deck-side only.\nAgent Stamina\nLive formula: 8 + (Hacker’s Logic × Hacker’s level). This template: 10, baked for a 1st-level Hacker with Logic 2 (8 + 2 × 1). Compile Agent stamps the owner’s Logic × level automatically.\nHybrid band: Minor\nExtension (1st–3rd level): the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own.\nSpeed 5 (fly, hover) is a placeholder token speed — an AR overlay, not a meatspace flyer.\nTrait — Probe Sweep · Once per round, grant an edge on one Scan, Search, or Deep Scan made by the Hacker or an ally directing the Agent."
     },
     {
+      "id": "summon:agent-special-advanced#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/agents/agent-special-advanced.json",
+      "chapter": "Ghostwire Summons — Agents",
+      "heading": "Special Agent (Advanced)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Agent (Advanced)",
+      "entityDsid": "agent-special-advanced",
+      "text": "Special Agent (Advanced) · Agents · support · level 8 · minion\nStamina 22 · Speed 5 · fly · size 1 · stability 0\nA purpose-built Agent with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Hacker (Special Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the Agent manifests. When those Actions are spent, the Agent is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 22 + (compiler’s Logic × compiler’s level). This template: 22, before the compiler’s Logic × level is stamped on.\nHybrid band: Advanced\nIndependent (8th–10th level): it takes its own turn in the round, within the purpose you gave it.\nCost is 3 Bandwidth in combat; out of combat it is free.\nTrait — Purpose-Built · This Agent can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
+    },
+    {
+      "id": "summon:agent-special-intermediate#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/agents/agent-special-intermediate.json",
+      "chapter": "Ghostwire Summons — Agents",
+      "heading": "Special Agent (Intermediate)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Agent (Intermediate)",
+      "entityDsid": "agent-special-intermediate",
+      "text": "Special Agent (Intermediate) · Agents · support · level 4 · minion\nStamina 16 · Speed 5 · fly · size 1 · stability 0\nA purpose-built Agent with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Hacker (Special Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the Agent manifests. When those Actions are spent, the Agent is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 16 + (compiler’s Logic × compiler’s level). This template: 16, before the compiler’s Logic × level is stamped on.\nHybrid band: Intermediate\nCommanded (4th–7th level): it acts on its own turn, within the purpose you gave it.\nCost is 3 Bandwidth in combat; out of combat it is free.\nTrait — Purpose-Built · This Agent can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
+    },
+    {
+      "id": "summon:agent-special-minor#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/agents/agent-special-minor.json",
+      "chapter": "Ghostwire Summons — Agents",
+      "heading": "Special Agent (Minor)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Agent (Minor)",
+      "entityDsid": "agent-special-minor",
+      "text": "Special Agent (Minor) · Agents · support · level 1 · minion\nStamina 10 · Speed 5 · fly · size 1 · stability 0\nA purpose-built Agent with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Hacker (Special Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the Agent manifests. When those Actions are spent, the Agent is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 10 + (compiler’s Logic × compiler’s level). This template: 10, before the compiler’s Logic × level is stamped on.\nHybrid band: Minor\nExtension (1st–3rd level): it acts on your turn and has no initiative of its own.\nCost is 3 Bandwidth in combat; out of combat it is free.\nTrait — Purpose-Built · This Agent can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
+    },
+    {
       "id": "summon:agent-spike-advanced#1",
       "file": "pack-summons.md",
       "source": "src/packs/summons/agents/agent-spike-advanced.json",
@@ -23777,6 +23947,42 @@
       "entity": "Machine Sprite (Minor)",
       "entityDsid": "sprite-machine-minor",
       "text": "Machine Sprite (Minor) · Sprites · support · level 1 · minion\nStamina 12 · Speed 5 · fly · size 1 · stability 0\nA mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs. A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nSprite Stamina\nLive formula: 10 + (Technomancer’s Logic × Technomancer’s level). This template: 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.\nDefenses\nDraw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a bane (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.\nHybrid band: Minor\nExtension (1st–3rd level): the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.\nSpeed 5 (fly, hover) is a placeholder token speed.\nTrait — Mend · The sprite mends one machine, drone, vehicle, piece of chrome, or Cyborg: the target regains Stamina or Integrity equal to one Recovery’s worth."
+    },
+    {
+      "id": "summon:sprite-special-advanced#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/sprites/sprite-special-advanced.json",
+      "chapter": "Ghostwire Summons — Sprites",
+      "heading": "Special Sprite (Advanced)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Sprite (Advanced)",
+      "entityDsid": "sprite-special-advanced",
+      "text": "Special Sprite (Advanced) · Sprites · support · level 8 · minion\nStamina 22 · Speed 5 · fly · size 1 · stability 0\nA purpose-built sprite with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Technomancer (Special Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the sprite manifests. When those Actions are spent, the sprite is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 22 + (compiler’s Logic × compiler’s level). This template: 22, before the compiler’s Logic × level is stamped on.\nHybrid band: Advanced\nIndependent (8th–10th level): it takes its own turn in the round, within the purpose you gave it.\nCost is 3 Resonance in combat; out of combat it is free.\nTrait — Purpose-Built · This sprite can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
+    },
+    {
+      "id": "summon:sprite-special-intermediate#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/sprites/sprite-special-intermediate.json",
+      "chapter": "Ghostwire Summons — Sprites",
+      "heading": "Special Sprite (Intermediate)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Sprite (Intermediate)",
+      "entityDsid": "sprite-special-intermediate",
+      "text": "Special Sprite (Intermediate) · Sprites · support · level 4 · minion\nStamina 16 · Speed 5 · fly · size 1 · stability 0\nA purpose-built sprite with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Technomancer (Special Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the sprite manifests. When those Actions are spent, the sprite is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 16 + (compiler’s Logic × compiler’s level). This template: 16, before the compiler’s Logic × level is stamped on.\nHybrid band: Intermediate\nCommanded (4th–7th level): it acts on its own turn, within the purpose you gave it.\nCost is 3 Resonance in combat; out of combat it is free.\nTrait — Purpose-Built · This sprite can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
+    },
+    {
+      "id": "summon:sprite-special-minor#1",
+      "file": "pack-summons.md",
+      "source": "src/packs/summons/sprites/sprite-special-minor.json",
+      "chapter": "Ghostwire Summons — Sprites",
+      "heading": "Special Sprite (Minor)",
+      "kind": "summon",
+      "audience": "player",
+      "entity": "Special Sprite (Minor)",
+      "entityDsid": "sprite-special-minor",
+      "text": "Special Sprite (Minor) · Sprites · support · level 1 · minion\nStamina 10 · Speed 5 · fly · size 1 · stability 0\nA purpose-built sprite with no archetype: it does the one job its compiler named, and nothing else. A construct compiled by a Technomancer (Special Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.\nActions (the whole point)\nThe Power Roll came first and its tier bought the action budget — low 1, middle 2, high 3. The budget and the purpose are written at the top of this description as Actions (N): … the moment the sprite manifests. When those Actions are spent, the sprite is done; decompile it or leave it standing as scenery.\nStamina\nLive formula: 10 + (compiler’s Logic × compiler’s level). This template: 10, before the compiler’s Logic × level is stamped on.\nHybrid band: Minor\nExtension (1st–3rd level): it acts on your turn and has no initiative of its own.\nCost is 3 Resonance in combat; out of combat it is free.\nTrait — Purpose-Built · This sprite can take only the actions its purpose line describes, up to the number of Actions in brackets at the top of its description. It cannot be re-tasked: to do a different job, compile a new one."
     },
     {
       "id": "summon:sprite-ward-advanced#1",
