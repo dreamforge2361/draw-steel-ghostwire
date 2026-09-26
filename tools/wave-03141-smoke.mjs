@@ -133,8 +133,10 @@ unassignStation(v, "turrets", "Actor.g1");
 note(v.stations.turrets.map(c => c.actorUuid).join() === "Actor.g2", "…and a gunner can be unseated");
 note(/const crewTrained = \(actor, skill\) => \(actor\?\.type !== "hero"\) \|\| actorHasSkill\(actor, skill\);/.test(hud)
   && !/wrench|jumpIn|isJumpInCapable/i.test(hud), "anyone-vs-anyone: any hero or NPC can take any seat — nothing is Wrench-gated");
-note(/ridersOf\(token\)/.test(bodyOf(hud, "function addVehicleToState")) && /assignStation\(vehicle, "ports", crew\)/.test(hud),
-  "a vehicle's riders (0.3.137 passengers) start in its Ports");
+// 0.3.146 moved the join seating from "everyone into the Ports" to Pilot → Systems → Turrets → Ports.
+// The riders are still the source of crew; wave-03146-smoke.mjs owns the order itself.
+note(/ridersOf\(token\)/.test(bodyOf(hud, "function addVehicleToState")) && /autoSeatRiders\(vehicle,/.test(bodyOf(hud, "function addVehicleToState")),
+  "a vehicle's riders (0.3.137 passengers) are seated on join");
 
 note(CHASE_BANDS.map(b => localize(hudKey(`Band.${b}`))).join(" | ") === "Broken off | Extreme | Long | Medium | Close | Ramming / Boarding",
   "the band track uses the 0.3.138 checklist words");
