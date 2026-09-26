@@ -273,6 +273,39 @@ export function assignStation(vehicle, station, crew) {
   return vehicle;
 }
 
+/**
+ * 0.3.146: the seat order a joining vehicle's riders fill — Pilot first, then Systems, then Turrets,
+ * and everyone left over into the Ports (the last stop, which holds any number). Phase 1 Pilots used
+ * to open with nobody seated because every rider went straight to the Ports.
+ */
+export const AUTO_SEAT_ORDER = Object.freeze(["pilot", "systems", "turrets", "ports"]);
+
+/**
+ * Pure: which station each of `crewList` takes, in order. Riders without an Actor and repeats of one
+ * already in the list take no seat. A single seat the Director already filled is skipped, not swapped.
+ */
+export function autoSeatPlan(crewList = [], vehicle = null) {
+  const seen = new Set();
+  const plan = [];
+  let cursor = 0;
+  for (const crew of crewList) {
+    if (!crew?.actorUuid || seen.has(crew.actorUuid)) continue;
+    seen.add(crew.actorUuid);
+    while (cursor < AUTO_SEAT_ORDER.length - 1
+      && SINGLE_SEAT_STATIONS.includes(AUTO_SEAT_ORDER[cursor])
+      && vehicle?.stations?.[AUTO_SEAT_ORDER[cursor]]?.length) cursor += 1;
+    plan.push({ station: AUTO_SEAT_ORDER[cursor], crew });
+    if (cursor < AUTO_SEAT_ORDER.length - 1) cursor += 1;
+  }
+  return plan;
+}
+
+/** Seat a joining vehicle's riders in that order. The table can unseat / reassign afterwards. */
+export function autoSeatRiders(vehicle, crewList = []) {
+  for (const { station, crew } of autoSeatPlan(crewList, vehicle)) assignStation(vehicle, station, crew);
+  return vehicle;
+}
+
 export function unassignStation(vehicle, station, actorUuid) {
   if (!vehicle?.stations?.[station]) return vehicle;
   vehicle.stations[station] = vehicle.stations[station].filter(c => c.actorUuid !== actorUuid);
@@ -1189,7 +1222,7 @@ function crewFromToken(token) {
   return actor ? { actorUuid: actor.uuid, tokenUuid: token.uuid, name: token.name || actor.name } : null;
 }
 
-/** Add a vehicle token to the chase; its riders (0.3.137 passengers) take the Ports. */
+/** Add a vehicle token to the chase; its riders (0.3.137 passengers) fill Pilot → Systems → Turrets → Ports. */
 function addVehicleToState(state, token) {
   const actor = token?.actor;
   if (!actor || state.vehicles.some(v => v.actorUuid === actor.uuid)) return false;
@@ -1197,10 +1230,7 @@ function addVehicleToState(state, token) {
     id: foundry.utils.randomID(), actorUuid: actor.uuid, tokenUuid: token.uuid, name: token.name || actor.name,
     side: state.vehicles.length ? "opposition" : "crew",
   });
-  for (const rider of ridersOf(token)) {
-    const crew = crewFromToken(token.parent?.tokens?.get(rider.tokenId));
-    if (crew) assignStation(vehicle, "ports", crew);
-  }
+  autoSeatRiders(vehicle, ridersOf(token).map(rider => crewFromToken(token.parent?.tokens?.get(rider.tokenId))).filter(Boolean));
   state.vehicles.push(vehicle);
   state.leadId ??= vehicle.id;
   return true;
