@@ -70,6 +70,34 @@ export function recompileTargets({ sprites = [], destroyed = null } = {}) {
   return rows;
 }
 
+/**
+ * 0.3.145 (A) — the Specials one Recompile had to step over.
+ *
+ * A Special Sprite is built once, for a job the player wrote after the dice, so it is neither a reshape
+ * target nor a rebuild target. That is the rule, not a bug — but a caster whose whole congregation is
+ * Specials used to be told they "have no compiled sprite", which reads like a broken ability. This is
+ * the list that turns that empty state into a sentence that names the real reason, and the disabled
+ * rows the Recompile dialog shows when Specials stand beside stock sprites.
+ *
+ * @param {object} opts
+ * @param {Array<{uuid: string, name: string, archetype: string}>} opts.sprites  Live congregation.
+ * @param {{archetype: string, name?: string}|null} opts.destroyed  The *raw* just-destroyed record —
+ *   {@link destroyedSprite} has already filtered Specials out, so pass the flag itself to see one here.
+ * @returns {Array<{value: string, kind: "special"|"special-destroyed", archetype: string, name: string}>}
+ */
+export function recompileSpecials({ sprites = [], destroyed = null } = {}) {
+  const rows = sprites
+    .filter(sprite => sprite.archetype === SPECIAL_ARCHETYPE)
+    .map(sprite => ({ value: sprite.uuid, kind: "special", archetype: SPECIAL_ARCHETYPE, name: sprite.name }));
+  if (destroyed?.archetype === SPECIAL_ARCHETYPE) {
+    rows.push({
+      value: "destroyed-special", kind: "special-destroyed",
+      archetype: SPECIAL_ARCHETYPE, name: destroyed.name ?? "",
+    });
+  }
+  return rows;
+}
+
 // Sprite Stat Block Reference (20-technomancer.md): Stamina = archetype base + (Logic × level), per band.
 // These must match the shipped templates in src/packs/summons/sprites/.
 const STAMINA_BASE = {
@@ -435,9 +463,15 @@ export const recompileAbility = actor =>
 const isRecompileAbility = item =>
   (item?.type === "ability") && (item.system?._dsid === RECOMPILE_DSID) && isTechnomancer(item.parent);
 
+/**
+ * The raw just-destroyed record, Special included. {@link destroyedSprite} is the *rebuildable* view of
+ * the same flag; this one is what {@link recompileSpecials} reads to say why a Special is not offered.
+ */
+const destroyedRecord = caster => caster?.getFlag?.(MODULE_ID, DESTROYED_FLAG) ?? null;
+
 /** The just-destroyed sprite this caster can still rebuild, or null. */
 export function destroyedSprite(caster) {
-  const record = caster?.getFlag?.(MODULE_ID, DESTROYED_FLAG) ?? null;
+  const record = destroyedRecord(caster);
   return RESHAPE_ARCHETYPES.includes(record?.archetype) ? record : null;
 }
 
@@ -461,7 +495,7 @@ async function rememberDestroyed(sprite) {
 }
 
 /** The Recompile dialog: which sprite, and what to shape it into. */
-async function promptRecompile(caster, targets) {
+async function promptRecompile(caster, targets, specials = []) {
   const UIL = key => game.i18n.localize(`${UI}.${key}`);
   const targetOptions = targets.map((row, index) => {
     const label = (row.kind === "rebuild")
@@ -469,6 +503,12 @@ async function promptRecompile(caster, targets) {
       : game.i18n.format(`${UI}.RecompileReshapeOption`, { name: row.name });
     return `<option value="${row.value}"${index === 0 ? " selected" : ""}>${label}</option>`;
   }).join("");
+  // 0.3.145 (A): a Special standing beside stock sprites is listed and greyed out rather than silently
+  // missing, so the player can see the ability knows about it and read why it is not a choice.
+  const specialOptions = specials.map(row =>
+    `<option value="${row.value}" disabled>${game.i18n.format(`${UI}.RecompileSpecialOption`, {
+      name: row.name || UIL(`Archetype.${SPECIAL_ARCHETYPE}`),
+    })}</option>`).join("");
   // Special is never a reshape target: it is built once, for a job the player wrote after the dice.
   const archetypeOptions = RESHAPE_ARCHETYPES.map((archetype, index) =>
     `<option value="${archetype}"${index === 0 ? " selected" : ""}>${UIL(`Archetype.${archetype}`)}</option>`).join("");
@@ -476,10 +516,11 @@ async function promptRecompile(caster, targets) {
     window: { title: UIL("RecompileTitle") },
     content: `<p>${game.i18n.format(`${UI}.RecompilePrompt`, { name: foundry.utils.escapeHTML(caster.name) })}</p>`
       + `<div class="form-group"><label>${UIL("RecompileTargetLabel")}</label>`
-      + `<select name="target">${targetOptions}</select></div>`
+      + `<select name="target">${targetOptions}${specialOptions}</select></div>`
       + `<div class="form-group"><label>${UIL("ArchetypeLabel")}</label>`
       + `<select name="archetype">${archetypeOptions}</select></div>`
-      + `<p class="hint">${UIL("RecompileHint")}</p>`,
+      + `<p class="hint">${UIL("RecompileHint")}</p>`
+      + (specials.length ? `<p class="hint">${UIL("RecompileSpecialExcluded")}</p>` : ""),
     ok: {
       label: UIL("Recompile"),
       callback: (event, button) => ({
@@ -505,18 +546,24 @@ async function promptRecompile(caster, targets) {
 export async function recompileSprite(caster, { target, archetype } = {}) {
   if (!isTechnomancer(caster)) return ui.notifications.warn(game.i18n.localize(`${UI}.NotTechnomancer`));
   const destroyed = destroyedSprite(caster);
-  const targets = recompileTargets({
-    sprites: compiledSprites(caster).map(sprite => ({
-      uuid: sprite.uuid, name: sprite.name, archetype: sprite.getFlag(MODULE_ID, "archetype"),
-    })),
-    destroyed,
-  });
+  const sprites = compiledSprites(caster).map(sprite => ({
+    uuid: sprite.uuid, name: sprite.name, archetype: sprite.getFlag(MODULE_ID, "archetype"),
+  }));
+  const targets = recompileTargets({ sprites, destroyed });
+  const specials = recompileSpecials({ sprites, destroyed: destroyedRecord(caster) });
   if (!targets.length) {
-    ui.notifications.warn(game.i18n.format(`${UI}.RecompileNothing`, { name: caster.name }));
+    // 0.3.145 (A): "no compiled sprite" is a lie when the congregation is standing right there. When the
+    // only thing out (or the only thing just lost) is a Special, say the actual rule instead.
+    const standing = specials.filter(row => row.kind === "special");
+    const key = standing.length ? "RecompileSpecialOnly" : (specials.length ? "RecompileSpecialDestroyed" : "RecompileNothing");
+    ui.notifications.warn(game.i18n.format(`${UI}.${key}`, {
+      name: caster.name,
+      sprites: specials.map(row => row.name).filter(Boolean).join(", ") || game.i18n.localize(`${UI}.Archetype.${SPECIAL_ARCHETYPE}`),
+    }));
     return null;
   }
   if (!target || !archetype) {
-    const choice = await promptRecompile(caster, targets);
+    const choice = await promptRecompile(caster, targets, specials);
     if (!choice) return null;
     target = choice.target;
     archetype = choice.archetype;
@@ -828,6 +875,8 @@ export function registerSprites() {
       // 0.3.140 (A) — Special Sprite is in the Compile picker too; Recompile still refuses it.
       compileArchetypeOptions, reshapeArchetypes, ARCHETYPES: [...ARCHETYPES],
       PICKER_ARCHETYPES: [...ALL_ARCHETYPES], RESHAPE_ARCHETYPES: [...RESHAPE_ARCHETYPES],
+      // 0.3.145 (A) — the ban is unchanged; the empty state and the dialog now say why.
+      recompileSpecials,
     };
   }
   console.log(`${MODULE_ID} | Sprites: Compile / Special / Decompile registered (hero sheet row menu and Compile Sprite item sheet)`);
